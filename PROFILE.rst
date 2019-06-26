@@ -1,7 +1,3 @@
-﻿.. contents::
-
-.. _service_provision_onegeology_profile:
-
 ******************
 OneGeology Profile
 ******************
