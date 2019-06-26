@@ -1,4 +1,4 @@
-Welcome to GeoERA GIP documentation!
+Welcome to OneGeology documentation!
 ==================================================
 
 Contents:
