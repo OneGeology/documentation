@@ -1,15 +1,15 @@
-GeoERA Information Platform
+OneGeology Portal
 ========
 
-GIP will collate the results of the all the GeoERA sscience projects.
+The portal will collate the web services provided by member organisations.
 
 - The portal can be accessed using most internet browsers.
 - Basic map data is called a WMS (Web Map Service)
-- the GIP aims to use Free and Open Source software wherever possible.
+- OneGeology aims to use Free and Open Source software wherever possible.
 - The data is “served” directly from the provider organisation.
 - The provider organisation retains full ownership and responsibility and is able to change or modify data whenever necessary.
 
-Using the GIP
+Using the OneGeology Portal
 --------
 
 The GIP has the following functions:
@@ -26,7 +26,7 @@ The GIP has the following functions:
 - brief description of the data layer
 - conditions of use information for each layer
 
-Using the data in GIP on other platforms
+Using the data from OneGeology on other platforms
 ------------
 
 - Using QGIS
