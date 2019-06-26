@@ -1,8 +1,7 @@
-Web Services
+Providing Web Services
 ========
 
-GeoERA GIP WP8 will solve your problem of how to setup web services to serve data to the GIP,
-by providing a basic explanation of how to do it easily.
+How to setup web services to serve data to OneGeology. We provide a basic explanation of how to do it easily.
 
 WMS
 --------
