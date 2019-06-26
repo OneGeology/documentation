@@ -43,8 +43,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'GeoERA GIP User Docs'
-copyright = u'2014, Read the Docs'
+project = u'OneGeology Documentation'
+copyright = u'2017, OneGeology'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
