@@ -24,7 +24,7 @@ WCS
 
 
 OneGeology Profile
-----------
+-------------------
 
 .. todo::
 
@@ -64,14 +64,14 @@ The service must comply with one of the following OGC standard specifications.
 * A WCS must comply with `WCS 2.0.0 <https://portal.opengeospatial.org/files/09-110r4>`_ or higher specification. At the moment you also need to be able to supply a `WCS 1.0.0 <https://portal.opengeospatial.org/files/05-076>`_ GetCapabilities response for metadata harvesting. This could be achieved by supporting the older WCS version or by just creating a static response document that complies to the format.
 
 OGC service level metadata
-==========================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 WMS, WFS, and WCS services all provide metadata about the service through their response to a GetCapabilities request. OneGeology places some requirements on this metadata, some to help the Portal operate and some as good practice to enable users to search for services, know how they can use the data and get further information. The different service types have similar but not identical structures for their GetCapabilities responses; differences will be pointed out below. In particular, the WCS 2.0 standard changed the structure considerably, moving coverage specific metadata to DescribeCoverage requests so, for the moment, we need a WCS 1.0.0 structure document to enable us to harvest coverage specific metadata easily.
 
 .. _service_provision_onegeology_profile_service_title:
 
 Service title
--------------
+""""""""""""""
 
 .. todo::
 
@@ -91,7 +91,7 @@ WCS            2.0.1    /wcs:Capabilities/ows:ServiceIdentification/ows:Title
 .. _service_provision_onegeology_profile_service_abstract:
 
 Service abstract
-----------------
+"""""""""""""""""
 
 Information about the service and general information about the map data served in the layers. You may also use this to field to describe the data owner organization, and its goals within OneGeology etc. You can also include in this section information about the scale layering of your service, and any other information that is not automatically extracted / viewable by the OneGeology Portal (or indeed any other client software). We can't enforce definite rules on the content but this is important for users of your data.
 
@@ -107,7 +107,7 @@ WCS            2.0.1    /wcs:Capabilities/ows:ServiceIdentification/ows:Abstract
 .. _service_provision_onegeology_profile_fees:
 
 Fees
-----
+"""""
 
 Any fees required to use the WMS services and data contained within. If there are no fees you are recommended to explicitly state this using the word "none".
 
@@ -123,7 +123,7 @@ WCS            2.0.1    /wcs:Capabilities/ows:ServiceIdentification/ows:Fees
 .. _service_provision_onegeology_profile_access_constraints:
 
 Access constraints
-------------------
+""""""""""""""""""
 
 Information about who is allowed to use the data served by the WMS, and for what purpose they can use it for. Remember your WMS is available to any application that is able to access the Internet, not just through the OneGeology Portal.
 
@@ -143,7 +143,7 @@ WCS            2.0.1    /wcs:Capabilities/ows:ServiceIdentification/ows:AccessCo
 .. _service_provision_onegeology_profile_keywords:
 
 Keywords
---------
+""""""""""""""
 
 .. todo::
 
@@ -177,7 +177,7 @@ WCS            2.0.1    /wcs:Capabilities/ows:ServiceIdentification/ows:Keywords
 .. _service_provision_onegeology_profile_contact_information:
 
 Contact information
--------------------
+""""""""""""""""""""
 
 In addition to the required organisation name we recommend that you add additional contact information that will enable a user to get in touch with a named person who can act as a contact for any enquiries by post, email or phone. The different service types and versions provide slightly different structured fields for including this information under fairly self-explanatory element names. The below XPaths give the parent elements within which you can find different elements for email, phone etc. Don't forget these are for an international audience, e.g. include country code in telephone numbers.
 
@@ -193,7 +193,7 @@ WCS            2.0.1    /wcs:Capabilities/ows:ServiceProvider/ows:ServiceContact
 .. _service_provision_onegeology_profile_data_provider:
 
 Data provider
--------------
+""""""""""""""
 
 The full name of the data owner organization not service provider, where these are different, such as in buddied services. In the case of services that also supply non-OneGeology data, the contact should be able to put an enquirer in touch with whoever is responsible for the OneGeology data.
 
@@ -215,7 +215,7 @@ WCS            2.0.1    /wcs:Capabilities/ows:ServiceProvider/ows:ProviderName
 .. _service_provision_onegeology_profile_online_resource:
 
 Online resource
----------------
+"""""""""""""""""
 
 .. todo::
 
@@ -234,7 +234,7 @@ WCS            2.0.1    /wcs:Capabilities/ows:ServiceProvider/ows:ProviderSite
 
 
 Layer / Coverage / Feature metadata
-===================================
+------------------------------------
 
 Depending on which service type you are serving the actual data sets that you are supplying will be delivered as a number of layers (WMS), coverages (WCS) or features (WFS). Each of these can have their own specific metadata. The OneGeology portal allows the selection of WMS layers and WCS coverages to view and presents selected aspects of the layer/coverage metadata in its layer list. These metadata are also used to arrange layers/coverages under geographical areas and under themes and enable searching for layers/coverages including searching on some aspects of their functionality. 
 
@@ -247,7 +247,7 @@ WFS are a bit different. In the Portal we do not list registered WFS separately 
 .. _service_provision_onegeology_profile_layer_names:
 
 WMS layer and WCS coverage naming
----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The OneGeology Portal allows selection of WMS layers and WCS coverages for display from a list and so it is important to have a naming convention that ensures unique titles for each of these layers and coverages. This convention has been designed to give readable, informative titles.
 
