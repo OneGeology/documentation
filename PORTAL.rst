@@ -95,7 +95,7 @@ The documentation for the following clients has not been updated for several yea
 QGIS
 ^^^^^^^^^^^^
 
-See: https://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_client_support.html# 
+See: https://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_client_support.html
   
 ArcMap
 ^^^^^^^^^^^^
