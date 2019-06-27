@@ -86,12 +86,11 @@ The documentation for the following clients has not been updated for several yea
    uDig: Current content at http://onegeology.org/howto/1_4_9.html is pretty minimal. Is there any point maintaining a specific page?
 
 
-- Using QGIS
-- Using ESRI
+* `Using QGIS <https://github.com/OneGeology/OneGeology_Docs/blob/master/PORTAL.rst#qgis>`_
+* Using ESRI
 
-  - ArcMap
-  
-  - ArcPro
+  * `Using ArcMap <https://github.com/OneGeology/OneGeology_Docs/blob/master/PORTAL.rst#ArcMap>`_
+  * `Using ArcPRO <https://github.com/OneGeology/OneGeology_Docs/blob/master/PORTAL.rst#ArcPRO>`_
   
 QGIS
 ^^^^^^^^^^^^
