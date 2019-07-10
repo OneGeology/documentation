@@ -1,6 +1,31 @@
 Providing Data
 ======================
 
+GeoSciML
+--------
+
+ GeoSciML (GeoScience Markup Language) is a GML (Geography Markup Language) application language for geoscience. 
+ 
+**The design, build and deployment of information technologies that enable and advance geoscience information management, analysis and delivery will require systems that are interoperable following international agreed standards that are relevant to the geosciences.**
+ 
+It is an XML schema for data exchange over the Internet that incorporates the ability to represent geography (geometries e.g. polygons, lines and points using the OGC's GML specification) as part of the features that are being exchanged. The range of features being offered for exchange are defined by the domain or subject area of geoscience or the geological sciences.
+ 
+GeoSciML accommodates the short-term goal of representing geoscience information associated with geological maps and observations, as well as being extensible in the long-term to other geoscience data. It draws from many geoscience data model efforts, and from these establishes a common suite of feature types based on geological criteria (units, structures, fossils) or artefacts of geological investigations (specimens, sections, measurements). Supporting objects are also considered (timescale, lexicons, etc), so that they can be used as classifiers for the primary objects.
+
+GeoSciML is based on `W3C <http://www.w3c.org>`_, OGC, `CGI Data Model <http://www.seegrid.csiro.au/twiki/bin/view/CGIModel/WebHome>`_  and ultimately `ISO <http://www.iso.org>`_ international standards for data exchange over the Internet. GeoSciML is being designed under the umbrella of the `IUGS Commission <http://www.iugs.org/>`_ on the Management and Application of Geoscience Information (CGI) and its `CGI Interoperability Working Group <http://cgi-iugs.org/tech_collaboration/interoperability_working_group.html>`_. 
+
+For further detailed information on the development of GeoSciML, see http://www.cgi-iugs.org/tech_collaboration/geosciml.html
+
+.. figure:: /images/geosciml.gif
+    :width: 417px
+    :align: center
+    :height: 249px
+    :alt: GeoSciML Data Model
+    :figclass: align-center
+
+    GeoSciML Data Model
+
+
 Web Services
 ----------------
 
