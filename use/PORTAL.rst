@@ -811,12 +811,12 @@ Data displayed on the OneGeology portal is able to be accessed via other platfor
 
   The documentation for the following clients has not been updated for several years so may not be up-to-date.
 
-  * `Using NASA World Wind </howto/1_4_4.html>`_
-  * `Using Google Earth </howto/1_4_6.html>`_
-  * `Using Gaia </howto/1_4_2.html>`_
-  * `Using Dapple </howto/1_4_5.html>`_
-  * `Using MapInfo </howto/1_4_8.html>`_
-  * `Using uDig </howto/1_4_9.html>`_
+  * `Using NASA World Wind <http://www.onegeology.org/howto/1_4_4.html>`_
+  * `Using Google Earth <http://www.onegeology.org/howto/1_4_6.html>`_
+  * `Using Gaia <http://www.onegeology.org/howto/1_4_2.html>`_
+  * `Using Dapple <http://www.onegeology.org/howto/1_4_5.html>`_
+  * `Using MapInfo <http://www.onegeology.org/howto/1_4_8.html>`_
+  * `Using uDig <http://www.onegeology.org/howto/1_4_9.html>`_
 
 
 Using QGIS
