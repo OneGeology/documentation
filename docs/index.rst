@@ -7,10 +7,10 @@ Contents:
    :maxdepth: 3
    :glob:
 
-   docs/overview
-   docs/datapreparation
-   docs/webservices
-   docs/portal
+   overview
+   datapreparation
+   webservices
+   portal
 
 
 
