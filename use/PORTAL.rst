@@ -52,10 +52,10 @@ In simple terms, currently WFS are used for spatial data stored in some vector f
 .. todo::
 
    Should we also mention the CSW for searching metadata about the services in the above list?
-   
 
-Viewing map data registered in the OneGeology Portal
-====================================================
+
+Viewing data registered in the OneGeology Portal
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The OneGeology Portal is found at: http://portal.onegeology.org/ and is accessible as either an English (the default) or French language service.
 
@@ -198,8 +198,8 @@ To find out further information about any map layer you can click the arrow to r
 
    This (above) information is harvested automatically by the OneGeology Portal client software from the GetCapabilities response document of the WMS.
 
-Go To
------
+Go To Function
+^^^^^^^^^^^^^^
 
    .. figure:: compassIcon.jpg
       :width: 56
@@ -230,8 +230,8 @@ Go To
 
       Using the Go To functionality to zoom to the area of Christchurch, New Zealand by entering the Longitude and Latitude ~ 172.85, -43.73
 
-   Viewing layers in different projections
-   ---------------------------------------
+Viewing layers in different projections
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    The portal allows you to select other projections to view the map layers.  The projections supported by the portal are:
 
@@ -315,8 +315,8 @@ Go To
 
    Note that when using the ETRS-89 based projections you will not be able to zoom out (or pan the map) wider than than the intended extent of the projection.
 
-   Reviewing external map data
-   ===========================
+Reviewing external map data
+----------------------------
 
    You may also use the OneGeology Portal client to review other WMS services, either as check of your own service before requesting that it is added to the OneGeology Portal catalogue, or to view any other data services that you discover.
 
@@ -334,8 +334,8 @@ Go To
 
    A service or layer added using the external layers functionality is only visible to you, and is only available for your active session.
 
-   Exporting to Keyhole Markup Language (KML)
-   ==========================================
+Exporting to Keyhole Markup Language (KML)
+-------------------------------------------
 
    *KML* is a file format used to display geographic data in an Earth browser such as Google Earth, Google Maps. It is an XML–based language schema for expressing geographic annotation and visualization on existing or future Web-based, two-dimensional maps and  three-dimensional Earth browsers. KML was developed for use with Google Earth, which was originally named Keyhole Earth Viewer. It was created by Keyhole Inc, which was acquired by Google in 2004, but is now an internationally recognized standard by the Open Geospatial Consortium (OGC) in it’s version 2.2 form.
 
@@ -354,8 +354,8 @@ Go To
 
    Once the KML file has been created you can save it or choose to immediately open the data in Google Earth.
 
-   Creating and using Web Map Context (WMC) documents
-   ==================================================
+Creating and using Web Map Context (WMC) documents
+---------------------------------------------------
 
    Saving your current OneGeology Portal view as a Web Map Context document is an easy way to save your personal data view and allows you to open the same view again at a later date.  This avoids the need to keep adding layers to the view each time you enter the OneGeology Portal. This is most useful if viewing a large number of layers at any one time.
 
@@ -363,8 +363,8 @@ Go To
 
    ‘\ `Web Map Context Documents <http://www.opengeospatial.org/standards/wmc>`_\ ’ is an OGC specification and any WMC document created in the OneGeology Portal should be usable in a number of client software applications.
 
-   Saving your context file
-   ------------------------
+Saving your context file
+^^^^^^^^^^^^^^^^^^^^^^^^
 
    * Click the Save WMC context button to create a WMC document
    * Enter a file name of your choice that you will save the WMC as, and click OK.
@@ -381,8 +381,8 @@ Go To
 
    This will create a Web Map Context document containing all the geology maps you currently have added to the OneGeology Portal and the Blue Marble base layer, but will not currently add any of the layers that were automatically selected.
 
-   Opening a Web Map Context file in the OneGeology Portal
-   -------------------------------------------------------
+Opening a Web Map Context file in the OneGeology Portal
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    To open a Web Map Context document in the OneGeology Portal, you need to select the ‘*Load a WMC context*’ menu option (folder icon)
 
@@ -411,8 +411,8 @@ Go To
       url=http://ogc.bgs.ac.uk/wmc/IrelandGeologyEdited-wmc.xml
 
 
-   Opening a WMC file in other clients
-   -----------------------------------
+Opening a WMC file in other clients
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    Other clients are known to support Web Map Context documents, for example we could load the example file (http://ogc.bgs.ac.uk/wmc/IrelandGeologyEdited-wmc.xml) in an OpenLayers client like the one at http://openlayers.org/dev/examples/wmc.html.  Here we need to copy the contents of the file into the form window and click on the ‘*read as new map*’ button to view our map.
 
@@ -424,8 +424,8 @@ Go To
 
       Using a OneGeology Portal WMC document in an OpenLayers client
 
-   Known issues
-   ------------
+Known issues
+^^^^^^^^^^^^
 
    If when you load your Web Map Context file you get an error, you should check that the file has the correct XML header, this is because some browsers are known to add an additional XML line at the top of the document when creating the file.  So if you see the following lines at the top of your document:
 
@@ -440,8 +440,8 @@ Go To
 
       <?xml version="1.0" encoding="utf-8" ?>
 
-      Using the thematic analysis tools
-      =================================
+Using the thematic analysis tools
+---------------------------------
 
       As we have seen in section 1.4.1.1, we may use the ‘*Active Layers Properties*’ tool to discover further information about any of our active layers in a map session.  Information that may be revealed in this dialogue is that the layer is available for ‘*Thematic Analysis*’, as in the below example.
 
@@ -470,8 +470,8 @@ Go To
 
          The thematic analysis query builder window
 
-      GeoSciML-Portrayal
-      ------------------
+GeoSciML-Portrayal
+^^^^^^^^^^^^^^^^^^
 
       The analysis window offers you two ways to filter your map, you can filter by lithology or you can filter by age. The initial view in the lithology filter window is simply the ‘*Compound material*’ option, and in the age filter window the initial view shows the ‘*Phanerozoic*’ and ‘*Precambrian*’ options.  These options reflect the structure of the underlying controlled vocabularies.
 
@@ -561,26 +561,26 @@ Go To
            </sld:NamedLayer>
          </sld:StyledLayerDescriptor>
 
-      When this external customized SLD file has been generated for our age filter selection, the OneGeology Portal then makes a new `GetMap request referencing this SLD <http://maps.dgs.udel.edu/geoserver/DGS_Surficial_and_Contact_Geology/wms?service=WMS&TRANSPARENT=TRUE&version=1.3.0&request=GetMap&STYLES=&EXCEPTIONS=INIMAGE&FORMAT=image/png&CRS=EPSG%3A4326&SLD=http%3A%2F%2Fogc.bgs.ac.uk%2Fsld%2F20130628_1372432351566_OpenLayers.Layer.WMS_991.sld&SAVEDLAYERS=US-DE_DGS_100k_Surficial_Geology&BBOX=39.57931760121924,-75.79289049774037,39.784397224903465,-75.45691470533502&WIDTH=1250&HEIGHT=763&>`_ for our area of selection like:
+  When this external customized SLD file has been generated for our age filter selection, the OneGeology Portal then makes a new `GetMap request referencing this SLD <http://maps.dgs.udel.edu/geoserver/DGS_Surficial_and_Contact_Geology/wms?service=WMS&TRANSPARENT=TRUE&version=1.3.0&request=GetMap&STYLES=&EXCEPTIONS=INIMAGE&FORMAT=image/png&CRS=EPSG%3A4326&SLD=http%3A%2F%2Fogc.bgs.ac.uk%2Fsld%2F20130628_1372432351566_OpenLayers.Layer.WMS_991.sld&SAVEDLAYERS=US-DE_DGS_100k_Surficial_Geology&BBOX=39.57931760121924,-75.79289049774037,39.784397224903465,-75.45691470533502&WIDTH=1250&HEIGHT=763&>`_ for our area of selection like:
 
-      .. code-block:: text
+  .. code-block:: text
 
-         http://maps.dgs.udel.edu/geoserver/DGS_Surficial_and_Contact_Geology/wms?
-           SERVICE=WMS&
-           TRANSPARENT=TRUE&
-           VERSION=1.3.0&
-           REQUEST=GetMap&
-           STYLES=&
-           EXCEPTIONS=INIMAGE&
-           FORMAT=image/png&
-           CRS=EPSG%3A4326&
-           SLD=http://portal.onegeology.org/slds/20130628_1372432351566_OpenLayers.Layer.WMS_991.sld&
-           SAVEDLAYERS=US-DE_DGS_100k_Surficial_Geology&
-           BBOX=39.57931760121924,-75.79289049774037,39.784397224903465,-75.45691470533502&
-           WIDTH=1250&
-           HEIGHT=763&
+      http://maps.dgs.udel.edu/geoserver/DGS_Surficial_and_Contact_Geology/wms?
+        SERVICE=WMS&
+        TRANSPARENT=TRUE&
+        VERSION=1.3.0&
+        REQUEST=GetMap&
+        STYLES=&
+        EXCEPTIONS=INIMAGE&
+        FORMAT=image/png&
+        CRS=EPSG%3A4326&
+        SLD=http://portal.onegeology.org/slds/20130628_1372432351566_OpenLayers.Layer.WMS_991.sld&
+        SAVEDLAYERS=US-DE_DGS_100k_Surficial_Geology&
+        BBOX=39.57931760121924,-75.79289049774037,39.784397224903465,-75.45691470533502&
+        WIDTH=1250&
+        HEIGHT=763&
 
-      The resultant custom map (with the GeoSciML-Portrayal filter for Pleistocene polygons applied) is shown below:
+The resultant custom map (with the GeoSciML-Portrayal filter for Pleistocene polygons applied) is shown below:
 
       .. figure:: ThematicAnalysisSelectionByAgeResult.jpg
          :width: 774
@@ -589,7 +589,7 @@ Go To
 
          Pleistocene geology polygons
 
-      Similarly, we could filter for some other GeoSciML-Portrayal attribution in the map, such as the following lithology filter on ‘*Composite genesis material*’
+Similarly, we could filter for some other GeoSciML-Portrayal attribution in the map, such as the following lithology filter on ‘*Composite genesis material*’
 
       .. figure:: ThematicAnalysisSelectionByLithoResult.jpg
          :width: 834
@@ -598,7 +598,7 @@ Go To
 
          Composite genesis material
 
-      Finally, it is possible to filter by both Age and Lithology, for example in the below image we can see first the result for ‘*Sand*’, then the search results for ‘*Upper Pleistocene*’, and then the results for a combined search for ‘*Sand*’ **and** ‘*Upper Pleistocene*’.
+Finally, it is possible to filter by both Age and Lithology, for example in the below image we can see first the result for ‘*Sand*’, then the search results for ‘*Upper Pleistocene*’, and then the results for a combined search for ‘*Sand*’ **and** ‘*Upper Pleistocene*’.
 
       .. figure:: queryResultComparison.jpg
          :width: 914
@@ -607,15 +607,15 @@ Go To
 
          Age and lithology search results comparison: Sand / Upper Pleistocene / Sand plus Upper Pleistocene
 
-      The generated external SLD will be available on the OneGeology portal server for a least one day, but no longer than one week.  In the age filter example above we have taken a copy of the generated SLD and put it on the BGS WMS server for long term reference.
+The generated external SLD will be available on the OneGeology portal server for a least one day, but no longer than one week.  In the age filter example above we have taken a copy of the generated SLD and put it on the BGS WMS server for long term reference.
 
 
-      Statistics
-      ----------
+Statistics
+^^^^^^^^^^
 
-      The statistics functionality (Full statistics and Lithology statistics) of the Thematic analysis tools are coupled to a WFS associated with a WMS Layer, as identified by the presence of a **GeoSciML32_wfs_age_or_litho_queryable** keyword in the layer metadata
+The statistics functionality (Full statistics and Lithology statistics) of the Thematic analysis tools are coupled to a WFS associated with a WMS Layer, as identified by the presence of a **GeoSciML32_wfs_age_or_litho_queryable** keyword in the layer metadata
 
-      If the OneGeology Portal detects that your selected layer has an associated GeoSciML v3.2 WFS, then when you open the Thematic analysis window you will see the Full statistics, and Lithology statistics buttons will be highlighted in green, if not the buttons will be greyed out and you will not be able to use these analyses tools.
+If the OneGeology Portal detects that your selected layer has an associated GeoSciML v3.2 WFS, then when you open the Thematic analysis window you will see the Full statistics, and Lithology statistics buttons will be highlighted in green, if not the buttons will be greyed out and you will not be able to use these analyses tools.
 
       .. figure:: StatsButtons.jpg
          :width: 402
@@ -625,8 +625,8 @@ Go To
          Thematic analysis window showing that statistical analysis is available for the selected layer
 
 
-      Full statistics
-      '''''''''''''''
+Full statistics
+"""""""""""""""
 
       Make your filter selection, by age or lithology, in the same way as described for the GeoSciML-Portrayal section.  In the below example we have first selected the ‘*Full statistics*’ option button, then searched for the Lithology term ‘*Breccia*’, selecting the broad term as the filter keyword.  We now have two options, we can opt to ‘*Download the GeoSciML*’, or we can view the Full statistics.
 
@@ -694,8 +694,8 @@ Go To
          Full statistics query: compilation of results forms
 
 
-      Lithology statistics
-      ''''''''''''''''''''
+Lithology statistics
+""""""""""""""""""""
 
       Instead of selecting the ‘*Full statistics*’ option we can instead chose the ‘*Lithology statistics*’ option.  Unlike the ‘*Full statistics*’ option, where you can select multiple ages and lithologies (in particular by selecting a category and all sub-classes at the same time), with the ‘*Lithology statistics*’ query you can **only** select one lithology term exactly and sub-classes will not be returned.  For example in the below query we have selected an area near Glasgow (Longitude -4, Latitude 56 at a scale of 1:150,000), and are filtering for features that have a proportion of coal greater than or equal to 5%.
 
@@ -769,8 +769,8 @@ Go To
 
          Lithology statistics query: compilation of form results 5% coal near Glasgow
 
-      Caveat
-      ''''''
+Caveat
+""""""""
 
       The statistics function is only able to work when zoomed in to quite small areas; precisely this is when the spatial resolution is less than 0.0015 (e.g. a pixel shows less than 0.0015 degrees latitude of the ground surface). When viewing the map if you are not zoomed in far enough you will see the following error.
 
