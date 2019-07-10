@@ -17,14 +17,14 @@ The Portal has the following functions:
 - Help menu
 - multi-layer map view,
 - opacity selection,
-- legend viewer, 
+- legend viewer,
 - details of provider organisation / geological survey
 - web link URL to the provider survey
 - brief description of the data layer
 - conditions of use information for each layer
 
 Using the OneGeology Portal
---------
+---------------------------
 
 .. todo::
    Currently taken WMS cookbook 1.4 text removing over-technical detail. Needs to have a general intro to the different kinds of service (WMS, WFS and WCS) service and what sort of things you might be able to  do with them. Probably not covering the kinds of data (traditional geol map, boreholes, minerals) in this section? Should make a generic list of the sorts of functionality a client may provide so can refer to this under each item. Need to consider whether we can actually maintain detailed instructions on more than a couple of examples. And should we? Should be able just to point to software's own documentation on using OGC services. Maybe just make a list with pointer to home page, specific documentation package may have for OGC services (should be standard stuff these days) and any gotchas/special considerations we have noticed for particular examples. The target audience for this section could include a range of levels of IT and geological knowledge and include people just using the services and service providers who also need to understand how their services can be made use of.
@@ -39,7 +39,7 @@ Using the OneGeology Portal
 
 The OneGeology portal allows you to discover all the services that have been registered with OneGeology. You can view all those that return image output on a map of the world and can query the data behind those that provide that ability. Also some services allow you to highlight areas satisfying some simple query criteria on the age or lithology of mapped geological units.
 
-OneGeology makes data from geological data providers around the world accessible to those who would like to see and use it. The majority of this data is the type that is portrayed on traditional geological maps. There are increasing amounts with different geologically related types of data such as geophysics, boreholes and hydrogeology. This data is made available by means of Open GeoSpatial Consortium `OGC <http://www.opengeospatial.org>`_ standard web services that can be accessesed by a number of free and commercial clients. Currently OneGeology makes use of three OGC standards: Web Map Service `WMS <http://www.opengeospatial.org/standards/wms>`_, Web Feature Service `WFS <http://www.opengeospatial.org/standards/wfs>`_ and Web Coverage Service `WCS <http://www.opengeospatial.org/standards/wcs>`_. These different service standards define different kinds of capability for examining the data. 
+OneGeology makes data from geological data providers around the world accessible to those who would like to see and use it. The majority of this data is the type that is portrayed on traditional geological maps. There are increasing amounts with different geologically related types of data such as geophysics, boreholes and hydrogeology. This data is made available by means of Open GeoSpatial Consortium `OGC <http://www.opengeospatial.org>`_ standard web services that can be accessesed by a number of free and commercial clients. Currently OneGeology makes use of three OGC standards: Web Map Service `WMS <http://www.opengeospatial.org/standards/wms>`_, Web Feature Service `WFS <http://www.opengeospatial.org/standards/wfs>`_ and Web Coverage Service `WCS <http://www.opengeospatial.org/standards/wcs>`_. These different service standards define different kinds of capability for examining the data.
 
 WMS provides the ability to see a map image projected to its correct geographical location in a number of map projections. This will usually be accompanied by a legend which explains the symbology used in the map. Commonly, many WMS also provide the ability to select a point on the map and get a summary in text or other format of data values for that point. The majority of OneGeology services are WMS. A small number of these WMS also provide the ability to change the symbology of the map depending on the underlying data (e.g. to highlight formations of a particular age). These are called `SLD <http://www.opengeospatial.org/standards/sld>`_ enabled WMS.
 
@@ -53,21 +53,14 @@ In simple terms, currently WFS are used for spatial data stored in some vector f
 
    Should we also mention the CSW for searching metadata about the services in the above list?
 
-Using the data from OneGeology on other platforms
-------------
+Using OneGeology Data
+---------------------
 
-The following pages show how you may access services using these OGC standards (including those not part of OneGeology) in a number of popular desktop software clients and web based browser applications. We concentrate first on the web based portal provided by OneGeology itself and then cover other commonly available clients.
+Data displayed on the OneGeology portal is able to be accessed via other platforms such as QGIS and ArcMap. The following pages show how you may access services using these OGC standards (including those not part of OneGeology) in a number of popular desktop software clients and web based browser applications. We concentrate first on the web based portal provided by OneGeology itself and then cover other commonly available clients.
 
 .. todo::
 
    Should we expand the above WMS, WFS and WCS introductions to say generically what you could do with each in a general client before treating the specific clients? Then for each client we say: CSW yes/no -> how, WMS yes/no -> how, WFS yes/no -> how, WCS yes/no -> how. Having covered standard things like "you need the service URL" we just say where you put it, and for GetFeatureInfo how you do it in particular client etc.
-
-.. toctree::
-   :maxdepth: 1
-
-   portal
-   qgis
-   esri
 
 The documentation for the following clients has not been updated for several years so may not be up-to-date.
 
@@ -93,7 +86,7 @@ The documentation for the following clients has not been updated for several yea
 
   * `Using ArcMap <https://github.com/OneGeology/OneGeology_Docs/blob/master/PORTAL.rst#ArcMap>`_
   * `Using ArcPRO <https://github.com/OneGeology/OneGeology_Docs/blob/master/PORTAL.rst#ArcPRO>`_
-  
+
 QGIS
 ^^^^^^^^^^^^
 
@@ -110,10 +103,10 @@ Quantum GIS (QGIS) supports WMS versions 1.3.0 (and lower) with GetCapabilities,
 
 
 Using QGIS to view WMS
-----------------------
+""""""""""""""""""""""
 
 .. figure:: qgis/qgis_addWMS.png
-   :alt: QGIS menu option for adding a WMS 
+   :alt: QGIS menu option for adding a WMS
 
    Figure 1 - QGIS menu option for adding a WMS
 
@@ -165,7 +158,7 @@ You may right click on any layer in the layer list and go to *Properties* to get
    Figure 6 - Layer properties metadata
 
 Using QGIS to access simple feature WFS
----------------------------------------
+"""""""""""""""""""""""""""""""""""""""
 
 .. |wfsBtn| image:: qgis/qgis_btnWFS.png
 
@@ -176,7 +169,7 @@ To add a WFS layer you need to go through a similar process as you do to add a W
 
    Figure 7 - Adding a new WFS service
 
-When you add a WFS layer you can choose to request all the features of that layer, or you may choose to request only those features that overlap the current extent, depending on whether the option *Only request features overlapping the view extent* is enabled. This will allow you to download and add to your map only the features relevant to your area of interest. However, if you change your extent by panning or zooming the map, new features will be fetched for your new view extent. 
+When you add a WFS layer you can choose to request all the features of that layer, or you may choose to request only those features that overlap the current extent, depending on whether the option *Only request features overlapping the view extent* is enabled. This will allow you to download and add to your map only the features relevant to your area of interest. However, if you change your extent by panning or zooming the map, new features will be fetched for your new view extent.
 
 
 .. figure:: qgis/qgis_addWFSLayer.png
@@ -199,11 +192,11 @@ When we view a WFS service, it should be noted that we actually download a repre
    Figure 9 - Exporting WFS layer
 
 Using QGIS to view WCS
-----------------------
+""""""""""""""""""""""
 
 .. |wcsBtn| image:: qgis/qgis_btnWCS.png
 
-Adding a WCS layer is again a similar process than adding a WMS layer: 
+Adding a WCS layer is again a similar process than adding a WMS layer:
 
 * Add the WCS service by clicking on the |wcsBtn| button on the *Manage Layers Toolbar*
 * Connect to the service
@@ -221,7 +214,7 @@ Only one layer can be selected at a time. After selecting it, and choosing your 
 
    Figure 11 - Adding a WCS layer
 
-Your layer(s) should now be displaying on the map. 
+Your layer(s) should now be displaying on the map.
 
 .. figure:: qgis/qgis_displayWcsLayer.png
    :alt: Displaying a WCS layer
@@ -236,19 +229,19 @@ WCS layers can be exported as rasters. To do so, right click on the layer and go
    Figure 13 - Exporting a WCS layer
 
 See: https://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_client_support.html
-  
-ESRI ArcMap
-^^^^^^^^^^^^
+
+ESRI
+^^^^^
 
 The ArcGIS software package comes with several applications. Here we'll briefly show how to use **ArcCatalog** to setup OGC service connections and how to use **ArcMap** to deal with OGC layers.
 
 The following notes are based on ESRI ArcGIS server version 10.5 (SP1).
 
-Using ArcCatalog 
-----------------
+Using ArcCatalog
+^^^^^^^^^^^^^^^^
 
 WMS Service Connection
-^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""
 
 To add a WMS service to your list of available WMS services, on the *Catalog Tree* window, you use the *GIS servers > Add WMS Server* option, and then add the Service URL (without parameters). You may select to use the default service version (which would normally be the highest version) or you may force a specified version depending on your needs.
 
@@ -269,7 +262,7 @@ You will not be able to view the legend graphics in ArcCatalog.
 The above screen-shot shows a number of WMS (GIS Servers) listed in the left hand menu. These are services that have previously been added to ArcCatalog. To retrieve layer name information, preview, and do GetFeatureInfo requests, you must first double-click on the layer name. This will re-query the service and retrieve only active layers at the time of your query.
 
 WFS Service Connection
-^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""
 
 This functionality is only available with a `Data Interoperability <http://desktop.arcgis.com/en/arcmap/latest/extensions/data-interoperability/what-is-the-data-interoperability-extension-.htm>`_ license. A free alternative to get hold of the data in the WFS would be downloading the features in the WFS using QGIS and then exporting them as an ESRI Shapefile (see section *Using QGIS to view WFS*).
 
@@ -287,7 +280,7 @@ Before clicking *OK*, go to *Parameters* and select the *Feature Types* to downl
 
    Figure 4 - WFS Parameters dialog
 
-When you create a connection, you might see that multiple versions of your layer have been created in different geometries. Refresh your connection (right click on layer and go to *Refresh*) and only the relevant geometry will be kept. 
+When you create a connection, you might see that multiple versions of your layer have been created in different geometries. Refresh your connection (right click on layer and go to *Refresh*) and only the relevant geometry will be kept.
 
 .. figure:: esri/esri_catalog_allGeometriesWfs.png
    :alt: WFS connection showing all available geometries
@@ -302,7 +295,7 @@ You can preview and identify individual features in a layer from a WFS connectio
    Figure 6 - Previewing and identifying a WFS layer
 
 WCS Service Connection
-^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""
 
 Adding a WCS service to your list of available WCS services is identical than doing it for a WMS service: on the *Catalog Tree* window go to *GIS servers > Add WMS Server* option and then add the Service URL (without parameters). You may select to use the default service version (which would normally be the highest version) or you may force a specified version depending on your needs.
 
@@ -319,7 +312,7 @@ Your WCS will now be available within the list of GIS Servers.
    Figure 7 - Previewing WCS layers in ArcCatalog
 
 Using ArcMap
-------------
+^^^^^^^^^^^^
 
 .. |addDataBtn| image:: esri/esri_map_addDataBtn.PNG
 
@@ -333,7 +326,7 @@ In ArcMap you can use the *Add Data* button (|addDataBtn|) to add an WMS, WFS or
    Figure 8 - Adding data to ArcMap
 
 WMS Layers
-^^^^^^^^^^
+"""""""""""
 
 WMS layers in ArcMap behave differently than other ESRI native layers. For instance, they are arranged in hierarchical entries which can't be rearranged. This tipically includes
 
@@ -343,7 +336,7 @@ WMS layers in ArcMap behave differently than other ESRI native layers. For insta
 	    - Group layer
 	        - Actual layers
 
-However there can be multiple or even nested group layers. Also, the only way to get information about feature attributes in a WMS layer is through the *Identify* tool, as shown in the previous section.	
+However there can be multiple or even nested group layers. Also, the only way to get information about feature attributes in a WMS layer is through the *Identify* tool, as shown in the previous section.
 
 If the map is scale layered (layers are shown greyed out) you may use the *Zoom to Make Visible* option. This zooms into the layer to the scale cited in the layer below which the layer will be visible, that is you need to zoom in a little bit further using the zoom tool to be able to view the map.
 
@@ -375,12 +368,12 @@ Alternatively, you may use the layer properties dialogue to save a copy of the l
 
    Figure 12 - Saving a WMS legend graphic to file in ArcMap
 
-For more information about WMS layers go to `Using WMS service layers <http://desktop.arcgis.com/en/arcmap/latest/map/web-maps-and-services/using-wms-service-layers.htm>`_ 
+For more information about WMS layers go to `Using WMS service layers <http://desktop.arcgis.com/en/arcmap/latest/map/web-maps-and-services/using-wms-service-layers.htm>`_
 
 WFS Layers
-^^^^^^^^^^
+"""""""""""
 
-WFS layers behave in ArcMap like any other type of vector layer. You can, for instance, identify individual features, see feature attributes in the *Attribute Table*, join the layer to other dataset or apply symbology. 
+WFS layers behave in ArcMap like any other type of vector layer. You can, for instance, identify individual features, see feature attributes in the *Attribute Table*, join the layer to other dataset or apply symbology.
 
 .. figure:: esri/esri_map_wfs.PNG
    :alt: WFS layer displayed in ArcMap showing attributres and custom symbology
@@ -402,7 +395,7 @@ To export features to an open format, like **GeoJSON**, you'll need to use the *
    Figure 15 - Exporting a WFS layer to an open format in ArcMap
 
 WCS Layers
-^^^^^^^^^^
+"""""""""""
 
 WCS layers operate in a similar way to other raster data but with a few less properties. For more information on available properties go to `Adding a WCS service to ArcMap <http://desktop.arcgis.com/en/arcmap/latest/map/web-maps-and-services/adding-a-wcs-service-to-arcmap.htm>`_.
 
@@ -417,10 +410,10 @@ To export a WCS layer, right click on it and go to *Data > Export Data*. The *Ex
    :alt: Displaying WCS data in ArcMap
 
    Figure 17 - Displaying WCS data in ArcMap
-  
+
 See: http://desktop.arcgis.com/en/arcmap/latest/map/web-maps-and-services/about-using-ogc-service-layers.htm
-  
+
 ArcPRO
 ^^^^^^^^^^^^
-  
+
 See: https://pro.arcgis.com/en/pro-app/help/data/services/ogc-services.htm
