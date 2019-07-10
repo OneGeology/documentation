@@ -1,5 +1,5 @@
-OneGeology Portal
-=================
+Using OneGeology Portal & Data
+==============================
 
 The portal will collate the web services provided by member organisations.
 
