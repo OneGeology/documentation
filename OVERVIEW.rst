@@ -1,6 +1,9 @@
 ##################################
-OneGeology Technical Documentation
+Overview
 ##################################
+
+OneGeology Technical Documentation
+----------------------------------
 
 The pages linked from here might be linked from a number of places on http://onegeology.org. This page at the moment just acts to group all the content being authored roughly under the "OneGeology Cookbook" type content area.
 
