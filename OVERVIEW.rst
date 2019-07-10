@@ -46,9 +46,10 @@ Prerequisites for OneGeology involvement:
 - the target scale is 1:1&nbsp;000&nbsp;000 but the project will be pragmatic and accept a range of scales and the best available data.
 - to provide a WMS you only require a georeferenced scanned paper map or raster or vector digital GIS data.
 - to provide feature and complex data queries via GeoSciML based WFS you
-  - need to map from your GIS (ESRI ARCINFO, MapInfo, ORACLE etc.) data store to WFS server configuration (Geoserver or Mapserver/Cocoon).</li>
-  - need a (trained) person week, but includes getting WFS going with open source software (IT issues).</li>
-  - should note that the mapping process will be simple (small part of GeoSciML) if the themes chosen by the geological specification group are simple e.g. simple polygons with few attributes such as bedrock, lithology and age.</li></ul></li>
+
+  - need to map from your GIS (ESRI ARCINFO, MapInfo, ORACLE etc.) data store to WFS server configuration (Geoserver or Mapserver/Cocoon).
+  - need a (trained) person week, but includes getting WFS going with open source software (IT issues).
+  - should note that the mapping process will be simple (small part of GeoSciML) if the themes chosen by the geological specification group are simple e.g. simple polygons with few attributes such as bedrock, lithology and age.
 
 WMS = web map service &#x2014; this is level 1, the minimum for OneGeology
 WFS = web feature service, this holds more detailed data.
