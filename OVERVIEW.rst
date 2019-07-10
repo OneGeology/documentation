@@ -99,8 +99,7 @@ Cookbook specification
 A series of OneGeology-specific branded cookbooks are available as follows: 
 
 - Online
-
-    - `Cookbook No 1 <https://onegeology-docs.readthedocs.io/en/latest/webservices.html#wms>`_ explains how to setup a WMS (view) service (with no GML/GeoSciML).
+    - `Cookbook No 1 <https://onegeology-docs.readthedocs.io/en/latest/webservices.html#wms>`_ - explains how to setup a WMS (view) service (with no GML/GeoSciML).
     
 - PDF Download (to be moved online shortly)
     - Cookbook No 6 - decribes how to set up a WCS (download) web service on your web server using open-source software.
