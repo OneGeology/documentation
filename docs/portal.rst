@@ -1,1 +1,1 @@
-.. include:: ../PORTAL.rst
+.. include:: ../use/PORTAL.rst
