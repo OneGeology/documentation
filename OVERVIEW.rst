@@ -97,8 +97,11 @@ Cookbook specification
 ^^^^^^^^^^^^^^^^^^^^^^
 
 A series of OneGeology-specific branded cookbooks are available as follows: 
+
 - Online
-    - 'Cookbook No 1<https://onegeology-docs.readthedocs.io/en/latest/webservices.html#wms>'_ - explains how to setup a WMS (view) service (with no GML/GeoSciML).
+
+    - 'Cookbook No 1 <https://onegeology-docs.readthedocs.io/en/latest/webservices.html#wms>'_ - explains how to setup a WMS (view) service (with no GML/GeoSciML).
+    
 - PDF Download (to be moved online shortly)
     - Cookbook No 6 - decribes how to set up a WCS (download) web service on your web server using open-source software.
     - Cookbook No 7 - explains how we map from the backend database to the GeoSciML WFS service.
@@ -111,7 +114,7 @@ Support services
 
 Services which will be available to OneGeology participants to help advise and assist with serving data to the Portal include:
 - This docvumention including cookbooks' for step-by-step guidance.
-- a support team, and email 'helpdesk<onegeologyhelp@bgs.ac.uk>'_.
+- a support team, and 'email <helpdesk<onegeologyhelp@bgs.ac.uk>'_.
 - regional workshops to build technology capability within staff.
 
 Work will be based on open-source technologies so all the OGC web services required software can be purchased cost free. However, a contributing survey must either have its own standard Internet server or have access to such a server through a neighbouring or regional organisation.
