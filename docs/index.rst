@@ -8,8 +8,7 @@ Contents:
    :glob:
 
    overview
-   datapreparation
-   webservices
+   providingdata
    portal
 
 
