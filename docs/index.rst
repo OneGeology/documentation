@@ -8,6 +8,7 @@ Contents:
    :glob:
 
    overview
+   authors
    providingdata
    portal
 
