@@ -42,6 +42,7 @@ Map specifications
 ------------------
 
 Prerequisites for OneGeology involvement:
+
 - the target scale is 1:1&nbsp;000&nbsp;000 but the project will be pragmatic and accept a range of scales and the best available data.
 - to provide a WMS you only require a georeferenced scanned paper map or raster or vector digital GIS data.
 - to provide feature and complex data queries via GeoSciML based WFS you
