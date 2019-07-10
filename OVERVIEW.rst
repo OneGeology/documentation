@@ -123,7 +123,7 @@ OneGeology material, which is defined as data, mapping, map extracts, illustrati
 
 The only condition we do place on the use of the materials is that they are not used in any offensive, derogatory or political manner, which might offend the owner of the materials in question. The OneGeology secretariat will be the sole and final decision-maker as to what is considered to be a breach of this section and we ask the users of the material respect the wishes of the secretariat. The |OneGeology| logo can be displayed and should be clearly visible and used in conjunction with all materials. The reference of the owner of the data sources, where available, should also be clearly visible/recognised.
 
-.. |Onegeology| image:: Onegeology_logo.gif
+.. |Onegeology| image:: images\Onegeology_logo.gif
 
 When you do use OneGeology materials, though not a condition, please inform the secretariat, onegeology@bgs.ac.uk as we like to record use of our materials for promotional and other uses.
 
