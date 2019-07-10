@@ -316,7 +316,7 @@ Viewing layers in different projections
    Note that when using the ETRS-89 based projections you will not be able to zoom out (or pan the map) wider than than the intended extent of the projection.
 
 Reviewing external map data
-----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    You may also use the OneGeology Portal client to review other WMS services, either as check of your own service before requesting that it is added to the OneGeology Portal catalogue, or to view any other data services that you discover.
 
@@ -335,7 +335,7 @@ Reviewing external map data
    A service or layer added using the external layers functionality is only visible to you, and is only available for your active session.
 
 Exporting to Keyhole Markup Language (KML)
--------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    *KML* is a file format used to display geographic data in an Earth browser such as Google Earth, Google Maps. It is an XML–based language schema for expressing geographic annotation and visualization on existing or future Web-based, two-dimensional maps and  three-dimensional Earth browsers. KML was developed for use with Google Earth, which was originally named Keyhole Earth Viewer. It was created by Keyhole Inc, which was acquired by Google in 2004, but is now an internationally recognized standard by the Open Geospatial Consortium (OGC) in it’s version 2.2 form.
 
@@ -355,7 +355,7 @@ Exporting to Keyhole Markup Language (KML)
    Once the KML file has been created you can save it or choose to immediately open the data in Google Earth.
 
 Creating and using Web Map Context (WMC) documents
----------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    Saving your current OneGeology Portal view as a Web Map Context document is an easy way to save your personal data view and allows you to open the same view again at a later date.  This avoids the need to keep adding layers to the view each time you enter the OneGeology Portal. This is most useful if viewing a large number of layers at any one time.
 
@@ -364,7 +364,7 @@ Creating and using Web Map Context (WMC) documents
    ‘\ `Web Map Context Documents <http://www.opengeospatial.org/standards/wmc>`_\ ’ is an OGC specification and any WMC document created in the OneGeology Portal should be usable in a number of client software applications.
 
 Saving your context file
-^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""
 
    * Click the Save WMC context button to create a WMC document
    * Enter a file name of your choice that you will save the WMC as, and click OK.
@@ -382,7 +382,7 @@ Saving your context file
    This will create a Web Map Context document containing all the geology maps you currently have added to the OneGeology Portal and the Blue Marble base layer, but will not currently add any of the layers that were automatically selected.
 
 Opening a Web Map Context file in the OneGeology Portal
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
    To open a Web Map Context document in the OneGeology Portal, you need to select the ‘*Load a WMC context*’ menu option (folder icon)
 
@@ -412,7 +412,7 @@ Opening a Web Map Context file in the OneGeology Portal
 
 
 Opening a WMC file in other clients
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""""""""""""
 
    Other clients are known to support Web Map Context documents, for example we could load the example file (http://ogc.bgs.ac.uk/wmc/IrelandGeologyEdited-wmc.xml) in an OpenLayers client like the one at http://openlayers.org/dev/examples/wmc.html.  Here we need to copy the contents of the file into the form window and click on the ‘*read as new map*’ button to view our map.
 
@@ -425,7 +425,7 @@ Opening a WMC file in other clients
       Using a OneGeology Portal WMC document in an OpenLayers client
 
 Known issues
-^^^^^^^^^^^^
+"""""""""""""
 
    If when you load your Web Map Context file you get an error, you should check that the file has the correct XML header, this is because some browsers are known to add an additional XML line at the top of the document when creating the file.  So if you see the following lines at the top of your document:
 
@@ -441,7 +441,7 @@ Known issues
       <?xml version="1.0" encoding="utf-8" ?>
 
 Using the thematic analysis tools
----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
       As we have seen in section 1.4.1.1, we may use the ‘*Active Layers Properties*’ tool to discover further information about any of our active layers in a map session.  Information that may be revealed in this dialogue is that the layer is available for ‘*Thematic Analysis*’, as in the below example.
 
@@ -471,7 +471,7 @@ Using the thematic analysis tools
          The thematic analysis query builder window
 
 GeoSciML-Portrayal
-^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""
 
       The analysis window offers you two ways to filter your map, you can filter by lithology or you can filter by age. The initial view in the lithology filter window is simply the ‘*Compound material*’ option, and in the age filter window the initial view shows the ‘*Phanerozoic*’ and ‘*Precambrian*’ options.  These options reflect the structure of the underlying controlled vocabularies.
 
@@ -610,8 +610,8 @@ Finally, it is possible to filter by both Age and Lithology, for example in the 
 The generated external SLD will be available on the OneGeology portal server for a least one day, but no longer than one week.  In the age filter example above we have taken a copy of the generated SLD and put it on the BGS WMS server for long term reference.
 
 
-Statistics
-^^^^^^^^^^
+Summary Statistics
+"""""""""""""""""""
 
 The statistics functionality (Full statistics and Lithology statistics) of the Thematic analysis tools are coupled to a WFS associated with a WMS Layer, as identified by the presence of a **GeoSciML32_wfs_age_or_litho_queryable** keyword in the layer metadata
 
