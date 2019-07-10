@@ -114,7 +114,7 @@ Support services
 
 Services which will be available to OneGeology participants to help advise and assist with serving data to the Portal include:
 - This docvumention including cookbooks' for step-by-step guidance.
-- a support team, and `email <helpdesk<onegeologyhelp@bgs.ac.uk>`_.
+- a support team, and `email <onegeologyhelp@bgs.ac.uk>`_.
 - regional workshops to build technology capability within staff.
 
 Work will be based on open-source technologies so all the OGC web services required software can be purchased cost free. However, a contributing survey must either have its own standard Internet server or have access to such a server through a neighbouring or regional organisation.
