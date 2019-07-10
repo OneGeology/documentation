@@ -1,1 +1,0 @@
-.. include:: ../WEBSERVICES.rst
