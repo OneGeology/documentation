@@ -12,11 +12,11 @@ Contents:
    providingdata
    portal
 
-   This Documentation provides detailed instuctions on
+This Documentation provides detailed instuctions on
 
-   - Using the OneGeology Portal
-   - Using data from OneGeology on other platforms
-   - How to provide to the OneGeology Portal
+- Using the OneGeology Portal
+- Using data from OneGeology on other platforms
+- How to provide to the OneGeology Portal
 
 Indices and tables
 ==================
