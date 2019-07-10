@@ -1,5 +1,5 @@
 Authors
 -------
 
-* NERC
+* OneGeology
 

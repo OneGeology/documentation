@@ -52,21 +52,22 @@ In simple terms, currently WFS are used for spatial data stored in some vector f
 .. todo::
 
    Should we also mention the CSW for searching metadata about the services in the above list?
+   
 
-   Viewing map data registered in the OneGeology Portal
-   ====================================================
+Viewing map data registered in the OneGeology Portal
+====================================================
 
-   The OneGeology Portal is found at: http://portal.onegeology.org/ and is accessible as either an English (the default) or French language service.
+The OneGeology Portal is found at: http://portal.onegeology.org/ and is accessible as either an English (the default) or French language service.
 
-   You will need to use Internet Explorer 6 and above, Firefox 2 and above or recent versions of Safari, Opera, and Chrome. You will need to enable JavaScript and allow pop-ups.
+You will need to use Internet Explorer 6 and above, Firefox 2 and above or recent versions of Safari, Opera, and Chrome. You will need to enable JavaScript and allow pop-ups.
 
    .. todo::
 
       Need to find an updated link for Blue Marble
 
-   When you open the OneGeology Portal you get a map of the world, the `Blue Marble: Next Generation+Topo+Bathy (Terra/MODIS) <http://visibleearth.nasa.gov/view_detail.php?id=7105>`_. By default you now also get some automatically selected geology map layers, depending on the scale you are zoomed into. For example, at full map extent you now get the ‘*World CGMW 1:50M Geological Units Onshore*’ map.
+When you open the OneGeology Portal you get a map of the world, the `Blue Marble: Next Generation+Topo+Bathy (Terra/MODIS) <http://visibleearth.nasa.gov/view_detail.php?id=7105>`_. By default you now also get some automatically selected geology map layers, depending on the scale you are zoomed into. For example, at full map extent you now get the ‘*World CGMW 1:50M Geological Units Onshore*’ map.
 
-   .. figure:: newsiteR.jpg
+.. figure:: newsiteR.jpg
       :target: ../../_static/images/newsite.jpg
       :width: 600
       :height: 450
@@ -74,41 +75,41 @@ In simple terms, currently WFS are used for spatial data stored in some vector f
 
       Default display of the OneGeology Portal, with automatically selected geology layers image
 
-   You may at any time turn off the automatically selected layers by unticking the option ‘*Automatically displayed layers depending on scale and location*’ in the top right of the browser window.
+You may at any time turn off the automatically selected layers by unticking the option ‘*Automatically displayed layers depending on scale and location*’ in the top right of the browser window.
 
-   The overview window in the bottom right corner of the map indicates the area of the globe you are currently looking at in the map window, by means of a red outline map superimposed on the global map. For example in the above map the red outline is shown for the whole globe, but in the below map the red box is located in the Southern Ocean.
+The overview window in the bottom right corner of the map indicates the area of the globe you are currently looking at in the map window, by means of a red outline map superimposed on the global map. For example in the above map the red outline is shown for the whole globe, but in the below map the red box is located in the Southern Ocean.
 
-   .. figure:: overviewWinr.jpg
+.. figure:: overviewWinr.jpg
       :target: ../../_static/images/overviewWin.jpg
       :width: 600
       :alt: The overview window shows where you are on the globe
 
       The overview window shows where you are on the globe
 
-   .. figure:: AddLayer.jpg
+.. figure:: AddLayer.jpg
       :width: 54
       :height: 52
       :alt: Click the Add OneGeology map layers icon to open the OneGeology Portal catalogue map layer listing
 
       Add OneGeology map layers icon
 
-   To view any other registered geology maps you need to click on the ‘*Add OneGeology map layers*’ icon to open the OneGeology Portal catalogue listing.
+To view any other registered geology maps you need to click on the ‘*Add OneGeology map layers*’ icon to open the OneGeology Portal catalogue listing.
 
-   .. figure:: newsiteAddLayersR.jpg
+.. figure:: newsiteAddLayersR.jpg
       :target: ../../_static/images/newsiteAddLayers.jpg
       :width: 600
       :height: 529
       :alt: OneGeology Portal catalogue map layers listed by Geographic area. Use the options in this window to control which maps are displayed, and how they are displayed
 
-      OneGeology Portal catalogue map layers listed by Geographic area. Use the options in this window to control which maps are displayed, and how they are displayed
+	OneGeology Portal catalogue map layers listed by Geographic area. Use the options in this window to control which maps are displayed, and how they are displayed
 
-   Click on the + buttons to expand the levels. Select a map by clicking on the box to the left of the map you wish to view. A tick will appear.
+Click on the + buttons to expand the levels. Select a map by clicking on the box to the left of the map you wish to view. A tick will appear.
 
-   Select all the map layers you wish to view at this time before closing the catalogue listing. The selected maps should then be visible. You can add other layers later on if you desire.
+Select all the map layers you wish to view at this time before closing the catalogue listing. The selected maps should then be visible. You can add other layers later on if you desire.
 
-   You may navigate around the map using the GIS tools found at the top of the page. The functions of these tools is as follows (from left to right):
+You may navigate around the map using the GIS tools found at the top of the page. The functions of these tools is as follows (from left to right):
 
-   .. figure:: IconsGIS.jpg
+.. figure:: IconsGIS.jpg
       :width: 379
       :height: 58
       :alt: GIS tools
@@ -123,7 +124,7 @@ In simple terms, currently WFS are used for spatial data stored in some vector f
    * If you have gone back to a previous view, you may use this tool to go forward.
    * Use this tool to get more information about the active map layers (this is termed a GetFeatureInfo request). Select the tool and click the map to open up a new window with detailed information about the geology at that point. The information returned and format of the information varies from map to map and layer to layer dependant upon how much information the provider organization wishes to display and the capabilities of the service.
 
-   .. figure:: GetFInfoR.jpg
+.. figure:: GetFInfoR.jpg
       :target: ../../_static/images/GetFInfo.jpg
       :alt: Example of information that may be retrieved using the information tool
       :width: 600
@@ -131,14 +132,14 @@ In simple terms, currently WFS are used for spatial data stored in some vector f
 
       Example of information that may be retrieved using the information tool
 
-   .. figure:: ViewProps.jpg
+.. figure:: ViewProps.jpg
       :width: 38
       :height: 35
       :alt: Active Layers Properties icon
 
       Active Layers Properties icon
 
-   To view metadata about the map layers and to change the way the layers are displayed you need to Click on the ‘*Active Layers Properties*’ icon. This will open a list of all the map layers that you have selected to be viewed in the OneGeology Portal; it will now also display all the map layers that have been automatically selected.
+To view metadata about the map layers and to change the way the layers are displayed you need to Click on the ‘*Active Layers Properties*’ icon. This will open a list of all the map layers that you have selected to be viewed in the OneGeology Portal; it will now also display all the map layers that have been automatically selected.
 
    .. figure:: activelayers1r.jpg
       :width: 600
@@ -147,7 +148,7 @@ In simple terms, currently WFS are used for spatial data stored in some vector f
 
       Active layers in a OneGeology Portal session
 
-   Within this dialogue menu you can manage the individual layers in the following ways (looking at the icons from left to right):
+Within this dialogue menu you can manage the individual layers in the following ways (looking at the icons from left to right):
 
    .. figure:: activelayers1detail.jpg
       :width: 422
@@ -162,7 +163,7 @@ In simple terms, currently WFS are used for spatial data stored in some vector f
    * Zoom to the extent of the map layer to make that particular map layer fill the centre of the map browser.
    * Delete the map layer from the view (you can add it back again later).
 
-   Note the *i* icon has no actual function, it just exists to inform you whether the layer is queryable, that is whether you can perform a GetFeatureInfo request on it and get back some information.  Note too, in the above figure that one of the layers is shown to be greyed out.  A greyed out layer indicates that the layer (such as PER INGEMMET 1:1M Faults, is not visible at the selected map scale.  Finally note we can show or hide all the automatically selected layers by unticking the ‘*Automatically displayed layers depending on scale and location*’ option at the top of the dialogue window.
+Note the *i* icon has no actual function, it just exists to inform you whether the layer is queryable, that is whether you can perform a GetFeatureInfo request on it and get back some information.  Note too, in the above figure that one of the layers is shown to be greyed out.  A greyed out layer indicates that the layer (such as PER INGEMMET 1:1M Faults, is not visible at the selected map scale.  Finally note we can show or hide all the automatically selected layers by unticking the ‘*Automatically displayed layers depending on scale and location*’ option at the top of the dialogue window.
 
    .. figure:: 9.jpg
       :height: 245
@@ -178,7 +179,7 @@ In simple terms, currently WFS are used for spatial data stored in some vector f
 
       Layer viewed with 100% opacity
 
-   To find out further information about any map layer you can click the arrow to right of the layer title; inforamtion found here is extracted from the service GetCapabilites response document and includes information such as:
+To find out further information about any map layer you can click the arrow to right of the layer title; inforamtion found here is extracted from the service GetCapabilites response document and includes information such as:
 
    * The data owner
    * The service title
@@ -193,12 +194,12 @@ In simple terms, currently WFS are used for spatial data stored in some vector f
       :alt: Example of GetCapabilities data that may be obtained from the Active Layer properties dialogue, with pop-up legend from the Legend link
       :target: ../../_static/images/GetCapInfo.jpg
 
-      Example of GetCapabilities data that may be obtained from the Active Layer properties dialogue, with pop-up legend from the Legend link
+       Example of GetCapabilities data that may be obtained from the Active Layer properties dialogue, with pop-up legend from the Legend link
 
    This (above) information is harvested automatically by the OneGeology Portal client software from the GetCapabilities response document of the WMS.
 
-   Go To
-   -----
+Go To
+-----
 
    .. figure:: compassIcon.jpg
       :width: 56
