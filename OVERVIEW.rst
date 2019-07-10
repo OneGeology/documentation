@@ -5,8 +5,6 @@ Overview
 OneGeology Technical Documentation
 ----------------------------------
 
-The pages linked from here might be linked from a number of places on http://onegeology.org. This page at the moment just acts to group all the content being authored roughly under the "OneGeology Cookbook" type content area.
-
 There are two main areas being covered; first is how to use OneGeology and second (the major part) is how to provide services for OneGeology. Currently there is a bit of overlap in general OneGeology introductory type of material in the "cookbook" sections and other pages on the onegeology.org site. Other pages on the onegeology site that have overlapping content which we should consider together with cookbook content are:
 
 * http://onegeology.org/what_is/home.html and all the subsections are introductions to OneGeology which we should point to where appropriate rather than duplicating.
@@ -73,7 +71,7 @@ Geological surveys and similar institutions that wish to contribute to the OneGe
 
 The maps will appear in the computer users application, which may be a web browser, in a raster or image form. Such image maps will be combinable with other spatial datasets depending on the application the user wishes to apply. If the data that is the source behind the WMS is of digital vector data form with attributes associated with those vectors e.g. information attached to a particular type polygon or boundary then the WMS will allow the display of such attributes for each polygon. If the data source behind the WMS is of a simple scanned raster type e.g. scanned from a paper map and served as a raster image, then such attributes or further informa0tion do not exist for separate polygons.
 
-      
+
 Level 2 involvement with OneGeology web services
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -96,18 +94,18 @@ These documents will provide specific work-flow guidance notes to enable full pa
 Cookbook specification
 ^^^^^^^^^^^^^^^^^^^^^^
 
-A series of OneGeology-specific branded cookbooks are available as follows: 
+A series of OneGeology-specific branded cookbooks are available as follows:
 
 - Online
     - `Cookbook No 1 <https://onegeology-docs.readthedocs.io/en/latest/webservices.html#wms>`_ - explains how to setup a WMS (view) service (with no GML/GeoSciML).
-    
+
 - PDF Download (to be moved online shortly)
     - Cookbook No 6 - decribes how to set up a WCS (download) web service on your web server using open-source software.
     - Cookbook No 7 - explains how we map from the backend database to the GeoSciML WFS service.
     - Cookbook No 8 - describes how to set up a WFS (download) web service on your web server using open-source software.
 
 The aim is that multilingual versions will be available wherever possible.
-  
+
 Support services
 ----------------
 
