@@ -1,1 +1,1 @@
-.. include:: ../PROVIDINGDATA.rst
+.. include:: ../providingdata/PROVIDINGDATA.rst
