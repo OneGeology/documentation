@@ -71,8 +71,6 @@ Geological surveys and similar institutions that wish to contribute to the OneGe
 
 The maps will appear in the computer users application, which may be a web browser, in a raster or image form. Such image maps will be combinable with other spatial datasets depending on the application the user wishes to apply. If the data that is the source behind the WMS is of digital vector data form with attributes associated with those vectors e.g. information attached to a particular type polygon or boundary then the WMS will allow the display of such attributes for each polygon. If the data source behind the WMS is of a simple scanned raster type e.g. scanned from a paper map and served as a raster image, then such attributes or further informa0tion do not exist for separate polygons.
 
-
-      <p><a href="#cookbooks">Cookbooks</a> giving best practice on using open-source, i.e. freely available, software to set up such WMS will be provided by the OneGeology initiative along with guidance on what sort of data to serve and how to represent it.
       
 Level 2 involvement with OneGeology web services
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -80,8 +78,6 @@ Level 2 involvement with OneGeology web services
 Geological surveys and similar institutions that wish to contribute to the OneGeology initiative at Level 2 are aiming to provide an **OGC Web Feature Service (WFS)** from a web server within their organisation, or hosted by a neighbouring organisation, of some basic geological 'map' data.
 
 These WFS will allow the user to download data in GeoSciML form resulting from queries (geographic or other attribute based) of the data over the web so that the same query could be sent to some/all of the OneGeology contributors WFS services around the world.
-
-Cookbooks</a> giving best practice on using open-source, i.e. freely available, software to set up such WFS will be provided by         the OneGeology initiative along with guidance on how to configure a WFS using GeoSciML from the institutions' internal digital databases. 
 
 Cookbooks
 ---------------
