@@ -1,6 +1,0 @@
-============
-Requirements
-============
-
-Minimum requirements include....
-
