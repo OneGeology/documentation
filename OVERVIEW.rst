@@ -115,3 +115,21 @@ Services which will be available to OneGeology participants to help advise and a
 - regional workshops to build technology capability within staff.
 
 Work will be based on open-source technologies so all the OGC web services required software can be purchased cost free. However, a contributing survey must either have its own standard Internet server or have access to such a server through a neighbouring or regional organisation.
+
+Guidance for the use of OneGeology Materials (e.g. images and data)
+-------------------------------------------------------------------
+
+OneGeology material, which is defined as data, mapping, map extracts, illustrations, images (but not including institutional logos) which are available on the OneGeology website, is freely available for all uses. OneGeology encourages the use of its materials free of all charges in promoting geological and environmental sciences and for all uses: personal, commercial, academic, educational, and research.
+
+The only condition we do place on the use of the materials is that they are not used in any offensive, derogatory or political manner, which might offend the owner of the materials in question. The OneGeology secretariat will be the sole and final decision-maker as to what is considered to be a breach of this section and we ask the users of the material respect the wishes of the secretariat. The |OneGeology| logo can be displayed and should be clearly visible and used in conjunction with all materials. The reference of the owner of the data sources, where available, should also be clearly visible/recognised.
+
+.. |Onegeology| image:: images/Onegeology_logo.gif
+
+When you do use OneGeology materials, though not a condition, please inform the secretariat, <a href="mailto:onegeology@bgs.ac.uk">onegeology@bgs.ac.uk</a> as we like to record use of our materials for promotional and other uses.
+
+Acknowledgements
+^^^^^^^^^^^^^^^^^
+
+We would appreciate you use the following acknowledgement to accompany  any uses of OneGeology materials: **'Reproduced with the permission of the OneGeology. All rights Reserved'**
+
+Where illustrations, map extracts, data or images are used as the basis of specifically generated illustrations, the source of the material should be cited as follows: **'Based upon [source details], with the permission of OneGeology'.**
