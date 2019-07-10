@@ -8,7 +8,7 @@ Contents:
    :glob:
 
    docs/overview
-   docs/datapreperation
+   docs/datapreparation
    docs/webservices
    docs/portal
 
