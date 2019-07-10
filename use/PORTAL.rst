@@ -81,13 +81,14 @@ The documentation for the following clients has not been updated for several yea
    uDig: Current content at http://onegeology.org/howto/1_4_9.html is pretty minimal. Is there any point maintaining a specific page?
 
 
-* `Using QGIS <https://github.com/OneGeology/OneGeology_Docs/blob/master/PORTAL.rst#qgis>`_
-* Using ESRI
+* `Using QGIS`_
+* `Using ESRI`_
 
-  * `Using ArcMap <https://github.com/OneGeology/OneGeology_Docs/blob/master/PORTAL.rst#ArcMap>`_
-  * `Using ArcPRO <https://github.com/OneGeology/OneGeology_Docs/blob/master/PORTAL.rst#ArcPRO>`_
+  * `Using ArcCatalog`_
+  * `Using ArcMap`_
+  * `Using ArcPRO`_
 
-QGIS
+Using QGIS
 ^^^^^^^^^^^^
 
 .. todo::
@@ -230,8 +231,8 @@ WCS layers can be exported as rasters. To do so, right click on the layer and go
 
 See: https://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_client_support.html
 
-ESRI
-^^^^^
+Using ESRI
+^^^^^^^^^^^
 
 The ArcGIS software package comes with several applications. Here we'll briefly show how to use **ArcCatalog** to setup OGC service connections and how to use **ArcMap** to deal with OGC layers.
 
