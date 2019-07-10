@@ -2376,13 +2376,8 @@ Because the field names in GeoSciML-Lite are longer than 10 characters, you will
     shape                         SHAPE                 ESRI geometry
     ============================  ====================  ===================
 
-
-
-
-
-******************
 OneGeology Profile
-******************
+-------------------
 
 .. todo::
 
@@ -2422,14 +2417,14 @@ The service must comply with one of the following OGC standard specifications.
 * A WCS must comply with `WCS 2.0.0 <https://portal.opengeospatial.org/files/09-110r4>`_ or higher specification. At the moment you also need to be able to supply a `WCS 1.0.0 <https://portal.opengeospatial.org/files/05-076>`_ GetCapabilities response for metadata harvesting. This could be achieved by supporting the older WCS version or by just creating a static response document that complies to the format.
 
 OGC service level metadata
-==========================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 WMS, WFS, and WCS services all provide metadata about the service through their response to a GetCapabilities request. OneGeology places some requirements on this metadata, some to help the Portal operate and some as good practice to enable users to search for services, know how they can use the data and get further information. The different service types have similar but not identical structures for their GetCapabilities responses; differences will be pointed out below. In particular, the WCS 2.0 standard changed the structure considerably, moving coverage specific metadata to DescribeCoverage requests so, for the moment, we need a WCS 1.0.0 structure document to enable us to harvest coverage specific metadata easily.
 
 .. _service_provision_onegeology_profile_service_title:
 
 Service title
--------------
+""""""""""""""
 
 .. todo::
 
@@ -2449,7 +2444,7 @@ WCS            2.0.1    /wcs:Capabilities/ows:ServiceIdentification/ows:Title
 .. _service_provision_onegeology_profile_service_abstract:
 
 Service abstract
-----------------
+"""""""""""""""""
 
 Information about the service and general information about the map data served in the layers. You may also use this to field to describe the data owner organization, and its goals within OneGeology etc. You can also include in this section information about the scale layering of your service, and any other information that is not automatically extracted / viewable by the OneGeology Portal (or indeed any other client software). We can't enforce definite rules on the content but this is important for users of your data.
 
@@ -2465,7 +2460,7 @@ WCS            2.0.1    /wcs:Capabilities/ows:ServiceIdentification/ows:Abstract
 .. _service_provision_onegeology_profile_fees:
 
 Fees
-----
+"""""""
 
 Any fees required to use the WMS services and data contained within. If there are no fees you are recommended to explicitly state this using the word "none".
 
@@ -2481,7 +2476,7 @@ WCS            2.0.1    /wcs:Capabilities/ows:ServiceIdentification/ows:Fees
 .. _service_provision_onegeology_profile_access_constraints:
 
 Access constraints
-------------------
+"""""""""""""""""""
 
 Information about who is allowed to use the data served by the WMS, and for what purpose they can use it for. Remember your WMS is available to any application that is able to access the Internet, not just through the OneGeology Portal.
 
@@ -2501,7 +2496,7 @@ WCS            2.0.1    /wcs:Capabilities/ows:ServiceIdentification/ows:AccessCo
 .. _service_provision_onegeology_profile_keywords:
 
 Keywords
---------
+"""""""""
 
 .. todo::
 
@@ -2535,7 +2530,7 @@ WCS            2.0.1    /wcs:Capabilities/ows:ServiceIdentification/ows:Keywords
 .. _service_provision_onegeology_profile_contact_information:
 
 Contact information
--------------------
+""""""""""""""""""""
 
 In addition to the required organisation name we recommend that you add additional contact information that will enable a user to get in touch with a named person who can act as a contact for any enquiries by post, email or phone. The different service types and versions provide slightly different structured fields for including this information under fairly self-explanatory element names. The below XPaths give the parent elements within which you can find different elements for email, phone etc. Don't forget these are for an international audience, e.g. include country code in telephone numbers.
 
@@ -2551,7 +2546,7 @@ WCS            2.0.1    /wcs:Capabilities/ows:ServiceProvider/ows:ServiceContact
 .. _service_provision_onegeology_profile_data_provider:
 
 Data provider
--------------
+""""""""""""""
 
 The full name of the data owner organization not service provider, where these are different, such as in buddied services. In the case of services that also supply non-OneGeology data, the contact should be able to put an enquirer in touch with whoever is responsible for the OneGeology data.
 
@@ -2573,7 +2568,7 @@ WCS            2.0.1    /wcs:Capabilities/ows:ServiceProvider/ows:ProviderName
 .. _service_provision_onegeology_profile_online_resource:
 
 Online resource
----------------
+""""""""""""""""
 
 .. todo::
 
@@ -2592,7 +2587,7 @@ WCS            2.0.1    /wcs:Capabilities/ows:ServiceProvider/ows:ProviderSite
 
 
 Layer / Coverage / Feature metadata
-===================================
+------------------------------------
 
 Depending on which service type you are serving the actual data sets that you are supplying will be delivered as a number of layers (WMS), coverages (WCS) or features (WFS). Each of these can have their own specific metadata. The OneGeology portal allows the selection of WMS layers and WCS coverages to view and presents selected aspects of the layer/coverage metadata in its layer list. These metadata are also used to arrange layers/coverages under geographical areas and under themes and enable searching for layers/coverages including searching on some aspects of their functionality.
 
@@ -2605,7 +2600,7 @@ WFS are a bit different. In the Portal we do not list registered WFS separately 
 .. _service_provision_onegeology_profile_layer_names:
 
 WMS layer and WCS coverage naming
----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The OneGeology Portal allows selection of WMS layers and WCS coverages for display from a list and so it is important to have a naming convention that ensures unique titles for each of these layers and coverages. This convention has been designed to give readable, informative titles.
 
@@ -2620,7 +2615,7 @@ Both WMS and WCS have names which are used by software to select which layers/co
 The titles should contain the following components which are explained in more detail below: **[Geographical extent]** of the data in the layer, then **[Data owner organization]** (not service provider), then **[Language code]** (if more than one language being provided), then **[Scale]**, then **[Theme]**.
 
 Geographic extent
-^^^^^^^^^^^^^^^^^
+""""""""""""""""""
 
 The first piece of information is the Geographic extent.  Geographic extent should begin wherever practically possible with the Country of the layer extent, even if the layer only covers part of a country, or if the layer covers all of one country (use that as the country code) and some of the surrounding landmass or sea area.  Country information is codified using the `ISO 3166-1 three-letter country codes <https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3>`_
 
@@ -2640,17 +2635,17 @@ The OneGeology Portal divides countries and regions using the United Nations (UN
 Where the layer coverage doesn’t correspond to a country and/or when no ISO code or UN region exists to describe the coverage, you should use a short geographic name such as "World".
 
 Data owner
-^^^^^^^^^^
+""""""""""""
 
 Geographic extent information is followed by the data owner organization code (not service provider), the same as recommended for the service title.
 
 Language
-^^^^^^^^
+"""""""""""
 
 If you need to include language in your layer you should use the same ISO 639-1 two-letter language code `(https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) <https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>`_ as recommended for the service title and include it *after* the data owner organization code .
 
 Scale
-^^^^^
+""""""
 
 Scale comes next and is shortened using SI symbols:
 
@@ -2662,7 +2657,7 @@ Such that a 1:1 000 000 scale map would be represented in the layer title as 1:1
 Additionally, if the map scale is represented in the layer title as 1:1.5M we can lose the decimal point in the layer name by using 1500k.  **Note**, you do not have to use the 1500k format over the 1.5M format, rather we offer this format as an alternative, if your server software has an issue with dots in the layer name.
 
 Theme
-^^^^^
+""""""
 
 The theme is the geological description of the data contained in the layer.  As with the service title theme, the layer title theme should be a descriptive phrase in the service language.  For English services the layers will most commonly have titles such as "Bedrock Age", "Bedrock Lithology" etc.
 
@@ -2693,7 +2688,7 @@ Note, if you decide to use ESRI ArcGIS server (versions 9.3.1 and below) you wil
 This issue has been resolved in ESRI ArcGIS server 10
 
 Layer title examples
-^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""
 
 GBR BGS 1:625k Bedrock Age
 
@@ -2704,7 +2699,7 @@ FRA BRGM 1:1M Formations géologiques - Guyanne
 Note, it is acceptable to replace the ISO country code with a more readable name in the layer title
 
 Layer name examples
-^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""
 
 Remember that older versions of MapServer had a limit of 20 Characters for LAYER names; though this restriction no longer applies.
 
@@ -2719,7 +2714,7 @@ Europe_BGR_5M_BLS
 US-KY_KGS_24k_Faults
 
 INSPIRE layer naming considerations
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""""""""""""""
 
 If your service falls under the INSPIRE naming conventions, then both the layer name and the layer title are fixed according to the legislation. For example the `D2.8.II.4 Data Specification on Geology–Technical Guidelines <http://inspire.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_GE_v3.0.pdf>`_ tell us (section 11.1 ~ Layers to be provided by INSPIRE view services) that any layer to do with lithology or age must have the name *GE.GeologicUnit* and title *Geologic Units*.  See the `layer-naming <https://themes.jrc.ec.europa.eu/discussion/view/13952/layer-naming>`_ discussion on the INSPIRE Thematic Clusters Geology forum for fuller details.
 
@@ -2730,7 +2725,7 @@ To have a multiple layer geology service that adheres to the INSPIRE naming rule
    I would just drop any OneGeology requirement on WMS Root Layer name but do a double check of how it appears in different clients to see if it might be helpful for some. Not used by Portal. Does this only apply to WMS as a view service? Can group layers be done in WCS and do we need them or is WCS only a download service or could it be used as a view service as well?
 
 Summary of layer/coverage/feature metadata
-------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For WMS layers and WCS coverages the machine readable name and human readable name should follow the conventions above. For WFS, if the data is being put out following a standard community schema then the machine readable name will be fixed according to the schema and a reasonable human readable name will probably be defined by the schema as well. If it is a simple WFS mirroring a WMS layer dataset then the names can match the WMS layer names.These go in the below places in the capabilities response.
 
@@ -2739,7 +2734,7 @@ For WMS layers and WCS coverages the machine readable name and human readable na
    Need to mention ignoring any name prefix in machine readable name if relevant (just another constraint of software on machine readable names.
 
 Machine readable name
-^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""
 
 * /WMS_Capabilities/Capability/Layer/Layer/Name (1.3.0)
 * /wcs:WCS_Capabilities/wcs:ContentMetadata/wcs:CoverageOfferingBrief/wcs:name (1.0.0)
@@ -2747,7 +2742,7 @@ Machine readable name
 * /wfs:WFS_Capabilities/wfs:FeatureTypeList/wfs:FeatureType/wfs:Name (2.0.x)
 
 Human readable name
-^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""
 
 * /WMS_Capabilities/Capability/Layer/Layer/Title (1.3.0)
 * /wcs:WCS_Capabilities/wcs:ContentMetadata/wcs:CoverageOfferingBrief/wcs:label (1.0.0)
@@ -2757,7 +2752,7 @@ Human readable name
 .. _service_provision_onegeology_profile_layer_abstract:
 
 Abstract
-^^^^^^^^
+"""""""""
 
 .. todo::
 
@@ -2773,7 +2768,7 @@ You must provide a description of your layer/coverage data. You may wish to incl
 .. _service_provision_onegeology_profile_layer_keywords:
 
 Keywords
-^^^^^^^^
+"""""""""
 
 * /WMS_Capabilities/Capability/Layer/Layer/KeywordList/Keyword (1.3.0)
 * /WCS_Capabilities/ContentMetadata/CoverageOfferingBrief/keywords/keyword (1.0.0)
@@ -2837,14 +2832,14 @@ To help classify your service in the portal according to the thematic keyword li
 For those WMS layers with an associated GeoSciML WFS that you would like to query using the OneGeology Portal thematic analysis tool, you will need to add the appropriate **GeoSciML32_wfs_age_or_litho_queryable** or **GeoSciML4_wfs_age_or_litho_queryable** keyword.
 
 WMS Specific Metadata
----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 The following sections were defined for the earlier WMS only specific OneGeology profile and haven't yet been considered for updating to other service types.
 
 .. _service_provision_onegeology_profile_layer_extent:
 
 Extent
-^^^^^^
+""""""""
 
 * /WMS_Capabilities/Capability/Layer/Layer/EX_GeographicBoundingBox (1.3.0)
 
@@ -2861,7 +2856,7 @@ In WMS version 1.3.0 four elements each describing a single bounding limit (alwa
 .. _service_provision_onegeology_profile_layer_crs:
 
 Spatial/Coordinate reference system
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""""""""""""
 
 * /WMS_Capabilities/Capability/Layer/Layer/CRS (1.3.0)
 
@@ -2893,7 +2888,7 @@ The portal now supports the projection systems below, including two suitable for
 .. _service_provision_onegeology_profile_layer_bbox:
 
 BoundingBox
-^^^^^^^^^^^
+""""""""""""
 
 * /WMS_Capabilities/Capability/Layer/Layer/BoundingBox (1.3.0)
 
@@ -2921,7 +2916,7 @@ The BoundingBox attributes indicate the edges of the bounding box in units of th
 .. _service_provision_onegeology_profile_layer_data_url:
 
 DataURL (optional)
-^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""
 
 * /WMS_Capabilities/Capability/Layer/Layer/DataURL (1.3.0)
 
@@ -2940,7 +2935,7 @@ This may be used to provide further information about all the digital data offer
 .. _service_provision_onegeology_profile_layer_metadata_url:
 
 MetadataURL (optional)
-^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""
 
 * /WMS_Capabilities/Capability/Layer/Layer/MetadataURL (1.3.0)
 
@@ -2973,7 +2968,7 @@ Please note: the defined attribute value to indicate ISO 19115:2003 metadata is 
 .. _service_provision_onegeology_profile_layer_legend_url:
 
 Legend url
-^^^^^^^^^^
+"""""""""""
 
 * /WMS_Capabilities/Capability/Layer/Layer/Style/LegendURL (1.3.0)
 
@@ -2982,7 +2977,7 @@ We require you to have some sort of legend to accompany your map data. In many c
 .. _style_examples:
 
 Layer styling information
-^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""""
 
 The examples below show the styling portion of the GetCapabilities response.  The first shows that the legend will be generated on-the-fly using an SLD GetLegendGraphic request. The second shows a simple request to a static image, generated in advance by the map service provider.
 
@@ -3028,7 +3023,7 @@ Example style information from an ArcGIS server WMS version 1.3.0. GetCapabiliti
 .. _service_provision_onegeology_profile_layer_getfeatureinfo:
 
 WMS GetFeatureInfo response
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""""
 
 Depending on the data you have available for each layer and depending on your WMS software, you may be able to configure what is returned in response to GetFeatureInfo requests on each layer, either to format the look of the data returned or to restrict the data attributes returned.
 
@@ -3038,8 +3033,8 @@ Preferably it should be possible to retrieve the information in at least text/ht
 
 .. _service_provision_onegeology_profile_core_metadata:
 
-Core TC211/ISO:19115:2003 Metadata
-----------------------------------
+Core TC211/ISO:19115 Metadata
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This section has been added to allow you to understand what metadata you need to supply, if you choose to supply additional metadata about a layer as an online resource **AND** if you want to use the MetadataURL to reference that resource.  If you wish to supply an online resource to layer metadata, that doesn’t conform to the minimum standard set out below (or FGDC:1998) then you cannot use the MetadataURL; we recommend that you use the DataURL.  If you also wish to supply a URL to your web site, to highlight all your data products (for example), then you can use the SERVICE level online resource URL; in MapServer you do this by specifying the WMS_SERVICE_ONLINERESOURCE (or OWS_SERVICE_ONLINERESOURCE) keyword.
 
@@ -3125,9 +3120,9 @@ Note that TC211/ISO:19115:2003 is not itself a format, but a standard for defini
 
 OneGeology Europe participants should note that conformance of an ISO 19115 metadata set to the ISO 19115 Core does not guarantee conformance to INSPIRE metadata, see the INSPIRE technical guidelines document `MD_IR_and_ISO_v1_2_20100616 <http://inspire.ec.europa.eu/documents/Metadata/MD_IR_and_ISO_20131029.pdf>`_ for further details.
 
-*******************
+
 Setting up a Server
-*******************
+--------------------
 
 There are a wide variety of proprietary and open source software packages that can be used to provide the OGC web services of interest to OneGeology. We cannot possibly describe them all but this section gives guidance on how to use some with which we do have experience to set up your OneGeology services. If you are interested and able to provide similar guidance for a software package not listed below then please get in touch to discuss adding your documentation here. Currently the only software we have successfully used to provide *all* the service types relevant for OneGeology is GeoServer.
 
