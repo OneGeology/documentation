@@ -1,5 +1,5 @@
 Providing Web Services
-========
+======================
 
 How to setup web services to serve data to OneGeology. We provide a basic explanation of how to do it easily.
 
@@ -44,7 +44,7 @@ OneGeology Profile
 
    Removed accreditation scheme boxes with intention of putting them in separate section.
 
-A OneGeology service will be an OGC WMS, WFS or WCS. OneGeology defines a profile of these services for two reasons. The first is to make certain parts of the OneGeology Portal work with the services. The second is to make the services as widely usable and findable as possible by ensuring that they all provide some basic metadata such as contact details for further information. Currently, a OneGeology WFS needs to be associated with one or more layers from a OneGeology WMS which portray the data as an image. 
+A OneGeology service will be an OGC WMS, WFS or WCS. OneGeology defines a profile of these services for two reasons. The first is to make certain parts of the OneGeology Portal work with the services. The second is to make the services as widely usable and findable as possible by ensuring that they all provide some basic metadata such as contact details for further information. Currently, a OneGeology WFS needs to be associated with one or more layers from a OneGeology WMS which portray the data as an image.
 
 Each of the OGC service types shares some common characteristics. They will each have a service URL. They each respond to a GetCapabilities request by returning a GetCapabilities response that contains administrative and technical metadata about the service.
 
@@ -147,13 +147,13 @@ Keywords
 
 .. todo::
 
-   Does OneGeology keyword in service level do anything, presumably any service URL that is given to be registered is registered so this is only for searching over many catalogues? If we have services that have many non-OneGeology layers do we really have any good reason for making this a requirement? Check the effect in GeoNetwork if we filter by OneGeology Keyword. 
+   Does OneGeology keyword in service level do anything, presumably any service URL that is given to be registered is registered so this is only for searching over many catalogues? If we have services that have many non-OneGeology layers do we really have any good reason for making this a requirement? Check the effect in GeoNetwork if we filter by OneGeology Keyword.
 
 A list of keywords or short phrases that users of the OneGeology Portal and other catalogue services could use to search/discover your services. You must include the keyword OneGeology.
 
 .. todo::
 
-   Consider whether it would be better to recommend using INSPIRE extended capabilities for this metadata even for non-INSPIRE services.  Can GeoServer do this? Also will ESRI users outside of Europe be able to get the INSPIRE plugin (or else will need to provide exact details of XML to put into custom GC response)... 
+   Consider whether it would be better to recommend using INSPIRE extended capabilities for this metadata even for non-INSPIRE services.  Can GeoServer do this? Also will ESRI users outside of Europe be able to get the INSPIRE plugin (or else will need to provide exact details of XML to put into custom GC response)...
 
 We would like you to also supply two special @ style ‘Metadata keywords’ (MD_DATE\@value and MD_LANG\@value) that will be used to populate the OneGeology catalogue of services, and which help make the GetCapabilities response ISO19115 core compliant.
 
@@ -236,7 +236,7 @@ WCS            2.0.1    /wcs:Capabilities/ows:ServiceProvider/ows:ProviderSite
 Layer / Coverage / Feature metadata
 ------------------------------------
 
-Depending on which service type you are serving the actual data sets that you are supplying will be delivered as a number of layers (WMS), coverages (WCS) or features (WFS). Each of these can have their own specific metadata. The OneGeology portal allows the selection of WMS layers and WCS coverages to view and presents selected aspects of the layer/coverage metadata in its layer list. These metadata are also used to arrange layers/coverages under geographical areas and under themes and enable searching for layers/coverages including searching on some aspects of their functionality. 
+Depending on which service type you are serving the actual data sets that you are supplying will be delivered as a number of layers (WMS), coverages (WCS) or features (WFS). Each of these can have their own specific metadata. The OneGeology portal allows the selection of WMS layers and WCS coverages to view and presents selected aspects of the layer/coverage metadata in its layer list. These metadata are also used to arrange layers/coverages under geographical areas and under themes and enable searching for layers/coverages including searching on some aspects of their functionality.
 
 WFS are a bit different. In the Portal we do not list registered WFS separately but attach them to one or more WMS layers that portray some aspect of one or more of the features of the WFS. In OneGeology we are most focussed on WFS that supply features conforming to particular community standards whether simple feature standards like GeoSciML-Lite and ERML-Lite or complex feature standards like GeoSciML and ERML. In these cases the number of feature types available from a WFS is limited by the number of feature types in the community standards and you would normally be serving data for one data set from each WFS endpoint. (If you serve more than one data set from a given endpoint the client will need to know how to formulate a query that will only retrieve features from a particular data set.) Although the metadata are not presented directly in the Portal it is still recommended to add useful metadata for searching in the catalogue and for presentation in other WFS clients. If you don't yet have a suitable mapping from your data to a full community schema you may still be able to use your server software to generate automatically a simple feature WFS corresponding to a given WMS layer based on the same underlying dataset. In this case the features won't strictly conform to any community schema but may still have some common field names that allow a certain level of interoperability.
 
@@ -448,7 +448,7 @@ Conditional keywords are required if they apply. E.g. If the geographic area is 
 
 In addition we would like that you also supply the following two special ‘Metadata keywords’ for each layer. These keywords help make the GetCapabilities response ISO19115 core compliant. ::
 
-   Layer (Data set) date:              DS_DATE@value         
+   Layer (Data set) date:              DS_DATE@value
    Layer (Data set) topic category:    DS_TOPIC@value        (one or more as appropriate)
 
 The topic category is taken from the ISO 19119 topic category listing.  A good reference to the categories and what they represent is found at: `https://gcmd.nasa.gov/add/difguide/iso_topics.html <https://gcmd.nasa.gov/add/difguide/iso_topics.html>`_. We anticipate that most layers would have a DS_TOPIC\@geoscientificinformation keyword.
@@ -477,7 +477,7 @@ To help classify your service in the portal according to the thematic keyword li
 **Please note** services using GeoSciML-Lite also require the following keyword: **Geosciml_portrayal_age_or_litho_queryable** (GeoSciML-Lite was previously called GeoSciML-Portrayal.)
 
 For those WMS layers with an associated GeoSciML WFS that you would like to query using the OneGeology Portal thematic analysis tool, you will need to add the appropriate **GeoSciML32_wfs_age_or_litho_queryable** or **GeoSciML4_wfs_age_or_litho_queryable** keyword.
- 
+
 WMS Specific Metadata
 ---------------------
 
@@ -525,11 +525,11 @@ The portal now supports the projection systems below, including two suitable for
       2D Latitude / Longitude (ETRS89) `urn:ogc:def:crs:EPSG::4258 <http://epsg-registry.org/export.htm?wkt=urn:ogc:def:crs:EPSG::4258>`_ (suitable for INSPIRE compliance)
    EPSG:4326
       2D Latitude / Longitude (WGS84) `urn:ogc:def:crs:EPSG::4326 <http://epsg-registry.org/export.htm?wkt=urn:ogc:def:crs:EPSG::4326>`_
-   
+
 .. todo::
 
     How come supporting EPSG:4326 is a 2* requirement. Does the portal need it or not?
-   
+
     We say that all services MUST support EPSG:4326, so possibly it's a one star requirement.
 
 .. _service_provision_onegeology_profile_layer_bbox:
@@ -540,7 +540,7 @@ BoundingBox
 * /WMS_Capabilities/Capability/Layer/Layer/BoundingBox (1.3.0)
 
 The BoundingBox attributes indicate the edges of the bounding box in units of the specified spatial reference system, for example, the exemplar service provides the following BoundingBox information for the GBR BGS 1:625k bedrock lithology layer:
- 
+
 **Example WMS 1.3.0 response**
 
 .. code-block:: xml
@@ -558,7 +558,7 @@ The BoundingBox attributes indicate the edges of the bounding box in units of th
 
     Again why 2* requirement for EPSG:4326 BoundingBox and how does this compare with LatLonBoundingBox and is this controllable anyway or just an artefact of software and which basic coord systems you say you will support (so just say we want X coord system supported (so can query in that one) and assume sw will do appropriate bounding boxes if you configure that. WFS and WCS may be different.
     For INSPIRE it is a requirement that each supported CRS has a BBOX in the units of the CRS (for view services, not sure about download services), but not sure where the OneGeology requirement came from.
-    
+
 
 .. _service_provision_onegeology_profile_layer_data_url:
 
