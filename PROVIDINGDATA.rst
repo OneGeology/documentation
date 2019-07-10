@@ -1,5 +1,8 @@
-Providing Web Services
+Providing Data
 ======================
+
+Web Services
+----------------
 
 How to setup web services to serve data to OneGeology. We provide a basic explanation of how to do it easily.
 
