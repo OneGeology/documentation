@@ -1,1 +1,4 @@
-.. include:: ../AUTHORS.rst
+Authors
+-------
+
+* OneGeology
