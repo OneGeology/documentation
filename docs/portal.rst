@@ -14,6 +14,8 @@ Using the OneGeology Portal
 
 The OneGeology portal allows you to discover all the services that have been registered with OneGeology. You can view all those that return image output on a map of the world and can query the data behind those that provide that ability. Also some services allow you to highlight areas satisfying some simple query criteria on the age or lithology of mapped geological units.
 
+http://portal.onegeology.org
+
 - The portal can be accessed using most internet browsers.
 - Basic map data is called a WMS (Web Map Service)
 - OneGeology aims to use Free and Open Source software wherever possible.
