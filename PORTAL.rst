@@ -68,7 +68,7 @@ You will need to use Internet Explorer 6 and above, Firefox 2 and above or recen
 When you open the OneGeology Portal you get a map of the world, the `Blue Marble: Next Generation+Topo+Bathy (Terra/MODIS) <http://visibleearth.nasa.gov/view_detail.php?id=7105>`_. By default you now also get some automatically selected geology map layers, depending on the scale you are zoomed into. For example, at full map extent you now get the ‘*World CGMW 1:50M Geological Units Onshore*’ map.
 
 .. figure:: newsiteR.jpg
-      :target: ../../_static/images/newsite.jpg
+      :target: ../images/newsite.jpg
       :width: 600
       :height: 450
       :alt: Default display of the OneGeology Portal, with automatically selected geology layers
@@ -817,7 +817,7 @@ Data displayed on the OneGeology portal is able to be accessed via other platfor
   * `Using Gaia <http://www.onegeology.org/howto/1_4_2.html>`_
   * `Using Dapple <http://www.onegeology.org/howto/1_4_5.html>`_
   * `Using MapInfo <http://www.onegeology.org/howto/1_4_8.html>`_
-  * `Using uDig <http://www.onegeology.org/howto/1_4_9.html>`_
+  * `Using uDig`_
 
 
 Using QGIS
@@ -1146,7 +1146,17 @@ To export a WCS layer, right click on it and go to *Data > Export Data*. The *Ex
 
 See: http://desktop.arcgis.com/en/arcmap/latest/map/web-maps-and-services/about-using-ogc-service-layers.htm
 
-ArcPRO
+Using ArcPRO
 ^^^^^^^^^^^^
 
 See: https://pro.arcgis.com/en/pro-app/help/data/services/ogc-services.htm
+
+Using uDig
+^^^^^^^^^^^
+
+- Open uDig. The software can be obtained at: http://udig.refractions.net/
+- Create a new map, or open an existing map to which you would like to add the web service
+- On the upper menu bar, click Layer > Add...
+- In the window that appears, click Web Map Server or Web Feature Server, as appropriate; click Next
+- Paste the service endpoint in the URL field; click Next
+- In the Resource Selection window that appears, select all layers you wish to add. When you are done, click Finish
