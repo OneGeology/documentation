@@ -67,8 +67,7 @@ You will need to use Internet Explorer 6 and above, Firefox 2 and above or recen
 
 When you open the OneGeology Portal you get a map of the world, the `Blue Marble: Next Generation+Topo+Bathy (Terra/MODIS) <http://visibleearth.nasa.gov/view_detail.php?id=7105>`_. By default you now also get some automatically selected geology map layers, depending on the scale you are zoomed into. For example, at full map extent you now get the ‘*World CGMW 1:50M Geological Units Onshore*’ map.
 
-.. figure:: newsiteR.jpg
-      :target: ../images/newsite.jpg
+.. figure:: ../images/newsiteR.jpg
       :width: 600
       :height: 450
       :alt: Default display of the OneGeology Portal, with automatically selected geology layers
