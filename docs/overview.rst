@@ -100,9 +100,9 @@ A series of OneGeology-specific branded cookbooks are available as follows:
     - `Cookbook No 1 <https://onegeology-docs.readthedocs.io/en/latest/webservices.html#wms>`_ - explains how to setup a WMS (view) service (with no GML/GeoSciML).
 
 - PDF Download (to be moved online shortly)
-    - Cookbook No 6 - decribes how to set up a WCS (download) web service on your web server using open-source software.
-    - Cookbook No 7 - explains how we map from the backend database to the GeoSciML WFS service.
-    - Cookbook No 8 - describes how to set up a WFS (download) web service on your web server using open-source software.
+    - `Cookbook No 6 <http://www.onegeology.org/docs/technical/CB6-HowToServe-a-OneGeology-WCS_v1.pdf>`_ - decribes how to set up a WCS (download) web service on your web server using open-source software.
+    - `Cookbook No 7 <http://www.onegeology.org/docs/technical/GeoSciML_Cookbook_1.3.pdf>`_ - explains how we map from the backend database to the GeoSciML WFS service.
+    - `Cookbook No 8 <http://www.onegeology.org/docs/technical/OneGeologyWFSCookbook_v1.4.pdf>`_- describes how to set up a WFS (download) web service on your web server using open-source software.
 
 The aim is that multilingual versions will be available wherever possible.
 

@@ -1,7 +1,18 @@
-Using OneGeology Portal & Data
-==============================
+Using the OneGeology Portal
+===========================
 
-The portal will collate the web services provided by member organisations.
+.. todo::
+   Currently taken WMS cookbook 1.4 text removing over-technical detail. Needs to have a general intro to the different kinds of service (WMS, WFS and WCS) service and what sort of things you might be able to  do with them. Probably not covering the kinds of data (traditional geol map, boreholes, minerals) in this section? Should make a generic list of the sorts of functionality a client may provide so can refer to this under each item. Need to consider whether we can actually maintain detailed instructions on more than a couple of examples. And should we? Should be able just to point to software's own documentation on using OGC services. Maybe just make a list with pointer to home page, specific documentation package may have for OGC services (should be standard stuff these days) and any gotchas/special considerations we have noticed for particular examples. The target audience for this section could include a range of levels of IT and geological knowledge and include people just using the services and service providers who also need to understand how their services can be made use of.
+
+.. todo::
+
+   Below introductory paragraph should probably point to some general OneGeology introduction elsewhere on www.onegeology.org to explain the range of data and purpose of OneGeology. We may need to get it written if it doesn't exist right now. We want to refer to purpose, kinds of data that are available or will be in future. This page is where the kinds of viewing, data query etc. that can be done will be introduced.
+
+.. todo::
+
+   List the other parts of www.onegeology.org that will link directly to here. At the moment a sidebar sub-menu "Technical detail for participants" -> "How to use a OneGeology service" and some links from other pages. Also the page http://onegeology.org/portal/portal_uses.html has links to various client pages but it all seems a bit of a repetitive anomaly and something that should be entirely replaced by content here.
+
+The OneGeology portal allows you to discover all the services that have been registered with OneGeology. You can view all those that return image output on a map of the world and can query the data behind those that provide that ability. Also some services allow you to highlight areas satisfying some simple query criteria on the age or lithology of mapped geological units.
 
 - The portal can be accessed using most internet browsers.
 - Basic map data is called a WMS (Web Map Service)
@@ -23,21 +34,6 @@ The Portal has the following functions:
 - brief description of the data layer
 - conditions of use information for each layer
 
-Using the OneGeology Portal
----------------------------
-
-.. todo::
-   Currently taken WMS cookbook 1.4 text removing over-technical detail. Needs to have a general intro to the different kinds of service (WMS, WFS and WCS) service and what sort of things you might be able to  do with them. Probably not covering the kinds of data (traditional geol map, boreholes, minerals) in this section? Should make a generic list of the sorts of functionality a client may provide so can refer to this under each item. Need to consider whether we can actually maintain detailed instructions on more than a couple of examples. And should we? Should be able just to point to software's own documentation on using OGC services. Maybe just make a list with pointer to home page, specific documentation package may have for OGC services (should be standard stuff these days) and any gotchas/special considerations we have noticed for particular examples. The target audience for this section could include a range of levels of IT and geological knowledge and include people just using the services and service providers who also need to understand how their services can be made use of.
-
-.. todo::
-
-   Below introductory paragraph should probably point to some general OneGeology introduction elsewhere on www.onegeology.org to explain the range of data and purpose of OneGeology. We may need to get it written if it doesn't exist right now. We want to refer to purpose, kinds of data that are available or will be in future. This page is where the kinds of viewing, data query etc. that can be done will be introduced.
-
-.. todo::
-
-   List the other parts of www.onegeology.org that will link directly to here. At the moment a sidebar sub-menu "Technical detail for participants" -> "How to use a OneGeology service" and some links from other pages. Also the page http://onegeology.org/portal/portal_uses.html has links to various client pages but it all seems a bit of a repetitive anomaly and something that should be entirely replaced by content here.
-
-The OneGeology portal allows you to discover all the services that have been registered with OneGeology. You can view all those that return image output on a map of the world and can query the data behind those that provide that ability. Also some services allow you to highlight areas satisfying some simple query criteria on the age or lithology of mapped geological units.
 
 OneGeology makes data from geological data providers around the world accessible to those who would like to see and use it. The majority of this data is the type that is portrayed on traditional geological maps. There are increasing amounts with different geologically related types of data such as geophysics, boreholes and hydrogeology. This data is made available by means of Open GeoSpatial Consortium `OGC <http://www.opengeospatial.org>`_ standard web services that can be accessesed by a number of free and commercial clients. Currently OneGeology makes use of three OGC standards: Web Map Service `WMS <http://www.opengeospatial.org/standards/wms>`_, Web Feature Service `WFS <http://www.opengeospatial.org/standards/wfs>`_ and Web Coverage Service `WCS <http://www.opengeospatial.org/standards/wcs>`_. These different service standards define different kinds of capability for examining the data.
 
@@ -55,7 +51,7 @@ In simple terms, currently WFS are used for spatial data stored in some vector f
 
 
 Viewing data registered in the OneGeology Portal
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
 
 The OneGeology Portal is found at: http://portal.onegeology.org/ and is accessible as either an English (the default) or French language service.
 
@@ -194,7 +190,7 @@ To find out further information about any map layer you can click the arrow to r
    This (above) information is harvested automatically by the OneGeology Portal client software from the GetCapabilities response document of the WMS.
 
 Go To Function
-^^^^^^^^^^^^^^
+---------------
 
    .. figure:: images/compassIcon.jpg
       :width: 56
@@ -224,7 +220,7 @@ Go To Function
       Using the Go To functionality to zoom to the area of Christchurch, New Zealand by entering the Longitude and Latitude ~ 172.85, -43.73
 
 Viewing layers in different projections
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------------
 
    The portal allows you to select other projections to view the map layers.  The projections supported by the portal are:
 
@@ -309,7 +305,7 @@ Viewing layers in different projections
    Note that when using the ETRS-89 based projections you will not be able to zoom out (or pan the map) wider than than the intended extent of the projection.
 
 Reviewing external map data
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------
 
    You may also use the OneGeology Portal client to review other WMS services, either as check of your own service before requesting that it is added to the OneGeology Portal catalogue, or to view any other data services that you discover.
 
@@ -327,7 +323,7 @@ Reviewing external map data
    A service or layer added using the external layers functionality is only visible to you, and is only available for your active session.
 
 Exporting to Keyhole Markup Language (KML)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------------
 
    *KML* is a file format used to display geographic data in an Earth browser such as Google Earth, Google Maps. It is an XML–based language schema for expressing geographic annotation and visualization on existing or future Web-based, two-dimensional maps and  three-dimensional Earth browsers. KML was developed for use with Google Earth, which was originally named Keyhole Earth Viewer. It was created by Keyhole Inc, which was acquired by Google in 2004, but is now an internationally recognized standard by the Open Geospatial Consortium (OGC) in it’s version 2.2 form.
 
@@ -346,7 +342,7 @@ Exporting to Keyhole Markup Language (KML)
    Once the KML file has been created you can save it or choose to immediately open the data in Google Earth.
 
 Creating and using Web Map Context (WMC) documents
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------
 
    Saving your current OneGeology Portal view as a Web Map Context document is an easy way to save your personal data view and allows you to open the same view again at a later date.  This avoids the need to keep adding layers to the view each time you enter the OneGeology Portal. This is most useful if viewing a large number of layers at any one time.
 
@@ -355,7 +351,7 @@ Creating and using Web Map Context (WMC) documents
    ‘\ `Web Map Context Documents <http://www.opengeospatial.org/standards/wmc>`_\ ’ is an OGC specification and any WMC document created in the OneGeology Portal should be usable in a number of client software applications.
 
 Saving your context file
-"""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    * Click the Save WMC context button to create a WMC document
    * Enter a file name of your choice that you will save the WMC as, and click OK.
@@ -372,7 +368,7 @@ Saving your context file
    This will create a Web Map Context document containing all the geology maps you currently have added to the OneGeology Portal and the Blue Marble base layer, but will not currently add any of the layers that were automatically selected.
 
 Opening a Web Map Context file in the OneGeology Portal
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    To open a Web Map Context document in the OneGeology Portal, you need to select the ‘*Load a WMC context*’ menu option (folder icon)
 
@@ -402,7 +398,7 @@ Opening a Web Map Context file in the OneGeology Portal
 
 
 Opening a WMC file in other clients
-""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    Other clients are known to support Web Map Context documents, for example we could load the example file (http://ogc.bgs.ac.uk/wmc/IrelandGeologyEdited-wmc.xml) in an OpenLayers client like the one at http://openlayers.org/dev/examples/wmc.html.  Here we need to copy the contents of the file into the form window and click on the ‘*read as new map*’ button to view our map.
 
@@ -414,7 +410,7 @@ Opening a WMC file in other clients
       Using a OneGeology Portal WMC document in an OpenLayers client
 
 Known issues
-"""""""""""""
+^^^^^^^^^^^^
 
    If when you load your Web Map Context file you get an error, you should check that the file has the correct XML header, this is because some browsers are known to add an additional XML line at the top of the document when creating the file.  So if you see the following lines at the top of your document:
 
@@ -430,7 +426,7 @@ Known issues
       <?xml version="1.0" encoding="utf-8" ?>
 
 Using the thematic analysis tools
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------
 
 As we have seen in section 1.4.1.1, we may use the ‘*Active Layers Properties*’ tool to discover further information about any of our active layers in a map session.  Information that may be revealed in this dialogue is that the layer is available for ‘*Thematic Analysis*’, as in the below example.
 
@@ -460,7 +456,7 @@ Click on the ‘*Thematic Analysis*’ link to show the options available for th
    The thematic analysis query builder window
 
 GeoSciML-Portrayal
-"""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^
 
 The analysis window offers you two ways to filter your map, you can filter by lithology or you can filter by age. The initial view in the lithology filter window is simply the ‘*Compound material*’ option, and in the age filter window the initial view shows the ‘*Phanerozoic*’ and ‘*Precambrian*’ options.  These options reflect the structure of the underlying controlled vocabularies.
 
@@ -600,7 +596,7 @@ The generated external SLD will be available on the OneGeology portal server for
 
 
 Summary Statistics
-"""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^
 
 The statistics functionality (Full statistics and Lithology statistics) of the Thematic analysis tools are coupled to a WFS associated with a WMS Layer, as identified by the presence of a **GeoSciML32_wfs_age_or_litho_queryable** keyword in the layer metadata
 
@@ -615,7 +611,7 @@ If the OneGeology Portal detects that your selected layer has an associated GeoS
 
 
 Full statistics
-"""""""""""""""
+^^^^^^^^^^^^^^^^
 
 Make your filter selection, by age or lithology, in the same way as described for the GeoSciML-Portrayal section.  In the below example we have first selected the ‘*Full statistics*’ option button, then searched for the Lithology term ‘*Breccia*’, selecting the broad term as the filter keyword.  We now have two options, we can opt to ‘*Download the GeoSciML*’, or we can view the Full statistics.
 
@@ -774,7 +770,7 @@ If you get this error you must close the results (‘*Statistics on BBOX*’) wi
 
 
 Using OneGeology Data
----------------------
+======================
 
 Data displayed on the OneGeology portal is able to be accessed via other platforms such as QGIS and ArcMap. The following pages show how you may access services using these OGC standards (including those not part of OneGeology) in a number of popular desktop software clients and web based browser applications. We concentrate first on the web based portal provided by OneGeology itself and then cover other commonly available clients.
 
@@ -810,7 +806,7 @@ Data displayed on the OneGeology portal is able to be accessed via other platfor
 
 
 Using QGIS
-^^^^^^^^^^^^
+------------
 
 .. todo::
 
@@ -825,7 +821,7 @@ Quantum GIS (QGIS) supports WMS versions 1.3.0 (and lower) with GetCapabilities,
 
 
 Using QGIS to view WMS
-""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: images/qgis_addWMS.png
    :alt: QGIS menu option for adding a WMS
@@ -880,7 +876,7 @@ You may right click on any layer in the layer list and go to *Properties* to get
    Figure 6 - Layer properties metadata
 
 Using QGIS to access simple feature WFS
-"""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. |wfsBtn| image:: images/qgis_btnWFS.png
 
@@ -914,7 +910,7 @@ When we view a WFS service, it should be noted that we actually download a repre
    Figure 9 - Exporting WFS layer
 
 Using QGIS to view WCS
-""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^
 
 .. |wcsBtn| image:: images/qgis_btnWCS.png
 
@@ -953,7 +949,7 @@ WCS layers can be exported as rasters. To do so, right click on the layer and go
 See: https://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_client_support.html
 
 Using ESRI
-^^^^^^^^^^^
+------------
 
 The ArcGIS software package comes with several applications. Here we'll briefly show how to use **ArcCatalog** to setup OGC service connections and how to use **ArcMap** to deal with OGC layers.
 
@@ -1141,7 +1137,7 @@ Using ArcPRO
 See: https://pro.arcgis.com/en/pro-app/help/data/services/ogc-services.htm
 
 Using uDig
-^^^^^^^^^^^
+-----------
 
 - Open uDig. The software can be obtained at: http://udig.refractions.net/
 - Create a new map, or open an existing map to which you would like to add the web service
