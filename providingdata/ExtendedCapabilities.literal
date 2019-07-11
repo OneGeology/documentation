@@ -1,0 +1,29 @@
+.. code-block:: xml
+
+ <ows:ExtendedCapabilities>
+  <inspire_dls:ExtendedCapabilities>
+   <inspire_common:MetadataUrl
+    xsi:type="inspire_common:resourceLocatorType">
+    <inspire_common:URL>
+     http://metadata.bgs.ac.uk/geonetwork/srv/en/csw?SERVICE=CSW&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;OutputSchema=http://www.isotc211.org/2005/gmd&amp;ID=7822e848-822d-45a5-8584-56d352fd2170&amp;
+    </inspire_common:URL>
+    <inspire_common:MediaType>
+     application/vnd.ogc.csw.GetRecordByIdResponse_xml
+    </inspire_common:MediaType>
+   </inspire_common:MetadataUrl>
+   <inspire_common:SupportedLanguages
+    xsi:type="inspire_common:supportedLanguagesType">
+    <inspire_common:DefaultLanguage>
+     <inspire_common:Language>eng</inspire_common:Language>
+    </inspire_common:DefaultLanguage>
+   </inspire_common:SupportedLanguages>
+   <inspire_common:ResponseLanguage>
+    <inspire_common:Language>eng</inspire_common:Language>
+   </inspire_common:ResponseLanguage>
+   <inspire_dls:SpatialDataSetIdentifier>
+    <inspire_common:Code>
+     9df8df51-6342-37a8-e044-0003ba9b0d98
+    </inspire_common:Code>
+   </inspire_dls:SpatialDataSetIdentifier>
+  </inspire_dls:ExtendedCapabilities>
+ </ows:ExtendedCapabilities>

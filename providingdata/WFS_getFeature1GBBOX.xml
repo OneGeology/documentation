@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wfs:GetFeature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.opengis.net/wfs/2.0 http://schemas.opengis.net/wfs/2.0/wfs.xsd
+ http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd"
+ xmlns:wfs="http://www.opengis.net/wfs/2.0" 
+ xmlns:fes="http://www.opengis.net/fes/2.0"
+ xmlns:gsmlb="http://www.opengis.net/gsml/4.1/GeoSciML-Basic"
+ xmlns:gml="http://www.opengis.net/gml/3.2"
+ service="WFS" version="2.0.0" count="100">
+ <wfs:Query typeNames="gsmlb:MappedFeature">
+  <fes:Filter>
+   <fes:BBOX>
+    <fes:ValueReference>gsmlb:shape</fes:ValueReference>
+    <gml:Envelope srsName="urn:ogc:def:crs:EPSG::4326">
+     <gml:lowerCorner>56.08643859340388 -4.0004826736994445</gml:lowerCorner>
+     <gml:upperCorner>56.165510496146474 -3.8381055732299343</gml:upperCorner>
+    </gml:Envelope>
+   </fes:BBOX>
+  </fes:Filter>
+ </wfs:Query>
+</wfs:GetFeature>

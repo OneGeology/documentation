@@ -1,0 +1,81 @@
+.. code-block:: xml
+
+ <?xml version="1.0" encoding="UTF-8"?>
+ <wfs:FeatureCollection >
+  <wfs:member>
+   <gsmlb:MappedFeature gml:id="bgsn_digmap20111213000014089_625k">
+    <gsmlb:mappingFrame
+     xlink:href="http://inspire.ec.europa.eu/codelist/MappingFrameValue/topOfBedrock"
+     xlink:title="top of bedrock"/>
+    <gsmlb:specification>
+     <gsmlb:GeologicUnit gml:id="SYG-CYCS">
+      <gml:description>STRATHCLYDE GROUP - SEDIMENTARY ROCK CYCLES, STRATHCLYDE GROUP
+       TYPE</gml:description>
+      <!-- ... -->
+     </gsmlb:GeologicUnit>
+    </gsmlb:specification>
+    <gsmlb:shape>
+     <gml:MultiSurface gml:id="gsmlb.shape.bgsn_digmap20111213000014089_625k"
+      srsName="urn:ogc:def:crs:EPSG::27700">
+      <gml:surfaceMember>
+       <gml:Polygon gml:id="gsmlb.shape.bgsn_digmap20111213000014089_625k.1">
+        <gml:exterior>
+         <gml:LinearRing>
+          <gml:posList>277851.8129999998 693998.524000001 277823.5400000005 693969.0079999991
+           277654.64600000007 693696.0569999999 277576.6949999996 693449.1019999995 277550.7119999993
+           693280.1319999992 277537.7199999998 693085.1679999997 276992.0639999996 693202.1460000003
+           277018.0469999999 693566.081000001 277134.9740000011 693839.0320000002 277251.8999999991
+           694098.9850000012 277851.8129999998 693998.524000001</gml:posList>
+         </gml:LinearRing>
+        </gml:exterior>
+       </gml:Polygon>
+      </gml:surfaceMember>
+     </gml:MultiSurface>
+    </gsmlb:shape>
+   </gsmlb:MappedFeature>
+  </wfs:member>
+  <wfs:member>
+   <gsmlb:MappedFeature gml:id="bgsn_digmap20111213000014090_625k">
+    <gsmlb:mappingFrame
+     xlink:href="http://inspire.ec.europa.eu/codelist/MappingFrameValue/topOfBedrock"
+     xlink:title="top of bedrock"/>
+    <gsmlb:specification>
+     <gsmlb:GeologicUnit gml:id="CRMF-MDCB">
+      <gml:description>CRAWFORD GROUP AND MOFFAT SHALE GROUP (UNDIFFERENTIATED) - MUDSTONE, CHERT AND
+       SMECTITE-CLAYSTONE</gml:description>
+      <!-- ... -->
+     </gsmlb:GeologicUnit>
+    </gsmlb:specification>
+    <gsmlb:shape>
+     <!-- ... -->
+    </gsmlb:shape>
+   </gsmlb:MappedFeature>
+  </wfs:member>
+  <wfs:member>
+   <gsmlb:MappedFeature gml:id="bgsn_digmap20111213000014092_625k">
+    <gsmlb:mappingFrame
+     xlink:href="http://inspire.ec.europa.eu/codelist/MappingFrameValue/topOfBedrock"
+     xlink:title="top of bedrock"/>
+    <gsmlb:specification>
+     <gsmlb:GeologicUnit gml:id="TRIA-SCON">
+      <gml:description>TRIASSIC ROCKS (UNDIFFERENTIATED) - SANDSTONE AND CONGLOMERATE,
+       INTERBEDDED</gml:description>
+      <!-- ... -->
+    </gsmlb:specification>
+    <gsmlb:shape>
+     <!-- ... -->
+    </gsmlb:shape>
+   </gsmlb:MappedFeature>
+  </wfs:member>
+  <wfs:member>
+   <gsmlb:MappedFeature gml:id="bgsn_digmap20111213000014096_625k">
+    <gsmlb:mappingFrame
+     xlink:href="http://inspire.ec.europa.eu/codelist/MappingFrameValue/topOfBedrock"
+     xlink:title="top of bedrock"/>
+    <gsmlb:specification xlink:href="#TRIA-SCON"/>
+    <gsmlb:shape>
+     <!-- ... -->
+    </gsmlb:shape>
+   </gsmlb:MappedFeature>
+  </wfs:member>
+ </wfs:FeatureCollection>
