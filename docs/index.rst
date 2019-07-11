@@ -1,6 +1,12 @@
 Welcome to OneGeology documentation!
 ==================================================
 
+This Documentation provides detailed instuctions on
+
+- How to provide to the OneGeology Portal
+- Using the OneGeology Portal
+- Using data from OneGeology on other platforms
+
 Contents:
 
 .. toctree::
@@ -11,12 +17,6 @@ Contents:
    authors
    providingdata
    portal
-
-This Documentation provides detailed instuctions on
-
-- Using the OneGeology Portal
-- Using data from OneGeology on other platforms
-- How to provide to the OneGeology Portal
 
 Indices and tables
 ==================
