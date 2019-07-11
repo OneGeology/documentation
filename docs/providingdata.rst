@@ -1,7 +1,6 @@
 Providing Data
 ======================
 
-
 .. todo::
 
    This high level introduction text should be consistent with other parts of the www.onegeology.org site and with statements in the "using" part. Maybe link to a canonical statement of purpose on the website. Does it need updating to cover newer types of data that we are dealing with?
@@ -9,152 +8,6 @@ Providing Data
 The `mission <http://onegeology.org/what_is/mission.html>`_ of OneGeology is being fulfilled by the cooperation of participating member organisations worldwide. This part of the website gives technical guidance on how to provide services for OneGeology to those organisations that fit within the `prospective member guidelines <http://onegeology.org/participants/home.html#statement>`_ and have `registered <http://onegeology.org/getting_involved/home.html>`_ with OneGeology as participants. Some of the guidance may also be of use to others who wish to set up similar services outside OneGeology.
 
 As described in the pages on `using <http://onegeology.org/use/home.html>`_ OneGeology data there are different kinds of data and levels of interaction with that data that are provided by OneGeology services. As a participant you need to decide what kinds of service to set up. This will depend on what data you have available and what level of access you wish to provide to it. You will also need to decide how much effort you are able to spend to harmonise your data with relevant standards. The next sections give an overview of different kinds of data source you might use and what levels of functionality you could provide with different services.
-
-
-OneGeology English keyword dictionary picklist
-==============================================
-
-To help classify your service in the portal with respect these thematic keywords you can use one or more of the optional thematic\@value style keywords in your layer metadata.
-
-Note, terms like Geology shown in bold help to classify the terms for ease of reading, but don't imply any hierarchy.  These terms are also part of the picklist of terms.
-
-
-.. table:: keywords
-    :widths: auto
-    :align: left
-
-    ==================================  ====================
-    Term                                Definition
-    ==================================  ====================
-    **Economic geology**                Geologic bodies and materials that can be utilized profitably by man
-    Exploration                         ~
-    Mining                              ~
-    Metals                              Metal resources
-    Minerals                            Mineral resources
-    Energy                              Energy resources
-    Coal                                ~
-    Peat                                ~
-    Oil                                 ~
-    Oil shale                           ~
-    Gas                                 ~
-    Ore                                 ~
-    Metallic ore                        ~
-    **Engineering geology**             Geologic factors affecting the location, design, construction, operation, and maintenance of engineering works
-    Geotechnics                         ~
-    Rock mechanics                      ~
-    Soil mechanics                      ~
-    Land heave                          ~
-    Land subsidence                     ~
-    **Environmental geology**           Human interactions with the geological environment
-    Geologic hazards                    Geological conditions capable of causing damage or loss of property and life
-    Avalanche                           ~
-    Cavity caving                       ~
-    Collapse of metastable sediments    ~
-    Earthquake                          ~
-    Flood                               ~
-    Landslide                           ~
-    Mud and debris flow                 ~
-    Off-shore landslides and collapses  ~
-    Quick clay                          ~
-    Rockfall                            ~
-    Tsunami                             ~
-    Volcanism                           ~
-    Pollution                           Human pollution (contamination) of the geological environment
-    Acid drainage                       ~
-    Groundwater pollution               ~
-    Diffuse pollution                   ~
-    Point-source pollution              ~
-    Reclamation                         ~
-    Soil pollution                      ~
-    Climate change                      Geological conditions as they effect climate change
-    Emission of climate gas             ~
-    Global warming                      ~
-    Methane exhalation                  ~
-    Sea level rise                      ~
-    Carbon capture and storage          ~
-    Waste                               Unwanted or unusable materials
-    Medical geology                     Geological conditions as they effect human, animal, and plant health
-    Airborne dust exposure              ~
-    Arsenic exposure                    ~
-    Asbestos exposure                   ~
-    Heavy metal exposure                ~
-    Radon exposure                      ~
-    **Geology**                         Earth's history and its life as recorded in the rocks; includes the study of geologic features of an area, such as the geometry of rock formations, weathering and erosion, and sedimentation
-    Bedrock                             Consolidated rock
-    Superficial deposits                Unconsolidated or quaternary geological deposits
-    Surface geology                     Superficial deposits and bedrock which occurs at the Earth's surface
-    Borehole                            Boreholes or data surveyed in boreholes
-    Geochronology                       Absolute ages of rocks, fossils, and sediments, within a certain degree of uncertainty inherent to the method used
-    Radiometry                          In optics, radiometry is a set of techniques for measuring electromagnetic radiation, including visible light
-    Absolute age                        The geologic age of a fossil, or a geologic event or structure expressed in units of time, usually years
-    Stratigraphy                        Rock and sediment layers and layering (stratification)
-    Biostratigraphy                     The branch of stratigraphy which focuses on correlating and assigning relative ages of rock strata by using the fossil assemblages contained within them
-    Chronostratigraphy                  The branch of stratigraphy that studies the age of rock strata in relation to time
-    Structural geology                  Three-dimensional distribution of rock units with respect to their deformational histories
-    Tectonics                           ~
-    Neotectonics                        ~
-    Structure                           ~
-    Fault                               ~
-    Fold                                ~
-    Petrology                           Origin, occurrence, structure, and history of rocks
-    Lithology                           ~
-    Igneous rock                        ~
-    Metamorphic rock                    ~
-    Sedimentary rock                    ~
-    Mineralogy                          ~
-    Geochemistry                        Distribution and amounts of the chemical elements in minerals, ores, rocks, soils, and water
-    Hydrogeochemistry                   ~
-    Lithogeochemistry                   ~
-    Organic geochemistry                ~
-    Pedology                            Soil morphology, genesis, and classification
-    Soil                                ~
-    Permafrost                          ~
-    Sedimentology                       Description, classification, origin, and interpretation of sediments and sedimentary rocks
-    Deposition                          ~
-    Erosion                             ~
-    Marine submersion                   ~
-    Mudflow                             ~
-    Geomorphology                       Landforms on the Earth's surface and the processes that shape them
-    Conservation                        ~
-    Geological trail                    ~
-    Geopark                             ~
-    Geosite                             ~
-    Geotourism                          ~
-    Preservation                        ~
-    Artificial ground                   Man-made deposits, mineral workings, re-modelled or altered ground
-    Marine Geology                      Investigations of the ocean floor and coastal margins
-    Seafloor type                       ~
-    Shallow gas                         ~
-    Bathymetry                          ~
-    Miscellaneous                       ~
-    Education                           ~
-    Mathematical geology                ~
-    Popular geology                     ~
-    Harmonized geology                  ~
-    Harmonized age                      ~
-    Harmonized genesis                  ~
-    Harmonized data                     ~
-    Harmonized structure                ~
-    **Geophysics**                      Measurements and interpolations of geophysical parameters
-    Gravimetry                          Measurement of the strength of a gravitational field
-    Geomagnetism                        Measurements of the Earth's magnetic field
-    Paleomagnetism                      The record of the Earth's magnetic field preserved in various magnetic minerals through time
-    Geoelectricity                      Measurements of the Earth's natural electric fields and phenomena
-    Radioactivity                       Measurements of the Earth's radioactive elements
-    Seismology                          Earthquakes and the propagation of elastic waves through the Earth
-    Geothermics                         Study of the thermal state of the interior of the solid Earth and of the thermal properties of Earth materials
-    **Hydrogeology**                    Distribution and movement of groundwater in the soil and rocks of the Earth's crust
-    Aquifer                             ~
-    Groundwater                         ~
-    Groundwater abstraction             ~
-    Groundwater level                   ~
-    Infiltration                        ~
-    Spring                              ~
-    Water quality                       ~
-    Water well                          ~
-    Groundwater body                    Principal reporting unit with hydraulically coherent entities
-    ==================================  ====================
-
 
 Service Types
 -------------
@@ -1152,7 +1005,6 @@ MineralOccurrenceView features
 CommodityResourceView features
 """"""""""""""""""""""""""""""
 
-
 .. raw:: html
 
 	<table>
@@ -1314,7 +1166,7 @@ CommodityResourceView features
 	  </table>
 
 Complex Feature Data
-------------------
+---------------------
 
 .. todo::
 
@@ -2396,131 +2248,6 @@ vocabulary (`http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD
 Figure 34: Example of encoding MD_Identification.abstract, MD_Identification.language and
 MD_Identification.topicCategory
 
-PostGIS
----------
-
-Installing PostGIS
-^^^^^^^^^^^^^^^^^^^
-
-The `PostGIS Installation <http://www.postgis.net/install>`_ page contains instructions on how to install PostGIS for different operating systems. We have used both the `Enterprise DB Windows Installer <https://www.enterprisedb.com/downloads/postgres-postgresql-downloads>`_ on Windows and the `PostgreSQL Yum repository <https://yum.postgresql.org/>`_ on CentOS.
-
-.. todo::
-
-    Don't think we want to go into more detail on installation ourselves?
-
-Shapefile
-----------
-
-.. todo::
-
-   Possible need for an id column (WFS?). Convert referenced appendices (now just A) from the old cookbook?
-
-OneGeology does not recommend using Shapefiles as the data source for your services but, if you already have your data in this format, it can be used as a data source with some restrictions.
-
-If you wish to set up a :term:`SLD enabled WMS` or :term:`Simple feature WFS` using the standard fields needed for age and lithology highlighting in the Portal or following one of the standard 'Lite' schemas then the 10 character limit on field names in Shapefiles means your server will need to map shorter Shapefile field names to the longer expected field names in the standards. We provide some `recommended shapefile definitions <short_names.html>`_ for some GeoSciML-Lite features that are reasonably readable and would enable using common mapping files to produce services using the full names.
-
-Another consideration might be that, if the coordinate system of your Shapefile is not EPSG:4326 and your service is predominantly to be used in the OneGeology Portal, then your server will have to do a lot of on-the-fly coordinate conversion. To ameliorate this you can `convert the coordinate system of your Shapefile </wmsCookbook/appendixA.html>`_. The tools referred to in the previous link are available from http://www.gdal.org if you haven't done the MS4W download that it assumes.
-
-Recommend ESRI shapefile definitions for GeoSciML-Lite
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Because the field names in GeoSciML-Lite are longer than 10 characters, you will not be able to have the full attribute (column) name for many of the properties if your portrayal data is loaded into an ESRI shapefile. To prevent truncated names, we are providing a recommended Shapefile implementation with shorter field names. Field names are abbreviated to try and leave characters that convey the full name of the field; lower camel case typographic has been used, except that fields that contain URI’s end with ‘_uri’.
-
-.. table:: Recommended shapefile definition for ContactView
-    :widths: auto
-    :align: left
-
-    ==================   ====================  ===================
-    XML field Name       Shapefile field name  Shapefile data type
-    ==================   ====================  ===================
-    identifier           identifier            String
-    name                 name                  String
-    description          descriptio            String
-    contactType          contactTyp            String
-    observationMethod    obsvMethod            String
-    positionalAccuracy   posAccur              String
-    source               source                String
-    contactType_uri      conTyp_uri            String
-    specification_uri    spec_uri              String
-    metadata_uri         metada_uri            String
-    genericSymbolizer    genericSym            String
-    shape                SHAPE                 ESRI geometry
-    ==================   ====================  ===================
-
-
-.. raw:: html
-
-    <div class="linefeed">
-    <!-- Force a line -->&nbsp;
-    </div>
-
-
-.. table:: Recommended shapefile definition for ShearDisplacementStructureView
-    :widths: auto
-    :align: left
-
-    ============================  ====================  ===================
-    XML field Name                Shapefile field name  Shapefile data type
-    ============================  ====================  ===================
-    identifier                    identifier            String
-    name                          name                  String
-    description                   descriptio            String
-    faultType                     faultType             String
-    movementType                  movmntType            String
-    deformationStyle              defrmStyle            String
-    displacement                  displacmnt            String
-    geologicHistory               geolHistry            String
-    observationMethod             obsvMethod            String
-    positionalAccuracy            posAccur              String
-    source                        source                String
-    faultType_uri                 fltTyp_uri            String
-    movementType_uri              movTyp_uri            String
-    deformationStyle_uri          defStl_uri            String
-    representativeAge_uri         repAge_uri            String
-    representativeOlderAge_uri    oldAge_uri            String
-    representativeYoungerAge_uri  yngAge_uri            String
-    specification_uri             spec_uri              String
-    metadata_uri                  metada_uri            String
-    genericSymbolizer             genericSym            String
-    shape                         SHAPE                 ESRI geometry
-    ============================  ====================  ===================
-
-
-.. raw:: html
-
-    <div class="linefeed">
-    <!-- Force a line -->&nbsp;
-    </div>
-
-
-.. table:: Recommended shapefile definition for GeologicUnitView
-    :widths: auto
-    :align: left
-
-    ============================  ====================  ===================
-    XML field Name                Shapefile field name  Shapefile data type
-    ============================  ====================  ===================
-    identifier                    identifier            String
-    name                          name                  String
-    description                   descriptio            String
-    geologicUnitType              geoUnitTyp            String
-    rank                          rank                  String
-    lithology                     lithology             String
-    geologicHistory               geolHistry            String
-    observationMethod             obsvMethod            String
-    positionalAccuracy            posAccur              String
-    source                        source                String
-    geologicUnitType_uri          uniTyp_uri            String
-    representativeLithology_uri   repLth_uri            String
-    representativeAge_uri         repAge_uri            String
-    representativeOlderAge_uri    oldAge_uri            String
-    representativeYoungerAge_uri  yngAge_uri            String
-    specification_uri             spec_uri              String
-    metadata_uri                  metada_uri            String
-    genericSymbolizer             genericSym            String
-    shape                         SHAPE                 ESRI geometry
-    ============================  ====================  ===================
-
 OneGeology Profile
 -------------------
 
@@ -3295,44 +3022,18 @@ Web Services
 
 How to setup web services to serve data to OneGeology. We provide a basic explanation of how to do it easily.
 
-
-Setting up a Server
-^^^^^^^^^^^^^^^^^^^^
-
-There are a wide variety of proprietary and open source software packages that can be used to provide the OGC web services of interest to OneGeology. We cannot possibly describe them all but this section gives guidance on how to use some with which we do have experience to set up your OneGeology services. If you are interested and able to provide similar guidance for a software package not listed below then please get in touch to discuss adding your documentation here. Currently the only software we have successfully used to provide *all* the service types relevant for OneGeology is GeoServer.
-
-To start with there are some links to downloadable example data sets which you can use to experiment with setting up the servers before you try getting your own data into an appropriate format.
-
-At the end there is an additional section on setting up the Apache HTTPD server to act as a reverse proxy which may be useful if you need to provide a unified web address and port for accessing your OneGeology and possibly other web services.
-
-
 Cookbook example data
-=====================
+^^^^^^^^^^^^^^^^^^^^^^
 
 In order to help you test setting up services with data that we know work before you try using your own data we supply a number of example data sets that can be used to set up different kinds of services.
 
-Image with world file
----------------------
-
-This is an image file with associated worldfile to locate it in geographic coordinates. This is the type of file that you might have if you only have paper maps which you have to scan to use. It is suitable for setting up a simple WMS without any useful GetFeatureInfo response or the ability to be styled by an SLD. Download from `<ftp://ftp.bgs.ac.uk/pubload/OneGeology/exampledata/georeferencedimage.zip>`_.
-
-Shapefile
----------
-
-ESRI Shapefile is a very common vector GIS format. The example could be used for a Simple WMS with GetFeatureInfo response and a Simple Feature WFS. It could also serve as the basis of an SLD enabled WMS but it doesn't have the fields that are used in the OneGeology Portal age and lithology tool so wouldn't work with that unless those fields were added. Also, because of the 10 character limit on length of Shapefile field names your server software will need to be able map shorter field names to the longer ones expected by the Portal. The field name length restriction also means that a simple feature WFS can't be made to conform to specific standard Schemas like GeoSciML Lite unless your server software can map the names to the longer standard property names. Download from `<ftp://ftp.bgs.ac.uk/pubload/OneGeology/exampledata/shapefileunharmonised.zip>`_.
-
 GeoPackage
-----------
+""""""""""
 
 This is a relatively recent standard format for exchanging vector and raster GIS data in a single file. It can potentially be used for quite complex data structures. The example contains two files that could be used for a Simple WMS with GetFeatureInfo response and a Simple Feature WFS. They can also serve as the basis of an SLD enabled WMS and the GeologicUnitView.gpkg file has the fields that are used for highlighting queries in the OneGeology Portal age and lithology tool. As this format doesn't have the restrictions on field length of Shapefiles the examples are able to use the same names as specified in the GeoSciML-Lite GeologicUnitView and ShearDisplacementView feature types. Field values have been populated with appropriate values from INSPIRE vocabularies so that these examples can be used to produce a simple feature WFS returning standards conformant GeoSciML-Lite features. Download from `<ftp://ftp.bgs.ac.uk/pubload/OneGeology/exampledata/geopackagegeoscimllite.zip>`_.
 
-GeoTIFF
--------
-
-GeoTIFF is a raster format with geographic registration included. The example has been obtained from the `EMODNET Portal for Bathymetry <http://portal.emodnet-bathymetry.eu/RGB>`_ and has RGB bands suitable for display as an image although other GeoTIFF's could have more and not necessarily image bands. This could be used for a WMS but is included primarily to test WCS setup. Download from `<ftp://ftp.bgs.ac.uk/pubload/OneGeology/exampledata/geotiff.zip>`_.
-
 PostGIS data
-------------
+"""""""""""""
 
 This data set can be used as a basis for WMS with GetFeatureInfo, SLD enabled WMS usable in OneGeology Portal, Simple Feature WFS conforming to GeoSciML Lite schema and Complex Feature WFS conforming to GeoSciML schema. A PostGIS database could also store raster data but the example dataset does not. PostGIS is more suitable for production services than Image files or Shapefiles and is more capable for providing data and as a basis for services conforming to standard application schemas.
 
@@ -3361,12 +3062,156 @@ Import the data from the database dump file downloaded above. If you have instal
 
 If you have problems with the above steps which are difficult to resolve you may find that setting ``log_statement=all`` in ``postgresql.conf``, reloading the server and then monitoring the log file is helpful for debugging them.
 
-**************************************************
+Installing PostGIS
+*******************
+
+The `PostGIS Installation <http://www.postgis.net/install>`_ page contains instructions on how to install PostGIS for different operating systems. We have used both the `Enterprise DB Windows Installer <https://www.enterprisedb.com/downloads/postgres-postgresql-downloads>`_ on Windows and the `PostgreSQL Yum repository <https://yum.postgresql.org/>`_ on CentOS.
+
+.. todo::
+
+    Don't think we want to go into more detail on installation ourselves?
+
+Image with world file
+""""""""""""""""""""""
+
+This is an image file with associated worldfile to locate it in geographic coordinates. This is the type of file that you might have if you only have paper maps which you have to scan to use. It is suitable for setting up a simple WMS without any useful GetFeatureInfo response or the ability to be styled by an SLD. Download from `<ftp://ftp.bgs.ac.uk/pubload/OneGeology/exampledata/georeferencedimage.zip>`_.
+
+Shapefile
+"""""""""""
+
+ESRI Shapefile is a very common vector GIS format. The example could be used for a Simple WMS with GetFeatureInfo response and a Simple Feature WFS. It could also serve as the basis of an SLD enabled WMS but it doesn't have the fields that are used in the OneGeology Portal age and lithology tool so wouldn't work with that unless those fields were added. Also, because of the 10 character limit on length of Shapefile field names your server software will need to be able map shorter field names to the longer ones expected by the Portal. The field name length restriction also means that a simple feature WFS can't be made to conform to specific standard Schemas like GeoSciML Lite unless your server software can map the names to the longer standard property names. Download from `<ftp://ftp.bgs.ac.uk/pubload/OneGeology/exampledata/shapefileunharmonised.zip>`_.
+
+.. todo::
+
+   Possible need for an id column (WFS?). Convert referenced appendices (now just A) from the old cookbook?
+
+OneGeology does not recommend using Shapefiles as the data source for your services but, if you already have your data in this format, it can be used as a data source with some restrictions.
+
+If you wish to set up a :term:`SLD enabled WMS` or :term:`Simple feature WFS` using the standard fields needed for age and lithology highlighting in the Portal or following one of the standard 'Lite' schemas then the 10 character limit on field names in Shapefiles means your server will need to map shorter Shapefile field names to the longer expected field names in the standards. We provide some `recommended shapefile definitions <short_names.html>`_ for some GeoSciML-Lite features that are reasonably readable and would enable using common mapping files to produce services using the full names.
+
+Another consideration might be that, if the coordinate system of your Shapefile is not EPSG:4326 and your service is predominantly to be used in the OneGeology Portal, then your server will have to do a lot of on-the-fly coordinate conversion. To ameliorate this you can `convert the coordinate system of your Shapefile </wmsCookbook/appendixA.html>`_. The tools referred to in the previous link are available from http://www.gdal.org if you haven't done the MS4W download that it assumes.
+
+Recommend ESRI shapefile definitions for GeoSciML-Lite
+*******************************************************
+
+Because the field names in GeoSciML-Lite are longer than 10 characters, you will not be able to have the full attribute (column) name for many of the properties if your portrayal data is loaded into an ESRI shapefile. To prevent truncated names, we are providing a recommended Shapefile implementation with shorter field names. Field names are abbreviated to try and leave characters that convey the full name of the field; lower camel case typographic has been used, except that fields that contain URI’s end with ‘_uri’.
+
+.. table:: Recommended shapefile definition for ContactView
+    :widths: auto
+    :align: left
+
+    ==================   ====================  ===================
+    XML field Name       Shapefile field name  Shapefile data type
+    ==================   ====================  ===================
+    identifier           identifier            String
+    name                 name                  String
+    description          descriptio            String
+    contactType          contactTyp            String
+    observationMethod    obsvMethod            String
+    positionalAccuracy   posAccur              String
+    source               source                String
+    contactType_uri      conTyp_uri            String
+    specification_uri    spec_uri              String
+    metadata_uri         metada_uri            String
+    genericSymbolizer    genericSym            String
+    shape                SHAPE                 ESRI geometry
+    ==================   ====================  ===================
+
+
+.. raw:: html
+
+    <div class="linefeed">
+    <!-- Force a line -->&nbsp;
+    </div>
+
+
+.. table:: Recommended shapefile definition for ShearDisplacementStructureView
+    :widths: auto
+    :align: left
+
+    ============================  ====================  ===================
+    XML field Name                Shapefile field name  Shapefile data type
+    ============================  ====================  ===================
+    identifier                    identifier            String
+    name                          name                  String
+    description                   descriptio            String
+    faultType                     faultType             String
+    movementType                  movmntType            String
+    deformationStyle              defrmStyle            String
+    displacement                  displacmnt            String
+    geologicHistory               geolHistry            String
+    observationMethod             obsvMethod            String
+    positionalAccuracy            posAccur              String
+    source                        source                String
+    faultType_uri                 fltTyp_uri            String
+    movementType_uri              movTyp_uri            String
+    deformationStyle_uri          defStl_uri            String
+    representativeAge_uri         repAge_uri            String
+    representativeOlderAge_uri    oldAge_uri            String
+    representativeYoungerAge_uri  yngAge_uri            String
+    specification_uri             spec_uri              String
+    metadata_uri                  metada_uri            String
+    genericSymbolizer             genericSym            String
+    shape                         SHAPE                 ESRI geometry
+    ============================  ====================  ===================
+
+
+.. raw:: html
+
+    <div class="linefeed">
+    <!-- Force a line -->&nbsp;
+    </div>
+
+
+.. table:: Recommended shapefile definition for GeologicUnitView
+    :widths: auto
+    :align: left
+
+    ============================  ====================  ===================
+    XML field Name                Shapefile field name  Shapefile data type
+    ============================  ====================  ===================
+    identifier                    identifier            String
+    name                          name                  String
+    description                   descriptio            String
+    geologicUnitType              geoUnitTyp            String
+    rank                          rank                  String
+    lithology                     lithology             String
+    geologicHistory               geolHistry            String
+    observationMethod             obsvMethod            String
+    positionalAccuracy            posAccur              String
+    source                        source                String
+    geologicUnitType_uri          uniTyp_uri            String
+    representativeLithology_uri   repLth_uri            String
+    representativeAge_uri         repAge_uri            String
+    representativeOlderAge_uri    oldAge_uri            String
+    representativeYoungerAge_uri  yngAge_uri            String
+    specification_uri             spec_uri              String
+    metadata_uri                  metada_uri            String
+    genericSymbolizer             genericSym            String
+    shape                         SHAPE                 ESRI geometry
+    ============================  ====================  ===================
+
+
+GeoTIFF
+""""""""
+
+GeoTIFF is a raster format with geographic registration included. The example has been obtained from the `EMODNET Portal for Bathymetry <http://portal.emodnet-bathymetry.eu/RGB>`_ and has RGB bands suitable for display as an image although other GeoTIFF's could have more and not necessarily image bands. This could be used for a WMS but is included primarily to test WCS setup. Download from `<ftp://ftp.bgs.ac.uk/pubload/OneGeology/exampledata/geotiff.zip>`_.
+
+Setting up a Server
+--------------------
+
+There are a wide variety of proprietary and open source software packages that can be used to provide the OGC web services of interest to OneGeology. We cannot possibly describe them all but this section gives guidance on how to use some with which we do have experience to set up your OneGeology services. If you are interested and able to provide similar guidance for a software package not listed below then please get in touch to discuss adding your documentation here. Currently the only software we have successfully used to provide *all* the service types relevant for OneGeology is GeoServer.
+
+To start with there are some links to downloadable example data sets which you can use to experiment with setting up the servers before you try getting your own data into an appropriate format.
+
+At the end there is an additional section on setting up the Apache HTTPD server to act as a reverse proxy which may be useful if you need to provide a unified web address and port for accessing your OneGeology and possibly other web services.
+
+
 Using GeoServer to provide OneGeology web services
-**************************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Introduction
-============
+"""""""""""""
 
 This section describes how to set up the different kinds of OneGeology compliant service described in :ref:`service_provision_service_types` using free and open source GeoServer software. GeoServer can be used to provide *all* the types of service that OneGeology service providers might need. There are also INSPIRE specific instructions on making your services INSPIRE compliant where relevant. This is entirely optional for OneGeology so you can ignore the INSPIRE sections if this is not of interest to you.
 
@@ -3375,7 +3220,7 @@ If you are going to use a PostGIS database as a data source you will also need t
 Accompanying this guidance are some example data sets and GeoServer configuration that allow you to set up working services which you may find helpful to adapt for use with your own data.
 
 Pre-requisites / System Requirements
-------------------------------------
+"""""""""""""""""""""""""""""""""""""
 
 The guidance is technical and some assumptions are made about the reader's background knowledge:
 
@@ -3390,7 +3235,7 @@ The software required includes Java, a Java servlet container such as Apache Tom
 Further pre-requisites required only for particular service types are described under the appropriate section.
 
 Software Installation
-=====================
+""""""""""""""""""""""
 
 The software used here all has extensive documentation and support forums and mailing lists. Here we will just point you to the appropriate places to download the software and get installation instructions.
 
@@ -3400,7 +3245,7 @@ We assume:
 * You are able to install applications such as Apache Tomcat, GeoServer, PostGIS (if you are using that as a database) etc. on a server with your chosen operating system using their project documentation.
 
 Database
---------
+"""""""""""
 
 If you already have your data in a relational database system you will want to check the `Working with Databases <http://docs.geoserver.org/stable/en/user/data/database/index.html>`_ section of the GeoServer manual to see if your database is supported by GeoServer and follow the instructions for installation of any extensions that may be needed for this support. PostGIS support is built into the core GeoServer download.
 
