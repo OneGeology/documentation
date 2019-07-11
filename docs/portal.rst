@@ -78,14 +78,13 @@ You may at any time turn off the automatically selected layers by unticking the 
 
 The overview window in the bottom right corner of the map indicates the area of the globe you are currently looking at in the map window, by means of a red outline map superimposed on the global map. For example in the above map the red outline is shown for the whole globe, but in the below map the red box is located in the Southern Ocean.
 
-.. figure:: overviewWinr.jpg
-      :target: ../../_static/images/overviewWin.jpg
+.. figure:: images/overviewWinr.jpg
       :width: 600
       :alt: The overview window shows where you are on the globe
 
       The overview window shows where you are on the globe
 
-.. figure:: AddLayer.jpg
+.. figure:: images/AddLayer.jpg
       :width: 54
       :height: 52
       :alt: Click the Add OneGeology map layers icon to open the OneGeology Portal catalogue map layer listing
@@ -94,8 +93,7 @@ The overview window in the bottom right corner of the map indicates the area of 
 
 To view any other registered geology maps you need to click on the ‘*Add OneGeology map layers*’ icon to open the OneGeology Portal catalogue listing.
 
-.. figure:: newsiteAddLayersR.jpg
-      :target: ../../_static/images/newsiteAddLayers.jpg
+.. figure:: images/newsiteAddLayersR.jpg
       :width: 600
       :height: 529
       :alt: OneGeology Portal catalogue map layers listed by Geographic area. Use the options in this window to control which maps are displayed, and how they are displayed
@@ -108,7 +106,7 @@ Select all the map layers you wish to view at this time before closing the catal
 
 You may navigate around the map using the GIS tools found at the top of the page. The functions of these tools is as follows (from left to right):
 
-.. figure:: IconsGIS.jpg
+.. figure:: images/IconsGIS.jpg
       :width: 379
       :height: 58
       :alt: GIS tools
@@ -123,15 +121,14 @@ You may navigate around the map using the GIS tools found at the top of the page
    * If you have gone back to a previous view, you may use this tool to go forward.
    * Use this tool to get more information about the active map layers (this is termed a GetFeatureInfo request). Select the tool and click the map to open up a new window with detailed information about the geology at that point. The information returned and format of the information varies from map to map and layer to layer dependant upon how much information the provider organization wishes to display and the capabilities of the service.
 
-.. figure:: GetFInfoR.jpg
-      :target: ../../_static/images/GetFInfo.jpg
+.. figure:: images/GetFInfoR.jpg
       :alt: Example of information that may be retrieved using the information tool
       :width: 600
       :height: 329
 
       Example of information that may be retrieved using the information tool
 
-.. figure:: ViewProps.jpg
+.. figure:: images/ViewProps.jpg
       :width: 38
       :height: 35
       :alt: Active Layers Properties icon
@@ -140,7 +137,7 @@ You may navigate around the map using the GIS tools found at the top of the page
 
 To view metadata about the map layers and to change the way the layers are displayed you need to Click on the ‘*Active Layers Properties*’ icon. This will open a list of all the map layers that you have selected to be viewed in the OneGeology Portal; it will now also display all the map layers that have been automatically selected.
 
-   .. figure:: activelayers1r.jpg
+   .. figure:: images/activelayers1r.jpg
       :width: 600
       :height: 439
       :alt: Active layers in a OneGeology Portal session
@@ -149,7 +146,7 @@ To view metadata about the map layers and to change the way the layers are displ
 
 Within this dialogue menu you can manage the individual layers in the following ways (looking at the icons from left to right):
 
-   .. figure:: activelayers1detail.jpg
+   .. figure:: images/activelayers1detail.jpg
       :width: 422
       :height: 229
       :alt: Tools to manage the active layers
@@ -164,14 +161,14 @@ Within this dialogue menu you can manage the individual layers in the following 
 
 Note the *i* icon has no actual function, it just exists to inform you whether the layer is queryable, that is whether you can perform a GetFeatureInfo request on it and get back some information.  Note too, in the above figure that one of the layers is shown to be greyed out.  A greyed out layer indicates that the layer (such as PER INGEMMET 1:1M Faults, is not visible at the selected map scale.  Finally note we can show or hide all the automatically selected layers by unticking the ‘*Automatically displayed layers depending on scale and location*’ option at the top of the dialogue window.
 
-   .. figure:: 9.jpg
+   .. figure:: images/9.jpg
       :height: 245
       :alt: Layer viewed with 30% opacity
       :figclass: right
 
       Layer viewed with 30% opacity
 
-   .. figure:: 8.jpg
+   .. figure:: images/8.jpg
       :height: 245
       :alt: Layer viewed with 100% opacity
       :figclass: left
@@ -187,11 +184,10 @@ To find out further information about any map layer you can click the arrow to r
    * TC211/ISO 19115:2003 or FGDC metadata for the layer
    * The service URL (you can use this URL to view the OneGeology WMS layer in any WMS client as described in later sections).
 
-   .. figure:: GetCapInfoR.jpg
+   .. figure:: images/GetCapInfoR.jpg
       :width: 600
       :height: 499
       :alt: Example of GetCapabilities data that may be obtained from the Active Layer properties dialogue, with pop-up legend from the Legend link
-      :target: ../../_static/images/GetCapInfo.jpg
 
        Example of GetCapabilities data that may be obtained from the Active Layer properties dialogue, with pop-up legend from the Legend link
 
@@ -200,7 +196,7 @@ To find out further information about any map layer you can click the arrow to r
 Go To Function
 ^^^^^^^^^^^^^^
 
-   .. figure:: compassIcon.jpg
+   .. figure:: images/compassIcon.jpg
       :width: 56
       :height: 57
       :alt: The Go To icon
@@ -211,8 +207,7 @@ Go To Function
 
    In the first example (below) we enter Dominica in the ‘Localisation by Name’ text box, then click the ‘Go to’ button to the right of it.  This opens a second window that shows all the matches for Dominica in the OneGeology Portal gazeteer.  Select the place name you want by clicking on it and the OneGeology Portal will zoom to that location.  Note the OneGeology Portal only zooms to the area, it doesn’t necessarily open any available geology layers in that area.
 
-   .. figure:: gotodomTr.jpg
-      :target: ../../_static/images/gotodomT.jpg
+   .. figure:: images/gotodomTr.jpg
       :width: 600
       :height: 464
       :alt: Using the Go To functionality to zoom to an area (the Dominican Republic) by entering a search string
@@ -221,8 +216,7 @@ Go To Function
 
    In the second example (below) we use the ‘Localisation by Coordinates’ form and enter 172.85 in the ‘Long:’ text box and -43.73 in the ‘Lat:’ text box and then click the ‘Go to’ button to the right of them.  The OneGeology Portal will then zoom to the area of interest.  Note the OneGeology Portal only zooms to the area, it doesn’t necessarily open any available geology layers in that area.  In this example we already had the geology of New Zealand as an active layer.
 
-   .. figure:: christchurchNZr.jpg
-      :target: ../../_static/images/christchurchNZ.jpg
+   .. figure:: images/christchurchNZr.jpg
       :width: 600
       :height: 460
       :alt: Using the Go To functionality to zoom to the area of Christchurch, New Zealand, by entering the Longitude and Latitude ~ 172.85, -43.73
@@ -249,7 +243,7 @@ Viewing layers in different projections
 
    The default projection to view layers in the portal is *2D Latitude / Longitude (WGS84)* or EPSG:4326.  All layers in the portal **must** support this projection as part of their service.  To select another projection you must use the list at the bottom of the main portal window.  The current projection is shown in bold in the list, so for example in the below figure the active projection at the time of clicking the list was **NSIDC Sea Ice Polar Stereographic North (WGS84)**.
 
-   .. figure:: ChangingProjection.jpg
+   .. figure:: images/ChangingProjection.jpg
       :width: 403
       :height: 162
       :alt: Projections are selected from the list at the bottom of the main portal window
@@ -258,7 +252,7 @@ Viewing layers in different projections
 
    Whilst all layers in the portal must support 2D Latitude / Longitude (WGS84), other projections are optional.  When you choose to change to any projection other the default, you should expect that some layers will not support the newly selected projection; layers that do not support the selected projection are deselected (so the portal will not make any requests to them for map layers) and shown in the active layers properties window with a yellow warning triangle.
 
-   .. figure:: LayersWithoutProjectionRequested.jpg
+   .. figure:: images/LayersWithoutProjectionRequested.jpg
       :width: 416
       :height: 500
       :alt: Active layers that do not support the projection are deselected and shown with a warning triangle
@@ -267,7 +261,7 @@ Viewing layers in different projections
 
    In many cases viewing the OneGeology layers in the default projection is sufficient, but in some cases, for example when you are dealing with layers close to the poles, a differnt projection better shows the data.  For example compare the two images below showing map layers for Antarctica and surrounding regions.  In the first example we have the default projection that shows Antarctica as a distorted strip of land at the  bottom of the flattened globe.
 
-   .. figure:: defaultViewSouthernHemisphere.jpg
+   .. figure:: images/defaultViewSouthernHemisphere.jpg
       :width: 1466
       :height: 696
       :alt: Map layers from the Southern hemisphere showing in the the standard 2D Latitude / Longitude (WGS84) ~ EPSG:4326 projection
@@ -276,7 +270,7 @@ Viewing layers in different projections
 
    In the second example, we have the same map layers shown in *the Antarctic Polar Stereographic (WGS84)* projection that shows Antarctica as it should be, as a single land mass.  Note that the portal uses a different backdrop for this projection than that used for the default projection, namely the `Landsat Image Mosaic of Antarctica (LIMA). <https://lima.usgs.gov>`_ Note too that this LIMA backdrop does not extend much further than the Antarctica land mass, so whilst there are map layers that support this projection other than Antarctica, for example the Falkland Islands (Malvinas) layers, there is currently no backdrop for these map layer extents.
 
-   .. figure:: Antarctic-projection-example2.jpg
+   .. figure:: images/Antarctic-projection-example2.jpg
       :width: 965
       :height: 712
       :alt: Map layers from the Southern hemisphere showing in the Antarctic Polar Stereographic (WGS84) ~ EPSG:3031 projection
@@ -287,7 +281,7 @@ Viewing layers in different projections
 
    NSIDC Sea Ice Polar Stereographic North (WGS84)
 
-   .. figure:: NSIDC-projection-exampleCropped.jpg
+   .. figure:: images/NSIDC-projection-exampleCropped.jpg
       :width: 800
       :height: 675
       :alt: Map layer displayed in NSIDC Sea Ice Polar Stereographic North (WGS84) projection
@@ -296,7 +290,7 @@ Viewing layers in different projections
 
    Web Mercator (WGS84)
 
-   .. figure:: SphericalMercator-example.jpg
+   .. figure:: images/SphericalMercator-example.jpg
       :width: 792
       :height: 630
       :alt: Map layers displayed in Web Mercator (WGS84) projection
@@ -305,7 +299,7 @@ Viewing layers in different projections
 
    2D Latitude / Longitude (ETRS89)
 
-   .. figure:: ETRS89-2D-example.jpg
+   .. figure:: images/ETRS89-2D-example.jpg
       :width: 705
       :height: 678
       :alt: Map layers displayed in 2D Latitude / Longitude (ETRS89) projection
@@ -321,8 +315,7 @@ Reviewing external map data
 
    You add additional WMS services using the ‘Add external layers’ option and adding the service URL (without any request parameters).
 
-   .. figure:: ViewExternals1r.jpg
-      :target: ../../_static/images/ViewExternals1.jpg
+   .. figure:: images/ViewExternals1r.jpg
       :width: 600
       :height: 354
       :alt: Using the Add external layers functionality.  Use this to review your own map service before requesting it to be formally added to the OneGeology Portal
@@ -343,8 +336,7 @@ Exporting to Keyhole Markup Language (KML)
    * Click the Save KML context button
    * Enter a file name of your choice that you will save the KML as, and click OK.
 
-   .. figure:: Save2KML1r.jpg
-      :target: ../../_static/images/Save2KML1.jpg
+   .. figure:: images/Save2KML1r.jpg
       :width: 600
       :height: 449
       :alt: Using the Export to KML option to view your map in Google Earth
@@ -370,8 +362,7 @@ Saving your context file
 
    Note when naming your Web Map Context document(which is in XML format) you should provide only the name and not the file ending, for example, if you name a file ‘*IrelandGeology*’ in the dialog box the resultant file will be called ‘*IrelandGeology.xml*’. If you do add a file ending you will still get an .xml file suffix, for example if you name your file ‘*IrelandGeology.wmc*’ the resultant file will be called ‘*IrelandGeology.wmc.xml*’
 
-   .. figure:: Save2wmcR.jpg
-      :target: ../../_static/images/Save2wmc.jpg
+   .. figure:: images/Save2wmcR.jpg
       :width: 600
       :height: 453
       :alt: Using the Save WMC context option to save your map settings
@@ -387,7 +378,7 @@ Opening a Web Map Context file in the OneGeology Portal
 
    You have the choice to ‘*Load a Context file (WMC)*’ that you have already saved on your PC, or to use a ‘*Context URL*’, that is a Web Map Context file that has been made available on some web server (as in this figure example).  You also have the option to keep the layers that are already loaded in you map, or to just view the layers in the context file (which is the default option).  Note that currently you still get the automatically selected layers showing, even if you chose not to keep the layers already added.
 
-   .. figure:: loadWMC.jpg
+   .. figure:: images/loadWMC.jpg
       :width: 538
       :height: 350
       :alt: Loading a Web Map Context document
@@ -415,8 +406,7 @@ Opening a WMC file in other clients
 
    Other clients are known to support Web Map Context documents, for example we could load the example file (http://ogc.bgs.ac.uk/wmc/IrelandGeologyEdited-wmc.xml) in an OpenLayers client like the one at http://openlayers.org/dev/examples/wmc.html.  Here we need to copy the contents of the file into the form window and click on the ‘*read as new map*’ button to view our map.
 
-   .. figure:: WMConOLr.jpg
-      :target: ../../_static/images/WMConOL.jpg
+   .. figure:: images/WMConOLr.jpg
       :width: 600
       :height: 396
       :alt: Using a OneGeology Portal WMC document in an OpenLayers client
@@ -442,125 +432,125 @@ Known issues
 Using the thematic analysis tools
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-      As we have seen in section 1.4.1.1, we may use the ‘*Active Layers Properties*’ tool to discover further information about any of our active layers in a map session.  Information that may be revealed in this dialogue is that the layer is available for ‘*Thematic Analysis*’, as in the below example.
+As we have seen in section 1.4.1.1, we may use the ‘*Active Layers Properties*’ tool to discover further information about any of our active layers in a map session.  Information that may be revealed in this dialogue is that the layer is available for ‘*Thematic Analysis*’, as in the below example.
 
-      .. figure:: ThematicAnal.jpg
-         :width: 395
-         :height: 57
-         :alt: Layer properties dialogue, showing thematic analysis functionality is available in an active layer.
+.. figure:: images/ThematicAnal.jpg
+   :width: 395
+   :height: 57
+   :alt: Layer properties dialogue, showing thematic analysis functionality is available in an active layer.
 
-         Layer properties dialogue, showing thematic analysis functionality is available in an active layer.
+   Layer properties dialogue, showing thematic analysis functionality is available in an active layer.
 
-      The thematic analysis tool has two principal functions.  The first is an analysis of map features available in an associated GeoSciML WFS, the default supported version is v4, though the older v3.2 is also supported; the OneGeology Portal knows about this GeoSciML association by the presence of either a **GeoSciML32_wfs_age_or_litho_queryable** or **GeoSciML4_wfs_age_or_litho_queryable** keyword in the layer metadata. The second function is the ability to apply an external SLD to a layer which has GeoSciML-Portrayal attribution; the OneGeology Portal knows that a layer has this capability by the presence of a **Geosciml_portrayal_age_or_litho_queryable** keyword in the layer metadata.
+The thematic analysis tool has two principal functions.  The first is an analysis of map features available in an associated GeoSciML WFS, the default supported version is v4, though the older v3.2 is also supported; the OneGeology Portal knows about this GeoSciML association by the presence of either a **GeoSciML32_wfs_age_or_litho_queryable** or **GeoSciML4_wfs_age_or_litho_queryable** keyword in the layer metadata. The second function is the ability to apply an external SLD to a layer which has GeoSciML-Portrayal attribution; the OneGeology Portal knows that a layer has this capability by the presence of a **Geosciml_portrayal_age_or_litho_queryable** keyword in the layer metadata.
 
-      Click on the ‘*Thematic Analysis*’ link to show the options available for the layer.  For example for the Nevada service layer, US-NV NBMG 1:500k Geology, there is only a WMS portrayal service enabled, so only the Portrayal functionality is available (green button), the other functionality buttons are not available (greyed out).
+Click on the ‘*Thematic Analysis*’ link to show the options available for the layer.  For example for the Nevada service layer, US-NV NBMG 1:500k Geology, there is only a WMS portrayal service enabled, so only the Portrayal functionality is available (green button), the other functionality buttons are not available (greyed out).
 
-      .. figure:: ThematicAnalysisSelection.jpg
-         :width: 640
-         :height: 650
-         :alt: Thematic analysis options dialog
+.. figure:: images/ThematicAnalysisSelection.jpg
+   :width: 640
+   :height: 650
+   :alt: Thematic analysis options dialog
 
-         Thematic analysis options dialog
+   Thematic analysis options dialog
 
-      .. figure:: ThematicAnalysisQueryBuilder.jpg
-         :width: 876
-         :height: 692
-         :alt: The thematic analysis query builder window
+.. figure:: images/ThematicAnalysisQueryBuilder.jpg
+   :width: 876
+   :height: 692
+   :alt: The thematic analysis query builder window
 
-         The thematic analysis query builder window
+   The thematic analysis query builder window
 
 GeoSciML-Portrayal
 """""""""""""""""""
 
-      The analysis window offers you two ways to filter your map, you can filter by lithology or you can filter by age. The initial view in the lithology filter window is simply the ‘*Compound material*’ option, and in the age filter window the initial view shows the ‘*Phanerozoic*’ and ‘*Precambrian*’ options.  These options reflect the structure of the underlying controlled vocabularies.
+The analysis window offers you two ways to filter your map, you can filter by lithology or you can filter by age. The initial view in the lithology filter window is simply the ‘*Compound material*’ option, and in the age filter window the initial view shows the ‘*Phanerozoic*’ and ‘*Precambrian*’ options.  These options reflect the structure of the underlying controlled vocabularies.
 
-      The values for the lithology filter options are taken from the `CGI Simple Lithology controlled vocabulary <http://resource.geosciml.org/static/vocabulary/cgi/201211/simplelithology.html>`_.
+The values for the lithology filter options are taken from the `CGI Simple Lithology controlled vocabulary <http://resource.geosciml.org/static/vocabulary/cgi/201211/simplelithology.html>`_.
 
-      The values for the age filter options come from the ICS 2012 Geologic timescale vocabularies, for example, `Phanerozoic <http://resource.geosciml.org/classifier/ics/ischart/Phanerozoic>`_ or `Precambrian <http://resource.geosciml.org/classifier/ics/ischart/Precambrian>`_.
+The values for the age filter options come from the ICS 2012 Geologic timescale vocabularies, for example, `Phanerozoic <http://resource.geosciml.org/classifier/ics/ischart/Phanerozoic>`_ or `Precambrian <http://resource.geosciml.org/classifier/ics/ischart/Precambrian>`_.
 
-      In any window you can refine your selection by drilling down into the hierarchy, and then clicking on an option box to make your filter selection. In the above figure example, we have expanded the lithology view options by first clicking on the white arrow next to the ‘*Compound material*’ option (the arrow turns black on such a selection).  Similarly, we have expanded the age filter options by first selecting the ‘*Phanerozoic*’ then ‘*Paleozoic*’.  We haven’t yet made any selection on what we want to filter, but instead we are just exploring the available options by which we could filter.
+In any window you can refine your selection by drilling down into the hierarchy, and then clicking on an option box to make your filter selection. In the above figure example, we have expanded the lithology view options by first clicking on the white arrow next to the ‘*Compound material*’ option (the arrow turns black on such a selection).  Similarly, we have expanded the age filter options by first selecting the ‘*Phanerozoic*’ then ‘*Paleozoic*’.  We haven’t yet made any selection on what we want to filter, but instead we are just exploring the available options by which we could filter.
 
-      .. figure:: ThematicAnalysisQueryBuilderSearch.jpg
-         :width: 854
-         :height: 622
-         :alt: Searching the controlled vocabularies
+.. figure:: images/ThematicAnalysisQueryBuilderSearch.jpg
+   :width: 854
+   :height: 622
+   :alt: Searching the controlled vocabularies
 
-         Searching the controlled vocabularies
+   Searching the controlled vocabularies
 
-      As well as drilling down through the hierarchy progressively to find the term you wish to filter by, you can also search for terms directly by entering the search term in the box at the top of the respective Age and Lithology windows, then clicking the magnifying glass icon.  For example in the above example we have searched the Lithology vocabulary for ‘*Sand*’ and the Age vocabularies for the term ‘*Tonian*’.   To search for another term use the X icon to clear the old search term, or just start typing a new term in the search window. Note that even though there are exact matches for both terms the search shows partial matches as well.  Again, at this stage we have not made any selection by which to filter.
+As well as drilling down through the hierarchy progressively to find the term you wish to filter by, you can also search for terms directly by entering the search term in the box at the top of the respective Age and Lithology windows, then clicking the magnifying glass icon.  For example in the above example we have searched the Lithology vocabulary for ‘*Sand*’ and the Age vocabularies for the term ‘*Tonian*’.   To search for another term use the X icon to clear the old search term, or just start typing a new term in the search window. Note that even though there are exact matches for both terms the search shows partial matches as well.  Again, at this stage we have not made any selection by which to filter.
 
 
-      .. figure:: ThematicAnalysisSelectionByAge.jpg
-         :width: 882
-         :height: 692
-         :alt: Generating an automatic SLD file to filter by age (Pleistocene) in the Delaware WMS
+.. figure:: images/ThematicAnalysisSelectionByAge.jpg
+   :width: 882
+   :height: 692
+   :alt: Generating an automatic SLD file to filter by age (Pleistocene) in the Delaware WMS
 
-         Generating an automatic SLD file to filter by age (Pleistocene) in the Delaware WMS
+   Generating an automatic SLD file to filter by age (Pleistocene) in the Delaware WMS
 
-      In this (above) example we have selected the Delaware WMS service ‘*US-DE DGS 100k Surficial Geology*’ layer, which has GeoSciML-Portrayal v2.0 attribution.  We then decided to filter by age, looking to view only those geology polygons that are attributed as belonging to the Pleistocene (by ticking the options window to the left of the term).  Then we select a colour with which to apply to all the polygons that match the age criteria, the tool generates an external SLD file like the one below:
+In this (above) example we have selected the Delaware WMS service ‘*US-DE DGS 100k Surficial Geology*’ layer, which has GeoSciML-Portrayal v2.0 attribution.  We then decided to filter by age, looking to view only those geology polygons that are attributed as belonging to the Pleistocene (by ticking the options window to the left of the term).  Then we select a colour with which to apply to all the polygons that match the age criteria, the tool generates an external SLD file like the one below:
 
-      .. code-block:: xml
+    .. code-block:: xml
 
-         <sld:StyledLayerDescriptor
-         version="1.0.0"
-         xmlns="http://www.opengis.net/ogc"
-         xmlns:sld="http://www.opengis.net/sld"
-         xmlns:ogc="http://www.opengis.net/ogc"
-         xmlns:gml="http://www.opengis.net/gml"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://www.opengis.net/sld
-           http://schemas.opengis.net/sld/1.0.0/StyledLayerDescriptor.xsd">
-           <sld:NamedLayer>
-             <sld:Name>US-DE_DGS_100k_Surficial_Geology</sld:Name>
-               <sld:UserStyle>
-                 <sld:FeatureTypeStyle>
-                   <sld:Rule>
-                     <ogc:Filter>
-                       <ogc:Or>
-                         <ogc:PropertyIsEqualTo>
-                           <ogc:PropertyName>representativeAge_uri</ogc:PropertyName>
-                           <ogc:Literal>
-                             http://resource.geosciml.org/classifier/ics/ischart/Pleistocene
-                           </ogc:Literal>
-                         </ogc:PropertyIsEqualTo>
-                         <ogc:PropertyIsEqualTo>
-                           <ogc:PropertyName>representativeAge_uri</ogc:PropertyName>
-                           <ogc:Literal>
-                             http://resource.geosciml.org/classifier/ics/ischart/Calabrian
-                           </ogc:Literal>
-                         </ogc:PropertyIsEqualTo>
-                         <ogc:PropertyIsEqualTo>
-                           <ogc:PropertyName>representativeAge_uri</ogc:PropertyName>
-                           <ogc:Literal>
-                             http://resource.geosciml.org/classifier/ics/ischart/Gelasian
-                           </ogc:Literal>
-                         </ogc:PropertyIsEqualTo>
-                         <ogc:PropertyIsEqualTo>
-                           <ogc:PropertyName>representativeAge_uri</ogc:PropertyName>
-                           <ogc:Literal>
-                             http://resource.geosciml.org/classifier/ics/ischart/Ionian
-                           </ogc:Literal>
-                         </ogc:PropertyIsEqualTo>
-                         <ogc:PropertyIsEqualTo>
-                           <ogc:PropertyName>representativeAge_uri</ogc:PropertyName>
-                           <ogc:Literal>
-                             http://resource.geosciml.org/classifier/ics/ischart/UpperPleistocene
-                           </ogc:Literal>
-                         </ogc:PropertyIsEqualTo>
-                       </ogc:Or>
-                     </ogc:Filter>
-                   <sld:PolygonSymbolizer>
-                     <sld:Fill>
-                       <sld:CssParameter name="fill">#3366FF</sld:CssParameter>
-                     </sld:Fill>
-                   </sld:PolygonSymbolizer>
-                 </sld:Rule>
-               </sld:FeatureTypeStyle>
-             </sld:UserStyle>
-           </sld:NamedLayer>
-         </sld:StyledLayerDescriptor>
+       <sld:StyledLayerDescriptor
+       version="1.0.0"
+       xmlns="http://www.opengis.net/ogc"
+       xmlns:sld="http://www.opengis.net/sld"
+       xmlns:ogc="http://www.opengis.net/ogc"
+       xmlns:gml="http://www.opengis.net/gml"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.opengis.net/sld
+         http://schemas.opengis.net/sld/1.0.0/StyledLayerDescriptor.xsd">
+         <sld:NamedLayer>
+           <sld:Name>US-DE_DGS_100k_Surficial_Geology</sld:Name>
+             <sld:UserStyle>
+               <sld:FeatureTypeStyle>
+                 <sld:Rule>
+                   <ogc:Filter>
+                     <ogc:Or>
+                       <ogc:PropertyIsEqualTo>
+                         <ogc:PropertyName>representativeAge_uri</ogc:PropertyName>
+                         <ogc:Literal>
+                           http://resource.geosciml.org/classifier/ics/ischart/Pleistocene
+                         </ogc:Literal>
+                       </ogc:PropertyIsEqualTo>
+                       <ogc:PropertyIsEqualTo>
+                         <ogc:PropertyName>representativeAge_uri</ogc:PropertyName>
+                         <ogc:Literal>
+                           http://resource.geosciml.org/classifier/ics/ischart/Calabrian
+                         </ogc:Literal>
+                       </ogc:PropertyIsEqualTo>
+                       <ogc:PropertyIsEqualTo>
+                         <ogc:PropertyName>representativeAge_uri</ogc:PropertyName>
+                         <ogc:Literal>
+                           http://resource.geosciml.org/classifier/ics/ischart/Gelasian
+                         </ogc:Literal>
+                       </ogc:PropertyIsEqualTo>
+                       <ogc:PropertyIsEqualTo>
+                         <ogc:PropertyName>representativeAge_uri</ogc:PropertyName>
+                         <ogc:Literal>
+                           http://resource.geosciml.org/classifier/ics/ischart/Ionian
+                         </ogc:Literal>
+                       </ogc:PropertyIsEqualTo>
+                       <ogc:PropertyIsEqualTo>
+                         <ogc:PropertyName>representativeAge_uri</ogc:PropertyName>
+                         <ogc:Literal>
+                           http://resource.geosciml.org/classifier/ics/ischart/UpperPleistocene
+                         </ogc:Literal>
+                       </ogc:PropertyIsEqualTo>
+                     </ogc:Or>
+                   </ogc:Filter>
+                 <sld:PolygonSymbolizer>
+                   <sld:Fill>
+                     <sld:CssParameter name="fill">#3366FF</sld:CssParameter>
+                   </sld:Fill>
+                 </sld:PolygonSymbolizer>
+               </sld:Rule>
+             </sld:FeatureTypeStyle>
+           </sld:UserStyle>
+         </sld:NamedLayer>
+       </sld:StyledLayerDescriptor>
 
-  When this external customized SLD file has been generated for our age filter selection, the OneGeology Portal then makes a new `GetMap request referencing this SLD <http://maps.dgs.udel.edu/geoserver/DGS_Surficial_and_Contact_Geology/wms?service=WMS&TRANSPARENT=TRUE&version=1.3.0&request=GetMap&STYLES=&EXCEPTIONS=INIMAGE&FORMAT=image/png&CRS=EPSG%3A4326&SLD=http%3A%2F%2Fogc.bgs.ac.uk%2Fsld%2F20130628_1372432351566_OpenLayers.Layer.WMS_991.sld&SAVEDLAYERS=US-DE_DGS_100k_Surficial_Geology&BBOX=39.57931760121924,-75.79289049774037,39.784397224903465,-75.45691470533502&WIDTH=1250&HEIGHT=763&>`_ for our area of selection like:
+When this external customized SLD file has been generated for our age filter selection, the OneGeology Portal then makes a new `GetMap request referencing this SLD <http://maps.dgs.udel.edu/geoserver/DGS_Surficial_and_Contact_Geology/wms?service=WMS&TRANSPARENT=TRUE&version=1.3.0&request=GetMap&STYLES=&EXCEPTIONS=INIMAGE&FORMAT=image/png&CRS=EPSG%3A4326&SLD=http%3A%2F%2Fogc.bgs.ac.uk%2Fsld%2F20130628_1372432351566_OpenLayers.Layer.WMS_991.sld&SAVEDLAYERS=US-DE_DGS_100k_Surficial_Geology&BBOX=39.57931760121924,-75.79289049774037,39.784397224903465,-75.45691470533502&WIDTH=1250&HEIGHT=763&>`_ for our area of selection like:
 
   .. code-block:: text
 
@@ -581,7 +571,7 @@ GeoSciML-Portrayal
 
 The resultant custom map (with the GeoSciML-Portrayal filter for Pleistocene polygons applied) is shown below:
 
-      .. figure:: ThematicAnalysisSelectionByAgeResult.jpg
+      .. figure:: images/ThematicAnalysisSelectionByAgeResult.jpg
          :width: 774
          :height: 776
          :alt: Pleistocene geology polygons
@@ -590,7 +580,7 @@ The resultant custom map (with the GeoSciML-Portrayal filter for Pleistocene pol
 
 Similarly, we could filter for some other GeoSciML-Portrayal attribution in the map, such as the following lithology filter on ‘*Composite genesis material*’
 
-      .. figure:: ThematicAnalysisSelectionByLithoResult.jpg
+      .. figure:: images/ThematicAnalysisSelectionByLithoResult.jpg
          :width: 834
          :height: 556
          :alt: Composite genesis material
@@ -599,7 +589,7 @@ Similarly, we could filter for some other GeoSciML-Portrayal attribution in the 
 
 Finally, it is possible to filter by both Age and Lithology, for example in the below image we can see first the result for ‘*Sand*’, then the search results for ‘*Upper Pleistocene*’, and then the results for a combined search for ‘*Sand*’ **and** ‘*Upper Pleistocene*’.
 
-      .. figure:: queryResultComparison.jpg
+      .. figure:: images/queryResultComparison.jpg
          :width: 914
          :height: 702
          :alt: Age and lithology search results comparison: Sand / Upper Pleistocene / Sand plus Upper Pleistocene
@@ -616,171 +606,171 @@ The statistics functionality (Full statistics and Lithology statistics) of the T
 
 If the OneGeology Portal detects that your selected layer has an associated GeoSciML v3.2 WFS, then when you open the Thematic analysis window you will see the Full statistics, and Lithology statistics buttons will be highlighted in green, if not the buttons will be greyed out and you will not be able to use these analyses tools.
 
-      .. figure:: StatsButtons.jpg
-         :width: 402
-         :height: 62
-         :alt: Thematic analysis window showing that statistical analysis is available for the selected layer
+.. figure:: images/StatsButtons.jpg
+   :width: 402
+   :height: 62
+   :alt: Thematic analysis window showing that statistical analysis is available for the selected layer
 
-         Thematic analysis window showing that statistical analysis is available for the selected layer
+   Thematic analysis window showing that statistical analysis is available for the selected layer
 
 
 Full statistics
 """""""""""""""
 
-      Make your filter selection, by age or lithology, in the same way as described for the GeoSciML-Portrayal section.  In the below example we have first selected the ‘*Full statistics*’ option button, then searched for the Lithology term ‘*Breccia*’, selecting the broad term as the filter keyword.  We now have two options, we can opt to ‘*Download the GeoSciML*’, or we can view the Full statistics.
+Make your filter selection, by age or lithology, in the same way as described for the GeoSciML-Portrayal section.  In the below example we have first selected the ‘*Full statistics*’ option button, then searched for the Lithology term ‘*Breccia*’, selecting the broad term as the filter keyword.  We now have two options, we can opt to ‘*Download the GeoSciML*’, or we can view the Full statistics.
 
-      .. figure:: FullStatsBrecciaScotland.jpg
-         :width: 962
-         :height: 730
-         :alt: Full statistics query: Breccia in a region of Scotland
+.. figure:: images/FullStatsBrecciaScotland.jpg
+   :width: 962
+   :height: 730
+   :alt: Full statistics query: Breccia in a region of Scotland
 
-         Full statistics query: Breccia in a region of Scotland
+   Full statistics query: Breccia in a region of Scotland
 
-      If you select the ‘*Download the GeoSciML*’ button, the portal will generate a WFS filter query that covers the selected area and the query term and send that query to the WFS server.  It then retrieves the result and you should get the option (depending on your browser settings) of either downloading the resultant GeoSciML, or viewing in your browser.
+If you select the ‘*Download the GeoSciML*’ button, the portal will generate a WFS filter query that covers the selected area and the query term and send that query to the WFS server.  It then retrieves the result and you should get the option (depending on your browser settings) of either downloading the resultant GeoSciML, or viewing in your browser.
 
-      `Example GeoSciML download request for Breccia in a region of Scotland <http://portal.onegeology.org/ProxyWFSTools.jsp?request=gsmlbbox&bbox=55.07762036519571,-4.54515462888095,55.78778525593572,-3.516434912749198&srs=EPSG:4326&url=http%3A//ogc.bgs.ac.uk/digmap625k_gsml32_insp_gs/wfs%3F&typename=gsml%3AMappedFeature&version=2.0.0&filter=%3Cfes%3AOr%3E%3Cfes%3APropertyIsEqualTo%3E%3Cfes%3AValueReference%3Egsml%3Aspecification/gsmlgu%3AGeologicUnit/gsmlgu%3Acomposition/gsmlgu%3ACompositionPart/gsmlgu%3Amaterial/gsmlem%3ARockMaterial/gsmlem%3Alithology/@xlink%3Ahref%3C/fes%3AValueReference%3E%3Cfes%3ALiteral%3Ehttp%3A//resource.geosciml.org/classifier/cgi/lithology/breccia%3C/fes%3ALiteral%3E%3C/fes%3APropertyIsEqualTo%3E%3Cfes%3APropertyIsEqualTo%3E%3Cfes%3AValueReference%3Egsml%3Aspecification/gsmlgu%3AGeologicUnit/gsmlgu%3Acomposition/gsmlgu%3ACompositionPart/gsmlgu%3Amaterial/gsmlem%3ARockMaterial/gsmlem%3Alithology/@xlink%3Ahref%3C/fes%3AValueReference%3E%3Cfes%3ALiteral%3Ehttp%3A//inspire.ec.europa.eu/codelist/LithologyValue/breccia%3C/fes%3ALiteral%3E%3C/fes%3APropertyIsEqualTo%3E%3C/fes%3AOr%3E>`_. The full request query is shown below in a fragmented style for easier reading:
+`Example GeoSciML download request for Breccia in a region of Scotland <http://portal.onegeology.org/ProxyWFSTools.jsp?request=gsmlbbox&bbox=55.07762036519571,-4.54515462888095,55.78778525593572,-3.516434912749198&srs=EPSG:4326&url=http%3A//ogc.bgs.ac.uk/digmap625k_gsml32_insp_gs/wfs%3F&typename=gsml%3AMappedFeature&version=2.0.0&filter=%3Cfes%3AOr%3E%3Cfes%3APropertyIsEqualTo%3E%3Cfes%3AValueReference%3Egsml%3Aspecification/gsmlgu%3AGeologicUnit/gsmlgu%3Acomposition/gsmlgu%3ACompositionPart/gsmlgu%3Amaterial/gsmlem%3ARockMaterial/gsmlem%3Alithology/@xlink%3Ahref%3C/fes%3AValueReference%3E%3Cfes%3ALiteral%3Ehttp%3A//resource.geosciml.org/classifier/cgi/lithology/breccia%3C/fes%3ALiteral%3E%3C/fes%3APropertyIsEqualTo%3E%3Cfes%3APropertyIsEqualTo%3E%3Cfes%3AValueReference%3Egsml%3Aspecification/gsmlgu%3AGeologicUnit/gsmlgu%3Acomposition/gsmlgu%3ACompositionPart/gsmlgu%3Amaterial/gsmlem%3ARockMaterial/gsmlem%3Alithology/@xlink%3Ahref%3C/fes%3AValueReference%3E%3Cfes%3ALiteral%3Ehttp%3A//inspire.ec.europa.eu/codelist/LithologyValue/breccia%3C/fes%3ALiteral%3E%3C/fes%3APropertyIsEqualTo%3E%3C/fes%3AOr%3E>`_. The full request query is shown below in a fragmented style for easier reading:
 
-      .. code-block:: text
+.. code-block:: text
 
-         http://portal.onegeology.org/ProxyWFSTools.jsp?
-           request=gsmlbbox&
-           bbox=55.07762036519571,-4.54515462888095,55.78778525593572,-3.516434912749198&
-           srs=EPSG:4326&
-           url=http%3A//ogc.bgs.ac.uk/digmap625k_gsml32_insp_gs/wfs%3F&
-           typename=gsml%3AMappedFeature&
-           version=2.0.0&
-           filter=
-             %3Cfes%3AOr%3E
-                 %3Cfes%3APropertyIsEqualTo%3E
-                     %3Cfes%3AValueReference%3E
-                         gsml%3Aspecification/
-                         gsmlgu%3AGeologicUnit/
-                         gsmlgu%3Acomposition/
-                         gsmlgu%3ACompositionPart/
-                         gsmlgu%3Amaterial/
-                         gsmlem%3ARockMaterial/
-                         gsmlem%3Alithology/
-                         @xlink%3Ahref
-                     %3C/fes%3AValueReference%3E
-                     %3Cfes%3ALiteral%3E
-                         http%3A//resource.geosciml.org/classifier/cgi/lithology/breccia
-                     %3C/fes%3ALiteral%3E
-                 %3C/fes%3APropertyIsEqualTo%3E
-                 %3Cfes%3APropertyIsEqualTo%3E
-                     %3Cfes%3AValueReference%3E
-                         gsml%3Aspecification/
-                         gsmlgu%3AGeologicUnit/
-                         gsmlgu%3Acomposition/
-                         gsmlgu%3ACompositionPart/
-                         gsmlgu%3Amaterial/
-                         gsmlem%3ARockMaterial/
-                         gsmlem%3Alithology/
-                         @xlink%3Ahref
-                     %3C/fes%3AValueReference%3E
-                     %3Cfes%3ALiteral%3E
-                         http%3A//inspire.ec.europa.eu/codelist/LithologyValue/breccia
-                     %3C/fes%3ALiteral%3E
-                 %3C/fes%3APropertyIsEqualTo%3E
-             %3C/fes%3AOr%3E
+   http://portal.onegeology.org/ProxyWFSTools.jsp?
+     request=gsmlbbox&
+     bbox=55.07762036519571,-4.54515462888095,55.78778525593572,-3.516434912749198&
+     srs=EPSG:4326&
+     url=http%3A//ogc.bgs.ac.uk/digmap625k_gsml32_insp_gs/wfs%3F&
+     typename=gsml%3AMappedFeature&
+     version=2.0.0&
+     filter=
+       %3Cfes%3AOr%3E
+           %3Cfes%3APropertyIsEqualTo%3E
+               %3Cfes%3AValueReference%3E
+                   gsml%3Aspecification/
+                   gsmlgu%3AGeologicUnit/
+                   gsmlgu%3Acomposition/
+                   gsmlgu%3ACompositionPart/
+                   gsmlgu%3Amaterial/
+                   gsmlem%3ARockMaterial/
+                   gsmlem%3Alithology/
+                   @xlink%3Ahref
+               %3C/fes%3AValueReference%3E
+               %3Cfes%3ALiteral%3E
+                   http%3A//resource.geosciml.org/classifier/cgi/lithology/breccia
+               %3C/fes%3ALiteral%3E
+           %3C/fes%3APropertyIsEqualTo%3E
+           %3Cfes%3APropertyIsEqualTo%3E
+               %3Cfes%3AValueReference%3E
+                   gsml%3Aspecification/
+                   gsmlgu%3AGeologicUnit/
+                   gsmlgu%3Acomposition/
+                   gsmlgu%3ACompositionPart/
+                   gsmlgu%3Amaterial/
+                   gsmlem%3ARockMaterial/
+                   gsmlem%3Alithology/
+                   @xlink%3Ahref
+               %3C/fes%3AValueReference%3E
+               %3Cfes%3ALiteral%3E
+                   http%3A//inspire.ec.europa.eu/codelist/LithologyValue/breccia
+               %3C/fes%3ALiteral%3E
+           %3C/fes%3APropertyIsEqualTo%3E
+       %3C/fes%3AOr%3E
 
-      Alternatively, you may chose the ‘*Full statistics*’ option button.  With this option the filter query is sent to the WFS server and the results are then tabulated in the page.  By default the shows the description of features matching the query, as in the top part of the below image.  However you may use the dropdown box at the top of the form to display other fields returned in the results such as EventProcess, CompositionPart, OlderNamedAge, and (not shown in the image below) YoungerNamedAge.
+Alternatively, you may chose the ‘*Full statistics*’ option button.  With this option the filter query is sent to the WFS server and the results are then tabulated in the page.  By default the shows the description of features matching the query, as in the top part of the below image.  However you may use the dropdown box at the top of the form to display other fields returned in the results such as EventProcess, CompositionPart, OlderNamedAge, and (not shown in the image below) YoungerNamedAge.
 
-      .. figure:: FullStatsResultsCompilation.jpg
-         :width: 802
-         :height: 442
-         :alt: Full statistics query: compilation of results forms
+.. figure:: images/FullStatsResultsCompilation.jpg
+   :width: 802
+   :height: 442
+   :alt: Full statistics query: compilation of results forms
 
-         Full statistics query: compilation of results forms
+   Full statistics query: compilation of results forms
 
 
 Lithology statistics
 """"""""""""""""""""
 
-      Instead of selecting the ‘*Full statistics*’ option we can instead chose the ‘*Lithology statistics*’ option.  Unlike the ‘*Full statistics*’ option, where you can select multiple ages and lithologies (in particular by selecting a category and all sub-classes at the same time), with the ‘*Lithology statistics*’ query you can **only** select one lithology term exactly and sub-classes will not be returned.  For example in the below query we have selected an area near Glasgow (Longitude -4, Latitude 56 at a scale of 1:150,000), and are filtering for features that have a proportion of coal greater than or equal to 5%.
+Instead of selecting the ‘*Full statistics*’ option we can instead chose the ‘*Lithology statistics*’ option.  Unlike the ‘*Full statistics*’ option, where you can select multiple ages and lithologies (in particular by selecting a category and all sub-classes at the same time), with the ‘*Lithology statistics*’ query you can **only** select one lithology term exactly and sub-classes will not be returned.  For example in the below query we have selected an area near Glasgow (Longitude -4, Latitude 56 at a scale of 1:150,000), and are filtering for features that have a proportion of coal greater than or equal to 5%.
 
-      .. figure:: LithStatsCoalQuery.jpg
-         :width: 681
-         :height: 840
-         :alt: Lithology statistics query: greater than or equal to 5% of coal
+.. figure:: images/LithStatsCoalQuery.jpg
+   :width: 681
+   :height: 840
+   :alt: Lithology statistics query: greater than or equal to 5% of coal
 
-         Lithology statistics query: greater than or equal to 5% of coal
+   Lithology statistics query: greater than or equal to 5% of coal
 
-      Just like the ‘*Full statistics*’ option we can chose to ‘*Download the GeoSciML*’ result of the query, or we can view the results in forms in a portal results window, by selecting the ‘*Lithology statistics*’ button.
+Just like the ‘*Full statistics*’ option we can chose to ‘*Download the GeoSciML*’ result of the query, or we can view the results in forms in a portal results window, by selecting the ‘*Lithology statistics*’ button.
 
-      `Example GeoSciML download request for 5% coal in formations near Glasgow <http://portal.onegeology.org/ProxyWFSTools.jsp?request=gsmlbbox&bbox=55.80026612447937,-4.2893274201620555,56.19973387552063,-3.7106725798379445&srs=EPSG:4326&url=http%3A//ogc.bgs.ac.uk/digmap625k_gsml32_insp_gs/wfs%3F&typename=gsml%3AMappedFeature&version=2.0.0&filter=%3Cfes%3AOr%3E%3Cfes%3APropertyIsGreaterThanOrEqualTo%3E%3Cfes%3AValueReference%3Egsml%3Aspecification/gsmlgu%3AGeologicUnit/gsmlgu%3Acomposition/gsmlgu%3ACompositionPart%5Bgsmlgu%3Amaterial/gsmlem%3ARockMaterial/gsmlem%3Alithology/@xlink%3Ahref%20%3D%20%27570%27%5D/gsmlgu%3Aproportion/gsmlu%3AGSML_QuantityRange/gsmlu%3AlowerValue%3C/fes%3AValueReference%3E%3Cfes%3ALiteral%3E5%3C/fes%3ALiteral%3E%3C/fes%3APropertyIsGreaterThanOrEqualTo%3E%3Cfes%3APropertyIsGreaterThanOrEqualTo%3E%3Cfes%3AValueReference%3Egsml%3Aspecification/gsmlgu%3AGeologicUnit/gsmlgu%3Acomposition/gsmlgu%3ACompositionPart%5Bgsmlgu%3Amaterial/gsmlem%3ARockMaterial/gsmlem%3Alithology/@xlink%3Ahref%20%3D%20%27http%3A//inspire.ec.europa.eu/codelist/LithologyValue/coal%27%5D/gsmlgu%3Aproportion/gsmlu%3AGSML_QuantityRange/gsmlu%3AlowerValue%3C/fes%3AValueReference%3E%3Cfes%3ALiteral%3E5%3C/fes%3ALiteral%3E%3C/fes%3APropertyIsGreaterThanOrEqualTo%3E%3C/fes%3AOr%3E">`_. The full request query is shown below in a fragmented style for easier reading:
+`Example GeoSciML download request for 5% coal in formations near Glasgow <http://portal.onegeology.org/ProxyWFSTools.jsp?request=gsmlbbox&bbox=55.80026612447937,-4.2893274201620555,56.19973387552063,-3.7106725798379445&srs=EPSG:4326&url=http%3A//ogc.bgs.ac.uk/digmap625k_gsml32_insp_gs/wfs%3F&typename=gsml%3AMappedFeature&version=2.0.0&filter=%3Cfes%3AOr%3E%3Cfes%3APropertyIsGreaterThanOrEqualTo%3E%3Cfes%3AValueReference%3Egsml%3Aspecification/gsmlgu%3AGeologicUnit/gsmlgu%3Acomposition/gsmlgu%3ACompositionPart%5Bgsmlgu%3Amaterial/gsmlem%3ARockMaterial/gsmlem%3Alithology/@xlink%3Ahref%20%3D%20%27570%27%5D/gsmlgu%3Aproportion/gsmlu%3AGSML_QuantityRange/gsmlu%3AlowerValue%3C/fes%3AValueReference%3E%3Cfes%3ALiteral%3E5%3C/fes%3ALiteral%3E%3C/fes%3APropertyIsGreaterThanOrEqualTo%3E%3Cfes%3APropertyIsGreaterThanOrEqualTo%3E%3Cfes%3AValueReference%3Egsml%3Aspecification/gsmlgu%3AGeologicUnit/gsmlgu%3Acomposition/gsmlgu%3ACompositionPart%5Bgsmlgu%3Amaterial/gsmlem%3ARockMaterial/gsmlem%3Alithology/@xlink%3Ahref%20%3D%20%27http%3A//inspire.ec.europa.eu/codelist/LithologyValue/coal%27%5D/gsmlgu%3Aproportion/gsmlu%3AGSML_QuantityRange/gsmlu%3AlowerValue%3C/fes%3AValueReference%3E%3Cfes%3ALiteral%3E5%3C/fes%3ALiteral%3E%3C/fes%3APropertyIsGreaterThanOrEqualTo%3E%3C/fes%3AOr%3E">`_. The full request query is shown below in a fragmented style for easier reading:
 
-      .. code-block:: text
+.. code-block:: text
 
-         http://portal.onegeology.org/ProxyWFSTools.jsp?
-           request=gsmlbbox&
-           bbox=55.80026612447937,-4.2893274201620555,56.19973387552063,-3.7106725798379445&
-           srs=EPSG:4326&
-           url=http%3A//ogc.bgs.ac.uk/digmap625k_gsml32_insp_gs/wfs%3F&
-           typename=gsml%3AMappedFeature&
-           version=2.0.0&
-           filter=
-             %3Cfes%3AOr%3E
-                 %3Cfes%3APropertyIsGreaterThanOrEqualTo%3E
-                     %3Cfes%3AValueReference%3E
-                         gsml%3Aspecification/
-                         gsmlgu%3AGeologicUnit/
-                         gsmlgu%3Acomposition/
-                         gsmlgu%3ACompositionPart%5Bgsmlgu%3Amaterial/
-                         gsmlem%3ARockMaterial/
-                         gsmlem%3Alithology/
-                         @xlink%3Ahref%20%3D%20%27570%27%5D/
-                             gsmlgu%3Aproportion/
-                             gsmlu%3AGSML_QuantityRange/
-                             gsmlu%3AlowerValue
-                     %3C/fes%3AValueReference%3E
-                     %3Cfes%3ALiteral%3E
-                         5
-                     %3C/fes%3ALiteral%3E
-                 %3C/fes%3APropertyIsGreaterThanOrEqualTo%3E
-                 %3Cfes%3APropertyIsGreaterThanOrEqualTo%3E
-                     %3Cfes%3AValueReference%3E
-                         gsml%3Aspecification/
-                         gsmlgu%3AGeologicUnit/
-                         gsmlgu%3Acomposition/
-                         gsmlgu%3ACompositionPart%5Bgsmlgu%3Amaterial/
-                         gsmlem%3ARockMaterial/
-                         gsmlem%3Alithology/
-                         @xlink%3Ahref%20%3D%20%27http%3A//inspire.ec.europa.eu/
-                             codelist/
-                             LithologyValue/
-                             coal%27%5D/
-                             gsmlgu%3Aproportion/
-                             gsmlu%3AGSML_QuantityRange/
-                             gsmlu%3AlowerValue
-                     %3C/fes%3AValueReference%3E
-                     %3Cfes%3ALiteral%3E
-                         5
-                     %3C/fes%3ALiteral%3E
-                 %3C/fes%3APropertyIsGreaterThanOrEqualTo%3E
-             %3C/fes%3AOr%3E
+   http://portal.onegeology.org/ProxyWFSTools.jsp?
+     request=gsmlbbox&
+     bbox=55.80026612447937,-4.2893274201620555,56.19973387552063,-3.7106725798379445&
+     srs=EPSG:4326&
+     url=http%3A//ogc.bgs.ac.uk/digmap625k_gsml32_insp_gs/wfs%3F&
+     typename=gsml%3AMappedFeature&
+     version=2.0.0&
+     filter=
+       %3Cfes%3AOr%3E
+           %3Cfes%3APropertyIsGreaterThanOrEqualTo%3E
+               %3Cfes%3AValueReference%3E
+                   gsml%3Aspecification/
+                   gsmlgu%3AGeologicUnit/
+                   gsmlgu%3Acomposition/
+                   gsmlgu%3ACompositionPart%5Bgsmlgu%3Amaterial/
+                   gsmlem%3ARockMaterial/
+                   gsmlem%3Alithology/
+                   @xlink%3Ahref%20%3D%20%27570%27%5D/
+                       gsmlgu%3Aproportion/
+                       gsmlu%3AGSML_QuantityRange/
+                       gsmlu%3AlowerValue
+               %3C/fes%3AValueReference%3E
+               %3Cfes%3ALiteral%3E
+                   5
+               %3C/fes%3ALiteral%3E
+           %3C/fes%3APropertyIsGreaterThanOrEqualTo%3E
+           %3Cfes%3APropertyIsGreaterThanOrEqualTo%3E
+               %3Cfes%3AValueReference%3E
+                   gsml%3Aspecification/
+                   gsmlgu%3AGeologicUnit/
+                   gsmlgu%3Acomposition/
+                   gsmlgu%3ACompositionPart%5Bgsmlgu%3Amaterial/
+                   gsmlem%3ARockMaterial/
+                   gsmlem%3Alithology/
+                   @xlink%3Ahref%20%3D%20%27http%3A//inspire.ec.europa.eu/
+                       codelist/
+                       LithologyValue/
+                       coal%27%5D/
+                       gsmlgu%3Aproportion/
+                       gsmlu%3AGSML_QuantityRange/
+                       gsmlu%3AlowerValue
+               %3C/fes%3AValueReference%3E
+               %3Cfes%3ALiteral%3E
+                   5
+               %3C/fes%3ALiteral%3E
+           %3C/fes%3APropertyIsGreaterThanOrEqualTo%3E
+       %3C/fes%3AOr%3E
 
-      Alternatively you can view the statistics in a form version sorted by field, by selecting the ‘*Lithology statistics*’ button.
+Alternatively you can view the statistics in a form version sorted by field, by selecting the ‘*Lithology statistics*’ button.
 
-      .. figure:: LithStatsCoalQueryRFormCompilation.jpg
-         :width: 802
-         :height: 620
-         :alt: Lithology statistics query: compilation of form results
+.. figure:: images/LithStatsCoalQueryRFormCompilation.jpg
+   :width: 802
+   :height: 620
+   :alt: Lithology statistics query: compilation of form results
 
-         Lithology statistics query: compilation of form results 5% coal near Glasgow
+   Lithology statistics query: compilation of form results 5% coal near Glasgow
 
 Caveat
 """"""""
 
-      The statistics function is only able to work when zoomed in to quite small areas; precisely this is when the spatial resolution is less than 0.0015 (e.g. a pixel shows less than 0.0015 degrees latitude of the ground surface). When viewing the map if you are not zoomed in far enough you will see the following error.
+The statistics function is only able to work when zoomed in to quite small areas; precisely this is when the spatial resolution is less than 0.0015 (e.g. a pixel shows less than 0.0015 degrees latitude of the ground surface). When viewing the map if you are not zoomed in far enough you will see the following error.
 
-      .. figure:: AnalError.jpg
-         :width: 434
-         :height: 163
-         :alt: Error message received when the scale of the selected map is too small
+.. figure:: images/AnalError.jpg
+   :width: 434
+   :height: 163
+   :alt: Error message received when the scale of the selected map is too small
 
-         Error message received when the scale of the selected map is too small
+   Error message received when the scale of the selected map is too small
 
-      If you get this error you must close the results (‘*Statistics on BBOX*’) window, to be able to access the zoom tools, and then zoom in further.
+If you get this error you must close the results (‘*Statistics on BBOX*’) window, to be able to access the zoom tools, and then zoom in further.
 
 
 Using OneGeology Data
@@ -837,12 +827,12 @@ Quantum GIS (QGIS) supports WMS versions 1.3.0 (and lower) with GetCapabilities,
 Using QGIS to view WMS
 """"""""""""""""""""""
 
-.. figure:: use\qgis\qgis_addWMS.png
+.. figure:: images/qgis_addWMS.png
    :alt: QGIS menu option for adding a WMS
 
    Figure 1 - QGIS menu option for adding a WMS
 
-.. |wmsBtn| image:: use\qgis/qgis_btnWMS.png
+.. |wmsBtn| image:: images/qgis_btnWMS.png
 
 To add a WMS layer from the menu, choose *Layer > Add Layer > Add WMS/WMTS Layer*. Alternatively, click on the |wmsBtn| button on the *Manage Layers Toolbar*. In the *Add Layer(s) from a WM(T)S Server* pop-up box click the *New* button, and then in the *Create a new WMS connection* pop-up add a name for your service, such as OneGeology shapefile exemplar (fcgi) using MapServer 6 and the service URL (with no parameters) as below and then click 'OK'.
 
@@ -852,7 +842,7 @@ We recommend using no parameters (above), so that you get the latest version of 
 
 	http://ogc.bgs.ac.uk/fcgi-bin/exemplars/BGS_Bedrock_and_Superficial_Geology/wms?version=1.1.1&
 
-.. figure:: use\qgis\qgis_addNewWMSService.png
+.. figure:: images/qgis_addNewWMSService.png
    :alt: Adding a new WMS Service
 
    Figure 2 - Adding a new WMS Service
@@ -863,28 +853,28 @@ If you are behind a firewall, you may also need to add information about your pr
 
 Click on the layer you want and click ‘Add’, this will add that layer in the background, but keep the pop-up window to allow you to add another layer. Press *Ctrl* and click again on a selected layer to deselect it.
 
-.. figure:: use\qgis\qgis_selectWMSLayers.png
+.. figure:: images/qgis_selectWMSLayers.png
    :alt: Selecting layers
 
    Figure 3 - Selecting layers
 
 Note, if you select several layers (using *Ctrl* or *Shift* keys) and then click Add, QGIS will show those selected WMS layers as a single ‘derived’ layer in the GIS. In this example we have joined the bedrock lithostratigraphy and the superficial lithostratigraphy geology layers to create a single layer which we name ‘Lithostratigraphy’. Note you can rename any WMS layer to one that suits your needs, change the layer CRS, and change the layer image encoding (the default is png).
 
-.. figure:: use\qgis\qgis_createDerivedWMSLayers.png
+.. figure:: images/qgis_createDerivedWMSLayers.png
    :alt: Creating derived layers
 
    Figure 4 - Creating derived layers
 
 If the selected layer is set to be queryable in the WMS service, you may use the identify tool to retrieve information on any feature in the map.
 
-.. figure:: use\qgis\qgis_WMSIdentify.png
+.. figure:: images/qgis_WMSIdentify.png
    :alt: WMS feature identification
 
    Figure 5 - WMS feature identification
 
 You may right click on any layer in the layer list and go to *Properties* to get the metadata for that layer and the serivce that serves it.
 
-.. figure:: use\qgis\qgis_WMSMetadataProperties.png
+.. figure:: images/qgis_WMSMetadataProperties.png
    :alt: Layer properties metadata
 
    Figure 6 - Layer properties metadata
@@ -892,7 +882,7 @@ You may right click on any layer in the layer list and go to *Properties* to get
 Using QGIS to access simple feature WFS
 """""""""""""""""""""""""""""""""""""""
 
-.. |wfsBtn| image:: use\qgis\qgis_btnWFS.png
+.. |wfsBtn| image:: images/qgis_btnWFS.png
 
 To add a WFS layer you need to go through a similar process as you do to add a WMS layer, that is, you must first add the WFS service by clicking on the |wfsBtn| tool on the *Manage Layers Toolbar*, then connect to the service, then select the layer you want to add. Even if the WFS service URL is the same as a WMS connection you already have listed you will need to add the WFS service URL.
 
@@ -904,21 +894,21 @@ To add a WFS layer you need to go through a similar process as you do to add a W
 When you add a WFS layer you can choose to request all the features of that layer, or you may choose to request only those features that overlap the current extent, depending on whether the option *Only request features overlapping the view extent* is enabled. This will allow you to download and add to your map only the features relevant to your area of interest. However, if you change your extent by panning or zooming the map, new features will be fetched for your new view extent.
 
 
-.. figure:: use\qgis\qgis_addWFSLayer.png
+.. figure:: images/qgis_addWFSLayer.png
    :alt: Adding a new WFS service
 
    Figure 7 - Adding a new WFS service
 
 Below we have zoomed to the full extent of the WFS layer, therefore all features for that layer have been returned. Individual feature attributes can be inspected by using the *Identify* tool or by opening the *Attribute Table*.
 
-.. figure:: use\qgis\qgis_WFSIdentify.PNG
+.. figure:: images/qgis_WFSIdentify.PNG
    :alt: Identifying WFS features
 
    Figure 8 - Identifying WFS features
 
 When we view a WFS service, it should be noted that we actually download a representation of the data itself, not an image. We can therefore save a copy of that data for re-use elsewhere. Simple right click on the layer and go to *Save As*. Exporting formats include **ESRI Shapefile** and **GeoJSON**. Exported data can be limited to selected features or to features in the current map extent.
 
-.. figure:: use\qgis\qgis_wfsExport.PNG
+.. figure:: images/qgis_wfsExport.PNG
    :alt: Exporting WFS layer
 
    Figure 9 - Exporting WFS layer
@@ -926,7 +916,7 @@ When we view a WFS service, it should be noted that we actually download a repre
 Using QGIS to view WCS
 """"""""""""""""""""""
 
-.. |wcsBtn| image:: use\qgis\qgis_btnWCS.png
+.. |wcsBtn| image:: images/qgis_btnWCS.png
 
 Adding a WCS layer is again a similar process than adding a WMS layer:
 
@@ -934,28 +924,28 @@ Adding a WCS layer is again a similar process than adding a WMS layer:
 * Connect to the service
 * Select the layer you want to add
 
-.. figure:: use\qgis\qgis_addNewWCSService.png
+.. figure:: images/qgis_addNewWCSService.png
    :alt: Creating a connection to a WCS service
 
    Figure 10 - Creating a connection to a WCS service
 
 Only one layer can be selected at a time. After selecting it, and choosing your favourite format, click 'Add'. Repeat this process if you wand to add more layers and then click 'Close'.
 
-.. figure:: use\qgis\qgis_addNewWCSService.png
+.. figure:: images/qgis_addNewWCSService.png
    :alt: Adding a WCS layer
 
    Figure 11 - Adding a WCS layer
 
 Your layer(s) should now be displaying on the map.
 
-.. figure:: use\qgis\qgis_displayWcsLayer.png
+.. figure:: images/qgis_displayWcsLayer.png
    :alt: Displaying a WCS layer
 
    Figure 12 - Displaying a WCS layer
 
 WCS layers can be exported as rasters. To do so, right click on the layer and go to *Save As*. You can choose to crop the exported raster by specifying an extent or getting the current map extent.
 
-.. figure:: use\qgis\qgis_exportWCSLayer.png
+.. figure:: images/qgis_exportWCSLayer.png
    :alt: Exporting a WCS layer
 
    Figure 13 - Exporting a WCS layer
@@ -986,7 +976,7 @@ You will be able to preview the service layers in ArcCatalog; however, if the ma
 
 You will not be able to view the legend graphics in ArcCatalog.
 
-.. figure:: esri/esri_catalog_reviewingWms.png
+.. figure:: images/esri_catalog_reviewingWms.png
    :alt: Reviewing available WMS services in ArcCatalog
 
    Figure 2 - Reviewing available WMS services in ArcCatalog
@@ -1000,28 +990,28 @@ This functionality is only available with a `Data Interoperability <http://deskt
 
 If you do have a Data Interoperability license, on the *Catalog Tree* window go to *Interoperability Connections > Add Interoperability Connection* to open the *Interoperability Connection* dialog. In the dialog, select WFS as format and enter the WFS url in the *Dataset* option.
 
-.. figure:: esri/esri_catalog_connectingWfs.png
+.. figure:: images/esri_catalog_connectingWfs.png
    :alt: Connecting to a WFS service in ArcCatalog
 
    Figure 3 - Connecting to a WFS service in ArcCatalog
 
 Before clicking *OK*, go to *Parameters* and select the *Feature Types* to download. *Feature Types* aren't selected by default, so you'll need to do this step if you want to see any layer in your WFS connection. The *WFS Parameters* dialog also allows you to set many other options, as shown in the picture below. Once you're happy with your settings click *OK* to close this dialog and *OK* again to create the WFS connection.
 
-.. figure:: esri/esri_catalog_parametersWfs.png
+.. figure:: images/esri_catalog_parametersWfs.png
    :alt: WFS Parameters dialog
 
    Figure 4 - WFS Parameters dialog
 
 When you create a connection, you might see that multiple versions of your layer have been created in different geometries. Refresh your connection (right click on layer and go to *Refresh*) and only the relevant geometry will be kept.
 
-.. figure:: esri/esri_catalog_allGeometriesWfs.png
+.. figure:: images/esri_catalog_allGeometriesWfs.png
    :alt: WFS connection showing all available geometries
 
    Figure 5 - WFS connection showing all available geometries
 
 You can preview and identify individual features in a layer from a WFS connection by selecting the layer and going to the *Preview* tab.
 
-.. figure:: esri/esri_catalog_reviewingWfs.png
+.. figure:: images/esri_catalog_reviewingWfs.png
    :alt: Previewing and identifying a WFS layer
 
    Figure 6 - Previewing and identifying a WFS layer
@@ -1031,14 +1021,14 @@ WCS Service Connection
 
 Adding a WCS service to your list of available WCS services is identical than doing it for a WMS service: on the *Catalog Tree* window go to *GIS servers > Add WMS Server* option and then add the Service URL (without parameters). You may select to use the default service version (which would normally be the highest version) or you may force a specified version depending on your needs.
 
-.. figure:: esri/esri_catalog_addingWcs.png
+.. figure:: images/esri_catalog_addingWcs.png
    :alt: Adding a WCS service to the list of available services in ArcCatalog
 
    Figure 7 - Adding a WCS service to the list of available services in ArcCatalog
 
 Your WCS will now be available within the list of GIS Servers.
 
-.. figure:: esri/esri_catalog_reviewingWcs.png
+.. figure:: images/esri_catalog_reviewingWcs.png
    :alt: Previewing WCS layers in ArcCatalog
 
    Figure 7 - Previewing WCS layers in ArcCatalog
@@ -1046,13 +1036,13 @@ Your WCS will now be available within the list of GIS Servers.
 Using ArcMap
 ^^^^^^^^^^^^
 
-.. |addDataBtn| image:: esri/esri_map_addDataBtn.PNG
+.. |addDataBtn| image:: images/esri_map_addDataBtn.PNG
 
-.. |addCatalogBtn| image:: esri/esri_map_catalogBtn.PNG
+.. |addCatalogBtn| image:: images/esri_map_catalogBtn.PNG
 
 In ArcMap you can use the *Add Data* button (|addDataBtn|) to add an WMS, WFS or WCS layer or simply drag-and-drop a layer from the *Catalog* window. This window is the equivalent to the *Catalog Tree* window in ArcCatalog and can be enabled by pressing |addCatalogBtn|. OGC service connections are usually created in ArcCatalog before the data is used in ArcMap; however, the connections can also be set at the time of adding the data.
 
-.. figure:: esri/esri_map_addingData.PNG
+.. figure:: images/esri_map_addingData.PNG
    :alt: Adding data to ArcMap
 
    Figure 8 - Adding data to ArcMap
@@ -1074,28 +1064,28 @@ If the map is scale layered (layers are shown greyed out) you may use the *Zoom 
 
 If you are going to provide scale layered data, it is suggested that you also provide an outline coverage map viewable at all scales to allow users to pan around the area of interest, without needing to zoom in first.
 
-.. figure:: esri/esri_map_zoomVisibleWms.PNG
+.. figure:: images/esri_map_zoomVisibleWms.PNG
    :alt: Accessing the Zoom to make visible tool in ArcMap for scale layered data
 
    Figure 9 - Accessing the *Zoom to make visible* tool in ArcMap for scale layered data
 
 There are two ways you can view the legend for any layer. First off you can use the ‘Add WMS legend to map’ option, which will overlay a large copy of the legend on top of your map window. You will probably need to move or resize this legend graphic in order to see your map.
 
-.. figure:: esri/esri_map_addLegendWms.PNG
+.. figure:: images/esri_map_addLegendWms.PNG
    :alt: Adding a WMS legend to a map in ArcMap
 
    Figure 10 - Adding a WMS legend to a map in ArcMap
 
 The legend will scale to the initial scale of your map and will not redraw (rescale) if you change the scale of your map view.
 
-.. figure:: esri/esri_map_lgndDisplayWms.PNG
+.. figure:: images/esri_map_lgndDisplayWms.PNG
    :alt: WMS legend displayed on the map layer in ArcMap
 
    Figure 11 - WMS legend displayed on the map layer in ArcMap
 
 Alternatively, you may use the layer properties dialogue to save a copy of the legend. To do so use the *Legend URL* or right click on the legend image and go to *Save As*. If your layer presents multiple styles, they will be available in the drop down menu of this dialog.
 
-.. figure:: esri/esri_map_lgndSaveWms.PNG
+.. figure:: images/esri_map_lgndSaveWms.PNG
    :alt: Saving a WMS legend graphic to file in ArcM
 
    Figure 12 - Saving a WMS legend graphic to file in ArcMap
@@ -1107,21 +1097,21 @@ WFS Layers
 
 WFS layers behave in ArcMap like any other type of vector layer. You can, for instance, identify individual features, see feature attributes in the *Attribute Table*, join the layer to other dataset or apply symbology.
 
-.. figure:: esri/esri_map_wfs.PNG
+.. figure:: images/esri_map_wfs.PNG
    :alt: WFS layer displayed in ArcMap showing attributres and custom symbology
 
    Figure 13 - WFS layer displayed in ArcMap showing attributres and custom symbology
 
 To export features from a WFS layer to ESRI proprietary formats, such as a **Shapefile**, right click on the layer and go to *Data > Export Data*. Note that you can export subsets of the layer by choosing only selected features or features within the view extent.
 
-.. figure:: esri/esri_map_exportProprietaryWfs.PNG
+.. figure:: images/esri_map_exportProprietaryWfs.PNG
    :alt: Exporting a WFS layer to a proprietary format in ArcMap
 
    Figure 14 - Exporting a WFS layer to a proprietary format in ArcMap
 
 To export features to an open format, like **GeoJSON**, you'll need to use the *Quick Export* tool, only available with the *Data Interoperability* license. If features are selected, this tool will only export selected features. You can also return feaures from a given extent by going to the tool's environments and defining an extent in the *Processing Extent* section.
 
-.. figure:: esri/esri_map_exportOpenWfs.PNG
+.. figure:: images/esri_map_exportOpenWfs.PNG
    :alt: Exporting a WFS layer to an open format in ArcMap
 
    Figure 15 - Exporting a WFS layer to an open format in ArcMap
@@ -1131,14 +1121,14 @@ WCS Layers
 
 WCS layers operate in a similar way to other raster data but with a few less properties. For more information on available properties go to `Adding a WCS service to ArcMap <http://desktop.arcgis.com/en/arcmap/latest/map/web-maps-and-services/adding-a-wcs-service-to-arcmap.htm>`_.
 
-.. figure:: esri/esri_map_displayWcs.PNG
+.. figure:: images/esri_map_displayWcs.PNG
    :alt: Displaying WCS data in ArcMap
 
    Figure 16 - Displaying WCS data in ArcMap
 
 To export a WCS layer, right click on it and go to *Data > Export Data*. The *Export WCS Data* dialog will allow you to set the extent, format or cell size of the exported data.
 
-.. figure:: esri/esri_map_exportWcs.png
+.. figure:: images/esri_map_exportWcs.png
    :alt: Displaying WCS data in ArcMap
 
    Figure 17 - Displaying WCS data in ArcMap
