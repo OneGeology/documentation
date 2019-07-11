@@ -4375,11 +4375,11 @@ Q: Is it possible to configure GeoServer so that I do not need to use PostGIS?
 Q: All of my data are in Shapefiles. Can I deploy a shapefile as a GeoSciML-Lite service?
    A: The problem you will run into is the truncation of field names that occurs in shapefiles. Ideally you will have a full version of the data in PostGIS. As mentioned in the above document, to be compliant with GeoSciML-Lite, you will need to make sure there is no truncation in field names; they must be an exact match for the GeoSciML-Lite schema. To map table fields to XML elements with different names you will have to use the `Application Schema extension <http://docs.geoserver.org/stable/en/user/data/app-schema/index.html>`_ for GeoServer.
 
-Using MapServer to provide OneGeology web services
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Using MapServer
+----------------
 
 Software Installation
-""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^
 
 `MapServer <http://mapserver.org/>`_ can be used to provide a number of OGC Web Services (OWS) types, such as the Web Map Service (WMS), Web Feature Service (WFS) and Web Coverage Service (WCS) standards which are the current focus of interest for the OneGeology portal.  In the following sections we run through how to configure MapServer so it can provide any one of these three service types.
 
@@ -4388,7 +4388,7 @@ MapServer will work both on Windows and Linux operating systems (both 32-bit and
 The simplest way to set up MapServer on a Windows server is to use the MapServer for Windows (MS4W) installer provided by Gateway Geomatics, this installs a 32-bit version of the Apache HTTP web server and the 32-bit version of MapServer as well as some demo applications.  For those wishing to use a 64-bit version of Apache HTTP web server, we recommend Apache Lounge and GISInternals.  For installation of MapServer on Linux, (with Apache HTTP web server) we recommend Ubuntu and the Personal Package Archives.
 
 Installing MS4W
----------------
+^^^^^^^^^^^^^^^^
 
 All versions of the MS4W software package, including the latest version are available from the `Gateway Geomatics MS4W <https://ms4w.com/>`_  web site.
 
@@ -4525,13 +4525,14 @@ Again make more copies if making multiple language services.
 
 
 Installing and configuring Apache HTTP web server
--------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 MS4W, as described above, installs both MapServer and the Apache HTTP webserver software.  Other installations of MapServer require configuring of the web server as a separate process.  This section takes you through installing alternate Apache HTTP webserver software, and through the additional configuration you will need to do to create a OneGeology service that follows the same pattern as above.
 
 
 64-bit Apache HTTP server
-^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""""
+
 if tyou want to run a 64-bit version of MapServer on Windows such as provided by GISInternals, you will also need to in install a 64-bit version of Apache.
 
 If instead you want to use the latest stable release of Apache-HTTP, that is the version 2.4.n releases (latest is currently 2.4.29), you must instead go to the Apache Lounge site: `http://www.apachelounge.com/download/ <http://www.apachelounge.com/download/>`_. There are several options here both in server architecture (32 bit and 64 bit), and server functionality, for you to choose from to fit your needs.
@@ -4656,7 +4657,7 @@ or using wget:
 
 
 Installing GISInternals packages for Windows
---------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The most recent versions of the GISInternals GDAL and MapServer packages are available online at: `http://www.gisinternals.com <http://www.gisinternals.com>`_
 
@@ -4743,7 +4744,7 @@ At this stage you will have a working MapServer service such that a request like
 
 
 Installing MapServer on Linux using PPAs
-----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This installation guide will give you simple step-by-step instructions of installing MapServer onto a Linux server and assumes you have an Apache HTTP webserver already running.
 
@@ -4905,7 +4906,7 @@ That’s it!
 
 
 Alternative MapServer configurations
-------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you want to use other permutations and get stuck remember you can ask the OneGeology Helpdesk any MapServer configuration issues in relation to your OneGeology services, and we will endeavour to help you.
 
@@ -4933,18 +4934,18 @@ Mailing Lists
 
 
 MapServer and IIS
-^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""
 
 You may use the IIS web server instead of Apache to run the MapServer CGI.  See the previous cookbook for details of how to do this with IIS version 6.  We haven't been able to update the cookbook for the latest version of IIS, but the MapServer documentation (`IIS Setup for MapServer <http://mapserver.org/installation/iis.html>`_) gives a good guide for how to do this in general for IIS 7 and up.
 
 Compiling MapServer on Linux
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""""""
 
 You may wish to compile your own version of MapServer on a \*nix operating system of your own choosing.  We haven't done this for a while and the guidance in our previous cookbook was very out of date.  There is guidance on the MapServer site that takes you through the process (`Compiling on Unix <http://mapserver.org/installation/unix.html>`_)
 
 
 General configuration
-=====================
+^^^^^^^^^^^^^^^^^^^^^^
 
 MapServer services are configured through the use of Mapfile templates (\*.map).  You can use a single Mapfile to configure a service, or you can use a master file that includes other files.  The benefits of using multiple files include ease of maintenance across multiple similar services, and readability.  Here we will use multiple files to show how the various parts of a MapServer (OGC) service need to be configured.  You can configure multiple service types through a single configuration, if desired.
 
@@ -5145,7 +5146,7 @@ The SRS specifies the coordinate system (spatial reference system) that the WMS 
 
 
 Adding alternate character set support
---------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you are serving a non-English language service, you may need or want to change the font and character sets.
 
@@ -5193,7 +5194,7 @@ The important parts to note in the above example are:
 
 
 Creating your own symbology
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 symbols.sym, is a set of defined symbols that can be used to style your map layers.
 
@@ -5239,7 +5240,7 @@ symbols.sym, is a set of defined symbols that can be used to style your map laye
    END
 
 Example include files
----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: mapfile
 
@@ -5341,12 +5342,12 @@ Example include files
 
 
 Debugging common errors
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 This section is added to help you debug common errors in your Mapfile.
 
 Symbol definition error
-^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""
 
 getString(): Symbol definition error.  Parsing error near (*matching text*):(line *line-number*)
 
@@ -5363,7 +5364,7 @@ You can correct the error by swapping the file name delimiters to double quotes 
    NAME "Formation d'Irma : calcaire, dolomie à stromatolites, argilite"
 
 Unknown identifier
-^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""
 
 loadLayer(): Unknown identifier. Parsing error near (*matching text*):(line *line-number*)
 
@@ -5380,7 +5381,7 @@ This error can occur when you are missing an enclosing KEYWORD in the Mapfile.  
    #END #class
 
 Missing magic string
-^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""
 
 When running a GetFeatureInfo request with the info\_format set as text/html, you will get an error like the below, if you do not include a magic string in each of your HTML template documents.
 
@@ -5401,7 +5402,8 @@ The recently updated exemplar service kits include this NEW requirement, but tho
 `More information on this and related issues. <http://mapserver.org/development/rfc/ms-rfc-56.html>`_
 
 Connecting to a database
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
 If your data is stored in a database you can access it by setting the CONNECTION and CONNECTIONTYPE directives (to specify the connection) and the DATA directive (to specify the data you want to retrieve or query). These directives are put in the LAYER section of your map file.
 
 The below example shows a typical connection to a PostgreSQL/PostGIS database.  Such a connection might be shared across several layers in your service.
@@ -5443,12 +5445,12 @@ For more details on connecting to a database see the `MapServer Data Input pages
 
 
 WMS
-===
+^^^^^^^
 
 We provide two exemplar MapServer services, the first is based on a simple raster file, and is used to illustrate a basic WMS, the second uses a vector datasource (shapefiles) to illustrate how to configure a more advanced WMS (and may also be used for a Simple Feature WFS).
 
 Raster image data exemplar (LAYER configuration)
-------------------------------------------------
+"""""""""""""""""""""""""""""""""""""""""""""""""2
 
 An example of adding a PNG layer is included in the BGS\_Bedrock\_Raster\_Map application.  The LAYER section is reproduced below for reference.  This data was simply created as a raster from the bedrock shapefile for the purposes of serving as an example.  In this case we won’t be setting up a response to GetFeatureInfo request; we are just returning a coloured map.  There is more `detailed documentation <http://www.mapserver.org/input/raster.html>`_ , in particular as regards efficient serving of large images, using 8-bit vs. 24-bit images, tiling etc.
 
@@ -5498,7 +5500,7 @@ Example extract from Mapfile below:
 
 
 Vector data exemplar (LAYER configuration)
-------------------------------------------
+"""""""""""""""""""""""""""""""""""""""""""
 
 The example file includes the following shapefile based layers:
 
@@ -5603,7 +5605,7 @@ The CLASS related items are the most complicated.  These sections are setting up
 Colour codes for the lithostratigraphical and lithology layers are specific to the British Geological Survey, you should use the codes used by your geological survey.  However, for OneGeology it has been agreed, where possible, to serve a chronostratigraphic age layer using the new `IUGS 2009 colour scheme <https://www.seegrid.csiro.au/wiki/pub/CGIModel/GeologicTime/ISChart2009.pdf>`_ .  This will give some form of harmonization between the different chronostratigraphic layers served by the contributing geological surveys and this is only possible where such an internationally agreed scheme exists.  In this case the British Geological Survey had to refine, re-allocate, and ‘map’ its internal ages to fit the IUGS 2009 one.  The file ‘ICSClasses.txt’ contains a full list of names and CLASS definitions for the appropriate colours for all the IUGS 2009 colours.  In the Mapfile we have commented out the terms that are not actually used in the BGS map; please do the same for your map.
 
 Configuring HTML query templates
----------------------------------
+"""""""""""""""""""""""""""""""""
 
 All templates must include the **<!-- MapServer Template -->** statement on the first line of the file.
 
@@ -5739,7 +5741,7 @@ Here we embed some JavaScript into a response to give a TimeSeries schart for th
    </script>
 
 Configuring group layering
---------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In some situations, for example when you have too many individual layers, or if you have to comply with some strict naming conventions (such as INSPIRE) you may need to consider configuring group layering.  In group layering you nest one set of layers inside another (group) layer, you can still call (e.g. make a GetMap request on) any of the individual grouped layers or you can call all the grouped layers at the same time using the grouping layer.  For example in the below MapServer GetCapabilities response on a service with group layers you could make a GetMap request on the group layer called GE.GeologicFault and would get a map comprising both the grouped layers (GE.GeologicFault\_GBR\_BGS\_EN\_1M\_Surface and GE.GeologicFault\_GBR\_BGS\_EN\_1M\_Bedrock), or you could perform a GetMap request on either of the individual layers.
 
@@ -5849,7 +5851,7 @@ To configure group layering in MapServer first you need to configure a service w
 
 
 Simple feature WFS
-==================
+^^^^^^^^^^^^^^^^^^^
 
 Whilst MapServer is not able to provide a complex feature WFS (such as is required to supply GeoSciML 4.0)  it is possible to configure it to provide a simple feature WFS.  If you have already set up a WMS with a vector data source it is possible with only minor additions to the SERVER and LAYER configuration to enable a WFS service.  If your data supports it, you can also configure a portrayal service, to provide a GeoSciML-Lite simple feature service for example.
 
@@ -6320,8 +6322,8 @@ To create:
 **Note 3** Since MapServer version 7.2, by default filling in a complete set of service and layer metadata will also give you a full ISO 19139 XML metadata record for your dataset, which is available through a GetMetadata request, and is automatically added to your service where the GetCapabilites response supports a dataset metadata URL.
 
 
-Using ArcGIS 
-^^^^^^^^^^^^^^^^^^^^^^^
+Using ArcGIS
+-------------
 
 .. todo::
 
@@ -6332,13 +6334,10 @@ Using ArcGIS
 The following notes are based on ESRI ArcGIS server version 10.5 (SP1)
 
 WMS
-===
-
-Creating the service
---------------------
+^^^
 
 Prepare the map document
-^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""
 
 Initial set up of WMS services is relatively straightforward and simply requires the creation of a map document (.mxd) containing the data you want to add to the service.
 
@@ -6381,7 +6380,7 @@ Eg. an unmodified GetCapabilities (version 1.3.0) response for the above example
    ...
 
 Publishing your WMS
-^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""
 
 Once you are happy with the layer names, the easiest way to publish your WMS is doing it directly from the map document:
 
@@ -6420,7 +6419,7 @@ Your new service will have a URL like below, with the folder name part being opt
    http://[hostname]/ArcGIS/services/[folder name]/[map service title]/MapServer/WMSServer
 
 Edit the GetCapabilities documents
-----------------------------------
+""""""""""""""""""""""""""""""""""""
 
 ArcGIS Server doesn’t create any static GetCapabilities xml documents, but does allow you to use external files. You will need to use such external files if you want to add any additional spatial reference systems, correct the keywords listing, change the LegendURL images, add better abstracts and layer titles, or add an INSPIRE extended capabilities section. We think to provide a fully compliant WMS it is highly likely that you will need to use a set of static files.
 
@@ -6462,7 +6461,7 @@ For example, for a service called BGS_BEDROCK_GEOLOGY, we may save our initial G
 Having created your files, you may then edit them as required. We would recommend you make a second copy of the files in case you make an error whilst editing.
 
 INSPIRE
--------
+""""""""""
 
 If you want your OneGeology service to comply to INSPIRE standards, in addition to meet the requirements of the OneGeology profile, you need to ensure that the following conditions are fulfilled:
 
@@ -6589,7 +6588,7 @@ In addition (for both scenarios) you will need to **reference the inspire_common
        http://www.esri.com/wms http://../arcgis/services/.../MapServer/WmsServer?version=1.3.0%26service=WMS%26request=GetSchemaExtension">
 
 INSPIRE Extension
-^^^^^^^^^^^^^^^^^
+"""""""""""""""""""
 
 The ArcGIS for INSPIRE extension allows to create an INSPIRE compliant WMS through a new ESRI map service, specific to this extension, called INSPIRE View service. In our experience, creating a INSPIRE compliant WMS service using custom INSPIRE extension tools is more difficult than using standard ArcGIS tools, due to the complexity of the datasets that you have to use, the scarce amount of documentation and the limited ESRI support for the extension.
 
@@ -7050,7 +7049,7 @@ Your service will be accessible from the following endpoint:
 For more information see `Use an INSPIRE View service <http://server.arcgis.com/en/inspire/latest/inspire-services/use-the-inspire-view-service.htm>`_.
 
 ArcGIS server issues
---------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 * When using the SLD parameter to get an external SLD file, ArcGIS 10.0 expects the layer name and styles parameter to be to be sent as part of a GetMap request, even though this is not required by the WMS+SLD specification. A bug has been raised with ESRI on this issue (`NIM095568 <http://support.esri.com/en/bugs/nimbus/TklNMDk1NTY4>`_) back in version 10.0, but it’s still present.
 
@@ -7059,7 +7058,7 @@ ArcGIS server issues
    SLD Enabled WMS content.
 
 Simple Feature WFS
-==================
+^^^^^^^^^^^^^^^^^^^
 
 Creating a simple feature WFS requires almost the same steps as creating a WMS. The only difference being that, when publishing the service, you need to select the WFS capability.
 
@@ -7082,10 +7081,10 @@ For more information on how to create a simple feature WFS service and how to ed
    Complex Feature WFS content.
 
 WCS
-===
+^^^^
 
 Create a map document
----------------------
+""""""""""""""""""""""
 
 In ArcGIS, a WCS can be created mainly through 3 routes: a map document with raster data, a raster dataset or a mosaic dataset. Publishing a mosaic dataset requires ArcGIS Image Server, so unless you have this extension enabled, the only way to publish multiple rasters at once on a single WCS will be through a map document; therefore we’re are going to focus on this route. For more information see `WCS services <http://server.arcgis.com/en/server/latest/publish-services/windows/wcs-services.htm>`_.
 
@@ -7097,7 +7096,7 @@ Start by creating a map document and adding your rasters to it. Note that, if yo
    Figure 22 - Adding WCS data to your map document
 
 Publish the WCS service
------------------------
+""""""""""""""""""""""""""
 
 * Go to *File > Share As > Service… *to open the *Share as Service* dialog.
 
@@ -7129,7 +7128,7 @@ Your new service will have a URL like below, with the folder name part being opt
    http://[hostname]/ArcGIS/services/[folder_name]/[map service title]/MapServer/WCSServer
 
 Edit the GetCapabilities document
----------------------------------
+""""""""""""""""""""""""""""""""""
 
 ArcGIS server doesn’t create any static GetCapabilities xml documents, but does allow you to use external files. You will need to use such external files if you want to add any supported CRS, add keywords and abstracts for coverages or modify coverage titles. Note that, independently of the supported CRSs added, ESRI WCSs will always support the over 6000 projections that come with the ArcGIS projection engine.
 
@@ -7175,9 +7174,9 @@ For more information, see `Use external capabilities files with WCS Services <ht
 
 
 Using Apache HTTP server as a reverse proxy
-===========================================
+--------------------------------------------
 
-o serve a OneGeology WMS through the OneGeology Portal that service must be served using port 80; the default port for any http web service. If you are already serving another web service on port 80 on the same server (such as a GeoNetwork spatial data metadata catalogue for example), then you will need to use a different port number for the existing service. In itself this shouldn’t be too difficult to do, however this might cause problems for your customers due to restrictive firewall rules that prevent them consuming any web service not served on the standard web port number. One way around this is to merge the services together; another possibility (as detailed below) is to use the Apache HTTP web server as a reverse proxy, that is, to handle all requests to the second service as if that service was coming from the MS4W Apache service. The user is thus unaware that there is more than one web service. Each service proxied in this way runs on a separate port number, and may still be accessed directly on that port (depending on your configuration), but it is also available as if it were running on port 80.
+To serve a OneGeology WMS through the OneGeology Portal that service must be served using port 80; the default port for any http web service. If you are already serving another web service on port 80 on the same server (such as a GeoNetwork spatial data metadata catalogue for example), then you will need to use a different port number for the existing service. In itself this shouldn’t be too difficult to do, however this might cause problems for your customers due to restrictive firewall rules that prevent them consuming any web service not served on the standard web port number. One way around this is to merge the services together; another possibility (as detailed below) is to use the Apache HTTP web server as a reverse proxy, that is, to handle all requests to the second service as if that service was coming from the MS4W Apache service. The user is thus unaware that there is more than one web service. Each service proxied in this way runs on a separate port number, and may still be accessed directly on that port (depending on your configuration), but it is also available as if it were running on port 80.
 
 (`Comprehensive information on configuring Apache <http://httpd.apache.org/docs/2.2/urlmapping.html>`_)
 
@@ -7303,23 +7302,3 @@ To:
 ProxyName: is the domain name or IP of the standard (Apache HTTP Server) web service and can be omitted if you are running your Tomcat service on the same server as the http service.
 
 To do this in Jetty you need to make a similar change in the jetty.xml file
-
-
-
-WMS
-^^^^^
-
-- Be awesome
-- Make things faster
-
-WFS
-^^^^^^
-
-- Be awesome
-- Make things faster
-
-WCS
-^^^^^^^^^
-
-- Be awesome
-- Make things faster
