@@ -3208,12 +3208,12 @@ At the end there is an additional section on setting up the Apache HTTPD server 
 
 
 Using GeoServer
-^^^^^^^^^^^^^^^^
+----------------
 
 GeoServer has extensive `documentation <http://docs.geoserver.org/stable/en/user/index.html>`_ which you should refer to in addition to this cookbook. References will be made to relevant parts rather than repeating too much of what is already there. There is also the `geoserver-users mailing list <http://geoserver.org/comm/>`_.
 
 Introduction
-"""""""""""""
+^^^^^^^^^^^^^
 
 This section describes how to set up the different kinds of OneGeology compliant service described in :ref:`service_provision_service_types` using free and open source GeoServer software. GeoServer can be used to provide *all* the types of service that OneGeology service providers might need. There are also INSPIRE specific instructions on making your services INSPIRE compliant where relevant. This is entirely optional for OneGeology so you can ignore the INSPIRE sections if this is not of interest to you.
 
@@ -3284,7 +3284,7 @@ Ideally you will be familiar with deploying applications in a servlet container 
 * You are able to install applications such as Apache Tomcat, GeoServer, PostGIS (if you are using that as a database) etc. on a server with your chosen operating system using their project documentation.
 
 Common Setup
-"""""""""""""
+^^^^^^^^^^^^^
 
 .. todo::
 
@@ -3328,14 +3328,14 @@ In GeoServer `workspaces <https://docs.geoserver.org/latest/en/user/data/webadmi
    Edit a GeoServer Workspace
 
 Example Data
-"""""""""""""
+^^^^^^^^^^^^^
 
 To help you set up your services we provide :ref:`service_provision_data_preparation_exampledata` that you can use to get some working services running. It enables you to get some initial experience setting up a service. Your own services may be set up by customising the examples or you may use them to get some understanding of what is involved when setting up your own service. The following sections on how to set up different types of service say which of the example data sets can be used to test setting up those services.
 
 .. _service_provision_server_setup_geoserver_simple_wms:
 
 Simple WMS
-""""""""""""
+^^^^^^^^^^^
 
 .. todo::
 
@@ -3471,7 +3471,7 @@ The output of a grouped layer is shown below (excerpt from a GetCapabilities res
 .. _service_provision_server_setup_geoserver_sld_wms:
 
 SLD enabled WMS
-""""""""""""""""
+^^^^^^^^^^^^^^^^
 
 You don't have to configure anything special in GeoServer to have an SLD enabled WMS but for the purposes of having your layers work with the OneGeology Portal `thematic analysis </use/portal/thematic_analysis.html>`_ highlighting functionality your data will need to have the ``representativeAge_uri`` and ``representativeLithology_uri`` fields described in :ref:`service_provision_data_preparation_lite_geologicunitview` using appropriate CGI or INSPIRE vocabulary URIs.
 
@@ -3480,7 +3480,7 @@ If required you may disable this functionality in the Service metadata, by check
 .. _service_provision_server_setup_geoserver_simple_wfs:
 
 Simple Feature WFS
-""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^
 
 With GeoServer if you have configured a data store and layer as described in the :ref:`service_provision_server_setup_geoserver_simple_wms` section and the data store is of a suitable type (not, for example, a pure image format or raster format) then you will already have done all the substantive work to create a simple feature WFS serving features with the same name as your layer name and with property elements named according to the fields in the underlying data store. In the :ref:`service_provision_data_preparation_exampledata` the shapefile, GeoPackage and PostGIS database all are suitable. To complete setting up the WFS service metadata select :guilabel:`WFS` from under the :guilabel:`Services` section at the left of the `web administration interface <http://docs.geoserver.org/latest/en/user/webadmin/index.html>`_. The service metadata here is very similar to that described for setting up a :ref:`service_provision_server_setup_geoserver_simple_wms` so refer to that for what to enter. WFS specific settings are described in the `GeoServer documentation <http://docs.geoserver.org/latest/en/user/services/wfs/webadmin.html>`_.
 
@@ -3722,7 +3722,7 @@ This file is located in the same Data Store directory. To enable application-sch
 .. _service_provision_server_setup_geoserver_complex_wfs:
 
 Complex Feature WFS
-"""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^
 
 .. note:: This documentation describes setting up complex features by manually editing configuration files for the app-schema extension. Since it was written the `Hale Studio <https://www.wetransform.to/products/halestudio/>`_ graphical data transformation engine has been given the capability to create GeoServer app-schema configuration files. We recommend that you investigate this tool.
 
@@ -4225,7 +4225,7 @@ If you want to produce a service with data conforming to the INSPIRE Geology the
 .. _service_provision_server_setup_geoserver_wcs:
 
 WCS
-""""
+^^^^^
 
 Exemplar data used in this cookbook
 """"""""""""""""""""""""""""""""""""""
@@ -4341,7 +4341,7 @@ Troubleshooting
 If you start getting error messages when using GeoServer, you will probably need to increase the JAVA permgen space.  This can occur when you are serving lots of raster data. See http://osgeo-org.1560.x6.nabble.com/Session-times-out-when-adding-new-stores-or-layers-td4910354.html
 
 GeoServer troubleshooting
-"""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. todo::
 
@@ -5933,7 +5933,7 @@ By default MapServer outputs the geometry in a field called _msGeometry_ to chan
 
 
 WCS
-===
+^^^^
 
 In the same way as WMS and WFS are enabled on a service, WCS operations are enabled using either the **OWS\_ENABLE\_REQUEST** or **WCS\_ENABLE\_REQUEST"** statement in the MAP > WEB > METADATA section (enabling WCS for all coverages) or in the LAYER > METADATA section for enabling operations on a per coverage (layer) basis.
 
@@ -6020,7 +6020,7 @@ The following is an example of a coverage LAYER
 Further details for configuring WCS with Mapserver can be found at: `WCS Server <http://mapserver.org/ogc/wcs_server.html>`_
 
 INSPIRE metadata
-================
+-----------------
 
 INSPIRE specific metadata can either be referenced in an external INSPIRE service metadata document (scenario 1) or can be directly embedded in the capabilities document (scenario 2). MapServer supports both scenarios.  In either scenario an extended capabilities section is added to the GetCapabilities response for the service, using metadata configured in the **SERVICE > WEB > METADATA** section of the Mapfile.
 
