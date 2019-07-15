@@ -3,7 +3,7 @@ Welcome to OneGeology documentation!
 
 This Documentation provides detailed instuctions on
 
-- How to provide to the OneGeology Portal
+- How to provide data to the OneGeology Portal
 - Using the OneGeology Portal
 - Using data from OneGeology on other platforms
 
@@ -14,10 +14,10 @@ Contents:
    :glob:
 
    overview
-   authors
    providingdata
    portal
-
+   authors
+   
 Indices and tables
 ==================
 
