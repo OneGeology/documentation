@@ -91,7 +91,7 @@ Scanning
 
 Your chosen paper map may look something like this one from the Dutch Geological Survey of Dutch Guyana or Suriname:
 
-.. figure:: paperMap.jpg
+.. figure:: images/paperMap.jpg
    :width: 600
    :height: 528
    :alt: Example geological map to scan
@@ -121,7 +121,7 @@ Step 2B
 
 For larger maps, or if you have only a small scanner, the map should be scanned in parts and later stitched together.
 
-.. figure:: scanningAMap.jpg
+.. figure:: images/scanningAMap.jpg
    :width: 414
    :height: 253
    :alt: Orientation of map for scanning
@@ -156,7 +156,7 @@ Note down the Coordinate system of the paper map, as this is necessary for the f
 
 It is important to find four or more fixed points in the corner of the picture, from which you know exactly the position.  Reliable points are church towers, railway and roads crossings, canals or bridges.  Be careful with coastal features or rivers as these tend to change slowly in time.  More points are desirable to prevent conical distortions, which often happen with digital cameras.
 
-.. figure:: crossingPoints.jpg
+.. figure:: images/crossingPoints.jpg
    :width: 421
    :height: 256
    :alt: Minimum number and location of control points when geo-rectifying a scanned image.
@@ -183,7 +183,7 @@ The legend for the scanned map
 
 .. container:: floatright
 
-   .. figure:: legend.jpg
+   .. figure:: images/legend.jpg
       :width: 200
       :height: 681
       :alt: Paper legend
@@ -3007,7 +3007,7 @@ GeoSciML is based on `W3C <http://www.w3c.org>`_, OGC, `CGI Data Model <http://w
 
 For further detailed information on the development of GeoSciML, see http://www.cgi-iugs.org/tech_collaboration/geosciml.html
 
-.. figure:: /images/geosciml.gif
+.. figure:: images/geosciml.gif
     :width: 417px
     :align: center
     :height: 249px
@@ -3320,7 +3320,7 @@ Workspaces
 
 In GeoServer `workspaces <https://docs.geoserver.org/latest/en/user/data/webadmin/workspaces.html>`_ are used for organising data. For each workspace there are also `virtual services <https://docs.geoserver.org/latest/en/user/configuration/virtual-services.html>`_ created at different service URLs. So if you have an instance of GeoServer available at http://example.com/geoserver there will be a global service URL at http://example.com/geoserver/ows and, if you have a workspce called ws1, there will also be a virtual service URL at http://example.com/geoserver/ws1/ows. This allows some flexibility and control over making different data sets and services available for different purposes to different users. To start with we suggest you `create a new workspace <http://docs.geoserver.org/latest/en/user/data/webadmin/workspaces.html#add-a-workspace>`_ for your data and, if you are using any of the example data that accompany this guide then create a separate workspace for that as well. The URI you choose is not crucially important, we suggest you pick something under a domain you control to ensure uniqueness but it doesn't have to be a resolvable URI that responds if someone puts it in a browser. You can read the GeoServer documentation if you want to organise things further. However, note that, if you are going to supply simple or complex features through a WFS using standard application schemas such as GeoSciML this constrains how you set up your workspaces; see the relevant sections for more detail.
 
-.. figure:: EditWS1.jpg
+.. figure:: images/EditWS1.jpg
    :height: 451
    :width: 1036
    :alt: Edit a GeoServer Workspace
@@ -3353,7 +3353,7 @@ Simple WMS
 
 First you need to enable the WMS service. If you select :guilabel:`WMS` under the :guilabel:`Services` section of the left hand menu panel you will be presented with a screen like that below.
 
-.. figure:: WMS-serviceProp1.jpg
+.. figure:: images/WMS-serviceProp1.jpg
    :height: 536
    :width: 1014
    :alt: Editing GeoServer WMS service properties (1)
@@ -3366,7 +3366,7 @@ Check the :guilabel:`Enable WMS` box and also we recommend that you select the :
 
 In the middle of the page you can configure a limited list of SRS for the service; it is recommended that you use this option otherwise you will get the full list of GeoServer supported coordinate reference systems (about 5800), which makes the **capabilities** document slow to parse.  Remember you must support EPSG:4326 for the portal.
 
-.. figure:: WMS-serviceProp2.jpg
+.. figure:: images/WMS-serviceProp2.jpg
    :height: 489
    :width: 852
    :alt: Editing GeoServer WMS service properties (2)
@@ -3441,7 +3441,7 @@ In some situations it is desirable to create a group layer, for example you may 
 
 On the left side of the GeoServer **Web Administration Interface**, under **Data**, click **Layer Groups**. This will bring up the **Layer Groups** page.  Click the add new layer group link to add a new group layer; this opens a New Layer Group page.
 
-.. figure:: GS-LayerGroups.jpg
+.. figure:: images/GS-LayerGroups.jpg
    :height: 296
    :width: 854
    :alt: Create or edit a Group layer
@@ -3452,7 +3452,7 @@ Add the name, title, and abstract.  If you are following INSPIRE regulations not
 
 Now select the default projection system for the group and then click the Generate Bounds button, this will generate a bounding box based on the extents of all your listed layers, though you may add the bounding box manually if you wish.  To ensure that a user can see which layers are included in the group, you will also need to choose the *Named Tree* Mode (and not use the default Single mode).
 
-.. figure:: GS-LayerGroupsProp1.jpg
+.. figure:: images/GS-LayerGroupsProp1.jpg
    :height: 742
    :width: 787
    :alt: Group layer properties
@@ -3461,7 +3461,7 @@ Now select the default projection system for the group and then click the Genera
 
 The output of a grouped layer is shown below (excerpt from a GetCapabilities response).
 
-.. figure:: GS-LayerGroupsOut1.jpg
+.. figure:: images/GS-LayerGroupsOut1.jpg
    :height: 572
    :width: 899
    :alt: Group layer output
@@ -5745,7 +5745,7 @@ Configuring group layering
 
 In some situations, for example when you have too many individual layers, or if you have to comply with some strict naming conventions (such as INSPIRE) you may need to consider configuring group layering.  In group layering you nest one set of layers inside another (group) layer, you can still call (e.g. make a GetMap request on) any of the individual grouped layers or you can call all the grouped layers at the same time using the grouping layer.  For example in the below MapServer GetCapabilities response on a service with group layers you could make a GetMap request on the group layer called GE.GeologicFault and would get a map comprising both the grouped layers (GE.GeologicFault\_GBR\_BGS\_EN\_1M\_Surface and GE.GeologicFault\_GBR\_BGS\_EN\_1M\_Bedrock), or you could perform a GetMap request on either of the individual layers.
 
-.. figure:: GroupLayering.jpg
+.. figure:: images/GroupLayering.jpg
   :width: 1032
   :height: 350
   :alt: Group layering in a GetCapabilities response
@@ -6343,7 +6343,7 @@ Initial set up of WMS services is relatively straightforward and simply requires
 
 It is important to pay attention to the layer names in the map document, since the individual service layer names will use the map document layer names. The service will also use the map document layer names for the respective layer titles in the GetCapabilities document.
 
-.. figure:: esri/image048.jpg
+.. figure:: images/image048.jpg
    :alt: Using ArcMap layer names in the service
 
    Figure 1 - Using ArcMap layer names in the service
@@ -6399,7 +6399,7 @@ Once you are happy with the layer names, the easiest way to publish your WMS is 
 
 * Now go to *Capabilities > WMS* to access the WMS properties
 
-.. figure:: esri/image049.jpg
+.. figure:: images/image049.jpg
    :alt: Adding a new WMS service in ArcGIS
 
    Figure 2 - Adding a new WMS service in ArcGIS
@@ -6449,7 +6449,7 @@ You need to put these files on the server (or at a location available to your se
 
 Now go back to your map service and edit it using either `ArcGIS Server Manager <http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-manager.htm>`_ or `ArcMap <http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-arcgis-for-desktop.htm>`_.
 
-.. figure:: esri/image050.jpg
+.. figure:: images/image050.jpg
    :alt: Setting up external capabilities files
 
    Figure 3 - Setting up external capabilities files
@@ -6485,7 +6485,7 @@ If your INSPIRE service is only serving layers of one type, one way of applying 
 
 To **add group layers to a new service** simply `add a group layer <http://desktop.arcgis.com/en/arcmap/latest/map/working-with-layers/working-with-group-layers.htm#GUID-058900C7-6A45-4260-83D8-9039C00D875C>`_ to the map document that will create your service, rename it and place your layers inside. The WMS service published form this map document will keep the same group layer structure.
 
-.. figure:: esri/image051.jpg
+.. figure:: images/image051.jpg
    :alt: Adding group layers to the service
 
    Figure 4 - Adding group layers to the service
@@ -6501,7 +6501,7 @@ INSPIRE Coordinate Systems
 
 ArcGIS Server always adds 2 coordinate systems: EPSG:4326 (or CRS:84 for version 1.3.0) and the coordinate system set on the map document creating the service. To add any additional coordinate systems go to your map service and edit it using either `ArcGIS Server Manager <http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-manager.htm>`_ or `ArcMap <http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-arcgis-for-desktop.htm>`_.  On the *Service Editor* dialog go to *Capabilities > WMS* and, in the *Additional spatial reference systems* text box, type any well-known EPSG ID in the format indicated below.
 
-.. figure:: esri/image009.png
+.. figure:: images/esriimage009.png
    :alt: Additional spatial reference systems option
 
    Figure 5 - Additional spatial reference systems option
@@ -6906,40 +6906,40 @@ Add INSPIRE layers to your map document
 
 Open a map document and add your layers to the map using the *Add INSPIRE Layer* button (if you can’t see this button, make sure that you have the *INSPIRE Tools* toolbar enabled).
 
-.. figure:: esri/image052.jpg
+.. figure:: images/image052.jpg
    :alt: Add INSPIRE Tools to map document
 
    Figure 6 - Add INSPIRE Tools to map document
 
 This will open *INSPIRE Layer Wizard* where you can first select your INSPIRE database and second select the INSPIRE layers you wish to add. Note that this dialog will reflect changes done in the *LayerInfo* table therefore your custom layers should now be available. See `Create the INSPIRE View Service map document. <http://server.arcgis.com/en/inspire/latest/inspire-services/create-inspire-view-service-map-document.htm>`_
 
-.. figure:: esri/image053.jpg
+.. figure:: images/image053.jpg
    :alt: INSPIRE Layer wizard
 
    Figure 7 - INSPIRE Layer wizard
 
 Click *Create*, and your selected layers will be added to the map document. The *LayerInfo* table specifies the hierarchical structure of the layers in the service as well as their names and titles, so we don’t need to (and shouldn’t) modify the layer names in the map document.
 
-.. figure:: esri/image054.jpg
+.. figure:: images/image054.jpg
    :alt: INSPIRE layers on map document
 
    Figure 8 - INSPIRE layers on map document
 
 Note that, as well as the layers shown on the map, a few tables have also been added to the map document. These tables are required for the creation of the INSPIRE service therefore they shouldn’t be removed.
 
-.. figure:: esri/image055.jpg
+.. figure:: images/image055.jpg
    :alt: Additional INSPIRE related tables added to map document
 
    Figure 9 - Additional INSPIRE related tables added to map document
 
 Now you can proceed to style your layers using the appropriate symbology. The symbology set on the map document will be defined within the GetCapabilities document as a style named *default*. In addition, each layer will have another style called *inspire_common:DEFAULT*, which is meant to assign by default a common style to INSPIRE layers; however, in ArcGIS server version 10.5, this default visualization style only supports Annex I INSPIRE layers.
 
-.. figure:: esri/image056.jpg
+.. figure:: images/image056.jpg
    :alt: INSPIRE layer styles
 
    Figure 10 - Each INSPIRE layer will have 2 styles: *inspire_common:DEFAULT* and *default*
 
-.. figure:: esri/image057.jpg
+.. figure:: images/image057.jpg
    :alt: The symbology set in the map document will correspond to the "default" style
 
    Figure 11 - The symbology set in the map document will correspond to the *default* style
@@ -6959,7 +6959,7 @@ A INSPIRE View service is the ESRI equivalent of a INSPIRE compliant WMS. Publis
 
 * In the *Service Editor* dialog, go to *Capabilities*. You’ll notice that the ArcGIS for INSPIRE extension has added three new capabilities. Select *WMS* and *ArcGIS for INSPIRE View Service*. Note that in order for the INSPIRE View service to work, the WMS capability must be enabled.
 
-.. figure:: esri/image058.jpg
+.. figure:: images/image058.jpg
    :alt: Capabilities option in Service Editor dialog
 
    Figure 12 - *Capabilities* option in *Service Editor* dialog
@@ -6967,7 +6967,7 @@ A INSPIRE View service is the ESRI equivalent of a INSPIRE compliant WMS. Publis
 
 * Now go to *Capabilities > ArcGIS for INSPIRE View Service* to access the INSPIRE View Service properties
 
-.. figure:: esri/image059.jpg
+.. figure:: images/image059.jpg
    :alt: ArcGIS for INSPIRE View Service properties in Service Editor dialog
 
    Figure 13 - *ArcGIS for INSPIRE View Service* properties in *Service Editor* dialog
@@ -6988,7 +6988,7 @@ Once the service has been published, we are going to use ArcCatalog to configure
 
 * Right-click on the service and go to *Service Properties…*
 
-.. figure:: esri/image060.jpg
+.. figure:: images/image060.jpg
    :alt: Accessing Service Properties
 
    Figure 14 - Accessing *Service Properties*
@@ -6999,35 +6999,35 @@ The *Editing the InspireView properties* dialog allows you to set the options be
 
 * Select INSPIRE external capabilities scenario
 
-.. figure:: esri/image061.jpg
+.. figure:: images/image061.jpg
    :alt: Inspire View properties: extended capabilities type
 
    Figure 15 - Inspire View properties: extended capabilities type
 
 * Service properties. Do not modify *Online resource* on this dialog, as it will change the value of the property *xlink:href* in all *OnlineResource* tags in the get capabilities document. You’ll need create a custom GetCapabilities document if you want to change the tag */WMS_Capabilities/Service/OnlineResource* to provide a link to the data owner organization web site, or web site with information about the data owner organization, as requested in the OneGeology profile.
 
-.. figure:: esri/image062.jpg
+.. figure:: images/image062.jpg
    :alt: Inspire View properties: service information
 
    Figure 16 - Inspire View properties: service information
 
 * Contact information
 
-.. figure:: esri/image063.jpg
+.. figure:: images/image063.jpg
    :alt: Inspire View properties: contact information
 
    Figure 17 - Inspire View properties: contact information
 
 * GEMET Keywords
 
-.. figure:: esri/image064.jpg
+.. figure:: images/image064.jpg
    :alt: Inspire View properties: GEMET Keywords
 
    Figure 18 - Inspire View properties: GEMET Keywords
 
 * Layer properties. Note the highlighted sublayer names. One of them doesn’t honour the name defined in the *LayerInfo* table, taking the name of the other sublayer and adding “1” at the end of it. This seems to be a bug within the INSPIRE extension. Since OneGeology naming conventions for layer names are only a recommendation, the service will still comply with the OneGeology profile.
 
-.. figure:: esri/image065.jpg
+.. figure:: images/image065.jpg
    :alt: Inspire View properties: Layers informatio
 
    Figure 19 - Inspire View properties: Layers information
@@ -7062,14 +7062,14 @@ Simple Feature WFS
 
 Creating a simple feature WFS requires almost the same steps as creating a WMS. The only difference being that, when publishing the service, you need to select the WFS capability.
 
-.. figure:: esri/image066.jpg
+.. figure:: images/image066.jpg
    :alt: Enabling WFS capabilities in Service Editor dialog
 
    Figure 20 - Enabling WFS capabilities in *Service Editor* dialog
 
 After activating WFS, you’ll have access to the properties of this capability. Some of these properties will coincide with WMS properties, but there will also be WFS specific properties, such us namespace, prefix or maximum number of features returned.
 
-.. figure:: esri/image067.jpg
+.. figure:: images/image067.jpg
    :alt: WFS service properties
 
    Figure 21 - WFS service properties
@@ -7090,7 +7090,7 @@ In ArcGIS, a WCS can be created mainly through 3 routes: a map document with ras
 
 Start by creating a map document and adding your rasters to it. Note that, if you have feature data in your map document, it’ll be excluded from your WCS.
 
-.. figure:: esri/image068.jpg
+.. figure:: images/image068.jpg
    :alt: Adding WCS data to your map document
 
    Figure 22 - Adding WCS data to your map document
@@ -7110,7 +7110,7 @@ Publish the WCS service
 
 * Now go to *Capabilities > WCS* to access the WCS properties
 
-.. figure:: esri/image069.jpg
+.. figure:: images/image069.jpg
    :alt: WCS service properties
 
    Figure 23 - WCS service properties
@@ -7158,7 +7158,7 @@ Now go back to your map service and edit it using either `ArcGIS Server Manager 
 
 Go to *Capabilities > WCS*, then select the “Use External capabilities files” option and in the ‘Specify the location and prefix’ dialog add the web address to the folder containing the capabilities response documents plus your [short service name] prefix.
 
-.. figure:: esri/image070.jpg
+.. figure:: images/image070.jpg
    :alt: WCS service properties: external capabilities
 
    Figure 24 - WCS service properties: external capabilities
