@@ -803,9 +803,9 @@ Data displayed on the OneGeology portal is able to be accessed via other platfor
 
   The documentation for the following clients has not been updated for several years so may not be up-to-date.
 
-  * `Using NASA World Wind <http://www.onegeology.org/howto/1_4_4.html>`_
+  * `Using NASA World Wind`_
   * `Using Google Earth <http://www.onegeology.org/howto/1_4_6.html>`_
-  * `Using Gaia <http://www.onegeology.org/howto/1_4_2.html>`_
+  * `Using Gaia`_
   * `Using Dapple <http://www.onegeology.org/howto/1_4_5.html>`_
   * `Using MapInfo <http://www.onegeology.org/howto/1_4_8.html>`_
   * `Using uDig`_
@@ -1208,7 +1208,7 @@ The above parameters are specific to the version of the WMS (in this example &#8
 
 Note, if you are using Gaia at work (behind a corporate firewall) or otherwise need to go through a proxy to access the web, AND don&#8217;t get any map service showing, you should check that Gaia has picked up your proxy settings; see Tools > Configuration > Proxy Settings.</p>
 
-Using NASA World Wind (v1.4)
+Using NASA World Wind
 ----------------------------
 
 World Wind: http://worldwindcentral.com/wiki/Main_Page
