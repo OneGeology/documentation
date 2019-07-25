@@ -16,6 +16,22 @@ These pages are specifically aimed at those involved in the detailed technical a
 
 For a brief overview of the aims and progress of the initiative, please click 'here <http://www.onegeology.org/what_is/home.html>'_.
 
+For non-specialists
+--------------------
+
+The project's aim is to create dynamic digital geological map data for the world. This data will be made available from a portal via the Internet using the latest computing technology, GeoSciML. This approach allows different types of data and formats to be made available and will be accessible by anyone using the web.
+
+There is no requirement for prior technical knowledge to be able to take part in the Initiative so please don't be discouraged by some of the technical aspects. The Technical Implementation Group has been set up to provide a methodology and series of 'user cookbooks' to guide participants through the process. These step-by-step 'cookbooks' will take you through the process from creating digital scans of paper maps if digital GIS data is not available, to 'serving' it on the web via the Portal. They will be available from this website in January 2008. A system to ensure support and advice is also currently being arranged.
+
+Data licensing and ownership is also an important issue that we are frequently asked about. Map data served to the Internet as part of OneGeology will remain in the ownership of the originating geological survey or organisation, and ideally be available at no cost. The format of the 'web mapping and feature services' will allow registry and technical references, for example. Authorship of the data can be communicated by such things as the placement of each organisation's logo that is serving the data within their piece of the jigsaw. References will include the name of the data provider and a link to their home website. The legend for each map part of the jigsaw will be in the nation's home language, with each nation aiming to provide an English (and/or other) alternative when possible.
+
+Principles:
+
+- OneGeology benefits our agencies and our users.
+- web visibility is very important.
+- each contributor decides which maps to contribute.
+- it is anticipated that the majority of contributed maps will be bedrock and/or superficial maps, lithological and/or lithostratigraphical and/or chronostratigraphical where possible, but again, each contributor decides.
+
 The aim: One service - many uses
 --------------------------------
 Geological map data will be made available as a distributed web service, using the OGC 'web feature mapping' approach. The priority of OneGeology is to make available interoperable, Internet-accessible, scientifically-attributed data and to make progress at levels appropriate to participants' capability. Surveys and organisations are encouraged to work together to develop and implement the required interchange standard to make their data interoperable. This can be achieved by using GML (Geography Mark-up Language) based
@@ -121,7 +137,6 @@ Register your data or service for the Portal
 OneGeology is an initiative to make web accessible the geoscience data held by national geological survey and similar organisations around the World.
 
 OneGeology welcomes all geological surveys and organisations to contribute their data to OneGeology.
-
 
 Statement guiding prospective participants - http://onegeology.org/participants/home.html#statement
 
