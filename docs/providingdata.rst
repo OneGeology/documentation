@@ -225,24 +225,20 @@ There are seven GeoSciML-Lite views descibed in the 4.1 standard, these are:  Ge
 
 Generally across all GeoSciML-Lite views, missing values should be specified using OGC nil values *http://www.opengis.net/def/nil/ogc/0/* as below:
 
-.. raw:: html
-
-      <dl>
-          <dt>above detection range (AboveDetectionRange)</dt>
-          <dd>Value was above the detection range of the instrument used to estimate it.</dd>
-          <dt>below detection range (BelowDetectionRange)</dt>
-          <dd>Value was below the detection range of the instrument used to estimate it.</dd>
-          <dt>inapplicable</dt>
-          <dd>There is no value</dd>
-          <dt>missing</dt>
-          <dd>The correct value is not readily available to the sender of this data. Furthermore, a correct value may not exist</dd>
-          <dt>template</dt>
-          <dd>The value will be available later</dd>
-          <dt>unknown</dt>
-          <dd>The correct value is not known to, and not computable by, the sender of this data. However, a correct value probably exists</dd>
-          <dt>withheld</dt>
-          <dd>The value is not divulged</dd>
-      </dl>
+- above detection range (AboveDetectionRange)
+  - Value was above the detection range of the instrument used to estimate it.
+- below detection range (BelowDetectionRange)
+  - Value was below the detection range of the instrument used to estimate it.
+- inapplicable
+  - There is no value
+- missing
+  - The correct value is not readily available to the sender of this data. Furthermore, a correct value may not exist
+- template
+  - The value will be available later
+- unknown
+  - The correct value is not known to, and not computable by, the sender of this data. However, a correct value probably exists
+- withheld
+  - The value is not divulged
 
 Alternatively you could use INSPIRE defined void reasons *http://inspire.ec.europa.eu/codelist/VoidReasonValue/*
 
@@ -1176,8 +1172,7 @@ GeoSciML is an application-neutral encoding format for geosciences information. 
 
 GeoSciML has a wide scope allowing the encoding of most information depicted on geological maps, as well as information about boreholes and laboratory analyses. This cookbook, however, concentrates on just those parts of GeoSciML necessary for (i) encoding the INSPIRE Geology application schema and (ii) delivering geological age and lithology information through OneGeology  services.
 
-The
-INSPIRE geology data specification (D2.8.II.4 Data Specification on Geology –
+The INSPIRE geology data specification (D2.8.II.4 Data Specification on Geology –
 Draft Technical Guidelines) describes the geological information that needs to
 be made available through INSPIRE conformant web services. INSPIRE services can
 be encoded using GeoSciML v4.1 in order to achieve maximum global
@@ -1191,59 +1186,23 @@ Geological age and lithology are used as the basis for querying and portrayal in
 OneGeology and this cookbook covers the parts of GeoSciML required to be
 delivered as part of a 5 star OneGeology service.
 
-To facilitate semantic interoperability it is
-important to use shared vocabularies. The CGI has developed suitable
-vocabularies for many GeoSciML properties and these are available from the
-GeoSciML resources website (`http://resource.geosciml.org/ <http://resource.geosciml.org/>`_).
-For INSPIRE the vocabularies that must be used are included in the data
-specification and are available from the INSPIRE registry (`http://inspire.ec.europa.eu/registry/ <http://inspire.ec.europa.eu/registry/>`_). The OneGeology portal can query services
-using either CGI or INSPIRE vocabularies.Both sets of vocabularies use http
-URIs as concept identifiers.
+To facilitate semantic interoperability it is important to use shared vocabularies. The CGI has developed suitable vocabularies for many GeoSciML properties and these are available from the GeoSciML resources website (`http://resource.geosciml.org/ <http://resource.geosciml.org/>`_). For INSPIRE the vocabularies that must be used are included in the data specification and are available from the INSPIRE registry (`http://inspire.ec.europa.eu/registry/ <http://inspire.ec.europa.eu/registry/>`_). The OneGeology portal can query services using either CGI or INSPIRE vocabularies.Both sets of vocabularies use http URIs as concept identifiers.
 
-This cookbook is designed to assist users map their
-data to the GeoSciML data model. In most cases users with digital geoscience
-data will have their own formalised model of some type, although this will not
-always be the case. Where a formalised user data model exists then the process
-of mapping data to GeoSciML will largely involve mapping features/entities in
-the user model to their equivalents in the GeoSciML logical data model. Where
-no such user model exists then mapping must be carried out direct from the
-data.
+This cookbook is designed to assist users map their data to the GeoSciML data model. In most cases users with digital geoscience data will have their own formalised model of some type, although this will not always be the case. Where a formalised user data model exists then the process of mapping data to GeoSciML will largely involve mapping features/entities in the user model to their equivalents in the GeoSciML logical data model. Where no such user model exists then mapping must be carried out direct from the data.
 
-To carry out the mapping, from either a model or direct from data, requires staff
-with geoscientific knowledge, familiarity with the user’s own data and data
-model, and an understanding of the UML formalisation used in documenting
-GeoSciML. These staff are likely to be geoscientists, possibly those who were
-involved in developing the organisation’s own data model, and it is these
-people who are seen as the main users of this cookbook.
+To carry out the mapping, from either a model or direct from data, requires staff with geoscientific knowledge, familiarity with the user’s own data and data model, and an understanding of the UML formalisation used in documenting GeoSciML. These staff are likely to be geoscientists, possibly those who were involved in developing the organisation’s own data model, and it is these people who are seen as the main users of this cookbook.
 
-Materials
-and documentation on GeoSciML have been produced by the CGI  and OGC and are
-available "as is" for download from `http://www.geosciml.org/ <http://www.geosciml.org/>`_
-and `http://www.opengeospatial.org/standards/geosciml <http://www.opengeospatial.org/standards/geosciml>`_.
-The supporting materials most
-relevant to this cookbook include:
+Materials and documentation on GeoSciML have been produced by the CGI  and OGC and are available "as is" for download from `http://www.geosciml.org/ <http://www.geosciml.org/>`_ and `http://www.opengeospatial.org/standards/geosciml <http://www.opengeospatial.org/standards/geosciml>`_.
+
+The supporting materials most relevant to this cookbook include:
 
 * Full documentation of the GeoSciML model. This is generated automatically from the GeoSciML UML diagrams and draws on the scope notes in those diagrams. This full documentation, however, does not include any best practice guidance
 * An Enterprise Architect version of the UML for the CGI packages
 * GeoSciML examples
 
-There are also XML Schema documents which enable
-validation of the GeoSciML instance documents that you produce from your mapped
-data. These are listed at `http://schemas.opengis.net/gsml/4.1/ <http://schemas.opengis.net/gsml/4.1/>`_.
-For the parts covered by this cookbook you will need http://schemas.opengis.net/gsml/4.1/geoSciMLBasic.xsd
-and, if you are providing borehole data, `http://schemas.opengis.net/gsml/4.1/borehole.xsd <http://schemas.opengis.net/gsml/4.1/borehole.xsd>`_.
-You can also find some Schematron files which provide extra validation for
-the INSPIRE profile of GeoSciML. `http://schemas.geosciml.org/geosciml/4.1/geoSciMLBasic_inspire_mandatory.sch <http://schemas.geosciml.org/geosciml/4.1/geoSciMLBasic_inspire_mandatory.sch>`_
-checks that all properties required by INSPIRE have been provided and `http://schemas.geosciml.org/geosciml/4.1/geoSciML_inspire_vocabularies.sch <http://schemas.geosciml.org/geosciml/4.1/geoSciML_inspire_vocabularies.sch>`_
-checks that the appropriate INSPIRE vocabulary terms have been used.
+There are also XML Schema documents which enable validation of the GeoSciML instance documents that you produce from your mapped data. These are listed at `http://schemas.opengis.net/gsml/4.1/ <http://schemas.opengis.net/gsml/4.1/>`_. For the parts covered by this cookbook you will need http://schemas.opengis.net/gsml/4.1/geoSciMLBasic.xsd and, if you are providing borehole data, `http://schemas.opengis.net/gsml/4.1/borehole.xsd <http://schemas.opengis.net/gsml/4.1/borehole.xsd>`_. You can also find some Schematron files which provide extra validation for the INSPIRE profile of GeoSciML. `http://schemas.geosciml.org/geosciml/4.1/geoSciMLBasic_inspire_mandatory.sch <http://schemas.geosciml.org/geosciml/4.1/geoSciMLBasic_inspire_mandatory.sch>`_ checks that all properties required by INSPIRE have been provided and `http://schemas.geosciml.org/geosciml/4.1/geoSciML_inspire_vocabularies.sch <http://schemas.geosciml.org/geosciml/4.1/geoSciML_inspire_vocabularies.sch>`_ checks that the appropriate INSPIRE vocabulary terms have been used.
 
-There are six packages in GeoSciML. Two are required
-for INSPIRE services: GeoSciML-Basic and Borehole. Only GeoSciML-Basic is
-required for a 5 star OneGeology service. This section will describe those
-parts of these packages which are the minimum requirement for conformance with
-the INSPIRE geology application schema. The parts required for a One Geology
-service are a subset of the INSPIRE ones and are highlighted as they are
-covered.
+There are six packages in GeoSciML. Two are required for INSPIRE services: GeoSciML-Basic and Borehole. Only GeoSciML-Basic is required for a 5 star OneGeology service. This section will describe those parts of these packages which are the minimum requirement for conformance with the INSPIRE geology application schema. The parts required for a One Geology service are a subset of the INSPIRE ones and are highlighted as they are covered.
 
 In GeoSciML most properties are optional. For a
 OneGeology service you may decide whether to omit or include properties that
@@ -1280,8 +1239,7 @@ values.
      <gsmlb:geologicUnitType xsi:nil="true" nilReason="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unknown" />
      <gsmlb:rank xsi:nil="true" nilReason="inapplicable" />
 
-Figure 1 Examples of encoding
-nil values
+Figure 1 Examples of encoding nil values
 
 As GeoSciML is a GML schema all objects must have a
 value for the mandatory gml:id attribute. This provides an identifier for the
@@ -1310,38 +1268,19 @@ OneGeology 5 star WFS is given in Annex 3.
 Mapped Feature and Geologic Feature
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    .. figure:: images/image001.jpg
+.. figure:: images/image001.jpg
 
-       Figure 2: INSPIRE UML class diagram for GeologicFeature, MappedFeature, GeologicEvent and ThematicClass
+   Figure 2: INSPIRE UML class diagram for GeologicFeature, MappedFeature, GeologicEvent and ThematicClass
 
-    .. figure:: images/image002.jpg
+.. figure:: images/image002.jpg
 
-       Figure 3: UML context diagram for GeoSciML GeologicFeature
+   Figure 3: UML context diagram for GeoSciML GeologicFeature
 
-The INSPIRE UML class diagram
-for GeologicFeature, MappedFeature, GeologicEvent and ThematicClass is shown in
-Figure 2 and the UML of the equivalent GeoSciML classes in Figure 3.
+The INSPIRE UML class diagram for GeologicFeature, MappedFeature, GeologicEvent and ThematicClass is shown in Figure 2 and the UML of the equivalent GeoSciML classes in Figure 3.
 
-The MappedFeature and
-GeologicFeature objects are at the core of GeoSciML. A MappedFeature can be
-considered an occurrence, such as a polygon on a geologic map, of a real world
-GeologicFeature the full extent of which is unknown. It is independent of
-geometry, so the same GeologicFeature can have different MappedFeature
-instances, representing mapped polygons at different scales or a modelled
-volume for example. Each MappedFeature, however, can be specified by only one
-GeologicFeature. The specification association, from MappedFeature to
-GeologicFeature, is required by INSPIRE. An INSPIRE service provides a
-collection of MappedFeatures. A OneGeology service provides a collection of
-MappedFeatures specified by GeologicUnit features.
+The MappedFeature and GeologicFeature objects are at the core of GeoSciML. A MappedFeature can be considered an occurrence, such as a polygon on a geologic map, of a real world GeologicFeature the full extent of which is unknown. It is independent of geometry, so the same GeologicFeature can have different MappedFeature instances, representing mapped polygons at different scales or a modelled volume for example. Each MappedFeature, however, can be specified by only one GeologicFeature. The specification association, from MappedFeature to GeologicFeature, is required by INSPIRE. An INSPIRE service provides a collection of MappedFeatures. A OneGeology service provides a collection of MappedFeatures specified by GeologicUnit features.
 
-GeologicFeature is the abstract parent class for
-GeologicUnit, GeologicStructure, GeomorphologicFeature and GeologicEvent. This
-section will describe those properties which apply to all GeologicFeatures, but
-these will always be encoded as part of one of the specialist child classes. The
-INSPIRE GeologicFeature class has two associations, themeClass and
-geologicHistory. The themeClass association should be encoded using the
-GeoSciML classifier association, which will be explained in section 2.6, and geologicHistory should be encoded using the GeoSciML geologicHistory property
-which has GeologicEvent values, explained in section 2.2.
+GeologicFeature is the abstract parent class for GeologicUnit, GeologicStructure, GeomorphologicFeature and GeologicEvent. This section will describe those properties which apply to all GeologicFeatures, but these will always be encoded as part of one of the specialist child classes. The INSPIRE GeologicFeature class has two associations, themeClass and geologicHistory. The themeClass association should be encoded using the GeoSciML classifier association, which will be explained in section 2.6, and geologicHistory should be encoded using the GeoSciML geologicHistory property which has GeologicEvent values, explained in section 2.2.
 
 Mapped Feature - mapping frame
 """"""""""""""""""""""""""""""
@@ -1361,14 +1300,12 @@ published.
    xlink:href="http://inspire.ec.europa.eu/codelist/MappingFrameValue/topOfBedrock"
    xlink:title="top of bedrock"/>
 
-Figure 4: Example of the
-encoding of sampling frame
+Figure 4: Example of the encoding of sampling frame
 
 Mapped Feature - geometry (shape)
 """"""""""""""""""""""""""""""""""
 
-The geometry
-of each MappedFeature is provided by the shape association to GM_Object. Figure 5 gives an example of encoding a polygon. This property is (obviously) required for a OneGeology service and should have Polygon values.
+The geometry of each MappedFeature is provided by the shape association to GM_Object. Figure 5 gives an example of encoding a polygon. This property is (obviously) required for a OneGeology service and should have Polygon values.
 
 .. code-block:: xml
 
@@ -1740,8 +1677,7 @@ thematic classifier
 Borehole
 """""""""
 
-The
-INSPIRE UML class diagram for Borehole is shown in 19 and the UML of the GeoSciML Borehole package in Figure 20. Although the modelling of boreholes in GeoSciML is more complex it includes everything required for INSPIRE which can therefore be encoded with
+The INSPIRE UML class diagram for Borehole is shown in 19 and the UML of the GeoSciML Borehole package in Figure 20. Although the modelling of boreholes in GeoSciML is more complex it includes everything required for INSPIRE which can therefore be encoded with
 GeoSciML. One of the main differences is that in GeoSciML Borehole is modelled
 as a type of SamplingCurve, drawn from the OGC Observations & Measurements
 model.
