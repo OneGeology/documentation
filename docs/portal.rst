@@ -18,6 +18,10 @@ http://portal.onegeology.org
 
 - The portal can be accessed using most internet browsers.
 - Basic map data is called a WMS (Web Map Service)
+- Detailed map data and information in the OneGeology Portal is called a WFS (Web Feature Service) which are types of ‘GeoSciML’, a computer interoperable data exchange language.
+- This language is designed in a format that can be used in a wide variety of desktop programs such as ArcMap, Gaia from Carbontools, and NASA World Wind.
+- OneGeology aims to use Free and Open Source software wherever possible.
+- All OneGeology data can be viewed via the Portal: http://portal.onegeology.org
 - OneGeology aims to use Free and Open Source software wherever possible.
 - The data is “served” directly from the provider organisation.
 - The provider organisation retains full ownership and responsibility and is able to change or modify data whenever necessary.
@@ -50,7 +54,6 @@ In simple terms, currently WFS are used for spatial data stored in some vector f
 .. todo::
 
    Should we also mention the CSW for searching metadata about the services in the above list?
-
 
 Viewing data registered in the OneGeology Portal
 -------------------------------------------------
@@ -304,7 +307,7 @@ Viewing layers in different projections
 
       Map layers displayed in 2D Latitude / Longitude (ETRS89) projection
 
-   Note that when using the ETRS-89 based projections you will not be able to zoom out (or pan the map) wider than than the intended extent of the projection.
+Note that when using the ETRS-89 based projections you will not be able to zoom out (or pan the map) wider than than the intended extent of the projection.
 
 Reviewing external map data
 ----------------------------
@@ -799,9 +802,9 @@ Data displayed on the OneGeology portal is able to be accessed via other platfor
 
   The documentation for the following clients has not been updated for several years so may not be up-to-date.
 
-  * `Using NASA World Wind <http://www.onegeology.org/howto/1_4_4.html>`_
+  * `Using NASA World Wind`_
   * `Using Google Earth <http://www.onegeology.org/howto/1_4_6.html>`_
-  * `Using Gaia <http://www.onegeology.org/howto/1_4_2.html>`_
+  * `Using Gaia`_
   * `Using Dapple <http://www.onegeology.org/howto/1_4_5.html>`_
   * `Using MapInfo <http://www.onegeology.org/howto/1_4_8.html>`_
   * `Using uDig`_
@@ -1147,3 +1150,279 @@ Using uDig
 - In the window that appears, click Web Map Server or Web Feature Server, as appropriate; click Next
 - Paste the service endpoint in the URL field; click Next
 - In the Resource Selection window that appears, select all layers you wish to add. When you are done, click Finish
+
+Using Gaia
+----------
+
+Gaia: http://www.thecarbonproject.com/gaia.php
+
+Gaia is a free desktop client provided by &#8216;The Carbon Project&#8217;; based on CarbonTools PRO; open-geospatial development tool-kit, and can access an array of geospatial sources such as the Open Geospatial Consortium (OGC) Web Mapping Service (WMS), Web Map Tile Service (WMTS), Web Coverage Service (WCS), and Web Feature Service (WFS). We note that the latest version is now 3.4.1 which adds support for WFS-T; but everything in relation to WMS mentioned below still stands.
+
+Gaia 3.4 fully supports all WMS 1.1.1 requests and, GetCapabilities and GetMap requests for WMS 1.3.0.  It provides partial support for version 1.3.0 GetFeatureInfo requests.
+
+Gaia is available both for Windows and Linux (using mono); here we describe using the Windows version.
+
+To add a WMS to Gaia, use the Tools > Add Layer menu option
+
+.. figure:: images/gaia1.jpg
+   :alt: Default view of Gaia 3.4, showing menu options to add WMS services
+
+   Default view of Gaia 3.4, showing menu options to add WMS services
+
+.. figure:: images/gaia2.jpg
+  :alt: Adding a new WMS service to the list of available services
+
+  Adding a new WMS service to the list of available services
+
+
+Select the layer icon (red plus sign)
+
+Give the service a name, and add the service URL (with or without request parameters), select the service type (wms), and version (by default Gaia selects version 1.1.1), and click OK.
+
+This adds the service to the list of available services but doesn't add it to your map.  To add map layers from the service you need to continue.
+
+The service layers will now be shown in the middle window, and if the service is not scale layered, a map will be shown in the preview window.  Highlighting an individual layer from the service (click on layer name) will give a preview of that layer, to help you determine whether the WMS provides the information you require.  You may further investigate the layer metadata, by clicking on the &#8216;Open Capabilities Analyzer&#8217; button.  When you are happy you have the correct map layer, click the 'Add Layer'; button.
+
+.. figure:: images/gaia3.jpg
+  :alt: Using the Capabilities Analyzer to review WMS metadata for a map layer
+
+  Using the Capabilities Analyzer to review WMS metadata for a map layer
+
+Note, you can force a change in the default behaviour of the service using the Parameters form options, for example, here we are requesting the map to be served as a 24-bit png.</p>
+
+Like the OneGeology Portal, Gaia supports all standard GIS tools (Zoom in, Zoom out, Pan, Move back and forward through previous map extents, Retrieve Feature Information).</p>
+
+.. figure:: images/gaia4.jpg
+  :alt: GetFeatureInfo request response in Gaia
+
+  GetFeatureInfo request response in Gaia
+
+Double-clicking on the layer in the left hand menu, will bring up the map layer properties window, which allows you to change the layer opacity (transparency), and other parameters as required.  It will also reveal the GetMap request (query) that is being used to display that map layer, at that time.  You may copy and paste that request into any browser to show that map layer.</p>
+
+A GetMap request for a portion of the BGS bedrock lithostratigraphical data map layer. You can cut and paste this URL into any web browser and get a png format map image.
+
+http://ogc.bgs.ac.uk/cgi-bin/BGS_Bedrock_and_Superficial_Geology/ows?REQUEST=GetMap&amp;SERVICE=WMS&amp;VERSION=1.3.0&amp;LAYERS=GBR_BGS_625k_BLS&amp;STYLES=default&amp;FORMAT=image/png;%20mode=24bit&amp;BGCOLOR=0xFFFFFF&amp;TRANSPARENT=TRUE&amp;CRS=EPSG:4326&amp;BBOX=54.0957778123079,-3.54949452254466,54.9267913615873,-2.51587849637481&amp;WIDTH=602&amp;HEIGHT=484&amp
+
+The above parameters are specific to the version of the WMS (in this example &#8216;VERSION=1.3.0&#8217;), changing the version number alone, to review how the data might display for that version, will result in an error.</p>
+
+Note, if you are using Gaia at work (behind a corporate firewall) or otherwise need to go through a proxy to access the web, AND don&#8217;t get any map service showing, you should check that Gaia has picked up your proxy settings; see Tools > Configuration > Proxy Settings.</p>
+
+Using NASA World Wind
+----------------------------
+
+World Wind: http://worldwindcentral.com/wiki/Main_Page
+
+NASA World Wind is a free client for viewing data produced by NASA.  It has two versions; a Java based version aimed at software developers for incorporating into their own software (for example Dapple) and a .NET version aimed at standard users.
+
+Here we show you how you can use the .NET version to add and view any WMS service.
+
+Note the .NET version of World Wind is quite picky about the graphics driver you have installed and may crash if your card is not supported, check the World Wind wiki page (above) for a list of supported graphics cards.
+
+To add a WMS to use: Tools > Import WMS url to layer
+
+.. figure:: images/addWMStoWorldWind.jpg
+  :alt: Adding a WMS service to  the list of available WMS services in the .NET version  of NASA World Wind
+
+  Adding a WMS service to  the list of available WMS services in the .NET version  of NASA World Wind
+
+In the WMS Importer pop-up add the service URL into the text box and click the &#8216;Get WMS Tree&#8217; button.  You should give the output a unique name (by default it will be called wms.xml) and then click the &#8216;Save as XML&#8217; button.</p>
+
+As with other software, this doesn&#8217;t display the WMS layer, but just adds it to the list of available layers, which are accessible through the Layer Manager.  You must select the layers in Layer Manager and then zoom to your area of interest.</p>
+
+.. figure:: images/addWMStoWorldWind.jpg
+  :alt: Adding available layers to the globe in .NET NASA World Wind
+
+  Adding available layers to the globe in .NET NASA World Wind
+
+Using Dapple
+-------------
+
+Dapple: http://dapple.geosoft.com/
+
+The latest release of Dapple (v.2.1.4) supports WMS version 1.3.0.  You must use this version (or higher when they become available) if you want to view any WMS service that supports version 1.3.0. because of a bug in earlier releases.
+
+Note, Dapple doesn't yet support GetFeatureInfo request, so you will not be able to get any information about a map at a location, by clicking on that map.
+
+Dapple is a data explorer designed to provide an open and optimal environment for visualizing, presenting, and sharing massive quantities of geoscientific data on desktop computers.  Dapple lets you browse, discover, and display graphically rich data from global and corporate spatial servers. The Dapple project is an open-source activity sponsored by Geosoft and derived from the NASA World Wind (http://worldwind.arc.nasa.gov/) open source project.
+
+As with other GIS software, the first step to viewing a WMS map layer in Dapple is to add the WMS service to the list of available WMS services.  To do this, select the "Servers" menu option and then "Add WMS server"
+
+.. figure:: images/dapple1.jpg
+  :alt: Adding a WMS server to the list of available WMS services in Dapple
+
+  Adding a WMS server to the list of available WMS services in Dapple
+
+In the pop-up window, add the GetCapabilities URL of the service without any parameters; you can supply the "service = WMS" and "request=GetCapabilitie" parameters if you want, but if you supply the version parameter it will be ignored.
+
+For example:
+
+http://ogc.bgs.ac.uk/cgi-bin/BGS_Bedrock_and_Superficial_Geology/wms
+
+The intention is to always use the highest WMS version supported by the service, but the downside is that you will not be able to use Dapple to test all your service outputs.</p>
+
+Dapple will add the service to the list of WMS servers and initially show just this new service and the data layers it can serve. If you left click on any of the layers in the Servers window, you will see the metadata associated with that layer in the Metadata window (beneath the map window).</p>
+
+There are several ways you can add a map layer to your map view: you can use the Tools menu option, you can left click-down and drag to the Data Layers window, or you can right-click on a highlighted layer and add the layer.  In each case the result is the same the layer is added to the data layers view window, and the map is drawn.  Remember, if you drag the layer, you will need to add it to the top of the list, or you might not see it.</p>
+
+.. figure:: images/dapple2.jpg
+  :alt: Viewing map and metadata in Dapple
+
+  Viewing map and metadata in Dapple
+
+To view the legend of the active map layer you may click the link in the Metadata section, or you may right-click on any layer, either in the Servers view window or the Data Layers view window, and the legend will open either in browser window, or another application that is enabled to view the legend image type from a web location.</p>
+
+.. figure:: images/dapple3.jpg
+  :alt: Using the metadata legend link to view the legend information
+
+  Using the metadata legend link to view the legend information
+
+Using Google Earth
+-------------------
+
+Google Earth: http://earth.google.co.uk/
+
+Requires a PC with minimum 256MB memory and 3D-capable graphics card with 16MB of VRAM.
+
+A simple way of viewing data in Google Earth is to use a KML file exported from the OneGeology Portal. You may also add a WMS directly, using the Add menu option and then ‘Image Overlay’.
+
+.. figure:: images/googleEarth1.jpg
+  :alt: Using the image overlay option in Google Earth to add a WMS
+
+  Using the image overlay option in Google Earth to add a WMS
+
+Give your service a name then select the ‘Refresh’ tab, and click on the ‘WMS parameters button. In the dialogue box, add the Service URL without parameters.
+
+For example:
+
+http://maps.bgs.ac.uk/ArcGIS/services/BGS_Detailed_Geology/MapServer/WMSServer?
+
+Then use the Add button to add one or more of the service layers to your image overlay (each map layer added to your image overlay will be available to be selected/turned on or off later).
+
+The URL field is populated automatically (but note that it doesn’t add the ‘styles’ parameter, and this may cause the map layer to not display correctly (See `Google Earth Issues_`)
+
+.. figure:: images/googleEarth2.jpg
+  :alt: Selecting WMS layers in Google Earth
+
+  Selecting WMS layers in Google Earth
+
+When you zoom into your area of interest Google Earth will tile your map.
+
+.. figure:: images/googleEarth3.jpg
+  :alt: WMS tiling in Google Earth
+
+  WMS tiling in Google Earth
+
+Google Earth Issues
+^^^^^^^^^^^^^^^^^^^^
+
+Problems displaying the map layer
+""""""""""""""""""""""""""""""""""
+
+When adding a WMS layer to Google Earth, you may get a Big Red Cross instead of the map layer you were expecting. This indicates there is an error with that layer. The error may lie either with the GetMap parameters sent by Google Earth to the WMS server, or in the WMS response.
+
+When adding any WMS using the method described above, we have noted that the parameters that Google Earth automatically populates into its form (the Edit Image Overlay Link) are missing the required ‘styles’ parameter. MapServer WMS services do not seem to be affected by this omission, that is, they will serve a map using the default style, but we have noticed that ArcGIS WMS services cannot handle this error, and you will need to add the correct style value to your link. You may look at the GetCapabilities response to get the style or styles you want to be used, or you should just be able to specify a null value, and get the default style.
+
+.. figure:: images/googleEarth4.jpg
+  :alt: Red cross showing a layer error in Google Earth
+
+  Red cross showing a layer error in Google Earth
+
+For example to view the BGS 50k Geology layer in Google Earth you need to use this link:
+
+http://maps.bgs.ac.uk/ArcGIS/services/BGS_Detailed_Geology/MapServer/WMSServer?VERSION=1.1.1&REQUEST=GetMap&SRS=EPSG:4326&WIDTH=512&HEIGHT=512&LAYERS=1&TRANSPARENT=TRUE&FORMAT=image/gif&styles=
+
+Problems displaying a map layer that spans the globe
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+Google Earth has a problem showing the full contents of a map layer that spans the whole globe. Specifically Google Earth seems to be unable to show coverage from such data layers at the poles and around the antimeridian (the 180th degree meridian). For example we are unable to get a map to display the whole of Russia.
+
+The problem is illustrated below using the WORLD CGMW 1:25M Geologic Units layer. (http://mapsone.brgm.fr/1GmapserverFR/wms?map=/applications/mapserver/map%20files/Lithology_FR.map&REQUEST=GetMap&SERVICE=WMS&VERSION=1.1.1&LAYERS=WORLD_CGMW_25M_GeologicUnits&STYLES=default&FORMAT=image/png&BGCOLOR=0xFFFFFF&TRANSPARENT=TRUE&SRS=EPSG:4326&BBOX=-180,-137.242524916944,180,137.242524916944&WIDTH=602&HEIGHT=459)
+
+There is currently no fix for this issue.
+
+.. figure:: images/world-cgmwR.jpg
+  :alt: GetMap response to the OneGeology WORLD CGMW 1:25M Geologic Units map layer showing a web map service with whole globe coverage
+
+  GetMap response to the OneGeology WORLD CGMW 1:25M Geologic Units map layer showing a web map service with whole globe coverage
+
+.. figure:: images/GE-hole-500.jpg
+  :alt: The same OneGeology WORLD CGMW 1:25M Geologic Units map layer in Google Earth showing the display problem at the poles and the antimeridian
+
+  The same OneGeology WORLD CGMW 1:25M Geologic Units map layer in Google Earth showing the display problem at the poles and the antimeridian
+
+Using MapInfo Professional
+--------------------------
+
+MapInfo Professional allows you to view (GetMap) and query (GetFeatureInfo) a WMS service.  It currently doesn't support the display of legends (GetLegendGraphic)</p>
+
+To add a WMS service to the list of available WMS services
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. Select the File > Open Web Service > Open WMS menu option</p>
+
+.. figure:: images/MIPopenWS.jpg
+  :alt: Opening a Web Service in MapInfo Professional 11.5
+
+  Opening a Web Service in MapInfo Professional 11.5
+
+2. In the Open WMS Table dialog, select the Servers button at the top right</p>
+
+.. figure:: images/MIPopenTabR.jpg
+  :alt: Displaying existing WMS services
+
+  Displaying existing WMS services
+
+3. In the following WMS Servers List dialog, select the Add button at the top right of the dialog.</p>
+
+4. From within the OneGeology Portal, copy the desired layers Service URL:</p>
+
+.. figure:: images/MIPgetSRVurlr.jpg
+  :alt: Getting the service URL from the OneGeology Portal
+
+  Getting the service URL from the OneGeology Portal
+
+5. Paste this Service URL into the Server URL field of the WMS Server Information dialog. The adjacent Test URL button can be used to validate this URL:</p>
+
+.. figure:: images/MIPpasteSVurlr.jpg
+  :alt: Verifying a new WMS service
+
+  Verifying a new WMS service
+
+6. Press the Get Description button to auto-populate the Description from the server, or enter a name manually, then press OK.</p>
+
+.. figure:: images/MIPgetDescR.jpg
+  :alt: Adding a new WMS service
+
+  Adding a new WMS service
+
+7. The WMS server will now appear in the Servers List. Press OK to return to the Open WMS Table dialog.</p>
+
+.. figure:: images/MIPserversR.jpg
+  :alt: Selecting an existing WMS service
+
+  Selecting an existing WMS service
+
+To view WMS service layers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Select the File > Open Web Service > Open WMS menu option.
+- In the Open WMS Table dialog:
+  - Ensure the desired WMS Server is selected from the drop down list</li>
+  - Move the required WMS layers to the right selection window</li>
+  - Choose an output name and directory for the resulting MapInfo Professional TAB file</li>
+- Press OK; the data will now be opened in MapInfo Professional</li>
+
+.. figure:: images/MIPopenWMStabR.jpg
+  :alt: Selecting WMS layers
+
+  Selecting WMS layers
+
+.. figure:: images/MIPshowWMSr.jpg
+  :alt: Viewing the WMS data
+
+  Viewing the WMS data
+
+
+To query WMS service layer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+After making a WMS layer selectable (as for example "CAN CGC 1:5M Roche en place" in the above figure), the Info tool can be used. Information will be returned only from layers that are queryable. Layer that are queryable are identified by an Information icon ("i")
