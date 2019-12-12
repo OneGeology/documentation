@@ -70,7 +70,6 @@ When you open the OneGeology Portal you get a map of the world, the `Blue Marble
 
 .. figure:: images/newsiteR.jpg
       :width: 600
-      :height: 450
       :alt: Default display of the OneGeology Portal, with automatically selected geology layers
 
       Default display of the OneGeology Portal, with automatically selected geology layers image
@@ -86,8 +85,7 @@ The overview window in the bottom right corner of the map indicates the area of 
       The overview window shows where you are on the globe
 
 .. figure:: images/AddLayer.jpg
-      :width: 54
-      :height: 52
+      :width: 600
       :alt: Click the Add OneGeology map layers icon to open the OneGeology Portal catalogue map layer listing
 
       Add OneGeology map layers icon
@@ -96,7 +94,6 @@ To view any other registered geology maps you need to click on the ‘*Add OneGe
 
 .. figure:: images/newsiteAddLayersR.jpg
       :width: 600
-      :height: 529
       :alt: OneGeology Portal catalogue map layers listed by Geographic area. Use the options in this window to control which maps are displayed, and how they are displayed
 
 	OneGeology Portal catalogue map layers listed by Geographic area. Use the options in this window to control which maps are displayed, and how they are displayed
@@ -108,8 +105,7 @@ Select all the map layers you wish to view at this time before closing the catal
 You may navigate around the map using the GIS tools found at the top of the page. The functions of these tools is as follows (from left to right):
 
 .. figure:: images/IconsGIS.jpg
-      :width: 379
-      :height: 58
+      :height: 915
       :alt: GIS tools
 
       GIS tools
@@ -125,13 +121,12 @@ You may navigate around the map using the GIS tools found at the top of the page
 .. figure:: images/GetFInfoR.jpg
       :alt: Example of information that may be retrieved using the information tool
       :width: 600
-      :height: 329
-
+      
       Example of information that may be retrieved using the information tool
 
 .. figure:: images/ViewProps.jpg
-      :width: 38
-      :height: 35
+      :width: 50
+      :height: 50
       :alt: Active Layers Properties icon
 
       Active Layers Properties icon
@@ -140,7 +135,6 @@ To view metadata about the map layers and to change the way the layers are displ
 
    .. figure:: images/activelayers1r.jpg
       :width: 600
-      :height: 439
       :alt: Active layers in a OneGeology Portal session
 
       Active layers in a OneGeology Portal session
@@ -148,8 +142,7 @@ To view metadata about the map layers and to change the way the layers are displ
 Within this dialogue menu you can manage the individual layers in the following ways (looking at the icons from left to right):
 
    .. figure:: images/activelayers1detail.jpg
-      :width: 422
-      :height: 229
+      :width: 500
       :alt: Tools to manage the active layers
 
       Tools to manage the active layers
@@ -163,14 +156,14 @@ Within this dialogue menu you can manage the individual layers in the following 
 Note the *i* icon has no actual function, it just exists to inform you whether the layer is queryable, that is whether you can perform a GetFeatureInfo request on it and get back some information.  Note too, in the above figure that one of the layers is shown to be greyed out.  A greyed out layer indicates that the layer (such as PER INGEMMET 1:1M Faults, is not visible at the selected map scale.  Finally note we can show or hide all the automatically selected layers by unticking the ‘*Automatically displayed layers depending on scale and location*’ option at the top of the dialogue window.
 
    .. figure:: images/9.jpg
-      :height: 245
+      :width: 600
       :alt: Layer viewed with 30% opacity
       :figclass: right
 
       Layer viewed with 30% opacity
 
    .. figure:: images/8.jpg
-      :height: 245
+      :width: 600
       :alt: Layer viewed with 100% opacity
       :figclass: left
 
@@ -187,42 +180,38 @@ To find out further information about any map layer you can click the arrow to r
 
    .. figure:: images/GetCapInfoR.jpg
       :width: 600
-      :height: 499
       :alt: Example of GetCapabilities data that may be obtained from the Active Layer properties dialogue, with pop-up legend from the Legend link
 
        Example of GetCapabilities data that may be obtained from the Active Layer properties dialogue, with pop-up legend from the Legend link
+
+   .. figure:: images/GetCapInfoR2.jpg
+      :width: 600
+      :alt: Example of GetCapabilities data that may be obtained from the Active Layer properties dialogue, with pop-up legend from the Legend link
+
+       Example of GetCapabilities data that may be obtained from the Active Layer properties dialogue, with pop-up legend from the Legend link
+
 
    This (above) information is harvested automatically by the OneGeology Portal client software from the GetCapabilities response document of the WMS.
 
 Go To Function
 ---------------
 
-   .. figure:: images/compassIcon.jpg
-      :width: 56
-      :height: 57
+   .. figure:: images/searchlocation.jpg
+      :width: 500
       :alt: The Go To icon
 
       The Go To icon
 
-   Click on the Go To (compass) icon to open a dialog box that allows you to zoom to an area by place name or Longitude and Latitude coordinates
+   Click in the Search Location box to to enter a place name, select from returned options area to zoom to. 
 
-   In the first example (below) we enter Dominica in the ‘Localisation by Name’ text box, then click the ‘Go to’ button to the right of it.  This opens a second window that shows all the matches for Dominica in the OneGeology Portal gazeteer.  Select the place name you want by clicking on it and the OneGeology Portal will zoom to that location.  Note the OneGeology Portal only zooms to the area, it doesn’t necessarily open any available geology layers in that area.
+   In the first example (below) we enter Dominica in the ‘Search Location’ text box.  This opens a drop down window that shows all the matches for Dominica in the OneGeology Portal gazeteer.  Select the place name you want by clicking on it and the OneGeology Portal will zoom to that location.  Note the OneGeology Portal only zooms to the area, it doesn’t necessarily open any available geology layers in that area.
 
    .. figure:: images/gotodomTr.jpg
       :width: 600
-      :height: 464
       :alt: Using the Go To functionality to zoom to an area (the Dominican Republic) by entering a search string
 
       Using the Go To functionality to zoom to an area (the Dominican Republic) by entering a search string ~ Dominica
 
-   In the second example (below) we use the ‘Localisation by Coordinates’ form and enter 172.85 in the ‘Long:’ text box and -43.73 in the ‘Lat:’ text box and then click the ‘Go to’ button to the right of them.  The OneGeology Portal will then zoom to the area of interest.  Note the OneGeology Portal only zooms to the area, it doesn’t necessarily open any available geology layers in that area.  In this example we already had the geology of New Zealand as an active layer.
-
-   .. figure:: images/christchurchNZr.jpg
-      :width: 600
-      :height: 460
-      :alt: Using the Go To functionality to zoom to the area of Christchurch, New Zealand, by entering the Longitude and Latitude ~ 172.85, -43.73
-
-      Using the Go To functionality to zoom to the area of Christchurch, New Zealand by entering the Longitude and Latitude ~ 172.85, -43.73
 
 Viewing layers in different projections
 ----------------------------------------
@@ -254,8 +243,7 @@ Viewing layers in different projections
    Whilst all layers in the portal must support 2D Latitude / Longitude (WGS84), other projections are optional.  When you choose to change to any projection other the default, you should expect that some layers will not support the newly selected projection; layers that do not support the selected projection are deselected (so the portal will not make any requests to them for map layers) and shown in the active layers properties window with a yellow warning triangle.
 
    .. figure:: images/LayersWithoutProjectionRequested.jpg
-      :width: 416
-      :height: 500
+      :width: 400
       :alt: Active layers that do not support the projection are deselected and shown with a warning triangle
 
       Active layers that do not support the projection are deselected and shown with a warning triangle
@@ -263,8 +251,7 @@ Viewing layers in different projections
    In many cases viewing the OneGeology layers in the default projection is sufficient, but in some cases, for example when you are dealing with layers close to the poles, a differnt projection better shows the data.  For example compare the two images below showing map layers for Antarctica and surrounding regions.  In the first example we have the default projection that shows Antarctica as a distorted strip of land at the  bottom of the flattened globe.
 
    .. figure:: images/defaultViewSouthernHemisphere.jpg
-      :width: 1466
-      :height: 696
+      :width: 600
       :alt: Map layers from the Southern hemisphere showing in the the standard 2D Latitude / Longitude (WGS84) ~ EPSG:4326 projection
 
       Map layers from the Southern hemisphere showing in the the standard 2D Latitude / Longitude (WGS84) ~ EPSG:4326 projection
@@ -272,8 +259,7 @@ Viewing layers in different projections
    In the second example, we have the same map layers shown in *the Antarctic Polar Stereographic (WGS84)* projection that shows Antarctica as it should be, as a single land mass.  Note that the portal uses a different backdrop for this projection than that used for the default projection, namely the `Landsat Image Mosaic of Antarctica (LIMA). <https://lima.usgs.gov>`_ Note too that this LIMA backdrop does not extend much further than the Antarctica land mass, so whilst there are map layers that support this projection other than Antarctica, for example the Falkland Islands (Malvinas) layers, there is currently no backdrop for these map layer extents.
 
    .. figure:: images/Antarctic-projection-example2.jpg
-      :width: 965
-      :height: 712
+      :width: 600
       :alt: Map layers from the Southern hemisphere showing in the Antarctic Polar Stereographic (WGS84) ~ EPSG:3031 projection
 
       Map layers from the Southern hemisphere showing in the Antarctic Polar Stereographic (WGS84) ~ EPSG:3031 projection
@@ -283,8 +269,7 @@ Viewing layers in different projections
    NSIDC Sea Ice Polar Stereographic North (WGS84)
 
    .. figure:: images/NSIDC-projection-exampleCropped.jpg
-      :width: 800
-      :height: 675
+      :width: 600
       :alt: Map layer displayed in NSIDC Sea Ice Polar Stereographic North (WGS84) projection
 
       Map layer displayed in NSIDC Sea Ice Polar Stereographic North (WGS84) projection
@@ -292,8 +277,7 @@ Viewing layers in different projections
    Web Mercator (WGS84)
 
    .. figure:: images/SphericalMercator-example.jpg
-      :width: 792
-      :height: 630
+      :width: 600
       :alt: Map layers displayed in Web Mercator (WGS84) projection
 
       Map layers displayed in Web Mercator (WGS84) projection
@@ -301,8 +285,7 @@ Viewing layers in different projections
    2D Latitude / Longitude (ETRS89)
 
    .. figure:: images/ETRS89-2D-example.jpg
-      :width: 705
-      :height: 678
+      :width: 600
       :alt: Map layers displayed in 2D Latitude / Longitude (ETRS89) projection
 
       Map layers displayed in 2D Latitude / Longitude (ETRS89) projection
@@ -317,8 +300,7 @@ Reviewing external map data
    You add additional WMS services using the ‘Add external layers’ option and adding the service URL (without any request parameters).
 
    .. figure:: images/ViewExternals1r.jpg
-      :width: 600
-      :height: 354
+      :width: 400
       :alt: Using the Add external layers functionality.  Use this to review your own map service before requesting it to be formally added to the OneGeology Portal
 
       Using the Add external layers functionality.  Use this to review your own map service before requesting it to be formally added to the OneGeology Portal
@@ -338,8 +320,7 @@ Exporting to Keyhole Markup Language (KML)
    * Enter a file name of your choice that you will save the KML as, and click OK.
 
    .. figure:: images/Save2KML1r.jpg
-      :width: 600
-      :height: 449
+      :width: 400
       :alt: Using the Export to KML option to view your map in Google Earth
 
       Using the Export to KML option to view your map in Google Earth
@@ -364,8 +345,7 @@ Saving your context file
    Note when naming your Web Map Context document(which is in XML format) you should provide only the name and not the file ending, for example, if you name a file ‘*IrelandGeology*’ in the dialog box the resultant file will be called ‘*IrelandGeology.xml*’. If you do add a file ending you will still get an .xml file suffix, for example if you name your file ‘*IrelandGeology.wmc*’ the resultant file will be called ‘*IrelandGeology.wmc.xml*’
 
    .. figure:: images/Save2wmcR.jpg
-      :width: 600
-      :height: 453
+      :width: 400
       :alt: Using the Save WMC context option to save your map settings
 
       Using the Save WMC context option to save your map settings
@@ -380,8 +360,7 @@ Opening a Web Map Context file in the OneGeology Portal
    You have the choice to ‘*Load a Context file (WMC)*’ that you have already saved on your PC, or to use a ‘*Context URL*’, that is a Web Map Context file that has been made available on some web server (as in this figure example).  You also have the option to keep the layers that are already loaded in you map, or to just view the layers in the context file (which is the default option).  Note that currently you still get the automatically selected layers showing, even if you chose not to keep the layers already added.
 
    .. figure:: images/loadWMC.jpg
-      :width: 538
-      :height: 350
+      :width: 400
       :alt: Loading a Web Map Context document
 
       Loading a Web Map Context document
@@ -409,7 +388,6 @@ Opening a WMC file in other clients
 
    .. figure:: images/WMConOLr.jpg
       :width: 600
-      :height: 396
       :alt: Using a OneGeology Portal WMC document in an OpenLayers client
 
       Using a OneGeology Portal WMC document in an OpenLayers client
@@ -436,8 +414,7 @@ Using the thematic analysis tools
 As we have seen in section 1.4.1.1, we may use the ‘*Active Layers Properties*’ tool to discover further information about any of our active layers in a map session.  Information that may be revealed in this dialogue is that the layer is available for ‘*Thematic Analysis*’, as in the below example.
 
 .. figure:: images/ThematicAnal.jpg
-   :width: 395
-   :height: 57
+   :width: 600
    :alt: Layer properties dialogue, showing thematic analysis functionality is available in an active layer.
 
    Layer properties dialogue, showing thematic analysis functionality is available in an active layer.
@@ -447,15 +424,13 @@ The thematic analysis tool has two principal functions.  The first is an analysi
 Click on the ‘*Thematic Analysis*’ link to show the options available for the layer.  For example for the Nevada service layer, US-NV NBMG 1:500k Geology, there is only a WMS portrayal service enabled, so only the Portrayal functionality is available (green button), the other functionality buttons are not available (greyed out).
 
 .. figure:: images/ThematicAnalysisSelection.jpg
-   :width: 640
-   :height: 650
+   :width: 600
    :alt: Thematic analysis options dialog
 
    Thematic analysis options dialog
 
 .. figure:: images/ThematicAnalysisQueryBuilder.jpg
-   :width: 876
-   :height: 692
+   :width: 600
    :alt: The thematic analysis query builder window
 
    The thematic analysis query builder window
@@ -472,8 +447,7 @@ The values for the age filter options come from the ICS 2012 Geologic timescale 
 In any window you can refine your selection by drilling down into the hierarchy, and then clicking on an option box to make your filter selection. In the above figure example, we have expanded the lithology view options by first clicking on the white arrow next to the ‘*Compound material*’ option (the arrow turns black on such a selection).  Similarly, we have expanded the age filter options by first selecting the ‘*Phanerozoic*’ then ‘*Paleozoic*’.  We haven’t yet made any selection on what we want to filter, but instead we are just exploring the available options by which we could filter.
 
 .. figure:: images/ThematicAnalysisQueryBuilderSearch.jpg
-   :width: 854
-   :height: 622
+   :width: 400
    :alt: Searching the controlled vocabularies
 
    Searching the controlled vocabularies
@@ -482,8 +456,7 @@ As well as drilling down through the hierarchy progressively to find the term yo
 
 
 .. figure:: images/ThematicAnalysisSelectionByAge.jpg
-   :width: 882
-   :height: 692
+   :width: 400
    :alt: Generating an automatic SLD file to filter by age (Pleistocene) in the Delaware WMS
 
    Generating an automatic SLD file to filter by age (Pleistocene) in the Delaware WMS
@@ -573,29 +546,12 @@ When this external customized SLD file has been generated for our age filter sel
 The resultant custom map (with the GeoSciML-Portrayal filter for Pleistocene polygons applied) is shown below:
 
       .. figure:: images/ThematicAnalysisSelectionByAgeResult.jpg
-         :width: 774
-         :height: 776
+         :width: 600
          :alt: Pleistocene geology polygons
 
          Pleistocene geology polygons
 
-Similarly, we could filter for some other GeoSciML-Portrayal attribution in the map, such as the following lithology filter on ‘*Composite genesis material*’
-
-      .. figure:: images/ThematicAnalysisSelectionByLithoResult.jpg
-         :width: 834
-         :height: 556
-         :alt: Composite genesis material
-
-         Composite genesis material
-
-Finally, it is possible to filter by both Age and Lithology, for example in the below image we can see first the result for ‘*Sand*’, then the search results for ‘*Upper Pleistocene*’, and then the results for a combined search for ‘*Sand*’ **and** ‘*Upper Pleistocene*’.
-
-      .. figure:: images/queryResultComparison.jpg
-         :width: 914
-         :height: 702
-         :alt: Age and lithology search results comparison: Sand / Upper Pleistocene / Sand plus Upper Pleistocene
-
-         Age and lithology search results comparison: Sand / Upper Pleistocene / Sand plus Upper Pleistocene
+Similarly, we could filter for some other GeoSciML-Portrayal attribution in the map, such as lithology, or a combination of lithology and age. 
 
 The generated external SLD will be available on the OneGeology portal server for a least one day, but no longer than one week.  In the age filter example above we have taken a copy of the generated SLD and put it on the BGS WMS server for long term reference.
 
