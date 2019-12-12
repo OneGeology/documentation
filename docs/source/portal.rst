@@ -411,7 +411,7 @@ Known issues
 Using the thematic analysis tools
 ----------------------------------
 
-As we have seen in section 1.4.1.1, we may use the ‘*Active Layers Properties*’ tool to discover further information about any of our active layers in a map session.  Information that may be revealed in this dialogue is that the layer is available for ‘*Thematic Analysis*’, as in the below example.
+We may use the ‘*Active Layers Properties*’ to discover further information about any of our active layers in a map session.  Information that may be revealed in this dialogue is that the layer is available for ‘*Analysis*’, as in the below example.
 
 .. figure:: images/ThematicAnal.jpg
    :width: 600
@@ -555,6 +555,10 @@ Similarly, we could filter for some other GeoSciML-Portrayal attribution in the 
 
 The generated external SLD will be available on the OneGeology portal server for a least one day, but no longer than one week.  In the age filter example above we have taken a copy of the generated SLD and put it on the BGS WMS server for long term reference.
 
+ERML-Lite-Portrayal
+^^^^^^^^^^^^^^^^^^^
+
+The analysis window offers you
 
 Summary Statistics
 ^^^^^^^^^^^^^^^^^^^
