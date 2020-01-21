@@ -560,43 +560,43 @@ ERML-Lite-Portrayal
 
 The analysis window offers you
 
-.. figure:: images/ERML1.jpg
+.. figure:: images/ERML1.JPG
    :width: 600
    :alt: ERML layer displayed
 
    ERML layer displayed
    
-.. figure:: images/ERML2.jpg
+.. figure:: images/ERML2.JPG
    :width: 600
    :alt: ERML layer analysis tab highlighted
 
   ERML layer analysis tab highlighted
 
-.. figure:: images/ERML3.jpg
+.. figure:: images/ERML3.JPG
    :width: 400
    :alt: ERML Analysis tab detail
    
    ERML Analysis tab detail
    
-.. figure:: images/ERML4.jpg
+.. figure:: images/ERML4.JPG
    :width: 600
    :alt: ERML Analysis tab - selection of commodity - Copper
 
    ERML Analysis tab - selection of commodity - Copper
 
-.. figure:: images/ERML5.jpg
+.. figure:: images/ERML5.JPG
    :width: 300
    :alt: ERML Analysis tab - selection of commodity - Copper. Portrayal button location. 
 
    ERML Analysis tab - selection of commodity - Copper. Portrayal button location. 
    
-.. figure:: images/ERML6.jpg
+.. figure:: images/ERML6.JPG
    :width: 600
    :alt:  ERML Analysis results of Copper selection.
 
    ERML Analysis results of Copper selection
 
-.. figure:: images/ERML7.jpg
+.. figure:: images/ERML7.JPG
    :width: 600
    :alt: ERML Analysis results of deposit selection.
 
