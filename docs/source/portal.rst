@@ -609,6 +609,54 @@ The statistics functionality (Full statistics and Lithology statistics) of the T
 
 If the OneGeology Portal detects that your selected layer has an associated GeoSciML v3.2 WFS, then when you open the Thematic analysis window you will see the Full statistics, and Lithology statistics buttons will be highlighted in green, if not the buttons will be greyed out and you will not be able to use these analyses tools.
 
+.. figure:: images/STATS1.JPG
+   :width: 600
+   :alt: ERML Analysis results of deposit selection.
+
+   ERML Analysis results of deposit selection.
+
+.. figure:: images/STATS2.JPG
+   :width: 600
+   :alt: ERML Analysis results of deposit selection.
+
+   ERML Analysis results of deposit selection.
+
+.. figure:: images/STATS3.JPG
+   :width: 600
+   :alt: ERML Analysis results of deposit selection.
+
+   ERML Analysis results of deposit selection.
+
+.. figure:: images/STATS4.JPG
+   :width: 600
+   :alt: ERML Analysis results of deposit selection.
+
+   ERML Analysis results of deposit selection.
+
+.. figure:: images/STATS5.JPG
+   :width: 600
+   :alt: ERML Analysis results of deposit selection.
+
+   ERML Analysis results of deposit selection.
+
+.. figure:: images/STATS6.JPG
+   :width: 600
+   :alt: ERML Analysis results of deposit selection.
+
+   ERML Analysis results of deposit selection.
+
+.. figure:: images/STATS7.JPG
+   :width: 600
+   :alt: ERML Analysis results of deposit selection.
+
+   ERML Analysis results of deposit selection.
+
+.. figure:: images/STATS8.JPG
+   :width: 600
+   :alt: ERML Analysis results of deposit selection.
+
+   ERML Analysis results of deposit selection.
+
 .. figure:: images/StatsButtons.jpg
    :width: 402
    :height: 62
