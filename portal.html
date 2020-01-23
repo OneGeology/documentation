@@ -1,45 +1,230 @@
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta charset="utf-8" />
-    <title>Using the OneGeology Portal &#8212; OneGeology Documentation 1.0 documentation</title>
-    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
-    
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Using the OneGeology Portal &mdash; OneGeology Documentation 1.0 documentation</title>
+  
+
+  
+  
     <link rel="shortcut icon" href="_static/OneGeology_favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Authors" href="authors.html" />
     <link rel="prev" title="Providing Data" href="providingdata.html" /> 
-  </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="authors.html" title="Authors"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="providingdata.html" title="Providing Data"
-             accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">OneGeology Documentation 1.0 documentation</a> &#187;</li> 
-      </ul>
-    </div>  
+</head>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> OneGeology Documentation
+          
+
+          
+            
+            <img src="_static/Onegeology_logo_large.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="providingdata.html">Providing Data</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Using the OneGeology Portal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#viewing-data-registered-in-the-onegeology-portal">Viewing data registered in the OneGeology Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#go-to-function">Go To Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#viewing-layers-in-different-projections">Viewing layers in different projections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reviewing-external-map-data">Reviewing external map data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exporting-to-keyhole-markup-language-kml">Exporting to Keyhole Markup Language (KML)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-and-using-web-map-context-wmc-documents">Creating and using Web Map Context (WMC) documents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#saving-your-context-file">Saving your context file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#opening-a-web-map-context-file-in-the-onegeology-portal">Opening a Web Map Context file in the OneGeology Portal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#opening-a-wmc-file-in-other-clients">Opening a WMC file in other clients</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#known-issues">Known issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-the-thematic-analysis-tools">Using the thematic analysis tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#geosciml-portrayal">GeoSciML-Portrayal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#erml-lite-portrayal">ERML-Lite-Portrayal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#summary-statistics">Summary Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#full-statistics">Full statistics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lithology-statistics">Lithology statistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#caveat">Caveat</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#using-onegeology-data">Using OneGeology Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#using-qgis">Using QGIS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-qgis-to-view-wms">Using QGIS to view WMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-qgis-to-access-simple-feature-wfs">Using QGIS to access simple feature WFS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-qgis-to-view-wcs">Using QGIS to view WCS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-esri">Using ESRI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-arccatalog">Using ArcCatalog</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#wms-service-connection">WMS Service Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wfs-service-connection">WFS Service Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wcs-service-connection">WCS Service Connection</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#using-arcmap">Using ArcMap</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#wms-layers">WMS Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wfs-layers">WFS Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wcs-layers">WCS Layers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#using-arcpro">Using ArcPRO</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-udig">Using uDig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-gaia">Using Gaia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-nasa-world-wind">Using NASA World Wind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Using Dapple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Using Google Earth</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#google-earth-issues">Google Earth Issues</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#problems-displaying-the-map-layer">Problems displaying the map layer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#problems-displaying-a-map-layer-that-spans-the-globe">Problems displaying a map layer that spans the globe</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-mapinfo-professional">Using MapInfo Professional</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#to-add-a-wms-service-to-the-list-of-available-wms-services">To add a WMS service to the list of available WMS services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#to-view-wms-service-layers">To view WMS service layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#to-query-wms-service-layer">To query WMS service layer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Authors</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OneGeology Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Using the OneGeology Portal</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/portal.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="using-the-onegeology-portal">
 <h1>Using the OneGeology Portal<a class="headerlink" href="#using-the-onegeology-portal" title="Permalink to this headline">¶</a></h1>
@@ -1130,132 +1315,52 @@
 </div>
 
 
+           </div>
+           
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="index.html">
-              <img class="logo" src="_static/Onegeology_logo_large.png" alt="Logo"/>
-            </a></p>
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Using the OneGeology Portal</a><ul>
-<li><a class="reference internal" href="#viewing-data-registered-in-the-onegeology-portal">Viewing data registered in the OneGeology Portal</a></li>
-<li><a class="reference internal" href="#go-to-function">Go To Function</a></li>
-<li><a class="reference internal" href="#viewing-layers-in-different-projections">Viewing layers in different projections</a></li>
-<li><a class="reference internal" href="#reviewing-external-map-data">Reviewing external map data</a></li>
-<li><a class="reference internal" href="#exporting-to-keyhole-markup-language-kml">Exporting to Keyhole Markup Language (KML)</a></li>
-<li><a class="reference internal" href="#creating-and-using-web-map-context-wmc-documents">Creating and using Web Map Context (WMC) documents</a><ul>
-<li><a class="reference internal" href="#saving-your-context-file">Saving your context file</a></li>
-<li><a class="reference internal" href="#opening-a-web-map-context-file-in-the-onegeology-portal">Opening a Web Map Context file in the OneGeology Portal</a></li>
-<li><a class="reference internal" href="#opening-a-wmc-file-in-other-clients">Opening a WMC file in other clients</a></li>
-<li><a class="reference internal" href="#known-issues">Known issues</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#using-the-thematic-analysis-tools">Using the thematic analysis tools</a><ul>
-<li><a class="reference internal" href="#geosciml-portrayal">GeoSciML-Portrayal</a></li>
-<li><a class="reference internal" href="#erml-lite-portrayal">ERML-Lite-Portrayal</a></li>
-<li><a class="reference internal" href="#summary-statistics">Summary Statistics</a></li>
-<li><a class="reference internal" href="#full-statistics">Full statistics</a><ul>
-<li><a class="reference internal" href="#lithology-statistics">Lithology statistics</a></li>
-<li><a class="reference internal" href="#caveat">Caveat</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#using-onegeology-data">Using OneGeology Data</a><ul>
-<li><a class="reference internal" href="#using-qgis">Using QGIS</a><ul>
-<li><a class="reference internal" href="#using-qgis-to-view-wms">Using QGIS to view WMS</a></li>
-<li><a class="reference internal" href="#using-qgis-to-access-simple-feature-wfs">Using QGIS to access simple feature WFS</a></li>
-<li><a class="reference internal" href="#using-qgis-to-view-wcs">Using QGIS to view WCS</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#using-esri">Using ESRI</a><ul>
-<li><a class="reference internal" href="#using-arccatalog">Using ArcCatalog</a><ul>
-<li><a class="reference internal" href="#wms-service-connection">WMS Service Connection</a></li>
-<li><a class="reference internal" href="#wfs-service-connection">WFS Service Connection</a></li>
-<li><a class="reference internal" href="#wcs-service-connection">WCS Service Connection</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#using-arcmap">Using ArcMap</a><ul>
-<li><a class="reference internal" href="#wms-layers">WMS Layers</a></li>
-<li><a class="reference internal" href="#wfs-layers">WFS Layers</a></li>
-<li><a class="reference internal" href="#wcs-layers">WCS Layers</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#using-arcpro">Using ArcPRO</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#using-udig">Using uDig</a></li>
-<li><a class="reference internal" href="#using-gaia">Using Gaia</a></li>
-<li><a class="reference internal" href="#using-nasa-world-wind">Using NASA World Wind</a></li>
-<li><a class="reference internal" href="#id1">Using Dapple</a></li>
-<li><a class="reference internal" href="#id2">Using Google Earth</a><ul>
-<li><a class="reference internal" href="#google-earth-issues">Google Earth Issues</a><ul>
-<li><a class="reference internal" href="#problems-displaying-the-map-layer">Problems displaying the map layer</a></li>
-<li><a class="reference internal" href="#problems-displaying-a-map-layer-that-spans-the-globe">Problems displaying a map layer that spans the globe</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#using-mapinfo-professional">Using MapInfo Professional</a><ul>
-<li><a class="reference internal" href="#to-add-a-wms-service-to-the-list-of-available-wms-services">To add a WMS service to the list of available WMS services</a></li>
-<li><a class="reference internal" href="#to-view-wms-service-layers">To view WMS service layers</a></li>
-<li><a class="reference internal" href="#to-query-wms-service-layer">To query WMS service layer</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="authors.html" class="btn btn-neutral float-right" title="Authors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="providingdata.html" class="btn btn-neutral float-left" title="Providing Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="providingdata.html"
-                        title="previous chapter">Providing Data</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="authors.html"
-                        title="next chapter">Authors</a></p>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/portal.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, OneGeology
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="authors.html" title="Authors"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="providingdata.html" title="Providing Data"
-             >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">OneGeology Documentation 1.0 documentation</a> &#187;</li> 
-      </ul>
-    </div>
-    <div class="footer" role="contentinfo">
-        &#169; Copyright 2019, OneGeology.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.
-    </div>
-  </body>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
 </html>
