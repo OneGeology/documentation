@@ -421,7 +421,7 @@ We may use the ‘*Active Layers Properties*’ to discover further information 
 
 The thematic analysis tool has two principal functions.  The first is an analysis of map features available in an associated GeoSciML WFS, (Supported v4.0 and v3.2);
 
-Click on the ‘*Analysis*’ button to show the options available for the layer.  For example for the New Zealand service layer, NZL GNS 1:1M Geological Units (GeoSciML WFS), there is a *Portrayal* service and *Statistics* functionality enabled.
+Click on the ‘*Analysis*’ button to show the options available for the layer.  For example for the New Zealand service layer, "NZL GNS 1:1M Geological Units (GeoSciML WFS)", there is a *Portrayal* service and *Statistics* functionality enabled.
 
 .. figure:: images/ThematicAnalysisSelection.jpg
    :width: 600
@@ -432,7 +432,9 @@ Click on the ‘*Analysis*’ button to show the options available for the layer
 GeoSciML-Portrayal
 ^^^^^^^^^^^^^^^^^^^
 
-The analysis tool offers you two ways to filter your map, you can filter by lithology or you can filter by age. The initial view in the lithology filter window is simply the ‘*Compound material*’ option, and in the age filter window the initial view shows the ‘*Phanerozoic*’ and ‘*Precambrian*’ options.  These options reflect the structure of the underlying controlled vocabularies.
+The analysis tool offers you two ways to filter your map, you can filter by lithology or you can filter by age via nested hierarchical dropdowns. The initial view shows the top level filters, simply "Filter by lithology" and "Filter by age".
+
+If we select "Filter by lithology" we will see a search bar and heirarchical nested GeoSciML vocablary, starting at "*Compound material*"
 
 .. figure:: images/ThematicAnalysisQueryBuilder.jpg
    :width: 600
@@ -441,6 +443,9 @@ The analysis tool offers you two ways to filter your map, you can filter by lith
    The portrayal analysis query builder window
 
 The values for the lithology filter options are taken from the `CGI Simple Lithology controlled vocabulary <http://resource.geosciml.org/static/vocabulary/cgi/201211/simplelithology.html>`_.
+
+and in the age filter window the initial view shows the ‘*Phanerozoic*’ and ‘*Precambrian*’ options.
+These options reflect the structure of the underlying controlled vocabularies.
 
 The values for the age filter options come from the ICS 2012 Geologic timescale vocabularies, for example, `Phanerozoic <http://resource.geosciml.org/classifier/ics/ischart/Phanerozoic>`_ or `Precambrian <http://resource.geosciml.org/classifier/ics/ischart/Precambrian>`_.
 
