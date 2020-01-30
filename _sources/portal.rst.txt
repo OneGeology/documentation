@@ -575,7 +575,7 @@ The analysis window offers you
    :width: 600
    :alt: ERML layer analysis tab highlighted
 
-  ERML layer analysis tab highlighted
+   ERML layer analysis tab highlighted
 
 .. figure:: images/ERML3.JPG
    :width: 400
