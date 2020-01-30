@@ -38,7 +38,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Authors" href="authors.html" />
-    <link rel="prev" title="Providing Data" href="providingdata.html" /> 
+    <link rel="prev" title="Providing Data / Services" href="providingdata.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -91,7 +91,7 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="providingdata.html">Providing Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="providingdata.html">Providing Data / Services</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Using the OneGeology Portal</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#viewing-data-registered-in-the-onegeology-portal">Viewing data registered in the OneGeology Portal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#go-to-function">Go To Function</a></li>
@@ -105,7 +105,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#known-issues">Known issues</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#using-the-thematic-analysis-tools">Using the thematic analysis tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#using-the-analysis-tools">Using the analysis tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#geosciml-portrayal">GeoSciML-Portrayal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#erml-lite-portrayal">ERML-Lite-Portrayal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#summary-statistics">Summary Statistics</a></li>
@@ -513,26 +513,26 @@
 </div></blockquote>
 </div>
 </div>
-<div class="section" id="using-the-thematic-analysis-tools">
-<h2>Using the thematic analysis tools<a class="headerlink" href="#using-the-thematic-analysis-tools" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="using-the-analysis-tools">
+<h2>Using the analysis tools<a class="headerlink" href="#using-the-analysis-tools" title="Permalink to this headline">¶</a></h2>
 <p>We may use the ‘<em>Active Layers Properties</em>’ to discover further information about any of our active layers in a map session.  Information that may be revealed in this dialogue is that the layer is available for ‘<em>Analysis</em>’, as in the below example.</p>
 <div class="figure align-default" id="id26">
-<a class="reference internal image-reference" href="_images/ThematicAnal.jpg"><img alt="Layer properties dialogue, showing thematic analysis functionality is available in an active layer." src="_images/ThematicAnal.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-text">Layer properties dialogue, showing thematic analysis functionality is available in an active layer.</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="_images/ThematicAnal.jpg"><img alt="Layer properties dialogue, showing analysis functionality is available in an active layer." src="_images/ThematicAnal.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Layer properties dialogue, showing analysis functionality is available in an active layer.</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
 </div>
-<p>The thematic analysis tool has two principal functions.  The first is an analysis of map features available in an associated GeoSciML WFS, the default supported version is v4, though the older v3.2 is also supported; the OneGeology Portal knows about this GeoSciML association by the presence of either a <strong>GeoSciML32_wfs_age_or_litho_queryable</strong> or <strong>GeoSciML4_wfs_age_or_litho_queryable</strong> keyword in the layer metadata. The second function is the ability to apply an external SLD to a layer which has GeoSciML-Portrayal attribution; the OneGeology Portal knows that a layer has this capability by the presence of a <strong>Geosciml_portrayal_age_or_litho_queryable</strong> keyword in the layer metadata.</p>
-<p>Click on the ‘<em>Thematic Analysis</em>’ link to show the options available for the layer.  For example for the Nevada service layer, US-NV NBMG 1:500k Geology, there is only a WMS portrayal service enabled, so only the Portrayal functionality is available (green button), the other functionality buttons are not available (greyed out).</p>
+<p>The thematic analysis tool has two principal functions.  The first is an analysis of map features available in an associated GeoSciML WFS, (Supported v4.0 and v3.2);</p>
+<p>Click on the ‘<em>Analysis</em>’ button to show the options available for the layer.  For example for the New Zealand service layer, NZL GNS 1:1M Geological Units (GeoSciML WFS), there is a <em>Portrayal</em> service and <em>Statistics</em> functionality enabled.</p>
 <div class="figure align-default" id="id27">
 <a class="reference internal image-reference" href="_images/ThematicAnalysisSelection.jpg"><img alt="Thematic analysis options dialog" src="_images/ThematicAnalysisSelection.jpg" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-text">Thematic analysis options dialog</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-default" id="id28">
-<a class="reference internal image-reference" href="_images/ThematicAnalysisQueryBuilder.jpg"><img alt="The thematic analysis query builder window" src="_images/ThematicAnalysisQueryBuilder.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-text">The thematic analysis query builder window</span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
-</div>
 <div class="section" id="geosciml-portrayal">
 <h3>GeoSciML-Portrayal<a class="headerlink" href="#geosciml-portrayal" title="Permalink to this headline">¶</a></h3>
-<p>The analysis window offers you two ways to filter your map, you can filter by lithology or you can filter by age. The initial view in the lithology filter window is simply the ‘<em>Compound material</em>’ option, and in the age filter window the initial view shows the ‘<em>Phanerozoic</em>’ and ‘<em>Precambrian</em>’ options.  These options reflect the structure of the underlying controlled vocabularies.</p>
+<p>The analysis tool offers you two ways to filter your map, you can filter by lithology or you can filter by age. The initial view in the lithology filter window is simply the ‘<em>Compound material</em>’ option, and in the age filter window the initial view shows the ‘<em>Phanerozoic</em>’ and ‘<em>Precambrian</em>’ options.  These options reflect the structure of the underlying controlled vocabularies.</p>
+<div class="figure align-default" id="id28">
+<a class="reference internal image-reference" href="_images/ThematicAnalysisQueryBuilder.jpg"><img alt="The portrayal analysis query builder window" src="_images/ThematicAnalysisQueryBuilder.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">The portrayal analysis query builder window</span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
+</div>
 <p>The values for the lithology filter options are taken from the <a class="reference external" href="http://resource.geosciml.org/static/vocabulary/cgi/201211/simplelithology.html">CGI Simple Lithology controlled vocabulary</a>.</p>
 <p>The values for the age filter options come from the ICS 2012 Geologic timescale vocabularies, for example, <a class="reference external" href="http://resource.geosciml.org/classifier/ics/ischart/Phanerozoic">Phanerozoic</a> or <a class="reference external" href="http://resource.geosciml.org/classifier/ics/ischart/Precambrian">Precambrian</a>.</p>
 <p>In any window you can refine your selection by drilling down into the hierarchy, and then clicking on an option box to make your filter selection. In the above figure example, we have expanded the lithology view options by first clicking on the white arrow next to the ‘<em>Compound material</em>’ option (the arrow turns black on such a selection).  Similarly, we have expanded the age filter options by first selecting the ‘<em>Phanerozoic</em>’ then ‘<em>Paleozoic</em>’.  We haven’t yet made any selection on what we want to filter, but instead we are just exploring the available options by which we could filter.</p>
@@ -1325,7 +1325,7 @@
         <a href="authors.html" class="btn btn-neutral float-right" title="Authors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="providingdata.html" class="btn btn-neutral float-left" title="Providing Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="providingdata.html" class="btn btn-neutral float-left" title="Providing Data / Services" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

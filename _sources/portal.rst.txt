@@ -121,7 +121,7 @@ You may navigate around the map using the GIS tools found at the top of the page
 .. figure:: images/GetFInfoR.jpg
       :alt: Example of information that may be retrieved using the information tool
       :width: 600
-      
+
       Example of information that may be retrieved using the information tool
 
 .. figure:: images/ViewProps.jpg
@@ -202,7 +202,7 @@ Go To Function
 
       The Go To icon
 
-   Click in the Search Location box to to enter a place name, select from returned options area to zoom to. 
+   Click in the Search Location box to to enter a place name, select from returned options area to zoom to.
 
    In the first example (below) we enter Dominica in the ‘Search Location’ text box.  This opens a drop down window that shows all the matches for Dominica in the OneGeology Portal gazeteer.  Select the place name you want by clicking on it and the OneGeology Portal will zoom to that location.  Note the OneGeology Portal only zooms to the area, it doesn’t necessarily open any available geology layers in that area.
 
@@ -408,20 +408,20 @@ Known issues
 
       <?xml version="1.0" encoding="utf-8" ?>
 
-Using the thematic analysis tools
+Using the analysis tools
 ----------------------------------
 
 We may use the ‘*Active Layers Properties*’ to discover further information about any of our active layers in a map session.  Information that may be revealed in this dialogue is that the layer is available for ‘*Analysis*’, as in the below example.
 
 .. figure:: images/ThematicAnal.jpg
    :width: 600
-   :alt: Layer properties dialogue, showing thematic analysis functionality is available in an active layer.
+   :alt: Layer properties dialogue, showing analysis functionality is available in an active layer.
 
-   Layer properties dialogue, showing thematic analysis functionality is available in an active layer.
+   Layer properties dialogue, showing analysis functionality is available in an active layer.
 
-The thematic analysis tool has two principal functions.  The first is an analysis of map features available in an associated GeoSciML WFS, the default supported version is v4, though the older v3.2 is also supported; the OneGeology Portal knows about this GeoSciML association by the presence of either a **GeoSciML32_wfs_age_or_litho_queryable** or **GeoSciML4_wfs_age_or_litho_queryable** keyword in the layer metadata. The second function is the ability to apply an external SLD to a layer which has GeoSciML-Portrayal attribution; the OneGeology Portal knows that a layer has this capability by the presence of a **Geosciml_portrayal_age_or_litho_queryable** keyword in the layer metadata.
+The thematic analysis tool has two principal functions.  The first is an analysis of map features available in an associated GeoSciML WFS, (Supported v4.0 and v3.2);
 
-Click on the ‘*Thematic Analysis*’ link to show the options available for the layer.  For example for the Nevada service layer, US-NV NBMG 1:500k Geology, there is only a WMS portrayal service enabled, so only the Portrayal functionality is available (green button), the other functionality buttons are not available (greyed out).
+Click on the ‘*Analysis*’ button to show the options available for the layer.  For example for the New Zealand service layer, NZL GNS 1:1M Geological Units (GeoSciML WFS), there is a *Portrayal* service and *Statistics* functionality enabled.
 
 .. figure:: images/ThematicAnalysisSelection.jpg
    :width: 600
@@ -429,16 +429,16 @@ Click on the ‘*Thematic Analysis*’ link to show the options available for th
 
    Thematic analysis options dialog
 
-.. figure:: images/ThematicAnalysisQueryBuilder.jpg
-   :width: 600
-   :alt: The thematic analysis query builder window
-
-   The thematic analysis query builder window
-
 GeoSciML-Portrayal
 ^^^^^^^^^^^^^^^^^^^
 
-The analysis window offers you two ways to filter your map, you can filter by lithology or you can filter by age. The initial view in the lithology filter window is simply the ‘*Compound material*’ option, and in the age filter window the initial view shows the ‘*Phanerozoic*’ and ‘*Precambrian*’ options.  These options reflect the structure of the underlying controlled vocabularies.
+The analysis tool offers you two ways to filter your map, you can filter by lithology or you can filter by age. The initial view in the lithology filter window is simply the ‘*Compound material*’ option, and in the age filter window the initial view shows the ‘*Phanerozoic*’ and ‘*Precambrian*’ options.  These options reflect the structure of the underlying controlled vocabularies.
+
+.. figure:: images/ThematicAnalysisQueryBuilder.jpg
+   :width: 600
+   :alt: The portrayal analysis query builder window
+
+   The portrayal analysis query builder window
 
 The values for the lithology filter options are taken from the `CGI Simple Lithology controlled vocabulary <http://resource.geosciml.org/static/vocabulary/cgi/201211/simplelithology.html>`_.
 
@@ -551,7 +551,7 @@ The resultant custom map (with the GeoSciML-Portrayal filter for Pleistocene pol
 
          Pleistocene geology polygons
 
-Similarly, we could filter for some other GeoSciML-Portrayal attribution in the map, such as lithology, or a combination of lithology and age. 
+Similarly, we could filter for some other GeoSciML-Portrayal attribution in the map, such as lithology, or a combination of lithology and age.
 
 The generated external SLD will be available on the OneGeology portal server for a least one day, but no longer than one week.  In the age filter example above we have taken a copy of the generated SLD and put it on the BGS WMS server for long term reference.
 
@@ -565,7 +565,7 @@ The analysis window offers you
    :alt: ERML layer displayed
 
    ERML layer displayed
-   
+
 .. figure:: images/ERML2.JPG
    :width: 600
    :alt: ERML layer analysis tab highlighted
@@ -575,9 +575,9 @@ The analysis window offers you
 .. figure:: images/ERML3.JPG
    :width: 400
    :alt: ERML Analysis tab detail
-   
+
    ERML Analysis tab detail
-   
+
 .. figure:: images/ERML4.JPG
    :width: 600
    :alt: ERML Analysis tab - selection of commodity - Copper
@@ -586,10 +586,10 @@ The analysis window offers you
 
 .. figure:: images/ERML5.JPG
    :width: 300
-   :alt: ERML Analysis tab - selection of commodity - Copper. Portrayal button location. 
+   :alt: ERML Analysis tab - selection of commodity - Copper. Portrayal button location.
 
-   ERML Analysis tab - selection of commodity - Copper. Portrayal button location. 
-   
+   ERML Analysis tab - selection of commodity - Copper. Portrayal button location.
+
 .. figure:: images/ERML6.JPG
    :width: 600
    :alt:  ERML Analysis results of Copper selection.
