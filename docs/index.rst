@@ -7,10 +7,6 @@ This Documentation provides detailed instuctions on
 - Using the OneGeology Portal
 - Using data from OneGeology on other platforms
 
-.. raw:: html
-
-    <iframe src="https://koalageo.github.io/QGIS-Leaflet-Maps/Leicestershire_Walks/#10/52.7167/-1.1143" height="345px" width="100%"></iframe>
-
 Contents:
 
 .. toctree::
@@ -21,7 +17,7 @@ Contents:
    providingdata
    portal
    authors
-   
+
 Indices and tables
 ==================
 
