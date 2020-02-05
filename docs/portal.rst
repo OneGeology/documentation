@@ -408,10 +408,10 @@ Known issues
 
       <?xml version="1.0" encoding="utf-8" ?>
 
-Using the analysis tools
-----------------------------------
+Analysis tools
+---------------
 
-We may use the ‘*Active Layers Properties*’ to discover further information about any of our active layers in a map session.  Information that may be revealed in this dialogue is that the layer is available for ‘*Analysis*’, as in the below example.
+We may use ‘*Open Layer Details*’ (in "Datasets" tab click on dataset name or arrow next to name)  to discover further information about the layers in a map session.  Information that may be revealed in this dialogue is that the layer is available for ‘*Analysis*’, as in the below example.
 
 .. figure:: images/ThematicAnal.jpg
    :width: 600
@@ -419,20 +419,28 @@ We may use the ‘*Active Layers Properties*’ to discover further information 
 
    Layer properties dialogue, showing analysis functionality is available in an active layer.
 
-The thematic analysis tool has two principal functions.  The first is an analysis of map features available in an associated GeoSciML WFS, (Supported v4.0 and v3.2);
+The analysis tool has two principal functions.  
+
+1. Alternative portrayal of WMS/WFS services, where supported. Allowing highlighting of specific lithologies or ages.  
+2. Statistical analysis of map features available in an associated GeoSciML WFS, (Supported v4.0 and v3.2);
+
 
 Click on the ‘*Analysis*’ button to show the options available for the layer.  For example for the New Zealand service layer, "NZL GNS 1:1M Geological Units (GeoSciML WFS)", there is a *Portrayal* service and *Statistics* functionality enabled.
 
 .. figure:: images/ThematicAnalysisSelection.jpg
    :width: 600
-   :alt: Thematic analysis options dialog
+   :alt: Analysis options tab
 
-   Thematic analysis options dialog
+   Analysis options tab
 
-GeoSciML-Portrayal
+Portrayal Services
 ^^^^^^^^^^^^^^^^^^^
+GeoSciML
+"""""""""
 
-The analysis tool offers you two ways to filter your map, you can filter by lithology or you can filter by age via nested hierarchical dropdowns. The initial view shows the top level filters, simply "Filter by lithology" and "Filter by age".
+The analysis tool offers you two ways to filter your map, you can filter by lithology or you can filter by age via nested hierarchical dropdowns. 
+
+The initial view shows the top level filters, simply "Filter by lithology" and "Filter by age".
 
 If we select "Filter by lithology" we will see a search bar and heirarchical nested GeoSciML vocablary, starting at "*Compound material*"
 
@@ -444,29 +452,34 @@ If we select "Filter by lithology" we will see a search bar and heirarchical nes
 
 The values for the lithology filter options are taken from the `CGI Simple Lithology controlled vocabulary <http://resource.geosciml.org/static/vocabulary/cgi/201211/simplelithology.html>`_.
 
-and in the age filter window the initial view shows the ‘*Phanerozoic*’ and ‘*Precambrian*’ options.
+In the age filter window the initial view shows the ‘*Phanerozoic*’ and ‘*Precambrian*’ options.
 These options reflect the structure of the underlying controlled vocabularies.
 
 The values for the age filter options come from the ICS 2012 Geologic timescale vocabularies, for example, `Phanerozoic <http://resource.geosciml.org/classifier/ics/ischart/Phanerozoic>`_ or `Precambrian <http://resource.geosciml.org/classifier/ics/ischart/Precambrian>`_.
 
-In any window you can refine your selection by drilling down into the hierarchy, and then clicking on an option box to make your filter selection. In the above figure example, we have expanded the lithology view options by first clicking on the white arrow next to the ‘*Compound material*’ option (the arrow turns black on such a selection).  Similarly, we have expanded the age filter options by first selecting the ‘*Phanerozoic*’ then ‘*Paleozoic*’.  We haven’t yet made any selection on what we want to filter, but instead we are just exploring the available options by which we could filter.
+In any window you can refine your selection by drilling down into the hierarchy, and then clicking on an option box to make your filter selection. 
+
+In the below figure example, we have expanded the lithology view options by first clicking on the arrow to the left of the text ‘*Compound material*’ option.  We can continue to expand the hierarchy until we reach a term we would like to query. In this case "Sand". Select the term you would like to query by clicking on the checkbox on the terms left.  
 
 .. figure:: images/ThematicAnalysisQueryBuilderSearch.jpg
    :width: 400
-   :alt: Searching the controlled vocabularies
+   :alt: Selection of "Sand" from the controlled vocabularies
 
-   Searching the controlled vocabularies
+   Selection of "Sand" from the controlled vocabularies
 
-As well as drilling down through the hierarchy progressively to find the term you wish to filter by, you can also search for terms directly by entering the search term in the box at the top of the respective Age and Lithology windows, then clicking the magnifying glass icon.  For example in the above example we have searched the Lithology vocabulary for ‘*Sand*’ and the Age vocabularies for the term ‘*Tonian*’.   To search for another term use the X icon to clear the old search term, or just start typing a new term in the search window. Note that even though there are exact matches for both terms the search shows partial matches as well.  Again, at this stage we have not made any selection by which to filter.
+As well as drilling down through the hierarchy progressively to find the term you wish to filter by, you can also search for terms directly by entering the search term in the box at the top of the respective Age and Lithology window. This will expand the hierarchy and highlight all terms contain all or part of that search text. 
 
+Its also possible to select higher level terms such as "Composite genesis material", this will automaticallu also select all subordinate terms in the hierarchy (See below). 
 
 .. figure:: images/ThematicAnalysisSelectionByAge.jpg
    :width: 400
-   :alt: Generating an automatic SLD file to filter by age (Pleistocene) in the Delaware WMS
+   :alt: Selection of "Composite genesis material" from the controlled vocabularies
 
-   Generating an automatic SLD file to filter by age (Pleistocene) in the Delaware WMS
+   Selection of "Composite genesis material" from the controlled vocabularies
 
-In this (above) example we have selected the Delaware WMS service ‘*US-DE DGS 100k Surficial Geology*’ layer, which has GeoSciML-Portrayal v2.0 attribution.  We then decided to filter by age, looking to view only those geology polygons that are attributed as belonging to the Pleistocene (by ticking the options window to the left of the term).  Then we select a colour with which to apply to all the polygons that match the age criteria, the tool generates an external SLD file like the one below:
+In this (above) example we have selected the New zealand WFS service ‘*NZL GNS 1:1M Geological Units (GeoSciML WFS)*’ layer, which has GeoSciML-Portrayal attribution.  We then decided to filter by lithology, looking to view only those geology polygons that are attributed as belonging to the "Composite genesis material" class (by ticking the checkbox to the left of the term).  Then we select a colour (red from the dropdox at the top of the tab) with which to apply to all the polygons that match the lithology criteria, and click the "Portrayal" button at the bottom of the analysis tab.
+
+The analysis tool generates an external SLD file like the one below: 
 
     .. code-block:: xml
 
@@ -529,7 +542,7 @@ In this (above) example we have selected the Delaware WMS service ‘*US-DE DGS 
          </sld:NamedLayer>
        </sld:StyledLayerDescriptor>
 
-When this external customized SLD file has been generated for our age filter selection, the OneGeology Portal then makes a new `GetMap request referencing this SLD <http://maps.dgs.udel.edu/geoserver/DGS_Surficial_and_Contact_Geology/wms?service=WMS&TRANSPARENT=TRUE&version=1.3.0&request=GetMap&STYLES=&EXCEPTIONS=INIMAGE&FORMAT=image/png&CRS=EPSG%3A4326&SLD=http%3A%2F%2Fogc.bgs.ac.uk%2Fsld%2F20130628_1372432351566_OpenLayers.Layer.WMS_991.sld&SAVEDLAYERS=US-DE_DGS_100k_Surficial_Geology&BBOX=39.57931760121924,-75.79289049774037,39.784397224903465,-75.45691470533502&WIDTH=1250&HEIGHT=763&>`_ for our area of selection like:
+When this external customized SLD file has been generated for our lithology  filter selection, the OneGeology Portal then makes a new `GetMap request referencing this SLD <http://maps.dgs.udel.edu/geoserver/DGS_Surficial_and_Contact_Geology/wms?service=WMS&TRANSPARENT=TRUE&version=1.3.0&request=GetMap&STYLES=&EXCEPTIONS=INIMAGE&FORMAT=image/png&CRS=EPSG%3A4326&SLD=http%3A%2F%2Fogc.bgs.ac.uk%2Fsld%2F20130628_1372432351566_OpenLayers.Layer.WMS_991.sld&SAVEDLAYERS=US-DE_DGS_100k_Surficial_Geology&BBOX=39.57931760121924,-75.79289049774037,39.784397224903465,-75.45691470533502&WIDTH=1250&HEIGHT=763&>`_ for our area of selection like:
 
   .. code-block:: text
 
@@ -548,28 +561,28 @@ When this external customized SLD file has been generated for our age filter sel
         WIDTH=1250&
         HEIGHT=763&
 
-The resultant custom map (with the GeoSciML-Portrayal filter for Pleistocene polygons applied) is shown below:
+The resultant custom map (with the GeoSciML-Portrayal filter for "Composite genesis material" polygons applied) is shown below:
 
       .. figure:: images/ThematicAnalysisSelectionByAgeResult.jpg
          :width: 600
-         :alt: Pleistocene geology polygons
+         :alt: "Composite genesis material" geology polygons
 
-         Pleistocene geology polygons
+         "Composite genesis material" geology polygons
 
-Similarly, we could filter for some other GeoSciML-Portrayal attribution in the map, such as lithology, or a combination of lithology and age.
+Similarly, we could filter for some other GeoSciML-Portrayal attribution in the map, such as age, or a combination of lithology and age.
 
-The generated external SLD will be available on the OneGeology portal server for a least one day, but no longer than one week.  In the age filter example above we have taken a copy of the generated SLD and put it on the BGS WMS server for long term reference.
+EarthResourceML-Lite
+"""""""""""""""""""""
 
-ERML-Lite-Portrayal
-^^^^^^^^^^^^^^^^^^^
-
-The analysis window offers you
+You can perform similar portrayal actions to the above on services which are using using EarthResourceML-Lite (ERML) such as the layer "Arctic GTK 1:1M Mineral Resources". 
 
 .. figure:: images/ERML1.JPG
    :width: 600
-   :alt: ERML layer displayed
+   :alt: ERML layer "Arctic GTK 1:1M Mineral Resources" displayed
 
-   ERML layer displayed
+   ERML layer "Arctic GTK 1:1M Mineral Resources" displayed
+
+In this case the analysis tool again offers you two ways to filter your map, by commodity or by mineral occurence type via nested hierarchical dropdowns. 
 
 .. figure:: images/ERML2.JPG
    :width: 600
@@ -577,11 +590,19 @@ The analysis window offers you
 
    ERML layer analysis tab highlighted
 
+The initial view shows the top level filters, "Filter by commodity" and "Filter by mineral occurence type".
+
 .. figure:: images/ERML3.JPG
    :width: 400
    :alt: ERML Analysis tab detail
 
    ERML Analysis tab detail
+
+If we select "Filter by commodity" we will see a search bar and heirarchical nested ERML vocablary, starting at "*Produced commodity*"
+
+The values for commodity and mineral occurence type options are taken from the `CGI EarthResourceML-Lite - version 2.0.1 controlled vocabulary <http://resource.geosciml.org/vocabulary/earthresourceml/2016/>`_.
+
+In the below figure example, we have expanded the commodity view options by clicking on the arrow to the left of the text ‘*Produced Commodity*’ then ‘*Metal*’ then ‘*Base metal*’.  We can continue to expand the hierarchy until we reach a term we would like to query. In this case "Copper". Select the term you would like to query by clicking on the checkbox on the terms left.  
 
 .. figure:: images/ERML4.JPG
    :width: 600
@@ -589,11 +610,20 @@ The analysis window offers you
 
    ERML Analysis tab - selection of commodity - Copper
 
+
+As well as drilling down through the hierarchy progressively to find the term you wish to filter by, you can also search for terms directly by entering the search term in the box at the top of the respective commodity or mineral occurence type window. This will expand the hierarchy and highlight all terms contain all or part of that search text. 
+
+Selecting higher level terms such as "Metal", will automatically also select all subordinate terms in the hierarchy. 
+
+In this example we have selected the "Arctic GTK 1:1M Mineral Resources" web service, which has ERML-Portrayal functionality.  We then decided to filter by commodity, looking to view only those points that are attributed as belonging to the "Copper" class (by ticking the checkbox to the left of the term).  Then we select a colour (orange from the dropdox at the top of the tab) with which to apply to all the points that match the commodity criteria, and click the "Portrayal" button at the bottom of the analysis tab.
+
 .. figure:: images/ERML5.JPG
    :width: 300
    :alt: ERML Analysis tab - selection of commodity - Copper. Portrayal button location.
 
    ERML Analysis tab - selection of commodity - Copper. Portrayal button location.
+
+The resultant custom map with the ERML-Portrayal filter for "Copper" points applied is shown below:
 
 .. figure:: images/ERML6.JPG
    :width: 600
@@ -601,232 +631,84 @@ The analysis window offers you
 
    ERML Analysis results of Copper selection
 
+An example of the same process results using the ERML-Portrayal filter for "Occurrence" (which includes "Deposit") points applied is shown below:
+
 .. figure:: images/ERML7.JPG
    :width: 600
    :alt: ERML Analysis results of deposit selection.
 
    ERML Analysis results of deposit selection.
 
-Summary Statistics
-^^^^^^^^^^^^^^^^^^^
+Statistics
+^^^^^^^^^^^
 
-The statistics functionality (Full statistics and Lithology statistics) of the Thematic analysis tools are coupled to a WFS associated with a WMS Layer, as identified by the presence of a **GeoSciML32_wfs_age_or_litho_queryable** keyword in the layer metadata
+The statistics functionality of the analysis tool are coupled to a WFS associated with a WMS Layer, this is usually as identified by the presence of a **GeoSciML32_wfs_age_or_litho_queryable** keyword in the layer metadata
 
-If the OneGeology Portal detects that your selected layer has an associated GeoSciML v3.2 WFS, then when you open the Thematic analysis window you will see the Full statistics, and Lithology statistics buttons will be highlighted in green, if not the buttons will be greyed out and you will not be able to use these analyses tools.
+The process is similar portrayal actions descibed above. 
+
+In this example we are going to use the layer  "BRA CPRM 1:1M Bedrock (GeoSciML WFS) (GeoSciML Portrayal)". 
 
 .. figure:: images/STATS1.JPG
    :width: 600
-   :alt: ERML Analysis results of deposit selection.
+   :alt: BRA CPRM 1:1M Bedrock (GeoSciML WFS) (GeoSciML Portrayal) layer with statistics capability.
 
-   ERML Analysis results of deposit selection.
+   BRA CPRM 1:1M Bedrock (GeoSciML WFS) (GeoSciML Portrayal) layer with statistics capability.
+
+If the OneGeology Portal detects that your selected layer has an associated GeoSciML v3.2 WFS, then when you open the analysis window you will see the "Statistics" button at the bottom of the tab, next to the "Portrayal" button. 
 
 .. figure:: images/STATS2.JPG
    :width: 600
-   :alt: ERML Analysis results of deposit selection.
+   :alt: BRA CPRM 1:1M Bedrock (GeoSciML WFS) (GeoSciML Portrayal) layer analysis window
 
-   ERML Analysis results of deposit selection.
+   BRA CPRM 1:1M Bedrock (GeoSciML WFS) (GeoSciML Portrayal) layer analysis window
+
+:: 
+
+  The statistics function is only able to work when zoomed in to quite small areas; precisely this is when the spatial resolution is less than 0.0015 (e.g. a pixel shows less than 0.0015 degrees latitude of the ground surface), we recommend zooming onto the area you are interested in until the scale bar is 500 m or smaller. When viewing the map if you are not zoomed in far enough you will see a red pop up error in the lower left of the canvas.
+
+  If you get this error it's recommended you refresh the portal, and then zoom in further to the area of interest.::
 
 .. figure:: images/STATS3.JPG
    :width: 600
-   :alt: ERML Analysis results of deposit selection.
+   :alt: Appropriate zoom for statistical analysis
 
-   ERML Analysis results of deposit selection.
+   Appropriate zoom for statistical analysis. 
+
+Make your filter selection, by age or lithology, in the same way as described for the GeoSciML-Portrayal section. In the below example we have first selected the ‘Rock’ option and applied a green portrayal filter. 
 
 .. figure:: images/STATS4.JPG
    :width: 600
-   :alt: ERML Analysis results of deposit selection.
+   :alt: GeoSciML portrayal results of "Rock" selection.
 
-   ERML Analysis results of deposit selection.
+   GeoSciML portrayal results of "Rock" selection.
+
+If we now click the "Statistics" button we will see the results below. 
 
 .. figure:: images/STATS5.JPG
    :width: 600
-   :alt: ERML Analysis results of deposit selection.
+   :alt: Statistics results shown below filter options and buttons.
 
-   ERML Analysis results of deposit selection.
+   Statistics results shown below filter options and buttons.
 
 .. figure:: images/STATS6.JPG
    :width: 600
-   :alt: ERML Analysis results of deposit selection.
+   :alt: Statistics results detail shown below filter options and buttons.
 
-   ERML Analysis results of deposit selection.
+   Statistics results detail shown below filter options and buttons.
 
-.. figure:: images/STATS7.JPG
+The statistical analysis can be run on any of the attributes in the dataset in the canvas extent using the the "Please choose a field:" dropdowns, such as OlderNamedAge or  CompositionPart. 
+
+.. figure:: images/STATS7.png
    :width: 600
-   :alt: ERML Analysis results of deposit selection.
+   :alt: Alternative statistics results.
 
-   ERML Analysis results of deposit selection.
+   Alternative statistics results.   
 
 .. figure:: images/STATS8.JPG
    :width: 600
-   :alt: ERML Analysis results of deposit selection.
+   :alt: Alternative statistics results.
 
-   ERML Analysis results of deposit selection.
-
-.. figure:: images/StatsButtons.jpg
-   :width: 402
-   :height: 62
-   :alt: Thematic analysis window showing that statistical analysis is available for the selected layer
-
-   Thematic analysis window showing that statistical analysis is available for the selected layer
-
-
-Full statistics
-^^^^^^^^^^^^^^^^
-
-Make your filter selection, by age or lithology, in the same way as described for the GeoSciML-Portrayal section.  In the below example we have first selected the ‘*Full statistics*’ option button, then searched for the Lithology term ‘*Breccia*’, selecting the broad term as the filter keyword.  We now have two options, we can opt to ‘*Download the GeoSciML*’, or we can view the Full statistics.
-
-.. figure:: images/FullStatsBrecciaScotland.jpg
-   :width: 962
-   :height: 730
-   :alt: Full statistics query: Breccia in a region of Scotland
-
-   Full statistics query: Breccia in a region of Scotland
-
-If you select the ‘*Download the GeoSciML*’ button, the portal will generate a WFS filter query that covers the selected area and the query term and send that query to the WFS server.  It then retrieves the result and you should get the option (depending on your browser settings) of either downloading the resultant GeoSciML, or viewing in your browser.
-
-`Example GeoSciML download request for Breccia in a region of Scotland <http://portal.onegeology.org/ProxyWFSTools.jsp?request=gsmlbbox&bbox=55.07762036519571,-4.54515462888095,55.78778525593572,-3.516434912749198&srs=EPSG:4326&url=http%3A//ogc.bgs.ac.uk/digmap625k_gsml32_insp_gs/wfs%3F&typename=gsml%3AMappedFeature&version=2.0.0&filter=%3Cfes%3AOr%3E%3Cfes%3APropertyIsEqualTo%3E%3Cfes%3AValueReference%3Egsml%3Aspecification/gsmlgu%3AGeologicUnit/gsmlgu%3Acomposition/gsmlgu%3ACompositionPart/gsmlgu%3Amaterial/gsmlem%3ARockMaterial/gsmlem%3Alithology/@xlink%3Ahref%3C/fes%3AValueReference%3E%3Cfes%3ALiteral%3Ehttp%3A//resource.geosciml.org/classifier/cgi/lithology/breccia%3C/fes%3ALiteral%3E%3C/fes%3APropertyIsEqualTo%3E%3Cfes%3APropertyIsEqualTo%3E%3Cfes%3AValueReference%3Egsml%3Aspecification/gsmlgu%3AGeologicUnit/gsmlgu%3Acomposition/gsmlgu%3ACompositionPart/gsmlgu%3Amaterial/gsmlem%3ARockMaterial/gsmlem%3Alithology/@xlink%3Ahref%3C/fes%3AValueReference%3E%3Cfes%3ALiteral%3Ehttp%3A//inspire.ec.europa.eu/codelist/LithologyValue/breccia%3C/fes%3ALiteral%3E%3C/fes%3APropertyIsEqualTo%3E%3C/fes%3AOr%3E>`_. The full request query is shown below in a fragmented style for easier reading:
-
-.. code-block:: text
-
-   http://portal.onegeology.org/ProxyWFSTools.jsp?
-     request=gsmlbbox&
-     bbox=55.07762036519571,-4.54515462888095,55.78778525593572,-3.516434912749198&
-     srs=EPSG:4326&
-     url=http%3A//ogc.bgs.ac.uk/digmap625k_gsml32_insp_gs/wfs%3F&
-     typename=gsml%3AMappedFeature&
-     version=2.0.0&
-     filter=
-       %3Cfes%3AOr%3E
-           %3Cfes%3APropertyIsEqualTo%3E
-               %3Cfes%3AValueReference%3E
-                   gsml%3Aspecification/
-                   gsmlgu%3AGeologicUnit/
-                   gsmlgu%3Acomposition/
-                   gsmlgu%3ACompositionPart/
-                   gsmlgu%3Amaterial/
-                   gsmlem%3ARockMaterial/
-                   gsmlem%3Alithology/
-                   @xlink%3Ahref
-               %3C/fes%3AValueReference%3E
-               %3Cfes%3ALiteral%3E
-                   http%3A//resource.geosciml.org/classifier/cgi/lithology/breccia
-               %3C/fes%3ALiteral%3E
-           %3C/fes%3APropertyIsEqualTo%3E
-           %3Cfes%3APropertyIsEqualTo%3E
-               %3Cfes%3AValueReference%3E
-                   gsml%3Aspecification/
-                   gsmlgu%3AGeologicUnit/
-                   gsmlgu%3Acomposition/
-                   gsmlgu%3ACompositionPart/
-                   gsmlgu%3Amaterial/
-                   gsmlem%3ARockMaterial/
-                   gsmlem%3Alithology/
-                   @xlink%3Ahref
-               %3C/fes%3AValueReference%3E
-               %3Cfes%3ALiteral%3E
-                   http%3A//inspire.ec.europa.eu/codelist/LithologyValue/breccia
-               %3C/fes%3ALiteral%3E
-           %3C/fes%3APropertyIsEqualTo%3E
-       %3C/fes%3AOr%3E
-
-Alternatively, you may chose the ‘*Full statistics*’ option button.  With this option the filter query is sent to the WFS server and the results are then tabulated in the page.  By default the shows the description of features matching the query, as in the top part of the below image.  However you may use the dropdown box at the top of the form to display other fields returned in the results such as EventProcess, CompositionPart, OlderNamedAge, and (not shown in the image below) YoungerNamedAge.
-
-.. figure:: images/FullStatsResultsCompilation.jpg
-   :width: 802
-   :height: 442
-   :alt: Full statistics query: compilation of results forms
-
-   Full statistics query: compilation of results forms
-
-
-Lithology statistics
-""""""""""""""""""""
-
-Instead of selecting the ‘*Full statistics*’ option we can instead chose the ‘*Lithology statistics*’ option.  Unlike the ‘*Full statistics*’ option, where you can select multiple ages and lithologies (in particular by selecting a category and all sub-classes at the same time), with the ‘*Lithology statistics*’ query you can **only** select one lithology term exactly and sub-classes will not be returned.  For example in the below query we have selected an area near Glasgow (Longitude -4, Latitude 56 at a scale of 1:150,000), and are filtering for features that have a proportion of coal greater than or equal to 5%.
-
-.. figure:: images/LithStatsCoalQuery.jpg
-   :width: 681
-   :height: 840
-   :alt: Lithology statistics query: greater than or equal to 5% of coal
-
-   Lithology statistics query: greater than or equal to 5% of coal
-
-Just like the ‘*Full statistics*’ option we can chose to ‘*Download the GeoSciML*’ result of the query, or we can view the results in forms in a portal results window, by selecting the ‘*Lithology statistics*’ button.
-
-`Example GeoSciML download request for 5% coal in formations near Glasgow <http://portal.onegeology.org/ProxyWFSTools.jsp?request=gsmlbbox&bbox=55.80026612447937,-4.2893274201620555,56.19973387552063,-3.7106725798379445&srs=EPSG:4326&url=http%3A//ogc.bgs.ac.uk/digmap625k_gsml32_insp_gs/wfs%3F&typename=gsml%3AMappedFeature&version=2.0.0&filter=%3Cfes%3AOr%3E%3Cfes%3APropertyIsGreaterThanOrEqualTo%3E%3Cfes%3AValueReference%3Egsml%3Aspecification/gsmlgu%3AGeologicUnit/gsmlgu%3Acomposition/gsmlgu%3ACompositionPart%5Bgsmlgu%3Amaterial/gsmlem%3ARockMaterial/gsmlem%3Alithology/@xlink%3Ahref%20%3D%20%27570%27%5D/gsmlgu%3Aproportion/gsmlu%3AGSML_QuantityRange/gsmlu%3AlowerValue%3C/fes%3AValueReference%3E%3Cfes%3ALiteral%3E5%3C/fes%3ALiteral%3E%3C/fes%3APropertyIsGreaterThanOrEqualTo%3E%3Cfes%3APropertyIsGreaterThanOrEqualTo%3E%3Cfes%3AValueReference%3Egsml%3Aspecification/gsmlgu%3AGeologicUnit/gsmlgu%3Acomposition/gsmlgu%3ACompositionPart%5Bgsmlgu%3Amaterial/gsmlem%3ARockMaterial/gsmlem%3Alithology/@xlink%3Ahref%20%3D%20%27http%3A//inspire.ec.europa.eu/codelist/LithologyValue/coal%27%5D/gsmlgu%3Aproportion/gsmlu%3AGSML_QuantityRange/gsmlu%3AlowerValue%3C/fes%3AValueReference%3E%3Cfes%3ALiteral%3E5%3C/fes%3ALiteral%3E%3C/fes%3APropertyIsGreaterThanOrEqualTo%3E%3C/fes%3AOr%3E">`_. The full request query is shown below in a fragmented style for easier reading:
-
-.. code-block:: text
-
-   http://portal.onegeology.org/ProxyWFSTools.jsp?
-     request=gsmlbbox&
-     bbox=55.80026612447937,-4.2893274201620555,56.19973387552063,-3.7106725798379445&
-     srs=EPSG:4326&
-     url=http%3A//ogc.bgs.ac.uk/digmap625k_gsml32_insp_gs/wfs%3F&
-     typename=gsml%3AMappedFeature&
-     version=2.0.0&
-     filter=
-       %3Cfes%3AOr%3E
-           %3Cfes%3APropertyIsGreaterThanOrEqualTo%3E
-               %3Cfes%3AValueReference%3E
-                   gsml%3Aspecification/
-                   gsmlgu%3AGeologicUnit/
-                   gsmlgu%3Acomposition/
-                   gsmlgu%3ACompositionPart%5Bgsmlgu%3Amaterial/
-                   gsmlem%3ARockMaterial/
-                   gsmlem%3Alithology/
-                   @xlink%3Ahref%20%3D%20%27570%27%5D/
-                       gsmlgu%3Aproportion/
-                       gsmlu%3AGSML_QuantityRange/
-                       gsmlu%3AlowerValue
-               %3C/fes%3AValueReference%3E
-               %3Cfes%3ALiteral%3E
-                   5
-               %3C/fes%3ALiteral%3E
-           %3C/fes%3APropertyIsGreaterThanOrEqualTo%3E
-           %3Cfes%3APropertyIsGreaterThanOrEqualTo%3E
-               %3Cfes%3AValueReference%3E
-                   gsml%3Aspecification/
-                   gsmlgu%3AGeologicUnit/
-                   gsmlgu%3Acomposition/
-                   gsmlgu%3ACompositionPart%5Bgsmlgu%3Amaterial/
-                   gsmlem%3ARockMaterial/
-                   gsmlem%3Alithology/
-                   @xlink%3Ahref%20%3D%20%27http%3A//inspire.ec.europa.eu/
-                       codelist/
-                       LithologyValue/
-                       coal%27%5D/
-                       gsmlgu%3Aproportion/
-                       gsmlu%3AGSML_QuantityRange/
-                       gsmlu%3AlowerValue
-               %3C/fes%3AValueReference%3E
-               %3Cfes%3ALiteral%3E
-                   5
-               %3C/fes%3ALiteral%3E
-           %3C/fes%3APropertyIsGreaterThanOrEqualTo%3E
-       %3C/fes%3AOr%3E
-
-Alternatively you can view the statistics in a form version sorted by field, by selecting the ‘*Lithology statistics*’ button.
-
-.. figure:: images/LithStatsCoalQueryRFormCompilation.jpg
-   :width: 802
-   :height: 620
-   :alt: Lithology statistics query: compilation of form results
-
-   Lithology statistics query: compilation of form results 5% coal near Glasgow
-
-Caveat
-""""""""
-
-The statistics function is only able to work when zoomed in to quite small areas; precisely this is when the spatial resolution is less than 0.0015 (e.g. a pixel shows less than 0.0015 degrees latitude of the ground surface). When viewing the map if you are not zoomed in far enough you will see the following error.
-
-.. figure:: images/AnalError.jpg
-   :width: 434
-   :height: 163
-   :alt: Error message received when the scale of the selected map is too small
-
-   Error message received when the scale of the selected map is too small
-
-If you get this error you must close the results (‘*Statistics on BBOX*’) window, to be able to access the zoom tools, and then zoom in further.
+   Alternative statistics results.
 
 
 Using OneGeology Data
