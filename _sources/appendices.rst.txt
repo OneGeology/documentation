@@ -259,4 +259,4 @@ Appendix F - WMS 1.3.0 GetCapabilities response from the BGS OneGeology exemplar
 
 .. _request without version parameter: http://ogc.bgs.ac.uk/cgi-bin/exemplars/BGS_Bedrock_and_Superficial_Geology/ows?service=WMS&request=GetCapabilities&
 .. _request with version parameter: http://ogc.bgs.ac.uk/cgi-bin/exemplars/BGS_Bedrock_and_Superficial_Geology/ows?service=WMS&request=GetCapabilities&version=1.3.0&
-.. _View the generated XML: BGS_Bedrock_and_Superficial_Geology-1.3.0.xml
+.. _View the generated XML: http://www.onegeology.org/wmsCookbook/BGS_Bedrock_and_Superficial_Geology-1.3.0.xml
