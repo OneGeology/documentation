@@ -1,0 +1,485 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Using the MS4W Apache http server as a reverse proxy to Tomcat | OneGeology &mdash; OneGeology Documentation 1.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/OneGeology_favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> OneGeology Documentation
+          
+
+          
+            
+            <img src="../_static/Onegeology_logo_large.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providingdata.html">Providing Data / Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../portal.html">Using the OneGeology Portal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../portal.html#using-onegeology-data">Using OneGeology Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices.html">Appendices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../authors.html">Authors</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OneGeology Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Using the MS4W Apache http server as a reverse proxy to Tomcat | OneGeology</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/appendices/appendixh.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="using-the-ms4w-apache-http-server-as-a-reverse-proxy-to-tomcat-onegeology">
+<h1>Using the MS4W Apache http server as a reverse proxy to Tomcat | OneGeology<a class="headerlink" href="#using-the-ms4w-apache-http-server-as-a-reverse-proxy-to-tomcat-onegeology" title="Permalink to this headline">¶</a></h1>
+<div class="docutils container" id="outer-container">
+<div class="top-banner-box docutils container" id="page-top">
+<p>Providing geoscience data globally <a href="#id3"><span class="problematic" id="id4">|OneGeology logo|</span></a>
+<a class="reference external" href="#menu">Navigation</a><a class="reference external" href="#content">Main content</a><a class="reference external" href="#bottom_links">Bottom links</a></p>
+</div>
+<div class="print docutils container">
+<p class="rubric" id="onegeology">OneGeology</p>
+</div>
+<div class="technical-progress docutils container">
+<p><a class="reference external" href="/home.html">Home</a> &gt; <a class="reference external" href="home.html">How to serve a OneGeology
+WMS</a> &gt; Using the MS4W Apache http server as a
+reverse proxy to Tomcat</p>
+</div>
+<div class="clear horizontal-links navigation docutils container">
+<div class="docutils container" id="menu">
+<dl class="simple">
+<dt><a class="reference external" href="/what_is/home.html">About us</a></dt><dd><ul class="simple">
+<li><p><a class="reference external" href="/what_is/mission.html">The Mission</a></p></li>
+<li><p><a class="reference external" href="/what_is/objective.html">Objectives</a></p></li>
+<li><p><a class="reference external" href="/what_is/how.html">How</a></p></li>
+<li><p><a class="reference external" href="/what_is/accord.html">The Accord</a></p></li>
+<li><p><a class="reference external" href="/participants/members.html">Members &amp; membership
+type</a></p></li>
+<li><p><a class="reference external" href="/participants/app/1gCountries.cfc?method=viewCountries">Countries
+involved</a></p></li>
+<li><p><a class="reference external" href="/participants/organisational_bodies.html">Organisational
+bodies</a></p></li>
+<li><p><a class="reference external" href="/participants/sponsors.html">Sponsors</a></p></li>
+<li><p><a class="reference external" href="/participants/app/1gCountries.cfc?method=viewCountryMap">Interactive
+map</a></p></li>
+</ul>
+</dd>
+<dt><a class="reference external" href="/organisation/home.html">Governance</a></dt><dd><ul class="simple">
+<li><p><a class="reference external" href="/organisation/secretariat.html">Administration</a></p></li>
+<li><p><a class="reference external" href="/organisation/mou.html">Memorandum of understanding</a></p></li>
+<li><p><a class="reference external" href="/organisation/tig.html">Technical implementation
+group</a></p></li>
+<li><p><a class="reference external" href="/organisation/operationalGroup.html">Operational
+group</a></p></li>
+<li><p><a class="reference external" href="/organisation/strategicSteering.html">Strategic Steering
+Committee</a></p></li>
+</ul>
+</dd>
+<dt><a class="reference external" href="/technical_progress/technical.html">Technical</a></dt><dd><ul class="simple">
+<li><p><a class="reference external" href="/technical_progress/geosciml.html">GeoSciML</a></p></li>
+<li><p><a class="reference external" href="/technical_progress/esriGrantOffer.html">ESRI grant
+offer</a></p></li>
+<li><p><a class="reference external" href="/service_provision/home.html">Providing services</a></p></li>
+<li><p><a class="reference external" href="/technical_progress/buddy_home.html">Register your data or
+service</a></p></li>
+<li><p><a class="reference external" href="/technical_progress/accreditationForm.cfm">Web services accreditation
+scheme</a></p></li>
+<li><p><a class="reference external" href="/use/home.html">How to use a OneGeology service</a></p></li>
+</ul>
+</dd>
+<dt><a class="reference external" href="/meetings/home.html">Meetings</a></dt><dd><ul class="simple">
+<li><p><a class="reference external" href="/meetings/oog_meetings.html">Operational Group</a></p></li>
+<li><p><a class="reference external" href="/meetings/steering_meetings.html">Strategic Steering
+Committee</a></p></li>
+<li><p><a class="reference external" href="/meetings/technical_meetings.html">Technical Implementation
+Group</a></p></li>
+<li><p><a class="reference external" href="/meetings/board_meetings.html">Board</a></p></li>
+</ul>
+</dd>
+</dl>
+<p><a class="reference external" href="/portal/home.html">Portal</a></p>
+<dl class="simple">
+<dt><a class="reference external" href="/eXtra/home.html">eXtra</a></dt><dd><ul class="simple">
+<li><p><a class="reference external" href="/eXtra/culture/home.html">Culture</a></p></li>
+<li><p><a class="reference external" href="/eXtra/Geodiversity/home.html">Geodiversity</a></p></li>
+<li><p><a class="reference external" href="/eXtra/kids/home.html">OneGeology Kids</a></p></li>
+<li><p><a class="reference external" href="/eXtra/Showcase/home.html">Showcase</a></p></li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<div class="docutils container" id="content">
+<div class="fullwidth docutils container">
+<p class="technical-progress-side-menu rubric" id="appendix-h-using-the-ms4w-apache-http-server-as-a-reverse-proxy-to-tomcat">Appendix H: Using the MS4W Apache http server as a
+reverse proxy to Tomcat</p>
+<p>To serve a OneGeology WMS through the OneGeology Portal that
+service must be served using port 80; the default port for any
+http web service. If you are already serving another web
+service on port 80 on the same server (such as a GeoNetwork
+spatial data metadata catalogue for example), then you will
+need to use a different port number for the existing service.
+In itself this shouldn’t be too difficult to do, however this
+might cause problems for your customers due to restrictive
+firewall rules that prevent them consuming any web service not
+served on the standard web port number. One way around this is
+to merge the services together; another possibility (as
+detailed below) is to use the Apache HTTP web server as a
+reverse proxy, that is, to handle all requests to the second
+service as if that service was coming from the MS4W Apache
+service. The user is thus unaware that there is more than one
+web service. Each service proxied in this way runs on a
+separate port number, and may still be accessed directly on
+that port (depending on your configuration), but it is also
+available as if it were running on port 80.</p>
+<p><a class="reference external" href="http://httpd.apache.org/docs/2.2/urlmapping.html">Comprehensive information on configuring
+Apache</a>
+(<a class="reference external" href="http://httpd.apache.org/docs/2.2/urlmapping.html">http://httpd.apache.org/docs/2.2/urlmapping.html</a>).</p>
+<p>The first step is to change the <a class="reference external" href="http://www.iana.org/assignments/port-numbers">port
+numbers</a>
+(<a class="reference external" href="http://www.iana.org/assignments/port-numbers">http://www.iana.org/assignments/port-numbers</a>) on which your
+other web servers work; in this example we have two other web
+services (a Tomcat based web service which we will run on port
+8080, and a jetty based web service which we will run on port
+8008). Note that both these ports are recognized alternate
+ports for http traffic but they may not be open to such traffic
+in your corporate firewall.</p>
+<p>Now we need to edit the Apache HTTP server httpd.conf file. If
+you have installed the MS4W apache http server as part of the
+ms4w-and-exemplar-data.zip download this would be located at:
+c:ms4wApacheconfhttpd.conf.</p>
+<p>Check that the following modules are uncommented (by removing
+the # sign from the line start).</p>
+<p>Change</p>
+<div class="line-block">
+<div class="line">#LoadModule proxy_module modules/mod_proxy.so</div>
+<div class="line">#LoadModule proxy_ajp_module modules/mod_proxy_ajp.so</div>
+<div class="line">#LoadModule proxy_http_module modules/mod_proxy_http.so</div>
+</div>
+<p>To:</p>
+<div class="line-block">
+<div class="line">LoadModule proxy_module modules/mod_proxy.so</div>
+<div class="line">LoadModule proxy_ajp_module modules/mod_proxy_ajp.so</div>
+<div class="line">LoadModule proxy_http_module modules/mod_proxy_http.so</div>
+</div>
+<p>Note, we have used mod_proxy here as it is included with the
+Apache HTTP Server binaries, but you could use other proxy
+modules such as mod_jk if desired.</p>
+<p>Now you need to add or uncomment the following directives (as
+appropriate for your configuration file); we suggest adding
+these directives at the end of the file for clarity.</p>
+<div class="line-block">
+<div class="line">TraceEnable off</div>
+<div class="line">#Important for security!!</div>
+</div>
+<div class="line-block">
+<div class="line">ProxyRequests Off</div>
+<div class="line">#This sets up the reverse proxy, if ’ ProxyRequests On’ is
+set you have a forward proxy.</div>
+</div>
+<p>ProxyPreserveHost On</p>
+<p>Now for each service (or set of pages within a service) that
+you wish to proxy you need to add the following set of
+directives:</p>
+<p>A &lt;Proxy&gt; or a &lt;ProxyMatch&gt; block to restrict access to your
+resources, a ProxyPass directive (to map that web service into
+the local server URL space), and a ProxyPassReverse directive
+(which lets Apache adjust the URL in the Location,
+Content-Location and URI headers on HTTP redirect responses).</p>
+<p>Examples:</p>
+<ol class="arabic">
+<li><p>Adding a reverse proxy to the BRGM OneGeology Europe
+connector for WP6 WMS. This connector runs on the Tomcat
+server running on port 8080, but will appear to be running
+as part of the Apache http service running on port 80.</p>
+<div class="line-block">
+<div class="line">&lt;Proxy /1GEconnector&gt;</div>
+<div class="line">Order deny,allow</div>
+<div class="line">Allow from all</div>
+<div class="line">&lt;/Proxy&gt;</div>
+</div>
+<p>ProxyPass /1GEconnector <a class="reference external" href="http://localhost:8080/1GEconnector">http://localhost:8080/1GEconnector</a></p>
+<p>ProxyPassReverse /1GEconnector
+<a class="reference external" href="http://localhost:8080/1GEconnector">http://localhost:8080/1GEconnector</a></p>
+</li>
+<li><p>Adding a reverse proxy to our Jetty web service which is
+running a GeoNetwork catalogue. The Jetty service is running
+on port 8008 but will appear to be running as part of the
+Apache http service running on port 80. You would normally
+be able to use ’ localhost’ or ’ 127.0.0.1’ to specify a web
+service running on the same physical server as your Apache
+web server, but in this instance Jetty has been configured
+to only accept requests from the server IP (194.66.252.156).</p>
+<div class="line-block">
+<div class="line">&lt;Proxy /geonetwork&gt;</div>
+<div class="line">Order deny,allow</div>
+<div class="line">Allow from all</div>
+<div class="line">&lt;/Proxy&gt;</div>
+</div>
+<p>ProxyPass /geonetwork <a class="reference external" href="http://194.66.252.156:8008/geonetwork">http://194.66.252.156:8008/geonetwork</a></p>
+<p>ProxyPassReverse /geonetwork
+<a class="reference external" href="http://194.66.252.156:8008/geonetwork">http://194.66.252.156:8008/geonetwork</a></p>
+</li>
+<li><p>Adding a reverse proxy to our Jetty web service which is
+running an Intermap mapping client (used by the GeoNetwork
+catalogue). The Jetty service is running on port 8008 but
+will appear to be running as part of the Apache http service
+running on port 80.</p>
+<div class="line-block">
+<div class="line">&lt;Proxy /intermap&gt;</div>
+<div class="line">Order deny,allow</div>
+<div class="line">Allow from all</div>
+<div class="line">&lt;/Proxy&gt;</div>
+</div>
+<p>ProxyPass /intermap <a class="reference external" href="http://194.66.252.156:8008/intermap">http://194.66.252.156:8008/intermap</a></p>
+<p>ProxyPassReverse /intermap
+<a class="reference external" href="http://194.66.252.156:8008/intermap">http://194.66.252.156:8008/intermap</a></p>
+</li>
+<li><p>Adding a reverse proxy to our cocoon service, which we need
+to run our WFS. The cocoon service runs on the Tomcat server
+running on port 8080, but will appear to be running as part
+of the Apache http service running on port 80. In this
+example we are using a ProxyMatch block, which allows us to
+use a regular expression to map the allowable paths to
+cocoon.</p>
+<div class="line-block">
+<div class="line">&lt;ProxyMatch <a class="reference external" href="http:/">http:/</a>/[^/]*/cocoon/<a href="#id1"><span class="problematic" id="id2">*</span></a>&gt;</div>
+<div class="line">Order deny,allow</div>
+<div class="line">Allow from 127.0.0.1</div>
+<div class="line">&lt;/ProxyMatch&gt;</div>
+</div>
+<p>ProxyPass /cocoon <a class="reference external" href="http://127.0.0.1:8080/cocoon/">http://127.0.0.1:8080/cocoon/</a></p>
+<p>ProxyPassReverse /cocoon <a class="reference external" href="http://127.0.0.1:8080/cocoon/">http://127.0.0.1:8080/cocoon/</a></p>
+</li>
+</ol>
+<p>That’s it as far as the Apache http server is concerned, but
+you may also wish to configure your other web servers so that
+they always proxy their http content through Apache</p>
+<p>To do this in Tomcat, you need to modify a Connector block in
+the server.xml configuration file as below:</p>
+<p>Change:</p>
+<div class="line-block">
+<div class="line">&lt;Connector</div>
+<div class="line">port=“8080”</div>
+<div class="line">protocol=“HTTP/1.1”</div>
+<div class="line">connectionTimeout=“20000”</div>
+<div class="line">redirectPort=“8443” /&gt;</div>
+</div>
+<p>To:</p>
+<div class="line-block">
+<div class="line">&lt;Connector</div>
+<div class="line">port=“8080”</div>
+<div class="line">protocol=“HTTP/1.1”</div>
+<div class="line">connectionTimeout=“20000”</div>
+<div class="line">redirectPort=“8443”</div>
+<div class="line">proxyName=“yourserver.org”</div>
+<div class="line">proxyPort=“80” /&gt;</div>
+</div>
+<p>ProxyName: is the domain name or IP of the standard (Apache
+HTTP Server) web service and can be omitted if you are running
+your Tomcat service on the same server as the http service.</p>
+<p>To do this in Jetty you need to make a similar change in the
+jetty.xml file</p>
+<p>Section last modified: 19 June 2011</p>
+<p><a class="reference external" href="appendixG.html">Back</a>|<a class="reference external" href="appendixI.html">Next</a></p>
+</div>
+</div>
+<div class="horizontal-links docutils container">
+<div class="docutils container">
+<p><a class="reference external" href="/misc/contact_us.html">Contact us</a></p>
+</div>
+<div class="docutils container">
+<p><a class="reference external" href="/misc/news.html">Newsletters</a></p>
+</div>
+<div class="docutils container">
+<p><a class="reference external" href="/misc/downloads.html">Downloads</a></p>
+</div>
+<div class="docutils container">
+<p><a class="reference external" href="/misc/privacy.html">Privacy</a></p>
+</div>
+<div class="docutils container">
+<p><a class="reference external" href="/participants/app/1gCountries.cfc?method=viewCountryMap">Participating countries
+map</a></p>
+</div>
+<div class="docutils container" id="pagetopbtn">
+<p><a class="reference external" href="#page_top">Top</a></p>
+</div>
+</div>
+<p>OneGeology © 2017. This site is hosted by the <a class="reference external" href="http://www.bgs.ac.uk/hosted.html">British Geological
+Survey</a> but responsibility for
+the content of the site lies with OneGeology not with the British
+Geological Survey. Questions, suggestions, or comments regarding the
+contents of this site should be directed to <a class="reference external" href="mailto:onegeology&#37;&#52;&#48;bgs&#46;ac&#46;uk">the OneGeology
+administration</a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, OneGeology
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

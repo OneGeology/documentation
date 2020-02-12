@@ -1,0 +1,368 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Creating MapServer CLASS definitions from ArcView legends | OneGeology &mdash; OneGeology Documentation 1.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/OneGeology_favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> OneGeology Documentation
+          
+
+          
+            
+            <img src="../_static/Onegeology_logo_large.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providingdata.html">Providing Data / Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../portal.html">Using the OneGeology Portal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../portal.html#using-onegeology-data">Using OneGeology Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices.html">Appendices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../authors.html">Authors</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OneGeology Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Creating MapServer CLASS definitions from ArcView legends | OneGeology</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/appendices/appendixd.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="creating-mapserver-class-definitions-from-arcview-legends-onegeology">
+<h1>Creating MapServer CLASS definitions from ArcView legends | OneGeology<a class="headerlink" href="#creating-mapserver-class-definitions-from-arcview-legends-onegeology" title="Permalink to this headline">¶</a></h1>
+<div class="docutils container" id="outer-container">
+<div class="top-banner-box docutils container" id="page-top">
+<p>Providing geoscience data globally <a href="#id1"><span class="problematic" id="id2">|OneGeology logo|</span></a>
+<a class="reference external" href="#menu">Navigation</a><a class="reference external" href="#content">Main content</a><a class="reference external" href="#bottom_links">Bottom links</a></p>
+</div>
+<div class="print docutils container">
+<p class="rubric" id="onegeology">OneGeology</p>
+</div>
+<div class="technical-progress docutils container">
+<p><a class="reference external" href="/home.html">Home</a> &gt; <a class="reference external" href="home.html">How to serve a OneGeology
+WMS</a> &gt; Creating MapServer CLASS definitions using
+QGIS</p>
+</div>
+<div class="clear horizontal-links navigation docutils container">
+<div class="docutils container" id="menu">
+<dl class="simple">
+<dt><a class="reference external" href="/what_is/home.html">About us</a></dt><dd><ul class="simple">
+<li><p><a class="reference external" href="/what_is/mission.html">The Mission</a></p></li>
+<li><p><a class="reference external" href="/what_is/objective.html">Objectives</a></p></li>
+<li><p><a class="reference external" href="/what_is/how.html">How</a></p></li>
+<li><p><a class="reference external" href="/what_is/accord.html">The Accord</a></p></li>
+<li><p><a class="reference external" href="/participants/members.html">Members &amp; membership
+type</a></p></li>
+<li><p><a class="reference external" href="/participants/app/1gCountries.cfc?method=viewCountries">Countries
+involved</a></p></li>
+<li><p><a class="reference external" href="/participants/organisational_bodies.html">Organisational
+bodies</a></p></li>
+<li><p><a class="reference external" href="/participants/sponsors.html">Sponsors</a></p></li>
+<li><p><a class="reference external" href="/participants/app/1gCountries.cfc?method=viewCountryMap">Interactive
+map</a></p></li>
+</ul>
+</dd>
+<dt><a class="reference external" href="/organisation/home.html">Governance</a></dt><dd><ul class="simple">
+<li><p><a class="reference external" href="/organisation/secretariat.html">Administration</a></p></li>
+<li><p><a class="reference external" href="/organisation/mou.html">Memorandum of understanding</a></p></li>
+<li><p><a class="reference external" href="/organisation/tig.html">Technical implementation
+group</a></p></li>
+<li><p><a class="reference external" href="/organisation/operationalGroup.html">Operational
+group</a></p></li>
+<li><p><a class="reference external" href="/organisation/strategicSteering.html">Strategic Steering
+Committee</a></p></li>
+</ul>
+</dd>
+<dt><a class="reference external" href="/technical_progress/technical.html">Technical</a></dt><dd><ul class="simple">
+<li><p><a class="reference external" href="/technical_progress/geosciml.html">GeoSciML</a></p></li>
+<li><p><a class="reference external" href="/technical_progress/esriGrantOffer.html">ESRI grant
+offer</a></p></li>
+<li><p><a class="reference external" href="/service_provision/home.html">Providing services</a></p></li>
+<li><p><a class="reference external" href="/technical_progress/buddy_home.html">Register your data or
+service</a></p></li>
+<li><p><a class="reference external" href="/technical_progress/accreditationForm.cfm">Web services accreditation
+scheme</a></p></li>
+<li><p><a class="reference external" href="/use/home.html">How to use a OneGeology service</a></p></li>
+</ul>
+</dd>
+<dt><a class="reference external" href="/meetings/home.html">Meetings</a></dt><dd><ul class="simple">
+<li><p><a class="reference external" href="/meetings/oog_meetings.html">Operational Group</a></p></li>
+<li><p><a class="reference external" href="/meetings/steering_meetings.html">Strategic Steering
+Committee</a></p></li>
+<li><p><a class="reference external" href="/meetings/technical_meetings.html">Technical Implementation
+Group</a></p></li>
+<li><p><a class="reference external" href="/meetings/board_meetings.html">Board</a></p></li>
+</ul>
+</dd>
+</dl>
+<p><a class="reference external" href="/portal/home.html">Portal</a></p>
+<dl class="simple">
+<dt><a class="reference external" href="/eXtra/home.html">eXtra</a></dt><dd><ul class="simple">
+<li><p><a class="reference external" href="/eXtra/culture/home.html">Culture</a></p></li>
+<li><p><a class="reference external" href="/eXtra/Geodiversity/home.html">Geodiversity</a></p></li>
+<li><p><a class="reference external" href="/eXtra/kids/home.html">OneGeology Kids</a></p></li>
+<li><p><a class="reference external" href="/eXtra/Showcase/home.html">Showcase</a></p></li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<div class="docutils container" id="content">
+<div class="fullwidth docutils container">
+<p class="technical-progress-side-menu rubric" id="appendix-d-creating-mapserver-class-definitions-using-quantum-gis">Appendix D: Creating MapServer CLASS definitions
+using Quantum GIS</p>
+<p>Quantum GIS (QGIS) is a user friendly Open Source Geographic
+Information System (GIS) licensed under the <a class="reference external" href="http://www.gnu.org/copyleft/gpl.html">GNU General Public
+License</a>
+(<a class="reference external" href="http://www.gnu.org/copyleft/gpl.html">http://www.gnu.org/copyleft/gpl.html</a>). QGIS is an official
+project of the <a class="reference external" href="http://www.osgeo.org/">Open Source Geospatial Foundation
+(OSGeo)</a> (<a class="reference external" href="http://www.osgeo.org/">http://www.osgeo.org/</a>). It
+runs on Linux, Unix, Mac OSX, and Windows and supports numerous
+vector, raster, and database formats and functionalities.</p>
+<p>The current stable version of QGIS (QGIS 2.12) is available for
+download from
+<a class="reference external" href="https://www.qgis.org/en/site/forusers/download.html">https://www.qgis.org/en/site/forusers/download.html</a></p>
+<p>For information on how to use QGIS to view WMS and WFS services
+see the ‘how to’ <a class="reference external" href="/howto/1_4_7.html">section 1.4.7</a></p>
+<p>You can use the MapServer Export QGIS plugin to create a .map
+configuration file. You will first need to enable the plugin,
+which comes bundled as part of the standard installation,
+through the Plugins menu. Select <em>Manage plugins</em> then select
+<em>MapServer Export</em> from the <em>QGIS Plugin Manager</em>.</p>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="../_images/da400f467b471213c167ec57a6d7c4fd39ad96a9.jpg"><img alt="QGIS Enabling the MapServer Export plugin" src="../_images/da400f467b471213c167ec57a6d7c4fd39ad96a9.jpg" style="width: 700px; height: 612px;" /></a></div>
+<div class="line">QGIS Enabling the MapServer Export plugin</div>
+</div>
+<p>With the map data you wish to serve as a WMS open in QGIS,
+select <em>Plugins</em> and then <em>MapServer Export</em> to start the
+conversion process.</p>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="../_images/b3d7dde36b9b9caaec187b20ab1e5e79cc096868.jpg"><img alt="QGIS Running the MapServer Export plugin" src="../_images/b3d7dde36b9b9caaec187b20ab1e5e79cc096868.jpg" style="width: 703px; height: 647px;" /></a></div>
+<div class="line">QGIS Running the MapServer Export plugin</div>
+</div>
+<p>You are given some options when you run the plugin (as below).
+You may use the defaults or add your own (as we have here). It
+isn’t important if you don’t know what to enter at this stage
+as you can edit the values in the .map file in any text editor.
+It may help though if add some dummy values, just so you get
+the correct structure.</p>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="../_images/74149622023daaac436dc389b4e50f3732ddb193.jpg"><img alt="QGIS MapServer Export: Save project to map file" src="../_images/74149622023daaac436dc389b4e50f3732ddb193.jpg" style="width: 617px; height: 532px;" /></a></div>
+<div class="line">QGIS MapServer Export: Save project to map file</div>
+</div>
+<p>When you have made all the edits you want to add, click ok. If
+there are no errors, you will get a results summary window (as
+below).</p>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="../_images/876f5c56eb15e3bc98f7fcb6c656395455cc9ba1.jpg"><img alt="QGIS MapServer Export results summary" src="../_images/876f5c56eb15e3bc98f7fcb6c656395455cc9ba1.jpg" style="width: 685px; height: 352px;" /></a></div>
+<div class="line">QGIS MapServer Export results summary</div>
+</div>
+<p><strong>Note</strong> the URLs shown in the results summary will not work in
+the OneGeology exemplar service set-up (as detailed in this
+cookbook); you will need to follow the instructions in <a class="reference external" href="4_3.html">Section
+4.3</a> to complete the set-up process.</p>
+<p>Section last modified: 19 June 2011</p>
+<p><a class="reference external" href="appendixC_2.html">Back</a>|<a class="reference external" href="appendixE.html">Next</a></p>
+</div>
+</div>
+<div class="horizontal-links docutils container">
+<div class="docutils container">
+<p><a class="reference external" href="/misc/contact_us.html">Contact us</a></p>
+</div>
+<div class="docutils container">
+<p><a class="reference external" href="/misc/news.html">Newsletters</a></p>
+</div>
+<div class="docutils container">
+<p><a class="reference external" href="/misc/downloads.html">Downloads</a></p>
+</div>
+<div class="docutils container">
+<p><a class="reference external" href="/misc/privacy.html">Privacy</a></p>
+</div>
+<div class="docutils container">
+<p><a class="reference external" href="/participants/app/1gCountries.cfc?method=viewCountryMap">Participating countries
+map</a></p>
+</div>
+<div class="docutils container" id="pagetopbtn">
+<p><a class="reference external" href="#page_top">Top</a></p>
+</div>
+</div>
+<p>OneGeology © 2017. This site is hosted by the <a class="reference external" href="http://www.bgs.ac.uk/hosted.html">British Geological
+Survey</a> but responsibility for
+the content of the site lies with OneGeology not with the British
+Geological Survey. Questions, suggestions, or comments regarding the
+contents of this site should be directed to <a class="reference external" href="mailto:onegeology&#37;&#52;&#48;bgs&#46;ac&#46;uk">the OneGeology
+administration</a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, OneGeology
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
