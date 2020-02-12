@@ -187,6 +187,64 @@
 <li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
 </div>
+<div class="section" id="documenting-the-documentation">
+<h1>Documenting the Documentation<a class="headerlink" href="#documenting-the-documentation" title="Permalink to this headline">¶</a></h1>
+<p>This documentation is written in ReStructured Text hosted on GitHub pages, built using Sphinx via Gitub Actions CI/CD.</p>
+<p>To setup</p>
+<ul class="simple">
+<li><p>follow Sphinx quickstart</p></li>
+<li><p>save to GitHub repo</p></li>
+<li><p>edit repo settings to enable GitHub pages from gh-pages branch.</p></li>
+<li><p>Create .github/workflows/gh-pages.yml</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>      name: github pages
+
+      on:
+push:
+  branches:
+    - master
+
+      jobs:
+              make-pages:
+                runs-on: ubuntu-latest
+                steps:
+                - uses: actions/checkout@v1
+
+                - name: <span class="k">select</span> python version
+                  uses: actions/setup-python@v1
+                  with:
+                    python-version: <span class="s1">&#39;3.7&#39;</span>
+
+                - name: install dependencies
+                  run: <span class="p">|</span>
+                    python -m pip install --upgrade pip
+                    python -m pip install sphinx
+                    python -m pip install sphinx_rtd_theme
+                - name: build documentation
+                  run: <span class="p">|</span>
+                    <span class="nb">cd</span> docs
+                    make html
+                    touch _build/html/.nojekyll
+                - name: deploy
+                  uses: peaceiris/actions-gh-pages@v2
+                  env:
+                    ACTIONS_DEPLOY_KEY: <span class="si">${</span><span class="p">{ secrets.ghpagesdk </span><span class="si">}</span><span class="o">}</span>
+                    PUBLISH_BRANCH: gh-pages
+                    PUBLISH_DIR: docs/_build/html
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Create SSH keys in Linux/Putty</p></li>
+<li><p>In repo settings&gt;deploy add a=deply key such as “ghpagesdk” and copy/paste public key hash</p></li>
+<li><p>In repo settings&gt;secrets add a secret key with same name “ghpagesdk” and copy/paste private key hash.</p></li>
+<li><p>make a commit to the master brach and should all be working.</p></li>
+</ul>
+<p>## Source files</p>
+<p>Original documentation was a collection of rst and html files. THe rst files were copied and merged together to the current format in this repository. HTML files were convertef using pandoc as below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pandoc</span> <span class="o">--</span><span class="n">extract</span><span class="o">-</span><span class="n">media</span><span class="o">=</span><span class="n">appendixb</span> <span class="o">-</span><span class="n">s</span> <span class="o">-</span><span class="n">t</span> <span class="n">rst</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">onegeology</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">wmsCookbook</span><span class="o">/</span><span class="n">appendixB</span><span class="o">.</span><span class="n">html</span> <span class="o">-</span><span class="n">o</span> <span class="n">appendixb</span><span class="o">.</span><span class="n">rst</span>
+</pre></div>
+</div>
+</div>
 
 
            </div>
