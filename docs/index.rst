@@ -16,6 +16,7 @@ Contents:
    overview
    providingdata
    portal
+   appendices
    authors
 
 Indices and tables
