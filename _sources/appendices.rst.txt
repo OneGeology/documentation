@@ -143,10 +143,8 @@ Note, terms like Geology shown in bold help to classify the terms for ease of re
     ==================================  ====================
 
 
-Appendix K
-===========
-
-Recommend ESRI shapefile definitions for GeoSciML-Portrayal
+Appendix K - Recommend ESRI shapefile definitions for GeoSciML-Portrayal
+=========================================================================
 
 Because the field names in GeoSciML-Portrayal are longer than 10 characters, you will not be able to have the full attribute (column) name for many of the properties if your portrayal data is loaded into an ESRI shapefile, which can be an issue in some WMS server software. To prevent truncated names, we are providing a recommended shapefile implementation with shorter field names. Field names are abbreviated to try and leave characters that convey the full name of the field; lower camel case typographic has been used, except that fields that contain URI’s end with ‘_uri’.
 
@@ -224,3 +222,41 @@ genericSymbolizer            genericSym           String
 shape                        SHAPE                ESRI geometry
 ============================ ==================== ===================
 
+Appendix F - WMS 1.3.0 GetCapabilities response from the BGS OneGeology exemplar service
+=========================================================================================
+
+.. container:: fullwidth
+
+   .. rubric:: Appendix F: WMS 1.3.0 GetCapabilities response from the
+      BGS OneGeology exemplar service
+      :name: appendix-f-wms-1.3.0-getcapabilities-response-from-the-bgs-onegeology-exemplar-service
+      :class: technical_progress_side_menu
+
+   Below is the GetCapabilities response returned by the BGS OneGeology
+   service as configured by the MapServer map file shown in `Appendix
+   E`_. This response document may be obtained using the following
+   requests, that is, either as a `request without version parameter`_
+   like:
+
+   ::
+
+      http://ogc.bgs.ac.uk/cgi-bin/exemplars/BGS_Bedrock_and_Superficial_Geology/ows?
+        service=WMS&
+        request=GetCapabilities&
+
+   or as a `request with version parameter`_ like:
+   ::
+
+      http://ogc.bgs.ac.uk/cgi-bin/exemplars/BGS_Bedrock_and_Superficial_Geology/ows?
+        service=WMS&
+        request=GetCapabilities&
+        version=1.3.0&
+
+   That is, the version parameter is omittable because the default
+   service is always the highest version supported by the WMS server.
+
+   -  `View the generated XML`_
+
+.. _request without version parameter: http://ogc.bgs.ac.uk/cgi-bin/exemplars/BGS_Bedrock_and_Superficial_Geology/ows?service=WMS&request=GetCapabilities&
+.. _request with version parameter: http://ogc.bgs.ac.uk/cgi-bin/exemplars/BGS_Bedrock_and_Superficial_Geology/ows?service=WMS&request=GetCapabilities&version=1.3.0&
+.. _View the generated XML: BGS_Bedrock_and_Superficial_Geology-1.3.0.xml
