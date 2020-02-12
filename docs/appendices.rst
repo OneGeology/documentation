@@ -2,6 +2,27 @@
 Appendices
 ===========================
 
+Contents:
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   appendices/appendixa
+   appendices/appendixb
+   appendices/appendixc
+   appendices/appendixd
+   appendices/appendixe
+   appendices/appendixf
+   appendices/appendixg
+   appendices/appendixh
+   appendices/appendixi
+   appendices/appendixj
+   appendices/appendixk
+   appendices/appendixl
+
+
+
 Appendix F - WMS 1.3.0 GetCapabilities response from the BGS OneGeology exemplar service
 =========================================================================================
 
