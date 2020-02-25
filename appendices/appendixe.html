@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BGS example service map file | OneGeology &mdash; OneGeology Documentation 1.0 documentation</title>
+  <title>BGS example service map file &mdash; OneGeology Documentation 1.0 documentation</title>
   
 
   
@@ -38,7 +38,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="WMS 1.3.0 GetCapabilities response from the BGS OneGeology exemplars service | OneGeology" href="appendixf.html" />
-    <link rel="prev" title="Creating MapServer CLASS definitions from ArcView legends | OneGeology" href="appendixd.html" /> 
+    <link rel="prev" title="Creating MapServer CLASS definitions using QGIS" href="appendixd.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,9 +95,9 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../appendices.html">Appendices</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="appendixa.html">Converting coordinate system in data files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appendixb.html">Creating MapServer CLASS definitions from ArcView legends</a></li>
-<li class="toctree-l2"><a class="reference internal" href="appendixc.html">Creating MapServer CLASS definitions from ARCGIS legends | OneGeology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="appendixd.html">Creating MapServer CLASS definitions from ArcView legends | OneGeology</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">BGS example service map file | OneGeology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendixc.html">Creating MapServer CLASS definitions from ARCGIS legends</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendixd.html">Creating MapServer CLASS definitions using QGIS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">BGS example service map file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appendixf.html">WMS 1.3.0 GetCapabilities response from the BGS OneGeology exemplars service | OneGeology</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appendixg.html">WMS 1.1.1 GetCapabilities response from the BGS OneGeology exemplars service | OneGeology</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appendixh.html">Using the MS4W Apache http server as a reverse proxy to Tomcat | OneGeology</a></li>
@@ -155,7 +155,7 @@
         
           <li><a href="../appendices.html">Appendices</a> &raquo;</li>
         
-      <li>BGS example service map file | OneGeology</li>
+      <li>BGS example service map file</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -174,84 +174,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="bgs-example-service-map-file-onegeology">
-<h1>BGS example service map file | OneGeology<a class="headerlink" href="#bgs-example-service-map-file-onegeology" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="bgs-example-service-map-file">
+<h1>BGS example service map file<a class="headerlink" href="#bgs-example-service-map-file" title="Permalink to this headline">¶</a></h1>
 <div class="docutils container" id="outer-container">
-<div class="top-banner-box docutils container" id="page-top">
-<p>Providing geoscience data globally <a href="#id1"><span class="problematic" id="id2">|OneGeology logo|</span></a>
-<a class="reference external" href="#menu">Navigation</a><a class="reference external" href="#content">Main content</a><a class="reference external" href="#bottom_links">Bottom links</a></p>
-</div>
-<div class="print docutils container">
-<p class="rubric" id="onegeology">OneGeology</p>
-</div>
-<div class="technical-progress docutils container">
-<p><a class="reference external" href="/home.html">Home</a> &gt; <a class="reference external" href="home.html">How to serve a OneGeology
-WMS</a> &gt; BGS example service map file</p>
-</div>
-<div class="clear horizontal-links navigation docutils container">
-<div class="docutils container" id="menu">
-<dl class="simple">
-<dt><a class="reference external" href="/what_is/home.html">About us</a></dt><dd><ul class="simple">
-<li><p><a class="reference external" href="/what_is/mission.html">The Mission</a></p></li>
-<li><p><a class="reference external" href="/what_is/objective.html">Objectives</a></p></li>
-<li><p><a class="reference external" href="/what_is/how.html">How</a></p></li>
-<li><p><a class="reference external" href="/what_is/accord.html">The Accord</a></p></li>
-<li><p><a class="reference external" href="/participants/members.html">Members &amp; membership
-type</a></p></li>
-<li><p><a class="reference external" href="/participants/app/1gCountries.cfc?method=viewCountries">Countries
-involved</a></p></li>
-<li><p><a class="reference external" href="/participants/organisational_bodies.html">Organisational
-bodies</a></p></li>
-<li><p><a class="reference external" href="/participants/sponsors.html">Sponsors</a></p></li>
-<li><p><a class="reference external" href="/participants/app/1gCountries.cfc?method=viewCountryMap">Interactive
-map</a></p></li>
-</ul>
-</dd>
-<dt><a class="reference external" href="/organisation/home.html">Governance</a></dt><dd><ul class="simple">
-<li><p><a class="reference external" href="/organisation/secretariat.html">Administration</a></p></li>
-<li><p><a class="reference external" href="/organisation/mou.html">Memorandum of understanding</a></p></li>
-<li><p><a class="reference external" href="/organisation/tig.html">Technical implementation
-group</a></p></li>
-<li><p><a class="reference external" href="/organisation/operationalGroup.html">Operational
-group</a></p></li>
-<li><p><a class="reference external" href="/organisation/strategicSteering.html">Strategic Steering
-Committee</a></p></li>
-</ul>
-</dd>
-<dt><a class="reference external" href="/technical_progress/technical.html">Technical</a></dt><dd><ul class="simple">
-<li><p><a class="reference external" href="/technical_progress/geosciml.html">GeoSciML</a></p></li>
-<li><p><a class="reference external" href="/technical_progress/esriGrantOffer.html">ESRI grant
-offer</a></p></li>
-<li><p><a class="reference external" href="/service_provision/home.html">Providing services</a></p></li>
-<li><p><a class="reference external" href="/technical_progress/buddy_home.html">Register your data or
-service</a></p></li>
-<li><p><a class="reference external" href="/technical_progress/accreditationForm.cfm">Web services accreditation
-scheme</a></p></li>
-<li><p><a class="reference external" href="/use/home.html">How to use a OneGeology service</a></p></li>
-</ul>
-</dd>
-<dt><a class="reference external" href="/meetings/home.html">Meetings</a></dt><dd><ul class="simple">
-<li><p><a class="reference external" href="/meetings/oog_meetings.html">Operational Group</a></p></li>
-<li><p><a class="reference external" href="/meetings/steering_meetings.html">Strategic Steering
-Committee</a></p></li>
-<li><p><a class="reference external" href="/meetings/technical_meetings.html">Technical Implementation
-Group</a></p></li>
-<li><p><a class="reference external" href="/meetings/board_meetings.html">Board</a></p></li>
-</ul>
-</dd>
-</dl>
-<p><a class="reference external" href="/portal/home.html">Portal</a></p>
-<dl class="simple">
-<dt><a class="reference external" href="/eXtra/home.html">eXtra</a></dt><dd><ul class="simple">
-<li><p><a class="reference external" href="/eXtra/culture/home.html">Culture</a></p></li>
-<li><p><a class="reference external" href="/eXtra/Geodiversity/home.html">Geodiversity</a></p></li>
-<li><p><a class="reference external" href="/eXtra/kids/home.html">OneGeology Kids</a></p></li>
-<li><p><a class="reference external" href="/eXtra/Showcase/home.html">Showcase</a></p></li>
-</ul>
-</dd>
-</dl>
-</div>
-</div>
 <div class="docutils container" id="content">
 <div class="fullwidth docutils container">
 <p class="technical-progress-side-menu rubric" id="appendix-e-bgs-example-service-map-file">Appendix E: BGS example service map file</p>
@@ -4424,37 +4349,8 @@ MAP
 END #Map File
 </pre></div>
 </div>
-<p>Section last modified: 27 June 2013</p>
-<p><a class="reference external" href="appendixD.html">Back</a>|<a class="reference external" href="appendixF.html">Next</a></p>
 </div>
 </div>
-<div class="horizontal-links docutils container">
-<div class="docutils container">
-<p><a class="reference external" href="/misc/contact_us.html">Contact us</a></p>
-</div>
-<div class="docutils container">
-<p><a class="reference external" href="/misc/news.html">Newsletters</a></p>
-</div>
-<div class="docutils container">
-<p><a class="reference external" href="/misc/downloads.html">Downloads</a></p>
-</div>
-<div class="docutils container">
-<p><a class="reference external" href="/misc/privacy.html">Privacy</a></p>
-</div>
-<div class="docutils container">
-<p><a class="reference external" href="/participants/app/1gCountries.cfc?method=viewCountryMap">Participating countries
-map</a></p>
-</div>
-<div class="docutils container" id="pagetopbtn">
-<p><a class="reference external" href="#page_top">Top</a></p>
-</div>
-</div>
-<p>OneGeology © 2017. This site is hosted by the <a class="reference external" href="http://www.bgs.ac.uk/hosted.html">British Geological
-Survey</a> but responsibility for
-the content of the site lies with OneGeology not with the British
-Geological Survey. Questions, suggestions, or comments regarding the
-contents of this site should be directed to <a class="reference external" href="mailto:onegeology&#37;&#52;&#48;bgs&#46;ac&#46;uk">the OneGeology
-administration</a>.</p>
 </div>
 </div>
 
@@ -4469,7 +4365,7 @@ administration</a>.</p>
         <a href="appendixf.html" class="btn btn-neutral float-right" title="WMS 1.3.0 GetCapabilities response from the BGS OneGeology exemplars service | OneGeology" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="appendixd.html" class="btn btn-neutral float-left" title="Creating MapServer CLASS definitions from ArcView legends | OneGeology" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="appendixd.html" class="btn btn-neutral float-left" title="Creating MapServer CLASS definitions using QGIS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
