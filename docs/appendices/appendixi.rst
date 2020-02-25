@@ -353,8 +353,6 @@ OneGeology English keyword dictionary picklist
          |                                  | hydraulically coherent entities  |
          +----------------------------------+----------------------------------+
 
-         Section last modified: 13 November 2015
-
 
 .. |OneGeology logo| image:: appendixi/1a3d7a0fc8cbefb032a4aba3fe6782e68ee5ea62.png
    :class: nob
