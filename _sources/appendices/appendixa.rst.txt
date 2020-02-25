@@ -1,6 +1,6 @@
-==========================================
-Converting coordinate system in data files
-==========================================
+========================================================
+Converting coordinate system in data files \| OneGeology
+========================================================
 
 .. container::
    :name: outer_container
