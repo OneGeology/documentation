@@ -130,29 +130,29 @@ Creating MapServer CLASS definitions from ArcView legends
    :class: nob
    :name: oneGeologylogo
    :target: /home.html
-.. |ArcView map view showing symbolized data| image:: appendixb/711a2f745e9afb482a097757959ac57ecae2bfe2.jpg
+.. |ArcView map view showing symbolized data| image:: /images/wmsCookbook/ArcView1.jpg
    :width: 600px
    :height: 466px
-.. |Loading the Gix ArcView extension| image:: appendixb/9b8f33b69e2ab8c6b3ffe3f1f9c8586b4fda77eb.jpg
+.. |Loading the Gix ArcView extension| image:: /images/wmsCookbook/ArcView2.jpg
    :width: 600px
    :height: 490px
-.. |Loading the Gix ArcView extension| image:: appendixb/31ef03ffcf9a56760f0bcdda383cf9e186371052.jpg
+.. |Loading the Gix ArcView extension| image:: /images/wmsCookbook/ArcView3.jpg
    :width: 600px
    :height: 501px
-.. |ArcView, Exporting your View| image:: appendixb/ee25ee781b71b3f1390462fed56b6560ba20c27b.jpg
+.. |ArcView, Exporting your View| image:: /images/wmsCookbook/ArcView4.jpg
    :width: 600px
    :height: 543px
-.. |Gix export tool, selecting output format| image:: appendixb/e102aedc99282807a97fc7d361863064edd1781b.jpg
+.. |Gix export tool, selecting output format| image:: /images/wmsCookbook/ArcView5.jpg
    :height: 242px
-.. |Gix export tool, selecting output file| image:: appendixb/62458360f56d3e2a6910dfcbc08519d761f6d544.jpg
+.. |Gix export tool, selecting output file| image:: /images/wmsCookbook/ArcView6.jpg
    :height: 242px
-.. |Gix export tool, details for the main, and reference maps| image:: appendixb/769f5f4f8f48814f229d66eeeff03685eaeea716.jpg
+.. |Gix export tool, details for the main, and reference maps| image:: /images/wmsCookbook/ArcView7.jpg
    :height: 242px
-.. |Gix export tool, details for the legend| image:: appendixb/1e38a40643d247d096ee4b8cbf1d63349a8e75ed.jpg
+.. |Gix export tool, details for the legend| image:: /images/wmsCookbook/ArcView8.jpg
    :height: 242px
-.. |Gix export tool, details for the scale bar| image:: appendixb/c4684bc1381a8908e4e77fecaa722ff65bb37459.jpg
+.. |Gix export tool, details for the scale bar| image:: /images/wmsCookbook/ArcView9.jpg
    :height: 242px
-.. |Gix export tool, OGC metadata details| image:: appendixb/91867d943d1882ce816bd9b1e3b686bc238f9267.jpg
+.. |Gix export tool, OGC metadata details| image:: /images/wmsCookbook/ArcView10.jpg
    :height: 242px
-.. |Gix export tool, character set encoding and symbology options| image:: appendixb/57cb1ec6c90b4e236b06991b3bce13b336af8da9.jpg
+.. |Gix export tool, character set encoding and symbology options| image:: /images/wmsCookbook/ArcView11.jpg
    :height: 242px

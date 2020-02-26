@@ -105,6 +105,7 @@
 <li class="toctree-l2"><a class="reference internal" href="appendixj.html">How to create a Styled Layer Descriptor (SLD) using Arc2Earth</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appendixk.html">Recommend ESRI shapefile definitions for GeoSciML-Portrayal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appendixl.html">Mapping OneGeology-Europe data model to GeoSciML-Portrayal | OneGeology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendixL_1.html">Considerations for converting a MapServer based OneGeology-Europe service | OneGeology</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../authors.html">Authors</a></li>
@@ -195,17 +196,17 @@ the instructions to install the tool as an ArcView 3.x
 extension. Having installed the Gix Export Tool, create or open
 an ArcView project containing your symbolized data.</p>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="../_images/711a2f745e9afb482a097757959ac57ecae2bfe2.jpg"><img alt="ArcView map view showing symbolized data" src="../_images/711a2f745e9afb482a097757959ac57ecae2bfe2.jpg" style="width: 600px; height: 466px;" /></a></div>
+<div class="line"><a class="reference internal" href="images/wmsCookbook/ArcView1.jpg"><img alt="ArcView map view showing symbolized data" src="images/wmsCookbook/ArcView1.jpg" style="width: 600px; height: 466px;" /></a></div>
 <div class="line">ArcView map view showing symbolized data</div>
 </div>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="../_images/31ef03ffcf9a56760f0bcdda383cf9e186371052.jpg"><img alt="Loading the Gix ArcView extension" src="../_images/31ef03ffcf9a56760f0bcdda383cf9e186371052.jpg" style="width: 600px; height: 501px;" /></a></div>
+<div class="line"><a class="reference internal" href="images/wmsCookbook/ArcView3.jpg"><img alt="Loading the Gix ArcView extension" src="images/wmsCookbook/ArcView3.jpg" style="width: 600px; height: 501px;" /></a></div>
 <div class="line">Loading the Gix ArcView extension</div>
 </div>
 <p>Load the Gix Export Tool Extension (File — Extensions, tick
 required extension, click OK).</p>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="../_images/31ef03ffcf9a56760f0bcdda383cf9e186371052.jpg"><img alt="Loading the Gix ArcView extension" src="../_images/31ef03ffcf9a56760f0bcdda383cf9e186371052.jpg" style="width: 600px; height: 501px;" /></a></div>
+<div class="line"><a class="reference internal" href="images/wmsCookbook/ArcView3.jpg"><img alt="Loading the Gix ArcView extension" src="images/wmsCookbook/ArcView3.jpg" style="width: 600px; height: 501px;" /></a></div>
 <div class="line">Loading the Gix ArcView extension</div>
 </div>
 <p>Complete the following steps to convert your project to a
@@ -213,14 +214,14 @@ MapServer map file.</p>
 <ol class="arabic">
 <li><p>Select View — Export View.</p>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="../_images/ee25ee781b71b3f1390462fed56b6560ba20c27b.jpg"><img alt="ArcView, Exporting your View" src="../_images/ee25ee781b71b3f1390462fed56b6560ba20c27b.jpg" style="width: 600px; height: 543px;" /></a></div>
+<div class="line"><a class="reference internal" href="images/wmsCookbook/ArcView4.jpg"><img alt="ArcView, Exporting your View" src="images/wmsCookbook/ArcView4.jpg" style="width: 600px; height: 543px;" /></a></div>
 <div class="line">ArcView, Exporting your View</div>
 </div>
 </li>
 <li><p>The first screen asks you to select your output file format
 — choose MapServer map file (.map) and click next.</p>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="../_images/e102aedc99282807a97fc7d361863064edd1781b.jpg"><img alt="Gix export tool, selecting output format" src="../_images/e102aedc99282807a97fc7d361863064edd1781b.jpg" style="height: 242px;" /></a></div>
+<div class="line"><a class="reference internal" href="images/wmsCookbook/ArcView5.jpg"><img alt="Gix export tool, selecting output format" src="images/wmsCookbook/ArcView5.jpg" style="height: 242px;" /></a></div>
 <div class="line">Gix export tool, selecting output format</div>
 </div>
 </li>
@@ -231,7 +232,7 @@ components and paste them into the master map file you have
 been creating elsewhere. Select a location for your output
 file and click next.</p>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="../_images/62458360f56d3e2a6910dfcbc08519d761f6d544.jpg"><img alt="Gix export tool, selecting output file" src="../_images/62458360f56d3e2a6910dfcbc08519d761f6d544.jpg" style="height: 242px;" /></a></div>
+<div class="line"><a class="reference internal" href="images/wmsCookbook/ArcView6.jpg"><img alt="Gix export tool, selecting output file" src="images/wmsCookbook/ArcView6.jpg" style="height: 242px;" /></a></div>
 <div class="line">Gix export tool, selecting output file</div>
 </div>
 </li>
@@ -239,7 +240,7 @@ file and click next.</p>
 map. You won’t use these sections so accept the defaults and
 click next.</p>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="../_images/769f5f4f8f48814f229d66eeeff03685eaeea716.jpg"><img alt="Gix export tool, details for the main, and reference maps" src="../_images/769f5f4f8f48814f229d66eeeff03685eaeea716.jpg" style="height: 242px;" /></a></div>
+<div class="line"><a class="reference internal" href="images/wmsCookbook/ArcView7.jpg"><img alt="Gix export tool, details for the main, and reference maps" src="images/wmsCookbook/ArcView7.jpg" style="height: 242px;" /></a></div>
 <div class="line">Gix export tool, details for the main, and reference maps</div>
 </div>
 </li>
@@ -247,7 +248,7 @@ click next.</p>
 won’t use these sections so accept the defaults and click
 next.</p>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="../_images/1e38a40643d247d096ee4b8cbf1d63349a8e75ed.jpg"><img alt="Gix export tool, details for the legend" src="../_images/1e38a40643d247d096ee4b8cbf1d63349a8e75ed.jpg" style="height: 242px;" /></a></div>
+<div class="line"><a class="reference internal" href="images/wmsCookbook/ArcView8.jpg"><img alt="Gix export tool, details for the legend" src="images/wmsCookbook/ArcView8.jpg" style="height: 242px;" /></a></div>
 <div class="line">Gix export tool, details for the legend</div>
 </div>
 </li>
@@ -255,7 +256,7 @@ next.</p>
 you won’t use these sections so accept the defaults and
 click next.</p>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="../_images/c4684bc1381a8908e4e77fecaa722ff65bb37459.jpg"><img alt="Gix export tool, details for the scale bar" src="../_images/c4684bc1381a8908e4e77fecaa722ff65bb37459.jpg" style="height: 242px;" /></a></div>
+<div class="line"><a class="reference internal" href="images/wmsCookbook/ArcView9.jpg"><img alt="Gix export tool, details for the scale bar" src="images/wmsCookbook/ArcView9.jpg" style="height: 242px;" /></a></div>
 <div class="line">Gix export tool, details for the scale bar</div>
 </div>
 </li>
@@ -263,14 +264,14 @@ click next.</p>
 you won’t use these sections so accept the defaults and
 click next.</p>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="../_images/91867d943d1882ce816bd9b1e3b686bc238f9267.jpg"><img alt="Gix export tool, OGC metadata details" src="../_images/91867d943d1882ce816bd9b1e3b686bc238f9267.jpg" style="height: 242px;" /></a></div>
+<div class="line"><a class="reference internal" href="images/wmsCookbook/ArcView10.jpg"><img alt="Gix export tool, OGC metadata details" src="images/wmsCookbook/ArcView10.jpg" style="height: 242px;" /></a></div>
 <div class="line">Gix export tool, OGC metadata details</div>
 </div>
 </li>
 <li><p>The next screen asks for details of final options. Again,
 you won’t use these sections so accept the defaults.</p>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="../_images/57cb1ec6c90b4e236b06991b3bce13b336af8da9.jpg"><img alt="Gix export tool, character set encoding and symbology options" src="../_images/57cb1ec6c90b4e236b06991b3bce13b336af8da9.jpg" style="height: 242px;" /></a></div>
+<div class="line"><a class="reference internal" href="images/wmsCookbook/ArcView11.jpg"><img alt="Gix export tool, character set encoding and symbology options" src="images/wmsCookbook/ArcView11.jpg" style="height: 242px;" /></a></div>
 <div class="line">Gix export tool, character set encoding and symbology
 options</div>
 </div>
