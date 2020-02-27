@@ -64,7 +64,7 @@ Mapping OneGeology-Europe data model to GeoSciML-Portrayal \| OneGeology
             GeoSciML-Portrayal GeologicUnitView features
             :name: mapping-onegeology-europe-geologic-units-to-geosciml-portrayal-geologicunitview-features
 
-         Note that whilst many of the properties required for the
+         .. note:: That whilst many of the properties required for the
          OneGeology-Europe GEOLOGIC UNITS mapping are optional, or not
          specified by GeoSciML-Portrayal GeologicUnitView features,
          GeoSciML-Portrayal mandates other properties (that is
@@ -621,14 +621,7 @@ different mappings.
 Mapping OneGeology-Europe GEOLOGIC UNITS to GeoSciML-Portrayal ShearDisplacementStructureView features
 ======================================================================================================
 
-Note that whilst many of the properties required for the
-OneGeology-Europe GEOLOGIC STRUCTURES mapping are optional, or not
-specified by GeoSciML-Portrayal ShearDisplacementStructureView features,
-GeoSciML-Portrayal mandates other properties (that is properties not
-found in OneGeology-Europe) are defined, such as movementType_uri and
-deformationStyle_uri. Please refer to the GeoSciML-Portrayal
-`ShearDisplacementStructureView features <7_3_2.html>`__ page of the
-cookboook for more information.
+.. note:: That whilst many of the properties required for the OneGeology-Europe GEOLOGIC STRUCTURES mapping are optional, or not specified by GeoSciML-Portrayal ShearDisplacementStructureView features, GeoSciML-Portrayal mandates other properties (that is properties not found in OneGeology-Europe) are defined, such as movementType_uri and deformationStyle_uri. Please refer to the GeoSciML-Portrayal `ShearDisplacementStructureView features <7_3_2.html>`__ page of the cookboook for more information.
 
 Mapping OneGeology-Europe GEOLOGIC UNITS to GeoSciML-Portrayal
 ShearDisplacementStructureView features
