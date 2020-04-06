@@ -2334,22 +2334,7 @@ OneGeology Profile
 .. todo::
 
    Changes made
-
-   Changed requirements on number of services per data provider just to say need distinct ones when need different service metadata with some examples for language, buddying services etc.
-
-   Dropped requirements on service name which are just restatements of the OGC standards themselves.
-
-   Dropped requirements on form of service URL
-
-   Removed accreditation scheme boxes with intention of putting them in separate section.
-
-A OneGeology service will be an OGC WMS, WFS or WCS. OneGeology defines a profile of these services for two reasons. The first is to make certain parts of the OneGeology Portal work with the services. The second is to make the services as widely usable and findable as possible by ensuring that they all provide some basic metadata such as contact details for further information. Currently, a OneGeology WFS needs to be associated with one or more layers from a OneGeology WMS which portray the data as an image.
-
-Each of the OGC service types shares some common characteristics. They will each have a service URL. They each respond to a GetCapabilities request by returning a GetCapabilities response that contains administrative and technical metadata about the service.
-
-The OGC standards specify different kinds of metadata that a service should provide, some for the correct operation of the service and some to help human users of the service understand what is being provided. Some of the metadata applies to a whole service being provided at a particular service URL and some is specific to particular layers, coverages or features being provided by that service. This means that separate services need to be set up for each distinct set of service level metadata.
-
-In the profile we make a distinction between the organization that owns or has copyright to provide the data (whom we term the ‘data owner’, or 'data provider') and the organization that serves that data over a web service (whom we term the ‘service provider’). These may be different in the case that a "buddy organisation" is serving the data on behalf of a data owner. As we require the contact details for the data owner to be put in the service metadata then there must be a distinct service for each data owner. If a particular data owner wishes to provide information in more than one language then there will need to be separate services with the service metadata in each language. If a data owner is providing similar data for different scales or geographical extent then this may be all provided within one service or from distinct services depending on what is most convenient.
+    <table>s copyright to provide the data (whom we term the ‘data owner’, or 'data provider') and the organization that serves that data over a web service (whom we term the ‘service provider’). These may be different in the case that a "buddy organisation" is serving the data on behalf of a data owner. As we require the contact details for the data owner to be put in the service metadata then there must be a distinct service for each data owner. If a particular data owner wishes to provide information in more than one language then there will need to be separate services with the service metadata in each language. If a data owner is providing similar data for different scales or geographical extent then this may be all provided within one service or from distinct services depending on what is most convenient.
 
 For example, at the time of writing The British Geological Survey is hosting its own data, and is acting as a buddy to host data for the Afghanistan Geological Survey, and for the Namibian Geological Survey, and for the Falkland Island Government, and for Geoscience Australia for Antarctica data, each of these is only available in English language versions.  The British Geological Survey is also hosting a single language (French) service for Burkina Faso.  The net result is that BGS, acting in the role of service provider, is serving six separate services (six separate service URLs).
 
