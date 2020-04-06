@@ -202,10 +202,10 @@ by HTTP-URIs, whether they be INSPIRE URIs, or CGI URIs.</p>
 OneGeology-Europe URNs to their equivalent HTTP-URIs for both
 the INSPIRE and CGI controlled vobabularies, that is:</p>
 <dl class="simple">
-<dt><a class="reference external" href="../docs/technical/OGEvocMap/3column-OGE-CGI-InspireURI-Mapping-LithologyREDUX.xlsx">Mapping from OneGeology-Europe Lithology URNs</a> (&lt;&lt; link to Excel mapping spreadsheet)</dt><dd><p>For example for mapping:
+<dt><a class="reference external" href="http://www.onegeology.org/docs/technical/OGEvocMap/3column-OGE-CGI-InspireURI-Mapping-LithologyREDUX.xlsx">Mapping from OneGeology-Europe Lithology URNs</a> (&lt;&lt; link to Excel mapping spreadsheet)</dt><dd><p>For example for mapping:
 <em>Lithology_1</em> to <em>representativeLithology_uri</em></p>
 </dd>
-<dt><a class="reference external" href="../docs/technical/OGEvocMap/3column-OGE-CGI-InspireURI-Mapping-AgeREDUX-29-10-2015.xlsx">Mapping from OneGeology-Europe Age URNs</a> (&lt;&lt; link to Excel mapping spreadsheet)</dt><dd><p>For example for mapping:
+<dt><a class="reference external" href="http://www.onegeology.org/docs/technical/OGEvocMap/3column-OGE-CGI-InspireURI-Mapping-AgeREDUX-29-10-2015.xlsx">Mapping from OneGeology-Europe Age URNs</a> (&lt;&lt; link to Excel mapping spreadsheet)</dt><dd><p>For example for mapping:
 <em>AgeMax</em> or <em>EventAgeMax</em> to <em>representativeOlderAge_uri</em>,
 or
 <em>AgeMin</em> or <em>EventAgeMin</em> to <em>representativeYoungerAge_uri</em>,
@@ -213,16 +213,16 @@ or
 <em>AgeMax</em> to <em>representativeAge_uri</em> (as BGS do in OGE
 portal)</p>
 </dd>
-<dt><a class="reference external" href="../docs/technical/OGEvocMap/2column-OGE-InspireURI-Mapping-GeologicUnitType.xlsx">Mapping from OneGeology-Europe GeologicUnitType URNs</a> (&lt;&lt; link to Excel mapping spreadsheet)</dt><dd><p>For example for mapping:
+<dt><a class="reference external" href="http://www.onegeology.org/docs/technical/OGEvocMap/2column-OGE-InspireURI-Mapping-GeologicUnitType.xlsx">Mapping from OneGeology-Europe GeologicUnitType URNs</a> (&lt;&lt; link to Excel mapping spreadsheet)</dt><dd><p>For example for mapping:
 <em>GeologicUnitType</em> to <em>geologicUnitType_uri</em></p>
 </dd>
-<dt><a class="reference external" href="../docs/technical/OGEvocMap/2column-OGE-InspireURI-Mapping-FaultType.xlsx">Mapping from OneGeology-Europe FaultType URNs</a> (&lt;&lt; link to Excel mapping spreadsheet)</dt><dd><p>For example for mapping:
+<dt><a class="reference external" href="http://www.onegeology.org/docs/technical/OGEvocMap/2column-OGE-InspireURI-Mapping-FaultType.xlsx">Mapping from OneGeology-Europe FaultType URNs</a> (&lt;&lt; link to Excel mapping spreadsheet)</dt><dd><p>For example for mapping:
 <em>FaultType</em> to <em>faultType_uri</em></p>
 </dd>
-<dt><a class="reference external" href="../docs/technical/OGEvocMap/EventEnvironment.csv">Mapping from OneGeology-Europe EventEnvironment URNs</a> (&lt;&lt; link to Excel mapping spreadsheet)</dt><dd><p>Note:
+<dt><a class="reference external" href="http://www.onegeology.org/docs/technical/OGEvocMap/EventEnvironment.csv">Mapping from OneGeology-Europe EventEnvironment URNs</a> (&lt;&lt; link to Excel mapping spreadsheet)</dt><dd><p>Note:
 <em>Not required for GeoSciML-Portrayal 4.0 conversions</em></p>
 </dd>
-<dt><a class="reference external" href="../docs/technical/OGEvocMap/EventProcess.csv">Mapping from OneGeology-Europe EventProcess URNs</a> (&lt;&lt; link to Excel mapping spreadsheet)</dt><dd><p>Note:
+<dt><a class="reference external" href="http://www.onegeology.org/docs/technical/OGEvocMap/EventProcess.csv">Mapping from OneGeology-Europe EventProcess URNs</a> (&lt;&lt; link to Excel mapping spreadsheet)</dt><dd><p>Note:
 <em>Not required for GeoSciML-Portrayal 4.0 conversions</em></p>
 </dd>
 </dl>
@@ -238,88 +238,348 @@ representativeAge_uri. Please refer to the GeoSciML-Portrayal
 cookboook for more information.</p>
 <p>Mapping OneGeology-Europe GEOLOGIC UNITS to GeoSciML-Portrayal GeologicUnitView features</p>
 <table class="cadre">
-<caption>Mapping OneGeology-Europe GEOLOGIC UNITS to GeoSciML-Portrayal GeologicUnitView features</caption>
-<tr class="title"><td colspan="3">GEOLOGIC UNITS. Each feature (polygon) should have at least the following attributes</td></tr>
-<tr class="subtitle"><td colspan="3" class="obs"><i>featureMember/MappedFeature</i> for each MappedFeature (for each polygon)</td></tr>
-<tr><td class="label">A unique feature ID</td><td>M</td><td class="obs">The unique ID of the polygon is often named &#8220;fid&#8221; within a shapefile</td></tr>
-<tr><td class="label2">identifier</td><td>M</td><td>Globally unique identifier for the individual feature. Recommended practice is that this identifier be derived from the primary key for the spatial objects in the source data in case information needs to be transferred from the interchange format back to the source database. This identifier is analogous to the identifier for a GeoSciML MappedFeature.</td></tr>
-<tr style="background:#EFEFEF"><td>Observation method [urn]<br /><span class="geosciml">MappedFeature/observationMethod</span></td><td class="obs">M</td><td class="obs">Always <b>urn:cgi:classifier:CGI:MappedFeatureObservationMethod:201001:compilation</b></td></tr>
-<tr><td>observationMethod<br />[string]</td><td>O</td><td>ObservationMethod is a convenience property to provide observation metadata. Example values might include &#8216;field observation by author&#8217;, &#8216;compilation from published maps&#8217;, &#8216;air photo interpretation&#8217;. Recommend using the CGI Feature Observation Method vocabulary.</td></tr>
-<tr><td class="label">The positional accurancy [numerical value]<br /><span class="geosciml">MappedFeature/positionalAccuracy</span></td><td class="obs">M</td><td class="obs">It is recommended that the same, approximate, value be given for all MappedFeatures and will generally be <b>250</b></td></tr>
-<tr><td class="label2">positionalAccuracy<br />[string]</td><td>O</td><td>accuracy may be provided, e.g. a term from a controlled vocabulary. Vocabulary used should be described in the dataset metadata. For polygon mapped features this is intended for use to indicate the position uncertainty of the contact and fault features bounding the outcrop polygon, which is only necessary if the associated line features are not included with the polygons.</td></tr>
-<tr style="background:#EFEFEF"><td>The sampling frame [urn]<br /><span class="geosciml">MappedFeature/samplingFrame</span></td><td class="obs">M</td><td class="obs">This property should be set to <b>urn:cgi:feature:CGI:EarthNaturalSurface</b> for the surface map and <b>urn:cgi:feature:CGI:BedrockSurface</b> for the bedrock map</td></tr>
-<tr><td>The sampling frame</td><td>-</td><td>There is no corresponding value in GeoSciML-Portrayal</td></tr>
-<tr><td class="label">The geometry<br /><span class="geosciml">MappedFeature/shape</span></td><td>M</td><td></td></tr>
-<tr><td class="label2">shape<br />[GM_Object (GM_polygon)]</td><td>M</td><td>Geometry defining the extent of the feature of interest.</td></tr>
-<tr class="subtitle"><td colspan="3" class="obs"><i>featureMember/MappedFeature/specification/GeologicUnit</i><br />The following data are the attributes of the geologic unit which the current mappedFeature is a part of</td></tr>
-<tr><td class="label">A unique Geologic Unit ID [Any type]<br /><span class="geosciml">GeologicUnit id</span></td><td class="obs">M</td><td class="obs">Each GeologicUnit should be given a unique identifier</td></tr>
-<tr><td class="label2">geologicUnitType<br />[string]</td><td>O</td><td>Type of GeologicUnit (as defined in GeoSciML).</td></tr>
-<tr><td class="label">The name of the geologic Unit<br /><span class="geosciml">GeologicUnit/name</span></td><td class="obs">M</td><td class="obs">Could be a simple name (text) or a urn (see the WP3 explanatory notes)</td></tr>
-<tr><td class="label2">name<br />[string]</td><td>O</td><td>Display name for the GeologicUnit; this can be used to put in a geologic unit name, or more likely an abbreviation used to label outcrops of the unit in a map display.</td></tr>
-<tr><td class="label">The &#8220;free text&#8221; description<br /><span class="geosciml">GeologicUnit/description</span></td><td>O</td><td></td></tr>
-<tr><td class="label2">description<br />[string]</td><td>O</td><td>Text description of the GeologicUnit, typically taken from an entry on a geological map legend.</td></tr>
-<tr><td class="label">The geologic unit type [urn]<br /><span class="geosciml">GeologicUnit/geologicUnitType</span></td><td class="obs">M</td><td class="obs">Use the 1GE vocabulary &#8220;<a href="../1GE/VocabXL/1GE_GeologicUnitType.xls" target="download">GeologicUnitType</a>&#8221;</td></tr>
-<tr><td class="label2">geologicUnitType_uri<br />[string]</td><td>M</td><td>URI referring to a controlled concept from a vocabulary defining the GeologicUnit types. Mandatory property - if no value is provided then a URI referring to a controlled concept explaining why the value is nil must be provided.</td></tr>
-<tr style="background:#EFEFEF"><td>The observation method [urn]<br /><span class="geosciml">GeologicUnit/observationMethod</span></td><td class="obs">M</td><td class="obs">either <b>urn:cgi:classifier:CGI:FeatureObservationMethod:201001:data_from_single_published_description</b><br />where the property values are derived from a single source document, or<br /><b>urn:cgi:classifier:CGI:FeatureObservationMethod:201001:synthesis_of_multiple_published_descriptions</b><br />where they are derived from multiple source documents.</td></tr>
-<tr><td>observationMethod<br />[string]</td><td>O</td><td>ObservationMethod is a convenience property to provide observation metadata. Example values might include &#8216;field observation by author&#8217;, &#8216;compilation from published maps&#8217;, &#8216;air photo interpretation&#8217;. Recommend using the CGI Feature Observation Method vocabulary.</td></tr>
-<tr style="background:#EFEFEF"><td>The purpose<br /><span class="geosciml">GeologicUnit/purpose</span></td><td class="obs">M</td><td class="obs">For OneGeology-Europe the Purpose property should be set to: <b>typical_norm</b>.</td></tr>
-<tr><td>The purpose</td><td>-</td><td>There is no corresponding property in GeoSciML-Portrayal</td></tr>
-<tr><td class="label">Body Morphology [urn]<br /><span class="geosciml">GeologicUnit/bodyMorphology</span></td><td class="obs">O</td><td class="obs">For dykes the GeologicUnit bodyMorphology property should always be set to<b>urn:cgi:classifier:CGI:GeologicUnitMorphology:201001:dike</b> In any other case, the value is empty.</td></tr>
-<tr><td class="label2">Body Morphology</td><td>-</td><td>There is no corresponding property in GeoSciML-Portrayal</td></tr>
-<tr class="subtitle2"><td colspan="3" class="obs"><i>GeologicUnit/preferredAge/GeologicEvent</i><br />The following attributes describe the age of formation of the geologic unit</td></tr>
-<tr><td class="label">The name (Orogenic Event) [urn]<br /><span class="geosciml">GeologicEvent/name</span></td><td class="obs">O</td><td class="obs">Only given where the Geologic Unit was formed by the orogenic event. Use the 1GE vocabulary &#8220;<a href="../1GE/VocabXL/1GE_Orogenic_Events.xls" target="download">OrogenicEvents</a>&#8221;.</td></tr>
-<tr><td class="label2">The name (Orogenic Event)</td><td>-</td><td>There is no corresponding property in GeoSciML-Portrayal</td></tr>
-<tr><td class="label">The event Age - Lower [urn]<br /><span class="geosciml">GeologicEvent/eventAge/.../lower</span></td><td class="obs">M</td><td class="obs">Use the 1GE vocabulary &#8220;<a href="../1GE/VocabXL/1GE_Ages.xls" target="download">Ages</a>&#8221;</td></tr>
-<tr><td class="label2">representativeOlderAge_uri<br />[string]</td><td>M</td><td>URI referring to a controlled concept specifying the most rep-resentative older value in a range of stratigraphic age intervals for the GeologicUnit. This will be defined entirely at the discretion of the data provider and may be a single event selected from the geologic feature&#8217;s geological history or a value summarizing all or part of the feature&#8217;s history.</td></tr>
-<tr><td class="label">The event Age - Upper [urn]<br /><span class="geosciml">GeologicEvent/eventAge/.../upper</span></td><td class="obs">M</td><td class="obs">Use the 1GE vocabulary &#8220;<a href="../1GE/VocabXL/1GE_Ages.xls" target="download">Ages</a>&#8221;</td></tr>
-<tr><td class="label2">representativeYoungerAge_uri<br />[string]</td><td>M</td><td>URI referring to a controlled concept specifying the most representative younger value in a range of stratigraphic age intervals for the GeologicUnit. This will be defined entirely at the discretion of the data provider and may be a single event selected from the geologic feature&#8217;s geological history or a value summarizing all or part of the feature&#8217;s history.</td></tr>
-<tr><td class="label">The event process [urn]<br /><span class="geosciml">GeologicEvent/eventProcess</span></td><td class="obs">M</td><td class="obs">Record the process that formed the Geologic Unit. Use the 1GE vocabulary &#8220;<a href="../1GE/VocabXL/1GE_EventProcess.xls" target="download">EventProcess</a>&#8221;.</td></tr>
-<tr><td class="label2">The event process</td><td>-</td><td>There is no corresponding property in GeoSciML-Portrayal</td></tr>
-<tr><td class="label">The event environment [urn]<br /><span class="geosciml">GeologicEvent/eventEnvironment</span></td><td class="obs">O</td><td class="obs">Can be used to describe the environment which the Geologic Unit was formed. Use the 1GE vocabulary "<a href="../1GE/VocabXL/1GE_EventEnvironment.xls" target="download">EventEnvironment</a>".</td></tr>
-<tr><td class="label2">The event environment</td><td>-</td><td>There is no corresponding property in GeoSciML-Portrayal</td></tr>
-<tr class="subtitle2"><td colspan="3" class="obs"><i>GeologicUnit/geologicHistory/GeologicEvent</i> <br />The following attributes describe a serie of geologic events that led to the formation of the geologic unit. To describe such a geologic history is <i>not</i> mandatory. But for each geologic history / geologic event described, one event age and at least one event process should be described. The rules are the same that for the preferred age. It is up to each data provider to describe 0 or n geologic events of the geologic history.</td></tr>
-<tr><td class="label">The name (for Orogenic Event) [urn]<br /><span class="geosciml">GeologicEvent/name</span></td><td class="obs">O</td><td class="obs">Use the vocabulary &#8220;<a href="../1GE/VocabXL/1GE_Orogenic_Events.xls" target="download">OrogenicEvents</a>&#8221;</td></tr>
-<tr><td class="label2">The name (for Orogenic Event)</td><td>-</td><td>There is no corresponding property in GeoSciML-Portrayal</td></tr>
-<tr><td class="label">The event Age<br /><span class="geosciml">GeologicEvent/eventAge</span></td><td class="obs">M</td><td class="obs">Can be defined as a range of urn [lower_age, upper_age], as a range of numerical values, as a single numerical value, or as a single urn. In the case of urns, use the 1GE vocabulary "<a href="../1GE/VocabXL/1GE_Ages.xls" target="download">Ages</a>"</td></tr>
-<tr><td class="label2">The event Age</td><td>-</td><td>There is no corresponding property in GeoSciML-Portrayal</td></tr>
-<tr><td class="label">The event process [urn]<br /><span class="geosciml">GeologicEvent/eventProcess</span></td><td class="obs">M</td><td rowspan="3" class="obs">It is up to each data provider to present several event process (therefore, several attributes with distinct names) for describing the current geologic event of the geologic history. Use the 1GE vocabulary &#8220;<a href="../1GE/VocabXL/1GE_EventProcess.xls" target="download">EventProcess</a>&#8221;.</td></tr>
-<tr><td class="label">...</td><td class="obs">O</td></tr>
-<tr><td class="label">The event process [urn]</td><td class="obs">O</td></tr>
-<tr><td class="label2">geologicHistory<br />[string]</td><td>O</td><td>Text (possibly formatted with formal syntax) description of the age of the GeologicUnit (where age is a sequence of events and may include process and environment information).</td></tr>
-<tr><td class="label">The event environment [urn]<br /><span class="geosciml">GeologicEvent/eventEnvironment</span></td><td class="obs">O</td><td rowspan="3" class="obs">It is up to each data provider to present several event environment (therefore, several attributes with distinct names) for describing the current geologic event of the geologic history. Use the 1GE vocabulary &#8220;<a href="../1GE/VocabXL/1GE_EventEnvironment.xls" target="download">EventEnvironment</a>&#8221;</td></tr>
-<tr><td class="label">...</td><td class="obs">O</td></tr>
-<tr><td class="label">The event environment [urn]</td><td class="obs">O</td></tr>
-<tr><td class="label2">The event environment</td><td>-</td><td>There is no corresponding property in GeoSciML-Portrayal</td></tr>
-<tr class="subtitle2"><td colspan="3" class="obs"><i>GeologicUnit/composition/CompositionPart</i><br />The following attributes describe the lithology of the geologic unit. Some GeologicUnits will have a single CompositionPart, but others may have multiple CompositionParts, such as interbedded layers, each of which can be described with a distinct CompositionPart. Each CompositionPart has three properties – the lithology; the role of the CompositionPart in the GeologicUnit as a whole; and the proportion of the CompositionPart in the GeologicUnit as a whole. <i>For example, if the geologic units of a given dataset have in some cases 5 distincts lithology, but not more, then the database (or shapefile) will have 5 attributes lithology, role and proportion.</i> the main lithology (proportion=all or predominant) attibute will always have a value (at least one lithology is mandatory), but the others will be often empty.</td></tr>
-<tr><td class="label">Lithology [urn]<br /><span class="geosciml">CompositionPart/lithology</span></td><td class="obs">M</td><td class="obs">Use the 1GE &#8220;<a href="../1GE/VocabXL/1GE_Lithology_.xls" target="download">Lithology</a>&#8221; vocabulary</td></tr>
-<tr><td class="label2">representativeLithology_uri<br />[string]</td><td>M</td><td>URI referring to a controlled concept specifying the characteristic or representative lithology of the unit. This may be a concept that defines the super-type of all lithology values present within a GeologicUnit or a concept defining the lithology of the dominant CompositionPart (as defined in GeoSciML) of the unit. This identifier is intended for use as the symbol key for a lithologic map portrayal of the geologic unit features.</td></tr>
-<tr><td class="label">Lithology [urn]<br /><span class="geosciml">CompositionPart/lithology</span></td><td class="obs">M</td><td class="obs">Use the 1GE &#8220;<a href="../1GE/VocabXL/1GE_Lithology_.xls" target="download">Lithology</a>&#8221; vocabulary</td></tr>
-<tr><td class="label2">Lithology<br />[string]</td><td>O</td><td>Text (possibly formatted with formal syntax) description of the GeologicUnit&#8217;s lithology.</td></tr>
-<tr style="background:#EFEFEF"><td>Role [urn]<br /><span class="geosciml">CompositionPart/role</span></td><td class="obs">M</td><td class="obs">
-<ul>
-<li>Where the CompositionPart is the only one in the GeologicUnit the role property should be set to <b>urn:cgi:classifier:CGI:GeologicUnitPartRole:200811:only_part</b></li>
-<li>Where the CompositionPart is one of several in the GeologicUnit the role property should be set to <b>urn:cgi:classifier:CGI:GeologicUnitPartRole:200811:unspecified_part_role</b></li>
-<li>See also the detailed explanation in the WP3 document: the GeologicUnitPartRole has other values in serveral cases  ("Molasse", "Ophiolitic mélange", ...).</li>
-</ul></td></tr>
-<tr><td>Role</td><td>-</td><td>There is no corresponding property in GeoSciML-Portrayal</td></tr>
-<tr style="background:#EFEFEF"><td>Proportion [urn]<br /><span class="geosciml">CompositionPart/proportion</span></td><td class="obs">M</td>
-<td class="obs"><ul>
-<li>Where there is only one CompositionPart is the GeologicUnit the Proportion property should be set to <b>urn:cgi:classifier:CGI:ProportionTerm:201001:all</b>.</li>
-<li>Where there are multiple CompositionParts in the GeologicUnit the CompositionPart that comprises the single largest proportion of the GeologicUnit should be given a Proportion value of <b>urn:cgi:classifier:CGI:ProportionTerm:201001:predominant</b>.</li>
-<li>All other CompositionParts should be given a Proportion value of <b>urn:cgi:classifier:CGI:ProportionTerm:201001:subordinate</b>.</li>
-<li>Note that where there are multiple CompositionParts in the GeologicUnit one must be given a value of <b>urn:cgi:classifier:CGI:ProportionTerm:201001:predominant</b> and this will be the one used for portrayal of the lithology of the GeologicUnit.</li>
-</ul></td></tr>
-<tr><td>Proportion</td><td>-</td><td>There is no corresponding property in GeoSciML-Portrayal</td></tr>
-<tr class="subtitle2"><td colspan="3" class="obs">GeologicUnit/metamorphicCharacter/MetamorphicDescription<br />The following attributes describe the metamorphism of a geologic unit. It is optional. If a data provider do not wish to describe metamorphism for any of the geologic units, then these attributes are not required. Only one Metamorphic description can be given</td></tr>
-<tr><td class="label">Metamorphic facies [urn]<br /><span class="geosciml">MetamorphicDescription/metamorphicFacies</span></td><td class="obs">O</td><td rowspan="3" class="obs">Use of the 1GE vocabulary &#8220;<a href="../1GE/VocabXL/1GE_MetamorphicFacies.xls" target="download">MetamorphicFacies</a>&#8221;. Several Metamorphic facies can be given</td></tr>
-<tr><td class="label">...</td><td></td></tr>
-<tr><td class="label">Metamorphic facies [urn]</td><td></td></tr>
-<tr><td class="label">Metamorphic grade [urn]<br /><span class="geosciml">MetamorphicDescription/metamorphicGrade</span></td><td class="obs">O</td><td class="obs">Use of the 1GE vocabulary &#8220;<a href="../1GE/VocabXL/1GE_MetamorphicGrade.xls" target="download">"MetamorphicGrade</a>&#8221;</td></tr>
-<tr><td colspan="3" class="obs"><i><b>MetamorphicDescription/protolithLithology/RockMaterial</b></i><br />The following attributes describe the protolith lithology of the metamorphic description. It is optional, and there can be several protolith lithology. If a protolith is given, then consolidation degree and lithology are mandatory</td></tr>
-<tr><td class="label">lithology [urn]<br /><span class="geosciml">RockMaterial/lithology</span></td><td></td><td class="obs">Use the 1GE vocabulary &#8220;<a href="../1GE/VocabXL/1GE_Lithology_.xls" target="download">Lithology</a>&#8221;.</td></tr>
-<tr style="background:#EFEFEF"><td>consolidation degree [urn]<br /><span class="geosciml">RockMaterial/consolidationDegree</span></td><td></td><td class="obs">If a lithology is given, then the consolidationDegree should always be set to<b>urn:cgi:classifier:CGI:ConsolidationDegree:200811:consolidation_not_specified</b></td></tr>
-<tr style="background:#EFEFEF"><td>purpose<br /><span class="geosciml">RockMaterial/purpose</span></td><td class="obs">O</td><td class="obs">If a lithology is given, then the purpore should always be set to <b>typical_norm</b></td></tr>
-<tr><td class="label2">Metamorphic character, description...</td><td>-</td><td>There are no corresponding properties in GeoSciML-Portrayal</td></tr>
+   <caption>Mapping OneGeology-Europe GEOLOGIC UNITS to GeoSciML-Portrayal GeologicUnitView features</caption>
+   <tr class="title">
+      <td colspan="3">GEOLOGIC UNITS. Each feature (polygon) should have at least the following attributes</td>
+   </tr>
+   <tr class="subtitle">
+      <td colspan="3" class="obs"><i>featureMember/MappedFeature</i> for each MappedFeature (for each polygon)</td>
+   </tr>
+   <tr>
+      <td class="label">A unique feature ID</td>
+      <td>M</td>
+      <td class="obs">The unique ID of the polygon is often named &#8220;fid&#8221; within a shapefile</td>
+   </tr>
+   <tr>
+      <td class="label2">identifier</td>
+      <td>M</td>
+      <td>Globally unique identifier for the individual feature. Recommended practice is that this identifier be derived from the primary key for the spatial objects in the source data in case information needs to be transferred from the interchange format back to the source database. This identifier is analogous to the identifier for a GeoSciML MappedFeature.</td>
+   </tr>
+   <tr style="background:#EFEFEF">
+      <td>Observation method [urn]<br /><span class="geosciml">MappedFeature/observationMethod</span></td>
+      <td class="obs">M</td>
+      <td class="obs">Always <b>urn:cgi:classifier:CGI:MappedFeatureObservationMethod:201001:compilation</b></td>
+   </tr>
+   <tr>
+      <td>observationMethod<br />[string]</td>
+      <td>O</td>
+      <td>ObservationMethod is a convenience property to provide observation metadata. Example values might include &#8216;field observation by author&#8217;, &#8216;compilation from published maps&#8217;, &#8216;air photo interpretation&#8217;. Recommend using the CGI Feature Observation Method vocabulary.</td>
+   </tr>
+   <tr>
+      <td class="label">The positional accurancy [numerical value]<br /><span class="geosciml">MappedFeature/positionalAccuracy</span></td>
+      <td class="obs">M</td>
+      <td class="obs">It is recommended that the same, approximate, value be given for all MappedFeatures and will generally be <b>250</b></td>
+   </tr>
+   <tr>
+      <td class="label2">positionalAccuracy<br />[string]</td>
+      <td>O</td>
+      <td>accuracy may be provided, e.g. a term from a controlled vocabulary. Vocabulary used should be described in the dataset metadata. For polygon mapped features this is intended for use to indicate the position uncertainty of the contact and fault features bounding the outcrop polygon, which is only necessary if the associated line features are not included with the polygons.</td>
+   </tr>
+   <tr style="background:#EFEFEF">
+      <td>The sampling frame [urn]<br /><span class="geosciml">MappedFeature/samplingFrame</span></td>
+      <td class="obs">M</td>
+      <td class="obs">This property should be set to <b>urn:cgi:feature:CGI:EarthNaturalSurface</b> for the surface map and <b>urn:cgi:feature:CGI:BedrockSurface</b> for the bedrock map</td>
+   </tr>
+   <tr>
+      <td>The sampling frame</td>
+      <td>-</td>
+      <td>There is no corresponding value in GeoSciML-Portrayal</td>
+   </tr>
+   <tr>
+      <td class="label">The geometry<br /><span class="geosciml">MappedFeature/shape</span></td>
+      <td>M</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td class="label2">shape<br />[GM_Object (GM_polygon)]</td>
+      <td>M</td>
+      <td>Geometry defining the extent of the feature of interest.</td>
+   </tr>
+   <tr class="subtitle">
+      <td colspan="3" class="obs"><i>featureMember/MappedFeature/specification/GeologicUnit</i><br />The following data are the attributes of the geologic unit which the current mappedFeature is a part of</td>
+   </tr>
+   <tr>
+      <td class="label">A unique Geologic Unit ID [Any type]<br /><span class="geosciml">GeologicUnit id</span></td>
+      <td class="obs">M</td>
+      <td class="obs">Each GeologicUnit should be given a unique identifier</td>
+   </tr>
+   <tr>
+      <td class="label2">geologicUnitType<br />[string]</td>
+      <td>O</td>
+      <td>Type of GeologicUnit (as defined in GeoSciML).</td>
+   </tr>
+   <tr>
+      <td class="label">The name of the geologic Unit<br /><span class="geosciml">GeologicUnit/name</span></td>
+      <td class="obs">M</td>
+      <td class="obs">Could be a simple name (text) or a urn (see the WP3 explanatory notes)</td>
+   </tr>
+   <tr>
+      <td class="label2">name<br />[string]</td>
+      <td>O</td>
+      <td>Display name for the GeologicUnit; this can be used to put in a geologic unit name, or more likely an abbreviation used to label outcrops of the unit in a map display.</td>
+   </tr>
+   <tr>
+      <td class="label">The &#8220;free text&#8221; description<br /><span class="geosciml">GeologicUnit/description</span></td>
+      <td>O</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td class="label2">description<br />[string]</td>
+      <td>O</td>
+      <td>Text description of the GeologicUnit, typically taken from an entry on a geological map legend.</td>
+   </tr>
+   <tr>
+      <td class="label">The geologic unit type [urn]<br /><span class="geosciml">GeologicUnit/geologicUnitType</span></td>
+      <td class="obs">M</td>
+      <td class="obs">Use the 1GE vocabulary &#8220;<a href="../1GE/VocabXL/1GE_GeologicUnitType.xls" target="download">GeologicUnitType</a>&#8221;</td>
+   </tr>
+   <tr>
+      <td class="label2">geologicUnitType_uri<br />[string]</td>
+      <td>M</td>
+      <td>URI referring to a controlled concept from a vocabulary defining the GeologicUnit types. Mandatory property - if no value is provided then a URI referring to a controlled concept explaining why the value is nil must be provided.</td>
+   </tr>
+   <tr style="background:#EFEFEF">
+      <td>The observation method [urn]<br /><span class="geosciml">GeologicUnit/observationMethod</span></td>
+      <td class="obs">M</td>
+      <td class="obs">either <b>urn:cgi:classifier:CGI:FeatureObservationMethod:201001:data_from_single_published_description</b><br />where the property values are derived from a single source document, or<br /><b>urn:cgi:classifier:CGI:FeatureObservationMethod:201001:synthesis_of_multiple_published_descriptions</b><br />where they are derived from multiple source documents.</td>
+   </tr>
+   <tr>
+      <td>observationMethod<br />[string]</td>
+      <td>O</td>
+      <td>ObservationMethod is a convenience property to provide observation metadata. Example values might include &#8216;field observation by author&#8217;, &#8216;compilation from published maps&#8217;, &#8216;air photo interpretation&#8217;. Recommend using the CGI Feature Observation Method vocabulary.</td>
+   </tr>
+   <tr style="background:#EFEFEF">
+      <td>The purpose<br /><span class="geosciml">GeologicUnit/purpose</span></td>
+      <td class="obs">M</td>
+      <td class="obs">For OneGeology-Europe the Purpose property should be set to: <b>typical_norm</b>.</td>
+   </tr>
+   <tr>
+      <td>The purpose</td>
+      <td>-</td>
+      <td>There is no corresponding property in GeoSciML-Portrayal</td>
+   </tr>
+   <tr>
+      <td class="label">Body Morphology [urn]<br /><span class="geosciml">GeologicUnit/bodyMorphology</span></td>
+      <td class="obs">O</td>
+      <td class="obs">For dykes the GeologicUnit bodyMorphology property should always be set to<b>urn:cgi:classifier:CGI:GeologicUnitMorphology:201001:dike</b> In any other case, the value is empty.</td>
+   </tr>
+   <tr>
+      <td class="label2">Body Morphology</td>
+      <td>-</td>
+      <td>There is no corresponding property in GeoSciML-Portrayal</td>
+   </tr>
+   <tr class="subtitle2">
+      <td colspan="3" class="obs"><i>GeologicUnit/preferredAge/GeologicEvent</i><br />The following attributes describe the age of formation of the geologic unit</td>
+   </tr>
+   <tr>
+      <td class="label">The name (Orogenic Event) [urn]<br /><span class="geosciml">GeologicEvent/name</span></td>
+      <td class="obs">O</td>
+      <td class="obs">Only given where the Geologic Unit was formed by the orogenic event. Use the 1GE vocabulary &#8220;<a href="../1GE/VocabXL/1GE_Orogenic_Events.xls" target="download">OrogenicEvents</a>&#8221;.</td>
+   </tr>
+   <tr>
+      <td class="label2">The name (Orogenic Event)</td>
+      <td>-</td>
+      <td>There is no corresponding property in GeoSciML-Portrayal</td>
+   </tr>
+   <tr>
+      <td class="label">The event Age - Lower [urn]<br /><span class="geosciml">GeologicEvent/eventAge/.../lower</span></td>
+      <td class="obs">M</td>
+      <td class="obs">Use the 1GE vocabulary &#8220;<a href="../1GE/VocabXL/1GE_Ages.xls" target="download">Ages</a>&#8221;</td>
+   </tr>
+   <tr>
+      <td class="label2">representativeOlderAge_uri<br />[string]</td>
+      <td>M</td>
+      <td>URI referring to a controlled concept specifying the most rep-resentative older value in a range of stratigraphic age intervals for the GeologicUnit. This will be defined entirely at the discretion of the data provider and may be a single event selected from the geologic feature&#8217;s geological history or a value summarizing all or part of the feature&#8217;s history.</td>
+   </tr>
+   <tr>
+      <td class="label">The event Age - Upper [urn]<br /><span class="geosciml">GeologicEvent/eventAge/.../upper</span></td>
+      <td class="obs">M</td>
+      <td class="obs">Use the 1GE vocabulary &#8220;<a href="../1GE/VocabXL/1GE_Ages.xls" target="download">Ages</a>&#8221;</td>
+   </tr>
+   <tr>
+      <td class="label2">representativeYoungerAge_uri<br />[string]</td>
+      <td>M</td>
+      <td>URI referring to a controlled concept specifying the most representative younger value in a range of stratigraphic age intervals for the GeologicUnit. This will be defined entirely at the discretion of the data provider and may be a single event selected from the geologic feature&#8217;s geological history or a value summarizing all or part of the feature&#8217;s history.</td>
+   </tr>
+   <tr>
+      <td class="label">The event process [urn]<br /><span class="geosciml">GeologicEvent/eventProcess</span></td>
+      <td class="obs">M</td>
+      <td class="obs">Record the process that formed the Geologic Unit. Use the 1GE vocabulary &#8220;<a href="../1GE/VocabXL/1GE_EventProcess.xls" target="download">EventProcess</a>&#8221;.</td>
+   </tr>
+   <tr>
+      <td class="label2">The event process</td>
+      <td>-</td>
+      <td>There is no corresponding property in GeoSciML-Portrayal</td>
+   </tr>
+   <tr>
+      <td class="label">The event environment [urn]<br /><span class="geosciml">GeologicEvent/eventEnvironment</span></td>
+      <td class="obs">O</td>
+      <td class="obs">Can be used to describe the environment which the Geologic Unit was formed. Use the 1GE vocabulary "<a href="../1GE/VocabXL/1GE_EventEnvironment.xls" target="download">EventEnvironment</a>".</td>
+   </tr>
+   <tr>
+      <td class="label2">The event environment</td>
+      <td>-</td>
+      <td>There is no corresponding property in GeoSciML-Portrayal</td>
+   </tr>
+   <tr class="subtitle2">
+      <td colspan="3" class="obs"><i>GeologicUnit/geologicHistory/GeologicEvent</i> <br />The following attributes describe a serie of geologic events that led to the formation of the geologic unit. To describe such a geologic history is <i>not</i> mandatory. But for each geologic history / geologic event described, one event age and at least one event process should be described. The rules are the same that for the preferred age. It is up to each data provider to describe 0 or n geologic events of the geologic history.</td>
+   </tr>
+   <tr>
+      <td class="label">The name (for Orogenic Event) [urn]<br /><span class="geosciml">GeologicEvent/name</span></td>
+      <td class="obs">O</td>
+      <td class="obs">Use the vocabulary &#8220;<a href="../1GE/VocabXL/1GE_Orogenic_Events.xls" target="download">OrogenicEvents</a>&#8221;</td>
+   </tr>
+   <tr>
+      <td class="label2">The name (for Orogenic Event)</td>
+      <td>-</td>
+      <td>There is no corresponding property in GeoSciML-Portrayal</td>
+   </tr>
+   <tr>
+      <td class="label">The event Age<br /><span class="geosciml">GeologicEvent/eventAge</span></td>
+      <td class="obs">M</td>
+      <td class="obs">Can be defined as a range of urn [lower_age, upper_age], as a range of numerical values, as a single numerical value, or as a single urn. In the case of urns, use the 1GE vocabulary "<a href="../1GE/VocabXL/1GE_Ages.xls" target="download">Ages</a>"</td>
+   </tr>
+   <tr>
+      <td class="label2">The event Age</td>
+      <td>-</td>
+      <td>There is no corresponding property in GeoSciML-Portrayal</td>
+   </tr>
+   <tr>
+      <td class="label">The event process [urn]<br /><span class="geosciml">GeologicEvent/eventProcess</span></td>
+      <td class="obs">M</td>
+      <td rowspan="3" class="obs">It is up to each data provider to present several event process (therefore, several attributes with distinct names) for describing the current geologic event of the geologic history. Use the 1GE vocabulary &#8220;<a href="../1GE/VocabXL/1GE_EventProcess.xls" target="download">EventProcess</a>&#8221;.</td>
+   </tr>
+   <tr>
+      <td class="label">...</td>
+      <td class="obs">O</td>
+   </tr>
+   <tr>
+      <td class="label">The event process [urn]</td>
+      <td class="obs">O</td>
+   </tr>
+   <tr>
+      <td class="label2">geologicHistory<br />[string]</td>
+      <td>O</td>
+      <td>Text (possibly formatted with formal syntax) description of the age of the GeologicUnit (where age is a sequence of events and may include process and environment information).</td>
+   </tr>
+   <tr>
+      <td class="label">The event environment [urn]<br /><span class="geosciml">GeologicEvent/eventEnvironment</span></td>
+      <td class="obs">O</td>
+      <td rowspan="3" class="obs">It is up to each data provider to present several event environment (therefore, several attributes with distinct names) for describing the current geologic event of the geologic history. Use the 1GE vocabulary &#8220;<a href="../1GE/VocabXL/1GE_EventEnvironment.xls" target="download">EventEnvironment</a>&#8221;</td>
+   </tr>
+   <tr>
+      <td class="label">...</td>
+      <td class="obs">O</td>
+   </tr>
+   <tr>
+      <td class="label">The event environment [urn]</td>
+      <td class="obs">O</td>
+   </tr>
+   <tr>
+      <td class="label2">The event environment</td>
+      <td>-</td>
+      <td>There is no corresponding property in GeoSciML-Portrayal</td>
+   </tr>
+   <tr class="subtitle2">
+      <td colspan="3" class="obs"><i>GeologicUnit/composition/CompositionPart</i><br />The following attributes describe the lithology of the geologic unit. Some GeologicUnits will have a single CompositionPart, but others may have multiple CompositionParts, such as interbedded layers, each of which can be described with a distinct CompositionPart. Each CompositionPart has three properties – the lithology; the role of the CompositionPart in the GeologicUnit as a whole; and the proportion of the CompositionPart in the GeologicUnit as a whole. <i>For example, if the geologic units of a given dataset have in some cases 5 distincts lithology, but not more, then the database (or shapefile) will have 5 attributes lithology, role and proportion.</i> the main lithology (proportion=all or predominant) attibute will always have a value (at least one lithology is mandatory), but the others will be often empty.</td>
+   </tr>
+   <tr>
+      <td class="label">Lithology [urn]<br /><span class="geosciml">CompositionPart/lithology</span></td>
+      <td class="obs">M</td>
+      <td class="obs">Use the 1GE &#8220;<a href="../1GE/VocabXL/1GE_Lithology_.xls" target="download">Lithology</a>&#8221; vocabulary</td>
+   </tr>
+   <tr>
+      <td class="label2">representativeLithology_uri<br />[string]</td>
+      <td>M</td>
+      <td>URI referring to a controlled concept specifying the characteristic or representative lithology of the unit. This may be a concept that defines the super-type of all lithology values present within a GeologicUnit or a concept defining the lithology of the dominant CompositionPart (as defined in GeoSciML) of the unit. This identifier is intended for use as the symbol key for a lithologic map portrayal of the geologic unit features.</td>
+   </tr>
+   <tr>
+      <td class="label">Lithology [urn]<br /><span class="geosciml">CompositionPart/lithology</span></td>
+      <td class="obs">M</td>
+      <td class="obs">Use the 1GE &#8220;<a href="../1GE/VocabXL/1GE_Lithology_.xls" target="download">Lithology</a>&#8221; vocabulary</td>
+   </tr>
+   <tr>
+      <td class="label2">Lithology<br />[string]</td>
+      <td>O</td>
+      <td>Text (possibly formatted with formal syntax) description of the GeologicUnit&#8217;s lithology.</td>
+   </tr>
+   <tr style="background:#EFEFEF">
+      <td>Role [urn]<br /><span class="geosciml">CompositionPart/role</span></td>
+      <td class="obs">M</td>
+      <td class="obs">
+         <ul>
+            <li>Where the CompositionPart is the only one in the GeologicUnit the role property should be set to <b>urn:cgi:classifier:CGI:GeologicUnitPartRole:200811:only_part</b></li>
+            <li>Where the CompositionPart is one of several in the GeologicUnit the role property should be set to <b>urn:cgi:classifier:CGI:GeologicUnitPartRole:200811:unspecified_part_role</b></li>
+            <li>See also the detailed explanation in the WP3 document: the GeologicUnitPartRole has other values in serveral cases  ("Molasse", "Ophiolitic mélange", ...).</li>
+         </ul>
+      </td>
+   </tr>
+   <tr>
+      <td>Role</td>
+      <td>-</td>
+      <td>There is no corresponding property in GeoSciML-Portrayal</td>
+   </tr>
+   <tr style="background:#EFEFEF">
+      <td>Proportion [urn]<br /><span class="geosciml">CompositionPart/proportion</span></td>
+      <td class="obs">M</td>
+      <td class="obs">
+         <ul>
+            <li>Where there is only one CompositionPart is the GeologicUnit the Proportion property should be set to <b>urn:cgi:classifier:CGI:ProportionTerm:201001:all</b>.</li>
+            <li>Where there are multiple CompositionParts in the GeologicUnit the CompositionPart that comprises the single largest proportion of the GeologicUnit should be given a Proportion value of <b>urn:cgi:classifier:CGI:ProportionTerm:201001:predominant</b>.</li>
+            <li>All other CompositionParts should be given a Proportion value of <b>urn:cgi:classifier:CGI:ProportionTerm:201001:subordinate</b>.</li>
+            <li>Note that where there are multiple CompositionParts in the GeologicUnit one must be given a value of <b>urn:cgi:classifier:CGI:ProportionTerm:201001:predominant</b> and this will be the one used for portrayal of the lithology of the GeologicUnit.</li>
+         </ul>
+      </td>
+   </tr>
+   <tr>
+      <td>Proportion</td>
+      <td>-</td>
+      <td>There is no corresponding property in GeoSciML-Portrayal</td>
+   </tr>
+   <tr class="subtitle2">
+      <td colspan="3" class="obs">GeologicUnit/metamorphicCharacter/MetamorphicDescription<br />The following attributes describe the metamorphism of a geologic unit. It is optional. If a data provider do not wish to describe metamorphism for any of the geologic units, then these attributes are not required. Only one Metamorphic description can be given</td>
+   </tr>
+   <tr>
+      <td class="label">Metamorphic facies [urn]<br /><span class="geosciml">MetamorphicDescription/metamorphicFacies</span></td>
+      <td class="obs">O</td>
+      <td rowspan="3" class="obs">Use of the 1GE vocabulary &#8220;<a href="../1GE/VocabXL/1GE_MetamorphicFacies.xls" target="download">MetamorphicFacies</a>&#8221;. Several Metamorphic facies can be given</td>
+   </tr>
+   <tr>
+      <td class="label">...</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td class="label">Metamorphic facies [urn]</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td class="label">Metamorphic grade [urn]<br /><span class="geosciml">MetamorphicDescription/metamorphicGrade</span></td>
+      <td class="obs">O</td>
+      <td class="obs">Use of the 1GE vocabulary &#8220;<a href="../1GE/VocabXL/1GE_MetamorphicGrade.xls" target="download">"MetamorphicGrade</a>&#8221;</td>
+   </tr>
+   <tr>
+      <td colspan="3" class="obs"><i><b>MetamorphicDescription/protolithLithology/RockMaterial</b></i><br />The following attributes describe the protolith lithology of the metamorphic description. It is optional, and there can be several protolith lithology. If a protolith is given, then consolidation degree and lithology are mandatory</td>
+   </tr>
+   <tr>
+      <td class="label">lithology [urn]<br /><span class="geosciml">RockMaterial/lithology</span></td>
+      <td></td>
+      <td class="obs">Use the 1GE vocabulary &#8220;<a href="../1GE/VocabXL/1GE_Lithology_.xls" target="download">Lithology</a>&#8221;.</td>
+   </tr>
+   <tr style="background:#EFEFEF">
+      <td>consolidation degree [urn]<br /><span class="geosciml">RockMaterial/consolidationDegree</span></td>
+      <td></td>
+      <td class="obs">If a lithology is given, then the consolidationDegree should always be set to<b>urn:cgi:classifier:CGI:ConsolidationDegree:200811:consolidation_not_specified</b></td>
+   </tr>
+   <tr style="background:#EFEFEF">
+      <td>purpose<br /><span class="geosciml">RockMaterial/purpose</span></td>
+      <td class="obs">O</td>
+      <td class="obs">If a lithology is given, then the purpore should always be set to <b>typical_norm</b></td>
+   </tr>
+   <tr>
+      <td class="label2">Metamorphic character, description...</td>
+      <td>-</td>
+      <td>There are no corresponding properties in GeoSciML-Portrayal</td>
+   </tr>
 </table><div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>In OneGeology-Europe the only types of structure that are being used are Faults and Contacts. Contacts are only being used to describe Calderas, Impact Craters, and Glacial Stationary Lines. Below we have separated Faults from Contacts becuase in GeoSciML-Portrayal they have different mappings.</p>
@@ -329,7 +589,7 @@ cookboook for more information.</p>
 <h2>Mapping OneGeology-Europe GEOLOGIC UNITS to GeoSciML-Portrayal ShearDisplacementStructureView features<a class="headerlink" href="#mapping-onegeology-europe-geologic-units-to-geosciml-portrayal-sheardisplacementstructureview-features" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Note that whilst many of the properties required for the OneGeology-Europe GEOLOGIC STRUCTURES mapping are optional, or not specified by GeoSciML-Portrayal ShearDisplacementStructureView features, GeoSciML-Portrayal mandates other properties (that is properties not found in OneGeology-Europe) are defined, such as movementType_uri and deformationStyle_uri. Please refer to the GeoSciML-Portrayal ShearDisplacementStructureView features page of the cookboook for more information.</p>
+<p>Whilst many of the properties required for the OneGeology-Europe GEOLOGIC STRUCTURES mapping are optional, or not specified by GeoSciML-Portrayal ShearDisplacementStructureView features, GeoSciML-Portrayal mandates other properties (that is properties not found in OneGeology-Europe) are defined, such as movementType_uri and deformationStyle_uri. Please refer to the GeoSciML-Portrayal ShearDisplacementStructureView features page of the cookboook for more information.</p>
 </div>
 <table class="cadre">
 <caption>Mapping OneGeology-Europe GEOLOGIC UNITS to GeoSciML-Portrayal ShearDisplacementStructureView features</caption>
