@@ -32,14 +32,14 @@ Creating MapServer CLASS definitions from ArcView legends
          | |ArcView map view showing symbolized data|
          | ArcView map view showing symbolized data
 
-         | |Loading the Gix ArcView extension|
-         | Loading the Gix ArcView extension
+         | |Loading the Gix ArcView extension 1|
+         | Loading the Gix ArcView extension 1
 
          Load the Gix Export Tool Extension (File — Extensions, tick
          required extension, click OK).
 
-         | |Loading the Gix ArcView extension|
-         | Loading the Gix ArcView extension
+         | |Loading the Gix ArcView extension 2|
+         | Loading the Gix ArcView extension 2
 
          Complete the following steps to convert your project to a
          MapServer map file.
@@ -126,33 +126,29 @@ Creating MapServer CLASS definitions from ArcView legends
 
 
 
-.. |OneGeology logo| image:: appendixb/1a3d7a0fc8cbefb032a4aba3fe6782e68ee5ea62.png
-   :class: nob
-   :name: oneGeologylogo
-   :target: /home.html
-.. |ArcView map view showing symbolized data| image:: /images/wmsCookbook/ArcView1.jpg
+.. |ArcView map view showing symbolized data| image:: appendixb/ArcView1.jpg
    :width: 600px
    :height: 466px
-.. |Loading the Gix ArcView extension| image:: /images/wmsCookbook/ArcView2.jpg
+.. |Loading the Gix ArcView extension 1| image:: appendixb/ArcView2.jpg
    :width: 600px
    :height: 490px
-.. |Loading the Gix ArcView extension| image:: /images/wmsCookbook/ArcView3.jpg
+.. |Loading the Gix ArcView extension 2| image:: appendixb/ArcView3.jpg
    :width: 600px
    :height: 501px
-.. |ArcView, Exporting your View| image:: /images/wmsCookbook/ArcView4.jpg
+.. |ArcView, Exporting your View| image:: appendixb/ArcView4.jpg
    :width: 600px
    :height: 543px
-.. |Gix export tool, selecting output format| image:: /images/wmsCookbook/ArcView5.jpg
+.. |Gix export tool, selecting output format| image:: appendixb/ArcView5.jpg
    :height: 242px
-.. |Gix export tool, selecting output file| image:: /images/wmsCookbook/ArcView6.jpg
+.. |Gix export tool, selecting output file| image:: appendixb/ArcView6.jpg
    :height: 242px
-.. |Gix export tool, details for the main, and reference maps| image:: /images/wmsCookbook/ArcView7.jpg
+.. |Gix export tool, details for the main, and reference maps| image:: appendixb/ArcView7.jpg
    :height: 242px
-.. |Gix export tool, details for the legend| image:: /images/wmsCookbook/ArcView8.jpg
+.. |Gix export tool, details for the legend| image:: appendixb/ArcView8.jpg
    :height: 242px
-.. |Gix export tool, details for the scale bar| image:: /images/wmsCookbook/ArcView9.jpg
+.. |Gix export tool, details for the scale bar| image:: appendixb/ArcView9.jpg
    :height: 242px
-.. |Gix export tool, OGC metadata details| image:: /images/wmsCookbook/ArcView10.jpg
+.. |Gix export tool, OGC metadata details| image:: appendixb/ArcView10.jpg
    :height: 242px
-.. |Gix export tool, character set encoding and symbology options| image:: /images/wmsCookbook/ArcView11.jpg
+.. |Gix export tool, character set encoding and symbology options| image:: appendixb/ArcView11.jpg
    :height: 242px
