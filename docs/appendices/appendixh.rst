@@ -196,9 +196,3 @@ Using the MS4W Apache http server as a reverse proxy to Tomcat
 
          To do this in Jetty you need to make a similar change in the
          jetty.xml file
-
-
-.. |OneGeology logo| image:: appendixh/1a3d7a0fc8cbefb032a4aba3fe6782e68ee5ea62.png
-   :class: nob
-   :name: oneGeologylogo
-   :target: /home.html

@@ -110,10 +110,3 @@ Recommend ESRI shapefile definitions for GeoSciML-Portrayal
          genericSymbolizer            genericSym           String
          shape                        SHAPE                ESRI geometry
          ============================ ==================== ===================
-
-
-
-.. |OneGeology logo| image:: appendixk/1a3d7a0fc8cbefb032a4aba3fe6782e68ee5ea62.png
-   :class: nob
-   :name: oneGeologylogo
-   :target: /home.html

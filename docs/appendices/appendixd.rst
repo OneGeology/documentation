@@ -70,10 +70,6 @@ Creating MapServer CLASS definitions using QGIS
          4.3 <4_3.html>`__ to complete the set-up process.
 
 
-.. |OneGeology logo| image:: appendixd/1a3d7a0fc8cbefb032a4aba3fe6782e68ee5ea62.png
-   :class: nob
-   :name: oneGeologylogo
-   :target: /home.html
 .. |QGIS Enabling the MapServer Export plugin| image:: appendixd/da400f467b471213c167ec57a6d7c4fd39ad96a9.jpg
    :width: 700px
    :height: 612px

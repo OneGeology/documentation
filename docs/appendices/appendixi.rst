@@ -352,9 +352,3 @@ OneGeology English keyword dictionary picklist
          | Groundwater body                 | Principal reporting unit with    |
          |                                  | hydraulically coherent entities  |
          +----------------------------------+----------------------------------+
-
-
-.. |OneGeology logo| image:: appendixi/1a3d7a0fc8cbefb032a4aba3fe6782e68ee5ea62.png
-   :class: nob
-   :name: oneGeologylogo
-   :target: /home.html
