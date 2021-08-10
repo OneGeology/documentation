@@ -21,7 +21,7 @@ There are two main areas being covered; first is how to use OneGeology and secon
 
 These pages are specifically aimed at those involved in the detailed technical aspects of OneGeology and the processes required to provide your geological map data to the web. Minimum technical requirements and specifications are outlined and the levels of involvement possible are explained.
 
-For a brief overview of the aims and progress of the initiative, please click 'here <http://www.onegeology.org/what_is/home.html>'_.
+For a brief overview of the aims and progress of the initiative, please click `here <http://www.onegeology.org/what_is/home.html>`_.
 
 For non-specialists
 --------------------
@@ -132,7 +132,7 @@ To setup
 
 ## Source files
 
-Original documentation was a collection of rst and html files. THe rst files were copied and merged together to the current format in this repository. HTML files were convertef using pandoc as below:
+Original documentation was a collection of rst and html files. THe rst files were copied and merged together to the current format in this repository. HTML files were converted using pandoc as below:
 
 ::
 
