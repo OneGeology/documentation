@@ -1,0 +1,15 @@
+.. code-block:: xml
+
+ <dataStore>
+  <id>gsmlb_MappedFeature_datastore</id>
+  <name>gsmlb_MappedFeature</name>
+  <enabled>true</enabled>
+  <workspace>
+   <id>gsmlb_workspace</id>
+  </workspace>
+  <connectionParameters>
+   <entry key="namespace">http://www.opengis.net/gsml/4.1/GeoSciML-Basic</entry>
+   <entry key="url">file:workspaces/gsmlb/gsmlb_MappedFeature/gsmlb_MappedFeature.xml</entry>
+   <entry key="dbtype">app-schema</entry>
+  </connectionParameters>
+ </dataStore>

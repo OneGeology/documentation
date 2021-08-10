@@ -409,6 +409,8 @@ Known issues
 
       <?xml version="1.0" encoding="utf-8" ?>
 
+.. _use_portal_thematic_analysis:
+
 Analysis tools
 ---------------
 
@@ -817,6 +819,8 @@ You may right click on any layer in the layer list and go to *Properties* to get
    :alt: Layer properties metadata
 
    Figure 6 - Layer properties metadata
+
+.. _use_qgis_simple_wfs:
 
 Using QGIS to access simple feature WFS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

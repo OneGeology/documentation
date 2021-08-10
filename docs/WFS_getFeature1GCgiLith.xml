@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wfs:GetFeature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.opengis.net/wfs/2.0 http://schemas.opengis.net/wfs/2.0/wfs.xsd"
+ xmlns:wfs="http://www.opengis.net/wfs/2.0" 
+ xmlns:fes="http://www.opengis.net/fes/2.0"
+ xmlns:gsmlb="http://www.opengis.net/gsml/4.1/GeoSciML-Basic"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ service="WFS" version="2.0.0" count="100">
+ <wfs:Query typeNames="gsmlb:MappedFeature">
+  <fes:Filter>
+   <fes:Or>
+    <fes:PropertyIsEqualTo>
+     <fes:ValueReference>gsmlb:specification/gsmlb:GeologicUnit/gsmlb:composition/gsmlb:CompositionPart/gsmlb:material/gsmlb:RockMaterial/gsmlb:lithology/@xlink:href</fes:ValueReference>
+     <fes:Literal>http://resource.geosciml.org/classifier/cgi/lithology/limestone</fes:Literal>
+    </fes:PropertyIsEqualTo>
+    <fes:PropertyIsEqualTo>
+     <fes:ValueReference>gsmlb:specification/gsmlb:GeologicUnit/gsmlb:composition/gsmlb:CompositionPart/gsmlb:material/gsmlb:RockMaterial/gsmlb:lithology/@xlink:href</fes:ValueReference>
+     <fes:Literal>http://resource.geosciml.org/classifier/cgi/lithology/chalk</fes:Literal>
+    </fes:PropertyIsEqualTo>
+    <fes:PropertyIsEqualTo>
+     <fes:ValueReference>gsmlb:specification/gsmlb:GeologicUnit/gsmlb:composition/gsmlb:CompositionPart/gsmlb:material/gsmlb:RockMaterial/gsmlb:lithology/@xlink:href</fes:ValueReference>
+     <fes:Literal>http://resource.geosciml.org/classifier/cgi/lithology/travertine</fes:Literal>
+    </fes:PropertyIsEqualTo>
+   </fes:Or>
+  </fes:Filter>
+ </wfs:Query>
+</wfs:GetFeature>
