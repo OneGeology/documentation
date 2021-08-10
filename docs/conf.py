@@ -30,8 +30,11 @@ import sphinx_rtd_theme
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx_rtd_theme'
+    'sphinx.ext.todo', 'sphinx_rtd_theme'
 ]
+
+# Whether to include todo notes in output
+todo_include_todos = False
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
