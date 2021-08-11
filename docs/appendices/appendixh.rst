@@ -52,7 +52,7 @@ Using the MS4W Apache http server as a reverse proxy to Tomcat
          Now we need to edit the Apache HTTP server httpd.conf file. If
          you have installed the MS4W apache http server as part of the
          ms4w-and-exemplar-data.zip download this would be located at:
-         c:\ms4w\Apache\conf\httpd.conf.
+         c:\\ms4w\\Apache\\conf\\httpd.conf.
 
          Check that the following modules are uncommented (by removing
          the # sign from the line start).
