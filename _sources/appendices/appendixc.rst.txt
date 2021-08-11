@@ -33,8 +33,3 @@ Creating MapServer CLASS definitions from ARCGIS legends
          center <http://arcscripts.esri.com/details.asp?dbid=12766>`__
          (http://arcscripts.esri.com/details.asp?dbid=12766), the author
          would like an email if you use it and like it.
-
-.. |OneGeology logo| image:: appendixc/1a3d7a0fc8cbefb032a4aba3fe6782e68ee5ea62.png
-   :class: nob
-   :name: oneGeologylogo
-   :target: /home.html

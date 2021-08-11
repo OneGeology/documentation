@@ -1,40 +1,46 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Creating MapServer CLASS definitions from ArcView legends &mdash; OneGeology Documentation 1.0 documentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/OneGeology_favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Creating MapServer CLASS definitions from ARCGIS legends" href="appendixc.html" />
@@ -82,6 +88,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -114,6 +121,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -148,11 +156,13 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../appendices.html">Appendices</a> &raquo;</li>
         
@@ -161,7 +171,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/appendices/appendixb.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -196,32 +206,32 @@ the instructions to install the tool as an ArcView 3.x
 extension. Having installed the Gix Export Tool, create or open
 an ArcView project containing your symbolized data.</p>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="images/wmsCookbook/ArcView1.jpg"><img alt="ArcView map view showing symbolized data" src="images/wmsCookbook/ArcView1.jpg" style="width: 600px; height: 466px;" /></a></div>
+<div class="line"><a class="reference internal" href="../_images/ArcView1.jpg"><img alt="ArcView map view showing symbolized data" src="../_images/ArcView1.jpg" style="width: 600px; height: 466px;" /></a></div>
 <div class="line">ArcView map view showing symbolized data</div>
 </div>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="images/wmsCookbook/ArcView3.jpg"><img alt="Loading the Gix ArcView extension" src="images/wmsCookbook/ArcView3.jpg" style="width: 600px; height: 501px;" /></a></div>
-<div class="line">Loading the Gix ArcView extension</div>
+<div class="line"><a class="reference internal" href="../_images/ArcView2.jpg"><img alt="Loading the Gix ArcView extension 1" src="../_images/ArcView2.jpg" style="width: 600px; height: 490px;" /></a></div>
+<div class="line">Loading the Gix ArcView extension 1</div>
 </div>
 <p>Load the Gix Export Tool Extension (File — Extensions, tick
 required extension, click OK).</p>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="images/wmsCookbook/ArcView3.jpg"><img alt="Loading the Gix ArcView extension" src="images/wmsCookbook/ArcView3.jpg" style="width: 600px; height: 501px;" /></a></div>
-<div class="line">Loading the Gix ArcView extension</div>
+<div class="line"><a class="reference internal" href="../_images/ArcView3.jpg"><img alt="Loading the Gix ArcView extension 2" src="../_images/ArcView3.jpg" style="width: 600px; height: 501px;" /></a></div>
+<div class="line">Loading the Gix ArcView extension 2</div>
 </div>
 <p>Complete the following steps to convert your project to a
 MapServer map file.</p>
 <ol class="arabic">
 <li><p>Select View — Export View.</p>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="images/wmsCookbook/ArcView4.jpg"><img alt="ArcView, Exporting your View" src="images/wmsCookbook/ArcView4.jpg" style="width: 600px; height: 543px;" /></a></div>
+<div class="line"><a class="reference internal" href="../_images/ArcView4.jpg"><img alt="ArcView, Exporting your View" src="../_images/ArcView4.jpg" style="width: 600px; height: 543px;" /></a></div>
 <div class="line">ArcView, Exporting your View</div>
 </div>
 </li>
 <li><p>The first screen asks you to select your output file format
 — choose MapServer map file (.map) and click next.</p>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="images/wmsCookbook/ArcView5.jpg"><img alt="Gix export tool, selecting output format" src="images/wmsCookbook/ArcView5.jpg" style="height: 242px;" /></a></div>
+<div class="line"><a class="reference internal" href="../_images/ArcView5.jpg"><img alt="Gix export tool, selecting output format" src="../_images/ArcView5.jpg" style="height: 242px;" /></a></div>
 <div class="line">Gix export tool, selecting output format</div>
 </div>
 </li>
@@ -232,7 +242,7 @@ components and paste them into the master map file you have
 been creating elsewhere. Select a location for your output
 file and click next.</p>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="images/wmsCookbook/ArcView6.jpg"><img alt="Gix export tool, selecting output file" src="images/wmsCookbook/ArcView6.jpg" style="height: 242px;" /></a></div>
+<div class="line"><a class="reference internal" href="../_images/ArcView6.jpg"><img alt="Gix export tool, selecting output file" src="../_images/ArcView6.jpg" style="height: 242px;" /></a></div>
 <div class="line">Gix export tool, selecting output file</div>
 </div>
 </li>
@@ -240,7 +250,7 @@ file and click next.</p>
 map. You won’t use these sections so accept the defaults and
 click next.</p>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="images/wmsCookbook/ArcView7.jpg"><img alt="Gix export tool, details for the main, and reference maps" src="images/wmsCookbook/ArcView7.jpg" style="height: 242px;" /></a></div>
+<div class="line"><a class="reference internal" href="../_images/ArcView7.jpg"><img alt="Gix export tool, details for the main, and reference maps" src="../_images/ArcView7.jpg" style="height: 242px;" /></a></div>
 <div class="line">Gix export tool, details for the main, and reference maps</div>
 </div>
 </li>
@@ -248,7 +258,7 @@ click next.</p>
 won’t use these sections so accept the defaults and click
 next.</p>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="images/wmsCookbook/ArcView8.jpg"><img alt="Gix export tool, details for the legend" src="images/wmsCookbook/ArcView8.jpg" style="height: 242px;" /></a></div>
+<div class="line"><a class="reference internal" href="../_images/ArcView8.jpg"><img alt="Gix export tool, details for the legend" src="../_images/ArcView8.jpg" style="height: 242px;" /></a></div>
 <div class="line">Gix export tool, details for the legend</div>
 </div>
 </li>
@@ -256,7 +266,7 @@ next.</p>
 you won’t use these sections so accept the defaults and
 click next.</p>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="images/wmsCookbook/ArcView9.jpg"><img alt="Gix export tool, details for the scale bar" src="images/wmsCookbook/ArcView9.jpg" style="height: 242px;" /></a></div>
+<div class="line"><a class="reference internal" href="../_images/ArcView9.jpg"><img alt="Gix export tool, details for the scale bar" src="../_images/ArcView9.jpg" style="height: 242px;" /></a></div>
 <div class="line">Gix export tool, details for the scale bar</div>
 </div>
 </li>
@@ -264,14 +274,14 @@ click next.</p>
 you won’t use these sections so accept the defaults and
 click next.</p>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="images/wmsCookbook/ArcView10.jpg"><img alt="Gix export tool, OGC metadata details" src="images/wmsCookbook/ArcView10.jpg" style="height: 242px;" /></a></div>
+<div class="line"><a class="reference internal" href="../_images/ArcView10.jpg"><img alt="Gix export tool, OGC metadata details" src="../_images/ArcView10.jpg" style="height: 242px;" /></a></div>
 <div class="line">Gix export tool, OGC metadata details</div>
 </div>
 </li>
 <li><p>The next screen asks for details of final options. Again,
 you won’t use these sections so accept the defaults.</p>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="images/wmsCookbook/ArcView11.jpg"><img alt="Gix export tool, character set encoding and symbology options" src="images/wmsCookbook/ArcView11.jpg" style="height: 242px;" /></a></div>
+<div class="line"><a class="reference internal" href="../_images/ArcView11.jpg"><img alt="Gix export tool, character set encoding and symbology options" src="../_images/ArcView11.jpg" style="height: 242px;" /></a></div>
 <div class="line">Gix export tool, character set encoding and symbology
 options</div>
 </div>
@@ -307,29 +317,29 @@ symbolization.</p>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="appendixc.html" class="btn btn-neutral float-right" title="Creating MapServer CLASS definitions from ARCGIS legends" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="appendixa.html" class="btn btn-neutral float-left" title="Converting coordinate system in data files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="appendixc.html" class="btn btn-neutral float-right" title="Creating MapServer CLASS definitions from ARCGIS legends" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="appendixa.html" class="btn btn-neutral float-left" title="Converting coordinate system in data files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, OneGeology
+        &#169; Copyright 2019, OneGeology.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -337,7 +347,6 @@ symbolization.</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

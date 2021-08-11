@@ -525,8 +525,3 @@ Mapping OneGeology-Europe GEOLOGIC UNITS to GeoSciML-Portrayal ContactView featu
 Section last modified: 22 March 2016
 
 `Back <appendixK.html>`__\ \|\ `Next <appendixL_1.html>`__
-
-.. |OneGeology logo| image:: appendixl/1a3d7a0fc8cbefb032a4aba3fe6782e68ee5ea62.png
-   :class: nob
-   :name: oneGeologylogo
-   :target: /home.html

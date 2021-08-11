@@ -97,7 +97,7 @@ To view any other registered geology maps you need to click on the ‘*Add OneGe
       :width: 600
       :alt: OneGeology Portal catalogue map layers listed by Geographic area. Use the options in this window to control which maps are displayed, and how they are displayed
 
-	OneGeology Portal catalogue map layers listed by Geographic area. Use the options in this window to control which maps are displayed, and how they are displayed
+      OneGeology Portal catalogue map layers listed by Geographic area. Use the options in this window to control which maps are displayed, and how they are displayed
 
 Click on the + buttons to expand the levels. Select a map by clicking on the box to the left of the map you wish to view. A tick will appear.
 
@@ -111,13 +111,13 @@ You may navigate around the map using the GIS tools found at the top of the page
 
       GIS tools
 
-   * Zoom in — click on this image and then click on the world background map to zoom in centred on the clicked location. Click and drag a rectangle to zoom to a specific area.
-   * Zoom out — click on this image and then click on the world background map to zoom out centred on the clicked location. Click and drag a rectangle to zoom out from a specific area
-   * View full global extent — click this image to start again with a view of the full world background map.
-   * Pan by clicking and dragging the map to move — click this image and then click and drag on the map to move to a different area (north, west, etc)
-   * Return back to previous map view
-   * If you have gone back to a previous view, you may use this tool to go forward.
-   * Use this tool to get more information about the active map layers (this is termed a GetFeatureInfo request). Select the tool and click the map to open up a new window with detailed information about the geology at that point. The information returned and format of the information varies from map to map and layer to layer dependant upon how much information the provider organization wishes to display and the capabilities of the service.
+* Zoom in — click on this image and then click on the world background map to zoom in centred on the clicked location. Click and drag a rectangle to zoom to a specific area.
+* Zoom out — click on this image and then click on the world background map to zoom out centred on the clicked location. Click and drag a rectangle to zoom out from a specific area
+* View full global extent — click this image to start again with a view of the full world background map.
+* Pan by clicking and dragging the map to move — click this image and then click and drag on the map to move to a different area (north, west, etc)
+* Return back to previous map view
+* If you have gone back to a previous view, you may use this tool to go forward.
+* Use this tool to get more information about the active map layers (this is termed a GetFeatureInfo request). Select the tool and click the map to open up a new window with detailed information about the geology at that point. The information returned and format of the information varies from map to map and layer to layer dependant upon how much information the provider organization wishes to display and the capabilities of the service.
 
 .. figure:: images/GetFInfoR.jpg
       :alt: Example of information that may be retrieved using the information tool
@@ -183,13 +183,13 @@ To find out further information about any map layer you can click the arrow to r
       :width: 600
       :alt: Example of GetCapabilities data that may be obtained from the Active Layer properties dialogue, with pop-up legend from the Legend link
 
-       Example of GetCapabilities data that may be obtained from the Active Layer properties dialogue, with pop-up legend from the Legend link
+      Example of GetCapabilities data that may be obtained from the Active Layer properties dialogue, with pop-up legend from the Legend link
 
    .. figure:: images/GetCapInfoR2.jpg
       :width: 600
       :alt: Example of GetCapabilities data that may be obtained from the Active Layer properties dialogue, with pop-up legend from the Legend link
 
-       Example of GetCapabilities data that may be obtained from the Active Layer properties dialogue, with pop-up legend from the Legend link
+      Example of GetCapabilities data that may be obtained from the Active Layer properties dialogue, with pop-up legend from the Legend link
 
 
    This (above) information is harvested automatically by the OneGeology Portal client software from the GetCapabilities response document of the WMS.
@@ -408,6 +408,8 @@ Known issues
    .. code-block:: xml
 
       <?xml version="1.0" encoding="utf-8" ?>
+
+.. _use_portal_thematic_analysis:
 
 Analysis tools
 ---------------
@@ -818,6 +820,8 @@ You may right click on any layer in the layer list and go to *Properties* to get
 
    Figure 6 - Layer properties metadata
 
+.. _use_qgis_simple_wfs:
+
 Using QGIS to access simple feature WFS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -825,7 +829,7 @@ Using QGIS to access simple feature WFS
 
 To add a WFS layer you need to go through a similar process as you do to add a WMS layer, that is, you must first add the WFS service by clicking on the |wfsBtn| tool on the *Manage Layers Toolbar*, then connect to the service, then select the layer you want to add. Even if the WFS service URL is the same as a WMS connection you already have listed you will need to add the WFS service URL.
 
-.. figure:: use\qgis\qgis_addNewWFSService.png
+.. figure:: images/qgis_addNewWFSService.png
    :alt: Adding a new WFS service
 
    Figure 7 - Adding a new WFS service
@@ -906,7 +910,7 @@ WMS Service Connection
 
 To add a WMS service to your list of available WMS services, on the *Catalog Tree* window, you use the *GIS servers > Add WMS Server* option, and then add the Service URL (without parameters). You may select to use the default service version (which would normally be the highest version) or you may force a specified version depending on your needs.
 
-.. figure:: esri/esri_catalog_addingWms.png
+.. figure:: images/esri_catalog_addingWms.png
    :alt: Adding a WMS service to the list of available services in ArcCatalog
 
    Figure 1 - Adding a WMS service to the list of available services in ArcCatalog

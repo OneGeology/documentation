@@ -4184,9 +4184,3 @@ BGS example service map file
                 END #class
               END #layer
             END #Map File
-
-
-.. |OneGeology logo| image:: appendixe/1a3d7a0fc8cbefb032a4aba3fe6782e68ee5ea62.png
-   :class: nob
-   :name: oneGeologylogo
-   :target: /home.html

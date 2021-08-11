@@ -353,8 +353,3 @@ Considerations for converting a MapServer based OneGeology-Europe service \| One
          Section last modified: 10 December 2015
 
          `Back <appendixL.html>`__ \| `Next <home.html>`__
-
-.. |OneGeology logo| image:: appendixL_1/1a3d7a0fc8cbefb032a4aba3fe6782e68ee5ea62.png
-   :class: nob
-   :name: oneGeologylogo
-   :target: /home.html

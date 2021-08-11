@@ -1,40 +1,46 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Using the MS4W Apache http server as a reverse proxy to Tomcat &mdash; OneGeology Documentation 1.0 documentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/OneGeology_favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="OneGeology English keyword dictionary picklist" href="appendixi.html" />
@@ -82,6 +88,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -114,6 +121,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -148,11 +156,13 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../appendices.html">Appendices</a> &raquo;</li>
         
@@ -161,7 +171,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/appendices/appendixh.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -216,20 +226,20 @@ in your corporate firewall.</p>
 <p>Now we need to edit the Apache HTTP server httpd.conf file. If
 you have installed the MS4W apache http server as part of the
 ms4w-and-exemplar-data.zip download this would be located at:
-c:ms4wApacheconfhttpd.conf.</p>
+c:\ms4w\Apache\conf\httpd.conf.</p>
 <p>Check that the following modules are uncommented (by removing
 the # sign from the line start).</p>
 <p>Change</p>
-<div class="line-block">
-<div class="line">#LoadModule proxy_module modules/mod_proxy.so</div>
-<div class="line">#LoadModule proxy_ajp_module modules/mod_proxy_ajp.so</div>
-<div class="line">#LoadModule proxy_http_module modules/mod_proxy_http.so</div>
+<div class="highlight-apacheconf notranslate"><div class="highlight"><pre><span></span><span class="c">#LoadModule proxy_module modules/mod_proxy.so</span>
+<span class="c">#LoadModule proxy_ajp_module modules/mod_proxy_ajp.so</span>
+<span class="c">#LoadModule proxy_http_module modules/mod_proxy_http.so</span>
+</pre></div>
 </div>
 <p>To:</p>
-<div class="line-block">
-<div class="line">LoadModule proxy_module modules/mod_proxy.so</div>
-<div class="line">LoadModule proxy_ajp_module modules/mod_proxy_ajp.so</div>
-<div class="line">LoadModule proxy_http_module modules/mod_proxy_http.so</div>
+<div class="highlight-apacheconf notranslate"><div class="highlight"><pre><span></span><span class="nb">LoadModule</span> proxy_module modules/mod_proxy.so
+<span class="nb">LoadModule</span> proxy_ajp_module modules/mod_proxy_ajp.so
+<span class="nb">LoadModule</span> proxy_http_module modules/mod_proxy_http.so
+</pre></div>
 </div>
 <p>Note, we have used mod_proxy here as it is included with the
 Apache HTTP Server binaries, but you could use other proxy
@@ -237,16 +247,15 @@ modules such as mod_jk if desired.</p>
 <p>Now you need to add or uncomment the following directives (as
 appropriate for your configuration file); we suggest adding
 these directives at the end of the file for clarity.</p>
-<div class="line-block">
-<div class="line">TraceEnable off</div>
-<div class="line">#Important for security!!</div>
+<div class="highlight-apacheconf notranslate"><div class="highlight"><pre><span></span><span class="nb">TraceEnable</span> <span class="k">off</span>
+<span class="c">#Important for security!!</span>
+
+<span class="nb">ProxyRequests</span> <span class="k">Off</span>
+<span class="c">#This sets up the reverse proxy, if ’ ProxyRequests On’ is set you have a forward proxy.</span>
+
+<span class="nb">ProxyPreserveHost</span> <span class="k">On</span>
+</pre></div>
 </div>
-<div class="line-block">
-<div class="line">ProxyRequests Off</div>
-<div class="line">#This sets up the reverse proxy, if ’ ProxyRequests On’ is
-set you have a forward proxy.</div>
-</div>
-<p>ProxyPreserveHost On</p>
 <p>Now for each service (or set of pages within a service) that
 you wish to proxy you need to add the following set of
 directives:</p>
@@ -261,15 +270,16 @@ Content-Location and URI headers on HTTP redirect responses).</p>
 connector for WP6 WMS. This connector runs on the Tomcat
 server running on port 8080, but will appear to be running
 as part of the Apache http service running on port 80.</p>
-<div class="line-block">
-<div class="line">&lt;Proxy /1GEconnector&gt;</div>
-<div class="line">Order deny,allow</div>
-<div class="line">Allow from all</div>
-<div class="line">&lt;/Proxy&gt;</div>
+<div class="highlight-apacheconf notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Proxy</span> <span class="s">/1GEconnector</span><span class="nt">&gt;</span>
+<span class="nb">Order</span> deny,allow
+<span class="nb">Allow</span> from <span class="k">all</span>
+<span class="nt">&lt;/Proxy&gt;</span>
+
+<span class="nb">ProxyPass</span> <span class="sx">/1GEconnector</span> http://localhost:8080/1GEconnector
+
+<span class="nb">ProxyPassReverse</span> <span class="sx">/1GEconnector</span> http://localhost:8080/1GEconnector
+</pre></div>
 </div>
-<p>ProxyPass /1GEconnector <a class="reference external" href="http://localhost:8080/1GEconnector">http://localhost:8080/1GEconnector</a></p>
-<p>ProxyPassReverse /1GEconnector
-<a class="reference external" href="http://localhost:8080/1GEconnector">http://localhost:8080/1GEconnector</a></p>
 </li>
 <li><p>Adding a reverse proxy to our Jetty web service which is
 running a GeoNetwork catalogue. The Jetty service is running
@@ -279,30 +289,32 @@ be able to use ’ localhost’ or ’ 127.0.0.1’ to specify a web
 service running on the same physical server as your Apache
 web server, but in this instance Jetty has been configured
 to only accept requests from the server IP (194.66.252.156).</p>
-<div class="line-block">
-<div class="line">&lt;Proxy /geonetwork&gt;</div>
-<div class="line">Order deny,allow</div>
-<div class="line">Allow from all</div>
-<div class="line">&lt;/Proxy&gt;</div>
+<div class="highlight-apacheconf notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Proxy</span> <span class="s">/geonetwork</span><span class="nt">&gt;</span>
+<span class="nb">Order</span> deny,allow
+<span class="nb">Allow</span> from <span class="k">all</span>
+<span class="nt">&lt;/Proxy&gt;</span>
+
+<span class="nb">ProxyPass</span> <span class="sx">/geonetwork</span> http://194.66.252.156:8008/geonetwork
+
+<span class="nb">ProxyPassReverse</span> <span class="sx">/geonetwork</span> http://194.66.252.156:8008/geonetwork
+</pre></div>
 </div>
-<p>ProxyPass /geonetwork <a class="reference external" href="http://194.66.252.156:8008/geonetwork">http://194.66.252.156:8008/geonetwork</a></p>
-<p>ProxyPassReverse /geonetwork
-<a class="reference external" href="http://194.66.252.156:8008/geonetwork">http://194.66.252.156:8008/geonetwork</a></p>
 </li>
 <li><p>Adding a reverse proxy to our Jetty web service which is
 running an Intermap mapping client (used by the GeoNetwork
 catalogue). The Jetty service is running on port 8008 but
 will appear to be running as part of the Apache http service
 running on port 80.</p>
-<div class="line-block">
-<div class="line">&lt;Proxy /intermap&gt;</div>
-<div class="line">Order deny,allow</div>
-<div class="line">Allow from all</div>
-<div class="line">&lt;/Proxy&gt;</div>
+<div class="highlight-apacheconf notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Proxy</span> <span class="s">/intermap</span><span class="nt">&gt;</span>
+<span class="nb">Order</span> deny,allow
+<span class="nb">Allow</span> from <span class="k">all</span>
+<span class="nt">&lt;/Proxy&gt;</span>
+
+<span class="nb">ProxyPass</span> <span class="sx">/intermap</span> http://194.66.252.156:8008/intermap
+
+<span class="nb">ProxyPassReverse</span> <span class="sx">/intermap</span> http://194.66.252.156:8008/intermap
+</pre></div>
 </div>
-<p>ProxyPass /intermap <a class="reference external" href="http://194.66.252.156:8008/intermap">http://194.66.252.156:8008/intermap</a></p>
-<p>ProxyPassReverse /intermap
-<a class="reference external" href="http://194.66.252.156:8008/intermap">http://194.66.252.156:8008/intermap</a></p>
 </li>
 <li><p>Adding a reverse proxy to our cocoon service, which we need
 to run our WFS. The cocoon service runs on the Tomcat server
@@ -311,14 +323,16 @@ of the Apache http service running on port 80. In this
 example we are using a ProxyMatch block, which allows us to
 use a regular expression to map the allowable paths to
 cocoon.</p>
-<div class="line-block">
-<div class="line">&lt;ProxyMatch <a class="reference external" href="http:/">http:/</a>/[^/]*/cocoon/<a href="#id1"><span class="problematic" id="id2">*</span></a>&gt;</div>
-<div class="line">Order deny,allow</div>
-<div class="line">Allow from 127.0.0.1</div>
-<div class="line">&lt;/ProxyMatch&gt;</div>
+<div class="highlight-apacheconf notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ProxyMatch</span> <span class="s">http://[^/]*/cocoon/*</span><span class="nt">&gt;</span>
+<span class="nb">Order</span> deny,allow
+<span class="nb">Allow</span> from <span class="m">127.0.0.1</span>
+<span class="nt">&lt;/ProxyMatch&gt;</span>
+
+<span class="nb">ProxyPass</span> <span class="sx">/cocoon</span> http://127.0.0.1:8080/cocoon/
+
+<span class="nb">ProxyPassReverse</span> <span class="sx">/cocoon</span> http://127.0.0.1:8080/cocoon/
+</pre></div>
 </div>
-<p>ProxyPass /cocoon <a class="reference external" href="http://127.0.0.1:8080/cocoon/">http://127.0.0.1:8080/cocoon/</a></p>
-<p>ProxyPassReverse /cocoon <a class="reference external" href="http://127.0.0.1:8080/cocoon/">http://127.0.0.1:8080/cocoon/</a></p>
 </li>
 </ol>
 <p>That’s it as far as the Apache http server is concerned, but
@@ -327,22 +341,22 @@ they always proxy their http content through Apache</p>
 <p>To do this in Tomcat, you need to modify a Connector block in
 the server.xml configuration file as below:</p>
 <p>Change:</p>
-<div class="line-block">
-<div class="line">&lt;Connector</div>
-<div class="line">port=“8080”</div>
-<div class="line">protocol=“HTTP/1.1”</div>
-<div class="line">connectionTimeout=“20000”</div>
-<div class="line">redirectPort=“8443” /&gt;</div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Connector</span>
+<span class="na">port=</span><span class="s">“8080”</span>
+<span class="na">protocol=</span><span class="s">“HTTP/1.1”</span>
+<span class="na">connectionTimeout=</span><span class="s">“20000”</span>
+<span class="na">redirectPort=</span><span class="s">“8443”</span> <span class="nt">/&gt;</span>
+</pre></div>
 </div>
 <p>To:</p>
-<div class="line-block">
-<div class="line">&lt;Connector</div>
-<div class="line">port=“8080”</div>
-<div class="line">protocol=“HTTP/1.1”</div>
-<div class="line">connectionTimeout=“20000”</div>
-<div class="line">redirectPort=“8443”</div>
-<div class="line">proxyName=“yourserver.org”</div>
-<div class="line">proxyPort=“80” /&gt;</div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Connector</span>
+<span class="na">port=</span><span class="s">“8080”</span>
+<span class="na">protocol=</span><span class="s">“HTTP/1.1”</span>
+<span class="na">connectionTimeout=</span><span class="s">“20000”</span>
+<span class="na">redirectPort=</span><span class="s">“8443”</span>
+<span class="na">proxyName=</span><span class="s">“yourserver.org”</span>
+<span class="na">proxyPort=</span><span class="s">“80”</span> <span class="nt">/&gt;</span>
+</pre></div>
 </div>
 <p>ProxyName: is the domain name or IP of the standard (Apache
 HTTP Server) web service and can be omitted if you are running
@@ -359,29 +373,29 @@ jetty.xml file</p>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="appendixi.html" class="btn btn-neutral float-right" title="OneGeology English keyword dictionary picklist" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="appendixg.html" class="btn btn-neutral float-left" title="WMS 1.1.1 GetCapabilities response from the BGS OneGeology exemplars service" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="appendixi.html" class="btn btn-neutral float-right" title="OneGeology English keyword dictionary picklist" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="appendixg.html" class="btn btn-neutral float-left" title="WMS 1.1.1 GetCapabilities response from the BGS OneGeology exemplars service" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, OneGeology
+        &#169; Copyright 2019, OneGeology.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -389,7 +403,6 @@ jetty.xml file</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

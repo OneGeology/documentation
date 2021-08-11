@@ -26,7 +26,7 @@ data.
     GML Based Data
 
 
-GML based data (including 'GeoSciML<http://www.cgi-iugs.org/tech_collaboration/geosciml.html>_) can be used in many different ways.
+GML based data (including `GeoSciML <http://www.cgi-iugs.org/tech_collaboration/geosciml.html>`_) can be used in many different ways.
 For example, basic data can be rendered into a map that can be interrogated for further detailed information, the data can be formatted into a report, or it can be used in other applications for further development.
 
 
@@ -35,7 +35,7 @@ Map specifications
 
 Prerequisites for OneGeology involvement:
 
-- the target scale is 1:1&nbsp;000&nbsp;000 but the project will be pragmatic and accept a range of scales and the best available data.
+- the target scale is 1:1 000 000 but the project will be pragmatic and accept a range of scales and the best available data.
 - to provide a WMS you only require a georeferenced scanned paper map or raster or vector digital GIS data.
 - to provide feature and complex data queries via GeoSciML based WFS you
 
@@ -43,7 +43,7 @@ Prerequisites for OneGeology involvement:
   - need a (trained) person week, but includes getting WFS going with open source software (IT issues).
   - should note that the mapping process will be simple (small part of GeoSciML) if the themes chosen by the geological specification group are simple e.g. simple polygons with few attributes such as bedrock, lithology and age.
 
-WMS = web map service &#x2014; this is level 1, the minimum for OneGeology
+WMS = web map service — this is level 1, the minimum for OneGeology
 WFS = web feature service, this holds more detailed data.
 
 Technical specifications and requirements
@@ -123,7 +123,7 @@ Before you can submit your service to OneGeology, you must first register your o
 
 If you are willing and able to host your own data you will then need to fill in the Data Coordination form on the OneGeology website - http://onegeology.org/technical_progress/data_coordination.cfm
 
-If you are unable to host your own data for any reason, then you will <strong>ALSO</strong> need to fill in the buddy form on the OneGeology website - http://onegeology.org/technical_progress/buddy_coordination.cfm
+If you are unable to host your own data for any reason, then you will *ALSO* need to fill in the buddy form on the OneGeology website - http://onegeology.org/technical_progress/buddy_coordination.cfm
 
 Next, send an email to onegeologyhelp@bgs.ac.uk with the URL of the proposed service.
 
@@ -133,9 +133,9 @@ Include in this email:
 - the name of the data provider organization (usually this is the owner of the data)
 - the name of the service provider organization
 
- The OneGeology secretariat will check that they have written confirmation that the service provider owns the right to serve the proposed data and/or has permission from the <span class="toolTip data">data provider</span> to serve that data.</p>
+ The OneGeology secretariat will check that they have written confirmation that the service provider owns the right to serve the proposed data and/or has permission from the <span class="toolTip data">data provider</span> to serve that data.
 
-You will be contacted by the OneGeology helpdesk with confirmation of receipt, plus any other feedback.</p>
+You will be contacted by the OneGeology helpdesk with confirmation of receipt, plus any other feedback.
 
 The service will then be reviewed for conformance with OneGeology requirements and, upon verification, the service URL will be forwarded to BRGM the OneGeology Portal hosts) by the helpdesk team with a request to register the service at http://portal.onegeology.org and catalog - http://onegeology-geonetwork.brgm.fr/geonetwork3/srv/eng/catalog.search#/home">http://onegeology-geonetwork.brgm.fr/geonetwork3/srv/eng/catalog.search#/home
 
@@ -146,6 +146,8 @@ When the service is fit for registration BRGM will email the OneGeology secretar
 As the reference information stored in the OneGeology portal and catalogue comes from your service directly it is highly recommended if you need to make major changes to information held in your service, to modify your service first and then ask the helpdesk to have your service updated.
 
 If you have any queries please contact onegeologyhelp@bgs.ac.uk
+
+.. _service_provision_service_types:
 
 Service Types
 -------------
@@ -220,6 +222,8 @@ There are many possible approaches to mapping terms from one vocabulary to anoth
 In general, the most specific term from the interchange vocabulary that completely subsumes (encompasses) the meaning of the term in the source vocabulary should be used. If the source vocabulary has terms that are more specific than the controlled vocabulary, there will be some information lost in this process, but the original source terminology could be preserved in an appropriate text description field. Remember, the primary purpose of the controlled vocabulary fields is for data integration, search criteria, and standardized map legends.
 
 As we don't know your data structure or vocabularies we cannot give detailed instructions on how to map your data to one of the standard formats. However, the sections on :ref:`service_provision_data_preparation_lite` and :ref:`service_provision_data_preparation_complex` describe the feature types and properties covered by GeoSciML and EarthResourceML and which CGI or INSPIRE vocabularies can be used for particular feature properties. This should provide a reference for deciding how to map your source data to one of these standard interchange formats.
+
+.. _service_provision_data_preparation_paper_map:
 
 Scanning a paper map
 --------------------
@@ -346,6 +350,8 @@ A WMS based on a scanned map will not have the ability to click on a symbolized 
    ...
 
 Note that the image format should be one that can be directly displayed by a web browser, i.e. JPEG, PNG or GIF.
+
+.. _service_provision_data_preparation_lite:
 
 Lite Schemas
 -------------
@@ -1299,6 +1305,8 @@ CommodityResourceView features
 		</tbody>
 	  </table>
 
+.. _service_provision_data_preparation_complex:
+
 Complex Feature Data
 ---------------------
 
@@ -1374,8 +1382,9 @@ simply be omitted if permitted by GeoSciML. Figure 1 shows examples of how to pr
 values.
 
 .. code-block:: xml
-     <gsmlb:geologicUnitType xsi:nil="true" nilReason="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unknown" />
-     <gsmlb:rank xsi:nil="true" nilReason="inapplicable" />
+
+ <gsmlb:geologicUnitType xsi:nil="true" nilReason="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unknown" />
+ <gsmlb:rank xsi:nil="true" nilReason="inapplicable" />
 
 Figure 1 Examples of encoding nil values
 
@@ -2322,6 +2331,8 @@ vocabulary (`http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD
 Figure 34: Example of encoding MD_Identification.abstract, MD_Identification.language and
 MD_Identification.topicCategory
 
+.. _service_provision_onegeology_profile:
+
 OneGeology Profile
 -------------------
 
@@ -2334,7 +2345,22 @@ OneGeology Profile
 .. todo::
 
    Changes made
-    <table>s copyright to provide the data (whom we term the ‘data owner’, or 'data provider') and the organization that serves that data over a web service (whom we term the ‘service provider’). These may be different in the case that a "buddy organisation" is serving the data on behalf of a data owner. As we require the contact details for the data owner to be put in the service metadata then there must be a distinct service for each data owner. If a particular data owner wishes to provide information in more than one language then there will need to be separate services with the service metadata in each language. If a data owner is providing similar data for different scales or geographical extent then this may be all provided within one service or from distinct services depending on what is most convenient.
+
+   Changed requirements on number of services per data provider just to say need distinct ones when need different service metadata with some examples for language, buddying services etc.
+
+   Dropped requirements on service name which are just restatements of the OGC standards themselves.
+
+   Dropped requirements on form of service URL
+
+   Removed accreditation scheme boxes with intention of putting them in separate section.
+    
+A OneGeology service will be an OGC WMS, WFS or WCS. OneGeology defines a profile of these services for two reasons. The first is to make certain parts of the OneGeology Portal work with the services. The second is to make the services as widely usable and findable as possible by ensuring that they all provide some basic metadata such as contact details for further information. Currently, a OneGeology WFS needs to be associated with one or more layers from a OneGeology WMS which portray the data as an image. 
+
+Each of the OGC service types shares some common characteristics. They will each have a service URL. They each respond to a GetCapabilities request by returning a GetCapabilities response that contains administrative and technical metadata about the service.
+
+The OGC standards specify different kinds of metadata that a service should provide, some for the correct operation of the service and some to help human users of the service understand what is being provided. Some of the metadata applies to a whole service being provided at a particular service URL and some is specific to particular layers, coverages or features being provided by that service. This means that separate services need to be set up for each distinct set of service level metadata.
+
+In the profile we make a distinction between the organization that owns or has copyright to provide the data (whom we term the ‘data owner’, or 'data provider') and the organization that serves that data over a web service (whom we term the ‘service provider’). These may be different in the case that a "buddy organisation" is serving the data on behalf of a data owner. As we require the contact details for the data owner to be put in the service metadata then there must be a distinct service for each data owner. If a particular data owner wishes to provide information in more than one language then there will need to be separate services with the service metadata in each language. If a data owner is providing similar data for different scales or geographical extent then this may be all provided within one service or from distinct services depending on what is most convenient.
 
 For example, at the time of writing The British Geological Survey is hosting its own data, and is acting as a buddy to host data for the Afghanistan Geological Survey, and for the Namibian Geological Survey, and for the Falkland Island Government, and for Geoscience Australia for Antarctica data, each of these is only available in English language versions.  The British Geological Survey is also hosting a single language (French) service for Burkina Faso.  The net result is that BGS, acting in the role of service provider, is serving six separate services (six separate service URLs).
 
@@ -3081,6 +3107,8 @@ Web Services
 
 How to setup web services to serve data to OneGeology. We provide a basic explanation of how to do it easily.
 
+.. _service_provision_data_preparation_exampledata:
+
 Cookbook example data
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -3121,6 +3149,8 @@ Import the data from the database dump file downloaded above. If you have instal
 
 If you have problems with the above steps which are difficult to resolve you may find that setting ``log_statement=all`` in ``postgresql.conf``, reloading the server and then monitoring the log file is helpful for debugging them.
 
+.. _service_provision_data_preparation_postgis:
+
 Installing PostGIS
 *******************
 
@@ -3146,12 +3176,17 @@ ESRI Shapefile is a very common vector GIS format. The example could be used for
 
 OneGeology does not recommend using Shapefiles as the data source for your services but, if you already have your data in this format, it can be used as a data source with some restrictions.
 
-If you wish to set up a :term:`SLD enabled WMS` or :term:`Simple feature WFS` using the standard fields needed for age and lithology highlighting in the Portal or following one of the standard 'Lite' schemas then the 10 character limit on field names in Shapefiles means your server will need to map shorter Shapefile field names to the longer expected field names in the standards. We provide some `recommended shapefile definitions <short_names.html>`_ for some GeoSciML-Lite features that are reasonably readable and would enable using common mapping files to produce services using the full names.
+If you wish to set up a :term:`SLD enabled WMS` or :term:`Simple feature WFS` using the standard fields needed for age and lithology highlighting in the Portal or following one of the standard 'Lite' schemas then the 10 character limit on field names in Shapefiles means your server will need to map shorter Shapefile field names to the longer expected field names in the standards. We provide some :ref:`service_provision_data_preparation_short_names` for some GeoSciML-Lite features that are reasonably readable and would enable using common mapping files to produce services using the full names.
 
 Another consideration might be that, if the coordinate system of your Shapefile is not EPSG:4326 and your service is predominantly to be used in the OneGeology Portal, then your server will have to do a lot of on-the-fly coordinate conversion. To ameliorate this you can `convert the coordinate system of your Shapefile </wmsCookbook/appendixA.html>`_. The tools referred to in the previous link are available from http://www.gdal.org if you haven't done the MS4W download that it assumes.
 
-Recommend ESRI shapefile definitions for GeoSciML-Lite
-*******************************************************
+.. _service_provision_data_preparation_short_names:
+
+Recommended ESRI shapefile definitions for GeoSciML-Lite
+********************************************************
+.. todo::
+
+    Create similar recomendation for GSML borehole view and also ERML lite views?
 
 Because the field names in GeoSciML-Lite are longer than 10 characters, you will not be able to have the full attribute (column) name for many of the properties if your portrayal data is loaded into an ESRI shapefile. To prevent truncated names, we are providing a recommended Shapefile implementation with shorter field names. Field names are abbreviated to try and leave characters that convey the full name of the field; lower camel case typographic has been used, except that fields that contain URI’s end with ‘_uri’.
 
@@ -3532,7 +3567,7 @@ The output of a grouped layer is shown below (excerpt from a GetCapabilities res
 SLD enabled WMS
 ^^^^^^^^^^^^^^^^
 
-You don't have to configure anything special in GeoServer to have an SLD enabled WMS but for the purposes of having your layers work with the OneGeology Portal `thematic analysis </use/portal/thematic_analysis.html>`_ highlighting functionality your data will need to have the ``representativeAge_uri`` and ``representativeLithology_uri`` fields described in :ref:`service_provision_data_preparation_lite_geologicunitview` using appropriate CGI or INSPIRE vocabulary URIs.
+You don't have to configure anything special in GeoServer to have an SLD enabled WMS but for the purposes of having your layers work with the OneGeology Portal :ref:`use_portal_thematic_analysis` highlighting functionality your data will need to have the ``representativeAge_uri`` and ``representativeLithology_uri`` fields described in :ref:`service_provision_data_preparation_lite_geologicunitview` using appropriate CGI or INSPIRE vocabulary URIs.
 
 If required you may disable this functionality in the Service metadata, by checking a box in the Dynamic styling section
 
@@ -3545,7 +3580,7 @@ With GeoServer if you have configured a data store and layer as described in the
 
 .. note::
 
-   Having WFS enabled will mean that users can download your data (for example, using `QGIS </use/qgis.html#using-qgis-to-access-simple-feature-wfs>`_. If you **don't want this** then you should uncheck the :guilabel:`Enable WFS` checkbox. This can only be done at the global level or per workspace. You can't enable and disable WFS for specific layers.
+   Having WFS enabled will mean that users can download your data (for example, :ref:`use_qgis_simple_wfs`. If you **don't want this** then you should uncheck the :guilabel:`Enable WFS` checkbox. This can only be done at the global level or per workspace. You can't enable and disable WFS for specific layers.
 
 If you want to promote interoperability while still having a simple data structure you could consider conforming to a standard schema such as GeoSciML-Lite or EarthResourceML-Lite and using standard IUGS-CGI or INSPIRE vocabularies for the applicable properties. Depending on your data source, it may be possible to produce features close to a simple feature application schema but there are a few issues that can make it difficult to produce schema valid output. You need to be able to make the names in the fields of your data source correspond to the names of properties in the output application schema. This will not be possible for a Shapefile where there is a 10 character limit on the length of field names and you may not be able to control the case of field names for some databases or you may not have access to alter your database or create appropriate views. Even when you can control the field names and case we have found problems where field names such as "name" and "description" will get assigned to gml:name properties when you might want them in the application schema namespace.
 
@@ -5504,12 +5539,12 @@ For more details on connecting to a database see the `MapServer Data Input pages
 
 
 WMS
-^^^^^^^
+^^^
 
 We provide two exemplar MapServer services, the first is based on a simple raster file, and is used to illustrate a basic WMS, the second uses a vector datasource (shapefiles) to illustrate how to configure a more advanced WMS (and may also be used for a Simple Feature WFS).
 
 Raster image data exemplar (LAYER configuration)
-"""""""""""""""""""""""""""""""""""""""""""""""""2
+""""""""""""""""""""""""""""""""""""""""""""""""
 
 An example of adding a PNG layer is included in the BGS\_Bedrock\_Raster\_Map application.  The LAYER section is reproduced below for reference.  This data was simply created as a raster from the bedrock shapefile for the purposes of serving as an example.  In this case we won’t be setting up a response to GetFeatureInfo request; we are just returning a coloured map.  There is more `detailed documentation <http://www.mapserver.org/input/raster.html>`_ , in particular as regards efficient serving of large images, using 8-bit vs. 24-bit images, tiling etc.
 
@@ -5609,7 +5644,7 @@ WMS\_METADATAURL\_HREF and WMS\_DATAURL\_HREF
    are supposed to contain URLs for web pages which describe the dataset used for the layer in more detail.  It is possible that you may already have suitable web pages on your organization’s website, or you may wish to create suitable pages to be served by this same server.  These URL’s give users of your WMS service quick and easy links back to your web pages that may describe your available data offerings in more detail. The differences between the metadataurl and dataurl are:
 
 WMS\_METADATAURL\_HREF
-   the metadataurl must only link to a page which describes your layer data  corresponding to either the TC211/ISO:19115:2003 or FGDC-STD-001-1998 metadata standards.  See  `<onegeology_profile.html#core-tc211-iso-19115-2003-metadata>`_ of this cookbook for the core metadata required to be TC211/ISO:19115:2003 compliant
+   the metadataurl must only link to a page which describes your layer data  corresponding to either the TC211/ISO:19115:2003 or FGDC-STD-001-1998 metadata standards.  See  :ref:`service_provision_onegeology_profile_core_metadata` for the core metadata required to be TC211/ISO:19115:2003 compliant
 
 WMS\_DATAURL\_HREF
    the dataurl is to be used when you have some layer metadata that doesn’t conform to either of these standards.
@@ -7222,7 +7257,7 @@ Go to *Capabilities > WCS*, then select the “Use External capabilities files�
 
    Figure 24 - WCS service properties: external capabilities
 
-For example, for a service called BGS_EMODnet_Bathymetry, we may save our initial GetCapabilities response documents using a prefix “EMODnet-“, giving us a file called EMODnet-201.xml for our version 2.0.1 GetCapabilities response document, EMODnet-110.xml for our version 1.1.0 GetCapabilities response document and so on. We might then save these to a location on our web server such as *C:\Inetpub\wwwroot\GetCapabilitiesFiles\* which would be browseable locally as *http://localhost/GetCapabilitiesFiles/*.  When we select the “Use External capabilities files” option, we then provide the web address and **prefix**
+For example, for a service called BGS_EMODnet_Bathymetry, we may save our initial GetCapabilities response documents using a prefix “EMODnet-“, giving us a file called EMODnet-201.xml for our version 2.0.1 GetCapabilities response document, EMODnet-110.xml for our version 1.1.0 GetCapabilities response document and so on. We might then save these to a location on our web server such as *C:\\Inetpub\\wwwroot\\GetCapabilitiesFiles\\* which would be browseable locally as *http://localhost/GetCapabilitiesFiles/*.  When we select the “Use External capabilities files” option, we then provide the web address and **prefix**
 as *http://localhost/GetCapabilitiesFiles/EMODnet-*
 
 Having created your files, you may then edit them as required. We would recommend you make a second copy of the files in case you make an error whilst editing.
@@ -7241,7 +7276,7 @@ To serve a OneGeology WMS through the OneGeology Portal that service must be ser
 
 The first step is to change the `port numbers <http://www.iana.org/assignments/port-numbers>`_ on which your other web servers work; in this example we have two other web services (a Tomcat based web service which we will run on port 8080, and a jetty based web service which we will run on port 8008). Note that both these ports are recognized alternate ports for http traffic but they may not be open to such traffic in your corporate firewall.
 
-Now we need to edit the Apache HTTP server httpd.conf file. If you have installed the MS4W Apache HTTP server as part of the ms4w-and-exemplar-data.zip download this would be located at: c:\ms4w\Apache\conf\httpd.conf.
+Now we need to edit the Apache HTTP server httpd.conf file. If you have installed the MS4W Apache HTTP server as part of the ms4w-and-exemplar-data.zip download this would be located at: c:\\ms4w\\Apache\\conf\\httpd.conf.
 
 Check that the following modules are uncommented (by removing the # sign from the line start).
 

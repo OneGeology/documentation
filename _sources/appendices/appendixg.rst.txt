@@ -34,8 +34,3 @@ WMS 1.1.1 GetCapabilities response from the BGS OneGeology exemplars service
 
          -  `View the generated
             XML <BGS_Bedrock_and_Superficial_Geology-1.1.1.xml>`__
-
-.. |OneGeology logo| image:: appendixg/1a3d7a0fc8cbefb032a4aba3fe6782e68ee5ea62.png
-   :class: nob
-   :name: oneGeologylogo
-   :target: /home.html

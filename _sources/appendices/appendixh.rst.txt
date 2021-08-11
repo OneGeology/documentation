@@ -52,22 +52,26 @@ Using the MS4W Apache http server as a reverse proxy to Tomcat
          Now we need to edit the Apache HTTP server httpd.conf file. If
          you have installed the MS4W apache http server as part of the
          ms4w-and-exemplar-data.zip download this would be located at:
-         c:\ms4w\Apache\conf\httpd.conf.
+         c:\\ms4w\\Apache\\conf\\httpd.conf.
 
          Check that the following modules are uncommented (by removing
          the # sign from the line start).
 
          Change
 
-         | #LoadModule proxy_module modules/mod_proxy.so
-         | #LoadModule proxy_ajp_module modules/mod_proxy_ajp.so
-         | #LoadModule proxy_http_module modules/mod_proxy_http.so
+         .. code-block:: apacheconf
+
+            #LoadModule proxy_module modules/mod_proxy.so
+            #LoadModule proxy_ajp_module modules/mod_proxy_ajp.so
+            #LoadModule proxy_http_module modules/mod_proxy_http.so
 
          To:
 
-         | LoadModule proxy_module modules/mod_proxy.so
-         | LoadModule proxy_ajp_module modules/mod_proxy_ajp.so
-         | LoadModule proxy_http_module modules/mod_proxy_http.so
+         .. code-block:: apacheconf
+
+            LoadModule proxy_module modules/mod_proxy.so
+            LoadModule proxy_ajp_module modules/mod_proxy_ajp.so
+            LoadModule proxy_http_module modules/mod_proxy_http.so
 
          Note, we have used mod_proxy here as it is included with the
          Apache HTTP Server binaries, but you could use other proxy
@@ -77,14 +81,15 @@ Using the MS4W Apache http server as a reverse proxy to Tomcat
          appropriate for your configuration file); we suggest adding
          these directives at the end of the file for clarity.
 
-         | TraceEnable off
-         | #Important for security!!
+         .. code-block:: apacheconf
 
-         | ProxyRequests Off
-         | #This sets up the reverse proxy, if ’ ProxyRequests On’ is
-           set you have a forward proxy.
+            TraceEnable off
+            #Important for security!!
 
-         ProxyPreserveHost On
+            ProxyRequests Off
+            #This sets up the reverse proxy, if ’ ProxyRequests On’ is set you have a forward proxy.
+
+            ProxyPreserveHost On
 
          Now for each service (or set of pages within a service) that
          you wish to proxy you need to add the following set of
@@ -103,15 +108,16 @@ Using the MS4W Apache http server as a reverse proxy to Tomcat
             server running on port 8080, but will appear to be running
             as part of the Apache http service running on port 80.
 
-            | <Proxy /1GEconnector>
-            | Order deny,allow
-            | Allow from all
-            | </Proxy>
+            .. code-block:: apacheconf
 
-            ProxyPass /1GEconnector http://localhost:8080/1GEconnector
+                  <Proxy /1GEconnector>
+                  Order deny,allow
+                  Allow from all
+                  </Proxy>
 
-            ProxyPassReverse /1GEconnector
-            http://localhost:8080/1GEconnector
+                  ProxyPass /1GEconnector http://localhost:8080/1GEconnector
+
+                  ProxyPassReverse /1GEconnector http://localhost:8080/1GEconnector
 
          #. Adding a reverse proxy to our Jetty web service which is
             running a GeoNetwork catalogue. The Jetty service is running
@@ -122,15 +128,16 @@ Using the MS4W Apache http server as a reverse proxy to Tomcat
             web server, but in this instance Jetty has been configured
             to only accept requests from the server IP (194.66.252.156).
 
-            | <Proxy /geonetwork>
-            | Order deny,allow
-            | Allow from all
-            | </Proxy>
+            .. code-block:: apacheconf
 
-            ProxyPass /geonetwork http://194.66.252.156:8008/geonetwork
+                  <Proxy /geonetwork>
+                  Order deny,allow
+                  Allow from all
+                  </Proxy>
 
-            ProxyPassReverse /geonetwork
-            http://194.66.252.156:8008/geonetwork
+                  ProxyPass /geonetwork http://194.66.252.156:8008/geonetwork
+
+                  ProxyPassReverse /geonetwork http://194.66.252.156:8008/geonetwork
 
          #. Adding a reverse proxy to our Jetty web service which is
             running an Intermap mapping client (used by the GeoNetwork
@@ -138,15 +145,16 @@ Using the MS4W Apache http server as a reverse proxy to Tomcat
             will appear to be running as part of the Apache http service
             running on port 80.
 
-            | <Proxy /intermap>
-            | Order deny,allow
-            | Allow from all
-            | </Proxy>
+            .. code-block:: apacheconf
 
-            ProxyPass /intermap http://194.66.252.156:8008/intermap
+                  <Proxy /intermap>
+                  Order deny,allow
+                  Allow from all
+                  </Proxy>
 
-            ProxyPassReverse /intermap
-            http://194.66.252.156:8008/intermap
+                  ProxyPass /intermap http://194.66.252.156:8008/intermap
+
+                  ProxyPassReverse /intermap http://194.66.252.156:8008/intermap
 
          #. Adding a reverse proxy to our cocoon service, which we need
             to run our WFS. The cocoon service runs on the Tomcat server
@@ -156,14 +164,16 @@ Using the MS4W Apache http server as a reverse proxy to Tomcat
             use a regular expression to map the allowable paths to
             cocoon.
 
-            | <ProxyMatch http://[^/]*/cocoon/*>
-            | Order deny,allow
-            | Allow from 127.0.0.1
-            | </ProxyMatch>
+            .. code-block:: apacheconf
 
-            ProxyPass /cocoon http://127.0.0.1:8080/cocoon/
+                  <ProxyMatch http://[^/]*/cocoon/*>
+                  Order deny,allow
+                  Allow from 127.0.0.1
+                  </ProxyMatch>
 
-            ProxyPassReverse /cocoon http://127.0.0.1:8080/cocoon/
+                  ProxyPass /cocoon http://127.0.0.1:8080/cocoon/
+
+                  ProxyPassReverse /cocoon http://127.0.0.1:8080/cocoon/
 
          That’s it as far as the Apache http server is concerned, but
          you may also wish to configure your other web servers so that
@@ -174,21 +184,25 @@ Using the MS4W Apache http server as a reverse proxy to Tomcat
 
          Change:
 
-         | <Connector
-         | port=“8080”
-         | protocol=“HTTP/1.1”
-         | connectionTimeout=“20000”
-         | redirectPort=“8443” />
+         .. code-block:: xml
+
+            <Connector
+            port=“8080”
+            protocol=“HTTP/1.1”
+            connectionTimeout=“20000”
+            redirectPort=“8443” />
 
          To:
 
-         | <Connector
-         | port=“8080”
-         | protocol=“HTTP/1.1”
-         | connectionTimeout=“20000”
-         | redirectPort=“8443”
-         | proxyName=“yourserver.org”
-         | proxyPort=“80” />
+         .. code-block:: xml
+
+            <Connector
+            port=“8080”
+            protocol=“HTTP/1.1”
+            connectionTimeout=“20000”
+            redirectPort=“8443”
+            proxyName=“yourserver.org”
+            proxyPort=“80” />
 
          ProxyName: is the domain name or IP of the standard (Apache
          HTTP Server) web service and can be omitted if you are running
@@ -196,9 +210,3 @@ Using the MS4W Apache http server as a reverse proxy to Tomcat
 
          To do this in Jetty you need to make a similar change in the
          jetty.xml file
-
-
-.. |OneGeology logo| image:: appendixh/1a3d7a0fc8cbefb032a4aba3fe6782e68ee5ea62.png
-   :class: nob
-   :name: oneGeologylogo
-   :target: /home.html
