@@ -123,10 +123,3 @@ Converting coordinate system in data files
 
          **:\\ > gdalwarp -s_srs EPSG:27700 -t_srs EPSG:4326
          imagefile.tif new_imagefile.tif**
-
-
-
-.. |OneGeology logo| image:: appendixa/1a3d7a0fc8cbefb032a4aba3fe6782e68ee5ea62.png
-   :class: nob
-   :name: oneGeologylogo
-   :target: /home.html

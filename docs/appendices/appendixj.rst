@@ -46,9 +46,3 @@ How to create a Styled Layer Descriptor (SLD) using Arc2Earth
          `Notepad++ <http://notepad-plus-plus.org/>`__ (be sure to get
          the `XML tools
          plugin <http://sourceforge.net/projects/notepad-plus/forums/forum/482781/topic/3717096>`__).
-
-
-.. |OneGeology logo| image:: appendixj/1a3d7a0fc8cbefb032a4aba3fe6782e68ee5ea62.png
-   :class: nob
-   :name: oneGeologylogo
-   :target: /home.html
