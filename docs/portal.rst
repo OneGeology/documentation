@@ -829,7 +829,7 @@ Using QGIS to access simple feature WFS
 
 To add a WFS layer you need to go through a similar process as you do to add a WMS layer, that is, you must first add the WFS service by clicking on the |wfsBtn| tool on the *Manage Layers Toolbar*, then connect to the service, then select the layer you want to add. Even if the WFS service URL is the same as a WMS connection you already have listed you will need to add the WFS service URL.
 
-.. figure:: use\qgis\qgis_addNewWFSService.png
+.. figure:: images/qgis_addNewWFSService.png
    :alt: Adding a new WFS service
 
    Figure 7 - Adding a new WFS service
@@ -910,7 +910,7 @@ WMS Service Connection
 
 To add a WMS service to your list of available WMS services, on the *Catalog Tree* window, you use the *GIS servers > Add WMS Server* option, and then add the Service URL (without parameters). You may select to use the default service version (which would normally be the highest version) or you may force a specified version depending on your needs.
 
-.. figure:: esri/esri_catalog_addingWms.png
+.. figure:: images/esri_catalog_addingWms.png
    :alt: Adding a WMS service to the list of available services in ArcCatalog
 
    Figure 1 - Adding a WMS service to the list of available services in ArcCatalog
