@@ -4576,7 +4576,7 @@ At this stage you should have a sub-folder structure within c:\\ms4w\\Apache\\cg
 C:\\ms4w\\apps\\cookbookExemplars
 """""""""""""""""""""""""""""""""
 
-Inside the \ms4w\apps\cookbookExemplars folder you will find two folders: "BGS\_Bedrock\_and\_Superficial\_Geology" and "BGS\_Bedrock\_Raster\_Map".  These folders contain the exemplar data, and map configuration files.
+Inside the \\ms4w\\apps\\cookbookExemplars folder you will find two folders: "BGS\_Bedrock\_and\_Superficial\_Geology" and "BGS\_Bedrock\_Raster\_Map".  These folders contain the exemplar data, and map configuration files.
 
 We will assume you are basing your service on the BGS\_Bedrock\_and\_Superficial\_Geology example; substitute with BGS\_Bedrock\_Raster\_Map if that is closer to your requirements.  When you have decided which exemplar service is most suitable for your needs, you should copy that exemplar folder to a new folder that will be your new service.
 
@@ -4589,7 +4589,7 @@ Inside this folder there is a wwwroot\\index.html file.  This has some example q
 C:\\ms4w\\httpd.d\\
 """""""""""""""""""
 
-Now you will need to create an httpd conf file in the \ms4w\httpd.d\ folder that has the same name as your service; for example, the "BGS\_Bedrock\_and\_Superficial\_Geology" exemplar service has a conf file called "httpd\_BGS\_Bedrock_and\_Superficial\_Geology\_Exemplar.conf" and the "BGS\_Bedrock\_Geology" exemplar service has a corresponding conf file called "httpd\_BGS\_Bedrock\_Geology.conf"
+Now you will need to create an httpd conf file in the \\ms4w\\httpd.d\\ folder that has the same name as your service; for example, the "BGS\_Bedrock\_and\_Superficial\_Geology" exemplar service has a conf file called "httpd\_BGS\_Bedrock_and\_Superficial\_Geology\_Exemplar.conf" and the "BGS\_Bedrock\_Geology" exemplar service has a corresponding conf file called "httpd\_BGS\_Bedrock\_Geology.conf"
 
 You need to copy one of the exemplar .conf files and rename it to match the name of your service, you will then need to change the paths in the file to match your service name and folder configuration.
 
@@ -4631,7 +4631,7 @@ if tyou want to run a 64-bit version of MapServer on Windows such as provided by
 
 If instead you want to use the latest stable release of Apache-HTTP, that is the version 2.4.n releases (latest is currently 2.4.29), you must instead go to the Apache Lounge site: `http://www.apachelounge.com/download/ <http://www.apachelounge.com/download/>`_. There are several options here both in server architecture (32 bit and 64 bit), and server functionality, for you to choose from to fit your needs.
 
-For the purposes of this example we have selected a 64-bit package from Apache Lounge and installed it to our C:\ drive as C:\Apache24\.
+For the purposes of this example we have selected a 64-bit package from Apache Lounge and installed it to our C:\\ drive as C:\\Apache24\\.
 
 
 httpd.d configuration files
@@ -4658,7 +4658,7 @@ Note, that there is a change in the way access permissions are handled between v
 apache.conf
 """""""""""
 
-Finally you will need to add some information to the Apache-HTTP server configuration file (C:\Apache24\conf\httpd.conf) as per the below snippets.
+Finally you will need to add some information to the Apache-HTTP server configuration file (C:\\Apache24\\conf\\httpd.conf) as per the below snippets.
 
 .. code-block:: apacheconf
 
@@ -4759,7 +4759,7 @@ In most instances we would recommend using the MS4W packages to install Apache a
 
 In this section we will assume you are familiar with configuring a MS4W service and just provide some notes to assist you configure this alternative MapServer on Windows service using Apache-HTTP as your web server.
 
-Once you have a working web service installed, you now need to obtain the corresponding GISInternals binaries, for example in this case we downloaded the zip file **release-1600-x64-gdal-1-9-2-MapServer-6-2-0.zip**, and unzipped onto our C:\ drive as C:\apps\gisinternals\.
+Once you have a working web service installed, you now need to obtain the corresponding GISInternals binaries, for example in this case we downloaded the zip file **release-1600-x64-gdal-1-9-2-MapServer-6-2-0.zip**, and unzipped onto our C:\\ drive as C:\\apps\\gisinternals\\.
 
 Now we must run the SDKShell.bat batch file to set up some environment variables, for example it adds the following locations to the system PATH:
 
@@ -4774,7 +4774,7 @@ Now we must run the SDKShell.bat batch file to set up some environment variables
    C:\apps\gisinternals\bin\ms\csharp;
    C:\apps\gisinternals\bin\curl;
 
-The MapServer executable file (mapserv.exe) is found in the C:\apps\gisinternals\bin\ms\apps folder.  As ever, you can check the version by using the -v option in a command window like:
+The MapServer executable file (mapserv.exe) is found in the C:\\apps\\gisinternals\\bin\\ms\\apps folder.  As ever, you can check the version by using the -v option in a command window like:
 
 .. code-block:: doscon
 
@@ -4784,7 +4784,7 @@ The MapServer executable file (mapserv.exe) is found in the C:\apps\gisinternals
 Data
 ^^^^
 
-You may put your OneGeology data for your service (and the Mapfile etc) anywhere on your server, but here we will follow the same pattern as we have for used for the MS4W services.  In this case we have extracted the exemplar shapefile data to a location on our D:\ drive as:
+You may put your OneGeology data for your service (and the Mapfile etc) anywhere on your server, but here we will follow the same pattern as we have for used for the MS4W services.  In this case we have extracted the exemplar shapefile data to a location on our D:\\ drive as:
 
 * D:\\WxS\\ms\\apps\\cookbookExemplars\\BGS_Bedrock_and_Superficial_Geology
 
@@ -6550,7 +6550,7 @@ Now go back to your map service and edit it using either `ArcGIS Server Manager 
 
 Select *WMS*, then select the *Use External capabilities files* option and in the *Specify the location and prefix* dialog add the web address to the folder containing the capabilities response documents plus your *[short service name]* prefix.
 
-For example, for a service called BGS_BEDROCK_GEOLOGY, we may save our initial GetCapabilities response documents using a prefix “BEDROCK-“, giving us a file called BEDROCK-130.xml for our version 1.3.0 GetCapabilities response document, BEDROCK-111.xml for our version 1.1.1 GetCapabilities response document. We might then save these to a location on our web server such as *C:\Inetpub\wwwroot\GetCapabilitiesFiles\,* which would be browsable locally as *http://localhost/GetCapabilitiesFiles/*.  When we select the “Use External capabilities files” option, we then provide the web address and **prefix** as *http://localhost/GetCapabilitiesFiles/BEDROCK-*
+For example, for a service called BGS_BEDROCK_GEOLOGY, we may save our initial GetCapabilities response documents using a prefix “BEDROCK-“, giving us a file called BEDROCK-130.xml for our version 1.3.0 GetCapabilities response document, BEDROCK-111.xml for our version 1.1.1 GetCapabilities response document. We might then save these to a location on our web server such as *C:\\Inetpub\\wwwroot\\GetCapabilitiesFiles\\,* which would be browsable locally as *http://localhost/GetCapabilitiesFiles/*.  When we select the “Use External capabilities files” option, we then provide the web address and **prefix** as *http://localhost/GetCapabilitiesFiles/BEDROCK-*
 
 Having created your files, you may then edit them as required. We would recommend you make a second copy of the files in case you make an error whilst editing.
 
@@ -7129,7 +7129,7 @@ The *Editing the InspireView properties* dialog allows you to set the options be
 Custom INSPIRE View service GetCapabilities document
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 
-If you need to modify any option that’s not on the *Editing the InspireView properties* dialog, like the Online Resource tag mentioned above, you need to go to the service cached capabilities folder (*C:\arcgisserver\directories\arcgisforinspire\[folder_name]\[map service title]_MapServer\[folder_name]_ [map service title]_MapServer_inspireview*) and create a file called *GetCapabilities<version>_<3 letter language code>.xml*. Your service will now use the custom GetCapabilities file instead of the dynamically created one (e.g. *GetCapabilities130_ENG.xml*), also stored in the same location. When creating your custom file it’s recommended to start from a copy of the dynamically created file.
+If you need to modify any option that’s not on the *Editing the InspireView properties* dialog, like the Online Resource tag mentioned above, you need to go to the service cached capabilities folder (*C:\\arcgisserver\\directories\\arcgisforinspire\\[folder_name]\\[map service title]_MapServer\\[folder_name]_ [map service title]_MapServer_inspireview*) and create a file called *GetCapabilities<version>_<3 letter language code>.xml*. Your service will now use the custom GetCapabilities file instead of the dynamically created one (e.g. *GetCapabilities130_ENG.xml*), also stored in the same location. When creating your custom file it’s recommended to start from a copy of the dynamically created file.
 
 Use INSPIRE View service
 """"""""""""""""""""""""
