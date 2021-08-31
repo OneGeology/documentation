@@ -32,10 +32,10 @@ Converting coordinate system in data files
          your underlying data sets as follows.
 
          For shapefiles the main program you will want to use is
-         ogr2ogr.exe which is located in ms4w\tools\gdal-ogr where ms4w
+         ogr2ogr.exe which is located in ms4w\\tools\\gdal-ogr where ms4w
          is the top-level folder of your MS4W installation. The easiest
          way to use the programs is to run the batch file
-         ms4w\setenv.bat from a DOS window which will set up your path.
+         ms4w\\setenv.bat from a DOS window which will set up your path.
          (You may need to edit the setenv.bat file to reflect the
          location where you have installed MS4W.) Next you need to find
          out whether your current data set has a coordinate reference
