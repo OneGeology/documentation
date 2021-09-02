@@ -3304,14 +3304,13 @@ GeoTIFF
 
 GeoTIFF is a raster format with geographic registration included. The example has been obtained from the `EMODNET Portal for Bathymetry <http://portal.emodnet-bathymetry.eu/RGB>`_ and has RGB bands suitable for display as an image although other GeoTIFF's could have more and not necessarily image bands. This could be used for a WMS but is included primarily to test WCS setup. Download from `<ftp://ftp.bgs.ac.uk/pubload/OneGeology/exampledata/geotiff.zip>`_.
 
-***************
 Using GeoServer
-***************
+===============
 
 GeoServer has extensive `documentation <http://docs.geoserver.org/stable/en/user/index.html>`_ which you should refer to in addition to this cookbook. References will be made to relevant parts rather than repeating too much of what is already there. There is also the `geoserver-users mailing list <http://geoserver.org/comm/>`_.
 
 Introduction
-============
+------------
 
 This section describes how to set up the different kinds of OneGeology compliant service described in :ref:`service_provision_service_types` using free and open source GeoServer software. GeoServer can be used to provide *all* the types of service that OneGeology service providers might need. There are also INSPIRE specific instructions on making your services INSPIRE compliant where relevant. This is entirely optional for OneGeology so you can ignore the INSPIRE sections if this is not of interest to you.
 
@@ -3320,7 +3319,7 @@ If you are going to use a PostGIS database as a data source you will also need t
 Accompanying this guidance are some example data sets and GeoServer configuration that allow you to set up working services which you may find helpful to adapt for use with your own data.
 
 Pre-requisites / System Requirements
-------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The guidance is technical and some assumptions are made about the reader's background knowledge:
 
@@ -3335,19 +3334,19 @@ The software required includes Java, a Java servlet container such as Apache Tom
 Further pre-requisites required only for particular service types are described under the appropriate section.
 
 Software Installation
-=====================
+---------------------
 
 The software used here all has extensive documentation and support forums and mailing lists. Here we will just point you to the appropriate places to download the software and get installation instructions.
 
 Assumptions
------------
+^^^^^^^^^^^
 
 You will need to have Java installed on the machine on which you are going to install GeoServer. See the `Java Considerations <http://docs.geoserver.org/stable/en/user/production/java.html#production-java>`_ section of the GeoServer manual for the current recommendations. If you want to try other versions of Java you may need to do extra work and be prepared to enter into technical discussions on the geoserver-users email list in order to get it working with these.
 
 Ideally you will be familiar with deploying applications in a servlet container application such as `Apache Tomcat <http://tomcat.apache.org/>`_. If not, you can use one of the all-in-one installers that packages GeoServer already deployed in the `Jetty <https://www.eclipse.org/jetty/>`_ servlet container. Note that Tomcat and Jetty are the two most tested servlet containers used with GeoServer so, although you should be able to use others, there may be extra work involved and you may need to get advice from the geoserver-users email list.
 
 Basic Installation
-------------------
+^^^^^^^^^^^^^^^^^^
 
 * `Download <http://geoserver.org/release/stable>`_ and install GeoServer following whichever one of the `installation paths <http://docs.geoserver.org/stable/en/user/installation/index.html>`_ in the GeoServer manual suits your situation best. If you already have a servlet container application such as `Apache Tomcat <http://tomcat.apache.org/>`_ set up or you are familiar with how to set one up then you will probably wish to download the web archive (WAR) and deploy that in your servlet container. If you are not comfortable with configuring a servlet container then you will probably wish to use one of the installer programs.
 
@@ -3358,7 +3357,7 @@ Basic Installation
 .. _service_provision_server_setup_geoserver_install_app_schema:
 
 App-schema Plugin Installation
-------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You will need to install the app-schema plugin if you wish to set up a complex feature WFS or if you are setting up a simple feature WFS using one of the OneGeology recommended "Lite" schemas. If not, you can skip this step.
 
@@ -3366,14 +3365,14 @@ You will need to install the app-schema plugin if you wish to set up a complex f
 * Check you can restart GeoServer without any errors being thrown.
 
 INSPIRE Plugin Installation
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you are providing an INSPIRE download service you will need to provide the extra INSPIRE mandated metadata in the WFS GetCapabilities response. This is optional for OneGeology.
 
 * `Download <http://geoserver.org/release/stable>`_ and install the INSPIRE plugin ``geoserver-*-inspire-plugin.zip`` following the `INSPIRE plugin installation instructions <http://docs.geoserver.org/stable/en/user/extensions/inspire/index.html>`_.
 
 Database
---------
+^^^^^^^^
 
 If you already have your data in a relational database system you will want to check the `Working with Databases <http://docs.geoserver.org/stable/en/user/data/database/index.html>`_ section of the GeoServer manual to see if your database is supported by GeoServer and follow the instructions for installation of any extensions that may be needed for this support. PostGIS support is built into the core GeoServer download.
 
@@ -3382,14 +3381,14 @@ If you want to try the example data or don't have a supported database system yo
 You may use a database on the same machine as GeoServer or you can have it on a separate machine which is accessible over a network from your GeoServer machine.
 
 Common Setup
-============
+------------
 
 .. todo::
 
    Need to decide whether to talk about workspaces which are more flexible for WMS, simple WFS and WCS but can't be used for complex WFS or just keep it simple and do everything under the single global service URL for everything. Describe the common service metadata like contact info etc. that will be set up similarly for all service types. Point to the sections of the GUI where the different metadata described in profile section can be entered. There is some common ground setting up file based data stores for all services or database based datastores for all services but probably clearer to repeat the data store setup under each service type section.
 
 Logging in
-----------
+^^^^^^^^^^
 
 The Web Administration Interface is a browser-based tool for administering the server software remotely. To deploy a web service in the GeoServer environment, log in to the Web Administration Interface for the GeoServer instance you will be using to deploy your data as a web service. To access this tool, open a web browser and enter the web address into the navigation bar. GeoServer is usually installed such that the administrative interface can be accessed at a URL with the following address pattern:
 
@@ -3405,7 +3404,7 @@ The default account settings for GeoServer are as follows:
 For security reasons, it is recommended that you change your password to something more secure as soon as possible. You will see warnings about changing your passwords and links to where to change them when you first log in. There is an overview of the web administration interface in the `GeoServer manual <http://docs.geoserver.org/latest/en/user/webadmin/index.html>`_.
 
 Editing contact information metadata
-------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Within the GeoServer Web Administration Interface, click **Contact Information**, under `About & Status <http://docs.geoserver.org/latest/en/user/webadmin/index.html#about-status>`_. This brings you to a Contact Information form in which you can provide contact information for your GeoServer instance. The information entered here becomes part of service-level metadata for the web service that is accessed by the OGC GetCapabilities request. Consequently, Contact Information entered here should be as precise and comprehensive as possible.
 
@@ -3414,7 +3413,7 @@ This form allows you to enter the :ref:`service_provision_onegeology_profile_con
 .. note:: The information entered here is presented differently in the GetCapabilities responses for different types and versions of service.
 
 Workspaces
-----------
+^^^^^^^^^^
 
 In GeoServer `workspaces <https://docs.geoserver.org/latest/en/user/data/webadmin/workspaces.html>`_ are used for organising data. For each workspace there are also `virtual services <https://docs.geoserver.org/latest/en/user/configuration/virtual-services.html>`_ created at different service URLs. So if you have an instance of GeoServer available at http://example.com/geoserver there will be a global service URL at http://example.com/geoserver/ows and, if you have a workspce called ws1, there will also be a virtual service URL at http://example.com/geoserver/ws1/ows. This allows some flexibility and control over making different data sets and services available for different purposes to different users. To start with we suggest you `create a new workspace <http://docs.geoserver.org/latest/en/user/data/webadmin/workspaces.html#add-a-workspace>`_ for your data and, if you are using any of the example data that accompany this guide then create a separate workspace for that as well. The URI you choose is not crucially important, we suggest you pick something under a domain you control to ensure uniqueness but it doesn't have to be a resolvable URI that responds if someone puts it in a browser. You can read the GeoServer documentation if you want to organise things further. However, note that, if you are going to supply simple or complex features through a WFS using standard application schemas such as GeoSciML this constrains how you set up your workspaces; see the relevant sections for more detail.
 
@@ -3426,14 +3425,14 @@ In GeoServer `workspaces <https://docs.geoserver.org/latest/en/user/data/webadmi
    Edit a GeoServer Workspace
 
 Example Data
-============
+------------
 
 To help you set up your services we provide :ref:`service_provision_data_preparation_exampledata` that you can use to get some working services running. It enables you to get some initial experience setting up a service. Your own services may be set up by customising the examples or you may use them to get some understanding of what is involved when setting up your own service. The following sections on how to set up different types of service say which of the example data sets can be used to test setting up those services.
 
 .. _service_provision_server_setup_geoserver_simple_wms:
 
 Simple WMS
-==========
+----------
 
 .. todo::
 
@@ -3472,7 +3471,7 @@ In the middle of the page you can configure a limited list of SRS for the servic
    Editing GeoServer WMS service properties (2)
 
 INSPIRE Extended Capabilities
------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you are providing an INSPIRE view service you will need to provide the extra INSPIRE mandated metadata in the WMS GetCapabilities response. GeoServer enables you to configure a scenario 1 style extended capabilities section. All INSPIRE specific requirements are optional for OneGeology use but will work as OneGeology services.
 
@@ -3483,7 +3482,7 @@ Check that the GetCapabilities responses contain your edited values.
 .. note:: The plugin GUI only has two non-empty values for the Service Metadata Type: "Online ISO 19139 ServiceMetadata document" sets the MIME type to ``application/vnd.iso.19139+xml``, "CSW GetRecord by ID request" sets the MIME type to ``application/vnd.ogc.csw.GetRecordByIdResponse_xml``. If neither of these correspond to the actual MIME type of your metadata resource you could omit this element by choosing the blank option or work around it by manually editing the wfs.xml file inside the GeoServer data directory as documented in issue `GEOS-5157 <https://osgeo-org.atlassian.net/browse/GEOS-5157>`_ . As it isn't clear what a client would do with this information anyway, leaving it blank seems to be a good option.
 
 Configuring a data store
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 The next step is to use the Stores menu option to set up any sources of data for our service.
 
@@ -3496,7 +3495,7 @@ Having set up one or more data sources you will need to create WMS layers that d
 .. _gs_wms_add_layers:
 
 Adding layers to a workspace
-----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Having created a workspace and specified one or more data sources for your service, you will now associate this data with layers offered by the service in your workspace.
 
@@ -3511,7 +3510,7 @@ Depending on the type of data source you have chosen there may be one or more re
 You will now be on the `Edit Layer <http://docs.geoserver.org/latest/en/user/data/webadmin/layers.html#data-webadmin-layers-edit-data>`_ page. This page has a large number of configuration options spread across different tabs. We will just describe a subset of them here.
 
 The Data tab of the Edit Layer page
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""""""""""""
 
 The :guilabel:`Data` tab allows you to specify various items of layer metadata covered by the :ref:`service_provision_onegeology_profile` so it is very important to enter this information carefully for each layer in your web service. In particular you can configure the :ref:`Name and Title <service_provision_onegeology_profile_layer_names>`, :ref:`service_provision_onegeology_profile_layer_abstract`, :ref:`service_provision_onegeology_profile_layer_bbox`, :ref:`service_provision_onegeology_profile_layer_crs`, :ref:`service_provision_onegeology_profile_layer_keywords` and :ref:`service_provision_onegeology_profile_layer_metadata_url` or :ref:`service_provision_onegeology_profile_layer_data_url`.
 
@@ -3524,7 +3523,7 @@ GeoServer can compute the bounding box of your data from the data itself or you 
 For further information on the other settings on this tab see the `GeoServer documentation <http://docs.geoserver.org/latest/en/user/data/webadmin/layers.html#edit-layer-data>`_.
 
 The Publishing tab of the Edit Layer page
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""""""""""""""""""
 
 After populating the fields in the :guilabel:`Data` tab, click the :guilabel:`Publishing` tab.
 
@@ -3533,7 +3532,7 @@ This is where you will `select the styles <http://docs.geoserver.org/latest/en/u
 .. note:: If you have a pure image data source such as the one in the example data we recommend you use the default GeoServer :guilabel:`generic` style. Some styles can interfere with the image rendering (e.g. the :guilabel:`giant_polygon` style will result in a grey rectangle over your image area). You will probably also want to uncheck the :guilabel:`Queryable` Layer Settings checkbox as the information returned from image pixels in response to a GetFeatureInfo request is unlikely to be useful to clients.
 
 Creating group layers
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 In some situations it is desirable to create a group layer, for example you may want to do this to comply with INSPIRE layer naming regulations to create a layer called GE.GeologicUnit to group all of your layers that are spatial objects of type GeologicUnit.
 
@@ -3569,7 +3568,7 @@ The output of a grouped layer is shown below (excerpt from a GetCapabilities res
 .. _service_provision_server_setup_geoserver_sld_wms:
 
 SLD enabled WMS
-===============
+---------------
 
 You don't have to configure anything special in GeoServer to have an SLD enabled WMS but for the purposes of having your layers work with the OneGeology Portal :ref:`use_portal_thematic_analysis` highlighting functionality your data will need to have the ``representativeAge_uri`` and ``representativeLithology_uri`` fields described in :ref:`service_provision_data_preparation_lite_geologicunitview` using appropriate CGI or INSPIRE vocabulary URIs.
 
@@ -3578,7 +3577,7 @@ If required you may disable this functionality in the Service metadata, by check
 .. _service_provision_server_setup_geoserver_simple_wfs:
 
 Simple Feature WFS
-==================
+------------------
 
 With GeoServer if you have configured a data store and layer as described in the :ref:`service_provision_server_setup_geoserver_simple_wms` section and the data store is of a suitable type (not, for example, a pure image format or raster format) then you will already have done all the substantive work to create a simple feature WFS serving features with the same name as your layer name and with property elements named according to the fields in the underlying data store. In the :ref:`service_provision_data_preparation_exampledata` the shapefile, GeoPackage and PostGIS database all are suitable. To complete setting up the WFS service metadata select :guilabel:`WFS` from under the :guilabel:`Services` section at the left of the `web administration interface <http://docs.geoserver.org/latest/en/user/webadmin/index.html>`_. The service metadata here is very similar to that described for setting up a :ref:`service_provision_server_setup_geoserver_simple_wms` so refer to that for what to enter. WFS specific settings are described in the `GeoServer documentation <http://docs.geoserver.org/latest/en/user/services/wfs/webadmin.html>`_.
 
@@ -3593,14 +3592,14 @@ If you can't get schema valid features by manipulating your data source then you
 .. _service_provision_server_setup_geoserver_simple_app_schema:
 
 Using application schemas extension
------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you want your simple feature WFS to conform to a standard schema such as GeoSciML-Lite or EarthResourceML-Lite and your data store isn't sufficiently configurable then you will need to use the GeoServer Application Schema extension. The below documentation assumes you are using a Shapefile data store which will necessitate using this method because Shapefile field names are restricted to 10 characters in length whereas the Lite schemas have fields with longer names.
 
 The Application Schema extension is not included by default so you need to follow the :ref:`service_provision_server_setup_geoserver_install_app_schema` instructions. Once the extension is installed, you will need to create a mapping file, and restart GeoServer to enable the new configuration.
 
 Create mapping file
-^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""
 
 The mapping file is an XML file that maps fields from the data source into the fields of the XML output schema. The example mapping file, below, uses field names in a shapefile that are the automatically truncated names generated by ESRI software mapping from the long field names to the valid Shapefile field names. If other field names are used in the shapefile (e.g. the recommended abbreviations in `Appendix K <http://onegeology.org/wmsCookbook/appendixK.html>`_), the strings in the sourceExpression/OCQL elements should be modified appropriately.
 
@@ -3794,7 +3793,7 @@ You can find more documentation on the mapping file at http://docs.geoserver.org
 Place the file in the GeoServer file location of the datastore. This will be somewhere like :samp:`data/workspaces/{workspace}/{store}/` where `workspace` is the name of your workspace, and `store` is the name of your data store.
 
 Edit datastore.xml file
-^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""
 
 This file is located in the same Data Store directory. To enable application-schemas, this file must indicate that the shapefile is no longer used for field names, but the mapping file instead. Example datastore.xml, after editing:
 
@@ -3820,7 +3819,7 @@ This file is located in the same Data Store directory. To enable application-sch
 .. _service_provision_server_setup_geoserver_complex_wfs:
 
 Complex Feature WFS
-===================
+-------------------
 
 .. note:: This documentation describes setting up complex features by manually editing configuration files for the app-schema extension. Since it was written the `Hale Studio <https://www.wetransform.to/products/halestudio/>`_ graphical data transformation engine has been given the capability to create GeoServer app-schema configuration files. We recommend that you investigate this tool.
 
@@ -3833,7 +3832,7 @@ Because a single ``gsmlb:GeologicUnit`` can be observed at several distinct loca
 Versions of the cookbook example set and configurations since 2016-08-17 also include ``gsmlb:MappedFeature`` features pointing to ``gsmlb:ShearDisplacementStructure`` (faults).
 
 Obtaining example configuration
--------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Download the latest version of the example configuration files in data_625k.YYYY-MM-DD.zip from `<ftp://ftp.bgs.ac.uk/pubload/OneGeology/wfscookbook/>`_ and expand it to a spare location on your server. Copy the files from this expanded directory to the matching locations in your GeoServer data directory. The main configuration files are inside the ``workspaces`` directory. The contents of the ``demo`` directory are some example requests which are documented below. Overwrite any files that already exist, although there shouldn't be any in a fresh installation (apart from the containing directories). Note that the web interface does not yet support app-schema store for layer administration so you will have to edit these files directly when configuring your service.
 
@@ -3852,7 +3851,7 @@ If you are running in Apache Tomcat on Windows you can use the "Configure Tomcat
 * The first time GeoServer starts with the tutorial configuration, it will download all the schema (XSD) files it needs and store them in the ``app-schema-cache`` folder in the data directory. **You must be connected to the internet for this to work.**
 
 Complex Feature Test requests
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""""""
 
 When GeoServer is running, test app-schema WFS in a web browser. You can query the feature types using these links. (Change ``localhost:8080`` in the examples below if you have deployed it at a different location.):
 
@@ -3898,7 +3897,7 @@ A bounding box query to retrieve mapped features with shapes that overlap the sp
 .. note:: App-schema cannot be configured using the web interface, you will need to edit the configuration files directly. You will see the configured workspaces and stores appear in the web interface but not the layers (features). The properties that can be edited in the web interface are very limited.
 
 INSPIRE Extended Capabilities
------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you are providing an INSPIRE download service you will need to provide the extra INSPIRE mandated metadata in the WFS GetCapabilities response. GeoServer enables you to configure a scenario 1 style extended capabilities section. All INSPIRE specific requirements are optional for OneGeology use but will work as OneGeology services.
 
@@ -3909,7 +3908,7 @@ Check that the GetCapabilities responses contain your edited values.
 .. note:: The plugin GUI only has two non-empty values for the Service Metadata Type: "Online ISO 19139 ServiceMetadata document" sets the MIME type to ``application/vnd.iso.19139+xml``, "CSW GetRecord by ID request" sets the MIME type to ``application/vnd.ogc.csw.GetRecordByIdResponse_xml``. If neither of these correspond to the actual MIME type of your metadata resource you could omit this element by choosing the blank option or work around it by manually editing the wfs.xml file inside the GeoServer data directory as documented in issue `GEOS-5157 <https://osgeo-org.atlassian.net/browse/GEOS-5157>`_ . As it isn't clear what a client would do with this information anyway, leaving it blank seems to be a good option.
 
 INSPIRE Pre-defined Dataset Download
-------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you decide that you are going to provide an INSPIRE pre-defined dataset download service direct from your WFS rather than pre-generating the full datasets and just providing links to the download through ATOM then you can do this by creating a Stored Query such as the one below. The example data directory includes the CreateStoredQuery command in the Demos examples.
 
@@ -3950,17 +3949,17 @@ This can then be invoked with a request like:
  `http://localhost:8080/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&storedquery_id=http://inspire.ec.europa.eu/operation/download/GetSpatialDataSet&DataSetIdCode=13603180&DataSetIdNamespace=http://data.bgs.ac.uk/id/dataHolding/&CRS=urn:ogc:def:crs:EPSG::4326&Language=eng&count=20& <http://localhost:8080/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&storedquery_id=http://inspire.ec.europa.eu/operation/download/GetSpatialDataSet&DataSetIdCode=13603180&DataSetIdNamespace=http://data.bgs.ac.uk/id/dataHolding/&CRS=urn:ogc:def:crs:EPSG::4326&Language=eng&count=20&>`_
 
 app-schema.properties
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 This file (in the ``WEB-INF/classes`` directory) is not strictly required but is very useful for storing certain configuration parameters that will be re-used in different parts of the other configuration files and for storing configuration parameters like database usernames and passwords outside of the GeoServer data directory so that the latter can be copied freely. The `Property Interpolation <http://docs.geoserver.org/stable/en/user/data/app-schema/property-interpolation.html>`_ section of the GeoServer manual contains more information on how properties can be set and used in other parts of the configuration files. In the reference configuration files this contains database connection parameters, some commonly used URI values and the setting to turn on `joining <http://docs.geoserver.org/stable/en/user/data/app-schema/joining.html>`_. In fact with current versions of GeoServer (certainly pre-dating v2.4.5) joining is turned on by default and is the recommended setting. There may be some limited situations as described in the `joining documentation <http://docs.geoserver.org/stable/en/user/data/app-schema/joining.html>`_, however, when you need to switch this off. The cookbook example also uses property interpolation to set database column name prefixes to choose whether to use columns that include CGI URI values or INSPIRE URI values.
 
 Data directory
---------------
+^^^^^^^^^^^^^^
 
 The example configuration files can be copied into an existing GeoServer data directory so that you can get a working service to try out up and running as quickly as possible. The parts relevant for configuration of a complex feature WFS are contained in the ``workspaces`` directory described in the next section. Other parts of your service configuration like service metadata, security etc. can be set up using the web interface. Thus, when you come to set up your own service, you will probably start with the default GeoServer data directory, configure service metadata etc. in the web interface, and copy the complex feature configuration files from the reference ``data/workspaces`` directory to your own data directory for editing there.
 
 Workspace layout
-----------------
+^^^^^^^^^^^^^^^^
 
 The files for configuring complex feature output are contained in the ``data/workspaces`` directory. Inside this directory there is a sub-directory for each namespace of features you will be serving and other namespaces that these features may use somewhere in their content. In the example this includes::
 
@@ -4027,7 +4026,7 @@ The ``AppSchemaDataAccess.xsd`` file isn't used for the configuration, it is jus
   There isn't a description of featuretype.xml, does this need creating?, what is it used by and is it configured by UI?
 
 datastore.xml
--------------
+^^^^^^^^^^^^^
 
 Each data store configuration file ``datastore.xml`` specifies the location of a mapping file and triggers its loading as an app-schema data source. This file should not be confused with the source data store, which is specified inside the mapping file.
 
@@ -4040,7 +4039,7 @@ For ``gsmlb:MappedFeature`` the file is ``workspaces/gsmlb/gsmlb_MappedFeature/d
 For other feature types the pattern is the same where you replace the names and ids appropriately and change the namespace if necessary. The url entry is a file: URI pointing to the location of the mapping file relative to the GeoServer data directory. The dbtype entry will always be app-schema to define complex feature types.
 
 Mapping files
--------------
+^^^^^^^^^^^^^
 
 Configuration of app-schema feature types is performed in mapping files e.g.
 
@@ -4052,7 +4051,7 @@ Configuration of app-schema feature types is performed in mapping files e.g.
 
 
 Namespaces
-^^^^^^^^^^
+""""""""""
 
 Each mapping file contains namespace prefix definitions. The below extract is from ``gsmlb_MappedFeature.xml``
 
@@ -4079,7 +4078,7 @@ Each mapping file contains namespace prefix definitions. The below extract is fr
 Only those namespace prefixes used in the mapping file need to be declared although you may find it easier just to put all the namespaces used by your target schema in all of them.
 
 Source data store
-^^^^^^^^^^^^^^^^^
+"""""""""""""""""
 
 The data for this tutorial is contained in the PostGIS database set up in the previous section.
 
@@ -4128,7 +4127,7 @@ See `http://docs.geoserver.org/stable/en/user/data/app-schema/data-stores.html <
 
 
 Target types
-^^^^^^^^^^^^
+""""""""""""
 
 The XML Schemas which are required to define a feature type and its properties are specified in the ``targetTypes`` section. The type of the output feature is defined in ``targetElement`` in the ``typeMapping`` section. The below example is from ``gsmlb_MappedFeature.xml``
 
@@ -4145,7 +4144,7 @@ The XML Schemas which are required to define a feature type and its properties a
 In this case the schema is published, but because the OASIS XML Catalog is used for schema resolution, a private or modified schema in the catalog can be used if desired.
 
 Mappings
-^^^^^^^^
+""""""""
 
 The ``typeMappings`` element begins with configuration elements. From ``gsmlb_MappedFeature.xml``
 
@@ -4166,7 +4165,7 @@ The ``typeMappings`` element begins with configuration elements. From ``gsmlb_Ma
 * ``targetElement`` is the name of the output complex feature type.
 
 gml:id mapping
-^^^^^^^^^^^^^^
+""""""""""""""
 
 The first mapping sets the ``gml:id`` to be the feature id specified in the source simple feature property which comes from the database column of the same name.
 
@@ -4191,7 +4190,7 @@ The above would generate output like
 
 
 inspireId mapping
-^^^^^^^^^^^^^^^^^
+"""""""""""""""""
 
 A common property that many INSPIRE themes will have is an inspireId. An example mapping for this property is contained in the ``workspaces/ge/ge_GeologicUnit/ge_GeologicUnit.xml`` file. The relevant section is reproduced below
 
@@ -4207,7 +4206,7 @@ A common property that many INSPIRE themes will have is an inspireId. An example
    </AttributeMapping>
 
 Ordinary mapping
-^^^^^^^^^^^^^^^^
+""""""""""""""""
 
 Most mappings consist of a target and source. Here is a simple property with a text value from ``gsmlb_GeologicUnit.xml``
 
@@ -4236,7 +4235,7 @@ The above would generate output like
   STRATHCLYDE GROUP TYPE</gml:description>
 
 Client properties
-^^^^^^^^^^^^^^^^^
+"""""""""""""""""
 
 In addition to the element content, a mapping can set values of XML attributes on property elements. These are called "client properties" in GeoServer terminology. Here is one from ``gsmlb_CompositionPart.xml``
 
@@ -4262,7 +4261,7 @@ This would generate output like
     xlink:title="Mudstone"/>
 
 Feature chaining
-^^^^^^^^^^^^^^^^
+""""""""""""""""
 
 In feature chaining, one feature type is used as a property of an enclosing feature type, by value or by reference. The following examples show the parts of the ``gsmlb_MappedFeature.xml`` and ``gsmlb_GeologicUnit.xml`` mapping files that put the gsmlb:GeologicUnit elements inside the gsmlb:specification properties of gsmlb:MappedFeature elements. In versions of the cookbook example since 2016-08-16 the below mapping has been commented out to be replaced by a more complex example described in the next section on Polymorphism.
 
@@ -4299,7 +4298,7 @@ In ``gsmlb_GeologicUnit.xml``
 Feature chaining has been used to construct the property ``gsmlb:specification`` of ``gsmlb:MappedFeature``. This property is a ``gsmlb:GeologicUnit``. The WFS response for ``gsmlb:MappedFeature`` combines the output of both feature types into a single response. The first ``gsmlb:MappedFeature`` has a ``gsmlb:specification`` property value of the ``gsmlb:GeologicUnit`` with the same ``lex_rcs`` code. The next time a mapped feature with the same ``lex_rcs`` code appears, rather than including the whole geologic unit inline again the property has an xlink:href attribute pointing to the first occurrence. The relationships between the feature instances are data driven.
 
 Polymorphism
-^^^^^^^^^^^^
+""""""""""""
 In versions of the cookbook example since 2016-08-16 the above mapping with ``gsmlb:MappedFeature``'s pointing to ``gsmlb:GeologicUnit``'s has been extended so that ``gsmlb:MappedFeature/gsmlb:specification`` can contain or point to either a ``gsmlb:GeologicUnit`` as above or a ``gsmlb:ShearDisplacementStructure`` (representing a fault). Setting up an attribute to have different forms like this is described in the `Polymorphism <http://docs.geoserver.org/stable/en/user/data/app-schema/polymorphism.html>`_ section of the GeoServer manual. The cookbook example implements this by having a column ``feature_type`` in the ``mapped_feature_all`` view which indicates whether a row is related to an entry in the ``geol_unit`` table (for ``gsmlb:GeologicUnit`` features) or the ``fault`` table (for ``gsmlb:ShearDisplacementStructure`` features). It then uses the Recode function to switch between which feature type is the ``linkElement`` based on the value of this column.
 
 .. code-block:: xml
@@ -4316,22 +4315,22 @@ In versions of the cookbook example since 2016-08-16 the above mapping with ``gs
 .. _inspire_geology_schema:
 
 INSPIRE Geology Theme Schema
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""""
 
 If you want to produce a service with data conforming to the INSPIRE Geology theme schema you can examine the configuration files in the ``ge`` and ``base`` directories which were created by copying those in the ``gsmlb`` directory and changing the namespaces and schema locations. The only parts which needed adding which couldn't be adapted from the GeoSciML configuration files were those adding mappings for inspireId properties. It should be fairly simple for you to copy your own mapping files from a GeoSciML configuration to produce an INSPIRE Geology theme schema configuration following a similar process.
 
 .. _service_provision_server_setup_geoserver_wcs:
 
 WCS
-===
+---
 
 Exemplar data used in this cookbook
------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For the purposes of this cookbook we will use the Bathymetry Multi-colour 3-Band GeoTiffs supplied by the EMODnet project and available for download from the “Portal for Bathymetry” (http://portal.emodnet-bathymetry.eu/)
 
 Metadata to be used in configuring your service and coverages (layers)
-----------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Your coverage service and coverage (layer) metadata should follow the :ref:`service_provision_onegeology_profile`.
 
@@ -4342,7 +4341,7 @@ Whilst GeoServer can use a number of data formats as inputs for its WCS services
    Same question as WMS section about whether to describe individual workspace set up or just deal with single global service URL. There is a lot of overlap between this WCS content on setting up data stores, service etc. and the WMS section so think about whether can be made common section or needs repeating for each. Just pointing to GeoServer documentation sections might simplify it enough to make similarities clearer.
 
 Stores
-------
+^^^^^^
 
 The next step is to use the ‘Stores’ menu option to set up a Raster data source for each of our exemplar (EMODnet) GeoTIFFs.    To do this, go to the left hand menu ‘Stores’ option, and click the  ‘Add new store’ link.  Under the Raster Data Sources heading select ‘GeoTIFF - Tagged Image File Format with Geographic information’.  Select the newly created Workspace from the drop down list.
 
@@ -4371,7 +4370,7 @@ When you save your store you should get an option to Publish your data source as
 You will need to repeat these steps to create a data source for all of the GeoTIFFs that you wish to make available in your service.
 
 Layers
-------
+^^^^^^
 
 If you didn’t Publish the data as part of the data source configuration, the final step is to create a layer using your data sources.  Select the Layers option in the left hand menu, then find the Workspace:Datasource name combination required from the drop down list.
 
@@ -4380,7 +4379,7 @@ If you didn’t Publish the data as part of the data source configuration, the f
 That’s essentially it, as the information that you can add (as opposed to the information that is auto-populated) in the layer properties is not used in either the GetCapabilities or the DescribeCoverage response.
 
 Service level metadata
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 To configure service level metadata, choose the WCS option in the Services section of the Left hand menu.  Then select your workspace from the dropdown list.
 
@@ -4421,7 +4420,7 @@ The above list gives the following in the GetCapabilities response::
    <wcscrs:crsSupported>http://www.opengis.net/def/crs/EPSG/0/404000</wcscrs:crsSupported>
 
 INSPIRE Extended Capabilities
------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you are providing an INSPIRE download service you will need to provide the extra INSPIRE mandated metadata in the WCS GetCapabilities response. GeoServer enables you to configure a scenario 1 style extended capabilities section. All INSPIRE specific requirements are optional for OneGeology use but will work as OneGeology services.
 
@@ -4432,14 +4431,14 @@ Check that the GetCapabilities responses contain your edited values.
 .. note:: The plugin GUI only has two non-empty values for the Service Metadata Type: "Online ISO 19139 ServiceMetadata document" sets the MIME type to ``application/vnd.iso.19139+xml``, "CSW GetRecord by ID request" sets the MIME type to ``application/vnd.ogc.csw.GetRecordByIdResponse_xml``. If neither of these correspond to the actual MIME type of your metadata resource you could omit this element by choosing the blank option or work around it by manually editing the wfs.xml file inside the GeoServer data directory as documented in issue `GEOS-5157 <https://osgeo-org.atlassian.net/browse/GEOS-5157>`_ . As it isn't clear what a client would do with this information anyway, leaving it blank seems to be a good option.
 
 Troubleshooting
----------------
+^^^^^^^^^^^^^^^
 
 .. figure:: images/wcs_fig10.jpg
 
 If you start getting error messages when using GeoServer, you will probably need to increase the JAVA permgen space.  This can occur when you are serving lots of raster data. See http://osgeo-org.1560.x6.nabble.com/Session-times-out-when-adding-new-stores-or-layers-td4910354.html
 
 GeoServer troubleshooting
-=========================
+-------------------------
 
 .. todo::
 
@@ -4473,12 +4472,11 @@ Q: Is it possible to configure GeoServer so that I do not need to use PostGIS?
 Q: All of my data are in Shapefiles. Can I deploy a shapefile as a GeoSciML-Lite service?
    A: The problem you will run into is the truncation of field names that occurs in shapefiles. Ideally you will have a full version of the data in PostGIS. As mentioned in the above document, to be compliant with GeoSciML-Lite, you will need to make sure there is no truncation in field names; they must be an exact match for the GeoSciML-Lite schema. To map table fields to XML elements with different names you will have to use the `Application Schema extension <http://docs.geoserver.org/stable/en/user/data/app-schema/index.html>`_ for GeoServer.
 
-***************
 Using MapServer
-***************
+===============
 
 Software Installation
-=====================
+---------------------
 
 `MapServer <http://mapserver.org/>`_ can be used to provide a number of OGC Web Services (OWS) types, such as the Web Map Service (WMS), Web Feature Service (WFS) and Web Coverage Service (WCS) standards which are the current focus of interest for the OneGeology portal.  In the following sections we run through how to configure MapServer so it can provide any one of these three service types.
 
@@ -4487,7 +4485,7 @@ MapServer will work both on Windows and Linux operating systems (both 32-bit and
 The simplest way to set up MapServer on a Windows server is to use the MapServer for Windows (MS4W) installer provided by Gateway Geomatics, this installs a 32-bit version of the Apache HTTP web server and the 32-bit version of MapServer as well as some demo applications.  For those wishing to use a 64-bit version of Apache HTTP web server, we recommend Apache Lounge and GISInternals.  For installation of MapServer on Linux, (with Apache HTTP web server) we recommend Ubuntu and the Personal Package Archives.
 
 Installing MS4W
----------------
+^^^^^^^^^^^^^^^
 
 All versions of the MS4W software package, including the latest version are available from the `Gateway Geomatics MS4W <https://ms4w.com/>`_  web site.
 
@@ -4536,7 +4534,7 @@ If the installation works correctly you will be taken to a page on your newly in
 
 
 Configuring the exemplar services
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""""""""""
 
 Obtain the OneGeology template application in the 20Mbytes approx. sized 1G\_WMS-exemplar-data-MS6-update.zip file from the `BGS FTP website <ftp://ftp.bgs.ac.uk/pubload/OneGeology/>`_.
 
@@ -4550,10 +4548,10 @@ After unzipping the exemplar files, restart your web service.  Now when you brow
 
 
 Configuring your own services using the exemplars as examples
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 C:\\ms4w\\Apache\\cgi-bin\\
-"""""""""""""""""""""""""""
+'''''''''''''''''''''''''''
 
 Create a folder inside ms4w\\Apache\\cgi-bin with a name that follows the OneGeology profile.
 
@@ -4579,7 +4577,7 @@ At this stage you should have a sub-folder structure within c:\\ms4w\\Apache\\cg
 
 
 C:\\ms4w\\apps\\cookbookExemplars
-"""""""""""""""""""""""""""""""""
+'''''''''''''''''''''''''''''''''
 
 Inside the \\ms4w\\apps\\cookbookExemplars folder you will find two folders: "BGS\_Bedrock\_and\_Superficial\_Geology" and "BGS\_Bedrock\_Raster\_Map".  These folders contain the exemplar data, and map configuration files.
 
@@ -4592,7 +4590,7 @@ Make more copies with appropriate names if you are also making multiple language
 Inside this folder there is a wwwroot\\index.html file.  This has some example queries which will enable you to test your service when you have set it up.  For these to work for your new service you will need to edit the file and change all occurrences of the string "BGS\_Bedrock\_and\_Superficial\_Geology" with the name you have created for your service.
 
 C:\\ms4w\\httpd.d\\
-"""""""""""""""""""
+'''''''''''''''''''
 
 Now you will need to create an httpd conf file in the \\ms4w\\httpd.d\\ folder that has the same name as your service; for example, the "BGS\_Bedrock\_and\_Superficial\_Geology" exemplar service has a conf file called "httpd\_BGS\_Bedrock_and\_Superficial\_Geology\_Exemplar.conf" and the "BGS\_Bedrock\_Geology" exemplar service has a corresponding conf file called "httpd\_BGS\_Bedrock\_Geology.conf"
 
@@ -4616,7 +4614,7 @@ Using the raster exemplar service (as shown below), you will need to change all 
 
 
 C:\\ms4w\\Apache\\htdocs\\
-""""""""""""""""""""""""""
+''''''''''''''''''''''''''
 
 Now you should edit the index.html file in the Apache web root \\ms4w\\Apache\\htdocs\\ and add a link to your new service.  Note, the link you use is the value of the Alias (line one of the httpd conf file).
 
@@ -4624,13 +4622,13 @@ Again make more copies if making multiple language services.
 
 
 Installing and configuring Apache HTTP web server
--------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 MS4W, as described above, installs both MapServer and the Apache HTTP webserver software.  Other installations of MapServer require configuring of the web server as a separate process.  This section takes you through installing alternate Apache HTTP webserver software, and through the additional configuration you will need to do to create a OneGeology service that follows the same pattern as above.
 
 
 64-bit Apache HTTP server
-^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""
 
 if tyou want to run a 64-bit version of MapServer on Windows such as provided by GISInternals, you will also need to in install a 64-bit version of Apache.
 
@@ -4640,7 +4638,7 @@ For the purposes of this example we have selected a 64-bit package from Apache L
 
 
 httpd.d configuration files
-"""""""""""""""""""""""""""
+'''''''''''''''''''''''''''
 
 For this installation we will now create a httpd.d folder on our D:\\ drive, to hold our OneGeology service configuration files, as: D:\\WxS\\ms\\httpd.d\\ , and create an http\_ file (i.e. ‘httpd_BGS_Bedrock_and_Superficial_Geology_Exemplar.conf’) for our exemplar service as below.
 
@@ -4661,7 +4659,7 @@ For this installation we will now create a httpd.d folder on our D:\\ drive, to 
 Note, that there is a change in the way access permissions are handled between versions 2.2.n and 2.4.n of Apache, so if you are copying the existing MS4W httpd\_ conf files you will need to change your <Directory> information;  that is, you will need to replace the ‘*Order allow,deny*’ and ‘*Allow from all*’ directives with ‘*Require all granted*’
 
 apache.conf
-"""""""""""
+'''''''''''
 
 Finally you will need to add some information to the Apache-HTTP server configuration file (C:\\Apache24\\conf\\httpd.conf) as per the below snippets.
 
@@ -4695,7 +4693,7 @@ Finally you will need to add some information to the Apache-HTTP server configur
 
 
 Create alias configuration files
-""""""""""""""""""""""""""""""""
+''''''''''''''''''''''''''''''''
 
 Next we need to create an alias to our data files and MapServer html templates.  The way you do this varies considerably depending on your Linux version.  In older versions of Ubuntu these aliases are created in the **alias** file located in the **/etc/apache2/conf.d/** directory.  In recent versions you should add these aliases to the **httpd.conf** file in **/etc/apache2/**
 
@@ -4756,7 +4754,7 @@ or using wget:
 
 
 Installing GISInternals packages for Windows
---------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The most recent versions of the GISInternals GDAL and MapServer packages are available online at: `http://www.gisinternals.com <http://www.gisinternals.com>`_
 
@@ -4787,7 +4785,7 @@ The MapServer executable file (mapserv.exe) is found in the C:\\apps\\gisinterna
    MapServer version 7.1-dev OUTPUT=PNG OUTPUT=JPEG OUTPUT=KML SUPPORTS=PROJ SUPPORTS=AGG SUPPORTS=FREETYPE SUPPORTS=CAIRO SUPPORTS=SVG_SYMBOLS SUPPORTS=SVGCAIRO SUPPORTS=ICONV SUPPORTS=FRIBIDI SUPPORTS=WMS_SERVER SUPPORTS=WMS_CLIENT SUPPORTS=WFS_SERVER SUPPORTS=WFS_CLIENT SUPPORTS=WCS_SERVER SUPPORTS=SOS_SERVER SUPPORTS=FASTCGI SUPPORTS=THREADS SUPPORTS=GEOS INPUT=JPEG INPUT=POSTGIS INPUT=OGR INPUT=GDAL INPUT=SHAPEFILE
 
 Data
-^^^^
+""""
 
 You may put your OneGeology data for your service (and the Mapfile etc) anywhere on your server, but here we will follow the same pattern as we have for used for the MS4W services.  In this case we have extracted the exemplar shapefile data to a location on our D:\\ drive as:
 
@@ -4820,7 +4818,7 @@ You will also need to change the IMAGEPATH statement to point at your chosen tem
           IMAGEURL "/ms_tmp/"
 
 MapServer cgi-bin
-^^^^^^^^^^^^^^^^^
+"""""""""""""""""
 
 For this installation we will now create some folders in the Apache-HTTP cgi-bin folder to hold our copy of the mapserv.exe executable (which we will rename as ‘wms’) as:
 
@@ -4843,7 +4841,7 @@ At this stage you will have a working MapServer service such that a request like
 
 
 Installing MapServer on Linux using PPAs
-----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This installation guide will give you simple step-by-step instructions of installing MapServer onto a Linux server and assumes you have an Apache HTTP webserver already running.
 
@@ -4923,7 +4921,7 @@ Congratulations! You have now got MapServer installed and configured to run in y
 
 
 Configuring MapServer exemplar services on a LAMP server
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 We shall now configure the two BGS exemplar services (a shapefile version and a raster version) available from the BGS FTP server.
 
@@ -4942,7 +4940,7 @@ First we move our index pages to the root directory of the web server (/var/www/
   #mv ms4w/Apache/htdocs/* /var/www/
 
 Create a ows shell script
-"""""""""""""""""""""""""
+'''''''''''''''''''''''''
 
 Next we need to create a ‘ows’ shell script for each of our Map Services; which we need to place in an associated directory.
 
@@ -4996,7 +4994,7 @@ ENTER
   #chmod 755 exemplars/BGS_Bedrock_and_Superficial_Geology/ows
 
 Modify paths in the Mapfile
-""""""""""""""""""""""""""""
+''''''''''''''''''''''''''''
 
 The final step is to modify the WEB > IMAGEPATH path (to "/var/tmp/") and the WEB > IMAGEURL path (to "/tmp/") in each of our onegeology.map files
 
@@ -5005,7 +5003,7 @@ That’s it!
 
 
 Alternative MapServer configurations
-------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you want to use other permutations and get stuck remember you can ask the OneGeology Helpdesk any MapServer configuration issues in relation to your OneGeology services, and we will endeavour to help you.
 
@@ -5033,18 +5031,18 @@ Mailing Lists
 
 
 MapServer and IIS
-^^^^^^^^^^^^^^^^^
+"""""""""""""""""
 
 You may use the IIS web server instead of Apache to run the MapServer CGI.  See the previous cookbook for details of how to do this with IIS version 6.  We haven't been able to update the cookbook for the latest version of IIS, but the MapServer documentation (`IIS Setup for MapServer <http://mapserver.org/installation/iis.html>`_) gives a good guide for how to do this in general for IIS 7 and up.
 
 Compiling MapServer on Linux
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""""
 
 You may wish to compile your own version of MapServer on a \*nix operating system of your own choosing.  We haven't done this for a while and the guidance in our previous cookbook was very out of date.  There is guidance on the MapServer site that takes you through the process (`Compiling on Unix <http://mapserver.org/installation/unix.html>`_)
 
 
 General configuration
-=====================
+---------------------
 
 MapServer services are configured through the use of Mapfile templates (\*.map).  You can use a single Mapfile to configure a service, or you can use a master file that includes other files.  The benefits of using multiple files include ease of maintenance across multiple similar services, and readability.  Here we will use multiple files to show how the various parts of a MapServer (OGC) service need to be configured.  You can configure multiple service types through a single configuration, if desired.
 
@@ -5245,7 +5243,7 @@ The SRS specifies the coordinate system (spatial reference system) that the WMS 
 
 
 Adding alternate character set support
---------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you are serving a non-English language service, you may need or want to change the font and character sets.
 
@@ -5293,7 +5291,7 @@ The important parts to note in the above example are:
 
 
 Creating your own symbology
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 symbols.sym, is a set of defined symbols that can be used to style your map layers.
 
@@ -5339,7 +5337,7 @@ symbols.sym, is a set of defined symbols that can be used to style your map laye
    END
 
 Example include files
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: mapfile
 
@@ -5441,12 +5439,12 @@ Example include files
 
 
 Debugging common errors
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 This section is added to help you debug common errors in your Mapfile.
 
 Symbol definition error
-^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""
 
 getString(): Symbol definition error.  Parsing error near (*matching text*):(line *line-number*)
 
@@ -5463,7 +5461,7 @@ You can correct the error by swapping the file name delimiters to double quotes 
    NAME "Formation d'Irma : calcaire, dolomie à stromatolites, argilite"
 
 Unknown identifier
-^^^^^^^^^^^^^^^^^^
+""""""""""""""""""
 
 loadLayer(): Unknown identifier. Parsing error near (*matching text*):(line *line-number*)
 
@@ -5480,7 +5478,7 @@ This error can occur when you are missing an enclosing KEYWORD in the Mapfile.  
    #END #class
 
 Missing magic string
-^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""
 
 When running a GetFeatureInfo request with the info\_format set as text/html, you will get an error like the below, if you do not include a magic string in each of your HTML template documents.
 
@@ -5501,7 +5499,7 @@ The recently updated exemplar service kits include this NEW requirement, but tho
 `More information on this and related issues. <http://mapserver.org/development/rfc/ms-rfc-56.html>`_
 
 Connecting to a database
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 If your data is stored in a database you can access it by setting the CONNECTION and CONNECTIONTYPE directives (to specify the connection) and the DATA directive (to specify the data you want to retrieve or query). These directives are put in the LAYER section of your map file.
 
@@ -5544,12 +5542,12 @@ For more details on connecting to a database see the `MapServer Data Input pages
 
 
 WMS
-===
+---
 
 We provide two exemplar MapServer services, the first is based on a simple raster file, and is used to illustrate a basic WMS, the second uses a vector datasource (shapefiles) to illustrate how to configure a more advanced WMS (and may also be used for a Simple Feature WFS).
 
 Raster image data exemplar (LAYER configuration)
-------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An example of adding a PNG layer is included in the BGS\_Bedrock\_Raster\_Map application.  The LAYER section is reproduced below for reference.  This data was simply created as a raster from the bedrock shapefile for the purposes of serving as an example.  In this case we won’t be setting up a response to GetFeatureInfo request; we are just returning a coloured map.  There is more `detailed documentation <http://www.mapserver.org/input/raster.html>`_ , in particular as regards efficient serving of large images, using 8-bit vs. 24-bit images, tiling etc.
 
@@ -5599,7 +5597,7 @@ Example extract from Mapfile below:
 
 
 Vector data exemplar (LAYER configuration)
-------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The example file includes the following shapefile based layers:
 
@@ -5704,7 +5702,7 @@ The CLASS related items are the most complicated.  These sections are setting up
 Colour codes for the lithostratigraphical and lithology layers are specific to the British Geological Survey, you should use the codes used by your geological survey.  However, for OneGeology it has been agreed, where possible, to serve a chronostratigraphic age layer using the new `IUGS 2009 colour scheme <https://www.seegrid.csiro.au/wiki/pub/CGIModel/GeologicTime/ISChart2009.pdf>`_ .  This will give some form of harmonization between the different chronostratigraphic layers served by the contributing geological surveys and this is only possible where such an internationally agreed scheme exists.  In this case the British Geological Survey had to refine, re-allocate, and ‘map’ its internal ages to fit the IUGS 2009 one.  The file ‘ICSClasses.txt’ contains a full list of names and CLASS definitions for the appropriate colours for all the IUGS 2009 colours.  In the Mapfile we have commented out the terms that are not actually used in the BGS map; please do the same for your map.
 
 Configuring HTML query templates
---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 All templates must include the **<!-- MapServer Template -->** statement on the first line of the file.
 
@@ -5724,7 +5722,7 @@ The following are examples of how we might configure our WMS GetFeatureInfo resp
 
 
 Debugging your requests
-^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""
 
 In this example we are using MapServer environment variables to help us debug the request that was used to generate the response
 
@@ -5765,7 +5763,7 @@ In this example we are using MapServer environment variables to help us debug th
 
 
 Handling fields for which you have no data
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""""""""""""""""""
 
 As GeoSciML-Lite requires data (or URIs pointing to null value reasons) for data that was not required in the OneGeology-Europe services, you have a few options with MapServer if you don't have the required data (for example a specification\_uri for all features). Option 1 would be to create a column in the data source and populate the rows with null value URIs (such as for example with the value http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unknown/). Option 2 would be to populate the missing values within the GetFetaureInfo request template, such as below:
 
@@ -5806,7 +5804,7 @@ As GeoSciML-Lite requires data (or URIs pointing to null value reasons) for data
 
 
 Using JavaScript
-^^^^^^^^^^^^^^^^
+""""""""""""""""
 
 Here we embed some JavaScript into a response to give a TimeSeries schart for the data point selected
 
@@ -5840,7 +5838,7 @@ Here we embed some JavaScript into a response to give a TimeSeries schart for th
    </script>
 
 Configuring group layering
---------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In some situations, for example when you have too many individual layers, or if you have to comply with some strict naming conventions (such as INSPIRE) you may need to consider configuring group layering.  In group layering you nest one set of layers inside another (group) layer, you can still call (e.g. make a GetMap request on) any of the individual grouped layers or you can call all the grouped layers at the same time using the grouping layer.  For example in the below MapServer GetCapabilities response on a service with group layers you could make a GetMap request on the group layer called GE.GeologicFault and would get a map comprising both the grouped layers (GE.GeologicFault\_GBR\_BGS\_EN\_1M\_Surface and GE.GeologicFault\_GBR\_BGS\_EN\_1M\_Bedrock), or you could perform a GetMap request on either of the individual layers.
 
@@ -5950,7 +5948,7 @@ To configure group layering in MapServer first you need to configure a service w
 
 
 Simple feature WFS
-==================
+------------------
 
 Whilst MapServer is not able to provide a complex feature WFS (such as is required to supply GeoSciML 4.0)  it is possible to configure it to provide a simple feature WFS.  If you have already set up a WMS with a vector data source it is possible with only minor additions to the SERVER and LAYER configuration to enable a WFS service.  If your data supports it, you can also configure a portrayal service, to provide a GeoSciML-Lite simple feature service for example.
 
@@ -6032,7 +6030,7 @@ By default MapServer outputs the geometry in a field called _msGeometry_ to chan
 
 
 WCS
-===
+---
 
 In the same way as WMS and WFS are enabled on a service, WCS operations are enabled using either the **OWS\_ENABLE\_REQUEST** or **WCS\_ENABLE\_REQUEST"** statement in the MAP > WEB > METADATA section (enabling WCS for all coverages) or in the LAYER > METADATA section for enabling operations on a per coverage (layer) basis.
 
@@ -6119,7 +6117,7 @@ The following is an example of a coverage LAYER
 Further details for configuring WCS with Mapserver can be found at: `WCS Server <http://mapserver.org/ogc/wcs_server.html>`_
 
 INSPIRE metadata
-================
+----------------
 
 INSPIRE specific metadata can either be referenced in an external INSPIRE service metadata document (scenario 1) or can be directly embedded in the capabilities document (scenario 2). MapServer supports both scenarios.  In either scenario an extended capabilities section is added to the GetCapabilities response for the service, using metadata configured in the **SERVICE > WEB > METADATA** section of the Mapfile.
 
@@ -6420,9 +6418,8 @@ To create:
 
 **Note 3** Since MapServer version 7.2, by default filling in a complete set of service and layer metadata will also give you a full ISO 19139 XML metadata record for your dataset, which is available through a GetMetadata request, and is automatically added to your service where the GetCapabilites response supports a dataset metadata URL.
 
-************
 Using ArcGIS
-************
+============
 
 .. todo::
 
@@ -6433,13 +6430,13 @@ Using ArcGIS
 The following notes are based on ESRI ArcGIS server version 10.5 (SP1)
 
 WMS
-===
+---
 
 Creating the service
---------------------
+^^^^^^^^^^^^^^^^^^^^
 
 Prepare the map document
-^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""
 
 Initial set up of WMS services is relatively straightforward and simply requires the creation of a map document (.mxd) containing the data you want to add to the service.
 
@@ -6482,7 +6479,7 @@ Eg. an unmodified GetCapabilities (version 1.3.0) response for the above example
    ...
 
 Publishing your WMS
-^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""
 
 Once you are happy with the layer names, the easiest way to publish your WMS is doing it directly from the map document:
 
@@ -6521,7 +6518,7 @@ Your new service will have a URL like below, with the folder name part being opt
    http://[hostname]/ArcGIS/services/[folder name]/[map service title]/MapServer/WMSServer
 
 Edit the GetCapabilities documents
-----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ArcGIS Server doesn’t create any static GetCapabilities xml documents, but does allow you to use external files. You will need to use such external files if you want to add any additional spatial reference systems, correct the keywords listing, change the LegendURL images, add better abstracts and layer titles, or add an INSPIRE extended capabilities section. We think to provide a fully compliant WMS it is highly likely that you will need to use a set of static files.
 
@@ -6563,7 +6560,7 @@ For example, for a service called BGS_BEDROCK_GEOLOGY, we may save our initial G
 Having created your files, you may then edit them as required. We would recommend you make a second copy of the files in case you make an error whilst editing.
 
 INSPIRE
--------
+^^^^^^^
 
 If you want your OneGeology service to comply to INSPIRE standards, in addition to meet the requirements of the OneGeology profile, you need to ensure that the following conditions are fulfilled:
 
@@ -6576,10 +6573,10 @@ If you want your OneGeology service to comply to INSPIRE standards, in addition 
 There are two ways of achieving these conditions using ESRI software. The first one is using a standard ArcGIS map document and standard ArcGIS Server tools, where you’ll need to modify layer names to make them compliant, change service properties to include required coordinate systems and modify the get capabilities document to include the INSPIRE Extended Capabilities section. The second option is using the ArcGIS for INSPIRE extension, which provides tools and new services to ensure compliance with INSPIRE directives. If you want to go for the second option, there is an `ESRI OneGeology Grant  <http://www.onegeology.org/technical_progress/esriGrantOffer.html>`_ for OneGeology members.
 
 ArcGIS Server
-^^^^^^^^^^^^^
+"""""""""""""
 
 INSPIRE Layer Names
-"""""""""""""""""""
+'''''''''''''''''''
 
 In order to make your service INSPIRE compliant, you will need to configure the name of your layers (e.g. GE.GeologicUnit); however, this clashes with OneGeology naming standards. In this situation, it is desirable to create a group layer. For example, you may want to create a layer called GE.GeologicUnit to group all of your layers that are spatial objects of type GeologicUnit. The layer name and title rules set out in the OneGeology profile relate to the grouped (or child) layers, whereas the INSPIRE name and title relate to the group (or parent) layer.
 
@@ -6599,7 +6596,7 @@ Note that ArcGIS Server will generate only the *<Title>* tag of group layers in 
 Group layers created in ArcGIS Server will not have a style associated to them and the group layer itself will not display a map.
 
 INSPIRE Coordinate Systems
-""""""""""""""""""""""""""
+''''''''''''''''''''''''''
 
 ArcGIS Server always adds 2 coordinate systems: EPSG:4326 (or CRS:84 for version 1.3.0) and the coordinate system set on the map document creating the service. To add any additional coordinate systems go to your map service and edit it using either `ArcGIS Server Manager <http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-manager.htm>`_ or `ArcMap <http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-arcgis-for-desktop.htm>`_.  On the *Service Editor* dialog go to *Capabilities > WMS* and, in the *Additional spatial reference systems* text box, type any well-known EPSG ID in the format indicated below.
 
@@ -6609,7 +6606,7 @@ ArcGIS Server always adds 2 coordinate systems: EPSG:4326 (or CRS:84 for version
    Figure 5 - Additional spatial reference systems option
 
 INSPIRE extended capabilities
-"""""""""""""""""""""""""""""
+'''''''''''''''''''''''''''''
 
 The extended capabilites section is inserted into your external GetCapabilities section, between the Exception element block and the first Layer element.
 
@@ -6690,24 +6687,24 @@ In addition (for both scenarios) you will need to **reference the inspire_common
        http://www.esri.com/wms http://../arcgis/services/.../MapServer/WmsServer?version=1.3.0%26service=WMS%26request=GetSchemaExtension">
 
 INSPIRE Extension
-^^^^^^^^^^^^^^^^^
+"""""""""""""""""
 
 The ArcGIS for INSPIRE extension allows to create an INSPIRE compliant WMS through a new ESRI map service, specific to this extension, called INSPIRE View service. In our experience, creating a INSPIRE compliant WMS service using custom INSPIRE extension tools is more difficult than using standard ArcGIS tools, due to the complexity of the datasets that you have to use, the scarce amount of documentation and the limited ESRI support for the extension.
 
 Create INSPIRE geodatabase
-""""""""""""""""""""""""""
+''''''''''''''''''''''''''
 
 The first step to use ArcGIS for INSPIRE is creating a geodatabase with one of the templates supplied by the extension.  To create a geodatabase for Geology follow the steps in `this document <http://enterprise.arcgis.com/en/inspire/10.5/get-started/pdf/InstallationGuide_ArcGISForINSPIRE_GDB_10_5_EN.pdf>`_ in sections 3.3.1 and 3.3.4.
 
 Populate INSPIRE geodatabase
-""""""""""""""""""""""""""""
+''''''''''''''''''''''''''''
 
 Fill in the geodatabase with your data. There are multiple feature classes and tables; fill in the ones that are relevant to you.
 
 Note that all feature classes will be grouped on a feature dataset called *GE*. You’ll need to add your features to the appropriate feature class so that they can be used by the INSPIRE extension. Feel free to add new fields to these feature classes if you want to show attributes not available by default on the template; however, refrain from deleting any existing field as you might break one of the multiple relationships set on the template.
 
 Customise layers in INSPIRE geodatabase
-"""""""""""""""""""""""""""""""""""""""
+'''''''''''''''''''''''''''''''''''''''
 
 You’ll do this by modifying the *LayerInfo* table. In this extension, each INSPIRE layer consists normally of four hidden sublayers.  We need to modify the *LayerInfo* table to make the relevant sublayers visible and to be able to change the name and title of the sublayers (`see Customization Guide <http://enterprise.arcgis.com/en/inspire/10.5/get-started/pdf/CustomizationGuide_ArcGISForINSPIRE_LayerInfo_10_5_EN.pdf>`_). The INSPIRE layer will act as a group layer and will follow INSPIRE naming conventions. The sublayers will follow OneGeology naming conventions. In the following example, we are going to configure two sublayers to represent bedrock units symbolised by age and by lithology. These layers are going to be looking at the same feature class in the geodabase template, defined in the FC_NAME field as *geUnitS* (short for geology unit surface). Given that in this example we are dealing only with geologic features represented as polygons, the final *LayerInfo* table could look like this (table transposed for visibility reasons):
 
@@ -7004,7 +7001,7 @@ Table 1 Custom *Layer Info* table
 * Child layers must have a value of *0* in the IS_HIDDEN field so that they are visible on the INSPIRE VIEW service.
 
 Add INSPIRE layers to your map document
-"""""""""""""""""""""""""""""""""""""""
+'''''''''''''''''''''''''''''''''''''''
 
 Open a map document and add your layers to the map using the *Add INSPIRE Layer* button (if you can’t see this button, make sure that you have the *INSPIRE Tools* toolbar enabled).
 
@@ -7047,7 +7044,7 @@ Now you can proceed to style your layers using the appropriate symbology. The sy
    Figure 11 - The symbology set in the map document will correspond to the *default* style
 
 Publish INSPIRE View service
-""""""""""""""""""""""""""""
+''''''''''''''''''''''''''''
 
 A INSPIRE View service is the ESRI equivalent of a INSPIRE compliant WMS. Publishing a INSPIRE View service is very similar to publishing a WMS, the only difference being that you need to select and configure one additional capability.
 
@@ -7082,7 +7079,7 @@ A INSPIRE View service is the ESRI equivalent of a INSPIRE compliant WMS. Publis
 For more information go to `Create an INSPIRE View Service <http://server.arcgis.com/en/inspire/latest/inspire-services/create-the-inspire-view-service.htm>`_.
 
 Configure INSPIRE View service
-""""""""""""""""""""""""""""""
+''''''''''''''''''''''''''''''
 
 Once the service has been published, we are going to use ArcCatalog to configure INSPIRE View service properties which will be reflected on the service’s GetCapabilities document.
 
@@ -7135,12 +7132,12 @@ The *Editing the InspireView properties* dialog allows you to set the options be
    Figure 19 - Inspire View properties: Layers information
 
 Custom INSPIRE View service GetCapabilities document
-""""""""""""""""""""""""""""""""""""""""""""""""""""
+''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 If you need to modify any option that’s not on the *Editing the InspireView properties* dialog, like the Online Resource tag mentioned above, you need to go to the service cached capabilities folder (*C:\\arcgisserver\\directories\\arcgisforinspire\\[folder_name]\\[map service title]_MapServer\\[folder_name]_ [map service title]_MapServer_inspireview*) and create a file called *GetCapabilities<version>_<3 letter language code>.xml*. Your service will now use the custom GetCapabilities file instead of the dynamically created one (e.g. *GetCapabilities130_ENG.xml*), also stored in the same location. When creating your custom file it’s recommended to start from a copy of the dynamically created file.
 
 Use INSPIRE View service
-""""""""""""""""""""""""
+''''''''''''''''''''''''
 
 Your service will be accessible from the following endpoint:
 
@@ -7151,7 +7148,7 @@ Your service will be accessible from the following endpoint:
 For more information see `Use an INSPIRE View service <http://server.arcgis.com/en/inspire/latest/inspire-services/use-the-inspire-view-service.htm>`_.
 
 ArcGIS server issues
---------------------
+^^^^^^^^^^^^^^^^^^^^
 
 * When using the SLD parameter to get an external SLD file, ArcGIS 10.0 expects the layer name and styles parameter to be to be sent as part of a GetMap request, even though this is not required by the WMS+SLD specification. A bug has been raised with ESRI on this issue (`NIM095568 <http://support.esri.com/en/bugs/nimbus/TklNMDk1NTY4>`_) back in version 10.0, but it’s still present.
 
@@ -7160,7 +7157,7 @@ ArcGIS server issues
    SLD Enabled WMS content.
 
 Simple Feature WFS
-==================
+------------------
 
 Creating a simple feature WFS requires almost the same steps as creating a WMS. The only difference being that, when publishing the service, you need to select the WFS capability.
 
@@ -7183,10 +7180,10 @@ For more information on how to create a simple feature WFS service and how to ed
    Complex Feature WFS content.
 
 WCS
-===
+---
 
 Create a map document
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 In ArcGIS, a WCS can be created mainly through 3 routes: a map document with raster data, a raster dataset or a mosaic dataset. Publishing a mosaic dataset requires ArcGIS Image Server, so unless you have this extension enabled, the only way to publish multiple rasters at once on a single WCS will be through a map document; therefore we’re are going to focus on this route. For more information see `WCS services <http://server.arcgis.com/en/server/latest/publish-services/windows/wcs-services.htm>`_.
 
@@ -7198,7 +7195,7 @@ Start by creating a map document and adding your rasters to it. Note that, if yo
    Figure 22 - Adding WCS data to your map document
 
 Publish the WCS service
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 * Go to *File > Share As > Service… *to open the *Share as Service* dialog.
 
@@ -7230,7 +7227,7 @@ Your new service will have a URL like below, with the folder name part being opt
    http://[hostname]/ArcGIS/services/[folder_name]/[map service title]/MapServer/WCSServer
 
 Edit the GetCapabilities document
----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ArcGIS server doesn’t create any static GetCapabilities xml documents, but does allow you to use external files. You will need to use such external files if you want to add any supported CRS, add keywords and abstracts for coverages or modify coverage titles. Note that, independently of the supported CRSs added, ESRI WCSs will always support the over 6000 projections that come with the ArcGIS projection engine.
 
@@ -7274,9 +7271,8 @@ We have found that, if you make a GetCapabilities request using external capabil
 
 For more information, see `Use external capabilities files with WCS Services <http://server.arcgis.com/en/server/latest/publish-services/windows/using-external-capabilities-files-with-wcs-services.htm>`_.
 
-*******************************************
 Using Apache HTTP server as a reverse proxy
-*******************************************
+===========================================
 
 To serve a OneGeology WMS through the OneGeology Portal that service must be served using port 80; the default port for any http web service. If you are already serving another web service on port 80 on the same server (such as a GeoNetwork spatial data metadata catalogue for example), then you will need to use a different port number for the existing service. In itself this shouldn’t be too difficult to do, however this might cause problems for your customers due to restrictive firewall rules that prevent them consuming any web service not served on the standard web port number. One way around this is to merge the services together; another possibility (as detailed below) is to use the Apache HTTP web server as a reverse proxy, that is, to handle all requests to the second service as if that service was coming from the MS4W Apache service. The user is thus unaware that there is more than one web service. Each service proxied in this way runs on a separate port number, and may still be accessed directly on that port (depending on your configuration), but it is also available as if it were running on port 80.
 
