@@ -3085,7 +3085,7 @@ Note that TC211/ISO:19115:2003 is not itself a format, but a standard for defini
 OneGeology Europe participants should note that conformance of an ISO 19115 metadata set to the ISO 19115 Core does not guarantee conformance to INSPIRE metadata, see the INSPIRE technical guidelines document `MD_IR_and_ISO_v1_2_20100616 <http://inspire.ec.europa.eu/documents/Metadata/MD_IR_and_ISO_20131029.pdf>`_ for further details.
 
 GeoSciML
---------
+========
 
 GeoSciML (GeoScience Markup Language) is a GML (Geography Markup Language) application language for geoscience.
 
