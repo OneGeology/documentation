@@ -51,7 +51,7 @@ Contents:
    authors
 
 Indices and tables
-==================
+------------------
 
 * :ref:`genindex`
 * :ref:`modindex`
@@ -69,7 +69,7 @@ The only condition we do place on the use of the materials is that they are not 
 When you do use OneGeology materials, though not a condition, please inform the secretariat, onegeology@bgs.ac.uk as we like to record use of our materials for promotional and other uses.
 
 Acknowledgements
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 We would appreciate you use the following acknowledgement to accompany  any uses of OneGeology materials: **'Reproduced with the permission of the OneGeology. All rights Reserved'**
 
@@ -77,7 +77,7 @@ Where illustrations, map extracts, data or images are used as the basis of speci
 
 
 Documenting the Documentation
-=============================
+-----------------------------
 
 This documentation is written in ReStructured Text hosted on GitHub pages, built using Sphinx via Gitub Actions CI/CD. 
 
@@ -130,7 +130,8 @@ To setup
 - In repo settings>secrets add a secret key with same name "ghpagesdk" and copy/paste private key hash. 
 - make a commit to the master brach and should all be working. 
 
-## Source files
+Source files
+^^^^^^^^^^^^
 
 Original documentation was a collection of rst and html files. THe rst files were copied and merged together to the current format in this repository. HTML files were converted using pandoc as below:
 
