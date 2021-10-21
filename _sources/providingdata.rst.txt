@@ -3021,68 +3021,68 @@ Note that TC211/ISO:19115:2003 is not itself a format, but a standard for defini
       </thead>
       <tbody>
         <tr>
-          <td>**Dataset title** (M)
+          <td><strong> Dataset title</strong> (M)
             <p>A unique title (within your metadata records) for your data.</p></td>
-          <td>**Spatial representation type** (O)
+          <td><strong>Spatial representation type</strong> (O)
             <p>The method used to represent geographic information in the dataset. i.e., vector, grid, TIN etc.</p></td>
         </tr>
         <tr>
-          <td>**Dataset reference date** (M)</td>
-          <td>**Reference system** (O)</td>
+          <td><strong>Dataset reference date</strong> (M)</td>
+          <td><strong>Reference system</strong> (O)</td>
         </tr>
         <tr>
-          <td>**Dataset responsible party** (O)</td>
-          <td>**Lineage** (O) </td>
+          <td><strong>Dataset responsible party</strong> (O)</td>
+          <td><strong>Lineage</strong> (O) </td>
         </tr>
         <tr>
-          <td>**Geographic location** of the dataset (by four coordinates or by geographic identifier) (C)
+          <td><strong>Geographic location</strong>  of the dataset (by four coordinates or by geographic identifier) (C)
             <p>If the metadata applies to a data set which is spatially referenced (such as a OneGeology WMS) this is required.</p></td>
-          <td>**On-line resource **(O) </td>
+          <td><strong>On-line resource</strong> (O) </td>
         </tr>
         <tr>
-          <td>**Dataset language** (M)
+          <td><strong>Dataset language</strong> (M)
             <p>Language(s) used within the dataset. Required even if the resource does not include any textual information; defaults to the Metadata language.</p></td>
-          <td>**Metadata file identifier** (O)
+          <td><strong>Metadata file identifier</strong> (O)
             <p>Unique identifier for this metadata file</p></td>
         </tr>
         <tr>
-          <td>**Dataset character set** (C)
+          <td><strong>Dataset character set</strong> (C)
             <p>Full name of the character encoding used for the data set.  You must supply this character set if you are not using the ISO/IEC 10646-1 character set and if your character set is not defined by the document encoding.</p></td>
-          <td>**Metadata standard name** (O)
+          <td><strong>Metadata standard name</strong> (O)
             <p>Name of the metadata standard (including profile name) used</p></td>
         </tr>
         <tr>
-          <td>**Dataset topic category** (M)
+          <td><strong>Dataset topic category</strong> (M)
             <p>Main theme(s) of the data set described using the most appropriate term defined in the standard; for OneGeology services these are likely to be one or more from: ‘*geoscientificInformation*’, ‘*economy*’ (for layers showing mineral resources), or ‘*imageryBaseMapsEarthCover*’</p></td>
-          <td>**Metadata standard version** (O)
+          <td><strong>Metadata standard version</strong> (O)
             <p>Version (profile) of the metadata standard used</p></td>
         </tr>
         <tr>
-          <td>**Spatial resolution of the dataset** (O)
+          <td><strong>Spatial resolution of the dataset</strong>  (O)
             <p>Scale or factor which provides a general understanding of the density of the spatial data in the dataset.</p></td>
-          <td>**Metadata language** (C)
+          <td><strong>Metadata language</strong> (C)
             <p>Language used to document the metadata. You must supply the metadata language if it is not defined by the document encoding.</p>
             <p>Note for INSPIRE GEMINI metadata you must always supply the metadata language.</p></td>
         </tr>
         <tr>
-          <td>**Abstract defining the dataset** (M)
+          <td><strong>Abstract defining the dataset</strong> (M)
             <p>Brief narrative summary of the content of the resource.</p></td>
-          <td>**Metadata character set** (C)
+          <td><strong>Metadata character set</strong> (C)
             <p>Full name of the character encoding used for the metadata set. You must supply this character set in your metadata if you are not using the `ISO/IEC 10646-1 character set <https://en.wikipedia.org/wiki/Universal_Character_Set>`_ (https://en.wikipedia.org/wiki/Universal_Character_Set) AND if your character set is not defined by the document encoding.  Note as most XML and HTML pages provide a character set as part of their own metadata, it is likely that you will not need to explicitly state this for your own layer metadata</p></td>
         </tr>
         <tr>
-          <td>**Distribution format** (O) </td>
-          <td>**Metadata point of contact** (M)
+          <td><strong>Distribution format</strong> (O) </td>
+          <td><strong>Metadata point of contact</strong> (M)
             <p>Party responsible for the metadata information</p></td>
         </tr>
         <tr>
-          <td>**Additional extent information for the dataset** (vertical and temporal) (O)</td>
-          <td>**Metadata date stamp** (M)</td>
+          <td><strong>Additional extent information for the dataset</strong>  (vertical and temporal) (O)</td>
+          <td><strong>Metadata date stamp</strong> (M)</td>
         </tr>
         </tbody>
       </table>
 
-OneGeology Europe participants should note that conformance of an ISO 19115 metadata set to the ISO 19115 Core does not guarantee conformance to INSPIRE metadata, see the INSPIRE technical guidelines document `MD_IR_and_ISO_v1_2_20100616 <http://inspire.ec.europa.eu/documents/Metadata/MD_IR_and_ISO_20131029.pdf>`_ for further details.
+Note, conformance of metadata to the ISO 19115 Core does not guarantee conformance to INSPIRE metadata, see the INSPIRE technical guidelines document `MD_IR_and_ISO_v1_2_20100616 <http://inspire.ec.europa.eu/documents/Metadata/MD_IR_and_ISO_20131029.pdf>`_ for further details.
 
 GeoSciML
 ========
@@ -3520,7 +3520,7 @@ GeoServer can compute the bounding box of your data from the data itself or you 
 
    GeoServer may not be able to determine the coordinate reference system for some data sources. In this case you will need to enter the correct value in the :guilabel:`Declared SRS` box and choose :guilabel:`Force declared` for the :guilabel:`SRS handling` option. For example the image with world file from the example data has this problem as the coordinate reference system isn't included in the world file.
 
-For further information on the other settings on this tab see the `GeoServer documentation <http://docs.geoserver.org/latest/en/user/data/webadmin/layers.html#edit-layer-data>`_.
+For further information on the other settings on this tab see the `GeoServer layers documentation <http://docs.geoserver.org/latest/en/user/data/webadmin/layers.html#edit-layer-data>`_.
 
 The Publishing tab of the Edit Layer page
 """""""""""""""""""""""""""""""""""""""""
@@ -3579,7 +3579,7 @@ If required you may disable this functionality in the Service metadata, by check
 Simple Feature WFS
 ------------------
 
-With GeoServer if you have configured a data store and layer as described in the :ref:`service_provision_server_setup_geoserver_simple_wms` section and the data store is of a suitable type (not, for example, a pure image format or raster format) then you will already have done all the substantive work to create a simple feature WFS serving features with the same name as your layer name and with property elements named according to the fields in the underlying data store. In the :ref:`service_provision_data_preparation_exampledata` the shapefile, GeoPackage and PostGIS database all are suitable. To complete setting up the WFS service metadata select :guilabel:`WFS` from under the :guilabel:`Services` section at the left of the `web administration interface <http://docs.geoserver.org/latest/en/user/webadmin/index.html>`_. The service metadata here is very similar to that described for setting up a :ref:`service_provision_server_setup_geoserver_simple_wms` so refer to that for what to enter. WFS specific settings are described in the `GeoServer documentation <http://docs.geoserver.org/latest/en/user/services/wfs/webadmin.html>`_.
+With GeoServer if you have configured a data store and layer as described in the :ref:`service_provision_server_setup_geoserver_simple_wms` section and the data store is of a suitable type (not, for example, a pure image format or raster format) then you will already have done all the substantive work to create a simple feature WFS serving features with the same name as your layer name and with property elements named according to the fields in the underlying data store. In the :ref:`service_provision_data_preparation_exampledata` the shapefile, GeoPackage and PostGIS database all are suitable. To complete setting up the WFS service metadata select :guilabel:`WFS` from under the :guilabel:`Services` section at the left of the `web administration interface <http://docs.geoserver.org/latest/en/user/webadmin/index.html>`_. The service metadata here is very similar to that described for setting up a :ref:`service_provision_server_setup_geoserver_simple_wms` so refer to that for what to enter. WFS specific settings are described in the `GeoServer WFS documentation <http://docs.geoserver.org/latest/en/user/services/wfs/webadmin.html>`_.
 
 .. note::
 
