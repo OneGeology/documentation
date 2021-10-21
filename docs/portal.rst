@@ -1,4 +1,3 @@
-===========================
 Using the OneGeology Portal
 ===========================
 
@@ -195,7 +194,7 @@ To find out further information about any map layer you can click the arrow to r
    This (above) information is harvested automatically by the OneGeology Portal client software from the GetCapabilities response document of the WMS.
 
 Go To Function
----------------
+^^^^^^^^^^^^^^
 
    .. figure:: images/searchlocation.jpg
       :width: 500
@@ -215,7 +214,7 @@ Go To Function
 
 
 Viewing layers in different projections
-----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    The portal allows you to select other projections to view the map layers.  The projections supported by the portal are:
 
