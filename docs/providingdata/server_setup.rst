@@ -1,9 +1,7 @@
 
-************
-Web Services
-************
-
-How to setup web services to serve data to OneGeology. We provide a basic explanation of how to do it easily.
+*******************
+Setting up a Server
+*******************
 
 There are a wide variety of proprietary and open source software packages that can be used to provide the OGC web services of interest to OneGeology. We cannot possibly describe them all but this section gives guidance on how to use some with which we do have experience to set up your OneGeology services. If you are interested and able to provide similar guidance for a software package not listed below then please get in touch to discuss adding your documentation here. Currently the only software we have successfully used to provide *all* the service types relevant for OneGeology is GeoServer.
 
