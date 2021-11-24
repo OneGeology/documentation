@@ -46,7 +46,6 @@ Contents:
    :glob:
 
    providingdata
-   portal
    using
    appendices
    authors
