@@ -49,12 +49,7 @@ Contents:
    using
    appendices
 
-Indices and tables
-------------------
-
 * :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 
 Guidance for the use of OneGeology Materials (e.g. images and data)
 -------------------------------------------------------------------
