@@ -16,8 +16,20 @@ There are two main areas being covered; first is how to use OneGeology and secon
 * http://onegeology.org/what_is/home.html and all the subsections are introductions to OneGeology which we should point to where appropriate rather than duplicating.
 * http://onegeology.org/participants/home.html is a high-level description of what it means to participate in OneGeolgy as a provider so could be pointed to from how to provide services introduction.
 * http://onegeology.org/getting_involved/home.html and http://onegeology.org/getting_involved/get_involved.cfm are the bits participating organisations will have read and form submitted when expressing interest in becoming providers so note from service provision introduction.
-* The `Techical overview <http://onegeology.org/technical_progress/home.html>`_ and sub-sections (http://onegeology.org/technical_progress/users.html, http://onegeology.org/technical_progress/geosciml.html and http://onegeology.org/portal/portal_uses.html) feel like a bit of an oddity with a lot of overlap with cookbook high-level introductory content.
 * http://onegeology.org/portal/home.html - Should this page exist separately or instead be a direct link to cookbook chapter on portal?
+* http://www.onegeology.org/misc/downloads.html?Accordion1=0#Cookbooks - Older versions of cookbooks
+* http://www.onegeology.org/wmsCookbook/home.html - Older web version of WMS cookbook.
+* The `Techical overview <http://onegeology.org/technical_progress/home.html>`_ and sub-sections feel like a bit of an oddity with a lot of overlap with cookbook high-level introductory content:
+   * http://www.onegeology.org/technical_progress/technical.html
+   * http://onegeology.org/technical_progress/users.html
+   * http://www.onegeology.org/technical_progress/buddy_home.html
+   * http://www.onegeology.org/technical_progress/accreditationForm.cfm
+   * http://onegeology.org/technical_progress/geosciml.html
+   * http://www.onegeology.org/technical_progress/esriGrantOffer.html
+   * http://www.onegeology.org/use/home.html - replaced by this documentation
+   * http://www.onegeology.org/service_provision/home.html - replaced by this documentation
+   * http://onegeology.org/portal/portal_uses.html) 
+
 
 These pages are specifically aimed at those involved in the detailed technical aspects of OneGeology and the processes required to provide your geological map data to the web. Minimum technical requirements and specifications are outlined and the levels of involvement possible are explained. This documentation replaces old documentation on http://www.onegeology.org and the separate WMS, WFS and WCS Cookbook PDF's.
 
