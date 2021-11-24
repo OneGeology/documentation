@@ -3,6 +3,10 @@
 The aim: One service - many uses
 ********************************
 
+.. note::
+
+   The sections from here to and including "Support services" have been taken from http://www.onegeology.org/technical_progress/technical.html. Need to decide which bits of this content should still exist and whether here in the techncial documentation or on the main website pages.
+
 Geological map data will be made available as a distributed web service, using the OGC 'web feature mapping' approach. The priority of OneGeology is to make available interoperable, Internet-accessible, scientifically-attributed data and to make progress at levels appropriate to participants' capability. Surveys and organisations are encouraged to work together to develop and implement the required interchange standard to make their data interoperable. This can be achieved by using GML (Geography Mark-up Language) based
 data.
 
@@ -106,6 +110,10 @@ Work will be based on open-source technologies so all the OGC web services requi
 ********************************************
 Register your data or service for the Portal
 ********************************************
+
+.. note::
+
+   This section has been taken from http://www.onegeology.org/technical_progress/buddy_home.html. Need to decide which bits of content should remain and which bits on main website and which here. Possibly the registration pages belong on the main web site and the instructions about emailing onegeologyhelp when you have a candidate service belong here?
 
 OneGeology is an initiative to make web accessible the geoscience data held by national geological survey and similar organisations around the World.
 

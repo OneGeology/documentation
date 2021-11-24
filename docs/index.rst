@@ -35,6 +35,10 @@ These pages are specifically aimed at those involved in the detailed technical a
 
 For a brief overview of the aims and progress of the initiative, please click `here <http://www.onegeology.org/what_is/home.html>`_.
 
+.. note::
+
+   The below "For non-specialists" section has been taken from http://www.onegeology.org/technical_progress/home.html. Is there any point having it here?
+
 For non-specialists
 --------------------
 

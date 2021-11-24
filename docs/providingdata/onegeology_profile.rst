@@ -748,6 +748,11 @@ Note, conformance of metadata to the ISO 19115 Core does not guarantee conforman
 GeoSciML
 ========
 
+.. note::
+
+   This section content comes from http://www.onegeology.org/technical_progress/geosciml.html. Doesn't really belong here but not clear where it could go.
+
+   
 GeoSciML (GeoScience Markup Language) is a GML (Geography Markup Language) application language for geoscience.
 
 **The design, build and deployment of information technologies that enable and advance geoscience information management, analysis and delivery will require systems that are interoperable following international agreed standards that are relevant to the geosciences.**
