@@ -48,7 +48,6 @@ Contents:
    providingdata
    using
    appendices
-   authors
 
 Indices and tables
 ------------------
