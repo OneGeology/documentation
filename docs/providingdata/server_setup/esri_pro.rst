@@ -1,5 +1,5 @@
 
-Using ArcMap
+Using ArcGIS Pro
 ============
 
 .. todo::
@@ -8,7 +8,7 @@ Using ArcMap
    * Complex Feature WFS
 
 
-The following notes are based on ESRI ArcGIS server version 10.5 (SP1)
+The following notes are based on using ESRI ArcGIS Pro version 2.8.0 and ESRI ArcGIS server version 10.9.1.
 
 WMS
 ---
@@ -19,8 +19,7 @@ Creating the service
 Prepare the map document
 """"""""""""""""""""""""
 
-Initial set up of WMS services is relatively straightforward and simply requires the creation of a map document (.mxd) containing the data you want to add to the service.
-
+Initial set up of WMS services is relatively straightforward and simply requires the creation of a map document   in ArcGIS Pro  (.aprx ) containing the data you want to add to the service.
 It is important to pay attention to the layer names in the map document, since the individual service layer names will use the map document layer names. The service will also use the map document layer names for the respective layer titles in the GetCapabilities document.
 
 .. figure:: images/image048.jpg
@@ -62,35 +61,81 @@ Eg. an unmodified GetCapabilities (version 1.3.0) response for the above example
 Publishing your WMS
 """""""""""""""""""
 
-Once you are happy with the layer names, the easiest way to publish your WMS is doing it directly from the map document:
+If you have not already established a connection to your ArcGIS server instance, add a new server connection.
 
-* Go to *File > Share As > Service…* to open the *Share as Service* dialog.
+* Go to *Insert> Connections > Add ArcGIS Server Connection*
 
-* Select *Publish a service* and click *Next >*.
+.. figure:: images/esri/arcpro02.png
+   :alt: Using ArcMap layer names in the service
 
-* On the *Publish a Service* dialog, choose/add a connection to your ArcGIS Server instance and write a name for your map service. The name you enter will be part of the WMS url, so you must ensure that meets the OneGeology profile naming conventions. Click *Next >.*
+   Figure 2 - Establishing an ArcGIS Server connection
 
-* Select whether to *Use existing folder* or *Create new folder*. The folder name will also appear as part of the WMS url. Click *Continue*.
 
-* In the *Service Editor* dialog, go to *Capabilities* and select *WMS*. If you wish, you can unselect KML.
+
+Once you are happy with the layer names, the easiest way to publish your WMS is doing it directly from the Catalog pane:
+
+* Right click the established server connection in the Catalog pane; go to *Publish > Map Service* 
+
+.. figure:: images/esri/arcpro04.png
+   :alt: Publish a Service via the ArcGIS Server connection
+
+   Figure 3 - Publish a Service via the ArcGIS Server connection
+
+* A dialog will open letting you select the relevant *Project Map* 
+
+* Select the Map that contains the layers you would like to serve (if there are more than one in your project)
+
+* The *Publish a Service* dialog will open.
+ 
+
+.. figure:: images/esri/arcpro05.png
+   :alt: Select the Map containing the layers you would like to publish
+
+   Figure 4 - Select the Map containing the layers you would like to publish
+
+The service configurations are similar to the one you may know from ArcMap Desktop.
+
+
+* On the Publish a Service dialog, choose a name for your map service. The name you enter will be part of the WMS url, so you must ensure that meets the OneGeology profile naming conventions.
+
+.. figure:: images/esri/arcpro06.png
+   :alt: Publish Map Service Dialog
+
+   Figure 5 - Publish Map Service Dialog
+
+* Select whether to *Use existing folder* or *Create new folder*. The folder name will also appear as part of the WMS url. 
+* Go to *Configuration* and select WMS. If you wish, you can unselect all other  configurations apart from Map.
+
+.. figure:: images/esri/arcpro07.png
+   :alt: Publish Map Service - Configuration
+
+   Figure 6 - Publish Map Service  - Configuration
+
 
 .. note::
 	If you **do not** want to expose the data behind your WMS service, make sure that the **WFS** option is **unselected**.
 
-* Now go to *Capabilities > WMS* to access the WMS properties
 
-.. figure:: images/image049.jpg
+
+.. figure:: images/esri/arcpro08.png
    :alt: Adding a new WMS service in ArcGIS
 
-   Figure 2 - Adding a new WMS service in ArcGIS
+   Figure 7 - Adding a new WMS service in ArcGIS
 
-* You will be presented with a form to edit your service level metadata (as above) or you may opt to use external capabilities. We suggest at this stage that you should use the form to fill in as much detail as possible, though you should note that you will eventually need to use external files to enter any layer level metadata and add missing service level metadata parameters; we can use the data you enter initially as the basis for these external static files.
+* Edit the *WMS Properties*, specify the Operations that are allowed to be performed by the user. 
+
+* You will be presented with a form to edit your service level metadata (as below) or you may opt to use external capabilities. We suggest at this stage that you should use the form to fill in as much detail as possible, though you should note that you will eventually need to use external files to enter any layer level metadata and add missing service level metadata parameters; we can use the data you enter initially as the basis for these external static files.
+
+* You will need to update the service with a link to the external Capabilities file in ArcGIS Server Manager once the service has been successfully published
 
 * You also need to tick the *Use layer names from the map document* option; otherwise, the layer names will be given numbers instead. Again, you will need to ensure that the ArcMap layer names follow the naming guidelines.
 
 * ArcGIS Server creates only one style named *default* for every layer, but allows you to do include additional styles for each layer using a SLD file. The default style matches the symbology set in the map document.
 
-* Once you finish configuring your WMS, click *Publish* on the top-right corner of the *Service Editor* dialog to create your service.
+* Once you finish configuring your WMS, first click *Analyse* to identify any possible errors prior to publishing.
+
+* If no errors are returned click *Publish* at the bottom of the Service Editor dialog to create your service.
+
 
 Your new service will have a URL like below, with the folder name part being optional:
 
@@ -127,12 +172,12 @@ It doesn’t really matter what name you give these files, as long as you use th
 
 You need to put these files on the server (or at a location available to your server), and make them browsable. These files only need to be browsable internally by the ArcGIS server.
 
-Now go back to your map service and edit it using either `ArcGIS Server Manager <http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-manager.htm>`_ or `ArcMap <http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-arcgis-for-desktop.htm>`_.
+Now go back to your map service and edit it using either `ArcGIS Server Manager <http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-manager.htm>`_ or `ArcGIS Pro <https://pro.arcgis.com/en/pro-app/latest/help/sharing/overview/overwrite-a-map-service.htm>`_.
 
-.. figure:: images/image050.jpg
+.. figure:: images/esri/arcpro09.PNG
    :alt: Setting up external capabilities files
 
-   Figure 3 - Setting up external capabilities files
+   Figure 8 - Setting up external capabilities files
 
 Select *WMS*, then select the *Use External capabilities files* option and in the *Specify the location and prefix* dialog add the web address to the folder containing the capabilities response documents plus your *[short service name]* prefix.
 
@@ -163,12 +208,12 @@ In order to make your service INSPIRE compliant, you will need to configure the 
 
 If your INSPIRE service is only serving layers of one type, one way of applying group layering would be to use the root layer name and title (not service name and title) as the grouping layer. If, on the other hand, your INSPIRE service is serving layers of several types (e.g. GE.GeologicUnit and GE.GeologicFault), we believe the only option is for you to configure actual group layering.
 
-To **add group layers to a new service** simply `add a group layer <http://desktop.arcgis.com/en/arcmap/latest/map/working-with-layers/working-with-group-layers.htm#GUID-058900C7-6A45-4260-83D8-9039C00D875C>`_ to the map document that will create your service, rename it and place your layers inside. The WMS service published form this map document will keep the same group layer structure.
+To **add group layers to a new service** simply `add a group layer <https://pro.arcgis.com/en/pro-app/2.8/help/mapping/layer-properties/work-with-group-layers.htm>`_ to the map document that will create your service, rename it and place your layers inside. The WMS service published form this map document will keep the same group layer structure.
 
 .. figure:: images/image051.jpg
    :alt: Adding group layers to the service
 
-   Figure 4 - Adding group layers to the service
+   Figure 9 - Adding group layers to the service
 
 If you want **add group layers to an existing service**, open the map document that created the service, modify it as described above and publish it again as a WMS service; however, when publishing the service, make sure that you select the option “Overwrite an existing service”. This will save you having to delete the original service as well as having to type again all service properties.
 
@@ -179,12 +224,12 @@ Group layers created in ArcGIS Server will not have a style associated to them a
 INSPIRE Coordinate Systems
 ''''''''''''''''''''''''''
 
-ArcGIS Server always adds 2 coordinate systems: EPSG:4326 (or CRS:84 for version 1.3.0) and the coordinate system set on the map document creating the service. To add any additional coordinate systems go to your map service and edit it using either `ArcGIS Server Manager <http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-manager.htm>`_ or `ArcMap <http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-arcgis-for-desktop.htm>`_.  On the *Service Editor* dialog go to *Capabilities > WMS* and, in the *Additional spatial reference systems* text box, type any well-known EPSG ID in the format indicated below.
+ArcGIS Server always adds 2 coordinate systems: EPSG:4326 (or CRS:84 for version 1.3.0) and the coordinate system set on the map document creating the service. To add any additional coordinate systems go to your map service and edit it using either `ArcGIS Server Manager <http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-manager.htm>`_ or `ArcGIS Pro <https://pro.arcgis.com/en/pro-app/latest/help/sharing/overview/overwrite-a-map-service.htm>`_.  On the *Publish a Service*  dialog go to *Capabilities > WMS* and, in the *Additional spatial reference systems* text box, type any well-known EPSG ID in the format indicated below.
 
 .. figure:: images/esriimage009.png
    :alt: Additional spatial reference systems option
 
-   Figure 5 - Additional spatial reference systems option
+   Figure 10 - Additional spatial reference systems option
 
 INSPIRE extended capabilities
 '''''''''''''''''''''''''''''

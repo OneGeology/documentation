@@ -16,5 +16,6 @@ At the end there is an additional section on setting up the Apache HTTPD server 
    server_setup/geoserver
    server_setup/mapserver
    server_setup/esri
+   server_setup/esri_pro
    server_setup/apache
 
