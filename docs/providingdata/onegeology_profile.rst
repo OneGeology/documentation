@@ -399,7 +399,7 @@ Keywords
 * /WCS_Capabilities/ContentMetadata/CoverageOfferingBrief/keywords/keyword (1.0.0)
 * /wcs:Capabilities/wcs:Contents/wcs:CoverageSummary/ows:Keywords/ows:Keyword (2.0.x)
 
-The Keyword "OneGeology" must be present to be able to search for services and layers with this keyword. OneGeologyEurope participants should also include relevant keywords chosen from the keyword list created for that project and listed in `Appendix I <https://onegeology.github.io/documentation/appendices.html#appendix-i-onegeology-english-keyword-dictionary-picklist>`_. The main purpose of these keywords is to make your services discoverable by a user searching in a catalogue of services, so a clearly formed but limited list of geosciences domain specific is ideal and all OneGeology global participants may also want to consider using items from this proposed OneGeology-Europe list, which has been formed by looking at many such lists available around the world including the European GEMET thesaurus found at: `http://www.eionet.europa.eu/gemet/en/themes/ <http://www.eionet.europa.eu/gemet/en/themes/>`_.
+The Keyword "OneGeology" must be present to be able to search for services and layers with this keyword. OneGeologyEurope participants should also include relevant keywords chosen from the keyword list created for that project and listed in `Appendix I <https://www.onegeology.org/wmsCookbook/appendixI.html>`_.
 
 The following broad concepts are good starting points
 
@@ -450,7 +450,7 @@ So for example, the layer “AFG AGS 1:1M Bedrock Age” would include the follo
 
 Note, that we have the country twice, once as one of the OneGeology Portal special keywords, and once as the country only; this is because we recognize that the service may be consumed (and catalogued) by services other than OneGeology. We don’t include a subarea@ keyword in this list because that would not be appropriate in this instance.
 
-To help classify your service in the portal according to the thematic keyword list (as detailed in `Appendix I <https://onegeology.github.io/documentation/appendices.html#appendix-i-onegeology-english-keyword-dictionary-picklist>`_), you should also use one or more *thematic@value keywords*.
+To help classify your service in the portal according to the thematic keyword list (as detailed in `Appendix I <https://www.onegeology.org/wmsCookbook/appendixI.html>`_), you should also use one or more *thematic@value keywords*.
 
 **Please note** services using GeoSciML-Lite also require the following keyword: **Geosciml_portrayal_age_or_litho_queryable** (GeoSciML-Lite was previously called GeoSciML-Portrayal.)
 
@@ -744,32 +744,3 @@ Note that TC211/ISO:19115:2003 is not itself a format, but a standard for defini
       </table>
 
 Note, conformance of metadata to the ISO 19115 Core does not guarantee conformance to INSPIRE metadata, see the INSPIRE technical guidelines document `MD_IR_and_ISO_v1_2_20100616 <http://inspire.ec.europa.eu/documents/Metadata/MD_IR_and_ISO_20131029.pdf>`_ for further details.
-
-GeoSciML
-========
-
-.. note::
-
-   This section content comes from http://www.onegeology.org/technical_progress/geosciml.html. Doesn't really belong here but not clear where it could go.
-
-   
-GeoSciML (GeoScience Markup Language) is a GML (Geography Markup Language) application language for geoscience.
-
-**The design, build and deployment of information technologies that enable and advance geoscience information management, analysis and delivery will require systems that are interoperable following international agreed standards that are relevant to the geosciences.**
-
-It is an XML schema for data exchange over the Internet that incorporates the ability to represent geography (geometries e.g. polygons, lines and points using the OGC's GML specification) as part of the features that are being exchanged. The range of features being offered for exchange are defined by the domain or subject area of geoscience or the geological sciences.
-
-GeoSciML accommodates the short-term goal of representing geoscience information associated with geological maps and observations, as well as being extensible in the long-term to other geoscience data. It draws from many geoscience data model efforts, and from these establishes a common suite of feature types based on geological criteria (units, structures, fossils) or artefacts of geological investigations (specimens, sections, measurements). Supporting objects are also considered (timescale, lexicons, etc), so that they can be used as classifiers for the primary objects.
-
-GeoSciML is based on `W3C <http://www.w3c.org>`_, OGC, `CGI Data Model <http://www.seegrid.csiro.au/twiki/bin/view/CGIModel/WebHome>`_  and ultimately `ISO <http://www.iso.org>`_ international standards for data exchange over the Internet. GeoSciML is being designed under the umbrella of the `IUGS Commission <http://www.iugs.org/>`_ on the Management and Application of Geoscience Information (CGI) and its `CGI Interoperability Working Group <http://cgi-iugs.org/tech_collaboration/interoperability_working_group.html>`_.
-
-For further detailed information on the development of GeoSciML, see http://www.cgi-iugs.org/tech_collaboration/geosciml.html
-
-.. figure:: images/geosciml.gif
-    :width: 417px
-    :align: center
-    :height: 249px
-    :alt: GeoSciML Data Model
-    :figclass: align-center
-
-    GeoSciML Data Model

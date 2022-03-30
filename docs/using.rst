@@ -1,6 +1,6 @@
-#####################
-Using OneGeology Data
-#####################
+#########################
+Using OneGeology Services
+#########################
 
 OneGeology makes data from geological data providers around the world accessible to those who would like to see and use it. The majority of this data is the type that is portrayed on traditional geological maps. There are increasing amounts with different geologically related types of data such as geophysics, boreholes and hydrogeology. This data is made available by means of Open GeoSpatial Consortium `OGC <http://www.opengeospatial.org>`_ standard web services that can be accessesed by a number of free and commercial clients. Currently OneGeology makes use of three OGC standards: Web Map Service `WMS <http://www.opengeospatial.org/standards/wms>`_, Web Feature Service `WFS <http://www.opengeospatial.org/standards/wfs>`_ and Web Coverage Service `WCS <http://www.opengeospatial.org/standards/wcs>`_. These different service standards define different kinds of capability for examining the data.
 
@@ -37,12 +37,3 @@ The following pages show how you may access services using these OGC standards (
    using/dapple
    using/google_earth
    using/mapinfo
-
-The documentation for the following clients has not been updated for several years so may not be up-to-date.
-
-  * `Using NASA World Wind <http://www.onegeology.org/howto/1_4_4.html>`_
-  * `Using Google Earth <http://www.onegeology.org/howto/1_4_6.html>`_
-  * `Using Gaia <http://www.onegeology.org/howto/1_4_2.html>`_
-  * `Using Dapple <http://www.onegeology.org/howto/1_4_5.html>`_
-  * `Using MapInfo <http://www.onegeology.org/howto/1_4_8.html>`_
-  * `Using uDig <http://www.onegeology.org/howto/1_4_9.html>`_

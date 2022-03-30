@@ -13,7 +13,6 @@ As described in the pages on `using <http://onegeology.org/use/home.html>`_ OneG
 .. toctree::
    :maxdepth: 2
 
-   providingdata/participating
    providingdata/service_types
    providingdata/data_formats
    providingdata/data_content
