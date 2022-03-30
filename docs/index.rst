@@ -16,6 +16,5 @@ Contents:
 
    providingdata
    using
-   appendices
 
 * :ref:`genindex`

@@ -399,7 +399,7 @@ Keywords
 * /WCS_Capabilities/ContentMetadata/CoverageOfferingBrief/keywords/keyword (1.0.0)
 * /wcs:Capabilities/wcs:Contents/wcs:CoverageSummary/ows:Keywords/ows:Keyword (2.0.x)
 
-The Keyword "OneGeology" must be present to be able to search for services and layers with this keyword. OneGeologyEurope participants should also include relevant keywords chosen from the keyword list created for that project and listed in `Appendix I <https://onegeology.github.io/documentation/appendices.html#appendix-i-onegeology-english-keyword-dictionary-picklist>`_. The main purpose of these keywords is to make your services discoverable by a user searching in a catalogue of services, so a clearly formed but limited list of geosciences domain specific is ideal and all OneGeology global participants may also want to consider using items from this proposed OneGeology-Europe list, which has been formed by looking at many such lists available around the world including the European GEMET thesaurus found at: `http://www.eionet.europa.eu/gemet/en/themes/ <http://www.eionet.europa.eu/gemet/en/themes/>`_.
+The Keyword "OneGeology" must be present to be able to search for services and layers with this keyword. OneGeologyEurope participants should also include relevant keywords chosen from the keyword list created for that project and listed in `Appendix I <https://www.onegeology.org/wmsCookbook/appendixI.html>`_.
 
 The following broad concepts are good starting points
 
@@ -450,7 +450,7 @@ So for example, the layer “AFG AGS 1:1M Bedrock Age” would include the follo
 
 Note, that we have the country twice, once as one of the OneGeology Portal special keywords, and once as the country only; this is because we recognize that the service may be consumed (and catalogued) by services other than OneGeology. We don’t include a subarea@ keyword in this list because that would not be appropriate in this instance.
 
-To help classify your service in the portal according to the thematic keyword list (as detailed in `Appendix I <https://onegeology.github.io/documentation/appendices.html#appendix-i-onegeology-english-keyword-dictionary-picklist>`_), you should also use one or more *thematic@value keywords*.
+To help classify your service in the portal according to the thematic keyword list (as detailed in `Appendix I <https://www.onegeology.org/wmsCookbook/appendixI.html>`_), you should also use one or more *thematic@value keywords*.
 
 **Please note** services using GeoSciML-Lite also require the following keyword: **Geosciml_portrayal_age_or_litho_queryable** (GeoSciML-Lite was previously called GeoSciML-Portrayal.)
 
