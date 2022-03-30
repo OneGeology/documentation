@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OneGeology Profile &mdash; OneGeology Documentation 1.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/OneGeology_favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Setting up a Server" href="server_setup.html" />
+    <link rel="prev" title="Data preparation" href="data_preparation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> OneGeology Documentation
+            <img src="../_static/Onegeology_logo_large.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../providingdata.html">Providing Data / Services</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="service_types.html">Service Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_formats.html">Data formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_content.html">Data content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_preparation.html">Data preparation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data_preparation.html#scanning-a-paper-map">Scanning a paper map</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="data_preparation.html#scanning">Scanning</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#step-1">Step 1</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#step-2a">Step 2A</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#step-2b">Step 2B</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#step-2c">Step 2C</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#step-3-stitching">Step 3 ~ Stitching</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="data_preparation.html#georeferencing-a-scanned-map">Georeferencing a scanned map</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_preparation.html#image-formats-and-transparency">Image formats and transparency</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_preparation.html#the-legend-for-the-scanned-map">The legend for the scanned map</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="data_preparation.html#lite-schemas">Lite Schemas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="data_preparation.html#geosciml-lite">GeoSciML-Lite</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#contactview-features">ContactView features</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#sheardisplacementstructureview-features">ShearDisplacementStructureView features</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#geologicunitview-features">GeologicUnitView features</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#boreholeview-features">BoreholeView features</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="data_preparation.html#earthresourceml-lite">EarthResourceML-Lite</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#mineraloccurrenceview-features">MineralOccurrenceView features</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#commodityresourceview-features">CommodityResourceView features</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="data_preparation.html#complex-feature-data">Complex Feature Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="data_preparation.html#mapped-feature-and-geologic-feature">Mapped Feature and Geologic Feature</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#mapped-feature-mapping-frame">Mapped Feature - mapping frame</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#mapped-feature-geometry-shape">Mapped Feature - geometry (shape)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#geologic-feature-inspireid">Geologic Feature - inspireId</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#geologic-feature-name">Geologic Feature - name</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="data_preparation.html#geologic-age">Geologic Age</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#geologic-event-name">Geologic Event - name</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#geologic-event-youngernamedage-and-oldernamedage">Geologic Event - youngerNamedAge and olderNamedAge</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#geologic-event-eventprocess">Geologic Event - eventProcess</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#geologic-event-eventenvironment">Geologic Event - eventEnvironment</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="data_preparation.html#geologic-unit-and-earth-material">Geologic Unit and Earth Material</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#geologic-unit-geologic-unit-type">Geologic Unit - geologic unit type</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#geologic-unit-composition">Geologic Unit - composition</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#composition-part-role">Composition Part - role</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#composition-part-proportion">Composition Part - proportion</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#composition-part-material">Composition Part - material</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#rock-material-lithology">Rock Material -lithology</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="data_preparation.html#geologic-structure">Geologic Structure</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#shear-displacement-structure-faulttype">Shear Displacement Structure - faultType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#fold-profiletype">Fold - profileType</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="data_preparation.html#geomorphologic-feature">Geomorphologic Feature</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#natural-geomorphologic-feature-naturalgeomorphologicfeaturetype">Natural Geomorphologic Feature - NaturalGeomorphologicFeatureType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#natural-geomorphologic-feature-activity">Natural Geomorphologic Feature - activity</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#anthropogenic-geomorphologic-feature-anthropogenicgeomorphologicfeaturetype">Anthropogenic Geomorphologic Feature - AnthropogenicGeomorphologicFeatureType</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="data_preparation.html#thematic-class">Thematic Class</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#geologic-feature-classifier">Geologic Feature - classifier</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="data_preparation.html#borehole">Borehole</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#borehole-inspireid">Borehole - inspireId</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#borehole-sampledfeature">Borehole - sampledFeature</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#borehole-downholegeometry">Borehole - downholeGeometry</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#borehole-location-and-elevation">Borehole - location and elevation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#borehole-purpose">Borehole - purpose</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#borehole-boreholelength">Borehole - boreholeLength</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#borehole-interval-mappingframe">Borehole Interval - mappingFrame</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#boreholeinterval-geometry-shape">BoreholeInterval - geometry (shape)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#boreholeinterval-specification">BoreholeInterval - specification</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#boreholeinterval-mappedintervalbegin-mappedintervalend">BoreholeInterval - mappedIntervalBegin &amp; mappedIntervalEnd</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="data_preparation.html#geologic-collection">Geologic Collection</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#geologic-collection-inspireid">Geologic Collection - inspireId</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#geologiccollection-name">GeologicCollection - name</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#geologic-collection-collectiontype">Geologic Collection - collectionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#geologic-collection-member">Geologic Collection - member</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#md-metadata-contact">MD_Metadata - contact</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#md-metadata-datestamp">MD_Metadata - dateStamp</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#geologic-collection-reference">Geologic Collection - reference</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="data_preparation.html#documentcitation-name">DocumentCitation - name</a></li>
+<li class="toctree-l6"><a class="reference internal" href="data_preparation.html#documentcitation-shortname">DocumentCitation - shortName</a></li>
+<li class="toctree-l6"><a class="reference internal" href="data_preparation.html#document-citation-date">Document Citation - date</a></li>
+<li class="toctree-l6"><a class="reference internal" href="data_preparation.html#documentcitation-link">DocumentCitation - link</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#geologic-collection-beginlifespanversion-endlifespanversion">Geologic Collection - beginLifespanVersion &amp; endLifespanVersion</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#md-dataidentification-abstract">MD_DataIdentification - abstract</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#md-dataidentification-language">MD_DataIdentification - language</a></li>
+<li class="toctree-l5"><a class="reference internal" href="data_preparation.html#md-dataidentification-topiccategory">MD_DataIdentification - topicCategory</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">OneGeology Profile</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ogc-service-level-metadata">OGC service level metadata</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#service-title">Service title</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#service-abstract">Service abstract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fees">Fees</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#access-constraints">Access constraints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#keywords">Keywords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#contact-information">Contact information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-provider">Data provider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#online-resource">Online resource</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#layer-coverage-feature-metadata">Layer / Coverage / Feature metadata</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#wms-layer-and-wcs-coverage-naming">WMS layer and WCS coverage naming</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#geographic-extent">Geographic extent</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#data-owner">Data owner</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#language">Language</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#scale">Scale</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#theme">Theme</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#layer-title-examples">Layer title examples</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#layer-name-examples">Layer name examples</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#inspire-layer-naming-considerations">INSPIRE layer naming considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#summary-of-layer-coverage-feature-metadata">Summary of layer/coverage/feature metadata</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#machine-readable-name">Machine readable name</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#human-readable-name">Human readable name</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#abstract">Abstract</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#service-provision-onegeology-profile-layer-keywords">Keywords</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#wms-specific-metadata">WMS Specific Metadata</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#extent">Extent</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#spatial-coordinate-reference-system">Spatial/Coordinate reference system</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#boundingbox">BoundingBox</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#dataurl-optional">DataURL (optional)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#metadataurl-optional">MetadataURL (optional)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#legend-url">Legend url</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#layer-styling-information">Layer styling information</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#wms-getfeatureinfo-response">WMS GetFeatureInfo response</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#core-tc211-iso-19115-metadata">Core TC211/ISO:19115 Metadata</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="server_setup.html">Setting up a Server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="server_setup/example_data.html">Cookbook example data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="server_setup/example_data.html#geopackage">GeoPackage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="server_setup/example_data.html#postgis-data">PostGIS data</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/example_data.html#installing-postgis">Installing PostGIS</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="server_setup/example_data.html#image-with-world-file">Image with world file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="server_setup/example_data.html#shapefile">Shapefile</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/example_data.html#recommended-esri-shapefile-definitions-for-geosciml-lite">Recommended ESRI shapefile definitions for GeoSciML-Lite</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="server_setup/example_data.html#geotiff">GeoTIFF</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="server_setup/geoserver.html">Using GeoServer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="server_setup/geoserver.html#introduction">Introduction</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#pre-requisites-system-requirements">Pre-requisites / System Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="server_setup/geoserver.html#software-installation">Software Installation</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#assumptions">Assumptions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#basic-installation">Basic Installation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#app-schema-plugin-installation">App-schema Plugin Installation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#inspire-plugin-installation">INSPIRE Plugin Installation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#database">Database</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="server_setup/geoserver.html#common-setup">Common Setup</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#logging-in">Logging in</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#editing-contact-information-metadata">Editing contact information metadata</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#workspaces">Workspaces</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="server_setup/geoserver.html#example-data">Example Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="server_setup/geoserver.html#simple-wms">Simple WMS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#inspire-extended-capabilities">INSPIRE Extended Capabilities</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#configuring-a-data-store">Configuring a data store</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#adding-layers-to-a-workspace">Adding layers to a workspace</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/geoserver.html#the-data-tab-of-the-edit-layer-page">The Data tab of the Edit Layer page</a></li>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/geoserver.html#the-publishing-tab-of-the-edit-layer-page">The Publishing tab of the Edit Layer page</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#creating-group-layers">Creating group layers</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="server_setup/geoserver.html#sld-enabled-wms">SLD enabled WMS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="server_setup/geoserver.html#simple-feature-wfs">Simple Feature WFS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#using-application-schemas-extension">Using application schemas extension</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/geoserver.html#create-mapping-file">Create mapping file</a></li>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/geoserver.html#edit-datastore-xml-file">Edit datastore.xml file</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="server_setup/geoserver.html#complex-feature-wfs">Complex Feature WFS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#obtaining-example-configuration">Obtaining example configuration</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/geoserver.html#complex-feature-test-requests">Complex Feature Test requests</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#id14">INSPIRE Extended Capabilities</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#inspire-pre-defined-dataset-download">INSPIRE Pre-defined Dataset Download</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#app-schema-properties">app-schema.properties</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#data-directory">Data directory</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#workspace-layout">Workspace layout</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#datastore-xml">datastore.xml</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#mapping-files">Mapping files</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/geoserver.html#namespaces">Namespaces</a></li>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/geoserver.html#source-data-store">Source data store</a></li>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/geoserver.html#target-types">Target types</a></li>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/geoserver.html#mappings">Mappings</a></li>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/geoserver.html#gml-id-mapping">gml:id mapping</a></li>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/geoserver.html#inspireid-mapping">inspireId mapping</a></li>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/geoserver.html#ordinary-mapping">Ordinary mapping</a></li>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/geoserver.html#client-properties">Client properties</a></li>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/geoserver.html#feature-chaining">Feature chaining</a></li>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/geoserver.html#polymorphism">Polymorphism</a></li>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/geoserver.html#inspire-geology-theme-schema">INSPIRE Geology Theme Schema</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="server_setup/geoserver.html#wcs">WCS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#exemplar-data-used-in-this-cookbook">Exemplar data used in this cookbook</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#metadata-to-be-used-in-configuring-your-service-and-coverages-layers">Metadata to be used in configuring your service and coverages (layers)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#id22">Stores</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#id23">Layers</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#service-level-metadata">Service level metadata</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#id24">INSPIRE Extended Capabilities</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/geoserver.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="server_setup/geoserver.html#geoserver-troubleshooting">GeoServer troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="server_setup/mapserver.html">Using MapServer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="server_setup/mapserver.html#software-installation">Software Installation</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/mapserver.html#installing-ms4w">Installing MS4W</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/mapserver.html#configuring-the-exemplar-services">Configuring the exemplar services</a></li>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/mapserver.html#configuring-your-own-services-using-the-exemplars-as-examples">Configuring your own services using the exemplars as examples</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/mapserver.html#installing-and-configuring-apache-http-web-server">Installing and configuring Apache HTTP web server</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/mapserver.html#bit-apache-http-server">64-bit Apache HTTP server</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/mapserver.html#installing-gisinternals-packages-for-windows">Installing GISInternals packages for Windows</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/mapserver.html#data">Data</a></li>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/mapserver.html#mapserver-cgi-bin">MapServer cgi-bin</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/mapserver.html#installing-mapserver-on-linux-using-ppas">Installing MapServer on Linux using PPAs</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/mapserver.html#configuring-mapserver-exemplar-services-on-a-lamp-server">Configuring MapServer exemplar services on a LAMP server</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/mapserver.html#alternative-mapserver-configurations">Alternative MapServer configurations</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/mapserver.html#mapserver-and-iis">MapServer and IIS</a></li>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/mapserver.html#compiling-mapserver-on-linux">Compiling MapServer on Linux</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="server_setup/mapserver.html#general-configuration">General configuration</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/mapserver.html#adding-alternate-character-set-support">Adding alternate character set support</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/mapserver.html#creating-your-own-symbology">Creating your own symbology</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/mapserver.html#example-include-files">Example include files</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/mapserver.html#debugging-common-errors">Debugging common errors</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/mapserver.html#symbol-definition-error">Symbol definition error</a></li>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/mapserver.html#unknown-identifier">Unknown identifier</a></li>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/mapserver.html#missing-magic-string">Missing magic string</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/mapserver.html#connecting-to-a-database">Connecting to a database</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="server_setup/mapserver.html#wms">WMS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/mapserver.html#raster-image-data-exemplar-layer-configuration">Raster image data exemplar (LAYER configuration)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/mapserver.html#vector-data-exemplar-layer-configuration">Vector data exemplar (LAYER configuration)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/mapserver.html#configuring-html-query-templates">Configuring HTML query templates</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/mapserver.html#debugging-your-requests">Debugging your requests</a></li>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/mapserver.html#handling-fields-for-which-you-have-no-data">Handling fields for which you have no data</a></li>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/mapserver.html#using-javascript">Using JavaScript</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/mapserver.html#configuring-group-layering">Configuring group layering</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="server_setup/mapserver.html#simple-feature-wfs">Simple feature WFS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="server_setup/mapserver.html#wcs">WCS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="server_setup/mapserver.html#inspire-metadata">INSPIRE metadata</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="server_setup/esri.html">Using ArcGIS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="server_setup/esri.html#wms">WMS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/esri.html#creating-the-service">Creating the service</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/esri.html#prepare-the-map-document">Prepare the map document</a></li>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/esri.html#publishing-your-wms">Publishing your WMS</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/esri.html#edit-the-getcapabilities-documents">Edit the GetCapabilities documents</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/esri.html#inspire">INSPIRE</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/esri.html#arcgis-server">ArcGIS Server</a></li>
+<li class="toctree-l6"><a class="reference internal" href="server_setup/esri.html#inspire-extension">INSPIRE Extension</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/esri.html#arcgis-server-issues">ArcGIS server issues</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="server_setup/esri.html#simple-feature-wfs">Simple Feature WFS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="server_setup/esri.html#wcs">WCS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/esri.html#create-a-map-document">Create a map document</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/esri.html#publish-the-wcs-service">Publish the WCS service</a></li>
+<li class="toctree-l5"><a class="reference internal" href="server_setup/esri.html#edit-the-getcapabilities-document">Edit the GetCapabilities document</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="server_setup/apache.html">Using Apache HTTP server as a reverse proxy</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../using.html">Using OneGeology Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../using/portal.html">Using the OneGeology Portal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../using/portal.html#viewing-data-registered-in-the-onegeology-portal">Viewing data registered in the OneGeology Portal</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../using/portal.html#go-to-function">Go To Function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../using/portal.html#viewing-layers-in-different-projections">Viewing layers in different projections</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../using/portal.html#reviewing-external-map-data">Reviewing external map data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../using/portal.html#exporting-to-keyhole-markup-language-kml">Exporting to Keyhole Markup Language (KML)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../using/portal.html#creating-and-using-web-map-context-wmc-documents">Creating and using Web Map Context (WMC) documents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../using/portal.html#saving-your-context-file">Saving your context file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../using/portal.html#opening-a-web-map-context-file-in-the-onegeology-portal">Opening a Web Map Context file in the OneGeology Portal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../using/portal.html#opening-a-wmc-file-in-other-clients">Opening a WMC file in other clients</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../using/portal.html#known-issues">Known issues</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../using/portal.html#analysis-tools">Analysis tools</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../using/portal.html#portrayal-services">Portrayal Services</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../using/portal.html#geosciml">GeoSciML</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../using/portal.html#earthresourceml-lite">EarthResourceML-Lite</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../using/portal.html#statistics">Statistics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../using/qgis.html">Using QGIS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../using/qgis.html#using-qgis-to-view-wms">Using QGIS to view WMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../using/qgis.html#using-qgis-to-access-simple-feature-wfs">Using QGIS to access simple feature WFS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../using/qgis.html#using-qgis-to-view-wcs">Using QGIS to view WCS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../using/esri.html">Using ESRI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../using/esri.html#using-arccatalog">Using ArcCatalog</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../using/esri.html#wms-service-connection">WMS Service Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../using/esri.html#wfs-service-connection">WFS Service Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../using/esri.html#wcs-service-connection">WCS Service Connection</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../using/esri.html#using-arcmap">Using ArcMap</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../using/esri.html#wms-layers">WMS Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../using/esri.html#wfs-layers">WFS Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../using/esri.html#wcs-layers">WCS Layers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../using/esri.html#using-arcpro">Using ArcPRO</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../using/udig.html">Using uDig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../using/gaia.html">Using Gaia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../using/world_wind.html">Using NASA World Wind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../using/dapple.html">Using Dapple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../using/google_earth.html">Using Google Earth</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../using/google_earth.html#google-earth-issues">Google Earth Issues</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../using/google_earth.html#problems-displaying-the-map-layer">Problems displaying the map layer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../using/google_earth.html#problems-displaying-a-map-layer-that-spans-the-globe">Problems displaying a map layer that spans the globe</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../using/mapinfo.html">Using MapInfo Professional</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../using/mapinfo.html#to-add-a-wms-service-to-the-list-of-available-wms-services">To add a WMS service to the list of available WMS services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../using/mapinfo.html#to-view-wms-service-layers">To view WMS service layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../using/mapinfo.html#to-query-wms-service-layer">To query WMS service layer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OneGeology Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../providingdata.html">Providing Data / Services</a> &raquo;</li>
+      <li>OneGeology Profile</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/providingdata/onegeology_profile.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="onegeology-profile">
+<span id="service-provision-onegeology-profile"></span><h1>OneGeology Profile<a class="headerlink" href="#onegeology-profile" title="Permalink to this headline"></a></h1>
+<p>A OneGeology service will be an OGC WMS, WFS or WCS. OneGeology defines a profile of these services for two reasons. The first is to make certain parts of the OneGeology Portal work with the services. The second is to make the services as widely usable and findable as possible by ensuring that they all provide some basic metadata such as contact details for further information. Currently, a OneGeology WFS needs to be associated with one or more layers from a OneGeology WMS which portray the data as an image.</p>
+<p>Each of the OGC service types shares some common characteristics. They will each have a service URL. They each respond to a GetCapabilities request by returning a GetCapabilities response that contains administrative and technical metadata about the service.</p>
+<p>The OGC standards specify different kinds of metadata that a service should provide, some for the correct operation of the service and some to help human users of the service understand what is being provided. Some of the metadata applies to a whole service being provided at a particular service URL and some is specific to particular layers, coverages or features being provided by that service. This means that separate services need to be set up for each distinct set of service level metadata.</p>
+<p>In the profile we make a distinction between the organization that owns or has copyright to provide the data (whom we term the ‘data owner’, or ‘data provider’) and the organization that serves that data over a web service (whom we term the ‘service provider’). These may be different in the case that a “buddy organisation” is serving the data on behalf of a data owner. As we require the contact details for the data owner to be put in the service metadata then there must be a distinct service for each data owner. If a particular data owner wishes to provide information in more than one language then there will need to be separate services with the service metadata in each language. If a data owner is providing similar data for different scales or geographical extent then this may be all provided within one service or from distinct services depending on what is most convenient.</p>
+<p>For example, at the time of writing The British Geological Survey is hosting its own data, and is acting as a buddy to host data for the Afghanistan Geological Survey, and for the Namibian Geological Survey, and for the Falkland Island Government, and for Geoscience Australia for Antarctica data, each of these is only available in English language versions.  The British Geological Survey is also hosting a single language (French) service for Burkina Faso.  The net result is that BGS, acting in the role of service provider, is serving six separate services (six separate service URLs).</p>
+<p>In some cases you may already have OGC services set up for other purposes than OneGeology or you may not wish to maintain a separate set of services just for OneGeology. In this case there are two possibilities. Ideally you can add metadata to your services that satisfies both OneGeology and your other requirements. If not, then in many cases, it may be possible to prepare static GetCapabilities response documents with OneGeology specific service metadata and the subset of layers, coverages or features that you wish to be registered with OneGeology. This will point to the main service URLs for retrieval of the individual layers, coverages or features. Some metadata such as layer names can’t be different in the static document from the main service. We haven’t come up with a general solution for this so you will need to contact us to discuss possibilities on an individual basis.</p>
+<p>The service must comply with one of the following OGC standard specifications.</p>
+<ul class="simple">
+<li><p>A WMS must comply with the <a class="reference external" href="http://portal.opengeospatial.org/files/?artifact_id=1081&amp;version=1&amp;format=pdf">WMS 1.1.1</a> or <a class="reference external" href="http://portal.opengeospatial.org/files/?artifact_id=14416">WMS 1.3.0</a> specification. (This documentation now concentrates on the later version specification.)</p></li>
+<li><p>An SLD enabled WMS must comply with the relevant parts of the <a class="reference external" href="http://portal.opengeospatial.org/files/?artifact_id=22364">SLD 1.1.0</a> specification.</p></li>
+<li><p>A WFS must comply with the <a class="reference external" href="http://portal.opengeospatial.org/files/?artifact_id=39967">WFS 2.0.0</a> or <a class="reference external" href="http://docs.opengeospatial.org/is/09-025r2/09-025r2.html">2.0.2</a> specification</p></li>
+<li><p>A WCS must comply with <a class="reference external" href="https://portal.opengeospatial.org/files/09-110r4">WCS 2.0.0</a> or higher specification. At the moment you also need to be able to supply a <a class="reference external" href="https://portal.opengeospatial.org/files/05-076">WCS 1.0.0</a> GetCapabilities response for metadata harvesting. This could be achieved by supporting the older WCS version or by just creating a static response document that complies to the format.</p></li>
+</ul>
+<section id="ogc-service-level-metadata">
+<h2>OGC service level metadata<a class="headerlink" href="#ogc-service-level-metadata" title="Permalink to this headline"></a></h2>
+<p>WMS, WFS, and WCS services all provide metadata about the service through their response to a GetCapabilities request. OneGeology places some requirements on this metadata, some to help the Portal operate and some as good practice to enable users to search for services, know how they can use the data and get further information. The different service types have similar but not identical structures for their GetCapabilities responses; differences will be pointed out below. In particular, the WCS 2.0 standard changed the structure considerably, moving coverage specific metadata to DescribeCoverage requests so, for the moment, we need a WCS 1.0.0 structure document to enable us to harvest coverage specific metadata easily.</p>
+<section id="service-title">
+<span id="service-provision-onegeology-profile-service-title"></span><h3>Service title<a class="headerlink" href="#service-title" title="Permalink to this headline"></a></h3>
+<p>The service title isn’t used by the OneGeology Portal but it does appear in the catalogue of services so it is worth using a title that will be helpful to users browsing a catalogue. We recommend that you follow the previous OneGeology <a class="reference external" href="/wmsCookbook/2_2.html">WMS service title</a> requirements if your service fits into the scheme described there but they are no longer a requirement if, for example, your service is being used for other non-OneGeology purposes as well.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 9%" />
+<col style="width: 74%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Specification</p></th>
+<th class="head"><p>Version</p></th>
+<th class="head"><p>XPath</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>WMS</p></td>
+<td><p>1.3.0</p></td>
+<td><p>/WMS_Capabilities/Service/Title</p></td>
+</tr>
+<tr class="row-odd"><td><p>WFS</p></td>
+<td><p>2.0.0</p></td>
+<td><p>/wfs:WFS_Capabilities/ows:ServiceIdentification/ows:Title</p></td>
+</tr>
+<tr class="row-even"><td><p>WCS</p></td>
+<td><p>1.0.0</p></td>
+<td><p>/wcs:WCS_Capabilities/wcs:Service/wcs:label</p></td>
+</tr>
+<tr class="row-odd"><td><p>WCS</p></td>
+<td><p>2.0.1</p></td>
+<td><p>/wcs:Capabilities/ows:ServiceIdentification/ows:Title</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="service-abstract">
+<span id="service-provision-onegeology-profile-service-abstract"></span><h3>Service abstract<a class="headerlink" href="#service-abstract" title="Permalink to this headline"></a></h3>
+<p>Information about the service and general information about the map data served in the layers. You may also use this to field to describe the data owner organization, and its goals within OneGeology etc. You can also include in this section information about the scale layering of your service, and any other information that is not automatically extracted / viewable by the OneGeology Portal (or indeed any other client software). We can’t enforce definite rules on the content but this is important for users of your data.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 9%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Specification</p></th>
+<th class="head"><p>Version</p></th>
+<th class="head"><p>XPath</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>WMS</p></td>
+<td><p>1.3.0</p></td>
+<td><p>/WMS_Capabilities/Service/Abstract</p></td>
+</tr>
+<tr class="row-odd"><td><p>WFS</p></td>
+<td><p>2.0.0</p></td>
+<td><p>/wfs:WFS_Capabilities/ows:ServiceIdentification/ows:Abstract</p></td>
+</tr>
+<tr class="row-even"><td><p>WCS</p></td>
+<td><p>1.0.0</p></td>
+<td><p>/wcs:WCS_Capabilities/wcs:Service/wcs:description</p></td>
+</tr>
+<tr class="row-odd"><td><p>WCS</p></td>
+<td><p>2.0.1</p></td>
+<td><p>/wcs:Capabilities/ows:ServiceIdentification/ows:Abstract</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="fees">
+<span id="service-provision-onegeology-profile-fees"></span><h3>Fees<a class="headerlink" href="#fees" title="Permalink to this headline"></a></h3>
+<p>Any fees required to use the WMS services and data contained within. If there are no fees you are recommended to explicitly state this using the word “none”.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 9%" />
+<col style="width: 74%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Specification</p></th>
+<th class="head"><p>Version</p></th>
+<th class="head"><p>XPath</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>WMS</p></td>
+<td><p>1.3.0</p></td>
+<td><p>/WMS_Capabilities/Service/Fees</p></td>
+</tr>
+<tr class="row-odd"><td><p>WFS</p></td>
+<td><p>2.0.0</p></td>
+<td><p>/wfs:WFS_Capabilities/ows:ServiceIdentification/ows:Fees</p></td>
+</tr>
+<tr class="row-even"><td><p>WCS</p></td>
+<td><p>1.0.0</p></td>
+<td><p>/wcs:WCS_Capabilities/wcs:Service/wcs:fees</p></td>
+</tr>
+<tr class="row-odd"><td><p>WCS</p></td>
+<td><p>2.0.1</p></td>
+<td><p>/wcs:Capabilities/ows:ServiceIdentification/ows:Fees</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="access-constraints">
+<span id="service-provision-onegeology-profile-access-constraints"></span><h3>Access constraints<a class="headerlink" href="#access-constraints" title="Permalink to this headline"></a></h3>
+<p>Information about who is allowed to use the data served by the WMS, and for what purpose they can use it for. Remember your WMS is available to any application that is able to access the Internet, not just through the OneGeology Portal.</p>
+<p>For clarity to any potential users, it is recommended (within the OGC specifications) that you explicitly state when there are no access constraints on the using the service using the word “none”.</p>
+<p>Note too that there is no “AccessConstraints” metadata applicable at the layer level. If you need to define different access constraints for different layers in your service you will need to define these differences in the service level metadata. It may be more convenient to have separate services where different access constraints apply.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 8%" />
+<col style="width: 78%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Specification</p></th>
+<th class="head"><p>Version</p></th>
+<th class="head"><p>XPath</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>WMS</p></td>
+<td><p>1.3.0</p></td>
+<td><p>/WMS_Capabilities/Service/AccessConstraints</p></td>
+</tr>
+<tr class="row-odd"><td><p>WFS</p></td>
+<td><p>2.0.0</p></td>
+<td><p>/wfs:WFS_Capabilities/ows:ServiceIdentification/ows:AccessConstraints</p></td>
+</tr>
+<tr class="row-even"><td><p>WCS</p></td>
+<td><p>1.0.0</p></td>
+<td><p>/wcs:WCS_Capabilities/wcs:Service/wcs:accessConstraints</p></td>
+</tr>
+<tr class="row-odd"><td><p>WCS</p></td>
+<td><p>2.0.1</p></td>
+<td><p>/wcs:Capabilities/ows:ServiceIdentification/ows:AccessConstraints</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="keywords">
+<span id="service-provision-onegeology-profile-keywords"></span><h3>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline"></a></h3>
+<p>A list of keywords or short phrases that users of the OneGeology Portal and other catalogue services could use to search/discover your services. You must include the keyword OneGeology.</p>
+<p>We would like you to also supply two special &#64; style ‘Metadata keywords’ (MD_DATE&#64;value and MD_LANG&#64;value) that will be used to populate the OneGeology catalogue of services, and which help make the GetCapabilities response ISO19115 core compliant.</p>
+<p>MD_DATE&#64; is used to add a date for when the information in the GetCapabilites file for the service was last updated, (for MapServer services this would be the same as a change to the .map configuration file). For example the exemplar BGS_Bedrock_and_Superficial_Geology service has a MD_DATE&#64; keyword of MD_DATE&#64;2011-06-15</p>
+<p>MD_LANG&#64; is used to add the language (using the ISO 639-3 three letter codes) that the GetCapabilites file is populated with. This may be different from the language that the service returns its data in. For example the exemplar BGS_Bedrock_and_Superficial_Geology service has a MD_LANG&#64; keyword of MD_LANG&#64;ENG</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 8%" />
+<col style="width: 78%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Specification</p></th>
+<th class="head"><p>Version</p></th>
+<th class="head"><p>XPath</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>WMS</p></td>
+<td><p>1.3.0</p></td>
+<td><p>/WMS_Capabilities/Service/KeywordList/Keyword</p></td>
+</tr>
+<tr class="row-odd"><td><p>WFS</p></td>
+<td><p>2.0.0</p></td>
+<td><p>/wfs:WFS_Capabilities/ows:ServiceIdentification/ows:Keywords/ows:Keyword</p></td>
+</tr>
+<tr class="row-even"><td><p>WCS</p></td>
+<td><p>1.0.0</p></td>
+<td><p>/wcs:WCS_Capabilities/wcs:Service/wcs:keywords/wcs:keyword</p></td>
+</tr>
+<tr class="row-odd"><td><p>WCS</p></td>
+<td><p>2.0.1</p></td>
+<td><p>/wcs:Capabilities/ows:ServiceIdentification/ows:Keywords/ows:Keyword</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="contact-information">
+<span id="service-provision-onegeology-profile-contact-information"></span><h3>Contact information<a class="headerlink" href="#contact-information" title="Permalink to this headline"></a></h3>
+<p>In addition to the required organisation name we recommend that you add additional contact information that will enable a user to get in touch with a named person who can act as a contact for any enquiries by post, email or phone. The different service types and versions provide slightly different structured fields for including this information under fairly self-explanatory element names. The below XPaths give the parent elements within which you can find different elements for email, phone etc. Don’t forget these are for an international audience, e.g. include country code in telephone numbers.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 9%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Specification</p></th>
+<th class="head"><p>Version</p></th>
+<th class="head"><p>XPath</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>WMS</p></td>
+<td><p>1.3.0</p></td>
+<td><p>/WMS_Capabilities/Service/ContactInformation</p></td>
+</tr>
+<tr class="row-odd"><td><p>WFS</p></td>
+<td><p>2.0.0</p></td>
+<td><p>/wfs:WFS_Capabilities/ows:ServiceProvider/ows:ServiceContact</p></td>
+</tr>
+<tr class="row-even"><td><p>WCS</p></td>
+<td><p>1.0.0</p></td>
+<td><p>/wcs:WCS_Capabilities/wcs:Service/wcs:responsibleParty</p></td>
+</tr>
+<tr class="row-odd"><td><p>WCS</p></td>
+<td><p>2.0.1</p></td>
+<td><p>/wcs:Capabilities/ows:ServiceProvider/ows:ServiceContact</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data-provider">
+<span id="service-provision-onegeology-profile-data-provider"></span><h3>Data provider<a class="headerlink" href="#data-provider" title="Permalink to this headline"></a></h3>
+<p>The full name of the data owner organization not service provider, where these are different, such as in buddied services. In the case of services that also supply non-OneGeology data, the contact should be able to put an enquirer in touch with whoever is responsible for the OneGeology data.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 7%" />
+<col style="width: 81%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Specification</p></th>
+<th class="head"><p>Version</p></th>
+<th class="head"><p>XPath</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>WMS</p></td>
+<td><p>1.3.0</p></td>
+<td><p>/WMS_Capabilities/Service/ContactInformation/ContactPersonPrimary/ContactOrganization</p></td>
+</tr>
+<tr class="row-odd"><td><p>WFS</p></td>
+<td><p>2.0.0</p></td>
+<td><p>/wfs:WFS_Capabilities/ows:ServiceProvider/ows:ProviderName</p></td>
+</tr>
+<tr class="row-even"><td><p>WCS</p></td>
+<td><p>1.0.0</p></td>
+<td><p>/wcs:WCS_Capabilities/wcs:Service/wcs:responsibleParty/wcs:organisationName</p></td>
+</tr>
+<tr class="row-odd"><td><p>WCS</p></td>
+<td><p>2.0.1</p></td>
+<td><p>/wcs:Capabilities/ows:ServiceProvider/ows:ProviderName</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="online-resource">
+<span id="service-provision-onegeology-profile-online-resource"></span><h3>Online resource<a class="headerlink" href="#online-resource" title="Permalink to this headline"></a></h3>
+<p>A link to the data owner organization web site, or web site with information about the data owner organization. Note this online resource is intended to provide additional information on the provider of the data and is NOT intended to be the same as the online resource attribute referenced in the Capability section of the response. (E.g. NOT the same as the resource cited in /WMS_Capabilities/Capability/Request/GetCapabilities/DCPType/HTTP/Get/OnlineResource in a 1.3.0 response.)</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 9%" />
+<col style="width: 74%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Specification</p></th>
+<th class="head"><p>Version</p></th>
+<th class="head"><p>XPath</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>WMS</p></td>
+<td><p>1.3.0</p></td>
+<td><p>/WMS_Capabilities/Service/OnlineResource</p></td>
+</tr>
+<tr class="row-odd"><td><p>WFS</p></td>
+<td><p>2.0.0</p></td>
+<td><p>/wfs:WFS_Capabilities/ows:ServiceProvider/ows:ProviderSite</p></td>
+</tr>
+<tr class="row-even"><td><p>WCS</p></td>
+<td><p>1.0.0</p></td>
+<td><p>WCS 1.0.0 no suitable element.</p></td>
+</tr>
+<tr class="row-odd"><td><p>WCS</p></td>
+<td><p>2.0.1</p></td>
+<td><p>/wcs:Capabilities/ows:ServiceProvider/ows:ProviderSite</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="layer-coverage-feature-metadata">
+<h2>Layer / Coverage / Feature metadata<a class="headerlink" href="#layer-coverage-feature-metadata" title="Permalink to this headline"></a></h2>
+<p>Depending on which service type you are serving the actual data sets that you are supplying will be delivered as a number of layers (WMS), coverages (WCS) or features (WFS). Each of these can have their own specific metadata. The OneGeology portal allows the selection of WMS layers and WCS coverages to view and presents selected aspects of the layer/coverage metadata in its layer list. These metadata are also used to arrange layers/coverages under geographical areas and under themes and enable searching for layers/coverages including searching on some aspects of their functionality.</p>
+<p>WFS are a bit different. In the Portal we do not list registered WFS separately but attach them to one or more WMS layers that portray some aspect of one or more of the features of the WFS. In OneGeology we are most focussed on WFS that supply features conforming to particular community standards whether simple feature standards like GeoSciML-Lite and ERML-Lite or complex feature standards like GeoSciML and ERML. In these cases the number of feature types available from a WFS is limited by the number of feature types in the community standards and you would normally be serving data for one data set from each WFS endpoint. (If you serve more than one data set from a given endpoint the client will need to know how to formulate a query that will only retrieve features from a particular data set.) Although the metadata are not presented directly in the Portal it is still recommended to add useful metadata for searching in the catalogue and for presentation in other WFS clients. If you don’t yet have a suitable mapping from your data to a full community schema you may still be able to use your server software to generate automatically a simple feature WFS corresponding to a given WMS layer based on the same underlying dataset. In this case the features won’t strictly conform to any community schema but may still have some common field names that allow a certain level of interoperability.</p>
+<section id="wms-layer-and-wcs-coverage-naming">
+<span id="service-provision-onegeology-profile-layer-names"></span><h3>WMS layer and WCS coverage naming<a class="headerlink" href="#wms-layer-and-wcs-coverage-naming" title="Permalink to this headline"></a></h3>
+<p>The OneGeology Portal allows selection of WMS layers and WCS coverages for display from a list and so it is important to have a naming convention that ensures unique titles for each of these layers and coverages. This convention has been designed to give readable, informative titles.</p>
+<p>Both WMS and WCS have names which are used by software to select which layers/coverages are returned and human readable titles which are used for presenting in a client interface. The former do not need to be human readable and some server software may not allow much control over their format. The latter are the way layers and coverages are presented to a user for selection so it is important that they are understandable and informative. Thus OneGeology has a naming convention which we require for the human readable titles. It can also be friendly to make the machine readable names understandable for testing or writing custom clients so, although we don’t make it a requirement, we do recommend that you follow the conventions below for the machine readable names as well if you can.</p>
+<p>The titles should contain the following components which are explained in more detail below: <strong>[Geographical extent]</strong> of the data in the layer, then <strong>[Data owner organization]</strong> (not service provider), then <strong>[Language code]</strong> (if more than one language being provided), then <strong>[Scale]</strong>, then <strong>[Theme]</strong>.</p>
+<section id="geographic-extent">
+<h4>Geographic extent<a class="headerlink" href="#geographic-extent" title="Permalink to this headline"></a></h4>
+<p>The first piece of information is the Geographic extent.  Geographic extent should begin wherever practically possible with the Country of the layer extent, even if the layer only covers part of a country, or if the layer covers all of one country (use that as the country code) and some of the surrounding landmass or sea area.  Country information is codified using the <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3">ISO 3166-1 three-letter country codes</a></p>
+<p>When the layer covers an area such as a defined region, state or province within a country, you should state the country code first and then the provincial information.  Provincial information should wherever practically possible be codified using the <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_3166-2">ISO 3166-2 codes</a></p>
+<p>For example:</p>
+<ul class="simple">
+<li><p>The US state of Kentucky would use US-KY</p></li>
+<li><p>The semi-autonomous region of Flanders (Northern Belgium) would use BE-VLG</p></li>
+</ul>
+<p>Note, the ISO 3166-2 codes use a 2 letter country code then hyphen then provincial code.</p>
+<p>If you are using your own provincial code (known within your county perhaps but not codified by ISO), you should use the three letter ISO country code, then a space (not a hyphen), and then your provincial code.</p>
+<p>The OneGeology Portal divides countries and regions using the United Nations (UN) “World macro regions and components” listing. If you are serving regional data wider than country level, you should use the <a class="reference external" href="http://unstats.un.org/unsd/methods/m49/m49regin.htm">UN regions</a> where possible.</p>
+<p>Where the layer coverage doesn’t correspond to a country and/or when no ISO code or UN region exists to describe the coverage, you should use a short geographic name such as “World”.</p>
+</section>
+<section id="data-owner">
+<h4>Data owner<a class="headerlink" href="#data-owner" title="Permalink to this headline"></a></h4>
+<p>Geographic extent information is followed by the data owner organization code (not service provider), the same as recommended for the service title.</p>
+</section>
+<section id="language">
+<h4>Language<a class="headerlink" href="#language" title="Permalink to this headline"></a></h4>
+<p>If you need to include language in your layer you should use the same ISO 639-1 two-letter language code <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">(https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)</a> as recommended for the service title and include it <em>after</em> the data owner organization code .</p>
+</section>
+<section id="scale">
+<h4>Scale<a class="headerlink" href="#scale" title="Permalink to this headline"></a></h4>
+<p>Scale comes next and is shortened using SI symbols:</p>
+<ul class="simple">
+<li><p>“M” for Million (upper case)</p></li>
+<li><p>“k” for thousand (lower case)</p></li>
+</ul>
+<p>Such that a 1:1 000 000 scale map would be represented in the layer title as 1:1M and a 1:625 000 scale map would be represented in the layer title as 1:625k.  In the layer names we shorten this further by removing the “1:” portion so that a 1:1 000 000 scale map is represented as 1M and a 1:625 000 scale map is represented as 625k.</p>
+<p>Additionally, if the map scale is represented in the layer title as 1:1.5M we can lose the decimal point in the layer name by using 1500k.  <strong>Note</strong>, you do not have to use the 1500k format over the 1.5M format, rather we offer this format as an alternative, if your server software has an issue with dots in the layer name.</p>
+</section>
+<section id="theme">
+<h4>Theme<a class="headerlink" href="#theme" title="Permalink to this headline"></a></h4>
+<p>The theme is the geological description of the data contained in the layer.  As with the service title theme, the layer title theme should be a descriptive phrase in the service language.  For English services the layers will most commonly have titles such as “Bedrock Age”, “Bedrock Lithology” etc.</p>
+<p>As mentioned above the layer names are for the consumption of the WMS software.  It is important that within the OneGeology Portal the layer names are unique.  The data owner is responsible to guarantee that there is no layer name duplication in all the layers they provide.</p>
+<p>When we first started defining the rules for the OneGeology Portal we discovered that MapServer had a 20 character maximum limit on LAYER names (though this limit no longer applies), to get over this issue we defined a set of two and three letter codes to describe the most common layer themes to be used in the layer names, these are described below:</p>
+<p>BA — Bedrock Age</p>
+<p>BLT — Bedrock Lithology</p>
+<p>BLS — Bedrock Lithostratigraphy</p>
+<p>SLT — Superficial Lithology</p>
+<p>SLS — Superficial Lithostratigraphy</p>
+<p>MSF — Major Structural Features</p>
+<p>This list is not exclusive, so please create your own if need be.</p>
+<p>Note, if you decide to use ESRI ArcGIS server (versions 9.3.1 and below) you will not be able to conform to this layer naming convention, because the software auto-names the map layers 0, 1, 2…  This problem will be dealt with in the OneGeology Registry through the use of auto-generated unique id’s for each registered service layer, this is necessary as in a Catalogue like that for OneGeology one cannot have two layers having the same name i.e. both being named layer name 0.</p>
+<p>This issue has been resolved in ESRI ArcGIS server 10</p>
+</section>
+<section id="layer-title-examples">
+<h4>Layer title examples<a class="headerlink" href="#layer-title-examples" title="Permalink to this headline"></a></h4>
+<p>GBR BGS 1:625k Bedrock Age</p>
+<p>FRA BRGM 1:1M Formations géologiques - France Continentale</p>
+<p>FRA BRGM 1:1M Formations géologiques - Guyanne</p>
+<p>Note, it is acceptable to replace the ISO country code with a more readable name in the layer title</p>
+</section>
+<section id="layer-name-examples">
+<h4>Layer name examples<a class="headerlink" href="#layer-name-examples" title="Permalink to this headline"></a></h4>
+<p>Remember that older versions of MapServer had a limit of 20 Characters for LAYER names; though this restriction no longer applies.</p>
+<p>FRA_BRGM_1M_GeoUnits</p>
+<p>GBR_BGS_625k_BA</p>
+<p>World_25M_GeolUnits</p>
+<p>Europe_BGR_5M_BLS</p>
+<p>US-KY_KGS_24k_Faults</p>
+</section>
+<section id="inspire-layer-naming-considerations">
+<h4>INSPIRE layer naming considerations<a class="headerlink" href="#inspire-layer-naming-considerations" title="Permalink to this headline"></a></h4>
+<p>If your service falls under the INSPIRE naming conventions, then both the layer name and the layer title are fixed according to the legislation. For example the <a class="reference external" href="http://inspire.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_GE_v3.0.pdf">D2.8.II.4 Data Specification on Geology–Technical Guidelines</a> tell us (section 11.1 ~ Layers to be provided by INSPIRE view services) that any layer to do with lithology or age must have the name <em>GE.GeologicUnit</em> and title <em>Geologic Units</em>.  See the <a class="reference external" href="https://themes.jrc.ec.europa.eu/discussion/view/13952/layer-naming">layer-naming</a> discussion on the INSPIRE Thematic Clusters Geology forum for fuller details.</p>
+<p>To have a multiple layer geology service that adheres to the INSPIRE naming rules we believe the only option is for you to configure group layering. In such a situation, the layer name and title rules set out above relate to the grouped (or sub layers).  Whereas the INSPIRE name and title relate to the group (or parent) layer. If your INSPIRE service is only serving layers of one type, one way of applying group layering would be to use the WMS root layer name and title (not service name and title) as the grouping layer.</p>
+</section>
+</section>
+<section id="summary-of-layer-coverage-feature-metadata">
+<h3>Summary of layer/coverage/feature metadata<a class="headerlink" href="#summary-of-layer-coverage-feature-metadata" title="Permalink to this headline"></a></h3>
+<p>For WMS layers and WCS coverages the machine readable name and human readable name should follow the conventions above. For WFS, if the data is being put out following a standard community schema then the machine readable name will be fixed according to the schema and a reasonable human readable name will probably be defined by the schema as well. If it is a simple WFS mirroring a WMS layer dataset then the names can match the WMS layer names.These go in the below places in the capabilities response.</p>
+<section id="machine-readable-name">
+<h4>Machine readable name<a class="headerlink" href="#machine-readable-name" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>/WMS_Capabilities/Capability/Layer/Layer/Name (1.3.0)</p></li>
+<li><p>/wcs:WCS_Capabilities/wcs:ContentMetadata/wcs:CoverageOfferingBrief/wcs:name (1.0.0)</p></li>
+<li><p>/wcs:Capabilities/wcs:Contents/wcs:CoverageSummary/wcs:CoverageId (2.0)</p></li>
+<li><p>/wfs:WFS_Capabilities/wfs:FeatureTypeList/wfs:FeatureType/wfs:Name (2.0.x)</p></li>
+</ul>
+</section>
+<section id="human-readable-name">
+<h4>Human readable name<a class="headerlink" href="#human-readable-name" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>/WMS_Capabilities/Capability/Layer/Layer/Title (1.3.0)</p></li>
+<li><p>/wcs:WCS_Capabilities/wcs:ContentMetadata/wcs:CoverageOfferingBrief/wcs:label (1.0.0)</p></li>
+<li><p>/wcs:Capabilities/wcs:Contents/wcs:CoverageSummary/ows:Title (2.0)</p></li>
+<li><p>/wfs:WFS_Capabilities/wfs:FeatureTypeList/wfs:FeatureType/wfs:Title (2.0.x)</p></li>
+</ul>
+</section>
+<section id="abstract">
+<span id="service-provision-onegeology-profile-layer-abstract"></span><h4>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline"></a></h4>
+<p>You must provide a description of your layer/coverage data. You may wish to include other metadata, such as information about your organization and other data you make available. You may also wish to include a statement on access constraints. For features following a standard community Schema this may not be so relevant at the feature level in that a service will be providing data for a certain data set and the abstract description of the features will be just the general description of that feature type in the schema.</p>
+<ul class="simple">
+<li><p>/WMS_Capabilities/Capability/Layer/Layer/Abstract (1.3.0)</p></li>
+<li><p>/wcs:WCS_Capabilities/wcs:ContentMetadata/wcs:CoverageOfferingBrief/wcs:description (1.0.0)</p></li>
+<li><p>/wcs:Capabilities/wcs:Contents/wcs:CoverageSummary/ows:Abstract (2.0)</p></li>
+<li><p>/wfs:WFS_Capabilities/wfs:FeatureTypeList/wfs:FeatureType/wfs:Abstract (2.0.x)</p></li>
+</ul>
+</section>
+<section id="service-provision-onegeology-profile-layer-keywords">
+<span id="id16"></span><h4>Keywords<a class="headerlink" href="#service-provision-onegeology-profile-layer-keywords" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>/WMS_Capabilities/Capability/Layer/Layer/KeywordList/Keyword (1.3.0)</p></li>
+<li><p>/WCS_Capabilities/ContentMetadata/CoverageOfferingBrief/keywords/keyword (1.0.0)</p></li>
+<li><p>/wcs:Capabilities/wcs:Contents/wcs:CoverageSummary/ows:Keywords/ows:Keyword (2.0.x)</p></li>
+</ul>
+<p>The Keyword “OneGeology” must be present to be able to search for services and layers with this keyword. OneGeologyEurope participants should also include relevant keywords chosen from the keyword list created for that project and listed in <a class="reference external" href="https://www.onegeology.org/wmsCookbook/appendixI.html">Appendix I</a>.</p>
+<p>The following broad concepts are good starting points</p>
+<p><a class="reference external" href="http://www.eionet.europa.eu/gemet/en/concept/2405">http://www.eionet.europa.eu/gemet/en/concept/2405</a> (earth science)</p>
+<p><a class="reference external" href="http://www.eionet.europa.eu/gemet/en/concept/3648">http://www.eionet.europa.eu/gemet/en/concept/3648</a> (geological process)</p>
+<p>Each keyword (or short phrase) must be contained within its own &lt;keyword&gt; element.</p>
+<p>In addition to this we also require you to add a number of special ‘Cataloguing keywords’ to help the OneGeology Portal and catalogue services better index your layers.  These special keywords have a term then an ‘&#64;’ symbol and then your value for the term, as below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Continent</span><span class="p">:</span>                          <span class="n">continent</span><span class="nd">@value</span>       <span class="n">Required</span>
+<span class="n">Subcontinent</span><span class="p">:</span>                       <span class="n">subcontinent</span><span class="nd">@value</span>    <span class="n">Conditional</span>
+<span class="n">Geographic</span> <span class="n">area</span> <span class="p">(</span><span class="n">usually</span> <span class="n">country</span><span class="p">):</span>  <span class="n">geographicarea</span><span class="nd">@value</span>  <span class="n">Required</span>
+<span class="n">State</span><span class="p">(</span><span class="n">Region</span> <span class="ow">or</span> <span class="n">province</span><span class="p">):</span>          <span class="n">subarea</span><span class="nd">@value</span>         <span class="n">Conditional</span>
+<span class="n">Data</span> <span class="n">provider</span><span class="p">:</span>                      <span class="n">dataprovider</span><span class="nd">@value</span>    <span class="n">Required</span>
+<span class="n">Service</span> <span class="n">provider</span><span class="p">:</span>                   <span class="n">serviceprovider</span><span class="nd">@value</span> <span class="n">Required</span>
+</pre></div>
+</div>
+<p>The geographicarea&#64;value represents a verbalization of the code that starts a layer name. For most layers geographicarea&#64;value will be a country; this INCLUDES layers that only show a sub-region or state within a country.</p>
+<p>The values for Continent, Subcontinent and Country must be taken from the United Nations (UN) list: <a class="reference external" href="http://unstats.un.org/unsd/methods/m49/m49regin.htm">http://unstats.un.org/unsd/methods/m49/m49regin.htm</a> used by the OneGeology Portal.</p>
+<p>Conditional keywords are required if they apply. E.g. If the geographic area is a state or province then the subarea keyword is required.</p>
+<p>In addition we would like that you also supply the following two special ‘Metadata keywords’ for each layer. These keywords help make the GetCapabilities response ISO19115 core compliant.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Layer</span> <span class="p">(</span><span class="n">Data</span> <span class="nb">set</span><span class="p">)</span> <span class="n">date</span><span class="p">:</span>              <span class="n">DS_DATE</span><span class="nd">@value</span>
+<span class="n">Layer</span> <span class="p">(</span><span class="n">Data</span> <span class="nb">set</span><span class="p">)</span> <span class="n">topic</span> <span class="n">category</span><span class="p">:</span>    <span class="n">DS_TOPIC</span><span class="nd">@value</span>        <span class="p">(</span><span class="n">one</span> <span class="ow">or</span> <span class="n">more</span> <span class="k">as</span> <span class="n">appropriate</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The topic category is taken from the ISO 19119 topic category listing.  A good reference to the categories and what they represent is found at: <a class="reference external" href="https://gcmd.nasa.gov/add/difguide/iso_topics.html">https://gcmd.nasa.gov/add/difguide/iso_topics.html</a>. We anticipate that most layers would have a DS_TOPIC&#64;geoscientificinformation keyword.</p>
+<p>So for example, the layer “AFG AGS 1:1M Bedrock Age” would include the following keywords:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;KeywordList&gt;</span>
+ <span class="nt">&lt;Keyword&gt;</span>OneGeology<span class="nt">&lt;/Keyword&gt;</span>
+ <span class="nt">&lt;Keyword&gt;</span>Afghanistan<span class="nt">&lt;/Keyword&gt;</span>
+ <span class="nt">&lt;Keyword&gt;</span>continent@Asia<span class="nt">&lt;/Keyword&gt;</span>
+ <span class="nt">&lt;Keyword&gt;</span>subcontinent@South-central Asia<span class="nt">&lt;/Keyword&gt;</span>
+ <span class="nt">&lt;Keyword&gt;</span>geographicarea@Afghanistan<span class="nt">&lt;/Keyword&gt;</span>
+ <span class="nt">&lt;Keyword&gt;</span>serviceprovider@British Geological Survey<span class="nt">&lt;/Keyword&gt;</span>
+ <span class="nt">&lt;Keyword&gt;</span>dataprovider@Afghanistan Geological Survey<span class="nt">&lt;/Keyword&gt;</span>
+ <span class="nt">&lt;Keyword&gt;</span>DS_TOPIC@geoscientificinformation<span class="nt">&lt;/Keyword&gt;</span>
+ <span class="nt">&lt;Keyword&gt;</span>DS_DATE@2008-12-03<span class="nt">&lt;/Keyword&gt;</span>
+ <span class="nt">&lt;Keyword&gt;</span>thematic@geology<span class="nt">&lt;/Keyword&gt;</span>
+<span class="nt">&lt;/KeywordList&gt;</span>
+</pre></div>
+</div>
+<p>Note, that we have the country twice, once as one of the OneGeology Portal special keywords, and once as the country only; this is because we recognize that the service may be consumed (and catalogued) by services other than OneGeology. We don’t include a subarea&#64; keyword in this list because that would not be appropriate in this instance.</p>
+<p>To help classify your service in the portal according to the thematic keyword list (as detailed in <a class="reference external" href="https://www.onegeology.org/wmsCookbook/appendixI.html">Appendix I</a>), you should also use one or more <em>thematic&#64;value keywords</em>.</p>
+<p><strong>Please note</strong> services using GeoSciML-Lite also require the following keyword: <strong>Geosciml_portrayal_age_or_litho_queryable</strong> (GeoSciML-Lite was previously called GeoSciML-Portrayal.)</p>
+<p>For those WMS layers with an associated GeoSciML WFS that you would like to query using the OneGeology Portal thematic analysis tool, you will need to add the appropriate <strong>GeoSciML32_wfs_age_or_litho_queryable</strong> or <strong>GeoSciML4_wfs_age_or_litho_queryable</strong> keyword.</p>
+</section>
+</section>
+<section id="wms-specific-metadata">
+<h3>WMS Specific Metadata<a class="headerlink" href="#wms-specific-metadata" title="Permalink to this headline"></a></h3>
+<p>The following sections were defined for the earlier WMS only specific OneGeology profile and haven’t yet been considered for updating to other service types.</p>
+<section id="extent">
+<span id="service-provision-onegeology-profile-layer-extent"></span><h4>Extent<a class="headerlink" href="#extent" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>/WMS_Capabilities/Capability/Layer/Layer/EX_GeographicBoundingBox (1.3.0)</p></li>
+</ul>
+<p>In WMS version 1.3.0 four elements each describing a single bounding limit (always in the order: west, east, south, north). The purpose of these extent values is to facilitate geographic searches; values may be approximate.</p>
+</section>
+<section id="spatial-coordinate-reference-system">
+<span id="service-provision-onegeology-profile-layer-crs"></span><h4>Spatial/Coordinate reference system<a class="headerlink" href="#spatial-coordinate-reference-system" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>/WMS_Capabilities/Capability/Layer/Layer/CRS (1.3.0)</p></li>
+</ul>
+<p>A list of one or more horizontal ’Spatial Reference Systems’ that the layer can handle (will accept requests in and return results based upon those SRS).  In WMS 1.1.1, the returned image is always projected using a pseudo-Plate Carrée projection that plots Longitude along the X-axis and Latitude along the Y-axis.</p>
+<p>For example, the exemplar service lists the following Spatial Reference Systems: EPSG:4326, EPSG:3857, CRS:84, EPSG:27700, EPSG:4258</p>
+<p>The portal now supports the projection systems below, including two suitable for INSPIRE compliance:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>EPSG:3031</dt><dd><p>Antarctic Polar Stereographic (WGS84) <a class="reference external" href="http://epsg-registry.org/export.htm?wkt=urn:ogc:def:crs:EPSG::3031">urn:ogc:def:crs:EPSG::3031</a></p>
+</dd>
+<dt>EPSG:3034</dt><dd><p>Lambert Conformal Conic (ETRS89) <a class="reference external" href="http://epsg-registry.org/export.htm?wkt=urn:ogc:def:crs:EPSG::3034">urn:ogc:def:crs:EPSG::3034</a> (suitable for INSPIRE compliance)</p>
+</dd>
+<dt>EPSG:3413</dt><dd><p>NSIDC Sea Ice Polar Stereographic North (WGS84) <a class="reference external" href="http://epsg-registry.org/export.htm?wkt=urn:ogc:def:crs:EPSG::3413">urn:ogc:def:crs:EPSG::3413</a></p>
+</dd>
+<dt>EPSG:3857</dt><dd><p>Web Mercator (WGS84) <a class="reference external" href="http://epsg-registry.org/export.htm?wkt=urn:ogc:def:crs:EPSG::3857">urn:ogc:def:crs:EPSG::3857</a></p>
+</dd>
+<dt>EPSG:4258</dt><dd><p>2D Latitude / Longitude (ETRS89) <a class="reference external" href="http://epsg-registry.org/export.htm?wkt=urn:ogc:def:crs:EPSG::4258">urn:ogc:def:crs:EPSG::4258</a> (suitable for INSPIRE compliance)</p>
+</dd>
+<dt>EPSG:4326</dt><dd><p>2D Latitude / Longitude (WGS84) <a class="reference external" href="http://epsg-registry.org/export.htm?wkt=urn:ogc:def:crs:EPSG::4326">urn:ogc:def:crs:EPSG::4326</a></p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="boundingbox">
+<span id="service-provision-onegeology-profile-layer-bbox"></span><h4>BoundingBox<a class="headerlink" href="#boundingbox" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>/WMS_Capabilities/Capability/Layer/Layer/BoundingBox (1.3.0)</p></li>
+</ul>
+<p>The BoundingBox attributes indicate the edges of the bounding box in units of the specified spatial reference system, for example, the exemplar service provides the following BoundingBox information for the GBR BGS 1:625k bedrock lithology layer:</p>
+<p><strong>Example WMS 1.3.0 response</strong></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;BoundingBox</span> <span class="na">CRS=</span><span class="s">&quot;EPSG:4326&quot;</span> <span class="na">minx=</span><span class="s">&quot;49.8638&quot;</span> <span class="na">miny=</span><span class="s">&quot;-8.64846&quot;</span> <span class="na">maxx=</span><span class="s">&quot;60.8612&quot;</span> <span class="na">maxy=</span><span class="s">&quot;1.76767&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;BoundingBox</span> <span class="na">CRS=</span><span class="s">&quot;EPSG:3857&quot;</span> <span class="na">minx=</span><span class="s">&quot;-962742&quot;</span> <span class="na">miny=</span><span class="s">&quot;6.42272e+006&quot;</span> <span class="na">maxx=</span><span class="s">&quot;196776&quot;</span> <span class="na">maxy=</span><span class="s">&quot;8.59402e+006&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;BoundingBox</span> <span class="na">CRS=</span><span class="s">&quot;CRS:84&quot;</span> <span class="na">minx=</span><span class="s">&quot;-8.64846&quot;</span> <span class="na">miny=</span><span class="s">&quot;49.8638&quot;</span> <span class="na">maxx=</span><span class="s">&quot;1.76767&quot;</span> <span class="na">maxy=</span><span class="s">&quot;60.8612&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;BoundingBox</span> <span class="na">CRS=</span><span class="s">&quot;EPSG:27700&quot;</span> <span class="na">minx=</span><span class="s">&quot;-77556.4&quot;</span> <span class="na">miny=</span><span class="s">&quot;-4051.91&quot;</span> <span class="na">maxx=</span><span class="s">&quot;670851&quot;</span> <span class="na">maxy=</span><span class="s">&quot;1.23813e+006&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;BoundingBox</span> <span class="na">CRS=</span><span class="s">&quot;EPSG:4258&quot;</span> <span class="na">minx=</span><span class="s">&quot;49.8638&quot;</span> <span class="na">miny=</span><span class="s">&quot;-8.64846&quot;</span> <span class="na">maxx=</span><span class="s">&quot;60.8612&quot;</span> <span class="na">maxy=</span><span class="s">&quot;1.76767&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p><strong>Please note the x,y axes order for the geographic coordinate systems EPSG:4258 and EPSG:4326. In WMS version 1.3.0 the x-axis is the first axis in the CRS definition, and the y-axis is the second. So for example EPSG:4326 refers to WGS 84 geographic latitude, then longitude. That is, in this CRS the x axis corresponds to latitude, and the y axis to longitude.  Most EPSG geographic coordinate reference systems follow this (x=lat,y=lon) pattern.</strong></p>
+</section>
+<section id="dataurl-optional">
+<span id="service-provision-onegeology-profile-layer-data-url"></span><h4>DataURL (optional)<a class="headerlink" href="#dataurl-optional" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>/WMS_Capabilities/Capability/Layer/Layer/DataURL (1.3.0)</p></li>
+</ul>
+<p>This may be used to provide further information about all the digital data offered by the data provider, though it is primarily used to provide a link to non-standards compliant metadata for the layer in question.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;DataURL&gt;</span>
+<span class="nt">&lt;Format&gt;</span>text/html<span class="nt">&lt;/Format&gt;</span>
+<span class="nt">&lt;OnlineResource</span>
+  <span class="na">xmlns:xlink=</span><span class="s">&quot;http://www.w3.org/1999/xlink&quot;</span>
+  <span class="na">xlink:type=</span><span class="s">&quot;simple&quot;</span>
+  <span class="na">xlink:href=</span><span class="s">&quot;http://www.bgs.ac.uk/discoverymetadata/13480426.html&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/DataURL&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="metadataurl-optional">
+<span id="service-provision-onegeology-profile-layer-metadata-url"></span><h4>MetadataURL (optional)<a class="headerlink" href="#metadataurl-optional" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>/WMS_Capabilities/Capability/Layer/Layer/MetadataURL (1.3.0)</p></li>
+</ul>
+<p>You <strong>should</strong> supply one or more on-line resources offering detailed, standardized (either as “FGDC:1998” or “ISO 19115:2003”) metadata about the layer data. If your metadata is not available in either of these standards you <strong>MUST</strong> instead use a DataURL.</p>
+<p>The core ISO 19115:2003 metadata required to be compliant is shown under <a class="reference internal" href="#service-provision-onegeology-profile-core-metadata"><span class="std std-ref">Core TC211/ISO:19115 Metadata</span></a>.  Note, there are no formatting requirements; this information could be provided as xml or html or text or pdf etc as long as it accessible on the web.</p>
+<p><strong>Example WMS 1.3.0 response</strong></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;MetadataURL</span> <span class="na">type=</span><span class="s">&quot;ISO 19115:2003&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;Format&gt;</span>application/xml; charset=UTF-8<span class="nt">&lt;/Format&gt;</span>
+<span class="nt">&lt;OnlineResource</span>
+  <span class="na">xmlns:xlink=</span><span class="s">&quot;http://www.w3.org/1999/xlink&quot;</span>
+  <span class="na">xlink:type=</span><span class="s">&quot;simple&quot;</span>
+  <span class="na">xlink:href=</span><span class="s">&quot;http://metadata.bgs.ac.uk/geonetwork/srv/en/csw?</span>
+<span class="s">    service=CSW&amp;</span>
+<span class="s">    version=2.0.2&amp;</span>
+<span class="s">    request=GetRecordById&amp;</span>
+<span class="s">    id=ac9f8250-3ae5-49e5-9818-d14264a4fda4&amp;&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/MetadataURL&gt;</span>
+</pre></div>
+</div>
+<p>Please note: the defined attribute value to indicate ISO 19115:2003 metadata is “ISO 19115:2003” in WMS version 1.3.0 as opposed to “TC211” in version 1.1.1. In version 1.3.0, communities may <strong>ALSO</strong> define their own attributes. We <strong>RECOMMEND</strong> that if you can change this attribute for different WMS version GetCapabilities responses you should use “ISO 19115:2003” for your WMS 1.3.0 response. If you can only configure one response type then you <strong>MUST</strong> use “TC211”.</p>
+</section>
+<section id="legend-url">
+<span id="service-provision-onegeology-profile-layer-legend-url"></span><h4>Legend url<a class="headerlink" href="#legend-url" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>/WMS_Capabilities/Capability/Layer/Layer/Style/LegendURL (1.3.0)</p></li>
+</ul>
+<p>We require you to have some sort of legend to accompany your map data. In many cases your server software will create this for you automatically using the inbuilt SLD capability. If your WMS server is not SLD capable, or if you have a complex legend, you may add the LegendURL manually in your GetCapabilities response document.  See below <a class="reference internal" href="#style-examples"><span class="std std-ref">Layer styling information</span></a>.</p>
+</section>
+<section id="layer-styling-information">
+<span id="style-examples"></span><h4>Layer styling information<a class="headerlink" href="#layer-styling-information" title="Permalink to this headline"></a></h4>
+<p>The examples below show the styling portion of the GetCapabilities response.  The first shows that the legend will be generated on-the-fly using an SLD GetLegendGraphic request. The second shows a simple request to a static image, generated in advance by the map service provider.</p>
+<p>Example style information from a MapServer version 5.6.5 WMS version 1.3.0. GetCapabilities response.  The legend will be created automatically by MapServer and served using an SLD GetLegendGraphic operation.  Note the OnlineResource URL now includes an sld_version parameter.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Style&gt;</span>
+    <span class="nt">&lt;Name&gt;</span>default<span class="nt">&lt;/Name&gt;</span>
+    <span class="nt">&lt;Title&gt;</span>default<span class="nt">&lt;/Title&gt;</span>
+    <span class="nt">&lt;LegendURL</span> <span class="na">width=</span><span class="s">&quot;328&quot;</span> <span class="na">height=</span><span class="s">&quot;3013&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Format&gt;</span>image/png<span class="nt">&lt;/Format&gt;</span>
+        <span class="nt">&lt;OnlineResource</span>
+            <span class="na">xmlns:xlink=</span><span class="s">&quot;http://www.w3.org/1999/xlink&quot;</span>
+            <span class="na">xlink:type=</span><span class="s">&quot;simple&quot;</span>
+            <span class="na">xlink:href=</span><span class="s">&quot;http://ogc.bgs.ac.uk/cgi-bin/BGS_GSN_Bedrock_Geology/wms?</span>
+<span class="s">            version=1.3.0&amp;amp;</span>
+<span class="s">            service=WMS&amp;amp;</span>
+<span class="s">            request=GetLegendGraphic&amp;amp;</span>
+<span class="s">            sld_version=1.1.0&amp;amp;</span>
+<span class="s">            layer=NAM_GSN_1M_BLS&amp;amp;</span>
+<span class="s">            format=image/png&amp;amp;</span>
+<span class="s">            STYLE=default&amp;amp;&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/LegendURL&gt;</span>
+<span class="nt">&lt;/Style&gt;</span>
+</pre></div>
+</div>
+<p>Example style information from an ArcGIS server WMS version 1.3.0. GetCapabilities response.  A detailed static legend is provided.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Style&gt;</span>
+<span class="nt">&lt;Name&gt;</span>default<span class="nt">&lt;/Name&gt;</span>
+<span class="nt">&lt;Title&gt;</span>US-KY KGS 1:500K Kentucky Geologic Formations<span class="nt">&lt;/Title&gt;</span>
+<span class="nt">&lt;LegendURL</span> <span class="na">width=</span><span class="s">&quot;100&quot;</span> <span class="na">height=</span><span class="s">&quot;588&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;Format&gt;</span>image/png<span class="nt">&lt;/Format&gt;</span>
+<span class="nt">&lt;OnlineResource</span>
+  <span class="na">xlink:href=</span><span class="s">&quot;http://.../.../KGS_Geology_and_Faults_MapServer/wms/default2.png&amp;amp;&quot;</span>
+  <span class="na">xlink:type=</span><span class="s">&quot;simple&quot;</span>
+  <span class="na">xmlns:xlink=</span><span class="s">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/LegendURL&gt;</span>
+<span class="nt">&lt;/Style&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="wms-getfeatureinfo-response">
+<span id="service-provision-onegeology-profile-layer-getfeatureinfo"></span><h4>WMS GetFeatureInfo response<a class="headerlink" href="#wms-getfeatureinfo-response" title="Permalink to this headline"></a></h4>
+<p>Depending on the data you have available for each layer and depending on your WMS software, you may be able to configure what is returned in response to GetFeatureInfo requests on each layer, either to format the look of the data returned or to restrict the data attributes returned.</p>
+<p>Ideally the response should include a field for age/lithology/lithostratigraphy as appropriate for each layer.  You may choose to include other information you consider useful but please try to exclude data fields that only have meaning internal to your organization.</p>
+<p>Preferably it should be possible to retrieve the information in at least text/html and text/plain formats.</p>
+</section>
+</section>
+<section id="core-tc211-iso-19115-metadata">
+<span id="service-provision-onegeology-profile-core-metadata"></span><h3>Core TC211/ISO:19115 Metadata<a class="headerlink" href="#core-tc211-iso-19115-metadata" title="Permalink to this headline"></a></h3>
+<p>This section has been added to allow you to understand what metadata you need to supply, if you choose to supply additional metadata about a layer as an online resource <strong>AND</strong> if you want to use the MetadataURL to reference that resource.  If you wish to supply an online resource to layer metadata, that doesn’t conform to the minimum standard set out below (or FGDC:1998) then you cannot use the MetadataURL; we recommend that you use the DataURL.  If you also wish to supply a URL to your web site, to highlight all your data products (for example), then you can use the SERVICE level online resource URL; in MapServer you do this by specifying the WMS_SERVICE_ONLINERESOURCE (or OWS_SERVICE_ONLINERESOURCE) keyword.</p>
+<p>For example in our exemplar service we have:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">OWS_SERVICE_ONLINERESOURCE</span> <span class="s2">&quot;http://www.bgs.ac.uk/products/digitalmaps/digmapgb.html&quot;</span>
+</pre></div>
+</div>
+<p>Note that TC211/ISO:19115:2003 is not itself a format, but a standard for defining formats and profiles.  To comply with the ISO:19115:2003 metadata standard a data format (or profile) must define a core set of metadata elements as shown below.  Note, for the purposes of the OneGeology Portal if you are showing your metadata (when accessed using the MetadataURL) in an HTML/text or pdf page it is sufficient to provide only Mandatory metadata, and Conditional metadata (where appropriate).</p>
+<table cellpadding="5" cellspacing="0" class="borderedTable">
+<colgroup ><col width="50%" /></colgroup>
+<thead>
+<tr><th colspan="2"><p>Mandatory (M): The metadata entity or metadata element shall be documented</p>
+<p>Conditional (C):  The metadata entity or metadata element shall be documented if another entity or element has been documented, or if a condition is or isn’t met elsewhere.</p>
+<p>Optional (O): Provided to allow users to document their data more fully.</p></th></tr>
+</thead>
+<tbody>
+  <tr>
+    <td><strong> Dataset title</strong> (M)
+      <p>A unique title (within your metadata records) for your data.</p></td>
+    <td><strong>Spatial representation type</strong> (O)
+      <p>The method used to represent geographic information in the dataset. i.e., vector, grid, TIN etc.</p></td>
+  </tr>
+  <tr>
+    <td><strong>Dataset reference date</strong> (M)</td>
+    <td><strong>Reference system</strong> (O)</td>
+  </tr>
+  <tr>
+    <td><strong>Dataset responsible party</strong> (O)</td>
+    <td><strong>Lineage</strong> (O) </td>
+  </tr>
+  <tr>
+    <td><strong>Geographic location</strong>  of the dataset (by four coordinates or by geographic identifier) (C)
+      <p>If the metadata applies to a data set which is spatially referenced (such as a OneGeology WMS) this is required.</p></td>
+    <td><strong>On-line resource</strong> (O) </td>
+  </tr>
+  <tr>
+    <td><strong>Dataset language</strong> (M)
+      <p>Language(s) used within the dataset. Required even if the resource does not include any textual information; defaults to the Metadata language.</p></td>
+    <td><strong>Metadata file identifier</strong> (O)
+      <p>Unique identifier for this metadata file</p></td>
+  </tr>
+  <tr>
+    <td><strong>Dataset character set</strong> (C)
+      <p>Full name of the character encoding used for the data set.  You must supply this character set if you are not using the ISO/IEC 10646-1 character set and if your character set is not defined by the document encoding.</p></td>
+    <td><strong>Metadata standard name</strong> (O)
+      <p>Name of the metadata standard (including profile name) used</p></td>
+  </tr>
+  <tr>
+    <td><strong>Dataset topic category</strong> (M)
+      <p>Main theme(s) of the data set described using the most appropriate term defined in the standard; for OneGeology services these are likely to be one or more from: ‘*geoscientificInformation*’, ‘*economy*’ (for layers showing mineral resources), or ‘*imageryBaseMapsEarthCover*’</p></td>
+    <td><strong>Metadata standard version</strong> (O)
+      <p>Version (profile) of the metadata standard used</p></td>
+  </tr>
+  <tr>
+    <td><strong>Spatial resolution of the dataset</strong>  (O)
+      <p>Scale or factor which provides a general understanding of the density of the spatial data in the dataset.</p></td>
+    <td><strong>Metadata language</strong> (C)
+      <p>Language used to document the metadata. You must supply the metadata language if it is not defined by the document encoding.</p>
+      <p>Note for INSPIRE GEMINI metadata you must always supply the metadata language.</p></td>
+  </tr>
+  <tr>
+    <td><strong>Abstract defining the dataset</strong> (M)
+      <p>Brief narrative summary of the content of the resource.</p></td>
+    <td><strong>Metadata character set</strong> (C)
+      <p>Full name of the character encoding used for the metadata set. You must supply this character set in your metadata if you are not using the `ISO/IEC 10646-1 character set <https://en.wikipedia.org/wiki/Universal_Character_Set>`_ (https://en.wikipedia.org/wiki/Universal_Character_Set) AND if your character set is not defined by the document encoding.  Note as most XML and HTML pages provide a character set as part of their own metadata, it is likely that you will not need to explicitly state this for your own layer metadata</p></td>
+  </tr>
+  <tr>
+    <td><strong>Distribution format</strong> (O) </td>
+    <td><strong>Metadata point of contact</strong> (M)
+      <p>Party responsible for the metadata information</p></td>
+  </tr>
+  <tr>
+    <td><strong>Additional extent information for the dataset</strong>  (vertical and temporal) (O)</td>
+    <td><strong>Metadata date stamp</strong> (M)</td>
+  </tr>
+  </tbody>
+</table><p>Note, conformance of metadata to the ISO 19115 Core does not guarantee conformance to INSPIRE metadata, see the INSPIRE technical guidelines document <a class="reference external" href="http://inspire.ec.europa.eu/documents/Metadata/MD_IR_and_ISO_20131029.pdf">MD_IR_and_ISO_v1_2_20100616</a> for further details.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="data_preparation.html" class="btn btn-neutral float-left" title="Data preparation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="server_setup.html" class="btn btn-neutral float-right" title="Setting up a Server" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019, OneGeology.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

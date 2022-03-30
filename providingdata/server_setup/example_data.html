@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookbook example data &mdash; OneGeology Documentation 1.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/OneGeology_favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Using GeoServer" href="geoserver.html" />
+    <link rel="prev" title="Setting up a Server" href="../server_setup.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> OneGeology Documentation
+            <img src="../../_static/Onegeology_logo_large.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../providingdata.html">Providing Data / Services</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../service_types.html">Service Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_formats.html">Data formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_content.html">Data content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_preparation.html">Data preparation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_preparation.html#scanning-a-paper-map">Scanning a paper map</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#scanning">Scanning</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#step-1">Step 1</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#step-2a">Step 2A</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#step-2b">Step 2B</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#step-2c">Step 2C</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#step-3-stitching">Step 3 ~ Stitching</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#georeferencing-a-scanned-map">Georeferencing a scanned map</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#image-formats-and-transparency">Image formats and transparency</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#the-legend-for-the-scanned-map">The legend for the scanned map</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_preparation.html#lite-schemas">Lite Schemas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#geosciml-lite">GeoSciML-Lite</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#contactview-features">ContactView features</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#sheardisplacementstructureview-features">ShearDisplacementStructureView features</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologicunitview-features">GeologicUnitView features</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#boreholeview-features">BoreholeView features</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#earthresourceml-lite">EarthResourceML-Lite</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#mineraloccurrenceview-features">MineralOccurrenceView features</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#commodityresourceview-features">CommodityResourceView features</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_preparation.html#complex-feature-data">Complex Feature Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#mapped-feature-and-geologic-feature">Mapped Feature and Geologic Feature</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#mapped-feature-mapping-frame">Mapped Feature - mapping frame</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#mapped-feature-geometry-shape">Mapped Feature - geometry (shape)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-feature-inspireid">Geologic Feature - inspireId</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-feature-name">Geologic Feature - name</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#geologic-age">Geologic Age</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-event-name">Geologic Event - name</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-event-youngernamedage-and-oldernamedage">Geologic Event - youngerNamedAge and olderNamedAge</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-event-eventprocess">Geologic Event - eventProcess</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-event-eventenvironment">Geologic Event - eventEnvironment</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#geologic-unit-and-earth-material">Geologic Unit and Earth Material</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-unit-geologic-unit-type">Geologic Unit - geologic unit type</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-unit-composition">Geologic Unit - composition</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#composition-part-role">Composition Part - role</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#composition-part-proportion">Composition Part - proportion</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#composition-part-material">Composition Part - material</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#rock-material-lithology">Rock Material -lithology</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#geologic-structure">Geologic Structure</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#shear-displacement-structure-faulttype">Shear Displacement Structure - faultType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#fold-profiletype">Fold - profileType</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#geomorphologic-feature">Geomorphologic Feature</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#natural-geomorphologic-feature-naturalgeomorphologicfeaturetype">Natural Geomorphologic Feature - NaturalGeomorphologicFeatureType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#natural-geomorphologic-feature-activity">Natural Geomorphologic Feature - activity</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#anthropogenic-geomorphologic-feature-anthropogenicgeomorphologicfeaturetype">Anthropogenic Geomorphologic Feature - AnthropogenicGeomorphologicFeatureType</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#thematic-class">Thematic Class</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-feature-classifier">Geologic Feature - classifier</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#borehole">Borehole</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#borehole-inspireid">Borehole - inspireId</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#borehole-sampledfeature">Borehole - sampledFeature</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#borehole-downholegeometry">Borehole - downholeGeometry</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#borehole-location-and-elevation">Borehole - location and elevation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#borehole-purpose">Borehole - purpose</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#borehole-boreholelength">Borehole - boreholeLength</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#borehole-interval-mappingframe">Borehole Interval - mappingFrame</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#boreholeinterval-geometry-shape">BoreholeInterval - geometry (shape)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#boreholeinterval-specification">BoreholeInterval - specification</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#boreholeinterval-mappedintervalbegin-mappedintervalend">BoreholeInterval - mappedIntervalBegin &amp; mappedIntervalEnd</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#geologic-collection">Geologic Collection</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-collection-inspireid">Geologic Collection - inspireId</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologiccollection-name">GeologicCollection - name</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-collection-collectiontype">Geologic Collection - collectionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-collection-member">Geologic Collection - member</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#md-metadata-contact">MD_Metadata - contact</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#md-metadata-datestamp">MD_Metadata - dateStamp</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-collection-reference">Geologic Collection - reference</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../data_preparation.html#documentcitation-name">DocumentCitation - name</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../data_preparation.html#documentcitation-shortname">DocumentCitation - shortName</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../data_preparation.html#document-citation-date">Document Citation - date</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../data_preparation.html#documentcitation-link">DocumentCitation - link</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-collection-beginlifespanversion-endlifespanversion">Geologic Collection - beginLifespanVersion &amp; endLifespanVersion</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#md-dataidentification-abstract">MD_DataIdentification - abstract</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#md-dataidentification-language">MD_DataIdentification - language</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#md-dataidentification-topiccategory">MD_DataIdentification - topicCategory</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../onegeology_profile.html">OneGeology Profile</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../onegeology_profile.html#ogc-service-level-metadata">OGC service level metadata</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#service-title">Service title</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#service-abstract">Service abstract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#fees">Fees</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#access-constraints">Access constraints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#keywords">Keywords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#contact-information">Contact information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#data-provider">Data provider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#online-resource">Online resource</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../onegeology_profile.html#layer-coverage-feature-metadata">Layer / Coverage / Feature metadata</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#wms-layer-and-wcs-coverage-naming">WMS layer and WCS coverage naming</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#geographic-extent">Geographic extent</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#data-owner">Data owner</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#language">Language</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#scale">Scale</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#theme">Theme</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#layer-title-examples">Layer title examples</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#layer-name-examples">Layer name examples</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#inspire-layer-naming-considerations">INSPIRE layer naming considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#summary-of-layer-coverage-feature-metadata">Summary of layer/coverage/feature metadata</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#machine-readable-name">Machine readable name</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#human-readable-name">Human readable name</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#abstract">Abstract</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#service-provision-onegeology-profile-layer-keywords">Keywords</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#wms-specific-metadata">WMS Specific Metadata</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#extent">Extent</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#spatial-coordinate-reference-system">Spatial/Coordinate reference system</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#boundingbox">BoundingBox</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#dataurl-optional">DataURL (optional)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#metadataurl-optional">MetadataURL (optional)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#legend-url">Legend url</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#layer-styling-information">Layer styling information</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#wms-getfeatureinfo-response">WMS GetFeatureInfo response</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#core-tc211-iso-19115-metadata">Core TC211/ISO:19115 Metadata</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../server_setup.html">Setting up a Server</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Cookbook example data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#geopackage">GeoPackage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#postgis-data">PostGIS data</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#installing-postgis">Installing PostGIS</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#image-with-world-file">Image with world file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shapefile">Shapefile</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#recommended-esri-shapefile-definitions-for-geosciml-lite">Recommended ESRI shapefile definitions for GeoSciML-Lite</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#geotiff">GeoTIFF</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="geoserver.html">Using GeoServer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geoserver.html#introduction">Introduction</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#pre-requisites-system-requirements">Pre-requisites / System Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="geoserver.html#software-installation">Software Installation</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#assumptions">Assumptions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#basic-installation">Basic Installation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#app-schema-plugin-installation">App-schema Plugin Installation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#inspire-plugin-installation">INSPIRE Plugin Installation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#database">Database</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="geoserver.html#common-setup">Common Setup</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#logging-in">Logging in</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#editing-contact-information-metadata">Editing contact information metadata</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#workspaces">Workspaces</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="geoserver.html#example-data">Example Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geoserver.html#simple-wms">Simple WMS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#inspire-extended-capabilities">INSPIRE Extended Capabilities</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#configuring-a-data-store">Configuring a data store</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#adding-layers-to-a-workspace">Adding layers to a workspace</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#the-data-tab-of-the-edit-layer-page">The Data tab of the Edit Layer page</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#the-publishing-tab-of-the-edit-layer-page">The Publishing tab of the Edit Layer page</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#creating-group-layers">Creating group layers</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="geoserver.html#sld-enabled-wms">SLD enabled WMS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geoserver.html#simple-feature-wfs">Simple Feature WFS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#using-application-schemas-extension">Using application schemas extension</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#create-mapping-file">Create mapping file</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#edit-datastore-xml-file">Edit datastore.xml file</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="geoserver.html#complex-feature-wfs">Complex Feature WFS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#obtaining-example-configuration">Obtaining example configuration</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#complex-feature-test-requests">Complex Feature Test requests</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#id14">INSPIRE Extended Capabilities</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#inspire-pre-defined-dataset-download">INSPIRE Pre-defined Dataset Download</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#app-schema-properties">app-schema.properties</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#data-directory">Data directory</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#workspace-layout">Workspace layout</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#datastore-xml">datastore.xml</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#mapping-files">Mapping files</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#namespaces">Namespaces</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#source-data-store">Source data store</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#target-types">Target types</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#mappings">Mappings</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#gml-id-mapping">gml:id mapping</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#inspireid-mapping">inspireId mapping</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#ordinary-mapping">Ordinary mapping</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#client-properties">Client properties</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#feature-chaining">Feature chaining</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#polymorphism">Polymorphism</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#inspire-geology-theme-schema">INSPIRE Geology Theme Schema</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="geoserver.html#wcs">WCS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#exemplar-data-used-in-this-cookbook">Exemplar data used in this cookbook</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#metadata-to-be-used-in-configuring-your-service-and-coverages-layers">Metadata to be used in configuring your service and coverages (layers)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#id22">Stores</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#id23">Layers</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#service-level-metadata">Service level metadata</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#id24">INSPIRE Extended Capabilities</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="geoserver.html#geoserver-troubleshooting">GeoServer troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mapserver.html">Using MapServer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mapserver.html#software-installation">Software Installation</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#installing-ms4w">Installing MS4W</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#configuring-the-exemplar-services">Configuring the exemplar services</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#configuring-your-own-services-using-the-exemplars-as-examples">Configuring your own services using the exemplars as examples</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#installing-and-configuring-apache-http-web-server">Installing and configuring Apache HTTP web server</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#bit-apache-http-server">64-bit Apache HTTP server</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#installing-gisinternals-packages-for-windows">Installing GISInternals packages for Windows</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#data">Data</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#mapserver-cgi-bin">MapServer cgi-bin</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#installing-mapserver-on-linux-using-ppas">Installing MapServer on Linux using PPAs</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#configuring-mapserver-exemplar-services-on-a-lamp-server">Configuring MapServer exemplar services on a LAMP server</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#alternative-mapserver-configurations">Alternative MapServer configurations</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#mapserver-and-iis">MapServer and IIS</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#compiling-mapserver-on-linux">Compiling MapServer on Linux</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="mapserver.html#general-configuration">General configuration</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#adding-alternate-character-set-support">Adding alternate character set support</a></li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#creating-your-own-symbology">Creating your own symbology</a></li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#example-include-files">Example include files</a></li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#debugging-common-errors">Debugging common errors</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#symbol-definition-error">Symbol definition error</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#unknown-identifier">Unknown identifier</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#missing-magic-string">Missing magic string</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#connecting-to-a-database">Connecting to a database</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="mapserver.html#wms">WMS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#raster-image-data-exemplar-layer-configuration">Raster image data exemplar (LAYER configuration)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#vector-data-exemplar-layer-configuration">Vector data exemplar (LAYER configuration)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#configuring-html-query-templates">Configuring HTML query templates</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#debugging-your-requests">Debugging your requests</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#handling-fields-for-which-you-have-no-data">Handling fields for which you have no data</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#using-javascript">Using JavaScript</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#configuring-group-layering">Configuring group layering</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="mapserver.html#simple-feature-wfs">Simple feature WFS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mapserver.html#wcs">WCS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mapserver.html#inspire-metadata">INSPIRE metadata</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="esri.html">Using ArcGIS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="esri.html#wms">WMS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="esri.html#creating-the-service">Creating the service</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="esri.html#prepare-the-map-document">Prepare the map document</a></li>
+<li class="toctree-l6"><a class="reference internal" href="esri.html#publishing-your-wms">Publishing your WMS</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="esri.html#edit-the-getcapabilities-documents">Edit the GetCapabilities documents</a></li>
+<li class="toctree-l5"><a class="reference internal" href="esri.html#inspire">INSPIRE</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="esri.html#arcgis-server">ArcGIS Server</a></li>
+<li class="toctree-l6"><a class="reference internal" href="esri.html#inspire-extension">INSPIRE Extension</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="esri.html#arcgis-server-issues">ArcGIS server issues</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="esri.html#simple-feature-wfs">Simple Feature WFS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esri.html#wcs">WCS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="esri.html#create-a-map-document">Create a map document</a></li>
+<li class="toctree-l5"><a class="reference internal" href="esri.html#publish-the-wcs-service">Publish the WCS service</a></li>
+<li class="toctree-l5"><a class="reference internal" href="esri.html#edit-the-getcapabilities-document">Edit the GetCapabilities document</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="apache.html">Using Apache HTTP server as a reverse proxy</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../using.html">Using OneGeology Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../using/portal.html">Using the OneGeology Portal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../using/portal.html#viewing-data-registered-in-the-onegeology-portal">Viewing data registered in the OneGeology Portal</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../using/portal.html#go-to-function">Go To Function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/portal.html#viewing-layers-in-different-projections">Viewing layers in different projections</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/portal.html#reviewing-external-map-data">Reviewing external map data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/portal.html#exporting-to-keyhole-markup-language-kml">Exporting to Keyhole Markup Language (KML)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/portal.html#creating-and-using-web-map-context-wmc-documents">Creating and using Web Map Context (WMC) documents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../using/portal.html#saving-your-context-file">Saving your context file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/portal.html#opening-a-web-map-context-file-in-the-onegeology-portal">Opening a Web Map Context file in the OneGeology Portal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/portal.html#opening-a-wmc-file-in-other-clients">Opening a WMC file in other clients</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/portal.html#known-issues">Known issues</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/portal.html#analysis-tools">Analysis tools</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../using/portal.html#portrayal-services">Portrayal Services</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../using/portal.html#geosciml">GeoSciML</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../using/portal.html#earthresourceml-lite">EarthResourceML-Lite</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/portal.html#statistics">Statistics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../using/qgis.html">Using QGIS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../using/qgis.html#using-qgis-to-view-wms">Using QGIS to view WMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/qgis.html#using-qgis-to-access-simple-feature-wfs">Using QGIS to access simple feature WFS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/qgis.html#using-qgis-to-view-wcs">Using QGIS to view WCS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../using/esri.html">Using ESRI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../using/esri.html#using-arccatalog">Using ArcCatalog</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../using/esri.html#wms-service-connection">WMS Service Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/esri.html#wfs-service-connection">WFS Service Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/esri.html#wcs-service-connection">WCS Service Connection</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/esri.html#using-arcmap">Using ArcMap</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../using/esri.html#wms-layers">WMS Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/esri.html#wfs-layers">WFS Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/esri.html#wcs-layers">WCS Layers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/esri.html#using-arcpro">Using ArcPRO</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../using/udig.html">Using uDig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../using/gaia.html">Using Gaia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../using/world_wind.html">Using NASA World Wind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../using/dapple.html">Using Dapple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../using/google_earth.html">Using Google Earth</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../using/google_earth.html#google-earth-issues">Google Earth Issues</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../using/google_earth.html#problems-displaying-the-map-layer">Problems displaying the map layer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/google_earth.html#problems-displaying-a-map-layer-that-spans-the-globe">Problems displaying a map layer that spans the globe</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../using/mapinfo.html">Using MapInfo Professional</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../using/mapinfo.html#to-add-a-wms-service-to-the-list-of-available-wms-services">To add a WMS service to the list of available WMS services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/mapinfo.html#to-view-wms-service-layers">To view WMS service layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/mapinfo.html#to-query-wms-service-layer">To query WMS service layer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">OneGeology Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../providingdata.html">Providing Data / Services</a> &raquo;</li>
+          <li><a href="../server_setup.html">Setting up a Server</a> &raquo;</li>
+      <li>Cookbook example data</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/providingdata/server_setup/example_data.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cookbook-example-data">
+<span id="service-provision-data-preparation-exampledata"></span><h1>Cookbook example data<a class="headerlink" href="#cookbook-example-data" title="Permalink to this headline"></a></h1>
+<p>In order to help you test setting up services with data that we know work before you try using your own data we supply a number of example data sets that can be used to set up different kinds of services.</p>
+<section id="geopackage">
+<h2>GeoPackage<a class="headerlink" href="#geopackage" title="Permalink to this headline"></a></h2>
+<p>This is a relatively recent standard format for exchanging vector and raster GIS data in a single file. It can potentially be used for quite complex data structures. The example contains two files that could be used for a Simple WMS with GetFeatureInfo response and a Simple Feature WFS. They can also serve as the basis of an SLD enabled WMS and the GeologicUnitView.gpkg file has the fields that are used for highlighting queries in the OneGeology Portal age and lithology tool. As this format doesn’t have the restrictions on field length of Shapefiles the examples are able to use the same names as specified in the GeoSciML-Lite GeologicUnitView and ShearDisplacementView feature types. Field values have been populated with appropriate values from INSPIRE vocabularies so that these examples can be used to produce a simple feature WFS returning standards conformant GeoSciML-Lite features. Download from <a class="reference external" href="ftp://ftp.bgs.ac.uk/pubload/OneGeology/exampledata/geopackagegeoscimllite.zip">ftp://ftp.bgs.ac.uk/pubload/OneGeology/exampledata/geopackagegeoscimllite.zip</a>.</p>
+</section>
+<section id="postgis-data">
+<h2>PostGIS data<a class="headerlink" href="#postgis-data" title="Permalink to this headline"></a></h2>
+<p>This data set can be used as a basis for WMS with GetFeatureInfo, SLD enabled WMS usable in OneGeology Portal, Simple Feature WFS conforming to GeoSciML Lite schema and Complex Feature WFS conforming to GeoSciML schema. A PostGIS database could also store raster data but the example dataset does not. PostGIS is more suitable for production services than Image files or Shapefiles and is more capable for providing data and as a basis for services conforming to standard application schemas.</p>
+<p>It is assumed that you have <a class="reference internal" href="#service-provision-data-preparation-postgis"><span class="std std-ref">installed the PostGIS software</span></a> and that you have a spatially enabled database (the default installation will create one called postgis). The following will all be working within this spatially enabled database.</p>
+<p>Download the latest version of the database dump file wfscookbook.YYYY-MM-DD.backup from <a class="reference external" href="ftp://ftp.bgs.ac.uk/pubload/OneGeology/wfscookbook/">ftp://ftp.bgs.ac.uk/pubload/OneGeology/wfscookbook/</a>. (Each version will have its release date in place of YYYY-MM-DD.)</p>
+<p>Create a separate schema for the example data. The schema name is used in the commands below so, if you change it from <code class="docutils literal notranslate"><span class="pre">wfscookbook</span></code> you will need to change these accordingly</p>
+<div class="highlight-postgresql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="k">SCHEMA</span><span class="w"> </span><span class="n">wfscookbook</span><span class="w"> </span><span class="k">AUTHORIZATION</span><span class="w"> </span><span class="n">postgres</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Import the data from the database dump file downloaded above. If you have installed the pgAdmin graphical administration tool you can use the menu option <span class="menuselection">Tools ‣ Restore…</span>. If you are using the command line you can use the command <strong class="command">pg_restore --host localhost --port 5432 --username &quot;postgres&quot; --dbname &quot;postgis&quot; --no-password --no-owner --no-privileges --no-tablespaces --schema wfscookbook --verbose wfscookbook.backup</strong> (assuming you are using the default ‘postgis’ named database.  You should create a database user with read-only access to these tables for the WFS software to use when accessing them.</p>
+<div class="highlight-postgresql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="k">ROLE</span><span class="w"> </span><span class="n">ows_reader</span><span class="w"> </span><span class="n">LOGIN</span><span class="w"> </span><span class="k">PASSWORD</span><span class="w"> </span><span class="s1">&#39;your_password&#39;</span><span class="w"></span>
+<span class="w"> </span><span class="k">VALID</span><span class="w"> </span><span class="k">UNTIL</span><span class="w"> </span><span class="s1">&#39;infinity&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="k">COMMENT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">ROLE</span><span class="w"> </span><span class="n">ows_reader</span><span class="w"></span>
+<span class="k">IS</span><span class="w"> </span><span class="s1">&#39;A role with read only access to data used in web services.&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="k">grant</span><span class="w"> </span><span class="n">usage</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="k">schema</span><span class="w"> </span><span class="n">wfscookbook</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">ows_reader</span><span class="p">;</span><span class="w"></span>
+<span class="k">grant</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">geometry_columns</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">ows_reader</span><span class="p">;</span><span class="w"></span>
+<span class="k">grant</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">spatial_ref_sys</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">ows_reader</span><span class="p">;</span><span class="w"></span>
+<span class="k">grant</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="k">all</span><span class="w"> </span><span class="k">tables</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">schema</span><span class="w"> </span><span class="n">wfscookbook</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">ows_reader</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>If you have problems with the above steps which are difficult to resolve you may find that setting <code class="docutils literal notranslate"><span class="pre">log_statement=all</span></code> in <code class="docutils literal notranslate"><span class="pre">postgresql.conf</span></code>, reloading the server and then monitoring the log file is helpful for debugging them.</p>
+<section id="installing-postgis">
+<span id="service-provision-data-preparation-postgis"></span><h3>Installing PostGIS<a class="headerlink" href="#installing-postgis" title="Permalink to this headline"></a></h3>
+<p>The <a class="reference external" href="http://www.postgis.net/install">PostGIS Installation</a> page contains instructions on how to install PostGIS for different operating systems. We have used both the <a class="reference external" href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads">Enterprise DB Windows Installer</a> on Windows and the <a class="reference external" href="https://yum.postgresql.org/">PostgreSQL Yum repository</a> on CentOS.</p>
+</section>
+</section>
+<section id="image-with-world-file">
+<h2>Image with world file<a class="headerlink" href="#image-with-world-file" title="Permalink to this headline"></a></h2>
+<p>This is an image file with associated worldfile to locate it in geographic coordinates. This is the type of file that you might have if you only have paper maps which you have to scan to use. It is suitable for setting up a simple WMS without any useful GetFeatureInfo response or the ability to be styled by an SLD. Download from <a class="reference external" href="ftp://ftp.bgs.ac.uk/pubload/OneGeology/exampledata/georeferencedimage.zip">ftp://ftp.bgs.ac.uk/pubload/OneGeology/exampledata/georeferencedimage.zip</a>.</p>
+</section>
+<section id="shapefile">
+<h2>Shapefile<a class="headerlink" href="#shapefile" title="Permalink to this headline"></a></h2>
+<p>ESRI Shapefile is a very common vector GIS format. The example could be used for a Simple WMS with GetFeatureInfo response and a Simple Feature WFS. It could also serve as the basis of an SLD enabled WMS but it doesn’t have the fields that are used in the OneGeology Portal age and lithology tool so wouldn’t work with that unless those fields were added. Also, because of the 10 character limit on length of Shapefile field names your server software will need to be able map shorter field names to the longer ones expected by the Portal. The field name length restriction also means that a simple feature WFS can’t be made to conform to specific standard Schemas like GeoSciML Lite unless your server software can map the names to the longer standard property names. Download from <a class="reference external" href="ftp://ftp.bgs.ac.uk/pubload/OneGeology/exampledata/shapefileunharmonised.zip">ftp://ftp.bgs.ac.uk/pubload/OneGeology/exampledata/shapefileunharmonised.zip</a>.</p>
+<p>OneGeology does not recommend using Shapefiles as the data source for your services but, if you already have your data in this format, it can be used as a data source with some restrictions.</p>
+<p>If you wish to set up a <a class="reference internal" href="../service_types.html#term-SLD-enabled-WMS"><span class="xref std std-term">SLD enabled WMS</span></a> or <a class="reference internal" href="../service_types.html#term-Simple-feature-WFS"><span class="xref std std-term">Simple feature WFS</span></a> using the standard fields needed for age and lithology highlighting in the Portal or following one of the standard ‘Lite’ schemas then the 10 character limit on field names in Shapefiles means your server will need to map shorter Shapefile field names to the longer expected field names in the standards. We provide some <a class="reference internal" href="#service-provision-data-preparation-short-names"><span class="std std-ref">Recommended ESRI shapefile definitions for GeoSciML-Lite</span></a> for some GeoSciML-Lite features that are reasonably readable and would enable using common mapping files to produce services using the full names.</p>
+<p>Another consideration might be that, if the coordinate system of your Shapefile is not EPSG:4326 and your service is predominantly to be used in the OneGeology Portal, then your server will have to do a lot of on-the-fly coordinate conversion. To ameliorate this you can <a class="reference external" href="/wmsCookbook/appendixA.html">convert the coordinate system of your Shapefile</a>. The tools referred to in the previous link are available from <a class="reference external" href="http://www.gdal.org">http://www.gdal.org</a> if you haven’t done the MS4W download that it assumes.</p>
+<section id="recommended-esri-shapefile-definitions-for-geosciml-lite">
+<span id="service-provision-data-preparation-short-names"></span><h3>Recommended ESRI shapefile definitions for GeoSciML-Lite<a class="headerlink" href="#recommended-esri-shapefile-definitions-for-geosciml-lite" title="Permalink to this headline"></a></h3>
+<p>Because the field names in GeoSciML-Lite are longer than 10 characters, you will not be able to have the full attribute (column) name for many of the properties if your portrayal data is loaded into an ESRI shapefile. To prevent truncated names, we are providing a recommended Shapefile implementation with shorter field names. Field names are abbreviated to try and leave characters that convey the full name of the field; lower camel case typographic has been used, except that fields that contain URI’s end with ‘_uri’.</p>
+<table class="colwidths-auto docutils align-left" id="id4">
+<caption><span class="caption-text">Recommended shapefile definition for ContactView</span><a class="headerlink" href="#id4" title="Permalink to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>XML field Name</p></th>
+<th class="head"><p>Shapefile field name</p></th>
+<th class="head"><p>Shapefile data type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>identifier</p></td>
+<td><p>identifier</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>name</p></td>
+<td><p>name</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>description</p></td>
+<td><p>descriptio</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>contactType</p></td>
+<td><p>contactTyp</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>observationMethod</p></td>
+<td><p>obsvMethod</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>positionalAccuracy</p></td>
+<td><p>posAccur</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>source</p></td>
+<td><p>source</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>contactType_uri</p></td>
+<td><p>conTyp_uri</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>specification_uri</p></td>
+<td><p>spec_uri</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>metadata_uri</p></td>
+<td><p>metada_uri</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>genericSymbolizer</p></td>
+<td><p>genericSym</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>shape</p></td>
+<td><p>SHAPE</p></td>
+<td><p>ESRI geometry</p></td>
+</tr>
+</tbody>
+</table>
+<div class="linefeed">
+<!-- Force a line -->&nbsp;
+</div><table class="colwidths-auto docutils align-left" id="id5">
+<caption><span class="caption-text">Recommended shapefile definition for ShearDisplacementStructureView</span><a class="headerlink" href="#id5" title="Permalink to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>XML field Name</p></th>
+<th class="head"><p>Shapefile field name</p></th>
+<th class="head"><p>Shapefile data type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>identifier</p></td>
+<td><p>identifier</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>name</p></td>
+<td><p>name</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>description</p></td>
+<td><p>descriptio</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>faultType</p></td>
+<td><p>faultType</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>movementType</p></td>
+<td><p>movmntType</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>deformationStyle</p></td>
+<td><p>defrmStyle</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>displacement</p></td>
+<td><p>displacmnt</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>geologicHistory</p></td>
+<td><p>geolHistry</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>observationMethod</p></td>
+<td><p>obsvMethod</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>positionalAccuracy</p></td>
+<td><p>posAccur</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>source</p></td>
+<td><p>source</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>faultType_uri</p></td>
+<td><p>fltTyp_uri</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>movementType_uri</p></td>
+<td><p>movTyp_uri</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>deformationStyle_uri</p></td>
+<td><p>defStl_uri</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>representativeAge_uri</p></td>
+<td><p>repAge_uri</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>representativeOlderAge_uri</p></td>
+<td><p>oldAge_uri</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>representativeYoungerAge_uri</p></td>
+<td><p>yngAge_uri</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>specification_uri</p></td>
+<td><p>spec_uri</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>metadata_uri</p></td>
+<td><p>metada_uri</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>genericSymbolizer</p></td>
+<td><p>genericSym</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>shape</p></td>
+<td><p>SHAPE</p></td>
+<td><p>ESRI geometry</p></td>
+</tr>
+</tbody>
+</table>
+<div class="linefeed">
+<!-- Force a line -->&nbsp;
+</div><table class="colwidths-auto docutils align-left" id="id6">
+<caption><span class="caption-text">Recommended shapefile definition for GeologicUnitView</span><a class="headerlink" href="#id6" title="Permalink to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>XML field Name</p></th>
+<th class="head"><p>Shapefile field name</p></th>
+<th class="head"><p>Shapefile data type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>identifier</p></td>
+<td><p>identifier</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>name</p></td>
+<td><p>name</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>description</p></td>
+<td><p>descriptio</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>geologicUnitType</p></td>
+<td><p>geoUnitTyp</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>rank</p></td>
+<td><p>rank</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>lithology</p></td>
+<td><p>lithology</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>geologicHistory</p></td>
+<td><p>geolHistry</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>observationMethod</p></td>
+<td><p>obsvMethod</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>positionalAccuracy</p></td>
+<td><p>posAccur</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>source</p></td>
+<td><p>source</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>geologicUnitType_uri</p></td>
+<td><p>uniTyp_uri</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>representativeLithology_uri</p></td>
+<td><p>repLth_uri</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>representativeAge_uri</p></td>
+<td><p>repAge_uri</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>representativeOlderAge_uri</p></td>
+<td><p>oldAge_uri</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>representativeYoungerAge_uri</p></td>
+<td><p>yngAge_uri</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>specification_uri</p></td>
+<td><p>spec_uri</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>metadata_uri</p></td>
+<td><p>metada_uri</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>genericSymbolizer</p></td>
+<td><p>genericSym</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>shape</p></td>
+<td><p>SHAPE</p></td>
+<td><p>ESRI geometry</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="geotiff">
+<h2>GeoTIFF<a class="headerlink" href="#geotiff" title="Permalink to this headline"></a></h2>
+<p>GeoTIFF is a raster format with geographic registration included. The example has been obtained from the <a class="reference external" href="http://portal.emodnet-bathymetry.eu/RGB">EMODNET Portal for Bathymetry</a> and has RGB bands suitable for display as an image although other GeoTIFF’s could have more and not necessarily image bands. This could be used for a WMS but is included primarily to test WCS setup. Download from <a class="reference external" href="ftp://ftp.bgs.ac.uk/pubload/OneGeology/exampledata/geotiff.zip">ftp://ftp.bgs.ac.uk/pubload/OneGeology/exampledata/geotiff.zip</a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../server_setup.html" class="btn btn-neutral float-left" title="Setting up a Server" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="geoserver.html" class="btn btn-neutral float-right" title="Using GeoServer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019, OneGeology.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

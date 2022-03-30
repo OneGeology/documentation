@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Using ArcGIS &mdash; OneGeology Documentation 1.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/OneGeology_favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Using Apache HTTP server as a reverse proxy" href="apache.html" />
+    <link rel="prev" title="Using MapServer" href="mapserver.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> OneGeology Documentation
+            <img src="../../_static/Onegeology_logo_large.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../providingdata.html">Providing Data / Services</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../service_types.html">Service Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_formats.html">Data formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_content.html">Data content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_preparation.html">Data preparation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_preparation.html#scanning-a-paper-map">Scanning a paper map</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#scanning">Scanning</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#step-1">Step 1</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#step-2a">Step 2A</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#step-2b">Step 2B</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#step-2c">Step 2C</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#step-3-stitching">Step 3 ~ Stitching</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#georeferencing-a-scanned-map">Georeferencing a scanned map</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#image-formats-and-transparency">Image formats and transparency</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#the-legend-for-the-scanned-map">The legend for the scanned map</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_preparation.html#lite-schemas">Lite Schemas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#geosciml-lite">GeoSciML-Lite</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#contactview-features">ContactView features</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#sheardisplacementstructureview-features">ShearDisplacementStructureView features</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologicunitview-features">GeologicUnitView features</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#boreholeview-features">BoreholeView features</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#earthresourceml-lite">EarthResourceML-Lite</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#mineraloccurrenceview-features">MineralOccurrenceView features</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#commodityresourceview-features">CommodityResourceView features</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_preparation.html#complex-feature-data">Complex Feature Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#mapped-feature-and-geologic-feature">Mapped Feature and Geologic Feature</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#mapped-feature-mapping-frame">Mapped Feature - mapping frame</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#mapped-feature-geometry-shape">Mapped Feature - geometry (shape)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-feature-inspireid">Geologic Feature - inspireId</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-feature-name">Geologic Feature - name</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#geologic-age">Geologic Age</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-event-name">Geologic Event - name</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-event-youngernamedage-and-oldernamedage">Geologic Event - youngerNamedAge and olderNamedAge</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-event-eventprocess">Geologic Event - eventProcess</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-event-eventenvironment">Geologic Event - eventEnvironment</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#geologic-unit-and-earth-material">Geologic Unit and Earth Material</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-unit-geologic-unit-type">Geologic Unit - geologic unit type</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-unit-composition">Geologic Unit - composition</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#composition-part-role">Composition Part - role</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#composition-part-proportion">Composition Part - proportion</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#composition-part-material">Composition Part - material</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#rock-material-lithology">Rock Material -lithology</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#geologic-structure">Geologic Structure</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#shear-displacement-structure-faulttype">Shear Displacement Structure - faultType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#fold-profiletype">Fold - profileType</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#geomorphologic-feature">Geomorphologic Feature</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#natural-geomorphologic-feature-naturalgeomorphologicfeaturetype">Natural Geomorphologic Feature - NaturalGeomorphologicFeatureType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#natural-geomorphologic-feature-activity">Natural Geomorphologic Feature - activity</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#anthropogenic-geomorphologic-feature-anthropogenicgeomorphologicfeaturetype">Anthropogenic Geomorphologic Feature - AnthropogenicGeomorphologicFeatureType</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#thematic-class">Thematic Class</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-feature-classifier">Geologic Feature - classifier</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#borehole">Borehole</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#borehole-inspireid">Borehole - inspireId</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#borehole-sampledfeature">Borehole - sampledFeature</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#borehole-downholegeometry">Borehole - downholeGeometry</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#borehole-location-and-elevation">Borehole - location and elevation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#borehole-purpose">Borehole - purpose</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#borehole-boreholelength">Borehole - boreholeLength</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#borehole-interval-mappingframe">Borehole Interval - mappingFrame</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#boreholeinterval-geometry-shape">BoreholeInterval - geometry (shape)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#boreholeinterval-specification">BoreholeInterval - specification</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#boreholeinterval-mappedintervalbegin-mappedintervalend">BoreholeInterval - mappedIntervalBegin &amp; mappedIntervalEnd</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#geologic-collection">Geologic Collection</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-collection-inspireid">Geologic Collection - inspireId</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologiccollection-name">GeologicCollection - name</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-collection-collectiontype">Geologic Collection - collectionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-collection-member">Geologic Collection - member</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#md-metadata-contact">MD_Metadata - contact</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#md-metadata-datestamp">MD_Metadata - dateStamp</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-collection-reference">Geologic Collection - reference</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../data_preparation.html#documentcitation-name">DocumentCitation - name</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../data_preparation.html#documentcitation-shortname">DocumentCitation - shortName</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../data_preparation.html#document-citation-date">Document Citation - date</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../data_preparation.html#documentcitation-link">DocumentCitation - link</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-collection-beginlifespanversion-endlifespanversion">Geologic Collection - beginLifespanVersion &amp; endLifespanVersion</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#md-dataidentification-abstract">MD_DataIdentification - abstract</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#md-dataidentification-language">MD_DataIdentification - language</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#md-dataidentification-topiccategory">MD_DataIdentification - topicCategory</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../onegeology_profile.html">OneGeology Profile</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../onegeology_profile.html#ogc-service-level-metadata">OGC service level metadata</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#service-title">Service title</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#service-abstract">Service abstract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#fees">Fees</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#access-constraints">Access constraints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#keywords">Keywords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#contact-information">Contact information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#data-provider">Data provider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#online-resource">Online resource</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../onegeology_profile.html#layer-coverage-feature-metadata">Layer / Coverage / Feature metadata</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#wms-layer-and-wcs-coverage-naming">WMS layer and WCS coverage naming</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#geographic-extent">Geographic extent</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#data-owner">Data owner</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#language">Language</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#scale">Scale</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#theme">Theme</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#layer-title-examples">Layer title examples</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#layer-name-examples">Layer name examples</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#inspire-layer-naming-considerations">INSPIRE layer naming considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#summary-of-layer-coverage-feature-metadata">Summary of layer/coverage/feature metadata</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#machine-readable-name">Machine readable name</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#human-readable-name">Human readable name</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#abstract">Abstract</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#service-provision-onegeology-profile-layer-keywords">Keywords</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#wms-specific-metadata">WMS Specific Metadata</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#extent">Extent</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#spatial-coordinate-reference-system">Spatial/Coordinate reference system</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#boundingbox">BoundingBox</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#dataurl-optional">DataURL (optional)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#metadataurl-optional">MetadataURL (optional)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#legend-url">Legend url</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#layer-styling-information">Layer styling information</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#wms-getfeatureinfo-response">WMS GetFeatureInfo response</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#core-tc211-iso-19115-metadata">Core TC211/ISO:19115 Metadata</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../server_setup.html">Setting up a Server</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="example_data.html">Cookbook example data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="example_data.html#geopackage">GeoPackage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="example_data.html#postgis-data">PostGIS data</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="example_data.html#installing-postgis">Installing PostGIS</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="example_data.html#image-with-world-file">Image with world file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="example_data.html#shapefile">Shapefile</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="example_data.html#recommended-esri-shapefile-definitions-for-geosciml-lite">Recommended ESRI shapefile definitions for GeoSciML-Lite</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="example_data.html#geotiff">GeoTIFF</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="geoserver.html">Using GeoServer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geoserver.html#introduction">Introduction</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#pre-requisites-system-requirements">Pre-requisites / System Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="geoserver.html#software-installation">Software Installation</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#assumptions">Assumptions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#basic-installation">Basic Installation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#app-schema-plugin-installation">App-schema Plugin Installation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#inspire-plugin-installation">INSPIRE Plugin Installation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#database">Database</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="geoserver.html#common-setup">Common Setup</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#logging-in">Logging in</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#editing-contact-information-metadata">Editing contact information metadata</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#workspaces">Workspaces</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="geoserver.html#example-data">Example Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geoserver.html#simple-wms">Simple WMS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#inspire-extended-capabilities">INSPIRE Extended Capabilities</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#configuring-a-data-store">Configuring a data store</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#adding-layers-to-a-workspace">Adding layers to a workspace</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#the-data-tab-of-the-edit-layer-page">The Data tab of the Edit Layer page</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#the-publishing-tab-of-the-edit-layer-page">The Publishing tab of the Edit Layer page</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#creating-group-layers">Creating group layers</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="geoserver.html#sld-enabled-wms">SLD enabled WMS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geoserver.html#simple-feature-wfs">Simple Feature WFS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#using-application-schemas-extension">Using application schemas extension</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#create-mapping-file">Create mapping file</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#edit-datastore-xml-file">Edit datastore.xml file</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="geoserver.html#complex-feature-wfs">Complex Feature WFS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#obtaining-example-configuration">Obtaining example configuration</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#complex-feature-test-requests">Complex Feature Test requests</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#id14">INSPIRE Extended Capabilities</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#inspire-pre-defined-dataset-download">INSPIRE Pre-defined Dataset Download</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#app-schema-properties">app-schema.properties</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#data-directory">Data directory</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#workspace-layout">Workspace layout</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#datastore-xml">datastore.xml</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#mapping-files">Mapping files</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#namespaces">Namespaces</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#source-data-store">Source data store</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#target-types">Target types</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#mappings">Mappings</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#gml-id-mapping">gml:id mapping</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#inspireid-mapping">inspireId mapping</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#ordinary-mapping">Ordinary mapping</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#client-properties">Client properties</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#feature-chaining">Feature chaining</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#polymorphism">Polymorphism</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geoserver.html#inspire-geology-theme-schema">INSPIRE Geology Theme Schema</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="geoserver.html#wcs">WCS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#exemplar-data-used-in-this-cookbook">Exemplar data used in this cookbook</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#metadata-to-be-used-in-configuring-your-service-and-coverages-layers">Metadata to be used in configuring your service and coverages (layers)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#id22">Stores</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#id23">Layers</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#service-level-metadata">Service level metadata</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#id24">INSPIRE Extended Capabilities</a></li>
+<li class="toctree-l5"><a class="reference internal" href="geoserver.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="geoserver.html#geoserver-troubleshooting">GeoServer troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mapserver.html">Using MapServer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mapserver.html#software-installation">Software Installation</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#installing-ms4w">Installing MS4W</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#configuring-the-exemplar-services">Configuring the exemplar services</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#configuring-your-own-services-using-the-exemplars-as-examples">Configuring your own services using the exemplars as examples</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#installing-and-configuring-apache-http-web-server">Installing and configuring Apache HTTP web server</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#bit-apache-http-server">64-bit Apache HTTP server</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#installing-gisinternals-packages-for-windows">Installing GISInternals packages for Windows</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#data">Data</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#mapserver-cgi-bin">MapServer cgi-bin</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#installing-mapserver-on-linux-using-ppas">Installing MapServer on Linux using PPAs</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#configuring-mapserver-exemplar-services-on-a-lamp-server">Configuring MapServer exemplar services on a LAMP server</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#alternative-mapserver-configurations">Alternative MapServer configurations</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#mapserver-and-iis">MapServer and IIS</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#compiling-mapserver-on-linux">Compiling MapServer on Linux</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="mapserver.html#general-configuration">General configuration</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#adding-alternate-character-set-support">Adding alternate character set support</a></li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#creating-your-own-symbology">Creating your own symbology</a></li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#example-include-files">Example include files</a></li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#debugging-common-errors">Debugging common errors</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#symbol-definition-error">Symbol definition error</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#unknown-identifier">Unknown identifier</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#missing-magic-string">Missing magic string</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#connecting-to-a-database">Connecting to a database</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="mapserver.html#wms">WMS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#raster-image-data-exemplar-layer-configuration">Raster image data exemplar (LAYER configuration)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#vector-data-exemplar-layer-configuration">Vector data exemplar (LAYER configuration)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#configuring-html-query-templates">Configuring HTML query templates</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#debugging-your-requests">Debugging your requests</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#handling-fields-for-which-you-have-no-data">Handling fields for which you have no data</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#using-javascript">Using JavaScript</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#configuring-group-layering">Configuring group layering</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="mapserver.html#simple-feature-wfs">Simple feature WFS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mapserver.html#wcs">WCS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mapserver.html#inspire-metadata">INSPIRE metadata</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Using ArcGIS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#wms">WMS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#creating-the-service">Creating the service</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#prepare-the-map-document">Prepare the map document</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#publishing-your-wms">Publishing your WMS</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#edit-the-getcapabilities-documents">Edit the GetCapabilities documents</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#inspire">INSPIRE</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#arcgis-server">ArcGIS Server</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#inspire-extension">INSPIRE Extension</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#arcgis-server-issues">ArcGIS server issues</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#simple-feature-wfs">Simple Feature WFS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wcs">WCS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#create-a-map-document">Create a map document</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#publish-the-wcs-service">Publish the WCS service</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#edit-the-getcapabilities-document">Edit the GetCapabilities document</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="apache.html">Using Apache HTTP server as a reverse proxy</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../using.html">Using OneGeology Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../using/portal.html">Using the OneGeology Portal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../using/portal.html#viewing-data-registered-in-the-onegeology-portal">Viewing data registered in the OneGeology Portal</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../using/portal.html#go-to-function">Go To Function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/portal.html#viewing-layers-in-different-projections">Viewing layers in different projections</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/portal.html#reviewing-external-map-data">Reviewing external map data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/portal.html#exporting-to-keyhole-markup-language-kml">Exporting to Keyhole Markup Language (KML)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/portal.html#creating-and-using-web-map-context-wmc-documents">Creating and using Web Map Context (WMC) documents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../using/portal.html#saving-your-context-file">Saving your context file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/portal.html#opening-a-web-map-context-file-in-the-onegeology-portal">Opening a Web Map Context file in the OneGeology Portal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/portal.html#opening-a-wmc-file-in-other-clients">Opening a WMC file in other clients</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/portal.html#known-issues">Known issues</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/portal.html#analysis-tools">Analysis tools</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../using/portal.html#portrayal-services">Portrayal Services</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../using/portal.html#geosciml">GeoSciML</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../using/portal.html#earthresourceml-lite">EarthResourceML-Lite</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/portal.html#statistics">Statistics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../using/qgis.html">Using QGIS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../using/qgis.html#using-qgis-to-view-wms">Using QGIS to view WMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/qgis.html#using-qgis-to-access-simple-feature-wfs">Using QGIS to access simple feature WFS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/qgis.html#using-qgis-to-view-wcs">Using QGIS to view WCS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../using/esri.html">Using ESRI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../using/esri.html#using-arccatalog">Using ArcCatalog</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../using/esri.html#wms-service-connection">WMS Service Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/esri.html#wfs-service-connection">WFS Service Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/esri.html#wcs-service-connection">WCS Service Connection</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/esri.html#using-arcmap">Using ArcMap</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../using/esri.html#wms-layers">WMS Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/esri.html#wfs-layers">WFS Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/esri.html#wcs-layers">WCS Layers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/esri.html#using-arcpro">Using ArcPRO</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../using/udig.html">Using uDig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../using/gaia.html">Using Gaia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../using/world_wind.html">Using NASA World Wind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../using/dapple.html">Using Dapple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../using/google_earth.html">Using Google Earth</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../using/google_earth.html#google-earth-issues">Google Earth Issues</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../using/google_earth.html#problems-displaying-the-map-layer">Problems displaying the map layer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/google_earth.html#problems-displaying-a-map-layer-that-spans-the-globe">Problems displaying a map layer that spans the globe</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../using/mapinfo.html">Using MapInfo Professional</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../using/mapinfo.html#to-add-a-wms-service-to-the-list-of-available-wms-services">To add a WMS service to the list of available WMS services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/mapinfo.html#to-view-wms-service-layers">To view WMS service layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/mapinfo.html#to-query-wms-service-layer">To query WMS service layer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">OneGeology Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../providingdata.html">Providing Data / Services</a> &raquo;</li>
+          <li><a href="../server_setup.html">Setting up a Server</a> &raquo;</li>
+      <li>Using ArcGIS</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/providingdata/server_setup/esri.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="using-arcgis">
+<h1>Using ArcGIS<a class="headerlink" href="#using-arcgis" title="Permalink to this headline"></a></h1>
+<p>The following notes are based on ESRI ArcGIS server version 10.5 (SP1)</p>
+<section id="wms">
+<h2>WMS<a class="headerlink" href="#wms" title="Permalink to this headline"></a></h2>
+<section id="creating-the-service">
+<h3>Creating the service<a class="headerlink" href="#creating-the-service" title="Permalink to this headline"></a></h3>
+<section id="prepare-the-map-document">
+<h4>Prepare the map document<a class="headerlink" href="#prepare-the-map-document" title="Permalink to this headline"></a></h4>
+<p>Initial set up of WMS services is relatively straightforward and simply requires the creation of a map document (.mxd) containing the data you want to add to the service.</p>
+<p>It is important to pay attention to the layer names in the map document, since the individual service layer names will use the map document layer names. The service will also use the map document layer names for the respective layer titles in the GetCapabilities document.</p>
+<figure class="align-default" id="id9">
+<img alt="Using ArcMap layer names in the service" src="../../_images/image048.jpg" />
+<figcaption>
+<p><span class="caption-text">Figure 1 - Using ArcMap layer names in the service</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Eg. an unmodified GetCapabilities (version 1.3.0) response for the above example would look like:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Layer&gt;</span>
+<span class="nt">&lt;Title&gt;</span>BGS_BEDROCK_GEOLOGY<span class="nt">&lt;/Title&gt;</span>
+<span class="nt">&lt;CRS&gt;</span>CRS:84<span class="nt">&lt;/CRS&gt;</span>
+<span class="nt">&lt;CRS&gt;</span>EPSG:4326<span class="nt">&lt;/CRS&gt;</span>
+...
+<span class="nt">&lt;Layer</span> <span class="na">queryable=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;Name&gt;</span>GBR_BGS_625k_BA<span class="nt">&lt;/Name&gt;</span>
+    <span class="nt">&lt;Title&gt;</span>GBR_BGS_625k_BA<span class="nt">&lt;/Title&gt;</span>
+    <span class="nt">&lt;Abstract&gt;&lt;/Abstract&gt;</span>
+    <span class="nt">&lt;CRS&gt;</span>CRS:84<span class="nt">&lt;/CRS&gt;</span>
+    <span class="nt">&lt;CRS&gt;</span>EPSG:4326<span class="nt">&lt;/CRS&gt;</span>
+   ...
+    <span class="nt">&lt;Style&gt;</span>
+        <span class="nt">&lt;Name&gt;</span>default<span class="nt">&lt;/Name&gt;</span>
+        <span class="nt">&lt;Title&gt;</span>GBR_BGS_625k_BA<span class="nt">&lt;/Title&gt;</span>
+        <span class="nt">&lt;LegendURL</span> <span class="na">width=</span><span class="s">&quot;68&quot;</span> <span class="na">height=</span><span class="s">&quot;2048&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;Format&gt;</span>image/png<span class="nt">&lt;/Format&gt;</span>
+            <span class="nt">&lt;OnlineResource</span> <span class="na">xlink:href=</span><span class="s">&quot;...&quot;</span> <span class="na">xlink:type=</span><span class="s">&quot;simple&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/LegendURL&gt;</span>
+    <span class="nt">&lt;/Style&gt;</span>
+<span class="nt">&lt;/Layer&gt;</span>
+<span class="nt">&lt;Layer</span> <span class="na">queryable=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;Name&gt;</span>GBR_BGS_625k_BLT<span class="nt">&lt;/Name&gt;</span>
+    <span class="nt">&lt;Title&gt;</span>GBR_BGS_625k_BLT<span class="nt">&lt;/Title&gt;</span>
+    <span class="nt">&lt;Abstract&gt;&lt;/Abstract&gt;</span>
+...
+</pre></div>
+</div>
+</section>
+<section id="publishing-your-wms">
+<h4>Publishing your WMS<a class="headerlink" href="#publishing-your-wms" title="Permalink to this headline"></a></h4>
+<p>Once you are happy with the layer names, the easiest way to publish your WMS is doing it directly from the map document:</p>
+<ul class="simple">
+<li><p>Go to <em>File &gt; Share As &gt; Service…</em> to open the <em>Share as Service</em> dialog.</p></li>
+<li><p>Select <em>Publish a service</em> and click <em>Next &gt;</em>.</p></li>
+<li><p>On the <em>Publish a Service</em> dialog, choose/add a connection to your ArcGIS Server instance and write a name for your map service. The name you enter will be part of the WMS url, so you must ensure that meets the OneGeology profile naming conventions. Click <em>Next &gt;.</em></p></li>
+<li><p>Select whether to <em>Use existing folder</em> or <em>Create new folder</em>. The folder name will also appear as part of the WMS url. Click <em>Continue</em>.</p></li>
+<li><p>In the <em>Service Editor</em> dialog, go to <em>Capabilities</em> and select <em>WMS</em>. If you wish, you can unselect KML.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you <strong>do not</strong> want to expose the data behind your WMS service, make sure that the <strong>WFS</strong> option is <strong>unselected</strong>.</p>
+</div>
+<ul class="simple">
+<li><p>Now go to <em>Capabilities &gt; WMS</em> to access the WMS properties</p></li>
+</ul>
+<figure class="align-default" id="id10">
+<img alt="Adding a new WMS service in ArcGIS" src="../../_images/image049.jpg" />
+<figcaption>
+<p><span class="caption-text">Figure 2 - Adding a new WMS service in ArcGIS</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>You will be presented with a form to edit your service level metadata (as above) or you may opt to use external capabilities. We suggest at this stage that you should use the form to fill in as much detail as possible, though you should note that you will eventually need to use external files to enter any layer level metadata and add missing service level metadata parameters; we can use the data you enter initially as the basis for these external static files.</p></li>
+<li><p>You also need to tick the <em>Use layer names from the map document</em> option; otherwise, the layer names will be given numbers instead. Again, you will need to ensure that the ArcMap layer names follow the naming guidelines.</p></li>
+<li><p>ArcGIS Server creates only one style named <em>default</em> for every layer, but allows you to do include additional styles for each layer using a SLD file. The default style matches the symbology set in the map document.</p></li>
+<li><p>Once you finish configuring your WMS, click <em>Publish</em> on the top-right corner of the <em>Service Editor</em> dialog to create your service.</p></li>
+</ul>
+<p>Your new service will have a URL like below, with the folder name part being optional:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="p">[</span><span class="n">hostname</span><span class="p">]</span><span class="o">/</span><span class="n">ArcGIS</span><span class="o">/</span><span class="n">services</span><span class="o">/</span><span class="p">[</span><span class="n">folder</span> <span class="n">name</span><span class="p">]</span><span class="o">/</span><span class="p">[</span><span class="nb">map</span> <span class="n">service</span> <span class="n">title</span><span class="p">]</span><span class="o">/</span><span class="n">MapServer</span><span class="o">/</span><span class="n">WMSServer</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="edit-the-getcapabilities-documents">
+<h3>Edit the GetCapabilities documents<a class="headerlink" href="#edit-the-getcapabilities-documents" title="Permalink to this headline"></a></h3>
+<p>ArcGIS Server doesn’t create any static GetCapabilities xml documents, but does allow you to use external files. You will need to use such external files if you want to add any additional spatial reference systems, correct the keywords listing, change the LegendURL images, add better abstracts and layer titles, or add an INSPIRE extended capabilities section. We think to provide a fully compliant WMS it is highly likely that you will need to use a set of static files.</p>
+<p>The first step to editing your files is to create them.</p>
+<p>The quickest way to do this is to use the response documents from your initial service. You will need to have a file for all the WMS versions that you want your service to support. We require at least a version 1.3.0 document but you could also have a 1.1.1 response.</p>
+<p>Your WMS version 1.1.1 GetCapabilities document is generated using a request like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>http://[hostname]/ArcGIS/services/[folder name]/[map service title]/MapServer/WMSServer?service=WMS&amp;request=GetCapabilities&amp;version=1.1.1&amp;
+</pre></div>
+</div>
+<p><strong>Save this as [short service name]111.xml</strong></p>
+<p>Your WMS version 1.3.0 GetCapabilities document is generated using a request like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>http://[hostname]/ArcGIS/services/[folder name]/[map service title]/MapServer/WMSServer?service=WMS&amp;request=GetCapabilities&amp;version=1.3.0&amp;
+</pre></div>
+</div>
+<p><strong>Save this as [short service name]130.xml</strong></p>
+<p>It doesn’t really matter what name you give these files, as long as you use the same name prefix for all files that belong to the same service.</p>
+<p>You need to put these files on the server (or at a location available to your server), and make them browsable. These files only need to be browsable internally by the ArcGIS server.</p>
+<p>Now go back to your map service and edit it using either <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-manager.htm">ArcGIS Server Manager</a> or <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-arcgis-for-desktop.htm">ArcMap</a>.</p>
+<figure class="align-default" id="id11">
+<img alt="Setting up external capabilities files" src="../../_images/image050.jpg" />
+<figcaption>
+<p><span class="caption-text">Figure 3 - Setting up external capabilities files</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Select <em>WMS</em>, then select the <em>Use External capabilities files</em> option and in the <em>Specify the location and prefix</em> dialog add the web address to the folder containing the capabilities response documents plus your <em>[short service name]</em> prefix.</p>
+<p>For example, for a service called BGS_BEDROCK_GEOLOGY, we may save our initial GetCapabilities response documents using a prefix “BEDROCK-“, giving us a file called BEDROCK-130.xml for our version 1.3.0 GetCapabilities response document, BEDROCK-111.xml for our version 1.1.1 GetCapabilities response document. We might then save these to a location on our web server such as <em>C:\Inetpub\wwwroot\GetCapabilitiesFiles\,</em> which would be browsable locally as <em>http://localhost/GetCapabilitiesFiles/</em>.  When we select the “Use External capabilities files” option, we then provide the web address and <strong>prefix</strong> as <em>http://localhost/GetCapabilitiesFiles/BEDROCK-</em></p>
+<p>Having created your files, you may then edit them as required. We would recommend you make a second copy of the files in case you make an error whilst editing.</p>
+</section>
+<section id="inspire">
+<h3>INSPIRE<a class="headerlink" href="#inspire" title="Permalink to this headline"></a></h3>
+<p>If you want your OneGeology service to comply to INSPIRE standards, in addition to meet the requirements of the OneGeology profile, you need to ensure that the following conditions are fulfilled:</p>
+<ol class="arabic simple">
+<li><p>Layer name and layer title must follow INSPIRE naming conventions. For example the <a class="reference external" href="http://inspire.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_GE_v3.0.pdf">D2.8.II.4 Data Specification on Geology–Technical Guidelines</a> tell us (section 11.1 ~ Layers to be provided by INSPIRE view services) that any layer to do with lithology or age must have the name <em>GE.GeologicUnit</em> and title <em>Geologic Units</em>. See the <a class="reference external" href="https://themes.jrc.ec.europa.eu/discussion/view/13952/layer-naming">layer-naming</a> discussion on the INSPIRE Thematic Clusters Geology forum for fuller details.</p></li>
+<li><p>Layers must support at least one of the INSPIRE coordinate systems. See <a class="reference external" href="http://inspire.ec.europa.eu/documents/Data_Specifications/INSPIRE_Specification_CRS_v3.0.pdf">D2.8.I.1 INSPIRE Specification on Coordinate Reference Systems - Guidelines</a>.</p></li>
+<li><p>Your GetCapabilities document must include the INSPIRE Extended Capabilities tag.</p></li>
+</ol>
+<p>There are two ways of achieving these conditions using ESRI software. The first one is using a standard ArcGIS map document and standard ArcGIS Server tools, where you’ll need to modify layer names to make them compliant, change service properties to include required coordinate systems and modify the get capabilities document to include the INSPIRE Extended Capabilities section. The second option is using the ArcGIS for INSPIRE extension, which provides tools and new services to ensure compliance with INSPIRE directives. If you want to go for the second option, there is an <a class="reference external" href="http://www.onegeology.org/technical_progress/esriGrantOffer.html">ESRI OneGeology Grant</a> for OneGeology members.</p>
+<section id="arcgis-server">
+<h4>ArcGIS Server<a class="headerlink" href="#arcgis-server" title="Permalink to this headline"></a></h4>
+<section id="inspire-layer-names">
+<h5>INSPIRE Layer Names<a class="headerlink" href="#inspire-layer-names" title="Permalink to this headline"></a></h5>
+<p>In order to make your service INSPIRE compliant, you will need to configure the name of your layers (e.g. GE.GeologicUnit); however, this clashes with OneGeology naming standards. In this situation, it is desirable to create a group layer. For example, you may want to create a layer called GE.GeologicUnit to group all of your layers that are spatial objects of type GeologicUnit. The layer name and title rules set out in the OneGeology profile relate to the grouped (or child) layers, whereas the INSPIRE name and title relate to the group (or parent) layer.</p>
+<p>If your INSPIRE service is only serving layers of one type, one way of applying group layering would be to use the root layer name and title (not service name and title) as the grouping layer. If, on the other hand, your INSPIRE service is serving layers of several types (e.g. GE.GeologicUnit and GE.GeologicFault), we believe the only option is for you to configure actual group layering.</p>
+<p>To <strong>add group layers to a new service</strong> simply <a class="reference external" href="http://desktop.arcgis.com/en/arcmap/latest/map/working-with-layers/working-with-group-layers.htm#GUID-058900C7-6A45-4260-83D8-9039C00D875C">add a group layer</a> to the map document that will create your service, rename it and place your layers inside. The WMS service published form this map document will keep the same group layer structure.</p>
+<figure class="align-default" id="id12">
+<img alt="Adding group layers to the service" src="../../_images/image051.jpg" />
+<figcaption>
+<p><span class="caption-text">Figure 4 - Adding group layers to the service</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>If you want <strong>add group layers to an existing service</strong>, open the map document that created the service, modify it as described above and publish it again as a WMS service; however, when publishing the service, make sure that you select the option “Overwrite an existing service”. This will save you having to delete the original service as well as having to type again all service properties.</p>
+<p>Note that ArcGIS Server will generate only the <em>&lt;Title&gt;</em> tag of group layers in the GetCapabilities document. The content of this tag will be the same that you wrote in the map document. In order to comply with INSPIRE layer naming regulations for group layers, you will need to manually add the <em>&lt;Name&gt;</em> tag, filling it in with the adequate group layer name, by editing the GetCapabilities document using an external capabilities file.</p>
+<p>Group layers created in ArcGIS Server will not have a style associated to them and the group layer itself will not display a map.</p>
+</section>
+<section id="inspire-coordinate-systems">
+<h5>INSPIRE Coordinate Systems<a class="headerlink" href="#inspire-coordinate-systems" title="Permalink to this headline"></a></h5>
+<p>ArcGIS Server always adds 2 coordinate systems: EPSG:4326 (or CRS:84 for version 1.3.0) and the coordinate system set on the map document creating the service. To add any additional coordinate systems go to your map service and edit it using either <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-manager.htm">ArcGIS Server Manager</a> or <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-arcgis-for-desktop.htm">ArcMap</a>.  On the <em>Service Editor</em> dialog go to <em>Capabilities &gt; WMS</em> and, in the <em>Additional spatial reference systems</em> text box, type any well-known EPSG ID in the format indicated below.</p>
+<figure class="align-default" id="id13">
+<img alt="Additional spatial reference systems option" src="../../_images/esriimage009.png" />
+<figcaption>
+<p><span class="caption-text">Figure 5 - Additional spatial reference systems option</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="inspire-extended-capabilities">
+<h5>INSPIRE extended capabilities<a class="headerlink" href="#inspire-extended-capabilities" title="Permalink to this headline"></a></h5>
+<p>The extended capabilites section is inserted into your external GetCapabilities section, between the Exception element block and the first Layer element.</p>
+<p>For example to add a scenario 1 INSPIRE extended capabilities section (where you have an external XML document or service that provides such an XML document containing metadata for your WMS service) you would insert a section like below:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;/Exception&gt;</span>
+<span class="nt">&lt;inspire_vs:ExtendedCapabilities</span> <span class="na">xmlns:inspire_vs=</span><span class="s">&quot;http://inspire.ec.europa.eu/schemas/inspire_vs/1.0&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;inspire_common:MetadataUrl</span> <span class="na">xsi:type=</span><span class="s">&quot;inspire_common:resourceLocatorType&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;inspire_common:URL&gt;</span>http://metadata.bgs.ac.uk/geonetwork/srv/en/csw?SERVICE=CSW
+        <span class="ni">&amp;amp;</span>REQUEST=GetRecordById<span class="ni">&amp;amp;</span>ID=7822e848-822d-45a5-8584-56d352fd2170<span class="ni">&amp;amp;</span>elementSetName=full<span class="ni">&amp;amp;</span>OutputSchema=csw:IsoRecord<span class="ni">&amp;amp;</span>
+        <span class="nt">&lt;/inspire_common:URL&gt;</span>
+        <span class="nt">&lt;inspire_common:MediaType&gt;</span>application/xml<span class="nt">&lt;/inspire_common:MediaType&gt;</span>
+    <span class="nt">&lt;/inspire_common:MetadataUrl&gt;</span>
+    <span class="nt">&lt;inspire_common:SupportedLanguages&gt;</span>
+        <span class="nt">&lt;inspire_common:DefaultLanguage&gt;</span>
+            <span class="nt">&lt;inspire_common:Language&gt;</span>eng<span class="nt">&lt;/inspire_common:Language&gt;</span>
+        <span class="nt">&lt;/inspire_common:DefaultLanguage&gt;</span>
+    <span class="nt">&lt;/inspire_common:SupportedLanguages&gt;</span>
+    <span class="nt">&lt;inspire_common:ResponseLanguage&gt;</span>
+        <span class="nt">&lt;inspire_common:Language&gt;</span>eng<span class="nt">&lt;/inspire_common:Language&gt;</span>
+    <span class="nt">&lt;/inspire_common:ResponseLanguage&gt;</span>
+<span class="nt">&lt;/inspire_vs:ExtendedCapabilities&gt;</span>
+<span class="nt">&lt;Layer&gt;</span>
+</pre></div>
+</div>
+<p>Alternatively, to add a scenario 2 INSPIRE extended capabilities section (where you have no external metadata document for your WMS service) you would insert a section like below:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;/Exception&gt;</span>
+<span class="nt">&lt;inspire_vs:ExtendedCapabilities</span> <span class="na">xmlns:inspire_vs=</span><span class="s">&quot;http://inspire.ec.europa.eu/schemas/inspire_vs/1.0&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;inspire_common:ResourceLocator&gt;</span>
+        <span class="nt">&lt;inspire_common:URL&gt;</span>http://ogc2.bgs.ac.uk/cgi-bin/BGS_OGE_Bedrock_and_Surface_Geology_in3/ows?<span class="nt">&lt;/inspire_common:URL&gt;</span>
+    <span class="nt">&lt;/inspire_common:ResourceLocator&gt;</span>
+    <span class="nt">&lt;inspire_common:ResourceType&gt;</span>service<span class="nt">&lt;/inspire_common:ResourceType&gt;</span>
+    <span class="nt">&lt;inspire_common:TemporalReference&gt;</span>
+        <span class="nt">&lt;inspire_common:DateOfLastRevision&gt;</span>2015-10-23<span class="nt">&lt;/inspire_common:DateOfLastRevision&gt;</span>
+    <span class="nt">&lt;/inspire_common:TemporalReference&gt;</span>
+    <span class="nt">&lt;inspire_common:Conformity&gt;</span>
+        <span class="nt">&lt;inspire_common:Specification&gt;</span>
+            <span class="nt">&lt;inspire_common:Title&gt;</span>-<span class="nt">&lt;/inspire_common:Title&gt;</span>
+            <span class="nt">&lt;inspire_common:DateOfLastRevision&gt;</span>2015-10-23<span class="nt">&lt;/inspire_common:DateOfLastRevision&gt;</span>
+        <span class="nt">&lt;/inspire_common:Specification&gt;</span>
+        <span class="nt">&lt;inspire_common:Degree&gt;</span>notEvaluated<span class="nt">&lt;/inspire_common:Degree&gt;</span>
+    <span class="nt">&lt;/inspire_common:Conformity&gt;</span>
+    <span class="nt">&lt;inspire_common:MetadataPointOfContact&gt;</span>
+        <span class="nt">&lt;inspire_common:OrganisationName&gt;</span>Mr Matthew Harrison<span class="nt">&lt;/inspire_common:OrganisationName&gt;</span>
+        <span class="nt">&lt;inspire_common:EmailAddress&gt;</span>enqiries@bgs.ac.uk<span class="nt">&lt;/inspire_common:EmailAddress&gt;</span>
+    <span class="nt">&lt;/inspire_common:MetadataPointOfContact&gt;</span>
+    <span class="nt">&lt;inspire_common:MetadataDate&gt;</span>2015-10-23<span class="nt">&lt;/inspire_common:MetadataDate&gt;</span>
+    <span class="nt">&lt;inspire_common:SpatialDataServiceType&gt;</span>view<span class="nt">&lt;/inspire_common:SpatialDataServiceType&gt;</span>
+    <span class="nt">&lt;inspire_common:MandatoryKeyword</span> <span class="na">xsi:type=</span><span class="s">&#39;inspire_common:classificationOfSpatialDataService&#39;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;inspire_common:KeywordValue&gt;</span>infoMapAccessService<span class="nt">&lt;/inspire_common:KeywordValue&gt;</span>
+    <span class="nt">&lt;/inspire_common:MandatoryKeyword&gt;</span>
+    <span class="nt">&lt;inspire_common:SupportedLanguages&gt;</span>
+        <span class="nt">&lt;inspire_common:DefaultLanguage&gt;</span>
+            <span class="nt">&lt;inspire_common:Language&gt;</span>eng<span class="nt">&lt;/inspire_common:Language&gt;</span>
+        <span class="nt">&lt;/inspire_common:DefaultLanguage&gt;</span>
+    <span class="nt">&lt;/inspire_common:SupportedLanguages&gt;</span>
+    <span class="nt">&lt;inspire_common:ResponseLanguage&gt;</span>
+        <span class="nt">&lt;inspire_common:Language&gt;</span>eng<span class="nt">&lt;/inspire_common:Language&gt;</span>
+    <span class="nt">&lt;/inspire_common:ResponseLanguage&gt;</span>
+<span class="nt">&lt;/inspire_vs:ExtendedCapabilities&gt;</span>
+<span class="nt">&lt;Layer&gt;</span>
+</pre></div>
+</div>
+<p>In addition (for both scenarios) you will need to <strong>reference the inspire_common schema and namespace</strong> in your root element, so it will become something like:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;WMS_Capabilities</span>
+    <span class="na">xmlns:inspire_common=</span><span class="s">&quot;http://inspire.ec.europa.eu/schemas/common/1.0&quot;</span>
+    <span class="na">xmlns=</span><span class="s">&quot;http://www.opengis.net/wms&quot;</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xmlns:esri_wms=</span><span class="s">&quot;http://www.esri.com/wms&quot;</span>
+    <span class="na">version=</span><span class="s">&quot;1.3.0&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd</span>
+<span class="s">    http://inspire.ec.europa.eu/schemas/inspire_vs/1.0 http://inspire.ec.europa.eu/schemas/inspire_vs/1.0/inspire_vs.xsd</span>
+<span class="s">    http://www.esri.com/wms http://../arcgis/services/.../MapServer/WmsServer?version=1.3.0%26service=WMS%26request=GetSchemaExtension&quot;</span><span class="nt">&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="inspire-extension">
+<h4>INSPIRE Extension<a class="headerlink" href="#inspire-extension" title="Permalink to this headline"></a></h4>
+<p>The ArcGIS for INSPIRE extension allows to create an INSPIRE compliant WMS through a new ESRI map service, specific to this extension, called INSPIRE View service. In our experience, creating a INSPIRE compliant WMS service using custom INSPIRE extension tools is more difficult than using standard ArcGIS tools, due to the complexity of the datasets that you have to use, the scarce amount of documentation and the limited ESRI support for the extension.</p>
+<section id="create-inspire-geodatabase">
+<h5>Create INSPIRE geodatabase<a class="headerlink" href="#create-inspire-geodatabase" title="Permalink to this headline"></a></h5>
+<p>The first step to use ArcGIS for INSPIRE is creating a geodatabase with one of the templates supplied by the extension.  To create a geodatabase for Geology follow the steps in <a class="reference external" href="http://enterprise.arcgis.com/en/inspire/10.5/get-started/pdf/InstallationGuide_ArcGISForINSPIRE_GDB_10_5_EN.pdf">this document</a> in sections 3.3.1 and 3.3.4.</p>
+</section>
+<section id="populate-inspire-geodatabase">
+<h5>Populate INSPIRE geodatabase<a class="headerlink" href="#populate-inspire-geodatabase" title="Permalink to this headline"></a></h5>
+<p>Fill in the geodatabase with your data. There are multiple feature classes and tables; fill in the ones that are relevant to you.</p>
+<p>Note that all feature classes will be grouped on a feature dataset called <em>GE</em>. You’ll need to add your features to the appropriate feature class so that they can be used by the INSPIRE extension. Feel free to add new fields to these feature classes if you want to show attributes not available by default on the template; however, refrain from deleting any existing field as you might break one of the multiple relationships set on the template.</p>
+</section>
+<section id="customise-layers-in-inspire-geodatabase">
+<h5>Customise layers in INSPIRE geodatabase<a class="headerlink" href="#customise-layers-in-inspire-geodatabase" title="Permalink to this headline"></a></h5>
+<p>You’ll do this by modifying the <em>LayerInfo</em> table. In this extension, each INSPIRE layer consists normally of four hidden sublayers.  We need to modify the <em>LayerInfo</em> table to make the relevant sublayers visible and to be able to change the name and title of the sublayers (<a class="reference external" href="http://enterprise.arcgis.com/en/inspire/10.5/get-started/pdf/CustomizationGuide_ArcGISForINSPIRE_LayerInfo_10_5_EN.pdf">see Customization Guide</a>). The INSPIRE layer will act as a group layer and will follow INSPIRE naming conventions. The sublayers will follow OneGeology naming conventions. In the following example, we are going to configure two sublayers to represent bedrock units symbolised by age and by lithology. These layers are going to be looking at the same feature class in the geodabase template, defined in the FC_NAME field as <em>geUnitS</em> (short for geology unit surface). Given that in this example we are dealing only with geologic features represented as polygons, the final <em>LayerInfo</em> table could look like this (table transposed for visibility reasons):</p>
+<table border=1 cellspacing=0 cellpadding=0 width=0 style='width:375.65pt;border-collapse:collapse;border:none'>
+ <tr style='height:15.0pt;color:white;'>
+  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;background: black;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt;color:white;'>
+  <p align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>FIELD NAME
+  </td>
+  <td width=116 style='vertical-align:center;width:99.2pt;border:solid windowtext 1.0pt;border-left: none;background:black;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt;color:white;'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ROW 1
+  </td>
+  <td width=123 style='width:99.25pt;border:solid windowtext 1.0pt;border-left: none;background:black;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt;color:white;'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ROW 2
+  </td>
+  <td width=136 style='width:4.0cm;border:solid windowtext 1.0pt;border-left: none;background:black;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt;color:white;'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ROW 3
+  </td>
+ </tr>
+ <tr style='height:15.0pt'>
+  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>OBJECTID
+  </td>
+  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>2
+  </td>
+  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>4
+  </td>
+  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>12
+  </td>
+ </tr>
+ <tr style='height:15.0pt'>
+  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ID
+  </td>
+  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>417
+  </td>
+  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>420
+  </td>
+  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>421
+  </td>
+ </tr>
+ <tr style='height:15.0pt'>
+  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>THEME
+  </td>
+  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology
+  </td>
+  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology
+  </td>
+  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology
+  </td>
+ </tr>
+ <tr style='height:15.0pt'>
+  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>FC_NAME
+  </td>
+  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-
+  </td>
+  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>geUnitS
+  </td>
+  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>geUnitS
+  </td>
+ </tr>
+ <tr style='height:15.0pt'>
+  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>STYPE
+  </td>
+  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-1
+  </td>
+  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-1
+  </td>
+  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-1
+  </td>
+ </tr>
+ <tr style='height:15.75pt'>
+  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.75pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>APP_SCHEMA
+  </td>
+  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.75pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology
+  </td>
+  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.75pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology
+  </td>
+  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.75pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology
+  </td>
+ </tr>
+ <tr style='height:15.0pt'>
+  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>IR_VERSION
+  </td>
+  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>0
+  </td>
+  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>0
+  </td>
+  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>
+  </td>
+ </tr>
+ <tr style='height:30.0pt'>
+  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>LAYER_NAME
+  </td>
+  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GE.GeologicUnit
+  </td>
+  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GBR_BGS_625k_BA
+  </td>
+  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:30.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GBR_BGS_625k_BLT
+  </td>
+ </tr>
+ <tr style='height:23.9pt'>
+  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:23.9pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>LAYER_TITLE
+  </td>
+  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:23.9pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geologic Units
+  </td>
+  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:23.9pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GBR BGS 1:625k Bedrock Age
+  </td>
+  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:23.9pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GBR BGS 1:625k Bedrock Lithology
+  </td>
+ </tr>
+ <tr style='height:21.8pt'>
+  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:21.8pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>SPATIAL_OBJECT_TYPE
+  </td>
+  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:21.8pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-
+  </td>
+  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:21.8pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>MappedFeature
+  </td>
+  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:21.8pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>MappedFeature
+  </td>
+ </tr>
+ <tr style='height:13.7pt'>
+  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:13.7pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>DEF_QUERY
+  </td>
+  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:13.7pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-
+  </td>
+  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:13.7pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-
+  </td>
+  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:13.7pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-
+  </td>
+ </tr>
+ <tr style='height:15.0pt'>
+  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>PARENT_ID
+  </td>
+  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-1
+  </td>
+  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>417
+  </td>
+  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>417
+  </td>
+ </tr>
+ <tr style='height:22.55pt'>
+  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:22.55pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>SPATIAL_OBJECT_
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>TYPE_PREFIX
+  </td>
+  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:22.55pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ge
+  </td>
+  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:22.55pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ge
+  </td>
+  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:22.55pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ge
+  </td>
+ </tr>
+ <tr style='height:27.8pt'>
+  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:27.8pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>LAYER_KEYWORDS
+  </td>
+  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:27.8pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology, Lithology, Age, Geologic unit
+  </td>
+  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:27.8pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology, Lithology, Age, Geologic unit
+  </td>
+  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:27.8pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology, Lithology, Age, Geologic unit
+  </td>
+ </tr>
+ <tr style='height:15.0pt'>
+  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>IS_HIDDEN
+  </td>
+  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>0
+  </td>
+  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>0
+  </td>
+  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>0
+  </td>
+ </tr>
+ <tr style='height:15.0pt'>
+  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>IS_VISIBLE
+  </td>
+  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>1
+  </td>
+  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>1
+  </td>
+  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>1
+  </td>
+ </tr>
+ <tr style='height:15.0pt'>
+  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>MIN_SCALE
+  </td>
+  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'></td>
+  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'></td>
+  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>
+  </td>
+ </tr>
+ <tr style='height:15.0pt'>
+  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>MAX_SCALE
+  </td>
+  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'></td>
+  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'></td>
+  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>
+  </td>
+ </tr>
+ <tr style='height:13.55pt'>
+  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:13.55pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GDBTEMPLATE_NAME
+  </td>
+  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:13.55pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GE
+  </td>
+  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:13.55pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GE
+  </td>
+  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:13.55pt'>
+  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GE
+  </td>
+ </tr>
+</table><p>Table 1 Custom <em>Layer Info</em> table</p>
+<ul class="simple">
+<li><p>Rows with ID = 417 and ID = 420 were kept; the remaining rows were deleted. In addition, a new row with ID = 421 was added. Note that you don’t need to delete any row, this was done purely to create a simpler example.</p></li>
+<li><p>As specified in the PARENT_ID field, row ID 417 is the group layer, whereas rows 420 and 421 are its sublayers.</p></li>
+<li><p>The group layer doesn’t point to any feature class. Both child layers point at the same feature class (geUnitS), since we want the same dataset with different symbology (this can be set once layers are loaded on the map document).</p></li>
+<li><p>Group layer name and title must conform to INSPIRE standards.  Child layer titles must conform to OneGeology standards (ideally layer names too, but the GetCapabilities document created with the ArcGIS for INSPIRE extension doesn’t honour the layer names defined on the <em>LayerInfo</em> table if more than one layer is pointing at the same feature class).</p></li>
+<li><p>Child layers must have a value of <em>0</em> in the IS_HIDDEN field so that they are visible on the INSPIRE VIEW service.</p></li>
+</ul>
+</section>
+<section id="add-inspire-layers-to-your-map-document">
+<h5>Add INSPIRE layers to your map document<a class="headerlink" href="#add-inspire-layers-to-your-map-document" title="Permalink to this headline"></a></h5>
+<p>Open a map document and add your layers to the map using the <em>Add INSPIRE Layer</em> button (if you can’t see this button, make sure that you have the <em>INSPIRE Tools</em> toolbar enabled).</p>
+<figure class="align-default" id="id14">
+<img alt="Add INSPIRE Tools to map document" src="../../_images/image052.jpg" />
+<figcaption>
+<p><span class="caption-text">Figure 6 - Add INSPIRE Tools to map document</span><a class="headerlink" href="#id14" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>This will open <em>INSPIRE Layer Wizard</em> where you can first select your INSPIRE database and second select the INSPIRE layers you wish to add. Note that this dialog will reflect changes done in the <em>LayerInfo</em> table therefore your custom layers should now be available. See <a class="reference external" href="http://server.arcgis.com/en/inspire/latest/inspire-services/create-inspire-view-service-map-document.htm">Create the INSPIRE View Service map document.</a></p>
+<figure class="align-default" id="id15">
+<img alt="INSPIRE Layer wizard" src="../../_images/image053.jpg" />
+<figcaption>
+<p><span class="caption-text">Figure 7 - INSPIRE Layer wizard</span><a class="headerlink" href="#id15" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Click <em>Create</em>, and your selected layers will be added to the map document. The <em>LayerInfo</em> table specifies the hierarchical structure of the layers in the service as well as their names and titles, so we don’t need to (and shouldn’t) modify the layer names in the map document.</p>
+<figure class="align-default" id="id16">
+<img alt="INSPIRE layers on map document" src="../../_images/image054.jpg" />
+<figcaption>
+<p><span class="caption-text">Figure 8 - INSPIRE layers on map document</span><a class="headerlink" href="#id16" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Note that, as well as the layers shown on the map, a few tables have also been added to the map document. These tables are required for the creation of the INSPIRE service therefore they shouldn’t be removed.</p>
+<figure class="align-default" id="id17">
+<img alt="Additional INSPIRE related tables added to map document" src="../../_images/image055.jpg" />
+<figcaption>
+<p><span class="caption-text">Figure 9 - Additional INSPIRE related tables added to map document</span><a class="headerlink" href="#id17" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Now you can proceed to style your layers using the appropriate symbology. The symbology set on the map document will be defined within the GetCapabilities document as a style named <em>default</em>. In addition, each layer will have another style called <em>inspire_common:DEFAULT</em>, which is meant to assign by default a common style to INSPIRE layers; however, in ArcGIS server version 10.5, this default visualization style only supports Annex I INSPIRE layers.</p>
+<figure class="align-default" id="id18">
+<img alt="INSPIRE layer styles" src="../../_images/image056.jpg" />
+<figcaption>
+<p><span class="caption-text">Figure 10 - Each INSPIRE layer will have 2 styles: <em>inspire_common:DEFAULT</em> and <em>default</em></span><a class="headerlink" href="#id18" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id19">
+<img alt="The symbology set in the map document will correspond to the &quot;default&quot; style" src="../../_images/image057.jpg" />
+<figcaption>
+<p><span class="caption-text">Figure 11 - The symbology set in the map document will correspond to the <em>default</em> style</span><a class="headerlink" href="#id19" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="publish-inspire-view-service">
+<h5>Publish INSPIRE View service<a class="headerlink" href="#publish-inspire-view-service" title="Permalink to this headline"></a></h5>
+<p>A INSPIRE View service is the ESRI equivalent of a INSPIRE compliant WMS. Publishing a INSPIRE View service is very similar to publishing a WMS, the only difference being that you need to select and configure one additional capability.</p>
+<ul class="simple">
+<li><p>Go to <em>File &gt; Share As &gt; Service…</em> to open the <em>Share as Service</em> dialog.</p></li>
+<li><p>Select <em>Publish a service</em> and click <em>Next &gt;</em>.</p></li>
+<li><p>On the <em>Publish a Service</em> dialog, choose/add a connection to your ArcGIS Server instance and write a name for your map service. The name you enter will be part of the WMS url, so you must ensure that meets the OneGeology profile naming conventions.</p></li>
+<li><p>Select whether to <em>Use existing folder</em> or <em>Create new folder</em>. The folder name will also appear as part of the WMS url. Click <em>Continue</em>.</p></li>
+<li><p>In the <em>Service Editor</em> dialog, go to <em>Capabilities</em>. You’ll notice that the ArcGIS for INSPIRE extension has added three new capabilities. Select <em>WMS</em> and <em>ArcGIS for INSPIRE View Service</em>. Note that in order for the INSPIRE View service to work, the WMS capability must be enabled.</p></li>
+</ul>
+<figure class="align-default" id="id20">
+<img alt="Capabilities option in Service Editor dialog" src="../../_images/image058.jpg" />
+<figcaption>
+<p><span class="caption-text">Figure 12 - <em>Capabilities</em> option in <em>Service Editor</em> dialog</span><a class="headerlink" href="#id20" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Now go to <em>Capabilities &gt; ArcGIS for INSPIRE View Service</em> to access the INSPIRE View Service properties</p></li>
+</ul>
+<figure class="align-default" id="id21">
+<img alt="ArcGIS for INSPIRE View Service properties in Service Editor dialog" src="../../_images/image059.jpg" />
+<figcaption>
+<p><span class="caption-text">Figure 13 - <em>ArcGIS for INSPIRE View Service</em> properties in <em>Service Editor</em> dialog</span><a class="headerlink" href="#id21" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>The properties of the above dialog can be left as they are, unless you want to modify the supported languages. Also, make sure that if you checked the <em>Use layer names from the map document</em> option in the WMS capabilities, you also check the <em>WMS uses layernames from map document</em> option in the ArcGIS for INSPIRE View Service capabilities. This won’t affect your INSPIRE View Service, only the WMS service that is being created in parallel.</p></li>
+<li><p>Click <em>Publish</em> on the top-right corner of the <em>Service Editor</em> dialog to create your service. We’ll deal with Advance Properties after the service has been published because the properties for INSPIRE layers will be available then.</p></li>
+</ul>
+<p>For more information go to <a class="reference external" href="http://server.arcgis.com/en/inspire/latest/inspire-services/create-the-inspire-view-service.htm">Create an INSPIRE View Service</a>.</p>
+</section>
+<section id="configure-inspire-view-service">
+<h5>Configure INSPIRE View service<a class="headerlink" href="#configure-inspire-view-service" title="Permalink to this headline"></a></h5>
+<p>Once the service has been published, we are going to use ArcCatalog to configure INSPIRE View service properties which will be reflected on the service’s GetCapabilities document.</p>
+<ul class="simple">
+<li><p>On ArcCatalog, go to the <em>GIS Servers</em> folder, select the appropriate instance of ArcGIS Server and navigate to your service.</p></li>
+<li><p>Right-click on the service and go to <em>Service Properties…</em></p></li>
+</ul>
+<figure class="align-default" id="id22">
+<img alt="Accessing Service Properties" src="../../_images/image060.jpg" />
+<figcaption>
+<p><span class="caption-text">Figure 14 - Accessing <em>Service Properties</em></span><a class="headerlink" href="#id22" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>On the Service Editor go to <em>Capablities &gt; ArcGIS for INSPIRE View Service</em> (see figure 13) and click <em>Advanced Properties</em> to open the <em>Editing the InspireView properties</em> dialog.</p></li>
+</ul>
+<p>The <em>Editing the InspireView properties</em> dialog allows you to set the options below. Fields in yellow are compulsory and, depending on the options you choose, there might be disabled fields in grey. We recommend you fill in as many fields as you can.</p>
+<ul class="simple">
+<li><p>Select INSPIRE external capabilities scenario</p></li>
+</ul>
+<figure class="align-default" id="id23">
+<img alt="Inspire View properties: extended capabilities type" src="../../_images/image061.jpg" />
+<figcaption>
+<p><span class="caption-text">Figure 15 - Inspire View properties: extended capabilities type</span><a class="headerlink" href="#id23" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Service properties. Do not modify <em>Online resource</em> on this dialog, as it will change the value of the property <em>xlink:href</em> in all <em>OnlineResource</em> tags in the get capabilities document. You’ll need create a custom GetCapabilities document if you want to change the tag <em>/WMS_Capabilities/Service/OnlineResource</em> to provide a link to the data owner organization web site, or web site with information about the data owner organization, as requested in the OneGeology profile.</p></li>
+</ul>
+<figure class="align-default" id="id24">
+<img alt="Inspire View properties: service information" src="../../_images/image062.jpg" />
+<figcaption>
+<p><span class="caption-text">Figure 16 - Inspire View properties: service information</span><a class="headerlink" href="#id24" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Contact information</p></li>
+</ul>
+<figure class="align-default" id="id25">
+<img alt="Inspire View properties: contact information" src="../../_images/image063.jpg" />
+<figcaption>
+<p><span class="caption-text">Figure 17 - Inspire View properties: contact information</span><a class="headerlink" href="#id25" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>GEMET Keywords</p></li>
+</ul>
+<figure class="align-default" id="id26">
+<img alt="Inspire View properties: GEMET Keywords" src="../../_images/image064.jpg" />
+<figcaption>
+<p><span class="caption-text">Figure 18 - Inspire View properties: GEMET Keywords</span><a class="headerlink" href="#id26" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Layer properties. Note the highlighted sublayer names. One of them doesn’t honour the name defined in the <em>LayerInfo</em> table, taking the name of the other sublayer and adding “1” at the end of it. This seems to be a bug within the INSPIRE extension. Since OneGeology naming conventions for layer names are only a recommendation, the service will still comply with the OneGeology profile.</p></li>
+</ul>
+<figure class="align-default" id="id27">
+<img alt="Inspire View properties: Layers informatio" src="../../_images/image065.jpg" />
+<figcaption>
+<p><span class="caption-text">Figure 19 - Inspire View properties: Layers information</span><a class="headerlink" href="#id27" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="custom-inspire-view-service-getcapabilities-document">
+<h5>Custom INSPIRE View service GetCapabilities document<a class="headerlink" href="#custom-inspire-view-service-getcapabilities-document" title="Permalink to this headline"></a></h5>
+<p>If you need to modify any option that’s not on the <em>Editing the InspireView properties</em> dialog, like the Online Resource tag mentioned above, you need to go to the service cached capabilities folder (<em>C:\arcgisserver\directories\arcgisforinspire\[folder_name]\[map service title]_MapServer\[folder_name]_ [map service title]_MapServer_inspireview</em>) and create a file called <em>GetCapabilities&lt;version&gt;_&lt;3 letter language code&gt;.xml</em>. Your service will now use the custom GetCapabilities file instead of the dynamically created one (e.g. <em>GetCapabilities130_ENG.xml</em>), also stored in the same location. When creating your custom file it’s recommended to start from a copy of the dynamically created file.</p>
+</section>
+<section id="use-inspire-view-service">
+<h5>Use INSPIRE View service<a class="headerlink" href="#use-inspire-view-service" title="Permalink to this headline"></a></h5>
+<p>Your service will be accessible from the following endpoint:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="p">[</span><span class="n">hostname</span><span class="p">]</span><span class="o">/</span><span class="n">ArcGIS</span><span class="o">/</span><span class="n">services</span><span class="o">/</span><span class="p">[</span><span class="n">folder_name</span><span class="p">]</span><span class="o">/</span><span class="p">[</span><span class="nb">map</span> <span class="n">service</span> <span class="n">title</span><span class="p">]</span><span class="o">/</span><span class="n">exts</span><span class="o">/</span><span class="n">InspireView</span><span class="o">/</span><span class="n">service</span>
+</pre></div>
+</div>
+<p>For more information see <a class="reference external" href="http://server.arcgis.com/en/inspire/latest/inspire-services/use-the-inspire-view-service.htm">Use an INSPIRE View service</a>.</p>
+</section>
+</section>
+</section>
+<section id="arcgis-server-issues">
+<h3>ArcGIS server issues<a class="headerlink" href="#arcgis-server-issues" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>When using the SLD parameter to get an external SLD file, ArcGIS 10.0 expects the layer name and styles parameter to be to be sent as part of a GetMap request, even though this is not required by the WMS+SLD specification. A bug has been raised with ESRI on this issue (<a class="reference external" href="http://support.esri.com/en/bugs/nimbus/TklNMDk1NTY4">NIM095568</a>) back in version 10.0, but it’s still present.</p></li>
+</ul>
+</section>
+</section>
+<section id="simple-feature-wfs">
+<h2>Simple Feature WFS<a class="headerlink" href="#simple-feature-wfs" title="Permalink to this headline"></a></h2>
+<p>Creating a simple feature WFS requires almost the same steps as creating a WMS. The only difference being that, when publishing the service, you need to select the WFS capability.</p>
+<figure class="align-default" id="id28">
+<img alt="Enabling WFS capabilities in Service Editor dialog" src="../../_images/image066.jpg" />
+<figcaption>
+<p><span class="caption-text">Figure 20 - Enabling WFS capabilities in <em>Service Editor</em> dialog</span><a class="headerlink" href="#id28" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>After activating WFS, you’ll have access to the properties of this capability. Some of these properties will coincide with WMS properties, but there will also be WFS specific properties, such us namespace, prefix or maximum number of features returned.</p>
+<figure class="align-default" id="id29">
+<img alt="WFS service properties" src="../../_images/image067.jpg" />
+<figcaption>
+<p><span class="caption-text">Figure 21 - WFS service properties</span><a class="headerlink" href="#id29" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>For more information on how to create a simple feature WFS service and how to edit its GetCapabilities document, go to the WMS section of this cookbook or to ESRI’s documentation about <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/wfs-services.htm">WFS services</a>.</p>
+</section>
+<section id="wcs">
+<h2>WCS<a class="headerlink" href="#wcs" title="Permalink to this headline"></a></h2>
+<section id="create-a-map-document">
+<h3>Create a map document<a class="headerlink" href="#create-a-map-document" title="Permalink to this headline"></a></h3>
+<p>In ArcGIS, a WCS can be created mainly through 3 routes: a map document with raster data, a raster dataset or a mosaic dataset. Publishing a mosaic dataset requires ArcGIS Image Server, so unless you have this extension enabled, the only way to publish multiple rasters at once on a single WCS will be through a map document; therefore we’re are going to focus on this route. For more information see <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/wcs-services.htm">WCS services</a>.</p>
+<p>Start by creating a map document and adding your rasters to it. Note that, if you have feature data in your map document, it’ll be excluded from your WCS.</p>
+<figure class="align-default" id="id30">
+<img alt="Adding WCS data to your map document" src="../../_images/image068.jpg" />
+<figcaption>
+<p><span class="caption-text">Figure 22 - Adding WCS data to your map document</span><a class="headerlink" href="#id30" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="publish-the-wcs-service">
+<h3>Publish the WCS service<a class="headerlink" href="#publish-the-wcs-service" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Go to <em>File &gt; Share As &gt; Service… *to open the *Share as Service</em> dialog.</p></li>
+<li><p>Select <em>Publish a service</em> and click <em>Next &gt;</em>.</p></li>
+<li><p>On the <em>Publish a Service</em> dialog, choose/add a connection to your ArcGIS Server instance and write a name for your map service. The name you enter will be part of the WCS url. Click <em>Next &gt;.</em></p></li>
+<li><p>Select whether to <em>Use existing folder</em> or <em>Create new folder</em>. The folder name will also appear as part of the WCS url. Click <em>Continue</em>.</p></li>
+<li><p>In the <em>Service Editor</em> dialog, go to <em>Capabilities</em> and select <em>WCS</em>.</p></li>
+<li><p>Now go to <em>Capabilities &gt; WCS</em> to access the WCS properties</p></li>
+</ul>
+<figure class="align-default" id="id31">
+<img alt="WCS service properties" src="../../_images/image069.jpg" />
+<figcaption>
+<p><span class="caption-text">Figure 23 - WCS service properties</span><a class="headerlink" href="#id31" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Fill in all relevant service-level and contact properties.</p></li>
+<li><p>Check <em>Use layer names from the map document</em> so that layer names/identifiers use the layer names given in the map document rather than numbers.</p></li>
+<li><p>Click <em>Publish</em> on the top-right corner of the <em>Service Editor</em> dialog to create your service.</p></li>
+</ul>
+<p>Your new service will have a URL like below, with the folder name part being optional:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="p">[</span><span class="n">hostname</span><span class="p">]</span><span class="o">/</span><span class="n">ArcGIS</span><span class="o">/</span><span class="n">services</span><span class="o">/</span><span class="p">[</span><span class="n">folder_name</span><span class="p">]</span><span class="o">/</span><span class="p">[</span><span class="nb">map</span> <span class="n">service</span> <span class="n">title</span><span class="p">]</span><span class="o">/</span><span class="n">MapServer</span><span class="o">/</span><span class="n">WCSServer</span>
+</pre></div>
+</div>
+</section>
+<section id="edit-the-getcapabilities-document">
+<h3>Edit the GetCapabilities document<a class="headerlink" href="#edit-the-getcapabilities-document" title="Permalink to this headline"></a></h3>
+<p>ArcGIS server doesn’t create any static GetCapabilities xml documents, but does allow you to use external files. You will need to use such external files if you want to add any supported CRS, add keywords and abstracts for coverages or modify coverage titles. Note that, independently of the supported CRSs added, ESRI WCSs will always support the over 6000 projections that come with the ArcGIS projection engine.</p>
+<p>The quickest way to create your custom GetCapabilities document is to use the response documents from your initial service. You will need to have a file for all the WCS versions that you want your service to support.</p>
+<p>Your WCS version 1.1.0 GetCapabilities document is generated using a request like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>http://[hostname]/argis/services/[folder name]/[map service title]/MapServer/WCSServer?service=WCS&amp;request=GetCapabilities&amp;version=1.1.0&amp;
+</pre></div>
+</div>
+<p><strong>Save this as [short service name]110.xml</strong></p>
+<p>Your WCS version 2.0.1 GetCapabilities document is generated using a request like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>http://[hostname]/argis/services/[folder name]/[map service title]/MapServer/WCSServer?service=WCS&amp;request=GetCapabilities&amp;version=2.0.1&amp;
+</pre></div>
+</div>
+<p><strong>Save this as [short service name]201.xml</strong></p>
+<p>It doesn’t really matter what name you give these files, as long as you use the same name prefix for all files that belong to the same service.</p>
+<p>You need to put these files on the server (or at a location available to your server), and make them browsable. These files only need to be browsable internally by the ArcGIS server.</p>
+<p>Now go back to your map service and edit it using either <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-manager.htm">ArcGIS Server Manager</a> or <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-arcgis-for-desktop.htm">ArcMap</a>.</p>
+<p>Go to <em>Capabilities &gt; WCS</em>, then select the “Use External capabilities files” option and in the ‘Specify the location and prefix’ dialog add the web address to the folder containing the capabilities response documents plus your [short service name] prefix.</p>
+<figure class="align-default" id="id32">
+<img alt="WCS service properties: external capabilities" src="../../_images/image070.jpg" />
+<figcaption>
+<p><span class="caption-text">Figure 24 - WCS service properties: external capabilities</span><a class="headerlink" href="#id32" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>For example, for a service called BGS_EMODnet_Bathymetry, we may save our initial GetCapabilities response documents using a prefix “EMODnet-“, giving us a file called EMODnet-201.xml for our version 2.0.1 GetCapabilities response document, EMODnet-110.xml for our version 1.1.0 GetCapabilities response document and so on. We might then save these to a location on our web server such as <em>C:\Inetpub\wwwroot\GetCapabilitiesFiles\</em> which would be browseable locally as <em>http://localhost/GetCapabilitiesFiles/</em>.  When we select the “Use External capabilities files” option, we then provide the web address and <strong>prefix</strong>
+as <em>http://localhost/GetCapabilitiesFiles/EMODnet-</em></p>
+<p>Having created your files, you may then edit them as required. We would recommend you make a second copy of the files in case you make an error whilst editing.</p>
+<p>We have found that, if you make a GetCapabilities request using external capabilities files, it always defaults to version 1.1.0, even if you specify a different version as a url parameter. For instance, <em>http://[my_server]s:6080/arcgis/services/[folder_name]/BGS_EMODnet_bathymetry/MapServer/WCSServer?request=GetCapabilities&amp;service=WCS&amp;version=2.0.1</em> will return the GetCapabilities document for version 1.1.0 (if available, otherwise you will get an error), even though we’ve created the version 2.0.1 of the document. The only exception is version 1.0.0, which does return the correct version of the GetCapabilities document if specified in the url.</p>
+<p>For more information, see <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/using-external-capabilities-files-with-wcs-services.htm">Use external capabilities files with WCS Services</a>.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mapserver.html" class="btn btn-neutral float-left" title="Using MapServer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="apache.html" class="btn btn-neutral float-right" title="Using Apache HTTP server as a reverse proxy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019, OneGeology.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

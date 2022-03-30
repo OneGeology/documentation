@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Using GeoServer &mdash; OneGeology Documentation 1.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/OneGeology_favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Using MapServer" href="mapserver.html" />
+    <link rel="prev" title="Cookbook example data" href="example_data.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> OneGeology Documentation
+            <img src="../../_static/Onegeology_logo_large.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../providingdata.html">Providing Data / Services</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../service_types.html">Service Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_formats.html">Data formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_content.html">Data content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_preparation.html">Data preparation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_preparation.html#scanning-a-paper-map">Scanning a paper map</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#scanning">Scanning</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#step-1">Step 1</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#step-2a">Step 2A</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#step-2b">Step 2B</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#step-2c">Step 2C</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#step-3-stitching">Step 3 ~ Stitching</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#georeferencing-a-scanned-map">Georeferencing a scanned map</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#image-formats-and-transparency">Image formats and transparency</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#the-legend-for-the-scanned-map">The legend for the scanned map</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_preparation.html#lite-schemas">Lite Schemas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#geosciml-lite">GeoSciML-Lite</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#contactview-features">ContactView features</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#sheardisplacementstructureview-features">ShearDisplacementStructureView features</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologicunitview-features">GeologicUnitView features</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#boreholeview-features">BoreholeView features</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#earthresourceml-lite">EarthResourceML-Lite</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#mineraloccurrenceview-features">MineralOccurrenceView features</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#commodityresourceview-features">CommodityResourceView features</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_preparation.html#complex-feature-data">Complex Feature Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#mapped-feature-and-geologic-feature">Mapped Feature and Geologic Feature</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#mapped-feature-mapping-frame">Mapped Feature - mapping frame</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#mapped-feature-geometry-shape">Mapped Feature - geometry (shape)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-feature-inspireid">Geologic Feature - inspireId</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-feature-name">Geologic Feature - name</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#geologic-age">Geologic Age</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-event-name">Geologic Event - name</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-event-youngernamedage-and-oldernamedage">Geologic Event - youngerNamedAge and olderNamedAge</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-event-eventprocess">Geologic Event - eventProcess</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-event-eventenvironment">Geologic Event - eventEnvironment</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#geologic-unit-and-earth-material">Geologic Unit and Earth Material</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-unit-geologic-unit-type">Geologic Unit - geologic unit type</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-unit-composition">Geologic Unit - composition</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#composition-part-role">Composition Part - role</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#composition-part-proportion">Composition Part - proportion</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#composition-part-material">Composition Part - material</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#rock-material-lithology">Rock Material -lithology</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#geologic-structure">Geologic Structure</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#shear-displacement-structure-faulttype">Shear Displacement Structure - faultType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#fold-profiletype">Fold - profileType</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#geomorphologic-feature">Geomorphologic Feature</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#natural-geomorphologic-feature-naturalgeomorphologicfeaturetype">Natural Geomorphologic Feature - NaturalGeomorphologicFeatureType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#natural-geomorphologic-feature-activity">Natural Geomorphologic Feature - activity</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#anthropogenic-geomorphologic-feature-anthropogenicgeomorphologicfeaturetype">Anthropogenic Geomorphologic Feature - AnthropogenicGeomorphologicFeatureType</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#thematic-class">Thematic Class</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-feature-classifier">Geologic Feature - classifier</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#borehole">Borehole</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#borehole-inspireid">Borehole - inspireId</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#borehole-sampledfeature">Borehole - sampledFeature</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#borehole-downholegeometry">Borehole - downholeGeometry</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#borehole-location-and-elevation">Borehole - location and elevation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#borehole-purpose">Borehole - purpose</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#borehole-boreholelength">Borehole - boreholeLength</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#borehole-interval-mappingframe">Borehole Interval - mappingFrame</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#boreholeinterval-geometry-shape">BoreholeInterval - geometry (shape)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#boreholeinterval-specification">BoreholeInterval - specification</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#boreholeinterval-mappedintervalbegin-mappedintervalend">BoreholeInterval - mappedIntervalBegin &amp; mappedIntervalEnd</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../data_preparation.html#geologic-collection">Geologic Collection</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-collection-inspireid">Geologic Collection - inspireId</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologiccollection-name">GeologicCollection - name</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-collection-collectiontype">Geologic Collection - collectionType</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-collection-member">Geologic Collection - member</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#md-metadata-contact">MD_Metadata - contact</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#md-metadata-datestamp">MD_Metadata - dateStamp</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-collection-reference">Geologic Collection - reference</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../data_preparation.html#documentcitation-name">DocumentCitation - name</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../data_preparation.html#documentcitation-shortname">DocumentCitation - shortName</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../data_preparation.html#document-citation-date">Document Citation - date</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../data_preparation.html#documentcitation-link">DocumentCitation - link</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#geologic-collection-beginlifespanversion-endlifespanversion">Geologic Collection - beginLifespanVersion &amp; endLifespanVersion</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#md-dataidentification-abstract">MD_DataIdentification - abstract</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#md-dataidentification-language">MD_DataIdentification - language</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../data_preparation.html#md-dataidentification-topiccategory">MD_DataIdentification - topicCategory</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../onegeology_profile.html">OneGeology Profile</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../onegeology_profile.html#ogc-service-level-metadata">OGC service level metadata</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#service-title">Service title</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#service-abstract">Service abstract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#fees">Fees</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#access-constraints">Access constraints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#keywords">Keywords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#contact-information">Contact information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#data-provider">Data provider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#online-resource">Online resource</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../onegeology_profile.html#layer-coverage-feature-metadata">Layer / Coverage / Feature metadata</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#wms-layer-and-wcs-coverage-naming">WMS layer and WCS coverage naming</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#geographic-extent">Geographic extent</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#data-owner">Data owner</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#language">Language</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#scale">Scale</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#theme">Theme</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#layer-title-examples">Layer title examples</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#layer-name-examples">Layer name examples</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#inspire-layer-naming-considerations">INSPIRE layer naming considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#summary-of-layer-coverage-feature-metadata">Summary of layer/coverage/feature metadata</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#machine-readable-name">Machine readable name</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#human-readable-name">Human readable name</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#abstract">Abstract</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#service-provision-onegeology-profile-layer-keywords">Keywords</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#wms-specific-metadata">WMS Specific Metadata</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#extent">Extent</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#spatial-coordinate-reference-system">Spatial/Coordinate reference system</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#boundingbox">BoundingBox</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#dataurl-optional">DataURL (optional)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#metadataurl-optional">MetadataURL (optional)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#legend-url">Legend url</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#layer-styling-information">Layer styling information</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../onegeology_profile.html#wms-getfeatureinfo-response">WMS GetFeatureInfo response</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../onegeology_profile.html#core-tc211-iso-19115-metadata">Core TC211/ISO:19115 Metadata</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../server_setup.html">Setting up a Server</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="example_data.html">Cookbook example data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="example_data.html#geopackage">GeoPackage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="example_data.html#postgis-data">PostGIS data</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="example_data.html#installing-postgis">Installing PostGIS</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="example_data.html#image-with-world-file">Image with world file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="example_data.html#shapefile">Shapefile</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="example_data.html#recommended-esri-shapefile-definitions-for-geosciml-lite">Recommended ESRI shapefile definitions for GeoSciML-Lite</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="example_data.html#geotiff">GeoTIFF</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Using GeoServer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">Introduction</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#pre-requisites-system-requirements">Pre-requisites / System Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#software-installation">Software Installation</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#assumptions">Assumptions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#basic-installation">Basic Installation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#app-schema-plugin-installation">App-schema Plugin Installation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#inspire-plugin-installation">INSPIRE Plugin Installation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#database">Database</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#common-setup">Common Setup</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#logging-in">Logging in</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#editing-contact-information-metadata">Editing contact information metadata</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#workspaces">Workspaces</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#example-data">Example Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#simple-wms">Simple WMS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#inspire-extended-capabilities">INSPIRE Extended Capabilities</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#configuring-a-data-store">Configuring a data store</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#adding-layers-to-a-workspace">Adding layers to a workspace</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#the-data-tab-of-the-edit-layer-page">The Data tab of the Edit Layer page</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#the-publishing-tab-of-the-edit-layer-page">The Publishing tab of the Edit Layer page</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#creating-group-layers">Creating group layers</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#sld-enabled-wms">SLD enabled WMS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#simple-feature-wfs">Simple Feature WFS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#using-application-schemas-extension">Using application schemas extension</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#create-mapping-file">Create mapping file</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#edit-datastore-xml-file">Edit datastore.xml file</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#complex-feature-wfs">Complex Feature WFS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#obtaining-example-configuration">Obtaining example configuration</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#complex-feature-test-requests">Complex Feature Test requests</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#id14">INSPIRE Extended Capabilities</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#inspire-pre-defined-dataset-download">INSPIRE Pre-defined Dataset Download</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#app-schema-properties">app-schema.properties</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#data-directory">Data directory</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#workspace-layout">Workspace layout</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#datastore-xml">datastore.xml</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#mapping-files">Mapping files</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#namespaces">Namespaces</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#source-data-store">Source data store</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#target-types">Target types</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mappings">Mappings</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#gml-id-mapping">gml:id mapping</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#inspireid-mapping">inspireId mapping</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#ordinary-mapping">Ordinary mapping</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#client-properties">Client properties</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#feature-chaining">Feature chaining</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#polymorphism">Polymorphism</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#inspire-geology-theme-schema">INSPIRE Geology Theme Schema</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#wcs">WCS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#exemplar-data-used-in-this-cookbook">Exemplar data used in this cookbook</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#metadata-to-be-used-in-configuring-your-service-and-coverages-layers">Metadata to be used in configuring your service and coverages (layers)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id22">Stores</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id23">Layers</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#service-level-metadata">Service level metadata</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id24">INSPIRE Extended Capabilities</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#geoserver-troubleshooting">GeoServer troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mapserver.html">Using MapServer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mapserver.html#software-installation">Software Installation</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#installing-ms4w">Installing MS4W</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#configuring-the-exemplar-services">Configuring the exemplar services</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#configuring-your-own-services-using-the-exemplars-as-examples">Configuring your own services using the exemplars as examples</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#installing-and-configuring-apache-http-web-server">Installing and configuring Apache HTTP web server</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#bit-apache-http-server">64-bit Apache HTTP server</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#installing-gisinternals-packages-for-windows">Installing GISInternals packages for Windows</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#data">Data</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#mapserver-cgi-bin">MapServer cgi-bin</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#installing-mapserver-on-linux-using-ppas">Installing MapServer on Linux using PPAs</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#configuring-mapserver-exemplar-services-on-a-lamp-server">Configuring MapServer exemplar services on a LAMP server</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#alternative-mapserver-configurations">Alternative MapServer configurations</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#mapserver-and-iis">MapServer and IIS</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#compiling-mapserver-on-linux">Compiling MapServer on Linux</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="mapserver.html#general-configuration">General configuration</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#adding-alternate-character-set-support">Adding alternate character set support</a></li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#creating-your-own-symbology">Creating your own symbology</a></li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#example-include-files">Example include files</a></li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#debugging-common-errors">Debugging common errors</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#symbol-definition-error">Symbol definition error</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#unknown-identifier">Unknown identifier</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#missing-magic-string">Missing magic string</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#connecting-to-a-database">Connecting to a database</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="mapserver.html#wms">WMS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#raster-image-data-exemplar-layer-configuration">Raster image data exemplar (LAYER configuration)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#vector-data-exemplar-layer-configuration">Vector data exemplar (LAYER configuration)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#configuring-html-query-templates">Configuring HTML query templates</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#debugging-your-requests">Debugging your requests</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#handling-fields-for-which-you-have-no-data">Handling fields for which you have no data</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mapserver.html#using-javascript">Using JavaScript</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="mapserver.html#configuring-group-layering">Configuring group layering</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="mapserver.html#simple-feature-wfs">Simple feature WFS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mapserver.html#wcs">WCS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mapserver.html#inspire-metadata">INSPIRE metadata</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="esri.html">Using ArcGIS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="esri.html#wms">WMS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="esri.html#creating-the-service">Creating the service</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="esri.html#prepare-the-map-document">Prepare the map document</a></li>
+<li class="toctree-l6"><a class="reference internal" href="esri.html#publishing-your-wms">Publishing your WMS</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="esri.html#edit-the-getcapabilities-documents">Edit the GetCapabilities documents</a></li>
+<li class="toctree-l5"><a class="reference internal" href="esri.html#inspire">INSPIRE</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="esri.html#arcgis-server">ArcGIS Server</a></li>
+<li class="toctree-l6"><a class="reference internal" href="esri.html#inspire-extension">INSPIRE Extension</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="esri.html#arcgis-server-issues">ArcGIS server issues</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="esri.html#simple-feature-wfs">Simple Feature WFS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esri.html#wcs">WCS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="esri.html#create-a-map-document">Create a map document</a></li>
+<li class="toctree-l5"><a class="reference internal" href="esri.html#publish-the-wcs-service">Publish the WCS service</a></li>
+<li class="toctree-l5"><a class="reference internal" href="esri.html#edit-the-getcapabilities-document">Edit the GetCapabilities document</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="apache.html">Using Apache HTTP server as a reverse proxy</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../using.html">Using OneGeology Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../using/portal.html">Using the OneGeology Portal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../using/portal.html#viewing-data-registered-in-the-onegeology-portal">Viewing data registered in the OneGeology Portal</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../using/portal.html#go-to-function">Go To Function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/portal.html#viewing-layers-in-different-projections">Viewing layers in different projections</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/portal.html#reviewing-external-map-data">Reviewing external map data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/portal.html#exporting-to-keyhole-markup-language-kml">Exporting to Keyhole Markup Language (KML)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/portal.html#creating-and-using-web-map-context-wmc-documents">Creating and using Web Map Context (WMC) documents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../using/portal.html#saving-your-context-file">Saving your context file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/portal.html#opening-a-web-map-context-file-in-the-onegeology-portal">Opening a Web Map Context file in the OneGeology Portal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/portal.html#opening-a-wmc-file-in-other-clients">Opening a WMC file in other clients</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/portal.html#known-issues">Known issues</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/portal.html#analysis-tools">Analysis tools</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../using/portal.html#portrayal-services">Portrayal Services</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../using/portal.html#geosciml">GeoSciML</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../using/portal.html#earthresourceml-lite">EarthResourceML-Lite</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/portal.html#statistics">Statistics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../using/qgis.html">Using QGIS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../using/qgis.html#using-qgis-to-view-wms">Using QGIS to view WMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/qgis.html#using-qgis-to-access-simple-feature-wfs">Using QGIS to access simple feature WFS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/qgis.html#using-qgis-to-view-wcs">Using QGIS to view WCS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../using/esri.html">Using ESRI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../using/esri.html#using-arccatalog">Using ArcCatalog</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../using/esri.html#wms-service-connection">WMS Service Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/esri.html#wfs-service-connection">WFS Service Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/esri.html#wcs-service-connection">WCS Service Connection</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/esri.html#using-arcmap">Using ArcMap</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../using/esri.html#wms-layers">WMS Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/esri.html#wfs-layers">WFS Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/esri.html#wcs-layers">WCS Layers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/esri.html#using-arcpro">Using ArcPRO</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../using/udig.html">Using uDig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../using/gaia.html">Using Gaia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../using/world_wind.html">Using NASA World Wind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../using/dapple.html">Using Dapple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../using/google_earth.html">Using Google Earth</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../using/google_earth.html#google-earth-issues">Google Earth Issues</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../using/google_earth.html#problems-displaying-the-map-layer">Problems displaying the map layer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../using/google_earth.html#problems-displaying-a-map-layer-that-spans-the-globe">Problems displaying a map layer that spans the globe</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../using/mapinfo.html">Using MapInfo Professional</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../using/mapinfo.html#to-add-a-wms-service-to-the-list-of-available-wms-services">To add a WMS service to the list of available WMS services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/mapinfo.html#to-view-wms-service-layers">To view WMS service layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../using/mapinfo.html#to-query-wms-service-layer">To query WMS service layer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">OneGeology Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../providingdata.html">Providing Data / Services</a> &raquo;</li>
+          <li><a href="../server_setup.html">Setting up a Server</a> &raquo;</li>
+      <li>Using GeoServer</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/providingdata/server_setup/geoserver.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="using-geoserver">
+<h1>Using GeoServer<a class="headerlink" href="#using-geoserver" title="Permalink to this headline"></a></h1>
+<p>GeoServer has extensive <a class="reference external" href="http://docs.geoserver.org/stable/en/user/index.html">documentation</a> which you should refer to in addition to this cookbook. References will be made to relevant parts rather than repeating too much of what is already there. There is also the <a class="reference external" href="http://geoserver.org/comm/">geoserver-users mailing list</a>.</p>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
+<p>This section describes how to set up the different kinds of OneGeology compliant service described in <a class="reference internal" href="../service_types.html#service-provision-service-types"><span class="std std-ref">Service Types</span></a> using free and open source GeoServer software. GeoServer can be used to provide <em>all</em> the types of service that OneGeology service providers might need. There are also INSPIRE specific instructions on making your services INSPIRE compliant where relevant. This is entirely optional for OneGeology so you can ignore the INSPIRE sections if this is not of interest to you.</p>
+<p>If you are going to use a PostGIS database as a data source you will also need to read <a class="reference internal" href="example_data.html#service-provision-data-preparation-postgis"><span class="std std-ref">Installing PostGIS</span></a>.</p>
+<p>Accompanying this guidance are some example data sets and GeoServer configuration that allow you to set up working services which you may find helpful to adapt for use with your own data.</p>
+<section id="pre-requisites-system-requirements">
+<h3>Pre-requisites / System Requirements<a class="headerlink" href="#pre-requisites-system-requirements" title="Permalink to this headline"></a></h3>
+<p>The guidance is technical and some assumptions are made about the reader’s background knowledge:</p>
+<ul class="simple">
+<li><p>The reader is, or is working closely with, an expert in the geological data to be served.</p></li>
+<li><p>The reader has some familiarity with setting up web servers and preferably Java servlet containers.</p></li>
+<li><p>The reader is able to install software on their machine and can follow the appropriate installation instructions for GeoServer documented on the GeoServer website.</p></li>
+</ul>
+<p>To set up production services you will need server equipment to run GeoServer. Estimating the level of hardware resources required to support a responsive service is a complex task depending on the amount of your data, its complexity and the demand that will be placed on your service by users. It is out of the scope of this document to give advice on these issues but you can find some assistance from the GeoServer web site and mailing list. To test setting up a service using the example in this guide a modern PC with Intel Core or equivalent processor and 4Gb RAM should certainly be adequate and you can probably get away with less.</p>
+<p>The software required includes Java, a Java servlet container such as Apache Tomcat, and GeoServer itself. If you use one of the GeoServer packages that include Jetty then you won’t need to install a servlet container separately. There are a lot of different versions and all these software packages are continuously updated. You may have conditions specific to your site which make particular versions preferable. For example, you may already have your data in a different database system such as Oracle Spatial rather than PostGIS. It isn’t possible to cover all possible set ups here.</p>
+<p>Further pre-requisites required only for particular service types are described under the appropriate section.</p>
+</section>
+</section>
+<section id="software-installation">
+<h2>Software Installation<a class="headerlink" href="#software-installation" title="Permalink to this headline"></a></h2>
+<p>The software used here all has extensive documentation and support forums and mailing lists. Here we will just point you to the appropriate places to download the software and get installation instructions.</p>
+<section id="assumptions">
+<h3>Assumptions<a class="headerlink" href="#assumptions" title="Permalink to this headline"></a></h3>
+<p>You will need to have Java installed on the machine on which you are going to install GeoServer. See the <a class="reference external" href="http://docs.geoserver.org/stable/en/user/production/java.html#production-java">Java Considerations</a> section of the GeoServer manual for the current recommendations. If you want to try other versions of Java you may need to do extra work and be prepared to enter into technical discussions on the geoserver-users email list in order to get it working with these.</p>
+<p>Ideally you will be familiar with deploying applications in a servlet container application such as <a class="reference external" href="http://tomcat.apache.org/">Apache Tomcat</a>. If not, you can use one of the all-in-one installers that packages GeoServer already deployed in the <a class="reference external" href="https://www.eclipse.org/jetty/">Jetty</a> servlet container. Note that Tomcat and Jetty are the two most tested servlet containers used with GeoServer so, although you should be able to use others, there may be extra work involved and you may need to get advice from the geoserver-users email list.</p>
+</section>
+<section id="basic-installation">
+<h3>Basic Installation<a class="headerlink" href="#basic-installation" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://geoserver.org/release/stable">Download</a> and install GeoServer following whichever one of the <a class="reference external" href="http://docs.geoserver.org/stable/en/user/installation/index.html">installation paths</a> in the GeoServer manual suits your situation best. If you already have a servlet container application such as <a class="reference external" href="http://tomcat.apache.org/">Apache Tomcat</a> set up or you are familiar with how to set one up then you will probably wish to download the web archive (WAR) and deploy that in your servlet container. If you are not comfortable with configuring a servlet container then you will probably wish to use one of the installer programs.</p></li>
+<li><p>Run GeoServer at least once to check the installation has worked. If, for example, you are testing in a local instance of Tomcat on your own machine with default settings you should be able to visit <a class="reference external" href="http://localhost:8080/geoserver">http://localhost:8080/geoserver</a> and click on the <span class="guilabel">Layer Preview</span> link to check that the example services shipped with GeoServer work properly. You will have to modify the preceding URL appropriately if you have deployed GeoServer on a different machine or port.</p></li>
+</ul>
+<figure class="align-default">
+<img alt="../../_images/geoserver_welcome.jpeg" src="../../_images/geoserver_welcome.jpeg" />
+</figure>
+</section>
+<section id="app-schema-plugin-installation">
+<span id="service-provision-server-setup-geoserver-install-app-schema"></span><h3>App-schema Plugin Installation<a class="headerlink" href="#app-schema-plugin-installation" title="Permalink to this headline"></a></h3>
+<p>You will need to install the app-schema plugin if you wish to set up a complex feature WFS or if you are setting up a simple feature WFS using one of the OneGeology recommended “Lite” schemas. If not, you can skip this step.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://geoserver.org/release/stable">Download</a>  and install the app-schema plugin <code class="docutils literal notranslate"><span class="pre">geoserver-*-app-schema-plugin.zip</span></code> following the <a class="reference external" href="http://docs.geoserver.org/stable/en/user/data/app-schema/installation.html">application schema installation instructions</a>. Follow the instructions at <a class="reference external" href="http://docs.geoserver.org/stable/en/user/data/app-schema/wfs-service-settings.html">WFS service settings</a>.</p></li>
+<li><p>Check you can restart GeoServer without any errors being thrown.</p></li>
+</ul>
+</section>
+<section id="inspire-plugin-installation">
+<h3>INSPIRE Plugin Installation<a class="headerlink" href="#inspire-plugin-installation" title="Permalink to this headline"></a></h3>
+<p>If you are providing an INSPIRE download service you will need to provide the extra INSPIRE mandated metadata in the WFS GetCapabilities response. This is optional for OneGeology.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://geoserver.org/release/stable">Download</a> and install the INSPIRE plugin <code class="docutils literal notranslate"><span class="pre">geoserver-*-inspire-plugin.zip</span></code> following the <a class="reference external" href="http://docs.geoserver.org/stable/en/user/extensions/inspire/index.html">INSPIRE plugin installation instructions</a>.</p></li>
+</ul>
+</section>
+<section id="database">
+<h3>Database<a class="headerlink" href="#database" title="Permalink to this headline"></a></h3>
+<p>If you already have your data in a relational database system you will want to check the <a class="reference external" href="http://docs.geoserver.org/stable/en/user/data/database/index.html">Working with Databases</a> section of the GeoServer manual to see if your database is supported by GeoServer and follow the instructions for installation of any extensions that may be needed for this support. PostGIS support is built into the core GeoServer download.</p>
+<p>If you want to try the example data or don’t have a supported database system you should <a class="reference internal" href="example_data.html#service-provision-data-preparation-postgis"><span class="std std-ref">install PostGIS</span></a>.</p>
+<p>You may use a database on the same machine as GeoServer or you can have it on a separate machine which is accessible over a network from your GeoServer machine.</p>
+</section>
+</section>
+<section id="common-setup">
+<h2>Common Setup<a class="headerlink" href="#common-setup" title="Permalink to this headline"></a></h2>
+<section id="logging-in">
+<h3>Logging in<a class="headerlink" href="#logging-in" title="Permalink to this headline"></a></h3>
+<p>The Web Administration Interface is a browser-based tool for administering the server software remotely. To deploy a web service in the GeoServer environment, log in to the Web Administration Interface for the GeoServer instance you will be using to deploy your data as a web service. To access this tool, open a web browser and enter the web address into the navigation bar. GeoServer is usually installed such that the administrative interface can be accessed at a URL with the following address pattern:</p>
+<p><strong>http://&lt;host&gt;:&lt;port&gt;/geoserver/web/</strong>, <strong>&lt;port&gt;</strong> is usually <strong>8080</strong>, and &lt;host&gt; is the name or IP address of the server.</p>
+<p>If you are testing in a local instance of Tomcat on your own machine with default settings this would be <a class="reference external" href="http://localhost:8080/geoserver/web/">http://localhost:8080/geoserver/web/</a></p>
+<p>The default account settings for GeoServer are as follows:</p>
+<ul class="simple">
+<li><p>Username: admin</p></li>
+<li><p>Password: geoserver</p></li>
+</ul>
+<p>For security reasons, it is recommended that you change your password to something more secure as soon as possible. You will see warnings about changing your passwords and links to where to change them when you first log in. There is an overview of the web administration interface in the <a class="reference external" href="http://docs.geoserver.org/latest/en/user/webadmin/index.html">GeoServer manual</a>.</p>
+</section>
+<section id="editing-contact-information-metadata">
+<h3>Editing contact information metadata<a class="headerlink" href="#editing-contact-information-metadata" title="Permalink to this headline"></a></h3>
+<p>Within the GeoServer Web Administration Interface, click <strong>Contact Information</strong>, under <a class="reference external" href="http://docs.geoserver.org/latest/en/user/webadmin/index.html#about-status">About &amp; Status</a>. This brings you to a Contact Information form in which you can provide contact information for your GeoServer instance. The information entered here becomes part of service-level metadata for the web service that is accessed by the OGC GetCapabilities request. Consequently, Contact Information entered here should be as precise and comprehensive as possible.</p>
+<p>This form allows you to enter the <a class="reference internal" href="../onegeology_profile.html#service-provision-onegeology-profile-contact-information"><span class="std std-ref">Contact information</span></a> and <a class="reference internal" href="../onegeology_profile.html#service-provision-onegeology-profile-data-provider"><span class="std std-ref">Data provider</span></a> required by the OneGeology profile.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The information entered here is presented differently in the GetCapabilities responses for different types and versions of service.</p>
+</div>
+</section>
+<section id="workspaces">
+<h3>Workspaces<a class="headerlink" href="#workspaces" title="Permalink to this headline"></a></h3>
+<p>In GeoServer <a class="reference external" href="https://docs.geoserver.org/latest/en/user/data/webadmin/workspaces.html">workspaces</a> are used for organising data. For each workspace there are also <a class="reference external" href="https://docs.geoserver.org/latest/en/user/configuration/virtual-services.html">virtual services</a> created at different service URLs. So if you have an instance of GeoServer available at <a class="reference external" href="http://example.com/geoserver">http://example.com/geoserver</a> there will be a global service URL at <a class="reference external" href="http://example.com/geoserver/ows">http://example.com/geoserver/ows</a> and, if you have a workspce called ws1, there will also be a virtual service URL at <a class="reference external" href="http://example.com/geoserver/ws1/ows">http://example.com/geoserver/ws1/ows</a>. This allows some flexibility and control over making different data sets and services available for different purposes to different users. To start with we suggest you <a class="reference external" href="http://docs.geoserver.org/latest/en/user/data/webadmin/workspaces.html#add-a-workspace">create a new workspace</a> for your data and, if you are using any of the example data that accompany this guide then create a separate workspace for that as well. The URI you choose is not crucially important, we suggest you pick something under a domain you control to ensure uniqueness but it doesn’t have to be a resolvable URI that responds if someone puts it in a browser. You can read the GeoServer documentation if you want to organise things further. However, note that, if you are going to supply simple or complex features through a WFS using standard application schemas such as GeoSciML this constrains how you set up your workspaces; see the relevant sections for more detail.</p>
+<figure class="align-default" id="id28">
+<a class="reference internal image-reference" href="../../_images/EditWS1.jpg"><img alt="Edit a GeoServer Workspace" src="../../_images/EditWS1.jpg" style="width: 1036px; height: 451px;" /></a>
+<figcaption>
+<p><span class="caption-text">Edit a GeoServer Workspace</span><a class="headerlink" href="#id28" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="example-data">
+<h2>Example Data<a class="headerlink" href="#example-data" title="Permalink to this headline"></a></h2>
+<p>To help you set up your services we provide <a class="reference internal" href="example_data.html#service-provision-data-preparation-exampledata"><span class="std std-ref">Cookbook example data</span></a> that you can use to get some working services running. It enables you to get some initial experience setting up a service. Your own services may be set up by customising the examples or you may use them to get some understanding of what is involved when setting up your own service. The following sections on how to set up different types of service say which of the example data sets can be used to test setting up those services.</p>
+</section>
+<section id="simple-wms">
+<span id="service-provision-server-setup-geoserver-simple-wms"></span><h2>Simple WMS<a class="headerlink" href="#simple-wms" title="Permalink to this headline"></a></h2>
+<p>First you need to enable the WMS service. If you select <span class="guilabel">WMS</span> under the <span class="guilabel">Services</span> section of the left hand menu panel you will be presented with a screen like that below.</p>
+<figure class="align-default" id="id29">
+<a class="reference internal image-reference" href="../../_images/WMS-serviceProp1.jpg"><img alt="Editing GeoServer WMS service properties (1)" src="../../_images/WMS-serviceProp1.jpg" style="width: 1014px; height: 536px;" /></a>
+<figcaption>
+<p><span class="caption-text">Editing GeoServer WMS service properties (1)</span><a class="headerlink" href="#id29" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Check the <span class="guilabel">Enable WMS</span> box and also we recommend that you select the <span class="guilabel">strict CITE compliance</span> option. At the top of the page you can add various items of the service metadata required by the <a class="reference internal" href="../onegeology_profile.html#service-provision-onegeology-profile"><span class="std std-ref">OneGeology Profile</span></a> including <a class="reference internal" href="../onegeology_profile.html#service-provision-onegeology-profile-service-title"><span class="std std-ref">Service title</span></a>, <a class="reference internal" href="../onegeology_profile.html#service-provision-onegeology-profile-service-abstract"><span class="std std-ref">Service abstract</span></a>, <a class="reference internal" href="../onegeology_profile.html#service-provision-onegeology-profile-fees"><span class="std std-ref">Fees</span></a>, <a class="reference internal" href="../onegeology_profile.html#service-provision-onegeology-profile-access-constraints"><span class="std std-ref">Access constraints</span></a>, <a class="reference internal" href="../onegeology_profile.html#service-provision-onegeology-profile-keywords"><span class="std std-ref">Keywords</span></a> and <a class="reference internal" href="../onegeology_profile.html#service-provision-onegeology-profile-online-resource"><span class="std std-ref">Online resource</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The contents of Maintainer field aren’t actually included in any part of the WMS GetCapabilities response</p>
+</div>
+<p>In the middle of the page you can configure a limited list of SRS for the service; it is recommended that you use this option otherwise you will get the full list of GeoServer supported coordinate reference systems (about 5800), which makes the <strong>capabilities</strong> document slow to parse.  Remember you must support EPSG:4326 for the portal.</p>
+<figure class="align-default" id="id30">
+<a class="reference internal image-reference" href="../../_images/WMS-serviceProp2.jpg"><img alt="Editing GeoServer WMS service properties (2)" src="../../_images/WMS-serviceProp2.jpg" style="width: 852px; height: 489px;" /></a>
+<figcaption>
+<p><span class="caption-text">Editing GeoServer WMS service properties (2)</span><a class="headerlink" href="#id30" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="inspire-extended-capabilities">
+<h3>INSPIRE Extended Capabilities<a class="headerlink" href="#inspire-extended-capabilities" title="Permalink to this headline"></a></h3>
+<p>If you are providing an INSPIRE view service you will need to provide the extra INSPIRE mandated metadata in the WMS GetCapabilities response. GeoServer enables you to configure a scenario 1 style extended capabilities section. All INSPIRE specific requirements are optional for OneGeology use but will work as OneGeology services.</p>
+<p>As described in the <a class="reference external" href="http://docs.geoserver.org/latest/en/user/extensions/inspire/using.html">plugin documentation</a> you should find a section in the WMS service settings of the administration interface where you can choose a language and enter a service metadata URL. For guidance on what to enter in these settings see the <a class="reference external" href="https://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-view-services-1">Technical Guidance for the implementation of INSPIRE View Services</a>.</p>
+<p>Check that the GetCapabilities responses contain your edited values.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The plugin GUI only has two non-empty values for the Service Metadata Type: “Online ISO 19139 ServiceMetadata document” sets the MIME type to <code class="docutils literal notranslate"><span class="pre">application/vnd.iso.19139+xml</span></code>, “CSW GetRecord by ID request” sets the MIME type to <code class="docutils literal notranslate"><span class="pre">application/vnd.ogc.csw.GetRecordByIdResponse_xml</span></code>. If neither of these correspond to the actual MIME type of your metadata resource you could omit this element by choosing the blank option or work around it by manually editing the wfs.xml file inside the GeoServer data directory as documented in issue <a class="reference external" href="https://osgeo-org.atlassian.net/browse/GEOS-5157">GEOS-5157</a> . As it isn’t clear what a client would do with this information anyway, leaving it blank seems to be a good option.</p>
+</div>
+</section>
+<section id="configuring-a-data-store">
+<h3>Configuring a data store<a class="headerlink" href="#configuring-a-data-store" title="Permalink to this headline"></a></h3>
+<p>The next step is to use the Stores menu option to set up any sources of data for our service.</p>
+<p>On the left side of the GeoServer <a class="reference external" href="http://docs.geoserver.org/latest/en/user/webadmin/index.html">Web administration interface</a>, under the <a class="reference external" href="http://docs.geoserver.org/latest/en/user/webadmin/index.html#data">Data</a> section, click <span class="guilabel">Stores</span>. This will bring you to the <a class="reference external" href="http://docs.geoserver.org/latest/en/user/data/webadmin/stores.html">Stores</a> page. Once there, click <a class="reference external" href="http://docs.geoserver.org/latest/en/user/data/webadmin/stores.html#add-a-store">Add New Store</a>, then choose the type of data source you wish to configure from the list of options.</p>
+<p>GeoServer can use a variety of data sources as the basis of a WMS including many of those listed in the GeoServer <a class="reference external" href="http://docs.geoserver.org/latest/en/user/data/index.html">Data management</a> section. In the <a class="reference internal" href="example_data.html#service-provision-data-preparation-exampledata"><span class="std std-ref">Cookbook example data</span></a> the image file, shapefile, GeoPackage, GeoTIFF and PostGIS database all are suitable. You can look up how to set each of these up from the <a class="reference external" href="http://docs.geoserver.org/latest/en/user/data/raster/worldimage.html">WorldImage</a>, <a class="reference external" href="http://docs.geoserver.org/latest/en/user/data/vector/shapefile.html">Shapefile</a>, <a class="reference external" href="https://docs.geoserver.org/latest/en/user/data/vector/geopkg.html">GeoPackage</a>, <a class="reference external" href="http://docs.geoserver.org/latest/en/user/data/raster/geotiff.html">GeoTIFF</a> and <a class="reference external" href="http://docs.geoserver.org/latest/en/user/data/database/postgis.html">PostGIS</a> sections of the GeoServer documentation.</p>
+<p>Having set up one or more data sources you will need to create WMS layers that display that data.</p>
+</section>
+<section id="adding-layers-to-a-workspace">
+<span id="gs-wms-add-layers"></span><h3>Adding layers to a workspace<a class="headerlink" href="#adding-layers-to-a-workspace" title="Permalink to this headline"></a></h3>
+<p>Having created a workspace and specified one or more data sources for your service, you will now associate this data with layers offered by the service in your workspace.</p>
+<p>On the left side of the GeoServer <a class="reference external" href="http://docs.geoserver.org/latest/en/user/webadmin/index.html">Web administration interface</a>, under the <a class="reference external" href="http://docs.geoserver.org/latest/en/user/webadmin/index.html#data">Data</a> section, click <span class="guilabel">Layers</span>. This will bring you to the <a class="reference external" href="http://docs.geoserver.org/latest/en/user/data/webadmin/layers.html">Layers</a> page. Once there, click <a class="reference external" href="http://docs.geoserver.org/latest/en/user/data/webadmin/layers.html#add-a-layer">Add a new layer</a>, then choose the data source you wish to display as a layer from the drop down box.</p>
+<p>Depending on the type of data source you have chosen there may be one or more resources listed that can be published as layers. For example, a shapefile data source would only have one resource listed but a database source could have several depending on the tables and views in the database. Select the resource for the data you want to display and click <span class="guilabel">Publish</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the resource has already been published the action will change to <span class="guilabel">Publish again</span>. You can create more than one layer from the same resource if you want to display it in different ways.</p>
+</div>
+<p>You will now be on the <a class="reference external" href="http://docs.geoserver.org/latest/en/user/data/webadmin/layers.html#data-webadmin-layers-edit-data">Edit Layer</a> page. This page has a large number of configuration options spread across different tabs. We will just describe a subset of them here.</p>
+<section id="the-data-tab-of-the-edit-layer-page">
+<h4>The Data tab of the Edit Layer page<a class="headerlink" href="#the-data-tab-of-the-edit-layer-page" title="Permalink to this headline"></a></h4>
+<p>The <span class="guilabel">Data</span> tab allows you to specify various items of layer metadata covered by the <a class="reference internal" href="../onegeology_profile.html#service-provision-onegeology-profile"><span class="std std-ref">OneGeology Profile</span></a> so it is very important to enter this information carefully for each layer in your web service. In particular you can configure the <a class="reference internal" href="../onegeology_profile.html#service-provision-onegeology-profile-layer-names"><span class="std std-ref">Name and Title</span></a>, <a class="reference internal" href="../onegeology_profile.html#service-provision-onegeology-profile-layer-abstract"><span class="std std-ref">Abstract</span></a>, <a class="reference internal" href="../onegeology_profile.html#service-provision-onegeology-profile-layer-bbox"><span class="std std-ref">BoundingBox</span></a>, <a class="reference internal" href="../onegeology_profile.html#service-provision-onegeology-profile-layer-crs"><span class="std std-ref">Spatial/Coordinate reference system</span></a>, <a class="reference internal" href="../onegeology_profile.html#service-provision-onegeology-profile-layer-keywords"><span class="std std-ref">Keywords</span></a> and <a class="reference internal" href="../onegeology_profile.html#service-provision-onegeology-profile-layer-metadata-url"><span class="std std-ref">MetadataURL (optional)</span></a> or <a class="reference internal" href="../onegeology_profile.html#service-provision-onegeology-profile-layer-data-url"><span class="std std-ref">DataURL (optional)</span></a>.</p>
+<p>GeoServer can compute the bounding box of your data from the data itself or you can enter the limits yourself manually if you think that is more appropriate for your dataset.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>GeoServer may not be able to determine the coordinate reference system for some data sources. In this case you will need to enter the correct value in the <span class="guilabel">Declared SRS</span> box and choose <span class="guilabel">Force declared</span> for the <span class="guilabel">SRS handling</span> option. For example the image with world file from the example data has this problem as the coordinate reference system isn’t included in the world file.</p>
+</div>
+<p>For further information on the other settings on this tab see the <a class="reference external" href="http://docs.geoserver.org/latest/en/user/data/webadmin/layers.html#edit-layer-data">GeoServer layers documentation</a>.</p>
+</section>
+<section id="the-publishing-tab-of-the-edit-layer-page">
+<h4>The Publishing tab of the Edit Layer page<a class="headerlink" href="#the-publishing-tab-of-the-edit-layer-page" title="Permalink to this headline"></a></h4>
+<p>After populating the fields in the <span class="guilabel">Data</span> tab, click the <span class="guilabel">Publishing</span> tab.</p>
+<p>This is where you will <a class="reference external" href="http://docs.geoserver.org/latest/en/user/data/webadmin/layers.html#wms-settings">select the styles</a> that can be used with your layer that will affect, for example, what colour different formations are shown in. This part of the interface only allows you to select the styles that can be used for your layer from a fixed list of available styles. If you want to set up your own styling GeoServer has <a class="reference external" href="http://docs.geoserver.org/latest/en/user/styling/index.html#styling">extensive customisable styling capabilities</a>. This is a complex area so here we just point out that you can <a class="reference external" href="http://docs.geoserver.org/latest/en/user/styling/webadmin/index.html#add-a-style">upload an SLD file</a> to add to the list of available styles and you can <a class="reference external" href="https://github.com/OneGeology/styles">download some pre-made SLD files</a>. These pre-made SLD files will colour your layers according to some standard colour schemes if your data includes appropriate age or lithology fields coded using CGI or INSPIRE standard vocabularies.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you have a pure image data source such as the one in the example data we recommend you use the default GeoServer <span class="guilabel">generic</span> style. Some styles can interfere with the image rendering (e.g. the <span class="guilabel">giant_polygon</span> style will result in a grey rectangle over your image area). You will probably also want to uncheck the <span class="guilabel">Queryable</span> Layer Settings checkbox as the information returned from image pixels in response to a GetFeatureInfo request is unlikely to be useful to clients.</p>
+</div>
+</section>
+</section>
+<section id="creating-group-layers">
+<h3>Creating group layers<a class="headerlink" href="#creating-group-layers" title="Permalink to this headline"></a></h3>
+<p>In some situations it is desirable to create a group layer, for example you may want to do this to comply with INSPIRE layer naming regulations to create a layer called GE.GeologicUnit to group all of your layers that are spatial objects of type GeologicUnit.</p>
+<p>On the left side of the GeoServer <strong>Web Administration Interface</strong>, under <strong>Data</strong>, click <strong>Layer Groups</strong>. This will bring up the <strong>Layer Groups</strong> page.  Click the add new layer group link to add a new group layer; this opens a New Layer Group page.</p>
+<figure class="align-default" id="id31">
+<a class="reference internal image-reference" href="../../_images/GS-LayerGroups.jpg"><img alt="Create or edit a Group layer" src="../../_images/GS-LayerGroups.jpg" style="width: 854px; height: 296px;" /></a>
+<figcaption>
+<p><span class="caption-text">Create or edit a Group layer</span><a class="headerlink" href="#id31" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Add the name, title, and abstract.  If you are following INSPIRE regulations note the name and title must be EXACTLY as in the technical guidelines.  You may enter anything in the abstract, though we suggest you provide as much information about the grouping as possible.  Select the workspace you want to use and enter the layers that you want to group; the layers must already be available in the workspace.  The layers will display on top of each other so when adding layers you may wish to chose a layer order, for example if you want to group layers that are point features on top of polygon features.  Note the drawing order is the inverse of what will appear, that is the first drawn layer will appear at the bottom of the resultant map image.</p>
+<p>Now select the default projection system for the group and then click the Generate Bounds button, this will generate a bounding box based on the extents of all your listed layers, though you may add the bounding box manually if you wish.  To ensure that a user can see which layers are included in the group, you will also need to choose the <em>Named Tree</em> Mode (and not use the default Single mode).</p>
+<figure class="align-default" id="id32">
+<a class="reference internal image-reference" href="../../_images/GS-LayerGroupsProp1.jpg"><img alt="Group layer properties" src="../../_images/GS-LayerGroupsProp1.jpg" style="width: 787px; height: 742px;" /></a>
+<figcaption>
+<p><span class="caption-text">Group layer properties</span><a class="headerlink" href="#id32" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The output of a grouped layer is shown below (excerpt from a GetCapabilities response).</p>
+<figure class="align-default" id="id33">
+<a class="reference internal image-reference" href="../../_images/GS-LayerGroupsOut1.jpg"><img alt="Group layer output" src="../../_images/GS-LayerGroupsOut1.jpg" style="width: 899px; height: 572px;" /></a>
+<figcaption>
+<p><span class="caption-text">Group layer output</span><a class="headerlink" href="#id33" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="sld-enabled-wms">
+<span id="service-provision-server-setup-geoserver-sld-wms"></span><h2>SLD enabled WMS<a class="headerlink" href="#sld-enabled-wms" title="Permalink to this headline"></a></h2>
+<p>You don’t have to configure anything special in GeoServer to have an SLD enabled WMS but for the purposes of having your layers work with the OneGeology Portal <a class="reference internal" href="../../using/portal.html#use-portal-thematic-analysis"><span class="std std-ref">Analysis tools</span></a> highlighting functionality your data will need to have the <code class="docutils literal notranslate"><span class="pre">representativeAge_uri</span></code> and <code class="docutils literal notranslate"><span class="pre">representativeLithology_uri</span></code> fields described in <a class="reference internal" href="../data_preparation.html#service-provision-data-preparation-lite-geologicunitview"><span class="std std-ref">GeologicUnitView features</span></a> using appropriate CGI or INSPIRE vocabulary URIs.</p>
+<p>If required you may disable this functionality in the Service metadata, by checking a box in the Dynamic styling section</p>
+</section>
+<section id="simple-feature-wfs">
+<span id="service-provision-server-setup-geoserver-simple-wfs"></span><h2>Simple Feature WFS<a class="headerlink" href="#simple-feature-wfs" title="Permalink to this headline"></a></h2>
+<p>With GeoServer if you have configured a data store and layer as described in the <a class="reference internal" href="#service-provision-server-setup-geoserver-simple-wms"><span class="std std-ref">Simple WMS</span></a> section and the data store is of a suitable type (not, for example, a pure image format or raster format) then you will already have done all the substantive work to create a simple feature WFS serving features with the same name as your layer name and with property elements named according to the fields in the underlying data store. In the <a class="reference internal" href="example_data.html#service-provision-data-preparation-exampledata"><span class="std std-ref">Cookbook example data</span></a> the shapefile, GeoPackage and PostGIS database all are suitable. To complete setting up the WFS service metadata select <span class="guilabel">WFS</span> from under the <span class="guilabel">Services</span> section at the left of the <a class="reference external" href="http://docs.geoserver.org/latest/en/user/webadmin/index.html">web administration interface</a>. The service metadata here is very similar to that described for setting up a <a class="reference internal" href="#service-provision-server-setup-geoserver-simple-wms"><span class="std std-ref">Simple WMS</span></a> so refer to that for what to enter. WFS specific settings are described in the <a class="reference external" href="http://docs.geoserver.org/latest/en/user/services/wfs/webadmin.html">GeoServer WFS documentation</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Having WFS enabled will mean that users can download your data (for example, <a class="reference internal" href="../../using/qgis.html#use-qgis-simple-wfs"><span class="std std-ref">Using QGIS to access simple feature WFS</span></a>. If you <strong>don’t want this</strong> then you should uncheck the <span class="guilabel">Enable WFS</span> checkbox. This can only be done at the global level or per workspace. You can’t enable and disable WFS for specific layers.</p>
+</div>
+<p>If you want to promote interoperability while still having a simple data structure you could consider conforming to a standard schema such as GeoSciML-Lite or EarthResourceML-Lite and using standard IUGS-CGI or INSPIRE vocabularies for the applicable properties. Depending on your data source, it may be possible to produce features close to a simple feature application schema but there are a few issues that can make it difficult to produce schema valid output. You need to be able to make the names in the fields of your data source correspond to the names of properties in the output application schema. This will not be possible for a Shapefile where there is a 10 character limit on the length of field names and you may not be able to control the case of field names for some databases or you may not have access to alter your database or create appropriate views. Even when you can control the field names and case we have found problems where field names such as “name” and “description” will get assigned to gml:name properties when you might want them in the application schema namespace.</p>
+<p>If you can’t get schema valid features by manipulating your data source then you will need to <a class="reference internal" href="#service-provision-server-setup-geoserver-simple-app-schema"><span class="std std-ref">use the GeoServer Application Schema</span></a> extension. This is significantly more difficult to set up and the performance is also lower so you may wish to evaluate whether you can get <em>close enough</em> to the standard schema to be useful.</p>
+<section id="using-application-schemas-extension">
+<span id="service-provision-server-setup-geoserver-simple-app-schema"></span><h3>Using application schemas extension<a class="headerlink" href="#using-application-schemas-extension" title="Permalink to this headline"></a></h3>
+<p>If you want your simple feature WFS to conform to a standard schema such as GeoSciML-Lite or EarthResourceML-Lite and your data store isn’t sufficiently configurable then you will need to use the GeoServer Application Schema extension. The below documentation assumes you are using a Shapefile data store which will necessitate using this method because Shapefile field names are restricted to 10 characters in length whereas the Lite schemas have fields with longer names.</p>
+<p>The Application Schema extension is not included by default so you need to follow the <a class="reference internal" href="#service-provision-server-setup-geoserver-install-app-schema"><span class="std std-ref">App-schema Plugin Installation</span></a> instructions. Once the extension is installed, you will need to create a mapping file, and restart GeoServer to enable the new configuration.</p>
+<section id="create-mapping-file">
+<h4>Create mapping file<a class="headerlink" href="#create-mapping-file" title="Permalink to this headline"></a></h4>
+<p>The mapping file is an XML file that maps fields from the data source into the fields of the XML output schema. The example mapping file, below, uses field names in a shapefile that are the automatically truncated names generated by ESRI software mapping from the long field names to the valid Shapefile field names. If other field names are used in the shapefile (e.g. the recommended abbreviations in <a class="reference external" href="http://onegeology.org/wmsCookbook/appendixK.html">Appendix K</a>), the strings in the sourceExpression/OCQL elements should be modified appropriately.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;as:AppSchemaDataAccess</span>
+<span class="na">xmlns:as=</span><span class="s">&quot;http://www.geotools.org/app-schema&quot;</span>
+<span class="na">xmlns:ogc=</span><span class="s">&quot;http://www.opengis.net/ogc&quot;</span>
+<span class="na">xmlns:xs=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema&quot;</span>
+<span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+<span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://www.geotools.org/app-schema</span>
+<span class="s">http://ogc.bgs.ac.uk/mapping/AppSchemaDataAccess.xsd&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;namespaces&gt;</span>
+  <span class="nt">&lt;Namespace&gt;</span>
+    <span class="nt">&lt;prefix&gt;</span>gsmlp<span class="nt">&lt;/prefix&gt;</span>
+    <span class="nt">&lt;uri&gt;</span>http://xmlns.geosciml.org/geosciml-portrayal/2.0<span class="nt">&lt;/uri&gt;</span>
+  <span class="nt">&lt;/Namespace&gt;</span>
+  <span class="nt">&lt;Namespace&gt;</span>
+    <span class="nt">&lt;prefix&gt;</span>gml<span class="nt">&lt;/prefix&gt;</span>
+    <span class="nt">&lt;uri&gt;</span>http://www.opengis.net/gml<span class="nt">&lt;/uri&gt;</span>
+  <span class="nt">&lt;/Namespace&gt;</span>
+<span class="nt">&lt;/namespaces&gt;</span>
+<span class="nt">&lt;sourceDataStores&gt;</span>
+  <span class="nt">&lt;DataStore&gt;</span>
+    <span class="nt">&lt;id&gt;</span>shapefile<span class="nt">&lt;/id&gt;</span>
+    <span class="nt">&lt;parameters&gt;</span>
+      <span class="nt">&lt;Parameter&gt;</span>
+        <span class="nt">&lt;name&gt;</span>url<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;value&gt;</span>
+          file:/home/geoserver/downloads/shapefiles/GeologicUnitView.shp
+        <span class="nt">&lt;/value&gt;</span>
+      <span class="nt">&lt;/Parameter&gt;</span>
+      <span class="nt">&lt;Parameter&gt;</span>
+        <span class="nt">&lt;name&gt;</span>memory mapped buffer<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;value&gt;</span>false<span class="nt">&lt;/value&gt;</span>
+      <span class="nt">&lt;/Parameter&gt;</span>
+      <span class="nt">&lt;Parameter&gt;</span>
+        <span class="nt">&lt;name&gt;</span>create spatial index<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;value&gt;</span>true<span class="nt">&lt;/value&gt;</span>
+      <span class="nt">&lt;/Parameter&gt;</span>
+      <span class="nt">&lt;Parameter&gt;</span>
+        <span class="nt">&lt;name&gt;</span>charset<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;value&gt;</span>ISO-8859-1<span class="nt">&lt;/value&gt;</span>
+      <span class="nt">&lt;/Parameter&gt;</span>
+    <span class="nt">&lt;/parameters&gt;</span>
+  <span class="nt">&lt;/DataStore&gt;</span>
+<span class="nt">&lt;/sourceDataStores&gt;</span>
+<span class="nt">&lt;targetTypes&gt;</span>
+  <span class="nt">&lt;FeatureType&gt;</span>
+    <span class="nt">&lt;schemaUri&gt;</span>
+      http://schemas.usgin.org/files/geologic-units/2.0/GeoSciML.xsd
+    <span class="nt">&lt;/schemaUri&gt;</span>
+  <span class="nt">&lt;/FeatureType&gt;</span>
+<span class="nt">&lt;/targetTypes&gt;</span>
+<span class="nt">&lt;typeMappings&gt;</span>
+  <span class="nt">&lt;FeatureTypeMapping&gt;</span>
+    <span class="nt">&lt;sourceDataStore&gt;</span>shapefile<span class="nt">&lt;/sourceDataStore&gt;</span>
+    <span class="nt">&lt;sourceType&gt;</span>GeologicUnitView<span class="nt">&lt;/sourceType&gt;</span>
+    <span class="nt">&lt;targetElement&gt;</span>gsmlp:GeologicUnitView<span class="nt">&lt;/targetElement&gt;</span>
+    <span class="nt">&lt;attributeMappings&gt;</span>
+      <span class="nt">&lt;AttributeMapping&gt;</span>
+        <span class="nt">&lt;targetAttribute&gt;</span>gsmlp:GeologicUnitView<span class="nt">&lt;/targetAttribute&gt;</span>
+        <span class="nt">&lt;idExpression&gt;</span>
+          <span class="nt">&lt;OCQL&gt;</span>getId()<span class="nt">&lt;/OCQL&gt;</span>
+        <span class="nt">&lt;/idExpression&gt;</span>
+      <span class="nt">&lt;/AttributeMapping&gt;</span>
+      <span class="nt">&lt;AttributeMapping&gt;</span>
+        <span class="nt">&lt;targetAttribute&gt;</span>gsmlp:identifier<span class="nt">&lt;/targetAttribute&gt;</span>
+        <span class="nt">&lt;sourceExpression&gt;</span>
+          <span class="nt">&lt;OCQL&gt;</span>identifier<span class="nt">&lt;/OCQL&gt;</span>
+        <span class="nt">&lt;/sourceExpression&gt;</span>
+      <span class="nt">&lt;/AttributeMapping&gt;</span>
+      <span class="nt">&lt;AttributeMapping&gt;</span>
+        <span class="nt">&lt;targetAttribute&gt;</span>gsmlp:name<span class="nt">&lt;/targetAttribute&gt;</span>
+        <span class="nt">&lt;sourceExpression&gt;</span>
+          <span class="nt">&lt;OCQL&gt;</span>name<span class="nt">&lt;/OCQL&gt;</span>
+        <span class="nt">&lt;/sourceExpression&gt;</span>
+      <span class="nt">&lt;/AttributeMapping&gt;</span>
+      <span class="nt">&lt;AttributeMapping&gt;</span>
+        <span class="nt">&lt;targetAttribute&gt;</span>gsmlp:description<span class="nt">&lt;/targetAttribute&gt;</span>
+        <span class="nt">&lt;sourceExpression&gt;</span>
+          <span class="nt">&lt;OCQL&gt;</span>descriptio<span class="nt">&lt;/OCQL&gt;</span>
+        <span class="nt">&lt;/sourceExpression&gt;</span>
+      <span class="nt">&lt;/AttributeMapping&gt;</span>
+      <span class="nt">&lt;AttributeMapping&gt;</span>
+        <span class="nt">&lt;targetAttribute&gt;</span>gsmlp:geologicUnitType<span class="nt">&lt;/targetAttribute&gt;</span>
+        <span class="nt">&lt;sourceExpression&gt;</span>
+          <span class="nt">&lt;OCQL&gt;</span>geologicUn<span class="nt">&lt;/OCQL&gt;</span>
+        <span class="nt">&lt;/sourceExpression&gt;</span>
+      <span class="nt">&lt;/AttributeMapping&gt;</span>
+      <span class="nt">&lt;AttributeMapping&gt;</span>
+        <span class="nt">&lt;targetAttribute&gt;</span>gsmlp:rank<span class="nt">&lt;/targetAttribute&gt;</span>
+        <span class="nt">&lt;sourceExpression&gt;</span>
+          <span class="nt">&lt;OCQL&gt;</span>rank<span class="nt">&lt;/OCQL&gt;</span>
+        <span class="nt">&lt;/sourceExpression&gt;</span>
+      <span class="nt">&lt;/AttributeMapping&gt;</span>
+      <span class="nt">&lt;AttributeMapping&gt;</span>
+        <span class="nt">&lt;targetAttribute&gt;</span>gsmlp:lithology<span class="nt">&lt;/targetAttribute&gt;</span>
+        <span class="nt">&lt;sourceExpression&gt;</span>
+          <span class="nt">&lt;OCQL&gt;</span>lithology<span class="nt">&lt;/OCQL&gt;</span>
+        <span class="nt">&lt;/sourceExpression&gt;</span>
+      <span class="nt">&lt;/AttributeMapping&gt;</span>
+      <span class="nt">&lt;AttributeMapping&gt;</span>
+        <span class="nt">&lt;targetAttribute&gt;</span>gsmlp:geologicHistory<span class="nt">&lt;/targetAttribute&gt;</span>
+        <span class="nt">&lt;sourceExpression&gt;</span>
+          <span class="nt">&lt;OCQL&gt;</span>geologicHi<span class="nt">&lt;/OCQL&gt;</span>
+        <span class="nt">&lt;/sourceExpression&gt;</span>
+      <span class="nt">&lt;/AttributeMapping&gt;</span>
+      <span class="nt">&lt;AttributeMapping&gt;</span>
+        <span class="nt">&lt;targetAttribute&gt;</span>gsmlp:observationMethod<span class="nt">&lt;/targetAttribute&gt;</span>
+        <span class="nt">&lt;sourceExpression&gt;</span>
+          <span class="nt">&lt;OCQL&gt;</span>observatio<span class="nt">&lt;/OCQL&gt;</span>
+        <span class="nt">&lt;/sourceExpression&gt;</span>
+      <span class="nt">&lt;/AttributeMapping&gt;</span>
+      <span class="nt">&lt;AttributeMapping&gt;</span>
+        <span class="nt">&lt;targetAttribute&gt;</span>gsmlp:positionalAccuracy<span class="nt">&lt;/targetAttribute&gt;</span>
+        <span class="nt">&lt;sourceExpression&gt;</span>
+          <span class="nt">&lt;OCQL&gt;</span>positional<span class="nt">&lt;/OCQL&gt;</span>
+        <span class="nt">&lt;/sourceExpression&gt;</span>
+      <span class="nt">&lt;/AttributeMapping&gt;</span>
+      <span class="nt">&lt;AttributeMapping&gt;</span>
+        <span class="nt">&lt;targetAttribute&gt;</span>gsmlp:source<span class="nt">&lt;/targetAttribute&gt;</span>
+        <span class="nt">&lt;sourceExpression&gt;</span>
+          <span class="nt">&lt;OCQL&gt;</span>source<span class="nt">&lt;/OCQL&gt;</span>
+        <span class="nt">&lt;/sourceExpression&gt;</span>
+      <span class="nt">&lt;/AttributeMapping&gt;</span>
+      <span class="nt">&lt;AttributeMapping&gt;</span>
+        <span class="nt">&lt;targetAttribute&gt;</span>gsmlp:geologicUnitType_uri<span class="nt">&lt;/targetAttribute&gt;</span>
+        <span class="nt">&lt;sourceExpression&gt;</span>
+          <span class="nt">&lt;OCQL&gt;</span>geologic_1<span class="nt">&lt;/OCQL&gt;</span>
+        <span class="nt">&lt;/sourceExpression&gt;</span>
+      <span class="nt">&lt;/AttributeMapping&gt;</span>
+      <span class="nt">&lt;AttributeMapping&gt;</span>
+        <span class="nt">&lt;targetAttribute&gt;</span>gsmlp:representativeLithology_uri<span class="nt">&lt;/targetAttribute&gt;</span>
+        <span class="nt">&lt;sourceExpression&gt;</span>
+          <span class="nt">&lt;OCQL&gt;</span>representa<span class="nt">&lt;/OCQL&gt;</span>
+        <span class="nt">&lt;/sourceExpression&gt;</span>
+      <span class="nt">&lt;/AttributeMapping&gt;</span>
+      <span class="nt">&lt;AttributeMapping&gt;</span>
+        <span class="nt">&lt;targetAttribute&gt;</span>gsmlp:representativeAge_uri<span class="nt">&lt;/targetAttribute&gt;</span>
+        <span class="nt">&lt;sourceExpression&gt;</span>
+          <span class="nt">&lt;OCQL&gt;</span>represen_1<span class="nt">&lt;/OCQL&gt;</span>
+        <span class="nt">&lt;/sourceExpression&gt;</span>
+      <span class="nt">&lt;/AttributeMapping&gt;</span>
+      <span class="nt">&lt;AttributeMapping&gt;</span>
+        <span class="nt">&lt;targetAttribute&gt;</span>gsmlp:representativeOlderAge_uri<span class="nt">&lt;/targetAttribute&gt;</span>
+        <span class="nt">&lt;sourceExpression&gt;</span>
+          <span class="nt">&lt;OCQL&gt;</span>represen_2<span class="nt">&lt;/OCQL&gt;</span>
+        <span class="nt">&lt;/sourceExpression&gt;</span>
+      <span class="nt">&lt;/AttributeMapping&gt;</span>
+      <span class="nt">&lt;AttributeMapping&gt;</span>
+        <span class="nt">&lt;targetAttribute&gt;</span>gsmlp:representativeYoungerAge_uri<span class="nt">&lt;/targetAttribute&gt;</span>
+        <span class="nt">&lt;sourceExpression&gt;</span>
+          <span class="nt">&lt;OCQL&gt;</span>represen_3<span class="nt">&lt;/OCQL&gt;</span>
+        <span class="nt">&lt;/sourceExpression&gt;</span>
+      <span class="nt">&lt;/AttributeMapping&gt;</span>
+      <span class="nt">&lt;AttributeMapping&gt;</span>
+        <span class="nt">&lt;targetAttribute&gt;</span>gsmlp:specification_uri<span class="nt">&lt;/targetAttribute&gt;</span>
+        <span class="nt">&lt;sourceExpression&gt;</span>
+          <span class="nt">&lt;OCQL&gt;</span>specificat<span class="nt">&lt;/OCQL&gt;</span>
+        <span class="nt">&lt;/sourceExpression&gt;</span>
+      <span class="nt">&lt;/AttributeMapping&gt;</span>
+      <span class="nt">&lt;AttributeMapping&gt;</span>
+        <span class="nt">&lt;targetAttribute&gt;</span>gsmlp:metadata_uri<span class="nt">&lt;/targetAttribute&gt;</span>
+        <span class="nt">&lt;sourceExpression&gt;</span>
+          <span class="nt">&lt;OCQL&gt;</span>metadata_u<span class="nt">&lt;/OCQL&gt;</span>
+        <span class="nt">&lt;/sourceExpression&gt;</span>
+      <span class="nt">&lt;/AttributeMapping&gt;</span>
+      <span class="nt">&lt;AttributeMapping&gt;</span>
+        <span class="nt">&lt;targetAttribute&gt;</span>gsmlp:genericSymbolizer<span class="nt">&lt;/targetAttribute&gt;</span>
+        <span class="nt">&lt;sourceExpression&gt;</span>
+          <span class="nt">&lt;OCQL&gt;</span>genericSym<span class="nt">&lt;/OCQL&gt;</span>
+        <span class="nt">&lt;/sourceExpression&gt;</span>
+      <span class="nt">&lt;/AttributeMapping&gt;</span>
+      <span class="nt">&lt;AttributeMapping&gt;</span>
+        <span class="nt">&lt;targetAttribute&gt;</span>gsmlp:shape<span class="nt">&lt;/targetAttribute&gt;</span>
+        <span class="nt">&lt;sourceExpression&gt;</span>
+          <span class="nt">&lt;OCQL&gt;</span>the_geom<span class="nt">&lt;/OCQL&gt;</span>
+        <span class="nt">&lt;/sourceExpression&gt;</span>
+      <span class="nt">&lt;/AttributeMapping&gt;</span>
+    <span class="nt">&lt;/attributeMappings&gt;</span>
+  <span class="nt">&lt;/FeatureTypeMapping&gt;</span>
+<span class="nt">&lt;/typeMappings&gt;</span>
+<span class="nt">&lt;/as:AppSchemaDataAccess&gt;</span>
+</pre></div>
+</div>
+<p>Create this mapping file with the prefix and namespace binding, the connection parameters (data source here is a shapefile), the online location of the schema (XSD), and the field mapping.</p>
+<p>You can find more documentation on the mapping file at <a class="reference external" href="http://docs.geoserver.org/stable/en/user/data/app-schema/mapping-file.html">http://docs.geoserver.org/stable/en/user/data/app-schema/mapping-file.html</a> and information on configuring different kinds of data store at  <a class="reference external" href="http://docs.geoserver.org/stable/en/user/data/app-schema/data-stores.html">http://docs.geoserver.org/stable/en/user/data/app-schema/data-stores.html</a>.</p>
+<p>Place the file in the GeoServer file location of the datastore. This will be somewhere like <code class="samp docutils literal notranslate"><span class="pre">data/workspaces/</span><em><span class="pre">workspace</span></em><span class="pre">/</span><em><span class="pre">store</span></em><span class="pre">/</span></code> where <cite>workspace</cite> is the name of your workspace, and <cite>store</cite> is the name of your data store.</p>
+</section>
+<section id="edit-datastore-xml-file">
+<h4>Edit datastore.xml file<a class="headerlink" href="#edit-datastore-xml-file" title="Permalink to this headline"></a></h4>
+<p>This file is located in the same Data Store directory. To enable application-schemas, this file must indicate that the shapefile is no longer used for field names, but the mapping file instead. Example datastore.xml, after editing:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;dataStore&gt;</span>
+  <span class="nt">&lt;id&gt;</span>DataStoreInfoImpl--49e58162:140a6f913de:-8000<span class="nt">&lt;/id&gt;</span>
+  <span class="nt">&lt;name&gt;</span>ShearDisplacementStructureView<span class="nt">&lt;/name&gt;</span>
+  <span class="nt">&lt;enabled&gt;</span>true<span class="nt">&lt;/enabled&gt;</span>
+  <span class="nt">&lt;workspace&gt;</span>
+    <span class="nt">&lt;id&gt;</span>WorkspaceInfoImpl--1739a454:14097568969:-7fe9<span class="nt">&lt;/id&gt;</span>
+  <span class="nt">&lt;/workspace&gt;</span>
+  <span class="nt">&lt;connectionParameters&gt;</span>
+    <span class="nt">&lt;entry</span> <span class="na">key=</span><span class="s">&quot;dbtype&quot;</span><span class="nt">&gt;</span>app-schema<span class="nt">&lt;/entry&gt;</span>
+    <span class="nt">&lt;entry</span> <span class="na">key=</span><span class="s">&quot;url&quot;</span><span class="nt">&gt;</span>
+    file:workspaces/gsmlp/ShearDisplacementStructureView/ShearDisplacementStructureViewAZGS.xml
+    <span class="nt">&lt;/entry&gt;</span>
+    <span class="nt">&lt;entry</span> <span class="na">key=</span><span class="s">&quot;namespace&quot;</span><span class="nt">&gt;</span>http://xmlns.geosciml.org/geosciml-portrayal/2.0<span class="nt">&lt;/entry&gt;</span>
+  <span class="nt">&lt;/connectionParameters&gt;</span>
+  <span class="nt">&lt;__default&gt;</span>false<span class="nt">&lt;/__default&gt;</span>
+<span class="nt">&lt;/dataStore&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="complex-feature-wfs">
+<span id="service-provision-server-setup-geoserver-complex-wfs"></span><h2>Complex Feature WFS<a class="headerlink" href="#complex-feature-wfs" title="Permalink to this headline"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This documentation describes setting up complex features by manually editing configuration files for the app-schema extension. Since it was written the <a class="reference external" href="https://www.wetransform.to/products/halestudio/">Hale Studio</a> graphical data transformation engine has been given the capability to create GeoServer app-schema configuration files. We recommend that you investigate this tool.</p>
+</div>
+<p>This section describes selected parts of the configuration files from the example set. This should give you a good overview of the configuration files needed and what the different parts do. They produce valid GeoSciML v3.2, v4.1 and INSPIRE Annex II Geology theme features and so, hopefully will provide a good starting point to adapt for your own services. However, the mapping for your service from your source data may require some features not used in the example. For these cases you should refer to the <a class="reference external" href="http://docs.geoserver.org/stable/en/user/data/app-schema/index.html">Working with Application Schemas</a> section of the GeoServer manual which contains comprehensive documentation on the different kinds of mapping from source to output XML that are possible. (It uses GeoSciML v2 based examples.)</p>
+<p>Because a single <code class="docutils literal notranslate"><span class="pre">gsmlb:GeologicUnit</span></code> can be observed at several distinct locations on the Earth’s surface, several <code class="docutils literal notranslate"><span class="pre">gsmlb:MappedFeature</span></code> features may point via their <code class="docutils literal notranslate"><span class="pre">gsmlb:specification</span></code> property to the same <code class="docutils literal notranslate"><span class="pre">gsmlb:GeologicUnit</span></code>.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;wfs:FeatureCollection</span> <span class="nt">&gt;</span>
+ <span class="nt">&lt;wfs:member&gt;</span>
+  <span class="nt">&lt;gsmlb:MappedFeature</span> <span class="na">gml:id=</span><span class="s">&quot;bgsn_digmap20111213000014089_625k&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;gsmlb:mappingFrame</span>
+    <span class="na">xlink:href=</span><span class="s">&quot;http://inspire.ec.europa.eu/codelist/MappingFrameValue/topOfBedrock&quot;</span>
+    <span class="na">xlink:title=</span><span class="s">&quot;top of bedrock&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;gsmlb:specification&gt;</span>
+    <span class="nt">&lt;gsmlb:GeologicUnit</span> <span class="na">gml:id=</span><span class="s">&quot;SYG-CYCS&quot;</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;gml:description&gt;</span>STRATHCLYDE GROUP - SEDIMENTARY ROCK CYCLES, STRATHCLYDE GROUP
+      TYPE<span class="nt">&lt;/gml:description&gt;</span>
+     <span class="cm">&lt;!-- ... --&gt;</span>
+    <span class="nt">&lt;/gsmlb:GeologicUnit&gt;</span>
+   <span class="nt">&lt;/gsmlb:specification&gt;</span>
+   <span class="nt">&lt;gsmlb:shape&gt;</span>
+    <span class="nt">&lt;gml:MultiSurface</span> <span class="na">gml:id=</span><span class="s">&quot;gsmlb.shape.bgsn_digmap20111213000014089_625k&quot;</span>
+     <span class="na">srsName=</span><span class="s">&quot;urn:ogc:def:crs:EPSG::27700&quot;</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;gml:surfaceMember&gt;</span>
+      <span class="nt">&lt;gml:Polygon</span> <span class="na">gml:id=</span><span class="s">&quot;gsmlb.shape.bgsn_digmap20111213000014089_625k.1&quot;</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;gml:exterior&gt;</span>
+        <span class="nt">&lt;gml:LinearRing&gt;</span>
+         <span class="nt">&lt;gml:posList&gt;</span>277851.8129999998 693998.524000001 277823.5400000005 693969.0079999991
+          277654.64600000007 693696.0569999999 277576.6949999996 693449.1019999995 277550.7119999993
+          693280.1319999992 277537.7199999998 693085.1679999997 276992.0639999996 693202.1460000003
+          277018.0469999999 693566.081000001 277134.9740000011 693839.0320000002 277251.8999999991
+          694098.9850000012 277851.8129999998 693998.524000001<span class="nt">&lt;/gml:posList&gt;</span>
+        <span class="nt">&lt;/gml:LinearRing&gt;</span>
+       <span class="nt">&lt;/gml:exterior&gt;</span>
+      <span class="nt">&lt;/gml:Polygon&gt;</span>
+     <span class="nt">&lt;/gml:surfaceMember&gt;</span>
+    <span class="nt">&lt;/gml:MultiSurface&gt;</span>
+   <span class="nt">&lt;/gsmlb:shape&gt;</span>
+  <span class="nt">&lt;/gsmlb:MappedFeature&gt;</span>
+ <span class="nt">&lt;/wfs:member&gt;</span>
+ <span class="nt">&lt;wfs:member&gt;</span>
+  <span class="nt">&lt;gsmlb:MappedFeature</span> <span class="na">gml:id=</span><span class="s">&quot;bgsn_digmap20111213000014090_625k&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;gsmlb:mappingFrame</span>
+    <span class="na">xlink:href=</span><span class="s">&quot;http://inspire.ec.europa.eu/codelist/MappingFrameValue/topOfBedrock&quot;</span>
+    <span class="na">xlink:title=</span><span class="s">&quot;top of bedrock&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;gsmlb:specification&gt;</span>
+    <span class="nt">&lt;gsmlb:GeologicUnit</span> <span class="na">gml:id=</span><span class="s">&quot;CRMF-MDCB&quot;</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;gml:description&gt;</span>CRAWFORD GROUP AND MOFFAT SHALE GROUP (UNDIFFERENTIATED) - MUDSTONE, CHERT AND
+      SMECTITE-CLAYSTONE<span class="nt">&lt;/gml:description&gt;</span>
+     <span class="cm">&lt;!-- ... --&gt;</span>
+    <span class="nt">&lt;/gsmlb:GeologicUnit&gt;</span>
+   <span class="nt">&lt;/gsmlb:specification&gt;</span>
+   <span class="nt">&lt;gsmlb:shape&gt;</span>
+    <span class="cm">&lt;!-- ... --&gt;</span>
+   <span class="nt">&lt;/gsmlb:shape&gt;</span>
+  <span class="nt">&lt;/gsmlb:MappedFeature&gt;</span>
+ <span class="nt">&lt;/wfs:member&gt;</span>
+ <span class="nt">&lt;wfs:member&gt;</span>
+  <span class="nt">&lt;gsmlb:MappedFeature</span> <span class="na">gml:id=</span><span class="s">&quot;bgsn_digmap20111213000014092_625k&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;gsmlb:mappingFrame</span>
+    <span class="na">xlink:href=</span><span class="s">&quot;http://inspire.ec.europa.eu/codelist/MappingFrameValue/topOfBedrock&quot;</span>
+    <span class="na">xlink:title=</span><span class="s">&quot;top of bedrock&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;gsmlb:specification&gt;</span>
+    <span class="nt">&lt;gsmlb:GeologicUnit</span> <span class="na">gml:id=</span><span class="s">&quot;TRIA-SCON&quot;</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;gml:description&gt;</span>TRIASSIC ROCKS (UNDIFFERENTIATED) - SANDSTONE AND CONGLOMERATE,
+      INTERBEDDED<span class="nt">&lt;/gml:description&gt;</span>
+     <span class="cm">&lt;!-- ... --&gt;</span>
+   <span class="nt">&lt;/gsmlb:specification&gt;</span>
+   <span class="nt">&lt;gsmlb:shape&gt;</span>
+    <span class="cm">&lt;!-- ... --&gt;</span>
+   <span class="nt">&lt;/gsmlb:shape&gt;</span>
+  <span class="nt">&lt;/gsmlb:MappedFeature&gt;</span>
+ <span class="nt">&lt;/wfs:member&gt;</span>
+ <span class="nt">&lt;wfs:member&gt;</span>
+  <span class="nt">&lt;gsmlb:MappedFeature</span> <span class="na">gml:id=</span><span class="s">&quot;bgsn_digmap20111213000014096_625k&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;gsmlb:mappingFrame</span>
+    <span class="na">xlink:href=</span><span class="s">&quot;http://inspire.ec.europa.eu/codelist/MappingFrameValue/topOfBedrock&quot;</span>
+    <span class="na">xlink:title=</span><span class="s">&quot;top of bedrock&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;gsmlb:specification</span> <span class="na">xlink:href=</span><span class="s">&quot;#TRIA-SCON&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;gsmlb:shape&gt;</span>
+    <span class="cm">&lt;!-- ... --&gt;</span>
+   <span class="nt">&lt;/gsmlb:shape&gt;</span>
+  <span class="nt">&lt;/gsmlb:MappedFeature&gt;</span>
+ <span class="nt">&lt;/wfs:member&gt;</span>
+<span class="nt">&lt;/wfs:FeatureCollection&gt;</span>
+</pre></div>
+</div>
+<p>Versions of the cookbook example set and configurations since 2016-08-17 also include <code class="docutils literal notranslate"><span class="pre">gsmlb:MappedFeature</span></code> features pointing to <code class="docutils literal notranslate"><span class="pre">gsmlb:ShearDisplacementStructure</span></code> (faults).</p>
+<section id="obtaining-example-configuration">
+<h3>Obtaining example configuration<a class="headerlink" href="#obtaining-example-configuration" title="Permalink to this headline"></a></h3>
+<p>Download the latest version of the example configuration files in data_625k.YYYY-MM-DD.zip from <a class="reference external" href="ftp://ftp.bgs.ac.uk/pubload/OneGeology/wfscookbook/">ftp://ftp.bgs.ac.uk/pubload/OneGeology/wfscookbook/</a> and expand it to a spare location on your server. Copy the files from this expanded directory to the matching locations in your GeoServer data directory. The main configuration files are inside the <code class="docutils literal notranslate"><span class="pre">workspaces</span></code> directory. The contents of the <code class="docutils literal notranslate"><span class="pre">demo</span></code> directory are some example requests which are documented below. Overwrite any files that already exist, although there shouldn’t be any in a fresh installation (apart from the containing directories). Note that the web interface does not yet support app-schema store for layer administration so you will have to edit these files directly when configuring your service.</p>
+<p>Copy the latest version of one of the files app-schema.cgi.YYYY-MM-DD.properties or app-schema.inspire.YYYY-MM-DD.properties from <a class="reference external" href="ftp://ftp.bgs.ac.uk/pubload/OneGeology/wfscookbook/">ftp://ftp.bgs.ac.uk/pubload/OneGeology/wfscookbook/</a> to <code class="docutils literal notranslate"><span class="pre">WEB-INF/classes/app-schema.properties</span></code> depending on whether you wish to use CGI or INSPIRE vocabularies for property values. (Don’t forget to rename the file, removing the <cite>.inspire</cite> or <cite>.cgi</cite> and datestamp parts.)</p>
+<p>Edit the database connection parameters appropriately for your installation of PostgreSQL. If you want to use a JNDI data connection configured in your servlet container then you will also need to edit the appropriate places in the <code class="docutils literal notranslate"><span class="pre">datastore.xml</span></code> files described in a subsequent section. So it will be easier for initial testing just to enter the host, database, user and password parameters.</p>
+<p>Perform any configuration required by your servlet container, and then start the servlet.</p>
+<p>One configuration item you may need to change is to increase the memory available for Java. The method depends on how you have installed GeoServer but if you get <code class="docutils literal notranslate"><span class="pre">java.lang.OutOfMemoryError:</span> <span class="pre">Java</span> <span class="pre">heap</span> <span class="pre">space</span></code> errors with the request below you will need to increase the memory with a directive such as <code class="docutils literal notranslate"><span class="pre">-Xmx256M</span></code>. The details of tuning memory and other options of the Java Virtual Machine are complex and not dealt with in this cookbook. Some information is in the GeoServer User Manual under the <a class="reference external" href="http://docs.geoserver.org/stable/en/user/production/index.html">Running in a Production Environment</a> section.</p>
+<p>If you have used the Windows Installer you can apply this by editing the file <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\GeoServer</span> <span class="pre">2.4.5\wrapper\wrapper.conf</span></code> (The exact file location will depend on where you installed GeoServer and which version you are using.) Find the line <code class="docutils literal notranslate"><span class="pre">wrapper.java.maxmemory=128</span></code> and increase the value 128 (or whatever it happens to be) to something like 256.</p>
+<p>If you are running in Apache Tomcat on Windows you can use the “Configure Tomcat” program that the Tomcat Windows installer provides. In the “Java” tab you can put a maximum memory value such as 256 (MB) in the Maximum Memory pool field.</p>
+<ul class="simple">
+<li><p>The first time GeoServer starts with the tutorial configuration, it will download all the schema (XSD) files it needs and store them in the <code class="docutils literal notranslate"><span class="pre">app-schema-cache</span></code> folder in the data directory. <strong>You must be connected to the internet for this to work.</strong></p></li>
+</ul>
+<section id="complex-feature-test-requests">
+<h4>Complex Feature Test requests<a class="headerlink" href="#complex-feature-test-requests" title="Permalink to this headline"></a></h4>
+<p>When GeoServer is running, test app-schema WFS in a web browser. You can query the feature types using these links. (Change <code class="docutils literal notranslate"><span class="pre">localhost:8080</span></code> in the examples below if you have deployed it at a different location.):</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://localhost:8080/geoserver/wfs?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;namespaces=xmlns(gsmlb,http%3A%2F%2Fwww.opengis.net%2Fgsml%2F4.1%2FGeoSciML-Basic)&amp;typeNames=gsmlb:MappedFeature&amp;count=25">http://localhost:8080/geoserver/wfs?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;namespaces=xmlns(gsmlb,http%3A%2F%2Fwww.opengis.net%2Fgsml%2F4.1%2FGeoSciML-Basic)&amp;typeNames=gsmlb:MappedFeature&amp;count=25</a></p></li>
+<li><p><a class="reference external" href="http://localhost:8080/geoserver/wfs?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;namespaces=xmlns(gsmlb,http%3A%2F%2Fwww.opengis.net%2Fgsml%2F4.1%2FGeoSciML-Basic)&amp;typeNames=gsmlb:GeologicUnit&amp;count=25">http://localhost:8080/geoserver/wfs?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;namespaces=xmlns(gsmlb,http%3A%2F%2Fwww.opengis.net%2Fgsml%2F4.1%2FGeoSciML-Basic)&amp;typeNames=gsmlb:GeologicUnit&amp;count=25</a></p></li>
+</ul>
+<p>From GeoServer 2.7 there is also support for WFS 2.0 paged queries such as below. The performance has been tuned so that you should be able to retrieve a small subset range of features anywhere within a large set of features matching a particular query.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://localhost:8080/geoserver/wfs?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;namespaces=xmlns(gsmlb,http%3A%2F%2Fwww.opengis.net%2Fgsml%2F4.1%2FGeoSciML-Basic)&amp;typeNames=gsmlb:MappedFeature&amp;count=10&amp;startindex=9">http://localhost:8080/geoserver/wfs?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;namespaces=xmlns(gsmlb,http%3A%2F%2Fwww.opengis.net%2Fgsml%2F4.1%2FGeoSciML-Basic)&amp;typeNames=gsmlb:MappedFeature&amp;count=10&amp;startindex=9</a> - Get features 10 to 20 (startindex is 0 for first feature)</p></li>
+<li><p><a class="reference external" href="http://localhost:8080/geoserver/wfs?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;namespaces=xmlns(gsmlb,http%3A%2F%2Fwww.opengis.net%2Fgsml%2F4.1%2FGeoSciML-Basic)&amp;typeNames=gsmlb:MappedFeature&amp;count=10&amp;startindex=9999">http://localhost:8080/geoserver/wfs?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;namespaces=xmlns(gsmlb,http%3A%2F%2Fwww.opengis.net%2Fgsml%2F4.1%2FGeoSciML-Basic)&amp;typeNames=gsmlb:MappedFeature&amp;count=10&amp;startindex=9999</a> - Get features 10000 to 10010</p></li>
+</ul>
+<p>(At the time of writing the response is not fully WFS 2.0 compliant as the returned collection only returns a link to retrieve the previous set of results, not to the next set of results. However, a client that can formulate the paged queries should be able to work these out itself.)</p>
+<p>You can also obtain WFS responses by using the <a class="reference external" href="http://localhost:8080/geoserver/web/?wicket:bookmarkablePage=:org.geoserver.web.demo.DemoRequestsPage">Demo requests</a> page in the GeoServer web interface. You can select some of the example age and lithology queries that are supplied with the example data directory from the request drop-down list or put <code class="docutils literal notranslate"><span class="pre">http://localhost:8080/geoserver/ows</span></code> into the service URL section and try pasting in your own queries. Some of the examples are reproduced below with their names as listed on the demo queries page.</p>
+<figure class="align-default">
+<img alt="../../_images/geoserver_demo_requests.jpeg" src="../../_images/geoserver_demo_requests.jpeg" />
+</figure>
+<p>A query for mapped features showing outcrops of geologic units of a particular age</p>
+<p><code class="docutils literal notranslate"><span class="pre">WFS_getFeature1GCgiAge.xml</span></code> (Use <code class="docutils literal notranslate"><span class="pre">WFS_getFeature1GInspireAge.xml</span></code> if you have chosen the INSPIRE configuration.)</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;wfs:GetFeature</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+ <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://www.opengis.net/wfs/2.0 http://schemas.opengis.net/wfs/2.0/wfs.xsd&quot;</span>
+ <span class="na">xmlns:wfs=</span><span class="s">&quot;http://www.opengis.net/wfs/2.0&quot;</span> 
+ <span class="na">xmlns:fes=</span><span class="s">&quot;http://www.opengis.net/fes/2.0&quot;</span>
+ <span class="na">xmlns:gsmlb=</span><span class="s">&quot;http://www.opengis.net/gsml/4.1/GeoSciML-Basic&quot;</span>
+ <span class="na">xmlns:xlink=</span><span class="s">&quot;http://www.w3.org/1999/xlink&quot;</span>
+ <span class="na">service=</span><span class="s">&quot;WFS&quot;</span> <span class="na">version=</span><span class="s">&quot;2.0.0&quot;</span> <span class="na">count=</span><span class="s">&quot;100&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;wfs:Query</span> <span class="na">typeNames=</span><span class="s">&quot;gsmlb:MappedFeature&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;fes:Filter&gt;</span>
+   <span class="nt">&lt;fes:Or&gt;</span>
+    <span class="nt">&lt;fes:PropertyIsEqualTo&gt;</span>
+     <span class="nt">&lt;fes:ValueReference&gt;</span>gsmlb:specification/gsmlb:GeologicUnit/gsmlb:geologicHistory/gsmlb:GeologicEvent/gsmlb:youngerNamedAge/@xlink:href<span class="nt">&lt;/fes:ValueReference&gt;</span>
+     <span class="nt">&lt;fes:Literal&gt;</span>http://resource.geosciml.org/classifier/ics/ischart/LowerDevonian<span class="nt">&lt;/fes:Literal&gt;</span>
+    <span class="nt">&lt;/fes:PropertyIsEqualTo&gt;</span>
+    <span class="nt">&lt;fes:PropertyIsEqualTo&gt;</span>
+     <span class="nt">&lt;fes:ValueReference&gt;</span>gsmlb:specification/gsmlb:GeologicUnit/gsmlb:geologicHistory/gsmlb:GeologicEvent/gsmlb:youngerNamedAge/@xlink:href<span class="nt">&lt;/fes:ValueReference&gt;</span>
+     <span class="nt">&lt;fes:Literal&gt;</span>http://resource.geosciml.org/classifier/ics/ischart/Emsian<span class="nt">&lt;/fes:Literal&gt;</span>
+    <span class="nt">&lt;/fes:PropertyIsEqualTo&gt;</span>
+    <span class="nt">&lt;fes:PropertyIsEqualTo&gt;</span>
+     <span class="nt">&lt;fes:ValueReference&gt;</span>gsmlb:specification/gsmlb:GeologicUnit/gsmlb:geologicHistory/gsmlb:GeologicEvent/gsmlb:youngerNamedAge/@xlink:href<span class="nt">&lt;/fes:ValueReference&gt;</span>
+     <span class="nt">&lt;fes:Literal&gt;</span>http://resource.geosciml.org/classifier/ics/ischart/Lochkovian<span class="nt">&lt;/fes:Literal&gt;</span>
+    <span class="nt">&lt;/fes:PropertyIsEqualTo&gt;</span>
+    <span class="nt">&lt;fes:PropertyIsEqualTo&gt;</span>
+     <span class="nt">&lt;fes:ValueReference&gt;</span>gsmlb:specification/gsmlb:GeologicUnit/gsmlb:geologicHistory/gsmlb:GeologicEvent/gsmlb:youngerNamedAge/@xlink:href<span class="nt">&lt;/fes:ValueReference&gt;</span>
+     <span class="nt">&lt;fes:Literal&gt;</span>http://resource.geosciml.org/classifier/ics/ischart/Pragian<span class="nt">&lt;/fes:Literal&gt;</span>
+    <span class="nt">&lt;/fes:PropertyIsEqualTo&gt;</span>
+   <span class="nt">&lt;/fes:Or&gt;</span>
+  <span class="nt">&lt;/fes:Filter&gt;</span>
+ <span class="nt">&lt;/wfs:Query&gt;</span>
+<span class="nt">&lt;/wfs:GetFeature&gt;</span>
+</pre></div>
+</div>
+<p>A OneGeology query for mapped features showing outcrops of geological units with particular lithologies</p>
+<p><code class="docutils literal notranslate"><span class="pre">WFS_getFeature1GCgiLith.xml</span></code> (Use <code class="docutils literal notranslate"><span class="pre">WFS_getFeature1GInspireLith.xml</span></code> if you have chosen the INSPIRE configuration.)</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;wfs:GetFeature</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+ <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://www.opengis.net/wfs/2.0 http://schemas.opengis.net/wfs/2.0/wfs.xsd&quot;</span>
+ <span class="na">xmlns:wfs=</span><span class="s">&quot;http://www.opengis.net/wfs/2.0&quot;</span> 
+ <span class="na">xmlns:fes=</span><span class="s">&quot;http://www.opengis.net/fes/2.0&quot;</span>
+ <span class="na">xmlns:gsmlb=</span><span class="s">&quot;http://www.opengis.net/gsml/4.1/GeoSciML-Basic&quot;</span>
+ <span class="na">xmlns:xlink=</span><span class="s">&quot;http://www.w3.org/1999/xlink&quot;</span>
+ <span class="na">service=</span><span class="s">&quot;WFS&quot;</span> <span class="na">version=</span><span class="s">&quot;2.0.0&quot;</span> <span class="na">count=</span><span class="s">&quot;100&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;wfs:Query</span> <span class="na">typeNames=</span><span class="s">&quot;gsmlb:MappedFeature&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;fes:Filter&gt;</span>
+   <span class="nt">&lt;fes:Or&gt;</span>
+    <span class="nt">&lt;fes:PropertyIsEqualTo&gt;</span>
+     <span class="nt">&lt;fes:ValueReference&gt;</span>gsmlb:specification/gsmlb:GeologicUnit/gsmlb:composition/gsmlb:CompositionPart/gsmlb:material/gsmlb:RockMaterial/gsmlb:lithology/@xlink:href<span class="nt">&lt;/fes:ValueReference&gt;</span>
+     <span class="nt">&lt;fes:Literal&gt;</span>http://resource.geosciml.org/classifier/cgi/lithology/limestone<span class="nt">&lt;/fes:Literal&gt;</span>
+    <span class="nt">&lt;/fes:PropertyIsEqualTo&gt;</span>
+    <span class="nt">&lt;fes:PropertyIsEqualTo&gt;</span>
+     <span class="nt">&lt;fes:ValueReference&gt;</span>gsmlb:specification/gsmlb:GeologicUnit/gsmlb:composition/gsmlb:CompositionPart/gsmlb:material/gsmlb:RockMaterial/gsmlb:lithology/@xlink:href<span class="nt">&lt;/fes:ValueReference&gt;</span>
+     <span class="nt">&lt;fes:Literal&gt;</span>http://resource.geosciml.org/classifier/cgi/lithology/chalk<span class="nt">&lt;/fes:Literal&gt;</span>
+    <span class="nt">&lt;/fes:PropertyIsEqualTo&gt;</span>
+    <span class="nt">&lt;fes:PropertyIsEqualTo&gt;</span>
+     <span class="nt">&lt;fes:ValueReference&gt;</span>gsmlb:specification/gsmlb:GeologicUnit/gsmlb:composition/gsmlb:CompositionPart/gsmlb:material/gsmlb:RockMaterial/gsmlb:lithology/@xlink:href<span class="nt">&lt;/fes:ValueReference&gt;</span>
+     <span class="nt">&lt;fes:Literal&gt;</span>http://resource.geosciml.org/classifier/cgi/lithology/travertine<span class="nt">&lt;/fes:Literal&gt;</span>
+    <span class="nt">&lt;/fes:PropertyIsEqualTo&gt;</span>
+   <span class="nt">&lt;/fes:Or&gt;</span>
+  <span class="nt">&lt;/fes:Filter&gt;</span>
+ <span class="nt">&lt;/wfs:Query&gt;</span>
+<span class="nt">&lt;/wfs:GetFeature&gt;</span>
+</pre></div>
+</div>
+<p>A bounding box query to retrieve mapped features with shapes that overlap the specified bounding box</p>
+<p><code class="docutils literal notranslate"><span class="pre">WFS_getFeature1GBBOX.xml</span></code></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;wfs:GetFeature</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+ <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://www.opengis.net/wfs/2.0 http://schemas.opengis.net/wfs/2.0/wfs.xsd</span>
+<span class="s"> http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd&quot;</span>
+ <span class="na">xmlns:wfs=</span><span class="s">&quot;http://www.opengis.net/wfs/2.0&quot;</span> 
+ <span class="na">xmlns:fes=</span><span class="s">&quot;http://www.opengis.net/fes/2.0&quot;</span>
+ <span class="na">xmlns:gsmlb=</span><span class="s">&quot;http://www.opengis.net/gsml/4.1/GeoSciML-Basic&quot;</span>
+ <span class="na">xmlns:gml=</span><span class="s">&quot;http://www.opengis.net/gml/3.2&quot;</span>
+ <span class="na">service=</span><span class="s">&quot;WFS&quot;</span> <span class="na">version=</span><span class="s">&quot;2.0.0&quot;</span> <span class="na">count=</span><span class="s">&quot;100&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;wfs:Query</span> <span class="na">typeNames=</span><span class="s">&quot;gsmlb:MappedFeature&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;fes:Filter&gt;</span>
+   <span class="nt">&lt;fes:BBOX&gt;</span>
+    <span class="nt">&lt;fes:ValueReference&gt;</span>gsmlb:shape<span class="nt">&lt;/fes:ValueReference&gt;</span>
+    <span class="nt">&lt;gml:Envelope</span> <span class="na">srsName=</span><span class="s">&quot;urn:ogc:def:crs:EPSG::4326&quot;</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;gml:lowerCorner&gt;</span>56.08643859340388 -4.0004826736994445<span class="nt">&lt;/gml:lowerCorner&gt;</span>
+     <span class="nt">&lt;gml:upperCorner&gt;</span>56.165510496146474 -3.8381055732299343<span class="nt">&lt;/gml:upperCorner&gt;</span>
+    <span class="nt">&lt;/gml:Envelope&gt;</span>
+   <span class="nt">&lt;/fes:BBOX&gt;</span>
+  <span class="nt">&lt;/fes:Filter&gt;</span>
+ <span class="nt">&lt;/wfs:Query&gt;</span>
+<span class="nt">&lt;/wfs:GetFeature&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>App-schema cannot be configured using the web interface, you will need to edit the configuration files directly. You will see the configured workspaces and stores appear in the web interface but not the layers (features). The properties that can be edited in the web interface are very limited.</p>
+</div>
+</section>
+</section>
+<section id="id14">
+<h3>INSPIRE Extended Capabilities<a class="headerlink" href="#id14" title="Permalink to this headline"></a></h3>
+<p>If you are providing an INSPIRE download service you will need to provide the extra INSPIRE mandated metadata in the WFS GetCapabilities response. GeoServer enables you to configure a scenario 1 style extended capabilities section. All INSPIRE specific requirements are optional for OneGeology use but will work as OneGeology services.</p>
+<p>As described in the <a class="reference external" href="http://docs.geoserver.org/latest/en/user/extensions/inspire/using.html">plugin documentation</a> you should find a section in the WFS service settings of the administration interface where you can choose a language, enter a service metadata URL and type and add one or more spatial dataset identifiers. For guidance on what to enter in these settings see the <a class="reference external" href="https://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-download-services">Technical Guidance for the implementation of INSPIRE Download Services</a>.</p>
+<p>Check that the GetCapabilities responses contain your edited values.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The plugin GUI only has two non-empty values for the Service Metadata Type: “Online ISO 19139 ServiceMetadata document” sets the MIME type to <code class="docutils literal notranslate"><span class="pre">application/vnd.iso.19139+xml</span></code>, “CSW GetRecord by ID request” sets the MIME type to <code class="docutils literal notranslate"><span class="pre">application/vnd.ogc.csw.GetRecordByIdResponse_xml</span></code>. If neither of these correspond to the actual MIME type of your metadata resource you could omit this element by choosing the blank option or work around it by manually editing the wfs.xml file inside the GeoServer data directory as documented in issue <a class="reference external" href="https://osgeo-org.atlassian.net/browse/GEOS-5157">GEOS-5157</a> . As it isn’t clear what a client would do with this information anyway, leaving it blank seems to be a good option.</p>
+</div>
+</section>
+<section id="inspire-pre-defined-dataset-download">
+<h3>INSPIRE Pre-defined Dataset Download<a class="headerlink" href="#inspire-pre-defined-dataset-download" title="Permalink to this headline"></a></h3>
+<p>If you decide that you are going to provide an INSPIRE pre-defined dataset download service direct from your WFS rather than pre-generating the full datasets and just providing links to the download through ATOM then you can do this by creating a Stored Query such as the one below. The example data directory includes the CreateStoredQuery command in the Demos examples.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;wfs:CreateStoredQuery</span>
+ <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+ <span class="na">xsi:schemaLocation=</span>
+  <span class="s">&quot;http://www.opengis.net/wfs/2.0</span>
+<span class="s">   http://schemas.opengis.net/wfs/2.0/wfs.xsd&quot;</span>
+ <span class="na">xmlns:gsmlb=</span><span class="s">&quot;http://www.opengis.net/gsml/4.1/GeoSciML-Basic&quot;</span>
+ <span class="na">xmlns:fes=</span><span class="s">&quot;http://www.opengis.org/fes/2.0&quot;</span>
+ <span class="na">xmlns:wfs=</span><span class="s">&quot;http://www.opengis.net/wfs/2.0&quot;</span>
+ <span class="na">xmlns:gml=</span><span class="s">&quot;http://www.opengis.net/gml/3.2&quot;</span>
+ <span class="na">xmlns:xsd=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema&quot;</span>
+ <span class="na">service=</span><span class="s">&quot;WFS&quot;</span>
+ <span class="na">version=</span><span class="s">&quot;2.0.0&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;wfs:StoredQueryDefinition</span>
+  <span class="na">id=</span><span class="s">&#39;http://inspire.ec.europa.eu/operation/download/GetSpatialDataSet&#39;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;wfs:Parameter</span> <span class="na">name=</span><span class="s">&#39;CRS&#39;</span> <span class="na">type=</span><span class="s">&#39;xsd:string&#39;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;wfs:Parameter</span> <span class="na">name=</span><span class="s">&#39;DataSetIdCode&#39;</span> <span class="na">type=</span><span class="s">&#39;xsd:string&#39;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;wfs:Parameter</span> <span class="na">name=</span><span class="s">&#39;DataSetIdNamespace&#39;</span> <span class="na">type=</span><span class="s">&#39;xsd:string&#39;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;wfs:Parameter</span> <span class="na">name=</span><span class="s">&#39;Language&#39;</span> <span class="na">type=</span><span class="s">&#39;xsd:string&#39;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;wfs:Parameter</span> <span class="na">name=</span><span class="s">&quot;count&quot;</span> <span class="na">type=</span><span class="s">&quot;xsd:integer&quot;</span><span class="nt">&gt;&lt;/wfs:Parameter&gt;</span>
+  <span class="nt">&lt;wfs:QueryExpressionText</span>
+   <span class="na">returnFeatureTypes=</span><span class="s">&#39;gsmlb:MappedFeature&#39;</span>
+   <span class="na">language=</span><span class="s">&#39;urn:ogc:def:queryLanguage:OGC-WFS::WFS_QueryExpression&#39;</span>
+   <span class="na">isPrivate=</span><span class="s">&#39;false&#39;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;wfs:Query</span> <span class="na">typeNames=</span><span class="s">&#39;gsmlb:MappedFeature&#39;</span> <span class="na">srsName=</span><span class="s">&quot;${CRS}&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;/wfs:Query&gt;</span>
+  <span class="nt">&lt;/wfs:QueryExpressionText&gt;</span>
+ <span class="nt">&lt;/wfs:StoredQueryDefinition&gt;</span>
+<span class="nt">&lt;/wfs:CreateStoredQuery&gt;</span>
+</pre></div>
+</div>
+<p>This can then be invoked with a request like:</p>
+<blockquote>
+<div><p><a class="reference external" href="http://localhost:8080/geoserver/ows?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;storedquery_id=http://inspire.ec.europa.eu/operation/download/GetSpatialDataSet&amp;DataSetIdCode=13603180&amp;DataSetIdNamespace=http://data.bgs.ac.uk/id/dataHolding/&amp;CRS=urn:ogc:def:crs:EPSG::4326&amp;Language=eng&amp;count=20&amp;">http://localhost:8080/geoserver/ows?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;storedquery_id=http://inspire.ec.europa.eu/operation/download/GetSpatialDataSet&amp;DataSetIdCode=13603180&amp;DataSetIdNamespace=http://data.bgs.ac.uk/id/dataHolding/&amp;CRS=urn:ogc:def:crs:EPSG::4326&amp;Language=eng&amp;count=20&amp;</a></p>
+</div></blockquote>
+</section>
+<section id="app-schema-properties">
+<h3>app-schema.properties<a class="headerlink" href="#app-schema-properties" title="Permalink to this headline"></a></h3>
+<p>This file (in the <code class="docutils literal notranslate"><span class="pre">WEB-INF/classes</span></code> directory) is not strictly required but is very useful for storing certain configuration parameters that will be re-used in different parts of the other configuration files and for storing configuration parameters like database usernames and passwords outside of the GeoServer data directory so that the latter can be copied freely. The <a class="reference external" href="http://docs.geoserver.org/stable/en/user/data/app-schema/property-interpolation.html">Property Interpolation</a> section of the GeoServer manual contains more information on how properties can be set and used in other parts of the configuration files. In the reference configuration files this contains database connection parameters, some commonly used URI values and the setting to turn on <a class="reference external" href="http://docs.geoserver.org/stable/en/user/data/app-schema/joining.html">joining</a>. In fact with current versions of GeoServer (certainly pre-dating v2.4.5) joining is turned on by default and is the recommended setting. There may be some limited situations as described in the <a class="reference external" href="http://docs.geoserver.org/stable/en/user/data/app-schema/joining.html">joining documentation</a>, however, when you need to switch this off. The cookbook example also uses property interpolation to set database column name prefixes to choose whether to use columns that include CGI URI values or INSPIRE URI values.</p>
+</section>
+<section id="data-directory">
+<h3>Data directory<a class="headerlink" href="#data-directory" title="Permalink to this headline"></a></h3>
+<p>The example configuration files can be copied into an existing GeoServer data directory so that you can get a working service to try out up and running as quickly as possible. The parts relevant for configuration of a complex feature WFS are contained in the <code class="docutils literal notranslate"><span class="pre">workspaces</span></code> directory described in the next section. Other parts of your service configuration like service metadata, security etc. can be set up using the web interface. Thus, when you come to set up your own service, you will probably start with the default GeoServer data directory, configure service metadata etc. in the web interface, and copy the complex feature configuration files from the reference <code class="docutils literal notranslate"><span class="pre">data/workspaces</span></code> directory to your own data directory for editing there.</p>
+</section>
+<section id="workspace-layout">
+<h3>Workspace layout<a class="headerlink" href="#workspace-layout" title="Permalink to this headline"></a></h3>
+<p>The files for configuring complex feature output are contained in the <code class="docutils literal notranslate"><span class="pre">data/workspaces</span></code> directory. Inside this directory there is a sub-directory for each namespace of features you will be serving and other namespaces that these features may use somewhere in their content. In the example this includes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>workspaces
+├── base
+├── gco
+├── ge
+├── gmd
+├── gml
+├── gsml
+├── gsmlb
+├── gsmlem
+├── gsmlga
+├── gsmlgs
+├── gsmlgu
+├── gsmlu
+├── swe
+└── xlink
+</pre></div>
+</div>
+<p>These cover all the namespaces used by features in the example data set. If you use different application schemas or even additional GeoSciML packages such as boreholes, you will need to create similar directories for the namespaces used in those schemas. The <code class="docutils literal notranslate"><span class="pre">gsmlb</span></code> directory contains mappings to create MappedFeature, GeologicUnit and ShearDisplacementStructure features using the GeoSciML v4.1 Basic package. The <code class="docutils literal notranslate"><span class="pre">ge</span></code> and <code class="docutils literal notranslate"><span class="pre">base</span></code> directories contain mappings to create features conforming to the <a class="reference internal" href="#inspire-geology-schema"><span class="std std-ref">INSPIRE Geology Theme Schema</span></a>. The other <code class="docutils literal notranslate"><span class="pre">gsml*</span></code> directories contain mappings using the older (and more complex) GeoSciML v3.2. The remaining directories are for namespaces that are imported by the others.</p>
+<p>The example configuration defines 2 feature types to be served by the WFS. Their configurations are stored in data store sub-directories of the appropriate namespace directory and are named according to the pattern <code class="docutils literal notranslate"><span class="pre">prefix_Feature</span></code> for a feature <code class="docutils literal notranslate"><span class="pre">prefix::Feature</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>workspaces
+├── base
+├── gco
+├── ge
+├── gmd
+├── gml
+├── gsml
+├── gsmlb
+│   └── gsmlb_GeologicUnit
+│   └── gsmlb_MappedFeature
+│   └── gsmlb_ShearDisplacementStructure
+├── gsmlem
+├── gsmlga
+├── gsmlgs
+├── gsmlgu
+├── gsmlu
+├── swe
+└── xlink
+</pre></div>
+</div>
+<p>Each of the data store directories contains files similar to the following example for <code class="docutils literal notranslate"><span class="pre">gsmlb::MappedFeature</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>gsmlb_MappedFeature
+├── AppSchemaDataAccess.xsd
+├── datastore.xml
+├── gsmlb_MappedFeature
+│   └── featuretype.xml
+└── gsmlb_MappedFeature.xml
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">AppSchemaDataAccess.xsd</span></code> file isn’t used for the configuration, it is just provided as a convenience when you are editing a mapping file such as <code class="docutils literal notranslate"><span class="pre">gsmlb_MappedFeature.xml</span></code> to allow a validating XML editor to give you hints that you have the structure of the file correct. The following sections will describe the <code class="docutils literal notranslate"><span class="pre">datastore.xml</span></code> file which creates an application schema data store and specifies the mapping file described in the section after which contains the substantive portion of the configuration mapping source data fields to output in the complex feature types.</p>
+</section>
+<section id="datastore-xml">
+<h3>datastore.xml<a class="headerlink" href="#datastore-xml" title="Permalink to this headline"></a></h3>
+<p>Each data store configuration file <code class="docutils literal notranslate"><span class="pre">datastore.xml</span></code> specifies the location of a mapping file and triggers its loading as an app-schema data source. This file should not be confused with the source data store, which is specified inside the mapping file.</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">gsmlb:MappedFeature</span></code> the file is <code class="docutils literal notranslate"><span class="pre">workspaces/gsmlb/gsmlb_MappedFeature/datastore.xml</span></code></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;dataStore&gt;</span>
+ <span class="nt">&lt;id&gt;</span>gsmlb_MappedFeature_datastore<span class="nt">&lt;/id&gt;</span>
+ <span class="nt">&lt;name&gt;</span>gsmlb_MappedFeature<span class="nt">&lt;/name&gt;</span>
+ <span class="nt">&lt;enabled&gt;</span>true<span class="nt">&lt;/enabled&gt;</span>
+ <span class="nt">&lt;workspace&gt;</span>
+  <span class="nt">&lt;id&gt;</span>gsmlb_workspace<span class="nt">&lt;/id&gt;</span>
+ <span class="nt">&lt;/workspace&gt;</span>
+ <span class="nt">&lt;connectionParameters&gt;</span>
+  <span class="nt">&lt;entry</span> <span class="na">key=</span><span class="s">&quot;namespace&quot;</span><span class="nt">&gt;</span>http://www.opengis.net/gsml/4.1/GeoSciML-Basic<span class="nt">&lt;/entry&gt;</span>
+  <span class="nt">&lt;entry</span> <span class="na">key=</span><span class="s">&quot;url&quot;</span><span class="nt">&gt;</span>file:workspaces/gsmlb/gsmlb_MappedFeature/gsmlb_MappedFeature.xml<span class="nt">&lt;/entry&gt;</span>
+  <span class="nt">&lt;entry</span> <span class="na">key=</span><span class="s">&quot;dbtype&quot;</span><span class="nt">&gt;</span>app-schema<span class="nt">&lt;/entry&gt;</span>
+ <span class="nt">&lt;/connectionParameters&gt;</span>
+<span class="nt">&lt;/dataStore&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ensure that there is no whitespace inside an <code class="docutils literal notranslate"><span class="pre">entry</span></code> element.</p>
+</div>
+<p>For other feature types the pattern is the same where you replace the names and ids appropriately and change the namespace if necessary. The url entry is a file: URI pointing to the location of the mapping file relative to the GeoServer data directory. The dbtype entry will always be app-schema to define complex feature types.</p>
+</section>
+<section id="mapping-files">
+<h3>Mapping files<a class="headerlink" href="#mapping-files" title="Permalink to this headline"></a></h3>
+<p>Configuration of app-schema feature types is performed in mapping files e.g.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">workspaces/gsmlb/gsmlb_GeologicUnit/gsmlb_GeologicUnit.xml</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workspaces/gsmlb/gsmlb_MappedFeature/gsmlb_MappedFeature.xml</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workspaces/gsmlb/gsmlb_ShearDisplacementStructure/gsmlb_ShearDisplacementStructure.xml</span></code></p></li>
+</ul>
+<section id="namespaces">
+<h4>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline"></a></h4>
+<p>Each mapping file contains namespace prefix definitions. The below extract is from <code class="docutils literal notranslate"><span class="pre">gsmlb_MappedFeature.xml</span></code></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;namespaces&gt;</span>
+ <span class="nt">&lt;Namespace&gt;</span>
+  <span class="nt">&lt;prefix&gt;</span>gml<span class="nt">&lt;/prefix&gt;&lt;uri&gt;</span>http://www.opengis.net/gml/3.2<span class="nt">&lt;/uri&gt;</span>
+ <span class="nt">&lt;/Namespace&gt;</span>
+ <span class="nt">&lt;Namespace&gt;</span>
+  <span class="nt">&lt;prefix&gt;</span>gsmlb<span class="nt">&lt;/prefix&gt;&lt;uri&gt;</span>http://www.opengis.net/gsml/4.1/GeoSciML-Basic<span class="nt">&lt;/uri&gt;</span>
+ <span class="nt">&lt;/Namespace&gt;</span>
+ <span class="nt">&lt;Namespace&gt;</span>
+  <span class="nt">&lt;prefix&gt;</span>swe<span class="nt">&lt;/prefix&gt;&lt;uri&gt;</span>http://www.opengis.net/swe/2.0<span class="nt">&lt;/uri&gt;</span>
+ <span class="nt">&lt;/Namespace&gt;</span>
+ <span class="nt">&lt;Namespace&gt;</span>
+  <span class="nt">&lt;prefix&gt;</span>xlink<span class="nt">&lt;/prefix&gt;&lt;uri&gt;</span>http://www.w3.org/1999/xlink<span class="nt">&lt;/uri&gt;</span>
+ <span class="nt">&lt;/Namespace&gt;</span>
+ <span class="nt">&lt;Namespace&gt;</span>
+  <span class="nt">&lt;prefix&gt;</span>xsi<span class="nt">&lt;/prefix&gt;&lt;uri&gt;</span>http://www.w3.org/2001/XMLSchema-instance<span class="nt">&lt;/uri&gt;</span>
+ <span class="nt">&lt;/Namespace&gt;</span>
+<span class="nt">&lt;/namespaces&gt;</span>
+</pre></div>
+</div>
+<p>Only those namespace prefixes used in the mapping file need to be declared although you may find it easier just to put all the namespaces used by your target schema in all of them.</p>
+</section>
+<section id="source-data-store">
+<h4>Source data store<a class="headerlink" href="#source-data-store" title="Permalink to this headline"></a></h4>
+<p>The data for this tutorial is contained in the PostGIS database set up in the previous section.</p>
+<p>For this example, each feature type uses an identical source data store configuration. The <code class="docutils literal notranslate"><span class="pre">Parameter</span></code> elements contain values for various database connection parameters. Here we are using <a class="reference external" href="http://docs.geoserver.org/stable/en/user/data/app-schema/property-interpolation.html">property interpolation</a> so that these don’t have to get changed in each mapping file if they change and so that the configuration files can be shared without exposing password information. The values of the interpolated variables (which have the form <code class="docutils literal notranslate"><span class="pre">${name}</span></code>) should be defined in the <code class="docutils literal notranslate"><span class="pre">WEB-INF/classes/app-schema.properties</span></code> file. An example which you can use as a template to fill in with your own values is at <a class="reference external" href="ftp://ftp.bgs.ac.uk/pubload/OneGeology/wfscookbook/app-schema.inspire.YYYY-MM-DD.properties">ftp://ftp.bgs.ac.uk/pubload/OneGeology/wfscookbook/app-schema.inspire.YYYY-MM-DD.properties</a>. (Updated versions will have different dates instead of YYYY-MM-DD. The example service can be configured to use INSPIRE vocabulary values or IUGS-CGI vocabulary values by setting appropriate variables in this file.)</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;sourceDataStores&gt;</span>
+ <span class="nt">&lt;DataStore&gt;</span>
+  <span class="nt">&lt;id&gt;</span>datastore<span class="nt">&lt;/id&gt;</span>
+  <span class="nt">&lt;parameters&gt;</span>
+   <span class="nt">&lt;Parameter&gt;</span>
+    <span class="nt">&lt;name&gt;</span>dbtype<span class="nt">&lt;/name&gt;&lt;value&gt;</span>${cgi.dbtype}<span class="nt">&lt;/value&gt;</span>
+   <span class="nt">&lt;/Parameter&gt;</span>
+   <span class="cm">&lt;!--</span>
+<span class="cm">   &lt;Parameter&gt;</span>
+<span class="cm">    &lt;name&gt;jndiReferenceName&lt;/name&gt;&lt;value&gt;${cgi.jndi}&lt;/value&gt;</span>
+<span class="cm">   &lt;/Parameter&gt;</span>
+<span class="cm">   --&gt;</span>
+   <span class="nt">&lt;Parameter&gt;</span>
+    <span class="nt">&lt;name&gt;</span>host<span class="nt">&lt;/name&gt;&lt;value&gt;</span>${cgi.host}<span class="nt">&lt;/value&gt;</span>
+   <span class="nt">&lt;/Parameter&gt;</span>
+   <span class="nt">&lt;Parameter&gt;</span>
+    <span class="nt">&lt;name&gt;</span>port<span class="nt">&lt;/name&gt;&lt;value&gt;</span>${cgi.port}<span class="nt">&lt;/value&gt;</span>
+   <span class="nt">&lt;/Parameter&gt;</span>
+   <span class="nt">&lt;Parameter&gt;</span>
+    <span class="nt">&lt;name&gt;</span>database<span class="nt">&lt;/name&gt;&lt;value&gt;</span>${cgi.database}<span class="nt">&lt;/value&gt;</span>
+   <span class="nt">&lt;/Parameter&gt;</span>
+   <span class="nt">&lt;Parameter&gt;</span>
+    <span class="nt">&lt;name&gt;</span>user<span class="nt">&lt;/name&gt;&lt;value&gt;</span>${cgi.user}<span class="nt">&lt;/value&gt;</span>
+   <span class="nt">&lt;/Parameter&gt;</span>
+   <span class="nt">&lt;Parameter&gt;</span>
+    <span class="nt">&lt;name&gt;</span>passwd<span class="nt">&lt;/name&gt;&lt;value&gt;</span>${cgi.passwd}<span class="nt">&lt;/value&gt;</span>
+   <span class="nt">&lt;/Parameter&gt;</span>
+   <span class="nt">&lt;Parameter&gt;</span>
+    <span class="nt">&lt;name&gt;</span>schema<span class="nt">&lt;/name&gt;&lt;value&gt;</span>${cgi.schema}<span class="nt">&lt;/value&gt;</span>
+   <span class="nt">&lt;/Parameter&gt;</span>
+   <span class="nt">&lt;Parameter&gt;</span>
+    <span class="nt">&lt;name&gt;</span>Expose primary keys<span class="nt">&lt;/name&gt;&lt;value&gt;</span>true<span class="nt">&lt;/value&gt;</span>
+   <span class="nt">&lt;/Parameter&gt;</span>
+  <span class="nt">&lt;/parameters&gt;</span>
+ <span class="nt">&lt;/DataStore&gt;</span>
+<span class="nt">&lt;/sourceDataStores&gt;</span>
+</pre></div>
+</div>
+<p>See <a class="reference external" href="http://docs.geoserver.org/stable/en/user/data/app-schema/data-stores.html">http://docs.geoserver.org/stable/en/user/data/app-schema/data-stores.html</a> for a description of how to use other types of data store.</p>
+</section>
+<section id="target-types">
+<h4>Target types<a class="headerlink" href="#target-types" title="Permalink to this headline"></a></h4>
+<p>The XML Schemas which are required to define a feature type and its properties are specified in the <code class="docutils literal notranslate"><span class="pre">targetTypes</span></code> section. The type of the output feature is defined in <code class="docutils literal notranslate"><span class="pre">targetElement</span></code> in the <code class="docutils literal notranslate"><span class="pre">typeMapping</span></code> section. The below example is from <code class="docutils literal notranslate"><span class="pre">gsmlb_MappedFeature.xml</span></code></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;targetTypes&gt;</span>
+ <span class="nt">&lt;FeatureType&gt;</span>
+  <span class="nt">&lt;schemaUri&gt;</span>
+   http://schemas.opengis.net/gsml/4.1/geoSciMLBasic.xsd
+  <span class="nt">&lt;/schemaUri&gt;</span>
+ <span class="nt">&lt;/FeatureType&gt;</span>
+<span class="nt">&lt;/targetTypes&gt;</span>
+</pre></div>
+</div>
+<p>In this case the schema is published, but because the OASIS XML Catalog is used for schema resolution, a private or modified schema in the catalog can be used if desired.</p>
+</section>
+<section id="mappings">
+<h4>Mappings<a class="headerlink" href="#mappings" title="Permalink to this headline"></a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">typeMappings</span></code> element begins with configuration elements. From <code class="docutils literal notranslate"><span class="pre">gsmlb_MappedFeature.xml</span></code></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;typeMappings&gt;</span>
+ <span class="nt">&lt;FeatureTypeMapping&gt;</span>
+  <span class="nt">&lt;sourceDataStore&gt;</span>datastore<span class="nt">&lt;/sourceDataStore&gt;</span>
+  <span class="nt">&lt;sourceType&gt;</span>mapped_feature_gu<span class="nt">&lt;/sourceType&gt;</span>
+  <span class="nt">&lt;targetElement&gt;</span>gsmlb:MappedFeature<span class="nt">&lt;/targetElement&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>The mapping starts with <code class="docutils literal notranslate"><span class="pre">sourceDataStore</span></code>, which gives the arbitrary identifier used above to name the source of the input data in the <code class="docutils literal notranslate"><span class="pre">sourceDataStores</span></code> section.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceType</span></code> gives the name of the source simple feature type. In this case it is the simple feature type <code class="docutils literal notranslate"><span class="pre">mapped_feature_gu</span></code>, sourced from the table of the same name in the PostGIS database set up in the previous chapter. In versions of the cookbook example configuration since 2016-08-16 this has been changed to point to the view <code class="docutils literal notranslate"><span class="pre">mapped_feature_all</span></code> which includes both outcrop polygons of geologic units and linear fault traces.</p></li>
+<li><p>When working with databases <code class="docutils literal notranslate"><span class="pre">sourceType</span></code> is the name of a table or view. Database identifiers must be lowercase for PostGIS or uppercase for Oracle Spatial.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetElement</span></code> is the name of the output complex feature type.</p></li>
+</ul>
+</section>
+<section id="gml-id-mapping">
+<h4>gml:id mapping<a class="headerlink" href="#gml-id-mapping" title="Permalink to this headline"></a></h4>
+<p>The first mapping sets the <code class="docutils literal notranslate"><span class="pre">gml:id</span></code> to be the feature id specified in the source simple feature property which comes from the database column of the same name.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;AttributeMapping&gt;</span>
+ <span class="nt">&lt;targetAttribute&gt;</span>gsmlb:MappedFeature<span class="nt">&lt;/targetAttribute&gt;</span>
+ <span class="nt">&lt;idExpression&gt;&lt;OCQL&gt;</span>uuid<span class="nt">&lt;/OCQL&gt;&lt;/idExpression&gt;</span>
+<span class="nt">&lt;/AttributeMapping&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">targetAttribute</span></code> is the XPath to the element for which the mapping applies, in this case, the top-level feature type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idExpression</span></code> is a special form that can only be used to set the <code class="docutils literal notranslate"><span class="pre">gml:id</span></code> on a feature. In the tutorial database we have a column <code class="docutils literal notranslate"><span class="pre">uuid</span></code> suitable for use as a <code class="docutils literal notranslate"><span class="pre">gml:id</span></code> attribute value. If your database doesn’t have such a column you may be able to use the special function <code class="docutils literal notranslate"><span class="pre">getId()</span></code> here instead. This will synthesise an id from the table or view name, a dot “.”, and the primary key of the table. If this is not desirable, any other field or CQL expression can be used, if it evaluates to an <a class="reference external" href="http://www.w3.org/TR/1999/REC-xml-names-19990114/#NT-NCName">NCName</a>. In versions of the cookbook example configuration since 2016-08-16 this uses the column <code class="docutils literal notranslate"><span class="pre">mf_id</span></code>.</p></li>
+</ul>
+<p>The above would generate output like</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;gsmlb:MappedFeature</span> <span class="na">gml:id=</span><span class="s">&quot;bgsn_digmap20111213000014089_625k&quot;</span><span class="nt">&gt;</span>
+...
+</pre></div>
+</div>
+</section>
+<section id="inspireid-mapping">
+<h4>inspireId mapping<a class="headerlink" href="#inspireid-mapping" title="Permalink to this headline"></a></h4>
+<p>A common property that many INSPIRE themes will have is an inspireId. An example mapping for this property is contained in the <code class="docutils literal notranslate"><span class="pre">workspaces/ge/ge_GeologicUnit/ge_GeologicUnit.xml</span></code> file. The relevant section is reproduced below</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;AttributeMapping&gt;</span>
+ <span class="nt">&lt;targetAttribute&gt;</span>ge:inspireId/base:Identifier/base:localId<span class="nt">&lt;/targetAttribute&gt;</span>
+ <span class="nt">&lt;sourceExpression&gt;&lt;OCQL&gt;</span>bgs_namedrockunit_uri<span class="nt">&lt;/OCQL&gt;&lt;/sourceExpression&gt;</span>
+<span class="nt">&lt;/AttributeMapping&gt;</span>
+<span class="nt">&lt;AttributeMapping&gt;</span>
+ <span class="nt">&lt;targetAttribute&gt;</span>ge:inspireId/base:Identifier/base:namespace<span class="nt">&lt;/targetAttribute&gt;</span>
+ <span class="nt">&lt;sourceExpression&gt;&lt;OCQL&gt;</span>&#39;http://data.bgs.ac.uk/&#39;<span class="nt">&lt;/OCQL&gt;&lt;/sourceExpression&gt;</span>
+<span class="nt">&lt;/AttributeMapping&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="ordinary-mapping">
+<h4>Ordinary mapping<a class="headerlink" href="#ordinary-mapping" title="Permalink to this headline"></a></h4>
+<p>Most mappings consist of a target and source. Here is a simple property with a text value from <code class="docutils literal notranslate"><span class="pre">gsmlb_GeologicUnit.xml</span></code></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;AttributeMapping&gt;</span>
+ <span class="nt">&lt;targetAttribute&gt;</span>gml:description<span class="nt">&lt;/targetAttribute&gt;</span>
+ <span class="nt">&lt;sourceExpression&gt;</span>
+  <span class="nt">&lt;OCQL&gt;</span>description<span class="nt">&lt;/OCQL&gt;</span>
+ <span class="nt">&lt;/sourceExpression&gt;</span>
+<span class="nt">&lt;/AttributeMapping&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>In this case, the value of <code class="docutils literal notranslate"><span class="pre">gml:description</span></code> is just the value of the <code class="docutils literal notranslate"><span class="pre">description</span></code> column in the <code class="docutils literal notranslate"><span class="pre">geol_unit</span></code> table.</p></li>
+<li><p>For a database, the field name is the name of the column (the table/view is set in <code class="docutils literal notranslate"><span class="pre">sourceType</span></code> above). Database identifiers must be lowercase for PostGIS or uppercase for Oracle Spatial.</p></li>
+<li><p>CQL expressions can be used to calculate content. Use caution because queries on CQL-calculated values prevent the construction of efficient SQL queries.</p></li>
+<li><p>Source expressions can be CQL literals, which are single-quoted.</p></li>
+</ul>
+<p>The above would generate output like</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;gml:description&gt;</span>STRATHCLYDE GROUP - SEDIMENTARY ROCK CYCLES,
+ STRATHCLYDE GROUP TYPE<span class="nt">&lt;/gml:description&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="client-properties">
+<h4>Client properties<a class="headerlink" href="#client-properties" title="Permalink to this headline"></a></h4>
+<p>In addition to the element content, a mapping can set values of XML attributes on property elements. These are called “client properties” in GeoServer terminology. Here is one from <code class="docutils literal notranslate"><span class="pre">gsmlb_CompositionPart.xml</span></code></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;AttributeMapping&gt;</span>
+ <span class="nt">&lt;targetAttribute&gt;</span>gsmlb:material/gsmlb:RockMaterial/gsmlb:lithology<span class="nt">&lt;/targetAttribute&gt;</span>
+ <span class="nt">&lt;ClientProperty&gt;&lt;name&gt;</span>xlink:href<span class="nt">&lt;/name&gt;&lt;value&gt;</span>${dic.col.prefix}lithology_uri<span class="nt">&lt;/value&gt;&lt;/ClientProperty&gt;</span>
+ <span class="nt">&lt;ClientProperty&gt;&lt;name&gt;</span>xlink:title<span class="nt">&lt;/name&gt;&lt;value&gt;</span>${dic.col.prefix}lithology_label<span class="nt">&lt;/value&gt;&lt;/ClientProperty&gt;</span>
+<span class="nt">&lt;/AttributeMapping&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>This mapping leaves the content of the <code class="docutils literal notranslate"><span class="pre">gsmlb:lithology</span></code> element empty but sets an <code class="docutils literal notranslate"><span class="pre">xlink:href</span></code> attribute to the value of the <code class="docutils literal notranslate"><span class="pre">${dic.col.prefix}lithology_uri</span></code> column and an <code class="docutils literal notranslate"><span class="pre">xlink:title</span></code> attribute to the value of the <code class="docutils literal notranslate"><span class="pre">${dic.col.prefix}lithology_label</span></code> column. Note that in this case the property attributes being set are nested two levels below the parent <code class="docutils literal notranslate"><span class="pre">gsmlb:CompositionPart</span></code>. Note also that we are using property interpolation here to select the exact name of the database column to be used based on a variable set in the app-schema.properties file. This was useful so the example dataset can be configured to use vocabularies from different authorities but is less likely to be useful for your services.</p></li>
+<li><p>As can be seen from this example, multiple <code class="docutils literal notranslate"><span class="pre">ClientProperty</span></code> mappings can be set.</p></li>
+</ul>
+<p>This would generate output like</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;gsmlb:lithology</span>
+ <span class="na">xlink:href=</span>
+  <span class="s">&quot;http://resource.geosciml.org/classifier/cgi/lithology/clastic_mudstone&quot;</span>
+ <span class="na">xlink:title=</span><span class="s">&quot;Mudstone&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="feature-chaining">
+<h4>Feature chaining<a class="headerlink" href="#feature-chaining" title="Permalink to this headline"></a></h4>
+<p>In feature chaining, one feature type is used as a property of an enclosing feature type, by value or by reference. The following examples show the parts of the <code class="docutils literal notranslate"><span class="pre">gsmlb_MappedFeature.xml</span></code> and <code class="docutils literal notranslate"><span class="pre">gsmlb_GeologicUnit.xml</span></code> mapping files that put the gsmlb:GeologicUnit elements inside the gsmlb:specification properties of gsmlb:MappedFeature elements. In versions of the cookbook example since 2016-08-16 the below mapping has been commented out to be replaced by a more complex example described in the next section on Polymorphism.</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">gsmlb_MappedFeature.xml</span></code></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;AttributeMapping&gt;</span>
+ <span class="nt">&lt;targetAttribute&gt;</span>gsmlb:specification<span class="nt">&lt;/targetAttribute&gt;</span>
+ <span class="nt">&lt;sourceExpression&gt;</span>
+  <span class="nt">&lt;OCQL&gt;</span>lex_rcs<span class="nt">&lt;/OCQL&gt;</span>
+  <span class="nt">&lt;linkElement&gt;</span>gsmlb:GeologicUnit<span class="nt">&lt;/linkElement&gt;</span>
+  <span class="nt">&lt;linkField&gt;</span>FEATURE_LINK<span class="nt">&lt;/linkField&gt;</span>
+ <span class="nt">&lt;/sourceExpression&gt;</span>
+<span class="nt">&lt;/AttributeMapping&gt;</span>
+</pre></div>
+</div>
+<p>In <code class="docutils literal notranslate"><span class="pre">gsmlb_GeologicUnit.xml</span></code></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;AttributeMapping&gt;</span>
+ <span class="nt">&lt;targetAttribute&gt;</span>FEATURE_LINK<span class="nt">&lt;/targetAttribute&gt;</span>
+ <span class="nt">&lt;sourceExpression&gt;&lt;OCQL&gt;</span>lex_rcs<span class="nt">&lt;/OCQL&gt;&lt;/sourceExpression&gt;</span>
+<span class="nt">&lt;/AttributeMapping&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>In this case from the mapping for <code class="docutils literal notranslate"><span class="pre">gsmlb:MappedFeature</span></code>, we specify a mapping for its <code class="docutils literal notranslate"><span class="pre">gsmlb:specification</span></code> property.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">linkElement</span></code> specifies which feature (or other complex type) should be used as the value of the property.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">link_specification</span></code> field of the source <code class="docutils literal notranslate"><span class="pre">gsmlb_MappedFeature</span></code> simple feature is use as the “foreign key”, which maps to the special <code class="docutils literal notranslate"><span class="pre">FEATURE_LINK</span></code> field in each <code class="docutils literal notranslate"><span class="pre">gsmlb:GeologicUnit</span></code>.</p></li>
+<li><p>The mapping of the special <code class="docutils literal notranslate"><span class="pre">FEATURE_LINK</span></code> attribute in <code class="docutils literal notranslate"><span class="pre">gsmlb_GeologicUnit.xml</span></code> to the foreign key field of the underlying table means that every <code class="docutils literal notranslate"><span class="pre">gsmlb:GeologicUnit</span></code> with <code class="docutils literal notranslate"><span class="pre">lex_rcs</span></code> equal to the <code class="docutils literal notranslate"><span class="pre">lex_rcs</span></code> of the <code class="docutils literal notranslate"><span class="pre">gsmlb:MappedFeature</span></code> under construction is included as a <code class="docutils literal notranslate"><span class="pre">gsmlb:specification</span></code> property of the <code class="docutils literal notranslate"><span class="pre">gsmlb:MappedFeature</span></code> (by value).</p></li>
+</ul>
+<p>Feature chaining has been used to construct the property <code class="docutils literal notranslate"><span class="pre">gsmlb:specification</span></code> of <code class="docutils literal notranslate"><span class="pre">gsmlb:MappedFeature</span></code>. This property is a <code class="docutils literal notranslate"><span class="pre">gsmlb:GeologicUnit</span></code>. The WFS response for <code class="docutils literal notranslate"><span class="pre">gsmlb:MappedFeature</span></code> combines the output of both feature types into a single response. The first <code class="docutils literal notranslate"><span class="pre">gsmlb:MappedFeature</span></code> has a <code class="docutils literal notranslate"><span class="pre">gsmlb:specification</span></code> property value of the <code class="docutils literal notranslate"><span class="pre">gsmlb:GeologicUnit</span></code> with the same <code class="docutils literal notranslate"><span class="pre">lex_rcs</span></code> code. The next time a mapped feature with the same <code class="docutils literal notranslate"><span class="pre">lex_rcs</span></code> code appears, rather than including the whole geologic unit inline again the property has an xlink:href attribute pointing to the first occurrence. The relationships between the feature instances are data driven.</p>
+</section>
+<section id="polymorphism">
+<h4>Polymorphism<a class="headerlink" href="#polymorphism" title="Permalink to this headline"></a></h4>
+<p>In versions of the cookbook example since 2016-08-16 the above mapping with <code class="docutils literal notranslate"><span class="pre">gsmlb:MappedFeature</span></code>’s pointing to <code class="docutils literal notranslate"><span class="pre">gsmlb:GeologicUnit</span></code>’s has been extended so that <code class="docutils literal notranslate"><span class="pre">gsmlb:MappedFeature/gsmlb:specification</span></code> can contain or point to either a <code class="docutils literal notranslate"><span class="pre">gsmlb:GeologicUnit</span></code> as above or a <code class="docutils literal notranslate"><span class="pre">gsmlb:ShearDisplacementStructure</span></code> (representing a fault). Setting up an attribute to have different forms like this is described in the <a class="reference external" href="http://docs.geoserver.org/stable/en/user/data/app-schema/polymorphism.html">Polymorphism</a> section of the GeoServer manual. The cookbook example implements this by having a column <code class="docutils literal notranslate"><span class="pre">feature_type</span></code> in the <code class="docutils literal notranslate"><span class="pre">mapped_feature_all</span></code> view which indicates whether a row is related to an entry in the <code class="docutils literal notranslate"><span class="pre">geol_unit</span></code> table (for <code class="docutils literal notranslate"><span class="pre">gsmlb:GeologicUnit</span></code> features) or the <code class="docutils literal notranslate"><span class="pre">fault</span></code> table (for <code class="docutils literal notranslate"><span class="pre">gsmlb:ShearDisplacementStructure</span></code> features). It then uses the Recode function to switch between which feature type is the <code class="docutils literal notranslate"><span class="pre">linkElement</span></code> based on the value of this column.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;AttributeMapping&gt;</span>
+ <span class="nt">&lt;targetAttribute&gt;</span>gsml:specification<span class="nt">&lt;/targetAttribute&gt;</span>
+ <span class="nt">&lt;sourceExpression&gt;</span>
+  <span class="nt">&lt;OCQL&gt;</span>specification_id<span class="nt">&lt;/OCQL&gt;</span>
+  <span class="nt">&lt;linkElement&gt;</span>Recode(feature_type, &#39;gu&#39;, &#39;gsmlb:GeologicUnit&#39;, &#39;sds&#39;, &#39;gsmlb:ShearDisplacementStructure&#39;)<span class="nt">&lt;/linkElement&gt;</span>
+  <span class="nt">&lt;linkField&gt;</span>FEATURE_LINK<span class="nt">&lt;/linkField&gt;</span>
+ <span class="nt">&lt;/sourceExpression&gt;</span>
+<span class="nt">&lt;/AttributeMapping&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="inspire-geology-theme-schema">
+<span id="inspire-geology-schema"></span><h4>INSPIRE Geology Theme Schema<a class="headerlink" href="#inspire-geology-theme-schema" title="Permalink to this headline"></a></h4>
+<p>If you want to produce a service with data conforming to the INSPIRE Geology theme schema you can examine the configuration files in the <code class="docutils literal notranslate"><span class="pre">ge</span></code> and <code class="docutils literal notranslate"><span class="pre">base</span></code> directories which were created by copying those in the <code class="docutils literal notranslate"><span class="pre">gsmlb</span></code> directory and changing the namespaces and schema locations. The only parts which needed adding which couldn’t be adapted from the GeoSciML configuration files were those adding mappings for inspireId properties. It should be fairly simple for you to copy your own mapping files from a GeoSciML configuration to produce an INSPIRE Geology theme schema configuration following a similar process.</p>
+</section>
+</section>
+</section>
+<section id="wcs">
+<span id="service-provision-server-setup-geoserver-wcs"></span><h2>WCS<a class="headerlink" href="#wcs" title="Permalink to this headline"></a></h2>
+<section id="exemplar-data-used-in-this-cookbook">
+<h3>Exemplar data used in this cookbook<a class="headerlink" href="#exemplar-data-used-in-this-cookbook" title="Permalink to this headline"></a></h3>
+<p>For the purposes of this cookbook we will use the Bathymetry Multi-colour 3-Band GeoTiffs supplied by the EMODnet project and available for download from the “Portal for Bathymetry” (<a class="reference external" href="http://portal.emodnet-bathymetry.eu/">http://portal.emodnet-bathymetry.eu/</a>)</p>
+</section>
+<section id="metadata-to-be-used-in-configuring-your-service-and-coverages-layers">
+<h3>Metadata to be used in configuring your service and coverages (layers)<a class="headerlink" href="#metadata-to-be-used-in-configuring-your-service-and-coverages-layers" title="Permalink to this headline"></a></h3>
+<p>Your coverage service and coverage (layer) metadata should follow the <a class="reference internal" href="../onegeology_profile.html#service-provision-onegeology-profile"><span class="std std-ref">OneGeology Profile</span></a>.</p>
+<p>Whilst GeoServer can use a number of data formats as inputs for its WCS services at present you must use GeoTIFFs if you want to provide output in image/png or image/jpeg formats, such that the coverages can be viewed within the portal.</p>
+</section>
+<section id="id22">
+<h3>Stores<a class="headerlink" href="#id22" title="Permalink to this headline"></a></h3>
+<p>The next step is to use the ‘Stores’ menu option to set up a Raster data source for each of our exemplar (EMODnet) GeoTIFFs.    To do this, go to the left hand menu ‘Stores’ option, and click the  ‘Add new store’ link.  Under the Raster Data Sources heading select ‘GeoTIFF - Tagged Image File Format with Geographic information’.  Select the newly created Workspace from the drop down list.</p>
+<figure class="align-default">
+<img alt="../../_images/wcs_fig04.jpg" src="../../_images/wcs_fig04.jpg" />
+</figure>
+<p>Add a Data Source name (recommended that you omit spaces here) which will become part of the identifier for your data in the service.   Use the Connection Parameters URL to link to the actual data.</p>
+<p>In this example we have our EMODnet data on our server at:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="mi">1</span><span class="n">Gdata</span>\<span class="n">Emodnet</span>
+</pre></div>
+</div>
+<p>The file protocol URL to access this path is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="p">:</span><span class="o">//</span><span class="n">C</span><span class="p">:</span>\<span class="mi">1</span><span class="n">Gdata</span>\<span class="n">Emodnet</span>
+</pre></div>
+</div>
+<p>So in this case to access our Tiff the URL is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="p">:</span><span class="o">//</span><span class="n">C</span><span class="p">:</span>\<span class="mi">1</span><span class="n">Gdata</span>\<span class="n">Emodnet</span>\<span class="n">Aegean</span> <span class="n">Sea</span> <span class="o">-</span> <span class="n">Levantine</span> <span class="n">Sea</span> <span class="p">[</span><span class="n">Multi</span> <span class="n">Colour</span><span class="p">]</span><span class="o">.</span><span class="n">tif</span>
+</pre></div>
+</div>
+<p>Remember to enable the data source by ticking the box.</p>
+<p>When you save your store you should get an option to Publish your data source as a Layer.</p>
+<figure class="align-default">
+<img alt="../../_images/wcs_fig05.jpg" src="../../_images/wcs_fig05.jpg" />
+</figure>
+<p>You will need to repeat these steps to create a data source for all of the GeoTIFFs that you wish to make available in your service.</p>
+</section>
+<section id="id23">
+<h3>Layers<a class="headerlink" href="#id23" title="Permalink to this headline"></a></h3>
+<p>If you didn’t Publish the data as part of the data source configuration, the final step is to create a layer using your data sources.  Select the Layers option in the left hand menu, then find the Workspace:Datasource name combination required from the drop down list.</p>
+<figure class="align-default">
+<img alt="../../_images/wcs_fig06.jpg" src="../../_images/wcs_fig06.jpg" />
+</figure>
+<p>That’s essentially it, as the information that you can add (as opposed to the information that is auto-populated) in the layer properties is not used in either the GetCapabilities or the DescribeCoverage response.</p>
+</section>
+<section id="service-level-metadata">
+<h3>Service level metadata<a class="headerlink" href="#service-level-metadata" title="Permalink to this headline"></a></h3>
+<p>To configure service level metadata, choose the WCS option in the Services section of the Left hand menu.  Then select your workspace from the dropdown list.</p>
+<figure class="align-default">
+<img alt="../../_images/wcs_fig07.jpg" src="../../_images/wcs_fig07.jpg" />
+</figure>
+<p>To get your service to be available you must tick the Enable WCS option box.</p>
+<p>To conform to the OneGeology WCS profile you must also tick the Strict CITE compliance option box.</p>
+<p>Online Resource here is a link to your (or any other) web site (not your service), that provides information about your data.</p>
+<p>Title must follow the WMS naming conventions</p>
+<p>Abstract covers the service in general.  You may also add information about the individual layers.</p>
+<p>Fees and Access Constraints for your service, if you have no constraints then you MUST explicitly state this using ‘none’.</p>
+<p>Keywords can include a language code and reference a vocabulary.</p>
+<p>For example in the example shown below we have a keyword only “OneGeology”, a keyword with vocabulary “infoCoverageAccessService [ISO]”, and a keyword with vocabulary and language code “marine geology (en) [GEMET]” .  The new keyword shown in the form will become (when the Add Keyword button is clicked) “Meeresgeologie (de) [GEMET]”</p>
+<p>The GEMET keywords come from <a class="reference external" href="http://www.eionet.europa.eu/gemet/en/themes/">http://www.eionet.europa.eu/gemet/en/themes/</a></p>
+<figure class="align-default">
+<img alt="../../_images/wcs_fig08.jpg" src="../../_images/wcs_fig08.jpg" />
+</figure>
+<p>Finally you need to configure a limited list of projection systems that your service will provide, REMEMBER the service must support EPSG:4326.</p>
+<figure class="align-default">
+<img alt="../../_images/wcs_fig09.jpg" src="../../_images/wcs_fig09.jpg" />
+</figure>
+<p>The above list gives the following in the GetCapabilities response:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">wcscrs</span><span class="p">:</span><span class="n">crsSupported</span><span class="o">&gt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">opengis</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">def</span><span class="o">/</span><span class="n">crs</span><span class="o">/</span><span class="n">EPSG</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">27700</span><span class="o">&lt;/</span><span class="n">wcscrs</span><span class="p">:</span><span class="n">crsSupported</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">wcscrs</span><span class="p">:</span><span class="n">crsSupported</span><span class="o">&gt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">opengis</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">def</span><span class="o">/</span><span class="n">crs</span><span class="o">/</span><span class="n">EPSG</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">3034</span><span class="o">&lt;/</span><span class="n">wcscrs</span><span class="p">:</span><span class="n">crsSupported</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">wcscrs</span><span class="p">:</span><span class="n">crsSupported</span><span class="o">&gt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">opengis</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">def</span><span class="o">/</span><span class="n">crs</span><span class="o">/</span><span class="n">EPSG</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">3413</span><span class="o">&lt;/</span><span class="n">wcscrs</span><span class="p">:</span><span class="n">crsSupported</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">wcscrs</span><span class="p">:</span><span class="n">crsSupported</span><span class="o">&gt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">opengis</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">def</span><span class="o">/</span><span class="n">crs</span><span class="o">/</span><span class="n">EPSG</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">3857</span><span class="o">&lt;/</span><span class="n">wcscrs</span><span class="p">:</span><span class="n">crsSupported</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">wcscrs</span><span class="p">:</span><span class="n">crsSupported</span><span class="o">&gt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">opengis</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">def</span><span class="o">/</span><span class="n">crs</span><span class="o">/</span><span class="n">EPSG</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">4258</span><span class="o">&lt;/</span><span class="n">wcscrs</span><span class="p">:</span><span class="n">crsSupported</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">wcscrs</span><span class="p">:</span><span class="n">crsSupported</span><span class="o">&gt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">opengis</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">def</span><span class="o">/</span><span class="n">crs</span><span class="o">/</span><span class="n">EPSG</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">4326</span><span class="o">&lt;/</span><span class="n">wcscrs</span><span class="p">:</span><span class="n">crsSupported</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">wcscrs</span><span class="p">:</span><span class="n">crsSupported</span><span class="o">&gt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">opengis</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">def</span><span class="o">/</span><span class="n">crs</span><span class="o">/</span><span class="n">EPSG</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">404000</span><span class="o">&lt;/</span><span class="n">wcscrs</span><span class="p">:</span><span class="n">crsSupported</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="id24">
+<h3>INSPIRE Extended Capabilities<a class="headerlink" href="#id24" title="Permalink to this headline"></a></h3>
+<p>If you are providing an INSPIRE download service you will need to provide the extra INSPIRE mandated metadata in the WCS GetCapabilities response. GeoServer enables you to configure a scenario 1 style extended capabilities section. All INSPIRE specific requirements are optional for OneGeology use but will work as OneGeology services.</p>
+<p>As described in the <a class="reference external" href="http://docs.geoserver.org/latest/en/user/extensions/inspire/using.html">plugin documentation</a> you should find a section in the WCS service settings of the administration interface where you can choose a language, enter a service metadata URL and type and add one or more spatial dataset identifiers. For guidance on what to enter in these settings see the <a class="reference external" href="https://inspire.ec.europa.eu/id/document/tg/download-wcs">Technical Guidance for the implementation of INSPIRE Download Services using Web Coverage Services (WCS)</a>.</p>
+<p>Check that the GetCapabilities responses contain your edited values.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The plugin GUI only has two non-empty values for the Service Metadata Type: “Online ISO 19139 ServiceMetadata document” sets the MIME type to <code class="docutils literal notranslate"><span class="pre">application/vnd.iso.19139+xml</span></code>, “CSW GetRecord by ID request” sets the MIME type to <code class="docutils literal notranslate"><span class="pre">application/vnd.ogc.csw.GetRecordByIdResponse_xml</span></code>. If neither of these correspond to the actual MIME type of your metadata resource you could omit this element by choosing the blank option or work around it by manually editing the wfs.xml file inside the GeoServer data directory as documented in issue <a class="reference external" href="https://osgeo-org.atlassian.net/browse/GEOS-5157">GEOS-5157</a> . As it isn’t clear what a client would do with this information anyway, leaving it blank seems to be a good option.</p>
+</div>
+</section>
+<section id="troubleshooting">
+<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline"></a></h3>
+<figure class="align-default">
+<img alt="../../_images/wcs_fig10.jpg" src="../../_images/wcs_fig10.jpg" />
+</figure>
+<p>If you start getting error messages when using GeoServer, you will probably need to increase the JAVA permgen space.  This can occur when you are serving lots of raster data. See <a class="reference external" href="http://osgeo-org.1560.x6.nabble.com/Session-times-out-when-adding-new-stores-or-layers-td4910354.html">http://osgeo-org.1560.x6.nabble.com/Session-times-out-when-adding-new-stores-or-layers-td4910354.html</a></p>
+</section>
+</section>
+<section id="geoserver-troubleshooting">
+<h2>GeoServer troubleshooting<a class="headerlink" href="#geoserver-troubleshooting" title="Permalink to this headline"></a></h2>
+<dl class="simple">
+<dt>Q: I made a change in the database on my server and now the service is not working</dt><dd><p>A: Try clearing the cache and reloading GeoServer on the Server Status page. If that doesn’t work, try hard restarting the service through Apache Tomcat.</p>
+</dd>
+<dt>Q: Can I use a replicated Feature Class to create a service on GeoServer?</dt><dd><p>A: No.</p>
+</dd>
+<dt>Q: I set up my services under three separate workspaces. When I connected to the WMS in ArcCatalog, all the layers appeared as one bundle. Is there a way to separate them out so I can add them individually?</dt><dd><p>A: Yes.</p>
+</dd>
+</dl>
+<p>Though setting up your services under different workspaces seems to imply that they can be accessed as discrete services, GeoServer defaults to providing one capabilities document containing the information for all of the services set up on your instance of GeoServer. To access workspaces individually, you will need customize your Get request to specify the desired workspace.</p>
+<p>For example: a Geological Survey might run three services on GeoServer:</p>
+<ul class="simple">
+<li><p>GeologicUnitView</p></li>
+<li><p>FaultView</p></li>
+<li><p>ContactView</p></li>
+</ul>
+<p>To perform a GetCapabilities request for GeologicUnitView, your GetCapabilities request will appear as follows:</p>
+<p>http://services.a.survey.gov/geoserver/GeologicUnitView/ows?service=WMS&amp;request=GetCapabilities&amp;</p>
+<p>This URL opens the WMS <strong>capabilities document</strong> for the GeologicUnitView workspace only. A generic form of the service endpoint for the request is as follows:</p>
+<p>http://[host server]/geoserver/[Workspace Name]/ows?</p>
+<dl class="simple">
+<dt>Q: Is it possible to configure GeoServer so that I do not need to use PostGIS?</dt><dd><p>A: Try installing the ArcSDE plug-in for GeoServer. To do this, you will need to download the extension from GeoServer’s website. Make sure to match the versions of the extension and GeoServer.  If you can get it to work, you should be able to connect to other SDE databases running on, for instance, MS SQL or Oracle.</p>
+</dd>
+<dt>Q: All of my data are in Shapefiles. Can I deploy a shapefile as a GeoSciML-Lite service?</dt><dd><p>A: The problem you will run into is the truncation of field names that occurs in shapefiles. Ideally you will have a full version of the data in PostGIS. As mentioned in the above document, to be compliant with GeoSciML-Lite, you will need to make sure there is no truncation in field names; they must be an exact match for the GeoSciML-Lite schema. To map table fields to XML elements with different names you will have to use the <a class="reference external" href="http://docs.geoserver.org/stable/en/user/data/app-schema/index.html">Application Schema extension</a> for GeoServer.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="example_data.html" class="btn btn-neutral float-left" title="Cookbook example data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mapserver.html" class="btn btn-neutral float-right" title="Using MapServer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019, OneGeology.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

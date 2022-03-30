@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to OneGeology documentation! &mdash; OneGeology Documentation 1.0 documentation</title>
+  <title>Using OneGeology Services &mdash; OneGeology Documentation 1.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="_static/OneGeology_favicon.ico"/>
@@ -19,7 +19,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Providing Data / Services" href="providingdata.html" /> 
+    <link rel="next" title="Using the OneGeology Portal" href="using/portal.html" />
+    <link rel="prev" title="Using Apache HTTP server as a reverse proxy" href="providingdata/server_setup/apache.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -27,7 +28,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="#" class="icon icon-home"> OneGeology Documentation
+            <a href="index.html" class="icon icon-home"> OneGeology Documentation
             <img src="_static/Onegeology_logo_large.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
@@ -41,7 +42,7 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="providingdata.html">Providing Data / Services</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="providingdata/service_types.html">Service Types</a></li>
 <li class="toctree-l2"><a class="reference internal" href="providingdata/data_formats.html">Data formats</a></li>
@@ -381,7 +382,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="using.html">Using OneGeology Services</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Using OneGeology Services</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="using/portal.html">Using the OneGeology Portal</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="using/portal.html#viewing-data-registered-in-the-onegeology-portal">Viewing data registered in the OneGeology Portal</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="using/portal.html#go-to-function">Go To Function</a></li>
@@ -458,17 +459,17 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">OneGeology Documentation</a>
+          <a href="index.html">OneGeology Documentation</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
-      <li>Welcome to OneGeology documentation!</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Using OneGeology Services</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/using.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -476,31 +477,39 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="welcome-to-onegeology-documentation">
-<h1>Welcome to OneGeology documentation!<a class="headerlink" href="#welcome-to-onegeology-documentation" title="Permalink to this headline"></a></h1>
-<p>This Documentation provides detailed instuctions on</p>
+  <section id="using-onegeology-services">
+<h1>Using OneGeology Services<a class="headerlink" href="#using-onegeology-services" title="Permalink to this headline"></a></h1>
+<p>OneGeology makes data from geological data providers around the world accessible to those who would like to see and use it. The majority of this data is the type that is portrayed on traditional geological maps. There are increasing amounts with different geologically related types of data such as geophysics, boreholes and hydrogeology. This data is made available by means of Open GeoSpatial Consortium <a class="reference external" href="http://www.opengeospatial.org">OGC</a> standard web services that can be accessesed by a number of free and commercial clients. Currently OneGeology makes use of three OGC standards: Web Map Service <a class="reference external" href="http://www.opengeospatial.org/standards/wms">WMS</a>, Web Feature Service <a class="reference external" href="http://www.opengeospatial.org/standards/wfs">WFS</a> and Web Coverage Service <a class="reference external" href="http://www.opengeospatial.org/standards/wcs">WCS</a>. These different service standards define different kinds of capability for examining the data.</p>
 <ul class="simple">
-<li><p>How to provide data to the OneGeology Portal</p></li>
-<li><p>Using the OneGeology Portal</p></li>
-<li><p>Using data from OneGeology on other platforms</p></li>
+<li><p>The data is “served” directly from the provider organisation.</p></li>
+<li><p>The provider organisation retains full ownership and responsibility and is able to change or modify data whenever necessary.</p></li>
 </ul>
-<p>Contents:</p>
+<p>WMS provides the ability to see a map image projected to its correct geographical location in a number of map projections. This will usually be accompanied by a legend which explains the symbology used in the map. Commonly, many WMS also provide the ability to select a point on the map and get a summary in text or other format of data values for that point. The majority of OneGeology services are WMS. A small number of these WMS also provide the ability to change the symbology of the map depending on the underlying data (e.g. to highlight formations of a particular age). These are called <a class="reference external" href="http://www.opengeospatial.org/standards/sld">SLD</a> enabled WMS.</p>
+<p>WFS provide the ability to query a service based on spatial and other criteria and return the matching data in a <a class="reference external" href="http://www.opengeospatial.org/standards/gml">GML</a> format and maybe other formats as well. It assumes the data has been structured as a collection of features with spatial and other, possibly complex properties. OneGeology is focussed on two standard formats for data exchange: <a class="reference external" href="http://www.geosciml.org">GeoSciML</a> and <a class="reference external" href="http://www.earthresourceml.org/">ERML</a>. The data available from a given WFS may be visually portrayed in one or more related WMS layers.</p>
+<p>WCS also provices the ability to return matching data based on spatial and other criteria but the data is structured as coverages where values of some fixed set of properties are defined for each point over some spatial domain. Although theoretically different kinds of division of spatial domain are possible, currently all coverages are based on regular grids. The properties are also simple whether numerical or categorical. As image formats generally specify colour values at regular grid cells then a WCS may return coverages that can be viewed as an image directly as well as data formats that need to be processed by some application.</p>
+<p>In simple terms, currently WFS are used for spatial data stored in some vector format and WCS for data stored in a raster gridded format.</p>
+<p>The following pages show how you may access services using these OGC standards (including those not part of OneGeology) in a number of popular desktop software clients and web based browser applications. We concentrate first on the web based portal provided by OneGeology itself and then cover other commonly available clients.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="providingdata.html">Providing Data / Services</a></li>
-<li class="toctree-l1"><a class="reference internal" href="using.html">Using OneGeology Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using/portal.html">Using the OneGeology Portal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using/qgis.html">Using QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using/esri.html">Using ESRI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using/udig.html">Using uDig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using/gaia.html">Using Gaia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using/world_wind.html">Using NASA World Wind</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using/dapple.html">Using Dapple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using/google_earth.html">Using Google Earth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using/mapinfo.html">Using MapInfo Professional</a></li>
 </ul>
 </div>
-<ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-</ul>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="providingdata.html" class="btn btn-neutral float-right" title="Providing Data / Services" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="providingdata/server_setup/apache.html" class="btn btn-neutral float-left" title="Using Apache HTTP server as a reverse proxy" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="using/portal.html" class="btn btn-neutral float-right" title="Using the OneGeology Portal" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
