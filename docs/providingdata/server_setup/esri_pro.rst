@@ -22,10 +22,10 @@ Prepare the map document
 Initial set up of WMS services is relatively straightforward and simply requires the creation of a map document   in ArcGIS Pro  (.aprx ) containing the data you want to add to the service.
 It is important to pay attention to the layer names in the map document, since the individual service layer names will use the map document layer names. The service will also use the map document layer names for the respective layer titles in the GetCapabilities document.
 
-.. figure:: images/image048.jpg
-   :alt: Using ArcMap layer names in the service
+.. figure:: images/esri/arcpro01.png
+   :alt: Using ArcGIS Pro layer names in the service
 
-   Figure 1 - Using ArcMap layer names in the service
+   Figure 1 - Using ArcGIS Pro layer names in the service
 
 Eg. an unmodified GetCapabilities (version 1.3.0) response for the above example would look like:
 
@@ -37,15 +37,15 @@ Eg. an unmodified GetCapabilities (version 1.3.0) response for the above example
    <CRS>EPSG:4326</CRS>
    ...
    <Layer queryable="1">
-       <Name>GBR_BGS_625k_BA</Name>
-       <Title>GBR_BGS_625k_BA</Title>
+       <Name>GBR_BGS_625k_TYPE</Name>
+       <Title>GBR_BGS_625k_TYPE</Title>
        <Abstract></Abstract>
        <CRS>CRS:84</CRS>
        <CRS>EPSG:4326</CRS>
       ...
        <Style>
            <Name>default</Name>
-           <Title>GBR_BGS_625k_BA</Title>
+           <Title>GBR_BGS_625k_TYPE</Title>
            <LegendURL width="68" height="2048">
                <Format>image/png</Format>
                <OnlineResource xlink:href="..." xlink:type="simple"/>
@@ -53,8 +53,8 @@ Eg. an unmodified GetCapabilities (version 1.3.0) response for the above example
        </Style>
    </Layer>
    <Layer queryable="1">
-       <Name>GBR_BGS_625k_BLT</Name>
-       <Title>GBR_BGS_625k_BLT</Title>
+       <Name>GBR_BGS_625k_PERIOD</Name>
+       <Title>GBR_BGS_625k_PERIOD</Title>
        <Abstract></Abstract>
    ...
 
@@ -66,7 +66,7 @@ If you have not already established a connection to your ArcGIS server instance,
 * Go to *Insert> Connections > Add ArcGIS Server Connection*
 
 .. figure:: images/esri/arcpro02.png
-   :alt: Using ArcMap layer names in the service
+   :alt: Using ArcGIS Pro layer names in the service
 
    Figure 2 - Establishing an ArcGIS Server connection
 
@@ -128,7 +128,7 @@ The service configurations are similar to the one you may know from ArcMap Deskt
 
 * You will need to update the service with a link to the external Capabilities file in ArcGIS Server Manager once the service has been successfully published
 
-* You also need to tick the *Use layer names from the map document* option; otherwise, the layer names will be given numbers instead. Again, you will need to ensure that the ArcMap layer names follow the naming guidelines.
+* You also need to tick the *Use layer names from the map document* option; otherwise, the layer names will be given numbers instead. Again, you will need to ensure that the ArcGIS Pro layer names follow the naming guidelines.
 
 * ArcGIS Server creates only one style named *default* for every layer, but allows you to do include additional styles for each layer using a SLD file. The default style matches the symbology set in the map document.
 
@@ -210,7 +210,7 @@ If your INSPIRE service is only serving layers of one type, one way of applying 
 
 To **add group layers to a new service** simply `add a group layer <https://pro.arcgis.com/en/pro-app/2.8/help/mapping/layer-properties/work-with-group-layers.htm>`_ to the map document that will create your service, rename it and place your layers inside. The WMS service published form this map document will keep the same group layer structure.
 
-.. figure:: images/image051.jpg
+.. figure:: images/esri/arcpro10.png
    :alt: Adding group layers to the service
 
    Figure 9 - Adding group layers to the service
@@ -328,14 +328,14 @@ Simple Feature WFS
 
 Creating a simple feature WFS requires almost the same steps as creating a WMS. The only difference being that, when publishing the service, you need to select the WFS capability.
 
-.. figure:: images/image066.jpg
+.. figure:: images/esri/arcpro11.PNG
    :alt: Enabling WFS capabilities in Service Editor dialog
 
    Figure 20 - Enabling WFS capabilities in *Service Editor* dialog
 
 After activating WFS, you’ll have access to the properties of this capability. Some of these properties will coincide with WMS properties, but there will also be WFS specific properties, such us namespace, prefix or maximum number of features returned.
 
-.. figure:: images/image067.jpg
+.. figure:: images/esri/arcpro12.PNG
    :alt: WFS service properties
 
    Figure 21 - WFS service properties
@@ -352,40 +352,44 @@ WCS
 Create a map document
 ^^^^^^^^^^^^^^^^^^^^^
 
-In ArcGIS, a WCS can be created mainly through 3 routes: a map document with raster data, a raster dataset or a mosaic dataset. Publishing a mosaic dataset requires ArcGIS Image Server, so unless you have this extension enabled, the only way to publish multiple rasters at once on a single WCS will be through a map document; therefore we’re are going to focus on this route. For more information see `WCS services <http://server.arcgis.com/en/server/latest/publish-services/windows/wcs-services.htm>`_.
+In ArcGIS, a WCS can be created mainly through 3 routes: a map document with raster data, a raster dataset or a mosaic dataset. Publishing a mosaic dataset requires ArcGIS Image Server, so unless you have this extension enabled, the only way to publish multiple rasters at once on a single WCS will be through a map document; therefore we’re are going to focus on this route. For more information see the documentation on `WCS services <http://server.arcgis.com/en/server/latest/publish-services/windows/wcs-services.htm>`_ or `Publishing image services from ArcGIS Pro <https://enterprise.arcgis.com/en/server/latest/publish-services/windows/publishing-image-services-from-arcgis-pro.htm>`_.
+
 
 Start by creating a map document and adding your rasters to it. Note that, if you have feature data in your map document, it’ll be excluded from your WCS.
 
-.. figure:: images/image068.jpg
+.. figure:: images/esri/arcpro_WCS_01.PNG
    :alt: Adding WCS data to your map document
 
    Figure 22 - Adding WCS data to your map document
 
+.. figure:: images/esri/arcpro_WCS_02.PNG
+   :alt: Publishing a WCS service
+
+   Figure 23 - Publishing a WCS service
+
 Publish the WCS service
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-* Go to *File > Share As > Service… *to open the *Share as Service* dialog.
+* In the Catalog Pane go to Servers > right Click the server you would like to publish to > Publish > Map Service… *to open the Publish Service* dialog.
 
-* Select *Publish a service* and click *Next >*.
-
-* On the *Publish a Service* dialog, choose/add a connection to your ArcGIS Server instance and write a name for your map service. The name you enter will be part of the WCS url. Click *Next >.*
+* On the *Publish Service* dialog, add a name, summary and tags to your map service. The name you enter will be part of the WCS url. Click *Next >.*
 
 * Select whether to *Use existing folder* or *Create new folder*. The folder name will also appear as part of the WCS url. Click *Continue*.
 
-* In the *Service Editor* dialog, go to *Capabilities* and select *WCS*.
+* In the *Publish Service* dialog, go to *Configuration* and select *WCS* under Capabilities.
 
 * Now go to *Capabilities > WCS* to access the WCS properties
 
-.. figure:: images/image069.jpg
+.. figure:: images/esri/arcpro_WCS_03.PNG
    :alt: WCS service properties
 
-   Figure 23 - WCS service properties
+   Figure 24 - WCS service properties
 
 * Fill in all relevant service-level and contact properties.
 
 * Check *Use layer names from the map document* so that layer names/identifiers use the layer names given in the map document rather than numbers.
 
-* Click *Publish* on the top-right corner of the *Service Editor* dialog to create your service.
+* Click *Analyse* to idnetify any errors with the service, then click *Publish* at the bottom of the *Publish Service* dialog to create your service.
 
 Your new service will have a URL like below, with the folder name part being optional:
 
@@ -420,14 +424,14 @@ It doesn’t really matter what name you give these files, as long as you use th
 
 You need to put these files on the server (or at a location available to your server), and make them browsable. These files only need to be browsable internally by the ArcGIS server.
 
-Now go back to your map service and edit it using either `ArcGIS Server Manager <http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-manager.htm>`_ or `ArcMap <http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-arcgis-for-desktop.htm>`_.
+Now go back to your map service and edit it using either `ArcGIS Server Manager <http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-manager.htm>`_ or `ArcGIS Pro <https://pro.arcgis.com/en/pro-app/latest/help/sharing/overview/overwrite-a-map-service.htm>`_.
 
 Go to *Capabilities > WCS*, then select the “Use External capabilities files” option and in the ‘Specify the location and prefix’ dialog add the web address to the folder containing the capabilities response documents plus your [short service name] prefix.
 
-.. figure:: images/image070.jpg
+.. figure:: images/esri/arcpro_WCS_04.PNG
    :alt: WCS service properties: external capabilities
 
-   Figure 24 - WCS service properties: external capabilities
+   Figure 25 - WCS service properties: external capabilities
 
 For example, for a service called BGS_EMODnet_Bathymetry, we may save our initial GetCapabilities response documents using a prefix “EMODnet-“, giving us a file called EMODnet-201.xml for our version 2.0.1 GetCapabilities response document, EMODnet-110.xml for our version 1.1.0 GetCapabilities response document and so on. We might then save these to a location on our web server such as *C:\\Inetpub\\wwwroot\\GetCapabilitiesFiles\\* which would be browseable locally as *http://localhost/GetCapabilitiesFiles/*.  When we select the “Use External capabilities files” option, we then provide the web address and **prefix**
 as *http://localhost/GetCapabilitiesFiles/EMODnet-*
