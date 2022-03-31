@@ -32,6 +32,7 @@ The following pages show how you may access services using these OGC standards (
    using/portal
    using/qgis
    using/esri
+   using/esri_pro
    using/udig
    using/gaia
    using/world_wind

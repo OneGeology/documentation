@@ -182,7 +182,3 @@ To export a WCS layer, right click on it and go to *Data > Export Data*. The *Ex
 
 See: http://desktop.arcgis.com/en/arcmap/latest/map/web-maps-and-services/about-using-ogc-service-layers.htm
 
-Using ArcPRO
-^^^^^^^^^^^^
-
-See: https://pro.arcgis.com/en/pro-app/help/data/services/ogc-services.htm
