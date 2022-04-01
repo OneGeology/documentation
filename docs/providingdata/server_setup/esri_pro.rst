@@ -146,7 +146,7 @@ Your new service will have a URL like below, with the folder name part being opt
 Edit the GetCapabilities documents
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-ArcGIS Server doesn’t create any static GetCapabilities xml documents, but does allow you to use external files. You will need to use such external files if you want to add any additional spatial reference systems, correct the keywords listing, change the LegendURL images, add better abstracts and layer titles, or add an INSPIRE extended capabilities section. We think to provide a fully compliant WMS it is highly likely that you will need to use a set of static files.
+ArcGIS Server doesn’t create any static GetCapabilities XML documents, but does allow you to use external files. You will need to use such external files if you want to add any additional spatial reference systems, correct the keywords listing, change the LegendURL images, add better abstracts and layer titles, or add an INSPIRE extended capabilities section. We think to provide a fully compliant WMS it is highly likely that you will need to use a set of static files.
 
 The first step to editing your files is to create them.
 
@@ -188,7 +188,7 @@ Having created your files, you may then edit them as required. We would recommen
 INSPIRE
 ^^^^^^^
 
-If you want your OneGeology service to comply to INSPIRE standards, in addition to meet the requirements of the OneGeology profile, you need to ensure that the following conditions are fulfilled:
+If you want your OneGeology service to comply to INSPIRE metadata standards, in addition to meet the requirements of the OneGeology profile, you need to ensure that the following conditions are fulfilled:
 
 1. Layer name and layer title must follow INSPIRE naming conventions. For example the `D2.8.II.4 Data Specification on Geology–Technical Guidelines <http://inspire.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_GE_v3.0.pdf>`_ tell us (section 11.1 ~ Layers to be provided by INSPIRE view services) that any layer to do with lithology or age must have the name *GE.GeologicUnit* and title *Geologic Units*. See the `layer-naming <https://themes.jrc.ec.europa.eu/discussion/view/13952/layer-naming>`_ discussion on the INSPIRE Thematic Clusters Geology forum for fuller details.
 
@@ -196,7 +196,7 @@ If you want your OneGeology service to comply to INSPIRE standards, in addition 
 
 3. Your GetCapabilities document must include the INSPIRE Extended Capabilities tag.
 
-There are two ways of achieving these conditions using ESRI software. The first one is using a standard ArcGIS map document and standard ArcGIS Server tools, where you’ll need to modify layer names to make them compliant, change service properties to include required coordinate systems and modify the get capabilities document to include the INSPIRE Extended Capabilities section. The second option is using the ArcGIS for INSPIRE extension, which provides tools and new services to ensure compliance with INSPIRE directives. If you want to go for the second option, there is an `ESRI OneGeology Grant  <http://www.onegeology.org/technical_progress/esriGrantOffer.html>`_ for OneGeology members.
+There are two ways of achieving these conditions using ESRI software. The first one is using a standard ArcGIS map document and standard ArcGIS Server tools, where you’ll need to modify layer names to make them compliant, change service properties to include required coordinate systems and modify the capabilities document to include the INSPIRE Extended Capabilities section. The second option is using the ArcGIS for INSPIRE extension, which provides tools and new services to ensure compliance with INSPIRE directives. If you want to go for the second option, there is an `ESRI OneGeology Grant  <http://www.onegeology.org/technical_progress/esriGrantOffer.html>`_ for OneGeology members.
 
 ArcGIS Server
 """""""""""""
@@ -243,8 +243,8 @@ For example to add a scenario 1 INSPIRE extended capabilities section (where you
    </Exception>
    <inspire_vs:ExtendedCapabilities xmlns:inspire_vs="http://inspire.ec.europa.eu/schemas/inspire_vs/1.0">
        <inspire_common:MetadataUrl xsi:type="inspire_common:resourceLocatorType">
-           <inspire_common:URL>http://metadata.bgs.ac.uk/geonetwork/srv/en/csw?SERVICE=CSW
-           &amp;REQUEST=GetRecordById&amp;ID=7822e848-822d-45a5-8584-56d352fd2170&amp;elementSetName=full&amp;OutputSchema=csw:IsoRecord&amp;
+           <inspire_common:URL>https://metadata.bgs.ac.uk/geonetwork/srv/eng/csw?SERVICE=CSW
+           &amp;REQUEST=GetRecordById&amp;ID=7822e848-822d-45a5-8584-56d352fd2170&amp;elementSetName=full&amp;OutputSchema=csw:IsoRecord&amp;version=2.0.2&amp;
            </inspire_common:URL>
            <inspire_common:MediaType>application/xml</inspire_common:MediaType>
        </inspire_common:MetadataUrl>
@@ -280,7 +280,7 @@ Alternatively, to add a scenario 2 INSPIRE extended capabilities section (where 
            <inspire_common:Degree>notEvaluated</inspire_common:Degree>
        </inspire_common:Conformity>
        <inspire_common:MetadataPointOfContact>
-           <inspire_common:OrganisationName>Mr Matthew Harrison</inspire_common:OrganisationName>
+           <inspire_common:OrganisationName>William Smith</inspire_common:OrganisationName>
            <inspire_common:EmailAddress>enqiries@bgs.ac.uk</inspire_common:EmailAddress>
        </inspire_common:MetadataPointOfContact>
        <inspire_common:MetadataDate>2015-10-23</inspire_common:MetadataDate>
