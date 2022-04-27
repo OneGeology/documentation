@@ -36,25 +36,25 @@ Eg. an unmodified GetCapabilities (version 1.3.0) response for the above example
    <CRS>EPSG:4326</CRS>
    ...
    <Layer queryable="1">
-       <Name>GBR_BGS_625k_TYPE</Name>
-       <Title>GBR_BGS_625k_TYPE</Title>
-       <Abstract></Abstract>
-       <CRS>CRS:84</CRS>
-       <CRS>EPSG:4326</CRS>
-      ...
-       <Style>
+      <Name>GBR_BGS_625k_TYPE</Name>
+      <Title>GBR_BGS_625k_TYPE</Title>
+      <Abstract></Abstract>
+      <CRS>CRS:84</CRS>
+      <CRS>EPSG:4326</CRS>
+     ...
+      <Style>
            <Name>default</Name>
            <Title>GBR_BGS_625k_TYPE</Title>
            <LegendURL width="68" height="2048">
                <Format>image/png</Format>
                <OnlineResource xlink:href="..." xlink:type="simple"/>
            </LegendURL>
-       </Style>
+      </Style>
    </Layer>
    <Layer queryable="1">
-       <Name>GBR_BGS_625k_PERIOD</Name>
-       <Title>GBR_BGS_625k_PERIOD</Title>
-       <Abstract></Abstract>
+      <Name>GBR_BGS_625k_PERIOD</Name>
+      <Title>GBR_BGS_625k_PERIOD</Title>
+      <Abstract></Abstract>
    ...
 
 Publishing your WMS
