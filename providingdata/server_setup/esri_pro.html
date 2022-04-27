@@ -516,7 +516,7 @@
 <h3>Creating the service<a class="headerlink" href="#creating-the-service" title="Permalink to this headline"></a></h3>
 <section id="prepare-the-map-document">
 <h4>Prepare the map document<a class="headerlink" href="#prepare-the-map-document" title="Permalink to this headline"></a></h4>
-<p>Initial set up of WMS services is relatively straightforward and simply requires the creation of a map document   in ArcGIS Pro  (.aprx ) containing the data you want to add to the service.
+<p>Initial set up of WMS services is relatively straightforward and simply requires the creation of a map document in ArcGIS Pro (.aprx ) containing the data you want to add to the service.
 It is important to pay attention to the layer names in the map document, since the individual service layer names will use the map document layer names. The service will also use the map document layer names for the respective layer titles in the GetCapabilities document.</p>
 <figure class="align-default" id="id8">
 <img alt="Using ArcGIS Pro layer names in the service" src="../../_images/arcpro01.png" />
@@ -531,25 +531,25 @@ It is important to pay attention to the layer names in the map document, since t
 <span class="nt">&lt;CRS&gt;</span>EPSG:4326<span class="nt">&lt;/CRS&gt;</span>
 ...
 <span class="nt">&lt;Layer</span> <span class="na">queryable=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;Name&gt;</span>GBR_BGS_625k_TYPE<span class="nt">&lt;/Name&gt;</span>
-    <span class="nt">&lt;Title&gt;</span>GBR_BGS_625k_TYPE<span class="nt">&lt;/Title&gt;</span>
-    <span class="nt">&lt;Abstract&gt;&lt;/Abstract&gt;</span>
-    <span class="nt">&lt;CRS&gt;</span>CRS:84<span class="nt">&lt;/CRS&gt;</span>
-    <span class="nt">&lt;CRS&gt;</span>EPSG:4326<span class="nt">&lt;/CRS&gt;</span>
-   ...
-    <span class="nt">&lt;Style&gt;</span>
+   <span class="nt">&lt;Name&gt;</span>GBR_BGS_625k_TYPE<span class="nt">&lt;/Name&gt;</span>
+   <span class="nt">&lt;Title&gt;</span>GBR_BGS_625k_TYPE<span class="nt">&lt;/Title&gt;</span>
+   <span class="nt">&lt;Abstract&gt;&lt;/Abstract&gt;</span>
+   <span class="nt">&lt;CRS&gt;</span>CRS:84<span class="nt">&lt;/CRS&gt;</span>
+   <span class="nt">&lt;CRS&gt;</span>EPSG:4326<span class="nt">&lt;/CRS&gt;</span>
+  ...
+   <span class="nt">&lt;Style&gt;</span>
         <span class="nt">&lt;Name&gt;</span>default<span class="nt">&lt;/Name&gt;</span>
         <span class="nt">&lt;Title&gt;</span>GBR_BGS_625k_TYPE<span class="nt">&lt;/Title&gt;</span>
         <span class="nt">&lt;LegendURL</span> <span class="na">width=</span><span class="s">&quot;68&quot;</span> <span class="na">height=</span><span class="s">&quot;2048&quot;</span><span class="nt">&gt;</span>
             <span class="nt">&lt;Format&gt;</span>image/png<span class="nt">&lt;/Format&gt;</span>
             <span class="nt">&lt;OnlineResource</span> <span class="na">xlink:href=</span><span class="s">&quot;...&quot;</span> <span class="na">xlink:type=</span><span class="s">&quot;simple&quot;</span><span class="nt">/&gt;</span>
         <span class="nt">&lt;/LegendURL&gt;</span>
-    <span class="nt">&lt;/Style&gt;</span>
+   <span class="nt">&lt;/Style&gt;</span>
 <span class="nt">&lt;/Layer&gt;</span>
 <span class="nt">&lt;Layer</span> <span class="na">queryable=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;Name&gt;</span>GBR_BGS_625k_PERIOD<span class="nt">&lt;/Name&gt;</span>
-    <span class="nt">&lt;Title&gt;</span>GBR_BGS_625k_PERIOD<span class="nt">&lt;/Title&gt;</span>
-    <span class="nt">&lt;Abstract&gt;&lt;/Abstract&gt;</span>
+   <span class="nt">&lt;Name&gt;</span>GBR_BGS_625k_PERIOD<span class="nt">&lt;/Name&gt;</span>
+   <span class="nt">&lt;Title&gt;</span>GBR_BGS_625k_PERIOD<span class="nt">&lt;/Title&gt;</span>
+   <span class="nt">&lt;Abstract&gt;&lt;/Abstract&gt;</span>
 ...
 </pre></div>
 </div>
