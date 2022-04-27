@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Using ArcMap &mdash; OneGeology Documentation 1.0 documentation</title>
+  <title>Using ArcGIS Pro &mdash; OneGeology Documentation 1.0 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/OneGeology_favicon.ico"/>
@@ -19,8 +19,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Using ArcGIS Pro" href="esri_pro.html" />
-    <link rel="prev" title="Using MapServer" href="mapserver.html" /> 
+    <link rel="next" title="Using Apache HTTP server as a reverse proxy" href="apache.html" />
+    <link rel="prev" title="Using ArcMap" href="esri.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -352,7 +352,32 @@
 <li class="toctree-l4"><a class="reference internal" href="mapserver.html#inspire-metadata">INSPIRE metadata</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Using ArcMap</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="esri.html">Using ArcMap</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="esri.html#wms">WMS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="esri.html#creating-the-service">Creating the service</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="esri.html#prepare-the-map-document">Prepare the map document</a></li>
+<li class="toctree-l6"><a class="reference internal" href="esri.html#publishing-your-wms">Publishing your WMS</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="esri.html#edit-the-getcapabilities-documents">Edit the GetCapabilities documents</a></li>
+<li class="toctree-l5"><a class="reference internal" href="esri.html#inspire">INSPIRE</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="esri.html#arcgis-server">ArcGIS Server</a></li>
+<li class="toctree-l6"><a class="reference internal" href="esri.html#inspire-extension">INSPIRE Extension</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="esri.html#arcgis-server-issues">ArcGIS server issues</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="esri.html#simple-feature-wfs">Simple Feature WFS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esri.html#wcs">WCS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="esri.html#create-a-map-document">Create a map document</a></li>
+<li class="toctree-l5"><a class="reference internal" href="esri.html#publish-the-wcs-service">Publish the WCS service</a></li>
+<li class="toctree-l5"><a class="reference internal" href="esri.html#edit-the-getcapabilities-document">Edit the GetCapabilities document</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Using ArcGIS Pro</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#wms">WMS</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#creating-the-service">Creating the service</a><ul>
 <li class="toctree-l6"><a class="reference internal" href="#prepare-the-map-document">Prepare the map document</a></li>
@@ -362,7 +387,6 @@
 <li class="toctree-l5"><a class="reference internal" href="#edit-the-getcapabilities-documents">Edit the GetCapabilities documents</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#inspire">INSPIRE</a><ul>
 <li class="toctree-l6"><a class="reference internal" href="#arcgis-server">ArcGIS Server</a></li>
-<li class="toctree-l6"><a class="reference internal" href="#inspire-extension">INSPIRE Extension</a></li>
 </ul>
 </li>
 <li class="toctree-l5"><a class="reference internal" href="#arcgis-server-issues">ArcGIS server issues</a></li>
@@ -373,30 +397,6 @@
 <li class="toctree-l5"><a class="reference internal" href="#create-a-map-document">Create a map document</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#publish-the-wcs-service">Publish the WCS service</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#edit-the-getcapabilities-document">Edit the GetCapabilities document</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="esri_pro.html">Using ArcGIS Pro</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="esri_pro.html#wms">WMS</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="esri_pro.html#creating-the-service">Creating the service</a><ul>
-<li class="toctree-l6"><a class="reference internal" href="esri_pro.html#prepare-the-map-document">Prepare the map document</a></li>
-<li class="toctree-l6"><a class="reference internal" href="esri_pro.html#publishing-your-wms">Publishing your WMS</a></li>
-</ul>
-</li>
-<li class="toctree-l5"><a class="reference internal" href="esri_pro.html#edit-the-getcapabilities-documents">Edit the GetCapabilities documents</a></li>
-<li class="toctree-l5"><a class="reference internal" href="esri_pro.html#inspire">INSPIRE</a><ul>
-<li class="toctree-l6"><a class="reference internal" href="esri_pro.html#arcgis-server">ArcGIS Server</a></li>
-</ul>
-</li>
-<li class="toctree-l5"><a class="reference internal" href="esri_pro.html#arcgis-server-issues">ArcGIS server issues</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="esri_pro.html#simple-feature-wfs">Simple Feature WFS</a></li>
-<li class="toctree-l4"><a class="reference internal" href="esri_pro.html#wcs">WCS</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="esri_pro.html#create-a-map-document">Create a map document</a></li>
-<li class="toctree-l5"><a class="reference internal" href="esri_pro.html#publish-the-wcs-service">Publish the WCS service</a></li>
-<li class="toctree-l5"><a class="reference internal" href="esri_pro.html#edit-the-getcapabilities-document">Edit the GetCapabilities document</a></li>
 </ul>
 </li>
 </ul>
@@ -497,9 +497,9 @@
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../../providingdata.html">Providing Data / Services</a> &raquo;</li>
           <li><a href="../server_setup.html">Setting up a Server</a> &raquo;</li>
-      <li>Using ArcMap</li>
+      <li>Using ArcGIS Pro</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/providingdata/server_setup/esri.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/providingdata/server_setup/esri_pro.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -507,21 +507,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="using-arcmap">
-<h1>Using ArcMap<a class="headerlink" href="#using-arcmap" title="Permalink to this headline"></a></h1>
-<p>The following notes are based on ESRI ArcGIS server version 10.5 (SP1)</p>
+  <section id="using-arcgis-pro">
+<h1>Using ArcGIS Pro<a class="headerlink" href="#using-arcgis-pro" title="Permalink to this headline"></a></h1>
+<p>The following notes are based on using ESRI ArcGIS Pro version 2.8.0 and ESRI ArcGIS server version 10.9.1.</p>
 <section id="wms">
 <h2>WMS<a class="headerlink" href="#wms" title="Permalink to this headline"></a></h2>
 <section id="creating-the-service">
 <h3>Creating the service<a class="headerlink" href="#creating-the-service" title="Permalink to this headline"></a></h3>
 <section id="prepare-the-map-document">
 <h4>Prepare the map document<a class="headerlink" href="#prepare-the-map-document" title="Permalink to this headline"></a></h4>
-<p>Initial set up of WMS services is relatively straightforward and simply requires the creation of a map document (.mxd) containing the data you want to add to the service.</p>
-<p>It is important to pay attention to the layer names in the map document, since the individual service layer names will use the map document layer names. The service will also use the map document layer names for the respective layer titles in the GetCapabilities document.</p>
-<figure class="align-default" id="id9">
-<img alt="Using ArcMap layer names in the service" src="../../_images/image048.jpg" />
+<p>Initial set up of WMS services is relatively straightforward and simply requires the creation of a map document   in ArcGIS Pro  (.aprx ) containing the data you want to add to the service.
+It is important to pay attention to the layer names in the map document, since the individual service layer names will use the map document layer names. The service will also use the map document layer names for the respective layer titles in the GetCapabilities document.</p>
+<figure class="align-default" id="id8">
+<img alt="Using ArcGIS Pro layer names in the service" src="../../_images/arcpro01.png" />
 <figcaption>
-<p><span class="caption-text">Figure 1 - Using ArcMap layer names in the service</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Figure 1 - Using ArcGIS Pro layer names in the service</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Eg. an unmodified GetCapabilities (version 1.3.0) response for the above example would look like:</p>
@@ -531,15 +531,15 @@
 <span class="nt">&lt;CRS&gt;</span>EPSG:4326<span class="nt">&lt;/CRS&gt;</span>
 ...
 <span class="nt">&lt;Layer</span> <span class="na">queryable=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;Name&gt;</span>GBR_BGS_625k_BA<span class="nt">&lt;/Name&gt;</span>
-    <span class="nt">&lt;Title&gt;</span>GBR_BGS_625k_BA<span class="nt">&lt;/Title&gt;</span>
+    <span class="nt">&lt;Name&gt;</span>GBR_BGS_625k_TYPE<span class="nt">&lt;/Name&gt;</span>
+    <span class="nt">&lt;Title&gt;</span>GBR_BGS_625k_TYPE<span class="nt">&lt;/Title&gt;</span>
     <span class="nt">&lt;Abstract&gt;&lt;/Abstract&gt;</span>
     <span class="nt">&lt;CRS&gt;</span>CRS:84<span class="nt">&lt;/CRS&gt;</span>
     <span class="nt">&lt;CRS&gt;</span>EPSG:4326<span class="nt">&lt;/CRS&gt;</span>
    ...
     <span class="nt">&lt;Style&gt;</span>
         <span class="nt">&lt;Name&gt;</span>default<span class="nt">&lt;/Name&gt;</span>
-        <span class="nt">&lt;Title&gt;</span>GBR_BGS_625k_BA<span class="nt">&lt;/Title&gt;</span>
+        <span class="nt">&lt;Title&gt;</span>GBR_BGS_625k_TYPE<span class="nt">&lt;/Title&gt;</span>
         <span class="nt">&lt;LegendURL</span> <span class="na">width=</span><span class="s">&quot;68&quot;</span> <span class="na">height=</span><span class="s">&quot;2048&quot;</span><span class="nt">&gt;</span>
             <span class="nt">&lt;Format&gt;</span>image/png<span class="nt">&lt;/Format&gt;</span>
             <span class="nt">&lt;OnlineResource</span> <span class="na">xlink:href=</span><span class="s">&quot;...&quot;</span> <span class="na">xlink:type=</span><span class="s">&quot;simple&quot;</span><span class="nt">/&gt;</span>
@@ -547,8 +547,8 @@
     <span class="nt">&lt;/Style&gt;</span>
 <span class="nt">&lt;/Layer&gt;</span>
 <span class="nt">&lt;Layer</span> <span class="na">queryable=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;Name&gt;</span>GBR_BGS_625k_BLT<span class="nt">&lt;/Name&gt;</span>
-    <span class="nt">&lt;Title&gt;</span>GBR_BGS_625k_BLT<span class="nt">&lt;/Title&gt;</span>
+    <span class="nt">&lt;Name&gt;</span>GBR_BGS_625k_PERIOD<span class="nt">&lt;/Name&gt;</span>
+    <span class="nt">&lt;Title&gt;</span>GBR_BGS_625k_PERIOD<span class="nt">&lt;/Title&gt;</span>
     <span class="nt">&lt;Abstract&gt;&lt;/Abstract&gt;</span>
 ...
 </pre></div>
@@ -556,32 +556,75 @@
 </section>
 <section id="publishing-your-wms">
 <h4>Publishing your WMS<a class="headerlink" href="#publishing-your-wms" title="Permalink to this headline"></a></h4>
-<p>Once you are happy with the layer names, the easiest way to publish your WMS is doing it directly from the map document:</p>
+<p>If you have not already established a connection to your ArcGIS server instance, add a new server connection.</p>
 <ul class="simple">
-<li><p>Go to <em>File &gt; Share As &gt; Service…</em> to open the <em>Share as Service</em> dialog.</p></li>
-<li><p>Select <em>Publish a service</em> and click <em>Next &gt;</em>.</p></li>
-<li><p>On the <em>Publish a Service</em> dialog, choose/add a connection to your ArcGIS Server instance and write a name for your map service. The name you enter will be part of the WMS url, so you must ensure that meets the OneGeology profile naming conventions. Click <em>Next &gt;.</em></p></li>
-<li><p>Select whether to <em>Use existing folder</em> or <em>Create new folder</em>. The folder name will also appear as part of the WMS url. Click <em>Continue</em>.</p></li>
-<li><p>In the <em>Service Editor</em> dialog, go to <em>Capabilities</em> and select <em>WMS</em>. If you wish, you can unselect KML.</p></li>
+<li><p>Go to <em>Insert&gt; Connections &gt; Add ArcGIS Server Connection</em></p></li>
 </ul>
+<figure class="align-default" id="id9">
+<img alt="Using ArcGIS Pro layer names in the service" src="../../_images/arcpro02.png" />
+<figcaption>
+<p><span class="caption-text">Figure 2 - Establishing an ArcGIS Server connection</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Once you are happy with the layer names, the easiest way to publish your WMS is doing it directly from the Catalog pane:</p>
+<ul class="simple">
+<li><p>Right click the established server connection in the Catalog pane; go to <em>Publish &gt; Map Service</em></p></li>
+</ul>
+<figure class="align-default" id="id10">
+<img alt="Publish a Service via the ArcGIS Server connection" src="../../_images/arcpro04.png" />
+<figcaption>
+<p><span class="caption-text">Figure 3 - Publish a Service via the ArcGIS Server connection</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>A dialog will open letting you select the relevant <em>Project Map</em></p></li>
+<li><p>Select the Map that contains the layers you would like to serve (if there are more than one in your project)</p></li>
+<li><p>The <em>Publish a Service</em> dialog will open.</p></li>
+</ul>
+<figure class="align-default" id="id11">
+<img alt="Select the Map containing the layers you would like to publish" src="../../_images/arcpro05.png" />
+<figcaption>
+<p><span class="caption-text">Figure 4 - Select the Map containing the layers you would like to publish</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The service configurations are similar to the one you may know from ArcMap Desktop.</p>
+<ul class="simple">
+<li><p>On the Publish a Service dialog, choose a name for your map service. The name you enter will be part of the WMS url, so you must ensure that meets the OneGeology profile naming conventions.</p></li>
+</ul>
+<figure class="align-default" id="id12">
+<img alt="Publish Map Service Dialog" src="../../_images/arcpro06.png" />
+<figcaption>
+<p><span class="caption-text">Figure 5 - Publish Map Service Dialog</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Select whether to <em>Use existing folder</em> or <em>Create new folder</em>. The folder name will also appear as part of the WMS url.</p></li>
+<li><p>Go to <em>Configuration</em> and select WMS. If you wish, you can unselect all other  configurations apart from Map.</p></li>
+</ul>
+<figure class="align-default" id="id13">
+<img alt="Publish Map Service - Configuration" src="../../_images/arcpro07.png" />
+<figcaption>
+<p><span class="caption-text">Figure 6 - Publish Map Service  - Configuration</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you <strong>do not</strong> want to expose the data behind your WMS service, make sure that the <strong>WFS</strong> option is <strong>unselected</strong>.</p>
 </div>
-<ul class="simple">
-<li><p>Now go to <em>Capabilities &gt; WMS</em> to access the WMS properties</p></li>
-</ul>
-<figure class="align-default" id="id10">
-<img alt="Adding a new WMS service in ArcGIS" src="../../_images/image049.jpg" />
+<figure class="align-default" id="id14">
+<img alt="Adding a new WMS service in ArcGIS" src="../../_images/arcpro08.png" />
 <figcaption>
-<p><span class="caption-text">Figure 2 - Adding a new WMS service in ArcGIS</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Figure 7 - Adding a new WMS service in ArcGIS</span><a class="headerlink" href="#id14" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <ul class="simple">
-<li><p>You will be presented with a form to edit your service level metadata (as above) or you may opt to use external capabilities. We suggest at this stage that you should use the form to fill in as much detail as possible, though you should note that you will eventually need to use external files to enter any layer level metadata and add missing service level metadata parameters; we can use the data you enter initially as the basis for these external static files.</p></li>
-<li><p>You also need to tick the <em>Use layer names from the map document</em> option; otherwise, the layer names will be given numbers instead. Again, you will need to ensure that the ArcMap layer names follow the naming guidelines.</p></li>
+<li><p>Edit the <em>WMS Properties</em>, specify the Operations that are allowed to be performed by the user.</p></li>
+<li><p>You will be presented with a form to edit your service level metadata (as below) or you may opt to use external capabilities. We suggest at this stage that you should use the form to fill in as much detail as possible, though you should note that you will eventually need to use external files to enter any layer level metadata and add missing service level metadata parameters; we can use the data you enter initially as the basis for these external static files.</p></li>
+<li><p>You will need to update the service with a link to the external Capabilities file in ArcGIS Server Manager once the service has been successfully published</p></li>
+<li><p>You also need to tick the <em>Use layer names from the map document</em> option; otherwise, the layer names will be given numbers instead. Again, you will need to ensure that the ArcGIS Pro layer names follow the naming guidelines.</p></li>
 <li><p>ArcGIS Server creates only one style named <em>default</em> for every layer, but allows you to do include additional styles for each layer using a SLD file. The default style matches the symbology set in the map document.</p></li>
-<li><p>Once you finish configuring your WMS, click <em>Publish</em> on the top-right corner of the <em>Service Editor</em> dialog to create your service.</p></li>
+<li><p>Once you finish configuring your WMS, first click <em>Analyse</em> to identify any possible errors prior to publishing.</p></li>
+<li><p>If no errors are returned click <em>Publish</em> at the bottom of the Service Editor dialog to create your service.</p></li>
 </ul>
 <p>Your new service will have a URL like below, with the folder name part being optional:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="p">[</span><span class="n">hostname</span><span class="p">]</span><span class="o">/</span><span class="n">ArcGIS</span><span class="o">/</span><span class="n">services</span><span class="o">/</span><span class="p">[</span><span class="n">folder</span> <span class="n">name</span><span class="p">]</span><span class="o">/</span><span class="p">[</span><span class="nb">map</span> <span class="n">service</span> <span class="n">title</span><span class="p">]</span><span class="o">/</span><span class="n">MapServer</span><span class="o">/</span><span class="n">WMSServer</span>
@@ -591,7 +634,7 @@
 </section>
 <section id="edit-the-getcapabilities-documents">
 <h3>Edit the GetCapabilities documents<a class="headerlink" href="#edit-the-getcapabilities-documents" title="Permalink to this headline"></a></h3>
-<p>ArcGIS Server doesn’t create any static GetCapabilities xml documents, but does allow you to use external files. You will need to use such external files if you want to add any additional spatial reference systems, correct the keywords listing, change the LegendURL images, add better abstracts and layer titles, or add an INSPIRE extended capabilities section. We think to provide a fully compliant WMS it is highly likely that you will need to use a set of static files.</p>
+<p>ArcGIS Server doesn’t create any static GetCapabilities XML documents, but does allow you to use external files. You will need to use such external files if you want to add any additional spatial reference systems, correct the keywords listing, change the LegendURL images, add better abstracts and layer titles, or add an INSPIRE extended capabilities section. We think to provide a fully compliant WMS it is highly likely that you will need to use a set of static files.</p>
 <p>The first step to editing your files is to create them.</p>
 <p>The quickest way to do this is to use the response documents from your initial service. You will need to have a file for all the WMS versions that you want your service to support. We require at least a version 1.3.0 document but you could also have a 1.1.1 response.</p>
 <p>Your WMS version 1.1.1 GetCapabilities document is generated using a request like:</p>
@@ -606,11 +649,11 @@
 <p><strong>Save this as [short service name]130.xml</strong></p>
 <p>It doesn’t really matter what name you give these files, as long as you use the same name prefix for all files that belong to the same service.</p>
 <p>You need to put these files on the server (or at a location available to your server), and make them browsable. These files only need to be browsable internally by the ArcGIS server.</p>
-<p>Now go back to your map service and edit it using either <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-manager.htm">ArcGIS Server Manager</a> or <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-arcgis-for-desktop.htm">ArcMap</a>.</p>
-<figure class="align-default" id="id11">
-<img alt="Setting up external capabilities files" src="../../_images/image050.jpg" />
+<p>Now go back to your map service and edit it using either <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-manager.htm">ArcGIS Server Manager</a> or <a class="reference external" href="https://pro.arcgis.com/en/pro-app/latest/help/sharing/overview/overwrite-a-map-service.htm">ArcGIS Pro</a>.</p>
+<figure class="align-default" id="id15">
+<img alt="Setting up external capabilities files" src="../../_images/arcpro09.PNG" />
 <figcaption>
-<p><span class="caption-text">Figure 3 - Setting up external capabilities files</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Figure 8 - Setting up external capabilities files</span><a class="headerlink" href="#id15" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Select <em>WMS</em>, then select the <em>Use External capabilities files</em> option and in the <em>Specify the location and prefix</em> dialog add the web address to the folder containing the capabilities response documents plus your <em>[short service name]</em> prefix.</p>
@@ -619,24 +662,24 @@
 </section>
 <section id="inspire">
 <h3>INSPIRE<a class="headerlink" href="#inspire" title="Permalink to this headline"></a></h3>
-<p>If you want your OneGeology service to comply to INSPIRE standards, in addition to meet the requirements of the OneGeology profile, you need to ensure that the following conditions are fulfilled:</p>
+<p>If you want your OneGeology service to comply to INSPIRE metadata standards, in addition to meet the requirements of the OneGeology profile, you need to ensure that the following conditions are fulfilled:</p>
 <ol class="arabic simple">
 <li><p>Layer name and layer title must follow INSPIRE naming conventions. For example the <a class="reference external" href="http://inspire.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_GE_v3.0.pdf">D2.8.II.4 Data Specification on Geology–Technical Guidelines</a> tell us (section 11.1 ~ Layers to be provided by INSPIRE view services) that any layer to do with lithology or age must have the name <em>GE.GeologicUnit</em> and title <em>Geologic Units</em>. See the <a class="reference external" href="https://themes.jrc.ec.europa.eu/discussion/view/13952/layer-naming">layer-naming</a> discussion on the INSPIRE Thematic Clusters Geology forum for fuller details.</p></li>
 <li><p>Layers must support at least one of the INSPIRE coordinate systems. See <a class="reference external" href="http://inspire.ec.europa.eu/documents/Data_Specifications/INSPIRE_Specification_CRS_v3.0.pdf">D2.8.I.1 INSPIRE Specification on Coordinate Reference Systems - Guidelines</a>.</p></li>
 <li><p>Your GetCapabilities document must include the INSPIRE Extended Capabilities tag.</p></li>
 </ol>
-<p>There are two ways of achieving these conditions using ESRI software. The first one is using a standard ArcGIS map document and standard ArcGIS Server tools, where you’ll need to modify layer names to make them compliant, change service properties to include required coordinate systems and modify the get capabilities document to include the INSPIRE Extended Capabilities section. The second option is using the ArcGIS for INSPIRE extension, which provides tools and new services to ensure compliance with INSPIRE directives. If you want to go for the second option, there is an <a class="reference external" href="http://www.onegeology.org/technical_progress/esriGrantOffer.html">ESRI OneGeology Grant</a> for OneGeology members.</p>
+<p>There are two ways of achieving these conditions using ESRI software. The first one is using a standard ArcGIS map document and standard ArcGIS Server tools, where you’ll need to modify layer names to make them compliant, change service properties to include required coordinate systems and modify the capabilities document to include the INSPIRE Extended Capabilities section. The second option is using the ArcGIS for INSPIRE extension, which provides tools and new services to ensure compliance with INSPIRE directives. If you want to go for the second option, there is an <a class="reference external" href="http://www.onegeology.org/technical_progress/esriGrantOffer.html">ESRI OneGeology Grant</a> for OneGeology members.</p>
 <section id="arcgis-server">
 <h4>ArcGIS Server<a class="headerlink" href="#arcgis-server" title="Permalink to this headline"></a></h4>
 <section id="inspire-layer-names">
 <h5>INSPIRE Layer Names<a class="headerlink" href="#inspire-layer-names" title="Permalink to this headline"></a></h5>
 <p>In order to make your service INSPIRE compliant, you will need to configure the name of your layers (e.g. GE.GeologicUnit); however, this clashes with OneGeology naming standards. In this situation, it is desirable to create a group layer. For example, you may want to create a layer called GE.GeologicUnit to group all of your layers that are spatial objects of type GeologicUnit. The layer name and title rules set out in the OneGeology profile relate to the grouped (or child) layers, whereas the INSPIRE name and title relate to the group (or parent) layer.</p>
 <p>If your INSPIRE service is only serving layers of one type, one way of applying group layering would be to use the root layer name and title (not service name and title) as the grouping layer. If, on the other hand, your INSPIRE service is serving layers of several types (e.g. GE.GeologicUnit and GE.GeologicFault), we believe the only option is for you to configure actual group layering.</p>
-<p>To <strong>add group layers to a new service</strong> simply <a class="reference external" href="http://desktop.arcgis.com/en/arcmap/latest/map/working-with-layers/working-with-group-layers.htm#GUID-058900C7-6A45-4260-83D8-9039C00D875C">add a group layer</a> to the map document that will create your service, rename it and place your layers inside. The WMS service published form this map document will keep the same group layer structure.</p>
-<figure class="align-default" id="id12">
-<img alt="Adding group layers to the service" src="../../_images/image051.jpg" />
+<p>To <strong>add group layers to a new service</strong> simply <a class="reference external" href="https://pro.arcgis.com/en/pro-app/2.8/help/mapping/layer-properties/work-with-group-layers.htm">add a group layer</a> to the map document that will create your service, rename it and place your layers inside. The WMS service published form this map document will keep the same group layer structure.</p>
+<figure class="align-default" id="id16">
+<img alt="Adding group layers to the service" src="providingdata/server_setup/images/esri/arcpro10.png" />
 <figcaption>
-<p><span class="caption-text">Figure 4 - Adding group layers to the service</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Figure 9 - Adding group layers to the service</span><a class="headerlink" href="#id16" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>If you want <strong>add group layers to an existing service</strong>, open the map document that created the service, modify it as described above and publish it again as a WMS service; however, when publishing the service, make sure that you select the option “Overwrite an existing service”. This will save you having to delete the original service as well as having to type again all service properties.</p>
@@ -645,11 +688,11 @@
 </section>
 <section id="inspire-coordinate-systems">
 <h5>INSPIRE Coordinate Systems<a class="headerlink" href="#inspire-coordinate-systems" title="Permalink to this headline"></a></h5>
-<p>ArcGIS Server always adds 2 coordinate systems: EPSG:4326 (or CRS:84 for version 1.3.0) and the coordinate system set on the map document creating the service. To add any additional coordinate systems go to your map service and edit it using either <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-manager.htm">ArcGIS Server Manager</a> or <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-arcgis-for-desktop.htm">ArcMap</a>.  On the <em>Service Editor</em> dialog go to <em>Capabilities &gt; WMS</em> and, in the <em>Additional spatial reference systems</em> text box, type any well-known EPSG ID in the format indicated below.</p>
-<figure class="align-default" id="id13">
+<p>ArcGIS Server always adds 2 coordinate systems: EPSG:4326 (or CRS:84 for version 1.3.0) and the coordinate system set on the map document creating the service. To add any additional coordinate systems go to your map service and edit it using either <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-manager.htm">ArcGIS Server Manager</a> or <a class="reference external" href="https://pro.arcgis.com/en/pro-app/latest/help/sharing/overview/overwrite-a-map-service.htm">ArcGIS Pro</a>.  On the <em>Publish a Service</em>  dialog go to <em>Capabilities &gt; WMS</em> and, in the <em>Additional spatial reference systems</em> text box, type any well-known EPSG ID in the format indicated below.</p>
+<figure class="align-default" id="id17">
 <img alt="Additional spatial reference systems option" src="../../_images/esriimage009.png" />
 <figcaption>
-<p><span class="caption-text">Figure 5 - Additional spatial reference systems option</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Figure 10 - Additional spatial reference systems option</span><a class="headerlink" href="#id17" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -660,8 +703,8 @@
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;/Exception&gt;</span>
 <span class="nt">&lt;inspire_vs:ExtendedCapabilities</span> <span class="na">xmlns:inspire_vs=</span><span class="s">&quot;http://inspire.ec.europa.eu/schemas/inspire_vs/1.0&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;inspire_common:MetadataUrl</span> <span class="na">xsi:type=</span><span class="s">&quot;inspire_common:resourceLocatorType&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;inspire_common:URL&gt;</span>http://metadata.bgs.ac.uk/geonetwork/srv/en/csw?SERVICE=CSW
-        <span class="ni">&amp;amp;</span>REQUEST=GetRecordById<span class="ni">&amp;amp;</span>ID=7822e848-822d-45a5-8584-56d352fd2170<span class="ni">&amp;amp;</span>elementSetName=full<span class="ni">&amp;amp;</span>OutputSchema=csw:IsoRecord<span class="ni">&amp;amp;</span>
+        <span class="nt">&lt;inspire_common:URL&gt;</span>https://metadata.bgs.ac.uk/geonetwork/srv/eng/csw?SERVICE=CSW
+        <span class="ni">&amp;amp;</span>REQUEST=GetRecordById<span class="ni">&amp;amp;</span>ID=7822e848-822d-45a5-8584-56d352fd2170<span class="ni">&amp;amp;</span>elementSetName=full<span class="ni">&amp;amp;</span>OutputSchema=csw:IsoRecord<span class="ni">&amp;amp;</span>version=2.0.2<span class="ni">&amp;amp;</span>
         <span class="nt">&lt;/inspire_common:URL&gt;</span>
         <span class="nt">&lt;inspire_common:MediaType&gt;</span>application/xml<span class="nt">&lt;/inspire_common:MediaType&gt;</span>
     <span class="nt">&lt;/inspire_common:MetadataUrl&gt;</span>
@@ -695,7 +738,7 @@
         <span class="nt">&lt;inspire_common:Degree&gt;</span>notEvaluated<span class="nt">&lt;/inspire_common:Degree&gt;</span>
     <span class="nt">&lt;/inspire_common:Conformity&gt;</span>
     <span class="nt">&lt;inspire_common:MetadataPointOfContact&gt;</span>
-        <span class="nt">&lt;inspire_common:OrganisationName&gt;</span>Mr Matthew Harrison<span class="nt">&lt;/inspire_common:OrganisationName&gt;</span>
+        <span class="nt">&lt;inspire_common:OrganisationName&gt;</span>William Smith<span class="nt">&lt;/inspire_common:OrganisationName&gt;</span>
         <span class="nt">&lt;inspire_common:EmailAddress&gt;</span>enqiries@bgs.ac.uk<span class="nt">&lt;/inspire_common:EmailAddress&gt;</span>
     <span class="nt">&lt;/inspire_common:MetadataPointOfContact&gt;</span>
     <span class="nt">&lt;inspire_common:MetadataDate&gt;</span>2015-10-23<span class="nt">&lt;/inspire_common:MetadataDate&gt;</span>
@@ -728,455 +771,6 @@
 </div>
 </section>
 </section>
-<section id="inspire-extension">
-<h4>INSPIRE Extension<a class="headerlink" href="#inspire-extension" title="Permalink to this headline"></a></h4>
-<p>The ArcGIS for INSPIRE extension allows to create an INSPIRE compliant WMS through a new ESRI map service, specific to this extension, called INSPIRE View service. In our experience, creating a INSPIRE compliant WMS service using custom INSPIRE extension tools is more difficult than using standard ArcGIS tools, due to the complexity of the datasets that you have to use, the scarce amount of documentation and the limited ESRI support for the extension.</p>
-<section id="create-inspire-geodatabase">
-<h5>Create INSPIRE geodatabase<a class="headerlink" href="#create-inspire-geodatabase" title="Permalink to this headline"></a></h5>
-<p>The first step to use ArcGIS for INSPIRE is creating a geodatabase with one of the templates supplied by the extension.  To create a geodatabase for Geology follow the steps in <a class="reference external" href="http://enterprise.arcgis.com/en/inspire/10.5/get-started/pdf/InstallationGuide_ArcGISForINSPIRE_GDB_10_5_EN.pdf">this document</a> in sections 3.3.1 and 3.3.4.</p>
-</section>
-<section id="populate-inspire-geodatabase">
-<h5>Populate INSPIRE geodatabase<a class="headerlink" href="#populate-inspire-geodatabase" title="Permalink to this headline"></a></h5>
-<p>Fill in the geodatabase with your data. There are multiple feature classes and tables; fill in the ones that are relevant to you.</p>
-<p>Note that all feature classes will be grouped on a feature dataset called <em>GE</em>. You’ll need to add your features to the appropriate feature class so that they can be used by the INSPIRE extension. Feel free to add new fields to these feature classes if you want to show attributes not available by default on the template; however, refrain from deleting any existing field as you might break one of the multiple relationships set on the template.</p>
-</section>
-<section id="customise-layers-in-inspire-geodatabase">
-<h5>Customise layers in INSPIRE geodatabase<a class="headerlink" href="#customise-layers-in-inspire-geodatabase" title="Permalink to this headline"></a></h5>
-<p>You’ll do this by modifying the <em>LayerInfo</em> table. In this extension, each INSPIRE layer consists normally of four hidden sublayers.  We need to modify the <em>LayerInfo</em> table to make the relevant sublayers visible and to be able to change the name and title of the sublayers (<a class="reference external" href="http://enterprise.arcgis.com/en/inspire/10.5/get-started/pdf/CustomizationGuide_ArcGISForINSPIRE_LayerInfo_10_5_EN.pdf">see Customization Guide</a>). The INSPIRE layer will act as a group layer and will follow INSPIRE naming conventions. The sublayers will follow OneGeology naming conventions. In the following example, we are going to configure two sublayers to represent bedrock units symbolised by age and by lithology. These layers are going to be looking at the same feature class in the geodabase template, defined in the FC_NAME field as <em>geUnitS</em> (short for geology unit surface). Given that in this example we are dealing only with geologic features represented as polygons, the final <em>LayerInfo</em> table could look like this (table transposed for visibility reasons):</p>
-<table border=1 cellspacing=0 cellpadding=0 width=0 style='width:375.65pt;border-collapse:collapse;border:none'>
- <tr style='height:15.0pt;color:white;'>
-  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;background: black;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt;color:white;'>
-  <p align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>FIELD NAME
-  </td>
-  <td width=116 style='vertical-align:center;width:99.2pt;border:solid windowtext 1.0pt;border-left: none;background:black;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt;color:white;'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ROW 1
-  </td>
-  <td width=123 style='width:99.25pt;border:solid windowtext 1.0pt;border-left: none;background:black;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt;color:white;'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ROW 2
-  </td>
-  <td width=136 style='width:4.0cm;border:solid windowtext 1.0pt;border-left: none;background:black;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt;color:white;'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ROW 3
-  </td>
- </tr>
- <tr style='height:15.0pt'>
-  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>OBJECTID
-  </td>
-  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>2
-  </td>
-  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>4
-  </td>
-  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>12
-  </td>
- </tr>
- <tr style='height:15.0pt'>
-  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ID
-  </td>
-  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>417
-  </td>
-  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>420
-  </td>
-  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>421
-  </td>
- </tr>
- <tr style='height:15.0pt'>
-  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>THEME
-  </td>
-  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology
-  </td>
-  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology
-  </td>
-  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology
-  </td>
- </tr>
- <tr style='height:15.0pt'>
-  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>FC_NAME
-  </td>
-  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-
-  </td>
-  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>geUnitS
-  </td>
-  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>geUnitS
-  </td>
- </tr>
- <tr style='height:15.0pt'>
-  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>STYPE
-  </td>
-  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-1
-  </td>
-  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-1
-  </td>
-  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-1
-  </td>
- </tr>
- <tr style='height:15.75pt'>
-  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.75pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>APP_SCHEMA
-  </td>
-  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.75pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology
-  </td>
-  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.75pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology
-  </td>
-  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.75pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology
-  </td>
- </tr>
- <tr style='height:15.0pt'>
-  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>IR_VERSION
-  </td>
-  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>0
-  </td>
-  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>0
-  </td>
-  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>
-  </td>
- </tr>
- <tr style='height:30.0pt'>
-  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>LAYER_NAME
-  </td>
-  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GE.GeologicUnit
-  </td>
-  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GBR_BGS_625k_BA
-  </td>
-  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:30.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GBR_BGS_625k_BLT
-  </td>
- </tr>
- <tr style='height:23.9pt'>
-  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:23.9pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>LAYER_TITLE
-  </td>
-  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:23.9pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geologic Units
-  </td>
-  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:23.9pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GBR BGS 1:625k Bedrock Age
-  </td>
-  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:23.9pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GBR BGS 1:625k Bedrock Lithology
-  </td>
- </tr>
- <tr style='height:21.8pt'>
-  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:21.8pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>SPATIAL_OBJECT_TYPE
-  </td>
-  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:21.8pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-
-  </td>
-  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:21.8pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>MappedFeature
-  </td>
-  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:21.8pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>MappedFeature
-  </td>
- </tr>
- <tr style='height:13.7pt'>
-  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:13.7pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>DEF_QUERY
-  </td>
-  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:13.7pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-
-  </td>
-  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:13.7pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-
-  </td>
-  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:13.7pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-
-  </td>
- </tr>
- <tr style='height:15.0pt'>
-  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>PARENT_ID
-  </td>
-  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-1
-  </td>
-  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>417
-  </td>
-  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>417
-  </td>
- </tr>
- <tr style='height:22.55pt'>
-  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:22.55pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>SPATIAL_OBJECT_
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>TYPE_PREFIX
-  </td>
-  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:22.55pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ge
-  </td>
-  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:22.55pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ge
-  </td>
-  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:22.55pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ge
-  </td>
- </tr>
- <tr style='height:27.8pt'>
-  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:27.8pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>LAYER_KEYWORDS
-  </td>
-  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:27.8pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology, Lithology, Age, Geologic unit
-  </td>
-  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:27.8pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology, Lithology, Age, Geologic unit
-  </td>
-  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:27.8pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology, Lithology, Age, Geologic unit
-  </td>
- </tr>
- <tr style='height:15.0pt'>
-  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>IS_HIDDEN
-  </td>
-  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>0
-  </td>
-  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>0
-  </td>
-  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>0
-  </td>
- </tr>
- <tr style='height:15.0pt'>
-  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>IS_VISIBLE
-  </td>
-  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>1
-  </td>
-  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>1
-  </td>
-  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>1
-  </td>
- </tr>
- <tr style='height:15.0pt'>
-  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>MIN_SCALE
-  </td>
-  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'></td>
-  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'></td>
-  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>
-  </td>
- </tr>
- <tr style='height:15.0pt'>
-  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>MAX_SCALE
-  </td>
-  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'></td>
-  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'></td>
-  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>
-  </td>
- </tr>
- <tr style='height:13.55pt'>
-  <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:13.55pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GDBTEMPLATE_NAME
-  </td>
-  <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:13.55pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GE
-  </td>
-  <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:13.55pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GE
-  </td>
-  <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:13.55pt'>
-  <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GE
-  </td>
- </tr>
-</table><p>Table 1 Custom <em>Layer Info</em> table</p>
-<ul class="simple">
-<li><p>Rows with ID = 417 and ID = 420 were kept; the remaining rows were deleted. In addition, a new row with ID = 421 was added. Note that you don’t need to delete any row, this was done purely to create a simpler example.</p></li>
-<li><p>As specified in the PARENT_ID field, row ID 417 is the group layer, whereas rows 420 and 421 are its sublayers.</p></li>
-<li><p>The group layer doesn’t point to any feature class. Both child layers point at the same feature class (geUnitS), since we want the same dataset with different symbology (this can be set once layers are loaded on the map document).</p></li>
-<li><p>Group layer name and title must conform to INSPIRE standards.  Child layer titles must conform to OneGeology standards (ideally layer names too, but the GetCapabilities document created with the ArcGIS for INSPIRE extension doesn’t honour the layer names defined on the <em>LayerInfo</em> table if more than one layer is pointing at the same feature class).</p></li>
-<li><p>Child layers must have a value of <em>0</em> in the IS_HIDDEN field so that they are visible on the INSPIRE VIEW service.</p></li>
-</ul>
-</section>
-<section id="add-inspire-layers-to-your-map-document">
-<h5>Add INSPIRE layers to your map document<a class="headerlink" href="#add-inspire-layers-to-your-map-document" title="Permalink to this headline"></a></h5>
-<p>Open a map document and add your layers to the map using the <em>Add INSPIRE Layer</em> button (if you can’t see this button, make sure that you have the <em>INSPIRE Tools</em> toolbar enabled).</p>
-<figure class="align-default" id="id14">
-<img alt="Add INSPIRE Tools to map document" src="../../_images/image052.jpg" />
-<figcaption>
-<p><span class="caption-text">Figure 6 - Add INSPIRE Tools to map document</span><a class="headerlink" href="#id14" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<p>This will open <em>INSPIRE Layer Wizard</em> where you can first select your INSPIRE database and second select the INSPIRE layers you wish to add. Note that this dialog will reflect changes done in the <em>LayerInfo</em> table therefore your custom layers should now be available. See <a class="reference external" href="http://server.arcgis.com/en/inspire/latest/inspire-services/create-inspire-view-service-map-document.htm">Create the INSPIRE View Service map document.</a></p>
-<figure class="align-default" id="id15">
-<img alt="INSPIRE Layer wizard" src="../../_images/image053.jpg" />
-<figcaption>
-<p><span class="caption-text">Figure 7 - INSPIRE Layer wizard</span><a class="headerlink" href="#id15" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<p>Click <em>Create</em>, and your selected layers will be added to the map document. The <em>LayerInfo</em> table specifies the hierarchical structure of the layers in the service as well as their names and titles, so we don’t need to (and shouldn’t) modify the layer names in the map document.</p>
-<figure class="align-default" id="id16">
-<img alt="INSPIRE layers on map document" src="../../_images/image054.jpg" />
-<figcaption>
-<p><span class="caption-text">Figure 8 - INSPIRE layers on map document</span><a class="headerlink" href="#id16" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<p>Note that, as well as the layers shown on the map, a few tables have also been added to the map document. These tables are required for the creation of the INSPIRE service therefore they shouldn’t be removed.</p>
-<figure class="align-default" id="id17">
-<img alt="Additional INSPIRE related tables added to map document" src="../../_images/image055.jpg" />
-<figcaption>
-<p><span class="caption-text">Figure 9 - Additional INSPIRE related tables added to map document</span><a class="headerlink" href="#id17" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<p>Now you can proceed to style your layers using the appropriate symbology. The symbology set on the map document will be defined within the GetCapabilities document as a style named <em>default</em>. In addition, each layer will have another style called <em>inspire_common:DEFAULT</em>, which is meant to assign by default a common style to INSPIRE layers; however, in ArcGIS server version 10.5, this default visualization style only supports Annex I INSPIRE layers.</p>
-<figure class="align-default" id="id18">
-<img alt="INSPIRE layer styles" src="../../_images/image056.jpg" />
-<figcaption>
-<p><span class="caption-text">Figure 10 - Each INSPIRE layer will have 2 styles: <em>inspire_common:DEFAULT</em> and <em>default</em></span><a class="headerlink" href="#id18" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="id19">
-<img alt="The symbology set in the map document will correspond to the &quot;default&quot; style" src="../../_images/image057.jpg" />
-<figcaption>
-<p><span class="caption-text">Figure 11 - The symbology set in the map document will correspond to the <em>default</em> style</span><a class="headerlink" href="#id19" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-</section>
-<section id="publish-inspire-view-service">
-<h5>Publish INSPIRE View service<a class="headerlink" href="#publish-inspire-view-service" title="Permalink to this headline"></a></h5>
-<p>A INSPIRE View service is the ESRI equivalent of a INSPIRE compliant WMS. Publishing a INSPIRE View service is very similar to publishing a WMS, the only difference being that you need to select and configure one additional capability.</p>
-<ul class="simple">
-<li><p>Go to <em>File &gt; Share As &gt; Service…</em> to open the <em>Share as Service</em> dialog.</p></li>
-<li><p>Select <em>Publish a service</em> and click <em>Next &gt;</em>.</p></li>
-<li><p>On the <em>Publish a Service</em> dialog, choose/add a connection to your ArcGIS Server instance and write a name for your map service. The name you enter will be part of the WMS url, so you must ensure that meets the OneGeology profile naming conventions.</p></li>
-<li><p>Select whether to <em>Use existing folder</em> or <em>Create new folder</em>. The folder name will also appear as part of the WMS url. Click <em>Continue</em>.</p></li>
-<li><p>In the <em>Service Editor</em> dialog, go to <em>Capabilities</em>. You’ll notice that the ArcGIS for INSPIRE extension has added three new capabilities. Select <em>WMS</em> and <em>ArcGIS for INSPIRE View Service</em>. Note that in order for the INSPIRE View service to work, the WMS capability must be enabled.</p></li>
-</ul>
-<figure class="align-default" id="id20">
-<img alt="Capabilities option in Service Editor dialog" src="../../_images/image058.jpg" />
-<figcaption>
-<p><span class="caption-text">Figure 12 - <em>Capabilities</em> option in <em>Service Editor</em> dialog</span><a class="headerlink" href="#id20" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<ul class="simple">
-<li><p>Now go to <em>Capabilities &gt; ArcGIS for INSPIRE View Service</em> to access the INSPIRE View Service properties</p></li>
-</ul>
-<figure class="align-default" id="id21">
-<img alt="ArcGIS for INSPIRE View Service properties in Service Editor dialog" src="../../_images/image059.jpg" />
-<figcaption>
-<p><span class="caption-text">Figure 13 - <em>ArcGIS for INSPIRE View Service</em> properties in <em>Service Editor</em> dialog</span><a class="headerlink" href="#id21" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<ul class="simple">
-<li><p>The properties of the above dialog can be left as they are, unless you want to modify the supported languages. Also, make sure that if you checked the <em>Use layer names from the map document</em> option in the WMS capabilities, you also check the <em>WMS uses layernames from map document</em> option in the ArcGIS for INSPIRE View Service capabilities. This won’t affect your INSPIRE View Service, only the WMS service that is being created in parallel.</p></li>
-<li><p>Click <em>Publish</em> on the top-right corner of the <em>Service Editor</em> dialog to create your service. We’ll deal with Advance Properties after the service has been published because the properties for INSPIRE layers will be available then.</p></li>
-</ul>
-<p>For more information go to <a class="reference external" href="http://server.arcgis.com/en/inspire/latest/inspire-services/create-the-inspire-view-service.htm">Create an INSPIRE View Service</a>.</p>
-</section>
-<section id="configure-inspire-view-service">
-<h5>Configure INSPIRE View service<a class="headerlink" href="#configure-inspire-view-service" title="Permalink to this headline"></a></h5>
-<p>Once the service has been published, we are going to use ArcCatalog to configure INSPIRE View service properties which will be reflected on the service’s GetCapabilities document.</p>
-<ul class="simple">
-<li><p>On ArcCatalog, go to the <em>GIS Servers</em> folder, select the appropriate instance of ArcGIS Server and navigate to your service.</p></li>
-<li><p>Right-click on the service and go to <em>Service Properties…</em></p></li>
-</ul>
-<figure class="align-default" id="id22">
-<img alt="Accessing Service Properties" src="../../_images/image060.jpg" />
-<figcaption>
-<p><span class="caption-text">Figure 14 - Accessing <em>Service Properties</em></span><a class="headerlink" href="#id22" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<ul class="simple">
-<li><p>On the Service Editor go to <em>Capablities &gt; ArcGIS for INSPIRE View Service</em> (see figure 13) and click <em>Advanced Properties</em> to open the <em>Editing the InspireView properties</em> dialog.</p></li>
-</ul>
-<p>The <em>Editing the InspireView properties</em> dialog allows you to set the options below. Fields in yellow are compulsory and, depending on the options you choose, there might be disabled fields in grey. We recommend you fill in as many fields as you can.</p>
-<ul class="simple">
-<li><p>Select INSPIRE external capabilities scenario</p></li>
-</ul>
-<figure class="align-default" id="id23">
-<img alt="Inspire View properties: extended capabilities type" src="../../_images/image061.jpg" />
-<figcaption>
-<p><span class="caption-text">Figure 15 - Inspire View properties: extended capabilities type</span><a class="headerlink" href="#id23" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<ul class="simple">
-<li><p>Service properties. Do not modify <em>Online resource</em> on this dialog, as it will change the value of the property <em>xlink:href</em> in all <em>OnlineResource</em> tags in the get capabilities document. You’ll need create a custom GetCapabilities document if you want to change the tag <em>/WMS_Capabilities/Service/OnlineResource</em> to provide a link to the data owner organization web site, or web site with information about the data owner organization, as requested in the OneGeology profile.</p></li>
-</ul>
-<figure class="align-default" id="id24">
-<img alt="Inspire View properties: service information" src="../../_images/image062.jpg" />
-<figcaption>
-<p><span class="caption-text">Figure 16 - Inspire View properties: service information</span><a class="headerlink" href="#id24" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<ul class="simple">
-<li><p>Contact information</p></li>
-</ul>
-<figure class="align-default" id="id25">
-<img alt="Inspire View properties: contact information" src="../../_images/image063.jpg" />
-<figcaption>
-<p><span class="caption-text">Figure 17 - Inspire View properties: contact information</span><a class="headerlink" href="#id25" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<ul class="simple">
-<li><p>GEMET Keywords</p></li>
-</ul>
-<figure class="align-default" id="id26">
-<img alt="Inspire View properties: GEMET Keywords" src="../../_images/image064.jpg" />
-<figcaption>
-<p><span class="caption-text">Figure 18 - Inspire View properties: GEMET Keywords</span><a class="headerlink" href="#id26" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<ul class="simple">
-<li><p>Layer properties. Note the highlighted sublayer names. One of them doesn’t honour the name defined in the <em>LayerInfo</em> table, taking the name of the other sublayer and adding “1” at the end of it. This seems to be a bug within the INSPIRE extension. Since OneGeology naming conventions for layer names are only a recommendation, the service will still comply with the OneGeology profile.</p></li>
-</ul>
-<figure class="align-default" id="id27">
-<img alt="Inspire View properties: Layers informatio" src="../../_images/image065.jpg" />
-<figcaption>
-<p><span class="caption-text">Figure 19 - Inspire View properties: Layers information</span><a class="headerlink" href="#id27" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-</section>
-<section id="custom-inspire-view-service-getcapabilities-document">
-<h5>Custom INSPIRE View service GetCapabilities document<a class="headerlink" href="#custom-inspire-view-service-getcapabilities-document" title="Permalink to this headline"></a></h5>
-<p>If you need to modify any option that’s not on the <em>Editing the InspireView properties</em> dialog, like the Online Resource tag mentioned above, you need to go to the service cached capabilities folder (<em>C:\arcgisserver\directories\arcgisforinspire\[folder_name]\[map service title]_MapServer\[folder_name]_ [map service title]_MapServer_inspireview</em>) and create a file called <em>GetCapabilities&lt;version&gt;_&lt;3 letter language code&gt;.xml</em>. Your service will now use the custom GetCapabilities file instead of the dynamically created one (e.g. <em>GetCapabilities130_ENG.xml</em>), also stored in the same location. When creating your custom file it’s recommended to start from a copy of the dynamically created file.</p>
-</section>
-<section id="use-inspire-view-service">
-<h5>Use INSPIRE View service<a class="headerlink" href="#use-inspire-view-service" title="Permalink to this headline"></a></h5>
-<p>Your service will be accessible from the following endpoint:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="p">[</span><span class="n">hostname</span><span class="p">]</span><span class="o">/</span><span class="n">ArcGIS</span><span class="o">/</span><span class="n">services</span><span class="o">/</span><span class="p">[</span><span class="n">folder_name</span><span class="p">]</span><span class="o">/</span><span class="p">[</span><span class="nb">map</span> <span class="n">service</span> <span class="n">title</span><span class="p">]</span><span class="o">/</span><span class="n">exts</span><span class="o">/</span><span class="n">InspireView</span><span class="o">/</span><span class="n">service</span>
-</pre></div>
-</div>
-<p>For more information see <a class="reference external" href="http://server.arcgis.com/en/inspire/latest/inspire-services/use-the-inspire-view-service.htm">Use an INSPIRE View service</a>.</p>
-</section>
-</section>
 </section>
 <section id="arcgis-server-issues">
 <h3>ArcGIS server issues<a class="headerlink" href="#arcgis-server-issues" title="Permalink to this headline"></a></h3>
@@ -1188,17 +782,17 @@
 <section id="simple-feature-wfs">
 <h2>Simple Feature WFS<a class="headerlink" href="#simple-feature-wfs" title="Permalink to this headline"></a></h2>
 <p>Creating a simple feature WFS requires almost the same steps as creating a WMS. The only difference being that, when publishing the service, you need to select the WFS capability.</p>
-<figure class="align-default" id="id28">
-<img alt="Enabling WFS capabilities in Service Editor dialog" src="../../_images/image066.jpg" />
+<figure class="align-default" id="id18">
+<img alt="Enabling WFS capabilities in Service Editor dialog" src="../../_images/arcpro11.PNG" />
 <figcaption>
-<p><span class="caption-text">Figure 20 - Enabling WFS capabilities in <em>Service Editor</em> dialog</span><a class="headerlink" href="#id28" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Figure 20 - Enabling WFS capabilities in <em>Service Editor</em> dialog</span><a class="headerlink" href="#id18" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>After activating WFS, you’ll have access to the properties of this capability. Some of these properties will coincide with WMS properties, but there will also be WFS specific properties, such us namespace, prefix or maximum number of features returned.</p>
-<figure class="align-default" id="id29">
-<img alt="WFS service properties" src="../../_images/image067.jpg" />
+<figure class="align-default" id="id19">
+<img alt="WFS service properties" src="../../_images/arcpro12.PNG" />
 <figcaption>
-<p><span class="caption-text">Figure 21 - WFS service properties</span><a class="headerlink" href="#id29" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Figure 21 - WFS service properties</span><a class="headerlink" href="#id19" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>For more information on how to create a simple feature WFS service and how to edit its GetCapabilities document, go to the WMS section of this cookbook or to ESRI’s documentation about <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/wfs-services.htm">WFS services</a>.</p>
@@ -1207,35 +801,40 @@
 <h2>WCS<a class="headerlink" href="#wcs" title="Permalink to this headline"></a></h2>
 <section id="create-a-map-document">
 <h3>Create a map document<a class="headerlink" href="#create-a-map-document" title="Permalink to this headline"></a></h3>
-<p>In ArcGIS, a WCS can be created mainly through 3 routes: a map document with raster data, a raster dataset or a mosaic dataset. Publishing a mosaic dataset requires ArcGIS Image Server, so unless you have this extension enabled, the only way to publish multiple rasters at once on a single WCS will be through a map document; therefore we’re are going to focus on this route. For more information see <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/wcs-services.htm">WCS services</a>.</p>
+<p>In ArcGIS, a WCS can be created mainly through 3 routes: a map document with raster data, a raster dataset or a mosaic dataset. Publishing a mosaic dataset requires ArcGIS Image Server, so unless you have this extension enabled, the only way to publish multiple rasters at once on a single WCS will be through a map document; therefore we’re are going to focus on this route. For more information see the documentation on <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/wcs-services.htm">WCS services</a> or <a class="reference external" href="https://enterprise.arcgis.com/en/server/latest/publish-services/windows/publishing-image-services-from-arcgis-pro.htm">Publishing image services from ArcGIS Pro</a>.</p>
 <p>Start by creating a map document and adding your rasters to it. Note that, if you have feature data in your map document, it’ll be excluded from your WCS.</p>
-<figure class="align-default" id="id30">
-<img alt="Adding WCS data to your map document" src="../../_images/image068.jpg" />
+<figure class="align-default" id="id20">
+<img alt="Adding WCS data to your map document" src="../../_images/arcpro_WCS_01.PNG" />
 <figcaption>
-<p><span class="caption-text">Figure 22 - Adding WCS data to your map document</span><a class="headerlink" href="#id30" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Figure 22 - Adding WCS data to your map document</span><a class="headerlink" href="#id20" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id21">
+<img alt="Publishing a WCS service" src="../../_images/arcpro_WCS_02.PNG" />
+<figcaption>
+<p><span class="caption-text">Figure 23 - Publishing a WCS service</span><a class="headerlink" href="#id21" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="publish-the-wcs-service">
 <h3>Publish the WCS service<a class="headerlink" href="#publish-the-wcs-service" title="Permalink to this headline"></a></h3>
 <ul class="simple">
-<li><p>Go to <em>File &gt; Share As &gt; Service… *to open the *Share as Service</em> dialog.</p></li>
-<li><p>Select <em>Publish a service</em> and click <em>Next &gt;</em>.</p></li>
-<li><p>On the <em>Publish a Service</em> dialog, choose/add a connection to your ArcGIS Server instance and write a name for your map service. The name you enter will be part of the WCS url. Click <em>Next &gt;.</em></p></li>
+<li><p>In the Catalog Pane go to Servers &gt; right Click the server you would like to publish to &gt; Publish &gt; Map Service… <em>to open the Publish Service</em> dialog.</p></li>
+<li><p>On the <em>Publish Service</em> dialog, add a name, summary and tags to your map service. The name you enter will be part of the WCS url. Click <em>Next &gt;.</em></p></li>
 <li><p>Select whether to <em>Use existing folder</em> or <em>Create new folder</em>. The folder name will also appear as part of the WCS url. Click <em>Continue</em>.</p></li>
-<li><p>In the <em>Service Editor</em> dialog, go to <em>Capabilities</em> and select <em>WCS</em>.</p></li>
+<li><p>In the <em>Publish Service</em> dialog, go to <em>Configuration</em> and select <em>WCS</em> under Capabilities.</p></li>
 <li><p>Now go to <em>Capabilities &gt; WCS</em> to access the WCS properties</p></li>
 </ul>
-<figure class="align-default" id="id31">
-<img alt="WCS service properties" src="../../_images/image069.jpg" />
+<figure class="align-default" id="id22">
+<img alt="WCS service properties" src="../../_images/arcpro_WCS_03.PNG" />
 <figcaption>
-<p><span class="caption-text">Figure 23 - WCS service properties</span><a class="headerlink" href="#id31" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Figure 24 - WCS service properties</span><a class="headerlink" href="#id22" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <ul class="simple">
 <li><p>Fill in all relevant service-level and contact properties.</p></li>
 <li><p>Check <em>Use layer names from the map document</em> so that layer names/identifiers use the layer names given in the map document rather than numbers.</p></li>
-<li><p>Click <em>Publish</em> on the top-right corner of the <em>Service Editor</em> dialog to create your service.</p></li>
+<li><p>Click <em>Analyse</em> to idnetify any errors with the service, then click <em>Publish</em> at the bottom of the <em>Publish Service</em> dialog to create your service.</p></li>
 </ul>
 <p>Your new service will have a URL like below, with the folder name part being optional:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="p">[</span><span class="n">hostname</span><span class="p">]</span><span class="o">/</span><span class="n">ArcGIS</span><span class="o">/</span><span class="n">services</span><span class="o">/</span><span class="p">[</span><span class="n">folder_name</span><span class="p">]</span><span class="o">/</span><span class="p">[</span><span class="nb">map</span> <span class="n">service</span> <span class="n">title</span><span class="p">]</span><span class="o">/</span><span class="n">MapServer</span><span class="o">/</span><span class="n">WCSServer</span>
@@ -1258,12 +857,12 @@
 <p><strong>Save this as [short service name]201.xml</strong></p>
 <p>It doesn’t really matter what name you give these files, as long as you use the same name prefix for all files that belong to the same service.</p>
 <p>You need to put these files on the server (or at a location available to your server), and make them browsable. These files only need to be browsable internally by the ArcGIS server.</p>
-<p>Now go back to your map service and edit it using either <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-manager.htm">ArcGIS Server Manager</a> or <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-arcgis-for-desktop.htm">ArcMap</a>.</p>
+<p>Now go back to your map service and edit it using either <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-manager.htm">ArcGIS Server Manager</a> or <a class="reference external" href="https://pro.arcgis.com/en/pro-app/latest/help/sharing/overview/overwrite-a-map-service.htm">ArcGIS Pro</a>.</p>
 <p>Go to <em>Capabilities &gt; WCS</em>, then select the “Use External capabilities files” option and in the ‘Specify the location and prefix’ dialog add the web address to the folder containing the capabilities response documents plus your [short service name] prefix.</p>
-<figure class="align-default" id="id32">
-<img alt="WCS service properties: external capabilities" src="../../_images/image070.jpg" />
+<figure class="align-default" id="id23">
+<img alt="WCS service properties: external capabilities" src="../../_images/arcpro_WCS_04.PNG" />
 <figcaption>
-<p><span class="caption-text">Figure 24 - WCS service properties: external capabilities</span><a class="headerlink" href="#id32" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Figure 25 - WCS service properties: external capabilities</span><a class="headerlink" href="#id23" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>For example, for a service called BGS_EMODnet_Bathymetry, we may save our initial GetCapabilities response documents using a prefix “EMODnet-“, giving us a file called EMODnet-201.xml for our version 2.0.1 GetCapabilities response document, EMODnet-110.xml for our version 1.1.0 GetCapabilities response document and so on. We might then save these to a location on our web server such as <em>C:\Inetpub\wwwroot\GetCapabilitiesFiles\</em> which would be browseable locally as <em>http://localhost/GetCapabilitiesFiles/</em>.  When we select the “Use External capabilities files” option, we then provide the web address and <strong>prefix</strong>
@@ -1279,8 +878,8 @@ as <em>http://localhost/GetCapabilitiesFiles/EMODnet-</em></p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="mapserver.html" class="btn btn-neutral float-left" title="Using MapServer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="esri_pro.html" class="btn btn-neutral float-right" title="Using ArcGIS Pro" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="esri.html" class="btn btn-neutral float-left" title="Using ArcMap" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="apache.html" class="btn btn-neutral float-right" title="Using Apache HTTP server as a reverse proxy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

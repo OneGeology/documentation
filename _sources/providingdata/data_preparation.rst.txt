@@ -1539,7 +1539,7 @@ the type of fold defined according to its geometry and the younging direction
 of the strata. It should be populated using values from the
 FoldProfileTypeValue vocabulary (`http://inspire.ec.europa.eu/codelist/FoldProfileTypeValue <http://inspire.ec.europa.eu/codelist/FoldProfileTypeValue>`_). There isn’t currently an equivalent CGI vocabulary.
 
-.. todo::
+.. todo:: 
 
    As far as I can see there is still no CGI vocabulary for this property. Again not sure why previous version of cookbook didn’t even bother to say “there is no CGI version”?
 

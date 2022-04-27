@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Using Google Earth &mdash; OneGeology Documentation 1.0 documentation</title>
+  <title>Using ArcGIS Pro &mdash; OneGeology Documentation 1.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/OneGeology_favicon.ico"/>
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Using MapInfo Professional" href="mapinfo.html" />
-    <link rel="prev" title="Using Dapple" href="dapple.html" /> 
+    <link rel="next" title="Using uDig" href="udig.html" />
+    <link rel="prev" title="Using ESRI" href="esri.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -454,19 +454,19 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="esri_pro.html">Using ArcGIS Pro</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="esri_pro.html#wms-service-connection">WMS Service Connection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="esri_pro.html#wfs-service-connection">WFS Service Connection</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Using ArcGIS Pro</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#wms-service-connection">WMS Service Connection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wfs-service-connection">WFS Service Connection</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="udig.html">Using uDig</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gaia.html">Using Gaia</a></li>
 <li class="toctree-l2"><a class="reference internal" href="world_wind.html">Using NASA World Wind</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dapple.html">Using Dapple</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Using Google Earth</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#google-earth-issues">Google Earth Issues</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#problems-displaying-the-map-layer">Problems displaying the map layer</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#problems-displaying-a-map-layer-that-spans-the-globe">Problems displaying a map layer that spans the globe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="google_earth.html">Using Google Earth</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="google_earth.html#google-earth-issues">Google Earth Issues</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="google_earth.html#problems-displaying-the-map-layer">Problems displaying the map layer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="google_earth.html#problems-displaying-a-map-layer-that-spans-the-globe">Problems displaying a map layer that spans the globe</a></li>
 </ul>
 </li>
 </ul>
@@ -496,9 +496,9 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../using.html">Using OneGeology Services</a> &raquo;</li>
-      <li>Using Google Earth</li>
+      <li>Using ArcGIS Pro</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/using/google_earth.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/using/esri_pro.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -506,68 +506,92 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="using-google-earth">
-<h1>Using Google Earth<a class="headerlink" href="#using-google-earth" title="Permalink to this headline"></a></h1>
-<p>Google Earth: <a class="reference external" href="http://earth.google.co.uk/">http://earth.google.co.uk/</a></p>
-<p>Requires a PC with minimum 256MB memory and 3D-capable graphics card with 16MB of VRAM.</p>
-<p>A simple way of viewing data in Google Earth is to use a KML file exported from the OneGeology Portal. You may also add a WMS directly, using the Add menu option and then ‘Image Overlay’.</p>
+  <section id="using-arcgis-pro">
+<h1>Using ArcGIS Pro<a class="headerlink" href="#using-arcgis-pro" title="Permalink to this headline"></a></h1>
+<p>The ArcGIS software package comes with several applications. Here we’ll briefly show how to use <strong>ArcGIS Pro</strong> to view and WMS, WFS, WCS and OGC service connections.</p>
+<p>The following notes are based on ESRI ArcGIS Pro version 2.6.</p>
+<p>ArcGIS Pro replaces the use of ArcMap. It integrates ArcCatalog and works in conjunction with ArcGIS Online. The latest version of ArcMap (10.8.2) will be in Extended Support until Feb 2024. From MArch 2024 onward we reocmmend using solely ArcGIS Pro for your Esri services.</p>
+<section id="wms-service-connection">
+<h2>WMS Service Connection<a class="headerlink" href="#wms-service-connection" title="Permalink to this headline"></a></h2>
+<p>To add a WMS service to your list of available WMS services, on the <em>Insert</em> tab, select  <em>Connections  &gt; New WMS Server</em> option, and then add the Service URL (without parameters). You may select to use the default service version (which would normally be the highest version) or you may force a specified version depending on your needs.</p>
 <figure class="align-default" id="id2">
-<img alt="Using the image overlay option in Google Earth to add a WMS" src="../_images/googleEarth1.jpg" />
+<img alt="Adding a WMS service to the list of available services in ArcGIS Pro" src="../_images/using_arcpro_wms01.PNG" />
 <figcaption>
-<p><span class="caption-text">Using the image overlay option in Google Earth to add a WMS</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Figure 1 - Adding a WMS service to the list of available services in ArcGIS Pro</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>Give your service a name then select the ‘Refresh’ tab, and click on the ‘WMS parameters button. In the dialogue box, add the Service URL without parameters.</p>
-<p>For example:</p>
-<p><a class="reference external" href="http://maps.bgs.ac.uk/ArcGIS/services/BGS_Detailed_Geology/MapServer/WMSServer">http://maps.bgs.ac.uk/ArcGIS/services/BGS_Detailed_Geology/MapServer/WMSServer</a>?</p>
-<p>Then use the Add button to add one or more of the service layers to your image overlay (each map layer added to your image overlay will be available to be selected/turned on or off later).</p>
-<p>The URL field is populated automatically (but note that it doesn’t add the ‘styles’ parameter, and this may cause the map layer to not display correctly (See <cite>Google Earth Issues_</cite>)</p>
+<p>WMS layers in ArcMap behave differently than other ESRI native layers. For instance, they are arranged in hierarchical entries which can’t be rearranged. This tipically includes</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Service</span> <span class="n">name</span>
+    <span class="o">-</span> <span class="n">Group</span> <span class="n">layer</span>
+        <span class="o">-</span> <span class="n">Actual</span> <span class="n">layers</span>
+</pre></div>
+</div>
+<p>However there can be multiple or even nested group layers. Also, the only way to get information about feature attributes in a WMS layer is through the <em>Identify</em> tool, as shown in the previous section.</p>
+<p>If the map is scale layered (layers are shown greyed out) you may use the <em>Zoom to Make Visible</em> option. This zooms into the layer to the scale cited in the layer below which the layer will be visible, that is you need to zoom in a little bit further using the zoom tool to be able to view the map.</p>
+<p>If you are going to provide scale layered data, it is suggested that you also provide an outline coverage map viewable at all scales to allow users to pan around the area of interest, without needing to zoom in first.</p>
 <figure class="align-default" id="id3">
-<img alt="Selecting WMS layers in Google Earth" src="../_images/googleEarth2.jpg" />
+<img alt="Reviewing available WMS services in ArcGIS Pro" src="../_images/using_arcpro_wms02.PNG" />
 <figcaption>
-<p><span class="caption-text">Selecting WMS layers in Google Earth</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Figure 2 - Reviewing available WMS service layers in ArcGIS Pro</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>When you zoom into your area of interest Google Earth will tile your map.</p>
+<p>WMS Services can be viewed and added to Layout views including Legends in order to be exported as map frames.
+.. figure:: images/using_arcpro_wms03.PNG</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">alt</dt>
+<dd class="field-odd"><p>Adding a WMS Service layer &amp; Legend to a Layout view in ArcGIS Pro</p>
+</dd>
+</dl>
+<p>Figure 3 - Adding a WMS Service layer &amp; Legend to a Layout view in ArcGIS Pro</p>
+</div></blockquote>
+<p>To view or alter the legend of a wms layer select the laye rin the <em>Table of Contents</em>. Navigate to the top ribbon under <em>Layer &gt; Appearance &gt; select Symbology</em></p>
 <figure class="align-default" id="id4">
-<img alt="WMS tiling in Google Earth" src="../_images/googleEarth3.jpg" />
+<img alt="Viewing and editing layer legend via the Symbology tab in ArcGIS Pro" src="../_images/using_arcpro_wms_symbology.PNG" />
 <figcaption>
-<p><span class="caption-text">WMS tiling in Google Earth</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Figure 4 - Viewing and editing layer legend via the Symbology tab in ArcGIS Pro</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<section id="google-earth-issues">
-<h2>Google Earth Issues<a class="headerlink" href="#google-earth-issues" title="Permalink to this headline"></a></h2>
-<section id="problems-displaying-the-map-layer">
-<h3>Problems displaying the map layer<a class="headerlink" href="#problems-displaying-the-map-layer" title="Permalink to this headline"></a></h3>
-<p>When adding a WMS layer to Google Earth, you may get a Big Red Cross instead of the map layer you were expecting. This indicates there is an error with that layer. The error may lie either with the GetMap parameters sent by Google Earth to the WMS server, or in the WMS response.</p>
-<p>When adding any WMS using the method described above, we have noted that the parameters that Google Earth automatically populates into its form (the Edit Image Overlay Link) are missing the required ‘styles’ parameter. MapServer WMS services do not seem to be affected by this omission, that is, they will serve a map using the default style, but we have noticed that ArcGIS WMS services cannot handle this error, and you will need to add the correct style value to your link. You may look at the GetCapabilities response to get the style or styles you want to be used, or you should just be able to specify a null value, and get the default style.</p>
+<p>You may use the layer <em>Symbology Dialogue</em> to save a copy of the legend. To do so use the <em>Legend URL</em> or right click on the legend image and go to <em>Save As</em>. If your layer presents multiple styles, they will be available in the drop down menu of this dialogue.</p>
 <figure class="align-default" id="id5">
-<img alt="Red cross showing a layer error in Google Earth" src="../_images/googleEarth4.jpg" />
+<img alt="Saving a WMS legend graphic to file in ArcGIS Pro" src="../_images/using_arcpro_wms04.PNG" />
 <figcaption>
-<p><span class="caption-text">Red cross showing a layer error in Google Earth</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Figure 5 - Saving a WMS legend graphic to file in ArcGIS Pro</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>For example to view the BGS 50k Geology layer in Google Earth you need to use this link:</p>
-<p><a class="reference external" href="http://maps.bgs.ac.uk/ArcGIS/services/BGS_Detailed_Geology/MapServer/WMSServer?VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=EPSG:4326&amp;WIDTH=512&amp;HEIGHT=512&amp;LAYERS=1&amp;TRANSPARENT=TRUE&amp;FORMAT=image/gif&amp;styles=">http://maps.bgs.ac.uk/ArcGIS/services/BGS_Detailed_Geology/MapServer/WMSServer?VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=EPSG:4326&amp;WIDTH=512&amp;HEIGHT=512&amp;LAYERS=1&amp;TRANSPARENT=TRUE&amp;FORMAT=image/gif&amp;styles=</a></p>
+<p>For more information about WMS layers go to <a class="reference external" href="https://pro.arcgis.com/en/pro-app/latest/help/data/services/use-wms-services.htm">Using WMS services layers</a></p>
 </section>
-<section id="problems-displaying-a-map-layer-that-spans-the-globe">
-<h3>Problems displaying a map layer that spans the globe<a class="headerlink" href="#problems-displaying-a-map-layer-that-spans-the-globe" title="Permalink to this headline"></a></h3>
-<p>Google Earth has a problem showing the full contents of a map layer that spans the whole globe. Specifically Google Earth seems to be unable to show coverage from such data layers at the poles and around the antimeridian (the 180th degree meridian). For example we are unable to get a map to display the whole of Russia.</p>
-<p>The problem is illustrated below using the WORLD CGMW 1:25M Geologic Units layer. (<a class="reference external" href="http://mapsone.brgm.fr/1GmapserverFR/wms?map=/applications/mapserver/map%20files/Lithology_FR.map&amp;REQUEST=GetMap&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYERS=WORLD_CGMW_25M_GeologicUnits&amp;STYLES=default&amp;FORMAT=image/png&amp;BGCOLOR=0xFFFFFF&amp;TRANSPARENT=TRUE&amp;SRS=EPSG:4326&amp;BBOX=-180,-137.242524916944,180,137.242524916944&amp;WIDTH=602&amp;HEIGHT=459">http://mapsone.brgm.fr/1GmapserverFR/wms?map=/applications/mapserver/map%20files/Lithology_FR.map&amp;REQUEST=GetMap&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYERS=WORLD_CGMW_25M_GeologicUnits&amp;STYLES=default&amp;FORMAT=image/png&amp;BGCOLOR=0xFFFFFF&amp;TRANSPARENT=TRUE&amp;SRS=EPSG:4326&amp;BBOX=-180,-137.242524916944,180,137.242524916944&amp;WIDTH=602&amp;HEIGHT=459</a>)</p>
-<p>There is currently no fix for this issue.</p>
+<section id="wfs-service-connection">
+<h2>WFS Service Connection<a class="headerlink" href="#wfs-service-connection" title="Permalink to this headline"></a></h2>
+<p>A WFS Service connection is established in ArcGIS Pro in the same manner as described above for the WMS.</p>
+<p>On the <em>Insert</em> tab, select  <em>Connections  &gt; New WFS Server</em> option, and then add the Service URL (without parameters). You may select to use the default service version (which would normally be the highest version) or you may force a specified version depending on your needs.</p>
 <figure class="align-default" id="id6">
-<img alt="GetMap response to the OneGeology WORLD CGMW 1:25M Geologic Units map layer showing a web map service with whole globe coverage" src="../_images/world-cgmwR.jpg" />
+<img alt="Connecting to a WFS service in ArcGIS Pro" src="../_images/using_arcpro_wfs01.PNG" />
 <figcaption>
-<p><span class="caption-text">GetMap response to the OneGeology WORLD CGMW 1:25M Geologic Units map layer showing a web map service with whole globe coverage</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Figure 4 - Connecting to a WFS service in ArcGIS Pro</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
+<p>WFS layers behave in ArcGIS Pro like any other type of vector layer. You can, for instance, identify individual features, see feature attributes in the <em>Attribute Table</em>, join the layer to other dataset or apply symbology.</p>
 <figure class="align-default" id="id7">
-<img alt="The same OneGeology WORLD CGMW 1:25M Geologic Units map layer in Google Earth showing the display problem at the poles and the antimeridian" src="../_images/GE-hole-500.jpg" />
+<img alt="WFS layer displayed in ArcMap showing attributes and custom symbology" src="using/images/esri_map_wfs_display.PNG" />
 <figcaption>
-<p><span class="caption-text">The same OneGeology WORLD CGMW 1:25M Geologic Units map layer in Google Earth showing the display problem at the poles and the antimeridian</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Figure 13 - WFS layer displayed in ArcMap showing attributres and custom symbology</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-</section>
+<p>To export features from a WFS layer to ESRI proprietary formats, such as a <strong>Shapefile</strong>, right click on the layer and go to <em>Data &gt; Export Data</em>. Note that you can export subsets of the layer by choosing only selected features or features within the view extent.</p>
+<figure class="align-default" id="id8">
+<img alt="Exporting a WFS layer to a proprietary format in ArcMap" src="using/images/esri_wfs_export.PNG" />
+<figcaption>
+<p><span class="caption-text">Figure 14 - Exporting a WFS layer to a proprietary format in ArcMap</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>To export features to an open format, like <strong>GeoJSON</strong>, you’ll need to use the <em>GeoProcessing Tool: Features to JSON</em>. If features are selected, this tool will only export selected features.</p>
+<figure class="align-default" id="id9">
+<img alt="Exporting a WFS layer to GeoJSON format in ArcGIS Pro" src="../_images/using_arcpro_wfs_to_geojson.PNG" />
+<figcaption>
+<p><span class="caption-text">Figure 15 - Exporting a WFS layer to GeoJSON format in ArcGIS Pro</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 </section>
 
@@ -575,8 +599,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="dapple.html" class="btn btn-neutral float-left" title="Using Dapple" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="mapinfo.html" class="btn btn-neutral float-right" title="Using MapInfo Professional" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="esri.html" class="btn btn-neutral float-left" title="Using ESRI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="udig.html" class="btn btn-neutral float-right" title="Using uDig" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
