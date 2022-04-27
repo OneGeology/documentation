@@ -1,6 +1,5 @@
-
 Using ArcGIS Pro
-============
+================
 
 .. todo::
 
@@ -19,7 +18,7 @@ Creating the service
 Prepare the map document
 """"""""""""""""""""""""
 
-Initial set up of WMS services is relatively straightforward and simply requires the creation of a map document   in ArcGIS Pro  (.aprx ) containing the data you want to add to the service.
+Initial set up of WMS services is relatively straightforward and simply requires the creation of a map document in ArcGIS Pro (.aprx ) containing the data you want to add to the service.
 It is important to pay attention to the layer names in the map document, since the individual service layer names will use the map document layer names. The service will also use the map document layer names for the respective layer titles in the GetCapabilities document.
 
 .. figure:: images/esri/arcpro01.png
@@ -103,7 +102,7 @@ The service configurations are similar to the one you may know from ArcMap Deskt
 
    Figure 5 - Publish Map Service Dialog
 
-* Select whether to *Use existing folder* or *Create new folder*. The folder name will also appear as part of the WMS url. 
+* Select whether to *Use existing folder* or *Create new folder*. The folder name will also appear as part of the WMS url.
 * Go to *Configuration* and select WMS. If you wish, you can unselect all other  configurations apart from Map.
 
 .. figure:: images/esri/arcpro07.png
@@ -113,7 +112,7 @@ The service configurations are similar to the one you may know from ArcMap Deskt
 
 
 .. note::
-	If you **do not** want to expose the data behind your WMS service, make sure that the **WFS** option is **unselected**.
+    If you **do not** want to expose the data behind your WMS service, make sure that the **WFS** option is **unselected**.
 
 
 
@@ -122,7 +121,7 @@ The service configurations are similar to the one you may know from ArcMap Deskt
 
    Figure 7 - Adding a new WMS service in ArcGIS
 
-* Edit the *WMS Properties*, specify the Operations that are allowed to be performed by the user. 
+* Edit the *WMS Properties*, specify the Operations that are allowed to be performed by the user.
 
 * You will be presented with a form to edit your service level metadata (as below) or you may opt to use external capabilities. We suggest at this stage that you should use the form to fill in as much detail as possible, though you should note that you will eventually need to use external files to enter any layer level metadata and add missing service level metadata parameters; we can use the data you enter initially as the basis for these external static files.
 
