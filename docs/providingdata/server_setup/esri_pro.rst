@@ -1,6 +1,5 @@
-
 Using ArcGIS Pro
-============
+================
 
 .. todo::
 
@@ -19,7 +18,7 @@ Creating the service
 Prepare the map document
 """"""""""""""""""""""""
 
-Initial set up of WMS services is relatively straightforward and simply requires the creation of a map document   in ArcGIS Pro  (.aprx ) containing the data you want to add to the service.
+Initial set up of WMS services is relatively straightforward and simply requires the creation of a map document in ArcGIS Pro (.aprx ) containing the data you want to add to the service.
 It is important to pay attention to the layer names in the map document, since the individual service layer names will use the map document layer names. The service will also use the map document layer names for the respective layer titles in the GetCapabilities document.
 
 .. figure:: images/esri/arcpro01.png
@@ -37,25 +36,25 @@ Eg. an unmodified GetCapabilities (version 1.3.0) response for the above example
    <CRS>EPSG:4326</CRS>
    ...
    <Layer queryable="1">
-       <Name>GBR_BGS_625k_TYPE</Name>
-       <Title>GBR_BGS_625k_TYPE</Title>
-       <Abstract></Abstract>
-       <CRS>CRS:84</CRS>
-       <CRS>EPSG:4326</CRS>
-      ...
-       <Style>
+      <Name>GBR_BGS_625k_TYPE</Name>
+      <Title>GBR_BGS_625k_TYPE</Title>
+      <Abstract></Abstract>
+      <CRS>CRS:84</CRS>
+      <CRS>EPSG:4326</CRS>
+     ...
+      <Style>
            <Name>default</Name>
            <Title>GBR_BGS_625k_TYPE</Title>
            <LegendURL width="68" height="2048">
                <Format>image/png</Format>
                <OnlineResource xlink:href="..." xlink:type="simple"/>
            </LegendURL>
-       </Style>
+      </Style>
    </Layer>
    <Layer queryable="1">
-       <Name>GBR_BGS_625k_PERIOD</Name>
-       <Title>GBR_BGS_625k_PERIOD</Title>
-       <Abstract></Abstract>
+      <Name>GBR_BGS_625k_PERIOD</Name>
+      <Title>GBR_BGS_625k_PERIOD</Title>
+      <Abstract></Abstract>
    ...
 
 Publishing your WMS
@@ -103,7 +102,7 @@ The service configurations are similar to the one you may know from ArcMap Deskt
 
    Figure 5 - Publish Map Service Dialog
 
-* Select whether to *Use existing folder* or *Create new folder*. The folder name will also appear as part of the WMS url. 
+* Select whether to *Use existing folder* or *Create new folder*. The folder name will also appear as part of the WMS url.
 * Go to *Configuration* and select WMS. If you wish, you can unselect all other  configurations apart from Map.
 
 .. figure:: images/esri/arcpro07.png
@@ -113,7 +112,7 @@ The service configurations are similar to the one you may know from ArcMap Deskt
 
 
 .. note::
-	If you **do not** want to expose the data behind your WMS service, make sure that the **WFS** option is **unselected**.
+    If you **do not** want to expose the data behind your WMS service, make sure that the **WFS** option is **unselected**.
 
 
 
@@ -122,7 +121,7 @@ The service configurations are similar to the one you may know from ArcMap Deskt
 
    Figure 7 - Adding a new WMS service in ArcGIS
 
-* Edit the *WMS Properties*, specify the Operations that are allowed to be performed by the user. 
+* Edit the *WMS Properties*, specify the Operations that are allowed to be performed by the user.
 
 * You will be presented with a form to edit your service level metadata (as below) or you may opt to use external capabilities. We suggest at this stage that you should use the form to fill in as much detail as possible, though you should note that you will eventually need to use external files to enter any layer level metadata and add missing service level metadata parameters; we can use the data you enter initially as the basis for these external static files.
 
@@ -146,7 +145,7 @@ Your new service will have a URL like below, with the folder name part being opt
 Edit the GetCapabilities documents
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-ArcGIS Server doesn’t create any static GetCapabilities xml documents, but does allow you to use external files. You will need to use such external files if you want to add any additional spatial reference systems, correct the keywords listing, change the LegendURL images, add better abstracts and layer titles, or add an INSPIRE extended capabilities section. We think to provide a fully compliant WMS it is highly likely that you will need to use a set of static files.
+ArcGIS Server doesn’t create any static GetCapabilities XML documents, but does allow you to use external files. You will need to use such external files if you want to add any additional spatial reference systems, correct the keywords listing, change the LegendURL images, add better abstracts and layer titles, or add an INSPIRE extended capabilities section. We think to provide a fully compliant WMS it is highly likely that you will need to use a set of static files.
 
 The first step to editing your files is to create them.
 
@@ -188,7 +187,7 @@ Having created your files, you may then edit them as required. We would recommen
 INSPIRE
 ^^^^^^^
 
-If you want your OneGeology service to comply to INSPIRE standards, in addition to meet the requirements of the OneGeology profile, you need to ensure that the following conditions are fulfilled:
+If you want your OneGeology service to comply to INSPIRE metadata standards, in addition to meet the requirements of the OneGeology profile, you need to ensure that the following conditions are fulfilled:
 
 1. Layer name and layer title must follow INSPIRE naming conventions. For example the `D2.8.II.4 Data Specification on Geology–Technical Guidelines <http://inspire.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_GE_v3.0.pdf>`_ tell us (section 11.1 ~ Layers to be provided by INSPIRE view services) that any layer to do with lithology or age must have the name *GE.GeologicUnit* and title *Geologic Units*. See the `layer-naming <https://themes.jrc.ec.europa.eu/discussion/view/13952/layer-naming>`_ discussion on the INSPIRE Thematic Clusters Geology forum for fuller details.
 
@@ -196,7 +195,7 @@ If you want your OneGeology service to comply to INSPIRE standards, in addition 
 
 3. Your GetCapabilities document must include the INSPIRE Extended Capabilities tag.
 
-There are two ways of achieving these conditions using ESRI software. The first one is using a standard ArcGIS map document and standard ArcGIS Server tools, where you’ll need to modify layer names to make them compliant, change service properties to include required coordinate systems and modify the get capabilities document to include the INSPIRE Extended Capabilities section. The second option is using the ArcGIS for INSPIRE extension, which provides tools and new services to ensure compliance with INSPIRE directives. If you want to go for the second option, there is an `ESRI OneGeology Grant  <http://www.onegeology.org/technical_progress/esriGrantOffer.html>`_ for OneGeology members.
+There are two ways of achieving these conditions using ESRI software. The first one is using a standard ArcGIS map document and standard ArcGIS Server tools, where you’ll need to modify layer names to make them compliant, change service properties to include required coordinate systems and modify the capabilities document to include the INSPIRE Extended Capabilities section. The second option is using the ArcGIS for INSPIRE extension, which provides tools and new services to ensure compliance with INSPIRE directives. If you want to go for the second option, there is an `ESRI OneGeology Grant  <http://www.onegeology.org/technical_progress/esriGrantOffer.html>`_ for OneGeology members.
 
 ArcGIS Server
 """""""""""""
@@ -243,8 +242,8 @@ For example to add a scenario 1 INSPIRE extended capabilities section (where you
    </Exception>
    <inspire_vs:ExtendedCapabilities xmlns:inspire_vs="http://inspire.ec.europa.eu/schemas/inspire_vs/1.0">
        <inspire_common:MetadataUrl xsi:type="inspire_common:resourceLocatorType">
-           <inspire_common:URL>http://metadata.bgs.ac.uk/geonetwork/srv/en/csw?SERVICE=CSW
-           &amp;REQUEST=GetRecordById&amp;ID=7822e848-822d-45a5-8584-56d352fd2170&amp;elementSetName=full&amp;OutputSchema=csw:IsoRecord&amp;
+           <inspire_common:URL>https://metadata.bgs.ac.uk/geonetwork/srv/eng/csw?SERVICE=CSW
+           &amp;REQUEST=GetRecordById&amp;ID=7822e848-822d-45a5-8584-56d352fd2170&amp;elementSetName=full&amp;OutputSchema=csw:IsoRecord&amp;version=2.0.2&amp;
            </inspire_common:URL>
            <inspire_common:MediaType>application/xml</inspire_common:MediaType>
        </inspire_common:MetadataUrl>
@@ -280,7 +279,7 @@ Alternatively, to add a scenario 2 INSPIRE extended capabilities section (where 
            <inspire_common:Degree>notEvaluated</inspire_common:Degree>
        </inspire_common:Conformity>
        <inspire_common:MetadataPointOfContact>
-           <inspire_common:OrganisationName>Mr Matthew Harrison</inspire_common:OrganisationName>
+           <inspire_common:OrganisationName>William Smith</inspire_common:OrganisationName>
            <inspire_common:EmailAddress>enqiries@bgs.ac.uk</inspire_common:EmailAddress>
        </inspire_common:MetadataPointOfContact>
        <inspire_common:MetadataDate>2015-10-23</inspire_common:MetadataDate>
