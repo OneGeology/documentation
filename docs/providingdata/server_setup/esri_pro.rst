@@ -437,6 +437,9 @@ as *http://localhost/GetCapabilitiesFiles/EMODnet-*
 
 Having created your files, you may then edit them as required. We would recommend you make a second copy of the files in case you make an error whilst editing.
 
-We have found that, if you make a GetCapabilities request using external capabilities files, it always defaults to version 1.1.0, even if you specify a different version as a url parameter. For instance, *http://[my_server]s:6080/arcgis/services/[folder_name]/BGS_EMODnet_bathymetry/MapServer/WCSServer?request=GetCapabilities&service=WCS&version=2.0.1* will return the GetCapabilities document for version 1.1.0 (if available, otherwise you will get an error), even though we’ve created the version 2.0.1 of the document. The only exception is version 1.0.0, which does return the correct version of the GetCapabilities document if specified in the url.
+
+.. this is no longer applicable:
+
+.. We have found that, if you make a GetCapabilities request using external capabilities files, it always defaults to version 1.1.0, even if you specify a different version as a url parameter. For instance, *http://[my_server]s:6080/arcgis/services/[folder_name]/BGS_EMODnet_bathymetry/MapServer/WCSServer?request=GetCapabilities&service=WCS&version=2.0.1* will return the GetCapabilities document for version 1.1.0 (if available, otherwise you will get an error), even though we’ve created the version 2.0.1 of the document. The only exception is version 1.0.0, which does return the correct version of the GetCapabilities document if specified in the url.
 
 For more information, see `Use external capabilities files with WCS Services <http://server.arcgis.com/en/server/latest/publish-services/windows/using-external-capabilities-files-with-wcs-services.htm>`_.

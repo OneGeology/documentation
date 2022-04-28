@@ -1,10 +1,11 @@
+
 Using ArcGIS Pro
 ----------------
 The ArcGIS software package comes with several applications. Here we'll briefly show how to use **ArcGIS Pro** to view and WMS, WFS, WCS and OGC service connections.
 
 The following notes are based on ESRI ArcGIS Pro version 2.6.
 
-ArcGIS Pro replaces the use of ArcMap. It integrates ArcCatalog and works in conjunction with ArcGIS Online. The latest version of ArcMap (10.8.2) will be in Extended Support until Feb 2024. From MArch 2024 onward we reocmmend using solely ArcGIS Pro for your Esri services.
+ArcGIS Pro replaces the use of ArcMap. It integrates ArcCatalog and works in conjunction with ArcGIS Online. The latest version of ArcMap (10.8.2) will be in Extended Support until Feb 2024. From March 2024 onward we recommend using solely ArcGIS Pro for your Esri services.
 
 WMS Service Connection
 """"""""""""""""""""""
@@ -21,9 +22,9 @@ WMS layers in ArcMap behave differently than other ESRI native layers. For insta
 
 ::
 
-   - Service name
-       - Group layer
-           - Actual layers
+	- Service name
+	    - Group layer
+	        - Actual layers
 
 However there can be multiple or even nested group layers. Also, the only way to get information about feature attributes in a WMS layer is through the *Identify* tool, as shown in the previous section.
 
@@ -46,10 +47,12 @@ WMS Services can be viewed and added to Layout views including Legends in order 
 
 To view or alter the legend of a wms layer select the layer in the *Table of Contents*. Navigate to the top ribbon under *Layer > Appearance > select Symbology*
 
+
 .. figure:: images/using_arcpro_wms_symbology.PNG
    :alt: Viewing and editing layer legend via the Symbology tab in ArcGIS Pro
 
    Figure 4 - Viewing and editing layer legend via the Symbology tab in ArcGIS Pro
+
 
 You may use the layer *Symbology Dialogue* to save a copy of the legend. To do so use the *Legend URL* or right click on the legend image and go to *Save As*. If your layer presents multiple styles, they will be available in the drop down menu of this dialogue.
 
@@ -66,6 +69,7 @@ WFS Service Connection
 A WFS Service connection is established in ArcGIS Pro in the same manner as described above for the WMS.
 
 On the *Insert* tab, select  *Connections  > New WFS Server* option, and then add the Service URL (without parameters). You may select to use the default service version (which would normally be the highest version) or you may force a specified version depending on your needs.
+
 
 .. figure:: images/using_arcpro_wfs01.PNG
    :alt: Connecting to a WFS service in ArcGIS Pro
@@ -99,7 +103,6 @@ To export features to an open format, like **GeoJSON**, you'll need to use the *
    WCS Layer, issue with displaying WCS Layers in ArcGIS Pro
    Layers load int he catalog, but cannot be added to the map.
    https://community.esri.com/t5/arcgis-pro-questions/problem-connecting-to-a-wcs-server-with-arcgis-pro/td-p/595071
-   
 .. WCS Layers
 .. """""""""""
 
@@ -118,3 +121,4 @@ To export features to an open format, like **GeoJSON**, you'll need to use the *
 ..    Figure 11 - Displaying WCS data in ArcGIS Pro
 
 .. See: http://desktop.arcgis.com/en/arcmap/latest/map/web-maps-and-services/about-using-ogc-service-layers.htm
+
