@@ -38,13 +38,14 @@ If you are going to provide scale layered data, it is suggested that you also pr
    Figure 2 - Reviewing available WMS service layers in ArcGIS Pro
 
 WMS Services can be viewed and added to Layout views including Legends in order to be exported as map frames.
+
 .. figure:: images/using_arcpro_wms03.PNG
    :alt: Adding a WMS Service layer & Legend to a Layout view in ArcGIS Pro
 
    Figure 3 - Adding a WMS Service layer & Legend to a Layout view in ArcGIS Pro
 
 
-To view or alter the legend of a wms layer select the laye rin the *Table of Contents*. Navigate to the top ribbon under *Layer > Appearance > select Symbology*
+To view or alter the legend of a wms layer select the layer in the *Table of Contents*. Navigate to the top ribbon under *Layer > Appearance > select Symbology*
 
 
 .. figure:: images/using_arcpro_wms_symbology.PNG
@@ -73,28 +74,28 @@ On the *Insert* tab, select  *Connections  > New WFS Server* option, and then ad
 .. figure:: images/using_arcpro_wfs01.PNG
    :alt: Connecting to a WFS service in ArcGIS Pro
 
-   Figure 4 - Connecting to a WFS service in ArcGIS Pro
+   Figure 6 - Connecting to a WFS service in ArcGIS Pro
 
 WFS layers behave in ArcGIS Pro like any other type of vector layer. You can, for instance, identify individual features, see feature attributes in the *Attribute Table*, join the layer to other dataset or apply symbology.
 
-.. figure:: images/esri_map_wfs_display.PNG
+.. figure:: images/using_arcpro_wfs_display.PNG
    :alt: WFS layer displayed in ArcMap showing attributes and custom symbology
 
-   Figure 13 - WFS layer displayed in ArcMap showing attributres and custom symbology
+   Figure 7 - WFS layer displayed in ArcMap showing attributres and custom symbology
 
 To export features from a WFS layer to ESRI proprietary formats, such as a **Shapefile**, right click on the layer and go to *Data > Export Data*. Note that you can export subsets of the layer by choosing only selected features or features within the view extent.
 
-.. figure:: images/esri_wfs_export.PNG
-   :alt: Exporting a WFS layer to a proprietary format in ArcMap
+.. figure:: images/using_arcpro_wfs_export.PNG
+   :alt: Exporting a WFS layer to a proprietary format in ArcGIS Pro
 
-   Figure 14 - Exporting a WFS layer to a proprietary format in ArcMap
+   Figure 8 - Exporting a WFS layer to a proprietary format in ArcGIS Pro
 
 To export features to an open format, like **GeoJSON**, you'll need to use the *GeoProcessing Tool: Features to JSON*. If features are selected, this tool will only export selected features. 
 
 .. figure:: images/using_arcpro_wfs_to_geojson.PNG
    :alt: Exporting a WFS layer to GeoJSON format in ArcGIS Pro
 
-   Figure 15 - Exporting a WFS layer to GeoJSON format in ArcGIS Pro
+   Figure 9 - Exporting a WFS layer to GeoJSON format in ArcGIS Pro
 
 
 .. todo:: 
@@ -110,14 +111,14 @@ To export features to an open format, like **GeoJSON**, you'll need to use the *
 .. .. figure:: images/using_arcpro_wcs01.PNG
 ..    :alt: Adding WCS data to ArcGIS Pro
 
-..    Figure 16 - Adding WCS data to ArcGIS Pro
+..    Figure 10 - Adding WCS data to ArcGIS Pro
 
 .. To export a WCS layer, right click on it and go to *Data > Export Data*. The *Export WCS Data* dialog will allow you to set the extent, format or cell size of the exported data.
 
 .. .. figure:: images/using_arcpro_wcs02.PNG
 ..    :alt: Displaying WCS data in ArcGIS Pro
 
-..    Figure 17 - Displaying WCS data in ArcGIS Pro
+..    Figure 11 - Displaying WCS data in ArcGIS Pro
 
 .. See: http://desktop.arcgis.com/en/arcmap/latest/map/web-maps-and-services/about-using-ogc-service-layers.htm
 
