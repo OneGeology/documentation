@@ -15,7 +15,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -494,10 +496,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../providingdata.html">Providing Data / Services</a> &raquo;</li>
-          <li><a href="../server_setup.html">Setting up a Server</a> &raquo;</li>
-      <li>Using MapServer</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../providingdata.html">Providing Data / Services</a></li>
+          <li class="breadcrumb-item"><a href="../server_setup.html">Setting up a Server</a></li>
+      <li class="breadcrumb-item active">Using MapServer</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/providingdata/server_setup/mapserver.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -508,14 +510,14 @@
            <div itemprop="articleBody">
              
   <section id="using-mapserver">
-<h1>Using MapServer<a class="headerlink" href="#using-mapserver" title="Permalink to this headline"></a></h1>
+<h1>Using MapServer<a class="headerlink" href="#using-mapserver" title="Permalink to this heading"></a></h1>
 <section id="software-installation">
-<h2>Software Installation<a class="headerlink" href="#software-installation" title="Permalink to this headline"></a></h2>
+<h2>Software Installation<a class="headerlink" href="#software-installation" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="http://mapserver.org/">MapServer</a> can be used to provide a number of OGC Web Services (OWS) types, such as the Web Map Service (WMS), Web Feature Service (WFS) and Web Coverage Service (WCS) standards which are the current focus of interest for the OneGeology portal.  In the following sections we run through how to configure MapServer so it can provide any one of these three service types.</p>
 <p>MapServer will work both on Windows and Linux operating systems (both 32-bit and 64-bit), and with a web server of your choosing, the permutations are many and we can not cover all of them, below we take you through some common installations, using Apache HTTP as the web server.</p>
 <p>The simplest way to set up MapServer on a Windows server is to use the MapServer for Windows (MS4W) installer provided by Gateway Geomatics, this installs a 32-bit version of the Apache HTTP web server and the 32-bit version of MapServer as well as some demo applications.  For those wishing to use a 64-bit version of Apache HTTP web server, we recommend Apache Lounge and GISInternals.  For installation of MapServer on Linux, (with Apache HTTP web server) we recommend Ubuntu and the Personal Package Archives.</p>
 <section id="installing-ms4w">
-<h3>Installing MS4W<a class="headerlink" href="#installing-ms4w" title="Permalink to this headline"></a></h3>
+<h3>Installing MS4W<a class="headerlink" href="#installing-ms4w" title="Permalink to this heading"></a></h3>
 <p>All versions of the MS4W software package, including the latest version are available from the <a class="reference external" href="https://ms4w.com/">Gateway Geomatics MS4W</a>  web site.</p>
 <p>Two options are available, a downloadable zip of all the appropriate binaries or an installer.  We will use the installer here as it the easiest option for those setting up a OneGeology service for the first time.  The installer is available from the <a class="reference external" href="https://ms4w.com/download.html">Download Packages</a> page. Download the latest setup file, for us this was ms4w-3.2.2-setup.exe, to a temporary location on your server.</p>
 <figure class="align-default">
@@ -547,7 +549,7 @@
 <img alt="../../_images/MS4W-localhost-post-install.png" src="../../_images/MS4W-localhost-post-install.png" />
 </figure>
 <section id="configuring-the-exemplar-services">
-<h4>Configuring the exemplar services<a class="headerlink" href="#configuring-the-exemplar-services" title="Permalink to this headline"></a></h4>
+<h4>Configuring the exemplar services<a class="headerlink" href="#configuring-the-exemplar-services" title="Permalink to this heading"></a></h4>
 <p>Obtain the OneGeology template application in the 20Mbytes approx. sized 1G_WMS-exemplar-data-MS6-update.zip file from the <a class="reference external" href="ftp://ftp.bgs.ac.uk/pubload/OneGeology/">BGS FTP website</a>.</p>
 <p>If you are using a web browser clicking on this URL may take you directly to it without requesting a password.  If you prefer to use the older DOS prompt style FTP user interface then as normal with such anonymous ftp services enter anonymous if prompted for a userid and type your email address as the password to allow the FTP manager to monitor who is using the service.</p>
 <p>Unzip the OneGeology template application to the same drive and directory level as the MS4W location resulting from the MapServer installation e.g. if you installed MS4W on C:\MS4W then point the unzip extract to C:.  It should create a number of files inside the <em>ms4w</em> directory.  The main part of the two example applications are inside a BGS_Bedrock_and_Superficial_Geology directory (for the shapefile based example) and BGS_Bedrock_Raster_Map directory (for the image file based example) which will be created inside ms4w\apps\cookbookExemplars.</p>
@@ -555,9 +557,9 @@
 <p>After unzipping the exemplar files, restart your web service.  Now when you browse to localhost/index.html you will get links to the two exemplar services.</p>
 </section>
 <section id="configuring-your-own-services-using-the-exemplars-as-examples">
-<h4>Configuring your own services using the exemplars as examples<a class="headerlink" href="#configuring-your-own-services-using-the-exemplars-as-examples" title="Permalink to this headline"></a></h4>
+<h4>Configuring your own services using the exemplars as examples<a class="headerlink" href="#configuring-your-own-services-using-the-exemplars-as-examples" title="Permalink to this heading"></a></h4>
 <section id="c-ms4w-apache-cgi-bin">
-<h5>C:\ms4w\Apache\cgi-bin\<a class="headerlink" href="#c-ms4w-apache-cgi-bin" title="Permalink to this headline"></a></h5>
+<h5>C:\ms4w\Apache\cgi-bin\<a class="headerlink" href="#c-ms4w-apache-cgi-bin" title="Permalink to this heading"></a></h5>
 <p>Create a folder inside ms4w\Apache\cgi-bin with a name that follows the OneGeology profile.</p>
 <p>It is not within the scope of OneGeology at this stage to address the problem of translating geological terms between different languages so the above service can be in the language you usually use for your data.  However, if you already have your data in other languages, in particular English if that is not your default language, then we would like to encourage you to provide services in these other languages as well.  These should be served from separate services with different URLs.  In MapServer this means making another copy of the above directory and renaming it to use the appropriate language in the directory name.</p>
 <p>At this stage you should have a sub-folder structure within c:\ms4w\Apache\cgi-bin like:</p>
@@ -573,7 +575,7 @@
 </div>
 </section>
 <section id="c-ms4w-apps-cookbookexemplars">
-<h5>C:\ms4w\apps\cookbookExemplars<a class="headerlink" href="#c-ms4w-apps-cookbookexemplars" title="Permalink to this headline"></a></h5>
+<h5>C:\ms4w\apps\cookbookExemplars<a class="headerlink" href="#c-ms4w-apps-cookbookexemplars" title="Permalink to this heading"></a></h5>
 <p>Inside the \ms4w\apps\cookbookExemplars folder you will find two folders: “BGS_Bedrock_and_Superficial_Geology” and “BGS_Bedrock_Raster_Map”.  These folders contain the exemplar data, and map configuration files.</p>
 <p>We will assume you are basing your service on the BGS_Bedrock_and_Superficial_Geology example; substitute with BGS_Bedrock_Raster_Map if that is closer to your requirements.  When you have decided which exemplar service is most suitable for your needs, you should copy that exemplar folder to a new folder that will be your new service.</p>
 <p>Note the names of these folders do not have to match the names of the service, but you would be advised to ensure that the folder name gives some hint as to its contents and purpose.  For example we call one of our exemplar folders “BGS_Bedrock_Raster_Map” to indicate that this service application holds a raster map as datasource, rather than a shapefile.</p>
@@ -581,7 +583,7 @@
 <p>Inside this folder there is a wwwroot\index.html file.  This has some example queries which will enable you to test your service when you have set it up.  For these to work for your new service you will need to edit the file and change all occurrences of the string “BGS_Bedrock_and_Superficial_Geology” with the name you have created for your service.</p>
 </section>
 <section id="c-ms4w-httpd-d">
-<h5>C:\ms4w\httpd.d\<a class="headerlink" href="#c-ms4w-httpd-d" title="Permalink to this headline"></a></h5>
+<h5>C:\ms4w\httpd.d\<a class="headerlink" href="#c-ms4w-httpd-d" title="Permalink to this heading"></a></h5>
 <p>Now you will need to create an httpd conf file in the \ms4w\httpd.d\ folder that has the same name as your service; for example, the “BGS_Bedrock_and_Superficial_Geology” exemplar service has a conf file called “httpd_BGS_Bedrock_and_Superficial_Geology_Exemplar.conf” and the “BGS_Bedrock_Geology” exemplar service has a corresponding conf file called “httpd_BGS_Bedrock_Geology.conf”</p>
 <p>You need to copy one of the exemplar .conf files and rename it to match the name of your service, you will then need to change the paths in the file to match your service name and folder configuration.</p>
 <p>Using the raster exemplar service (as shown below), you will need to change all references to “BGS_Bedrock_Geology” to match the name of your service, and all references to “BGS_Bedrock_Raster_Map” to match the name of your app folder.  Note, you do not need to add the drive letter.</p>
@@ -600,22 +602,22 @@
 </div>
 </section>
 <section id="c-ms4w-apache-htdocs">
-<h5>C:\ms4w\Apache\htdocs\<a class="headerlink" href="#c-ms4w-apache-htdocs" title="Permalink to this headline"></a></h5>
+<h5>C:\ms4w\Apache\htdocs\<a class="headerlink" href="#c-ms4w-apache-htdocs" title="Permalink to this heading"></a></h5>
 <p>Now you should edit the index.html file in the Apache web root \ms4w\Apache\htdocs\ and add a link to your new service.  Note, the link you use is the value of the Alias (line one of the httpd conf file).</p>
 <p>Again make more copies if making multiple language services.</p>
 </section>
 </section>
 </section>
 <section id="installing-and-configuring-apache-http-web-server">
-<h3>Installing and configuring Apache HTTP web server<a class="headerlink" href="#installing-and-configuring-apache-http-web-server" title="Permalink to this headline"></a></h3>
+<h3>Installing and configuring Apache HTTP web server<a class="headerlink" href="#installing-and-configuring-apache-http-web-server" title="Permalink to this heading"></a></h3>
 <p>MS4W, as described above, installs both MapServer and the Apache HTTP webserver software.  Other installations of MapServer require configuring of the web server as a separate process.  This section takes you through installing alternate Apache HTTP webserver software, and through the additional configuration you will need to do to create a OneGeology service that follows the same pattern as above.</p>
 <section id="bit-apache-http-server">
-<h4>64-bit Apache HTTP server<a class="headerlink" href="#bit-apache-http-server" title="Permalink to this headline"></a></h4>
+<h4>64-bit Apache HTTP server<a class="headerlink" href="#bit-apache-http-server" title="Permalink to this heading"></a></h4>
 <p>if tyou want to run a 64-bit version of MapServer on Windows such as provided by GISInternals, you will also need to in install a 64-bit version of Apache.</p>
 <p>If instead you want to use the latest stable release of Apache-HTTP, that is the version 2.4.n releases (latest is currently 2.4.29), you must instead go to the Apache Lounge site: <a class="reference external" href="http://www.apachelounge.com/download/">http://www.apachelounge.com/download/</a>. There are several options here both in server architecture (32 bit and 64 bit), and server functionality, for you to choose from to fit your needs.</p>
 <p>For the purposes of this example we have selected a 64-bit package from Apache Lounge and installed it to our C:\ drive as C:\Apache24\.</p>
 <section id="httpd-d-configuration-files">
-<h5>httpd.d configuration files<a class="headerlink" href="#httpd-d-configuration-files" title="Permalink to this headline"></a></h5>
+<h5>httpd.d configuration files<a class="headerlink" href="#httpd-d-configuration-files" title="Permalink to this heading"></a></h5>
 <p>For this installation we will now create a httpd.d folder on our D:\ drive, to hold our OneGeology service configuration files, as: D:\WxS\ms\httpd.d\ , and create an http_ file (i.e. ‘httpd_BGS_Bedrock_and_Superficial_Geology_Exemplar.conf’) for our exemplar service as below.</p>
 <div class="highlight-apacheconf notranslate"><div class="highlight"><pre><span></span><span class="c">#===============================================================================================#</span><span class="w"></span>
 <span class="nb">Alias</span><span class="w"> </span><span class="sx">/BGS_Bedrock_and_Superficial_Geology_Exemplar/</span><span class="w"> </span><span class="s2">&quot;D:/WxS/ms/apps/cookbookExemplars/BGS_Bedrock_and_Superficial_Geology/wwwroot/&quot;</span><span class="w"></span>
@@ -633,7 +635,7 @@
 <p>Note, that there is a change in the way access permissions are handled between versions 2.2.n and 2.4.n of Apache, so if you are copying the existing MS4W httpd_ conf files you will need to change your &lt;Directory&gt; information;  that is, you will need to replace the ‘<em>Order allow,deny</em>’ and ‘<em>Allow from all</em>’ directives with ‘<em>Require all granted</em>’</p>
 </section>
 <section id="apache-conf">
-<h5>apache.conf<a class="headerlink" href="#apache-conf" title="Permalink to this headline"></a></h5>
+<h5>apache.conf<a class="headerlink" href="#apache-conf" title="Permalink to this heading"></a></h5>
 <p>Finally you will need to add some information to the Apache-HTTP server configuration file (C:\Apache24\conf\httpd.conf) as per the below snippets.</p>
 <div class="highlight-apacheconf notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;IfModule</span><span class="w"> </span><span class="s">alias_module</span><span class="nt">&gt;</span><span class="w"></span>
 <span class="w">  </span>...<span class="w"></span>
@@ -664,7 +666,7 @@
 </div>
 </section>
 <section id="create-alias-configuration-files">
-<h5>Create alias configuration files<a class="headerlink" href="#create-alias-configuration-files" title="Permalink to this headline"></a></h5>
+<h5>Create alias configuration files<a class="headerlink" href="#create-alias-configuration-files" title="Permalink to this heading"></a></h5>
 <p>Next we need to create an alias to our data files and MapServer html templates.  The way you do this varies considerably depending on your Linux version.  In older versions of Ubuntu these aliases are created in the <strong>alias</strong> file located in the <strong>/etc/apache2/conf.d/</strong> directory.  In recent versions you should add these aliases to the <strong>httpd.conf</strong> file in <strong>/etc/apache2/</strong></p>
 <p>We need to create information in the style of the contents of the .conf files (found in our unzipped contents ../ms4w/httpd.d/ directory).  We will combine the contents of both .conf files (that deal with the html templates and data content) into our ‘alias’ configuration file.</p>
 <p>You may choose any text editor, but probably the easiest to use is nano.</p>
@@ -712,7 +714,7 @@
 </section>
 </section>
 <section id="installing-gisinternals-packages-for-windows">
-<h3>Installing GISInternals packages for Windows<a class="headerlink" href="#installing-gisinternals-packages-for-windows" title="Permalink to this headline"></a></h3>
+<h3>Installing GISInternals packages for Windows<a class="headerlink" href="#installing-gisinternals-packages-for-windows" title="Permalink to this heading"></a></h3>
 <p>The most recent versions of the GISInternals GDAL and MapServer packages are available online at: <a class="reference external" href="http://www.gisinternals.com">http://www.gisinternals.com</a></p>
 <p>In most instances we would recommend using the MS4W packages to install Apache and MapServer to give yourself a Windows implementation of MapServer, but in some instances, for example if you want the latest version of MapServer or if you want to use 64-bit software, you can alternatively use one of the GISinternals packages for your MapServer service.</p>
 <p>In this section we will assume you are familiar with configuring a MS4W service and just provide some notes to assist you configure this alternative MapServer on Windows service using Apache-HTTP as your web server.</p>
@@ -734,7 +736,7 @@ C:\apps\gisinternals\bin\curl;
 </pre></div>
 </div>
 <section id="data">
-<h4>Data<a class="headerlink" href="#data" title="Permalink to this headline"></a></h4>
+<h4>Data<a class="headerlink" href="#data" title="Permalink to this heading"></a></h4>
 <p>You may put your OneGeology data for your service (and the Mapfile etc) anywhere on your server, but here we will follow the same pattern as we have for used for the MS4W services.  In this case we have extracted the exemplar shapefile data to a location on our D:\ drive as:</p>
 <ul class="simple">
 <li><p>D:\WxS\ms\apps\cookbookExemplars\BGS_Bedrock_and_Superficial_Geology</p>
@@ -765,7 +767,7 @@ C:\apps\gisinternals\bin\curl;
 </div>
 </section>
 <section id="mapserver-cgi-bin">
-<h4>MapServer cgi-bin<a class="headerlink" href="#mapserver-cgi-bin" title="Permalink to this headline"></a></h4>
+<h4>MapServer cgi-bin<a class="headerlink" href="#mapserver-cgi-bin" title="Permalink to this heading"></a></h4>
 <p>For this installation we will now create some folders in the Apache-HTTP cgi-bin folder to hold our copy of the mapserv.exe executable (which we will rename as ‘wms’) as:</p>
 <ul>
 <li><p>C:\Apache24\cgi-bin (folder)</p>
@@ -798,7 +800,7 @@ C:\apps\gisinternals\bin\curl;
 </section>
 </section>
 <section id="installing-mapserver-on-linux-using-ppas">
-<h3>Installing MapServer on Linux using PPAs<a class="headerlink" href="#installing-mapserver-on-linux-using-ppas" title="Permalink to this headline"></a></h3>
+<h3>Installing MapServer on Linux using PPAs<a class="headerlink" href="#installing-mapserver-on-linux-using-ppas" title="Permalink to this heading"></a></h3>
 <p>This installation guide will give you simple step-by-step instructions of installing MapServer onto a Linux server and assumes you have an Apache HTTP webserver already running.</p>
 <p>Users of Ubuntu/Debian systems should find that they are able to get the latest version of MapServer by adding the following Personal Package Archives to their system’s software sources:</p>
 <blockquote>
@@ -853,7 +855,7 @@ sudo apt-get update
 <p>You should get the message “No query information to decode. QUERY_STRING is set but empty”</p>
 <p>Congratulations! You have now got MapServer installed and configured to run in your web server.</p>
 <section id="configuring-mapserver-exemplar-services-on-a-lamp-server">
-<h4>Configuring MapServer exemplar services on a LAMP server<a class="headerlink" href="#configuring-mapserver-exemplar-services-on-a-lamp-server" title="Permalink to this headline"></a></h4>
+<h4>Configuring MapServer exemplar services on a LAMP server<a class="headerlink" href="#configuring-mapserver-exemplar-services-on-a-lamp-server" title="Permalink to this heading"></a></h4>
 <p>We shall now configure the two BGS exemplar services (a shapefile version and a raster version) available from the BGS FTP server.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1">#cd /usr/local/src</span>
 <span class="c1">#wget ftp://ftp.bgs.ac.uk/pubload/OneGeology/1G_WMS-exemplar-data-MS6-update.zip</span>
@@ -866,7 +868,7 @@ sudo apt-get update
 </pre></div>
 </div>
 <section id="create-a-ows-shell-script">
-<h5>Create a ows shell script<a class="headerlink" href="#create-a-ows-shell-script" title="Permalink to this headline"></a></h5>
+<h5>Create a ows shell script<a class="headerlink" href="#create-a-ows-shell-script" title="Permalink to this heading"></a></h5>
 <p>Next we need to create a ‘ows’ shell script for each of our Map Services; which we need to place in an associated directory.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1">#cd /usr/lib/cgi-bin</span>
 <span class="c1">#mkdir --parents exemplars/BGS_Bedrock_Geology</span>
@@ -906,14 +908,14 @@ sudo apt-get update
 </div>
 </section>
 <section id="modify-paths-in-the-mapfile">
-<h5>Modify paths in the Mapfile<a class="headerlink" href="#modify-paths-in-the-mapfile" title="Permalink to this headline"></a></h5>
+<h5>Modify paths in the Mapfile<a class="headerlink" href="#modify-paths-in-the-mapfile" title="Permalink to this heading"></a></h5>
 <p>The final step is to modify the WEB &gt; IMAGEPATH path (to “/var/tmp/”) and the WEB &gt; IMAGEURL path (to “/tmp/”) in each of our onegeology.map files</p>
 <p>That’s it!</p>
 </section>
 </section>
 </section>
 <section id="alternative-mapserver-configurations">
-<h3>Alternative MapServer configurations<a class="headerlink" href="#alternative-mapserver-configurations" title="Permalink to this headline"></a></h3>
+<h3>Alternative MapServer configurations<a class="headerlink" href="#alternative-mapserver-configurations" title="Permalink to this heading"></a></h3>
 <p>If you want to use other permutations and get stuck remember you can ask the OneGeology Helpdesk any MapServer configuration issues in relation to your OneGeology services, and we will endeavour to help you.</p>
 <p>As well as the OneGeology Helpdesk there are a number of other resources to help guide you in your installation, including:</p>
 <dl>
@@ -932,17 +934,17 @@ sudo apt-get update
 </dd>
 </dl>
 <section id="mapserver-and-iis">
-<h4>MapServer and IIS<a class="headerlink" href="#mapserver-and-iis" title="Permalink to this headline"></a></h4>
+<h4>MapServer and IIS<a class="headerlink" href="#mapserver-and-iis" title="Permalink to this heading"></a></h4>
 <p>You may use the IIS web server instead of Apache to run the MapServer CGI.  See the previous cookbook for details of how to do this with IIS version 6.  We haven’t been able to update the cookbook for the latest version of IIS, but the MapServer documentation (<a class="reference external" href="http://mapserver.org/installation/iis.html">IIS Setup for MapServer</a>) gives a good guide for how to do this in general for IIS 7 and up.</p>
 </section>
 <section id="compiling-mapserver-on-linux">
-<h4>Compiling MapServer on Linux<a class="headerlink" href="#compiling-mapserver-on-linux" title="Permalink to this headline"></a></h4>
+<h4>Compiling MapServer on Linux<a class="headerlink" href="#compiling-mapserver-on-linux" title="Permalink to this heading"></a></h4>
 <p>You may wish to compile your own version of MapServer on a *nix operating system of your own choosing.  We haven’t done this for a while and the guidance in our previous cookbook was very out of date.  There is guidance on the MapServer site that takes you through the process (<a class="reference external" href="http://mapserver.org/installation/unix.html">Compiling on Unix</a>)</p>
 </section>
 </section>
 </section>
 <section id="general-configuration">
-<h2>General configuration<a class="headerlink" href="#general-configuration" title="Permalink to this headline"></a></h2>
+<h2>General configuration<a class="headerlink" href="#general-configuration" title="Permalink to this heading"></a></h2>
 <p>MapServer services are configured through the use of Mapfile templates (*.map).  You can use a single Mapfile to configure a service, or you can use a master file that includes other files.  The benefits of using multiple files include ease of maintenance across multiple similar services, and readability.  Here we will use multiple files to show how the various parts of a MapServer (OGC) service need to be configured.  You can configure multiple service types through a single configuration, if desired.</p>
 <p>The start of a Mapfile begins with a <strong>MAP</strong> statement and ends with an <strong>END</strong> statement</p>
 <p>Comments are shown by lines beginning with a <strong>#</strong> sign</p>
@@ -1126,7 +1128,7 @@ sudo apt-get update
 <p>You may use the “WMS_ONLINERESOURCE” (and “OWS_ONLINERESOURCE” etc) metadata sections to change the service endpoint for your service.  For example, you can do this to force users (clients) to always use the IP version of your service rather than the server name (or vice versa), or to force them to always use the cgi-bin version rather than the fcgi-bin version (or vice versa), or to get them to use a different server.  That is, you can have an initial GetCapabilities response document that itself advertises a different service endpoint for the subsequent GetMap requests.  There are several reasons why you might want to do this; one such reason is when you have an existing service that has multiple layers only some of some of which are conformant to OneGeology and in which the service metadata doesn’t otherwise conform to the OneGeology WMS profile.  In such an example, you can set up a service that has a GetCapabilities document that is conformant to the OneGeology WMS profile and which advertises only some of the layers of the other service through the use of the “WMS_ONLINERESOURCE” metadata.</p>
 <p>The SRS specifies the coordinate system (spatial reference system) that the WMS can serve data in.  These are commonly specified using EPSG codes <strong>and must include</strong> <a class="reference external" href="http://epsg.io/4326">EPSG:4326</a> so that all services have at least one coordinate system in common.  We would like if you could specify the Spherical Mercator projection (<a class="reference external" href="http://epsg.io/3857">EPSG:3857</a>) to allow your service to be used in Google Maps.  You may specify other systems that are appropriate for your region if you wish; for example we would expect most European services to support either (or both of) <a class="reference external" href="http://epsg.io/4258">EPSG:4258</a> and <a class="reference external" href="http://epsg.io/3034">EPSG:3034</a> to ensure compliance with INSPIRE coordinate system requirements.</p>
 <section id="adding-alternate-character-set-support">
-<h3>Adding alternate character set support<a class="headerlink" href="#adding-alternate-character-set-support" title="Permalink to this headline"></a></h3>
+<h3>Adding alternate character set support<a class="headerlink" href="#adding-alternate-character-set-support" title="Permalink to this heading"></a></h3>
 <p>If you are serving a non-English language service, you may need or want to change the font and character sets.</p>
 <p>To specify a font set you need to use the FONTSET keyword which references a file that contains the mappings from the font name aliases, which you will use in your Mapfile, to the actual font file names on your computer. See the MAP section above for an example of referencing a fontset file (fontset.lst)</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>arial C:\Windows\Fonts\Arial.ttf
@@ -1166,7 +1168,7 @@ verdana C:\Windows\Fonts\verdana.ttf
 </ul>
 </section>
 <section id="creating-your-own-symbology">
-<h3>Creating your own symbology<a class="headerlink" href="#creating-your-own-symbology" title="Permalink to this headline"></a></h3>
+<h3>Creating your own symbology<a class="headerlink" href="#creating-your-own-symbology" title="Permalink to this heading"></a></h3>
 <p>symbols.sym, is a set of defined symbols that can be used to style your map layers.</p>
 <div class="highlight-mapfile notranslate"><div class="highlight"><pre><span></span><span class="k">SYMBOLSET</span>
     <span class="k">SYMBOL</span>
@@ -1210,7 +1212,7 @@ verdana C:\Windows\Fonts\verdana.ttf
 </div>
 </section>
 <section id="example-include-files">
-<h3>Example include files<a class="headerlink" href="#example-include-files" title="Permalink to this headline"></a></h3>
+<h3>Example include files<a class="headerlink" href="#example-include-files" title="Permalink to this heading"></a></h3>
 <div class="highlight-mapfile notranslate"><div class="highlight"><pre><span></span><span class="c"># BGS-Attribution.map</span>
 <span class="c"># May be included at SERVICE and/or LAYER metadata level</span>
 <span class="s">&quot;WMS_ATTRIBUTION_LOGOURL_FORMAT&quot;</span> <span class="s">&quot;image/gif&quot;</span>
@@ -1309,10 +1311,10 @@ verdana C:\Windows\Fonts\verdana.ttf
 </div>
 </section>
 <section id="debugging-common-errors">
-<h3>Debugging common errors<a class="headerlink" href="#debugging-common-errors" title="Permalink to this headline"></a></h3>
+<h3>Debugging common errors<a class="headerlink" href="#debugging-common-errors" title="Permalink to this heading"></a></h3>
 <p>This section is added to help you debug common errors in your Mapfile.</p>
 <section id="symbol-definition-error">
-<h4>Symbol definition error<a class="headerlink" href="#symbol-definition-error" title="Permalink to this headline"></a></h4>
+<h4>Symbol definition error<a class="headerlink" href="#symbol-definition-error" title="Permalink to this heading"></a></h4>
 <p>getString(): Symbol definition error.  Parsing error near (<em>matching text</em>):(line <em>line-number</em>)</p>
 <p>This error may occur when your layer classes have a name which includes an apostrophe or other quotation mark that matches the quotation marks used to delimit the CLASS name.  For example if your class name is delimited using single quotes such as below and your class name includes a word with a single quote (d’Irma), you will get this error.</p>
 <div class="highlight-mapfile notranslate"><div class="highlight"><pre><span></span><span class="k">NAME</span> <span class="s">&#39;Formation d&#39;</span><span class="err">Irma</span> <span class="err">:</span> <span class="err">calcaire</span><span class="p">,</span> <span class="err">dolomie</span> <span class="err">à</span> <span class="err">tromatolites</span><span class="p">,</span> <span class="err">argilite</span><span class="s">&#39;</span>
@@ -1324,7 +1326,7 @@ verdana C:\Windows\Fonts\verdana.ttf
 </div>
 </section>
 <section id="unknown-identifier">
-<h4>Unknown identifier<a class="headerlink" href="#unknown-identifier" title="Permalink to this headline"></a></h4>
+<h4>Unknown identifier<a class="headerlink" href="#unknown-identifier" title="Permalink to this heading"></a></h4>
 <p>loadLayer(): Unknown identifier. Parsing error near (<em>matching text</em>):(line <em>line-number</em>)</p>
 <p>This error can occur when you are missing an enclosing KEYWORD in the Mapfile.  For example in the below example, the CLASS keyword has been commented out, leaving the STYLE section uncommented; STYLE is now found in an unexpected position in the Mapfile, resulting in an error.</p>
 <div class="highlight-mapfile notranslate"><div class="highlight"><pre><span></span><span class="c">#CLASS</span>
@@ -1338,7 +1340,7 @@ verdana C:\Windows\Fonts\verdana.ttf
 </div>
 </section>
 <section id="missing-magic-string">
-<h4>Missing magic string<a class="headerlink" href="#missing-magic-string" title="Permalink to this headline"></a></h4>
+<h4>Missing magic string<a class="headerlink" href="#missing-magic-string" title="Permalink to this heading"></a></h4>
 <p>When running a GetFeatureInfo request with the info_format set as text/html, you will get an error like the below, if you do not include a magic string in each of your HTML template documents.</p>
 <p>Content-type: text/xml isValidTemplate(): Web application error. Missing magic string, <em>template-file</em> doesn’t look like a MapServer template.</p>
 <p>You need to add <strong>&lt;!– MapServer Template –&gt;</strong> to the top of ALL templates.</p>
@@ -1353,7 +1355,7 @@ verdana C:\Windows\Fonts\verdana.ttf
 </section>
 </section>
 <section id="connecting-to-a-database">
-<h3>Connecting to a database<a class="headerlink" href="#connecting-to-a-database" title="Permalink to this headline"></a></h3>
+<h3>Connecting to a database<a class="headerlink" href="#connecting-to-a-database" title="Permalink to this heading"></a></h3>
 <p>If your data is stored in a database you can access it by setting the CONNECTION and CONNECTIONTYPE directives (to specify the connection) and the DATA directive (to specify the data you want to retrieve or query). These directives are put in the LAYER section of your map file.</p>
 <p>The below example shows a typical connection to a PostgreSQL/PostGIS database.  Such a connection might be shared across several layers in your service.</p>
 <div class="highlight-mapfile notranslate"><div class="highlight"><pre><span></span><span class="k">CONNECTION</span> <span class="s">&quot;user=&#39;your_user_name&#39; password=&#39;your_password&#39; dbname=&#39;m4eu&#39; host=&#39;localhost&#39; port=&#39;5432&#39;&quot;</span>
@@ -1385,10 +1387,10 @@ verdana C:\Windows\Fonts\verdana.ttf
 </section>
 </section>
 <section id="wms">
-<h2>WMS<a class="headerlink" href="#wms" title="Permalink to this headline"></a></h2>
+<h2>WMS<a class="headerlink" href="#wms" title="Permalink to this heading"></a></h2>
 <p>We provide two exemplar MapServer services, the first is based on a simple raster file, and is used to illustrate a basic WMS, the second uses a vector datasource (shapefiles) to illustrate how to configure a more advanced WMS (and may also be used for a Simple Feature WFS).</p>
 <section id="raster-image-data-exemplar-layer-configuration">
-<h3>Raster image data exemplar (LAYER configuration)<a class="headerlink" href="#raster-image-data-exemplar-layer-configuration" title="Permalink to this headline"></a></h3>
+<h3>Raster image data exemplar (LAYER configuration)<a class="headerlink" href="#raster-image-data-exemplar-layer-configuration" title="Permalink to this heading"></a></h3>
 <p>An example of adding a PNG layer is included in the BGS_Bedrock_Raster_Map application.  The LAYER section is reproduced below for reference.  This data was simply created as a raster from the bedrock shapefile for the purposes of serving as an example.  In this case we won’t be setting up a response to GetFeatureInfo request; we are just returning a coloured map.  There is more <a class="reference external" href="http://www.mapserver.org/input/raster.html">detailed documentation</a> , in particular as regards efficient serving of large images, using 8-bit vs. 24-bit images, tiling etc.</p>
 <p>Example extract from Mapfile below:</p>
 <div class="highlight-mapfile notranslate"><div class="highlight"><pre><span></span><span class="k">LAYER</span>
@@ -1434,7 +1436,7 @@ verdana C:\Windows\Fonts\verdana.ttf
 </div>
 </section>
 <section id="vector-data-exemplar-layer-configuration">
-<h3>Vector data exemplar (LAYER configuration)<a class="headerlink" href="#vector-data-exemplar-layer-configuration" title="Permalink to this headline"></a></h3>
+<h3>Vector data exemplar (LAYER configuration)<a class="headerlink" href="#vector-data-exemplar-layer-configuration" title="Permalink to this heading"></a></h3>
 <p>The example file includes the following shapefile based layers:</p>
 <ul class="simple">
 <li><p>UK bedrock geology classified by lithology, lithostratigraphy, and age</p></li>
@@ -1524,7 +1526,7 @@ verdana C:\Windows\Fonts\verdana.ttf
 <p>Colour codes for the lithostratigraphical and lithology layers are specific to the British Geological Survey, you should use the codes used by your geological survey.  However, for OneGeology it has been agreed, where possible, to serve a chronostratigraphic age layer using the new <a class="reference external" href="https://www.seegrid.csiro.au/wiki/pub/CGIModel/GeologicTime/ISChart2009.pdf">IUGS 2009 colour scheme</a> .  This will give some form of harmonization between the different chronostratigraphic layers served by the contributing geological surveys and this is only possible where such an internationally agreed scheme exists.  In this case the British Geological Survey had to refine, re-allocate, and ‘map’ its internal ages to fit the IUGS 2009 one.  The file ‘ICSClasses.txt’ contains a full list of names and CLASS definitions for the appropriate colours for all the IUGS 2009 colours.  In the Mapfile we have commented out the terms that are not actually used in the BGS map; please do the same for your map.</p>
 </section>
 <section id="configuring-html-query-templates">
-<h3>Configuring HTML query templates<a class="headerlink" href="#configuring-html-query-templates" title="Permalink to this headline"></a></h3>
+<h3>Configuring HTML query templates<a class="headerlink" href="#configuring-html-query-templates" title="Permalink to this heading"></a></h3>
 <p>All templates must include the <strong>&lt;!– MapServer Template –&gt;</strong> statement on the first line of the file.</p>
 <p>You may include any HTML and even some JavaScript in your templates, all entities must be properly encoded.</p>
 <p>The output of attribute values from the datasource or environment variables are denoted by square brackets, so in the below example we are outputting the value of the RCS_D attribute as part of an HTML table in the bedrock lithology layer of our exemplar service.</p>
@@ -1537,7 +1539,7 @@ verdana C:\Windows\Fonts\verdana.ttf
 </div>
 <p>The following are examples of how we might configure our WMS GetFeatureInfo responses</p>
 <section id="debugging-your-requests">
-<h4>Debugging your requests<a class="headerlink" href="#debugging-your-requests" title="Permalink to this headline"></a></h4>
+<h4>Debugging your requests<a class="headerlink" href="#debugging-your-requests" title="Permalink to this heading"></a></h4>
 <p>In this example we are using MapServer environment variables to help us debug the request that was used to generate the response</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- MapServer Template --&gt;</span>
 <span class="cm">&lt;!-- ERL footer (start)--&gt;</span>
@@ -1574,7 +1576,7 @@ http://ogcdev.bgs.ac.uk/cgi-bin/BGS_EN_MINERALS/ows?
 </div>
 </section>
 <section id="handling-fields-for-which-you-have-no-data">
-<h4>Handling fields for which you have no data<a class="headerlink" href="#handling-fields-for-which-you-have-no-data" title="Permalink to this headline"></a></h4>
+<h4>Handling fields for which you have no data<a class="headerlink" href="#handling-fields-for-which-you-have-no-data" title="Permalink to this heading"></a></h4>
 <p>As GeoSciML-Lite requires data (or URIs pointing to null value reasons) for data that was not required in the OneGeology-Europe services, you have a few options with MapServer if you don’t have the required data (for example a specification_uri for all features). Option 1 would be to create a column in the data source and populate the rows with null value URIs (such as for example with the value <a class="reference external" href="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unknown/">http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unknown/</a>). Option 2 would be to populate the missing values within the GetFetaureInfo request template, such as below:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- MapServer Template --&gt;</span>
 <span class="p">&lt;</span><span class="nt">dl</span><span class="p">&gt;</span>
@@ -1612,7 +1614,7 @@ http://ogcdev.bgs.ac.uk/cgi-bin/BGS_EN_MINERALS/ows?
 </div>
 </section>
 <section id="using-javascript">
-<h4>Using JavaScript<a class="headerlink" href="#using-javascript" title="Permalink to this headline"></a></h4>
+<h4>Using JavaScript<a class="headerlink" href="#using-javascript" title="Permalink to this heading"></a></h4>
 <p>Here we embed some JavaScript into a response to give a TimeSeries schart for the data point selected</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!--MapServer Template --&gt;</span>
 <span class="p">&lt;</span><span class="nt">table</span> <span class="na">summary</span><span class="o">=</span><span class="s">&quot;Query response for Terrafirma 1:5k ground motion WMS layer&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;hasTS&quot;</span><span class="p">&gt;</span>
@@ -1645,7 +1647,7 @@ http://ogcdev.bgs.ac.uk/cgi-bin/BGS_EN_MINERALS/ows?
 </section>
 </section>
 <section id="configuring-group-layering">
-<h3>Configuring group layering<a class="headerlink" href="#configuring-group-layering" title="Permalink to this headline"></a></h3>
+<h3>Configuring group layering<a class="headerlink" href="#configuring-group-layering" title="Permalink to this heading"></a></h3>
 <p>In some situations, for example when you have too many individual layers, or if you have to comply with some strict naming conventions (such as INSPIRE) you may need to consider configuring group layering.  In group layering you nest one set of layers inside another (group) layer, you can still call (e.g. make a GetMap request on) any of the individual grouped layers or you can call all the grouped layers at the same time using the grouping layer.  For example in the below MapServer GetCapabilities response on a service with group layers you could make a GetMap request on the group layer called GE.GeologicFault and would get a map comprising both the grouped layers (GE.GeologicFault_GBR_BGS_EN_1M_Surface and GE.GeologicFault_GBR_BGS_EN_1M_Bedrock), or you could perform a GetMap request on either of the individual layers.</p>
 <figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="../../_images/GroupLayering.jpg"><img alt="Group layering in a GetCapabilities response" src="../../_images/GroupLayering.jpg" style="width: 1032px; height: 350px;" /></a>
@@ -1750,7 +1752,7 @@ http://ogcdev.bgs.ac.uk/cgi-bin/BGS_EN_MINERALS/ows?
 </section>
 </section>
 <section id="simple-feature-wfs">
-<h2>Simple feature WFS<a class="headerlink" href="#simple-feature-wfs" title="Permalink to this headline"></a></h2>
+<h2>Simple feature WFS<a class="headerlink" href="#simple-feature-wfs" title="Permalink to this heading"></a></h2>
 <p>Whilst MapServer is not able to provide a complex feature WFS (such as is required to supply GeoSciML 4.0)  it is possible to configure it to provide a simple feature WFS.  If you have already set up a WMS with a vector data source it is possible with only minor additions to the SERVER and LAYER configuration to enable a WFS service.  If your data supports it, you can also configure a portrayal service, to provide a GeoSciML-Lite simple feature service for example.</p>
 <p>A WFS service will be enabled by the presence of an <strong>OWS_ENABLE_REQUEST</strong> or <strong>WFS_ENABLE_REQUEST</strong> statement in the MAP &gt; WEB &gt; METADATA section, or in the LAYER &gt; METADATA section.</p>
 <div class="highlight-mapfile notranslate"><div class="highlight"><pre><span></span><span class="c"># The following statment enables all operations for all OGC services</span>
@@ -1809,7 +1811,7 @@ http://ogcdev.bgs.ac.uk/cgi-bin/BGS_EN_MINERALS/ows?
 </div>
 </section>
 <section id="wcs">
-<h2>WCS<a class="headerlink" href="#wcs" title="Permalink to this headline"></a></h2>
+<h2>WCS<a class="headerlink" href="#wcs" title="Permalink to this heading"></a></h2>
 <p>In the same way as WMS and WFS are enabled on a service, WCS operations are enabled using either the <strong>OWS_ENABLE_REQUEST</strong> or <strong>WCS_ENABLE_REQUEST”</strong> statement in the MAP &gt; WEB &gt; METADATA section (enabling WCS for all coverages) or in the LAYER &gt; METADATA section for enabling operations on a per coverage (layer) basis.</p>
 <p>For example:</p>
 <div class="highlight-mapfile notranslate"><div class="highlight"><pre><span></span><span class="c"># The following statement enables all core WCS operations (GetCapabilities, GetCoverage and DescribeCoverage)</span>
@@ -1886,7 +1888,7 @@ http://ogcdev.bgs.ac.uk/cgi-bin/BGS_EN_MINERALS/ows?
 <p>Further details for configuring WCS with Mapserver can be found at: <a class="reference external" href="http://mapserver.org/ogc/wcs_server.html">WCS Server</a></p>
 </section>
 <section id="inspire-metadata">
-<h2>INSPIRE metadata<a class="headerlink" href="#inspire-metadata" title="Permalink to this headline"></a></h2>
+<h2>INSPIRE metadata<a class="headerlink" href="#inspire-metadata" title="Permalink to this heading"></a></h2>
 <p>INSPIRE specific metadata can either be referenced in an external INSPIRE service metadata document (scenario 1) or can be directly embedded in the capabilities document (scenario 2). MapServer supports both scenarios.  In either scenario an extended capabilities section is added to the GetCapabilities response for the service, using metadata configured in the <strong>SERVICE &gt; WEB &gt; METADATA</strong> section of the Mapfile.</p>
 <p>For example to add a scenario 1 INSPIRE extended capabilities section for an INSPIRE View service (WMS) you would use something like the below:</p>
 <div class="highlight-mapfile notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;WMS_LANGUAGES&quot;</span> <span class="s">&quot;eng&quot;</span>

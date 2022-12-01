@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -494,9 +496,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../using.html">Using OneGeology Services</a> &raquo;</li>
-      <li>Using the OneGeology Portal</li>
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../using.html">Using OneGeology Services</a></li>
+      <li class="breadcrumb-item active">Using the OneGeology Portal</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/using/portal.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -507,7 +509,7 @@
            <div itemprop="articleBody">
              
   <section id="using-the-onegeology-portal">
-<h1>Using the OneGeology Portal<a class="headerlink" href="#using-the-onegeology-portal" title="Permalink to this headline"></a></h1>
+<h1>Using the OneGeology Portal<a class="headerlink" href="#using-the-onegeology-portal" title="Permalink to this heading"></a></h1>
 <p>The OneGeology portal allows you to discover all the services that have been registered with OneGeology. You can view all those that return image output on a map of the world and can query the data behind those that provide that ability. Also some services allow you to highlight areas satisfying some simple query criteria on the age or lithology of mapped geological units.</p>
 <p>The Portal has the following functions:</p>
 <ul class="simple">
@@ -524,7 +526,7 @@
 <li><p>conditions of use information for each layer</p></li>
 </ul>
 <section id="viewing-data-registered-in-the-onegeology-portal">
-<h2>Viewing data registered in the OneGeology Portal<a class="headerlink" href="#viewing-data-registered-in-the-onegeology-portal" title="Permalink to this headline"></a></h2>
+<h2>Viewing data registered in the OneGeology Portal<a class="headerlink" href="#viewing-data-registered-in-the-onegeology-portal" title="Permalink to this heading"></a></h2>
 <p>The OneGeology Portal is found at: <a class="reference external" href="http://portal.onegeology.org/">http://portal.onegeology.org/</a> and is accessible as either an English (the default) or French language service.</p>
 <p>You will need to use Internet Explorer 6 and above, Firefox 2 and above or recent versions of Safari, Opera, and Chrome. You will need to enable JavaScript and allow pop-ups.</p>
 <blockquote>
@@ -652,10 +654,10 @@
 <p>This (above) information is harvested automatically by the OneGeology Portal client software from the GetCapabilities response document of the WMS.</p>
 </div></blockquote>
 <section id="go-to-function">
-<h3>Go To Function<a class="headerlink" href="#go-to-function" title="Permalink to this headline"></a></h3>
+<h3>Go To Function<a class="headerlink" href="#go-to-function" title="Permalink to this heading"></a></h3>
 <blockquote>
 <div><figure class="align-default" id="id18">
-<a class="reference internal image-reference" href="../_images/searchlocation.jpg"><img alt="The Go To icon" src="../_images/searchlocation.jpg" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="using/images/searchlocation.jpg"><img alt="The Go To icon" src="using/images/searchlocation.jpg" style="width: 500px;" /></a>
 <figcaption>
 <p><span class="caption-text">The Go To icon</span><a class="headerlink" href="#id18" title="Permalink to this image"></a></p>
 </figcaption>
@@ -671,7 +673,7 @@
 </div></blockquote>
 </section>
 <section id="viewing-layers-in-different-projections">
-<h3>Viewing layers in different projections<a class="headerlink" href="#viewing-layers-in-different-projections" title="Permalink to this headline"></a></h3>
+<h3>Viewing layers in different projections<a class="headerlink" href="#viewing-layers-in-different-projections" title="Permalink to this heading"></a></h3>
 <blockquote>
 <div><p>The portal allows you to select other projections to view the map layers.  The projections supported by the portal are:</p>
 <dl class="simple">
@@ -743,7 +745,7 @@
 </section>
 </section>
 <section id="reviewing-external-map-data">
-<h2>Reviewing external map data<a class="headerlink" href="#reviewing-external-map-data" title="Permalink to this headline"></a></h2>
+<h2>Reviewing external map data<a class="headerlink" href="#reviewing-external-map-data" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p>You may also use the OneGeology Portal client to review other WMS services, either as check of your own service before requesting that it is added to the OneGeology Portal catalogue, or to view any other data services that you discover.</p>
 <p>You add additional WMS services using the ‘Add external layers’ option and adding the service URL (without any request parameters).</p>
@@ -758,7 +760,7 @@
 </div></blockquote>
 </section>
 <section id="exporting-to-keyhole-markup-language-kml">
-<h2>Exporting to Keyhole Markup Language (KML)<a class="headerlink" href="#exporting-to-keyhole-markup-language-kml" title="Permalink to this headline"></a></h2>
+<h2>Exporting to Keyhole Markup Language (KML)<a class="headerlink" href="#exporting-to-keyhole-markup-language-kml" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p><em>KML</em> is a file format used to display geographic data in an Earth browser such as Google Earth, Google Maps. It is an XML–based language schema for expressing geographic annotation and visualization on existing or future Web-based, two-dimensional maps and  three-dimensional Earth browsers. KML was developed for use with Google Earth, which was originally named Keyhole Earth Viewer. It was created by Keyhole Inc, which was acquired by Google in 2004, but is now an internationally recognized standard by the Open Geospatial Consortium (OGC) in it’s version 2.2 form.</p>
 <p>You may export the contents of any active map service to KML to allow you to view those layers in Google Earth (or other applications that support the KML format).</p>
@@ -776,14 +778,14 @@
 </div></blockquote>
 </section>
 <section id="creating-and-using-web-map-context-wmc-documents">
-<h2>Creating and using Web Map Context (WMC) documents<a class="headerlink" href="#creating-and-using-web-map-context-wmc-documents" title="Permalink to this headline"></a></h2>
+<h2>Creating and using Web Map Context (WMC) documents<a class="headerlink" href="#creating-and-using-web-map-context-wmc-documents" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p>Saving your current OneGeology Portal view as a Web Map Context document is an easy way to save your personal data view and allows you to open the same view again at a later date.  This avoids the need to keep adding layers to the view each time you enter the OneGeology Portal. This is most useful if viewing a large number of layers at any one time.</p>
 <p>This also allows you to share your map session with other people, either by giving them a copy of the file, or by making the file available on a public web server.</p>
 <p>‘<a class="reference external" href="http://www.opengeospatial.org/standards/wmc">Web Map Context Documents</a>’ is an OGC specification and any WMC document created in the OneGeology Portal should be usable in a number of client software applications.</p>
 </div></blockquote>
 <section id="saving-your-context-file">
-<h3>Saving your context file<a class="headerlink" href="#saving-your-context-file" title="Permalink to this headline"></a></h3>
+<h3>Saving your context file<a class="headerlink" href="#saving-your-context-file" title="Permalink to this heading"></a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>Click the Save WMC context button to create a WMC document</p></li>
@@ -800,7 +802,7 @@
 </div></blockquote>
 </section>
 <section id="opening-a-web-map-context-file-in-the-onegeology-portal">
-<h3>Opening a Web Map Context file in the OneGeology Portal<a class="headerlink" href="#opening-a-web-map-context-file-in-the-onegeology-portal" title="Permalink to this headline"></a></h3>
+<h3>Opening a Web Map Context file in the OneGeology Portal<a class="headerlink" href="#opening-a-web-map-context-file-in-the-onegeology-portal" title="Permalink to this heading"></a></h3>
 <blockquote>
 <div><p>To open a Web Map Context document in the OneGeology Portal, you need to select the ‘<em>Load a WMC context</em>’ menu option (folder icon)</p>
 <p>You have the choice to ‘<em>Load a Context file (WMC)</em>’ that you have already saved on your PC, or to use a ‘<em>Context URL</em>’, that is a Web Map Context file that has been made available on some web server (as in this figure example).  You also have the option to keep the layers that are already loaded in you map, or to just view the layers in the context file (which is the default option).  Note that currently you still get the automatically selected layers showing, even if you chose not to keep the layers already added.</p>
@@ -817,7 +819,7 @@
 </div></blockquote>
 </section>
 <section id="opening-a-wmc-file-in-other-clients">
-<h3>Opening a WMC file in other clients<a class="headerlink" href="#opening-a-wmc-file-in-other-clients" title="Permalink to this headline"></a></h3>
+<h3>Opening a WMC file in other clients<a class="headerlink" href="#opening-a-wmc-file-in-other-clients" title="Permalink to this heading"></a></h3>
 <blockquote>
 <div><p>Other clients are known to support Web Map Context documents, for example we could load the example file (<a class="reference external" href="http://ogc.bgs.ac.uk/wmc/IrelandGeologyEdited-wmc.xml">http://ogc.bgs.ac.uk/wmc/IrelandGeologyEdited-wmc.xml</a>) in an OpenLayers client like the one at <a class="reference external" href="http://openlayers.org/dev/examples/wmc.html">http://openlayers.org/dev/examples/wmc.html</a>.  Here we need to copy the contents of the file into the form window and click on the ‘<em>read as new map</em>’ button to view our map.</p>
 <figure class="align-default" id="id31">
@@ -829,7 +831,7 @@
 </div></blockquote>
 </section>
 <section id="known-issues">
-<h3>Known issues<a class="headerlink" href="#known-issues" title="Permalink to this headline"></a></h3>
+<h3>Known issues<a class="headerlink" href="#known-issues" title="Permalink to this heading"></a></h3>
 <blockquote>
 <div><p>If when you load your Web Map Context file you get an error, you should check that the file has the correct XML header, this is because some browsers are known to add an additional XML line at the top of the document when creating the file.  So if you see the following lines at the top of your document:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;</span>
@@ -844,7 +846,7 @@
 </section>
 </section>
 <section id="analysis-tools">
-<span id="use-portal-thematic-analysis"></span><h2>Analysis tools<a class="headerlink" href="#analysis-tools" title="Permalink to this headline"></a></h2>
+<span id="use-portal-thematic-analysis"></span><h2>Analysis tools<a class="headerlink" href="#analysis-tools" title="Permalink to this heading"></a></h2>
 <p>We may use ‘<em>Open Layer Details</em>’ (in “Datasets” tab click on dataset name or arrow next to name)  to discover further information about the layers in a map session.  Information that may be revealed in this dialogue is that the layer is available for ‘<em>Analysis</em>’, as in the below example.</p>
 <figure class="align-default" id="id32">
 <a class="reference internal image-reference" href="../_images/ThematicAnal.jpg"><img alt="Layer properties dialogue, showing analysis functionality is available in an active layer." src="../_images/ThematicAnal.jpg" style="width: 600px;" /></a>
@@ -865,9 +867,9 @@
 </figcaption>
 </figure>
 <section id="portrayal-services">
-<h3>Portrayal Services<a class="headerlink" href="#portrayal-services" title="Permalink to this headline"></a></h3>
+<h3>Portrayal Services<a class="headerlink" href="#portrayal-services" title="Permalink to this heading"></a></h3>
 <section id="geosciml">
-<h4>GeoSciML<a class="headerlink" href="#geosciml" title="Permalink to this headline"></a></h4>
+<h4>GeoSciML<a class="headerlink" href="#geosciml" title="Permalink to this heading"></a></h4>
 <p>The analysis tool offers you two ways to filter your map, you can filter by lithology or you can filter by age via nested hierarchical dropdowns.</p>
 <p>The initial view shows the top level filters, simply “Filter by lithology” and “Filter by age”.</p>
 <p>If we select “Filter by lithology” we will see a search bar and heirarchical nested GeoSciML vocablary, starting at “<em>Compound material</em>”</p>
@@ -992,7 +994,7 @@ These options reflect the structure of the underlying controlled vocabularies.</
 <p>Similarly, we could filter for some other GeoSciML-Portrayal attribution in the map, such as age, or a combination of lithology and age.</p>
 </section>
 <section id="earthresourceml-lite">
-<h4>EarthResourceML-Lite<a class="headerlink" href="#earthresourceml-lite" title="Permalink to this headline"></a></h4>
+<h4>EarthResourceML-Lite<a class="headerlink" href="#earthresourceml-lite" title="Permalink to this heading"></a></h4>
 <p>You can perform similar portrayal actions to the above on services which are using using EarthResourceML-Lite (ERML) such as the layer “Arctic GTK 1:1M Mineral Resources”.</p>
 <figure class="align-default" id="id38">
 <a class="reference internal image-reference" href="../_images/ERML1.JPG"><img alt="ERML layer &quot;Arctic GTK 1:1M Mineral Resources&quot; displayed" src="../_images/ERML1.JPG" style="width: 600px;" /></a>
@@ -1049,7 +1051,7 @@ These options reflect the structure of the underlying controlled vocabularies.</
 </section>
 </section>
 <section id="statistics">
-<h3>Statistics<a class="headerlink" href="#statistics" title="Permalink to this headline"></a></h3>
+<h3>Statistics<a class="headerlink" href="#statistics" title="Permalink to this heading"></a></h3>
 <p>The statistics functionality of the analysis tool are coupled to a WFS associated with a WMS Layer, this is usually as identified by the presence of a <strong>GeoSciML32_wfs_age_or_litho_queryable</strong> keyword in the layer metadata</p>
 <p>The process is similar portrayal actions descibed above.</p>
 <p>In this example we are going to use the layer  “BRA CPRM 1:1M Bedrock (GeoSciML WFS) (GeoSciML Portrayal)”.</p>

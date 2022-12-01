@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -494,9 +496,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../providingdata.html">Providing Data / Services</a> &raquo;</li>
-      <li>Data preparation</li>
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../providingdata.html">Providing Data / Services</a></li>
+      <li class="breadcrumb-item active">Data preparation</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/providingdata/data_preparation.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -507,7 +509,7 @@
            <div itemprop="articleBody">
              
   <section id="data-preparation">
-<h1>Data preparation<a class="headerlink" href="#data-preparation" title="Permalink to this headline"></a></h1>
+<h1>Data preparation<a class="headerlink" href="#data-preparation" title="Permalink to this heading"></a></h1>
 <p>In very broad terms we can describe preparing your data to be served in a OneGeology compatible service as a kind of ETL (Extract, Transform and Load) workflow. The data needs to be taken from its current format, possibly transformed into a different structure with transformed data values and loaded into as suitable data store for use by your chosen OGC web service software. This section contains some useful information to help in different cases but you will need to have some expertise already with suitable tools to manipulate your data.</p>
 <p>If you only have data in the form of paper maps and just intend to provide a simple WMS without attribute data see “<a class="reference internal" href="#service-provision-data-preparation-paper-map"><span class="std std-ref">Scanning a paper map</span></a>”.</p>
 <p>If you have digital data and wish to make this available as it is and it has a simple format with a list of simple property values for each spatial object then it is likely that the server software we describe later will be able to read your data directly and make it available on the web in a number of standard formats based on the data fields in your source data. If the server software can’t read your data format directly then you may need to convert it but most common GIS formats tend to be supported.</p>
@@ -528,9 +530,9 @@
 <p>In general, the most specific term from the interchange vocabulary that completely subsumes (encompasses) the meaning of the term in the source vocabulary should be used. If the source vocabulary has terms that are more specific than the controlled vocabulary, there will be some information lost in this process, but the original source terminology could be preserved in an appropriate text description field. Remember, the primary purpose of the controlled vocabulary fields is for data integration, search criteria, and standardized map legends.</p>
 <p>As we don’t know your data structure or vocabularies we cannot give detailed instructions on how to map your data to one of the standard formats. However, the sections on <a class="reference internal" href="#service-provision-data-preparation-lite"><span class="std std-ref">Lite Schemas</span></a> and <a class="reference internal" href="#service-provision-data-preparation-complex"><span class="std std-ref">Complex Feature Data</span></a> describe the feature types and properties covered by GeoSciML and EarthResourceML and which CGI or INSPIRE vocabularies can be used for particular feature properties. This should provide a reference for deciding how to map your source data to one of these standard interchange formats.</p>
 <section id="scanning-a-paper-map">
-<span id="service-provision-data-preparation-paper-map"></span><h2>Scanning a paper map<a class="headerlink" href="#scanning-a-paper-map" title="Permalink to this headline"></a></h2>
+<span id="service-provision-data-preparation-paper-map"></span><h2>Scanning a paper map<a class="headerlink" href="#scanning-a-paper-map" title="Permalink to this heading"></a></h2>
 <section id="scanning">
-<h3>Scanning<a class="headerlink" href="#scanning" title="Permalink to this headline"></a></h3>
+<h3>Scanning<a class="headerlink" href="#scanning" title="Permalink to this heading"></a></h3>
 <p>Your chosen paper map may look something like this one from the Dutch Geological Survey of Dutch Guyana or Suriname:</p>
 <figure class="align-default" id="id12">
 <a class="reference internal image-reference" href="../_images/paperMap.jpg"><img alt="Example geological map to scan" src="../_images/paperMap.jpg" style="width: 600px; height: 528px;" /></a>
@@ -539,11 +541,11 @@
 </figcaption>
 </figure>
 <section id="step-1">
-<h4>Step 1<a class="headerlink" href="#step-1" title="Permalink to this headline"></a></h4>
+<h4>Step 1<a class="headerlink" href="#step-1" title="Permalink to this heading"></a></h4>
 <p>It is important to find a large scanner in your city, which could cover a whole paper map.  If this scanner is not available at your survey, you may try the Topographical Survey or a large bookshop or book printer.</p>
 </section>
 <section id="step-2a">
-<h4>Step 2A<a class="headerlink" href="#step-2a" title="Permalink to this headline"></a></h4>
+<h4>Step 2A<a class="headerlink" href="#step-2a" title="Permalink to this heading"></a></h4>
 <p>If you could use a large scanner, you can scan the whole map at one time.  But remember to scan the geological map portion into a separate file from that for the legend i.e. you will have two files one for the map and one for the legend.  Alternatively, make a copy of an original digital image of the whole map face and cut out the map from the legend.</p>
 <p>The preferable output format should be .TIFF as this format keeps most information, but if  you have a slow Personal Computer, you could temporarily work with a JPEG copy.  The file size is than much smaller and it can be accessed and geo-referenced faster.</p>
 <p>Good software for cropping (or cutting out) the legend or map from the whole scanned image is <a class="reference external" href="http://www.irfanview.com/">IrfanView</a>, <a class="reference external" href="http://www.adobe.com/uk/products/photoshopfamily.html">Adobe Photoshop</a> or <a class="reference external" href="https://www.gimp.org/">GNU Image Manipulation Program (GIMP)</a>.</p>
@@ -551,7 +553,7 @@
 <p>Note, an alternative approach is to georeference the whole scanned image, then use a GIS (such as <a class="reference external" href="https://www.qgis.org/en/site/about/index.html">QGIS</a>) to crop out the map sheet using a polygon mask.  You might use this technique when your original data is a scan of a old map sheet.</p>
 </section>
 <section id="step-2b">
-<h4>Step 2B<a class="headerlink" href="#step-2b" title="Permalink to this headline"></a></h4>
+<h4>Step 2B<a class="headerlink" href="#step-2b" title="Permalink to this heading"></a></h4>
 <p>For larger maps, or if you have only a small scanner, the map should be scanned in parts and later stitched together.</p>
 <figure class="align-default" id="id13">
 <a class="reference internal image-reference" href="../_images/scanningAMap.jpg"><img alt="Orientation of map for scanning" src="../_images/scanningAMap.jpg" style="width: 414px; height: 253px;" /></a>
@@ -563,17 +565,17 @@
 <p>The output format should be .TIFF as this format keeps most pixel information available.</p>
 </section>
 <section id="step-2c">
-<h4>Step 2C<a class="headerlink" href="#step-2c" title="Permalink to this headline"></a></h4>
+<h4>Step 2C<a class="headerlink" href="#step-2c" title="Permalink to this heading"></a></h4>
 <p>If scanners are not available, you could use a good digital camera.  Unfold the map on a well lit place without glare or light reflections.  Sometimes white sheets on the side will diffuse the light and prevent ugly reflections from the sun or from the light-bulb.  Take a picture right above the centre of the map.</p>
 <p>Make several pictures with different lighting and shutter speed.  Choose the best colourful result.  Usually the export format is .JPG.</p>
 </section>
 <section id="step-3-stitching">
-<h4>Step 3 ~ Stitching<a class="headerlink" href="#step-3-stitching" title="Permalink to this headline"></a></h4>
+<h4>Step 3 ~ Stitching<a class="headerlink" href="#step-3-stitching" title="Permalink to this heading"></a></h4>
 <p>For the stitching of map parts many applications or free software are available, such as such as <a class="reference external" href="https://www.gimp.org/">GNU Image Manipulation Program (GIMP)</a>, <a class="reference external" href="http://www.ossim.org/">OSSIM ImageLinker</a>, or <a class="reference external" href="https://www.qgis.org/en/site/about/index.html">QGIS</a>.</p>
 </section>
 </section>
 <section id="georeferencing-a-scanned-map">
-<h3>Georeferencing a scanned map<a class="headerlink" href="#georeferencing-a-scanned-map" title="Permalink to this headline"></a></h3>
+<h3>Georeferencing a scanned map<a class="headerlink" href="#georeferencing-a-scanned-map" title="Permalink to this heading"></a></h3>
 <p>You have now a .TIFF file or maybe a .JPEG file, which is a representation of your paper map.  This digital file should now be brought into relation with the surface of the earth.  This is called geo-referencing.  For this action you need GIS software.</p>
 <p>Commercial GIS software such as ESRI ArcGIS or MapInfo is widely available and ‘no-cost’ GIS software, which also could perform this task, is <a class="reference external" href="https://github.com/52North/IlwisCore/">ILWIS</a> , <a class="reference external" href="http://mapwarper.net//">Geothings Map Warper</a> or <a class="reference external" href="https://www.qgis.org/en/site/about/index.html">QGIS</a>.</p>
 <p>Note down the Coordinate system of the paper map, as this is necessary for the following process.  Sometimes paper maps are found and we are not sure what coordinate system was being used as it has not been clearly stated on the paper copy.  Some research may have to be done to estimate the original coordinate system used.  For the Suriname map example it is thought probable that the coordinate system originally used was GCS North American 1927.</p>
@@ -589,13 +591,13 @@
 <p>Be careful to use the relevant degree-minutes-seconds or decimal entries for degrees depending on the particular program’s requirements.  After confirming the picture will be warped by the program so it fits now on the world surface.  Please check the accuracy, preferable with a topographical map, as often even the cartographers have made mistakes, or may have deliberately introduced errors for geopolitical or security reasons.  With slight alterations of the fixed points you can try to make a perfect overlap with a topographical map.</p>
 </section>
 <section id="image-formats-and-transparency">
-<h3>Image formats and transparency<a class="headerlink" href="#image-formats-and-transparency" title="Permalink to this headline"></a></h3>
+<h3>Image formats and transparency<a class="headerlink" href="#image-formats-and-transparency" title="Permalink to this heading"></a></h3>
 <p>Although your scanned image will be rectangular in shape, nearly all mapped geographic regions will have irregularly shaped boundaries.  Thus it is preferable to make the background parts of your image transparent rather than a solid background colour which will obscure neighbouring regions.  The variety of image formats that are usable with MapServer and their various advantages and disadvantages is a complex subject which we cannot be authoritative about.</p>
 <p>We have found 32-bit TIFF (RGB plus alpha layer) or 8-bit palette PNG with a transparent background colour work; you may wish to experiment.</p>
 <p>See <a class="reference external" href="http://www.mapserver.org/input/raster.html">MapServer raster data</a> for more information.</p>
 </section>
 <section id="the-legend-for-the-scanned-map">
-<h3>The legend for the scanned map<a class="headerlink" href="#the-legend-for-the-scanned-map" title="Permalink to this headline"></a></h3>
+<h3>The legend for the scanned map<a class="headerlink" href="#the-legend-for-the-scanned-map" title="Permalink to this heading"></a></h3>
 <div class="floatright docutils container">
 <figure class="align-default" id="id15">
 <a class="img floatright reference internal image-reference" href="../_images/legend.jpg"><img alt="Paper legend" class="img floatright" src="../_images/legend.jpg" style="width: 200px; height: 681px;" /></a>
@@ -622,10 +624,10 @@
 </section>
 </section>
 <section id="lite-schemas">
-<span id="service-provision-data-preparation-lite"></span><h2>Lite Schemas<a class="headerlink" href="#lite-schemas" title="Permalink to this headline"></a></h2>
+<span id="service-provision-data-preparation-lite"></span><h2>Lite Schemas<a class="headerlink" href="#lite-schemas" title="Permalink to this heading"></a></h2>
 <p>GeoSciML-Lite and EarthResourceML-Lite (ERML-Lite) are simplified schemas that take the form of a flat table of attributes (conformant to OGC Simple Features Level-0 profile). These were previously called GeoSciML-Portrayal and EarthResourceML-Portrayal.</p>
 <section id="geosciml-lite">
-<span id="service-provision-data-preparation-lite-geosciml"></span><h3>GeoSciML-Lite<a class="headerlink" href="#geosciml-lite" title="Permalink to this headline"></a></h3>
+<span id="service-provision-data-preparation-lite-geosciml"></span><h3>GeoSciML-Lite<a class="headerlink" href="#geosciml-lite" title="Permalink to this heading"></a></h3>
 <p>The full specification for GeoSciML-Lite is in the <a class="reference external" href="http://docs.opengeospatial.org/is/16-008/16-008.html">GeoSciML standard</a>. OneGeology itself does not currently make direct use of data using these schemas but the age and lithology URI columns in GeologicUnitView are those that an SLD enabled WMS needs to provide for the age and lithology highlighting functionality to work. These schemas do, however, provide a method to exchange simple interoperable data without supporting complex features that may be more easily achievable and that can help qualify for a 4 star accreditation.</p>
 <p>There are seven GeoSciML-Lite views descibed in the 4.1 standard, these are:  GeologicUnitView, ShearDisplacmentStructureView, ContactView, BoreholeView, SiteObservationView, GeologicSpecimenView, GeomorphologicUnitView.  Below we lay out what is expected of the views for those features we think that many geological survey organizations will be able to support.</p>
 <p>Generally across all GeoSciML-Lite views, missing values should be specified using OGC nil values <em>http://www.opengis.net/def/nil/ogc/0/</em> as below:</p>
@@ -648,7 +650,7 @@
 <p>Alternatively you could use INSPIRE defined void reasons <em>http://inspire.ec.europa.eu/codelist/VoidReasonValue/</em></p>
 <p>In the below tables describing the features, <strong>Bold property names indicate required properties.</strong>, <em>whilst properties of type _uri are defined as xs:string in the GeoSciML-Lite 4.1 schema, to be conformant with GML SF-0, the intention is that these strings SHALL BE absolute URI’s.</em></p>
 <section id="contactview-features">
-<span id="service-provision-data-preparation-lite-contactview"></span><h4>ContactView features<a class="headerlink" href="#contactview-features" title="Permalink to this headline"></a></h4>
+<span id="service-provision-data-preparation-lite-contactview"></span><h4>ContactView features<a class="headerlink" href="#contactview-features" title="Permalink to this heading"></a></h4>
 <p>These features provide a simplified view of GeoSciML Contact Features. In GeoSciML terms this will be an instance of a MappedFeature with key property values from the associated ContactFeature summarized in text (data type xs:string) fields, and properties suffixed with ‘_uri’ that contain URIs referring to other resources, for example controlled concepts in published vocabularies.</p>
 <p><strong>Elements in ContactView mapped feature scheme</strong></p>
 <table>
@@ -733,7 +735,7 @@
     </tbody>
 </table></section>
 <section id="sheardisplacementstructureview-features">
-<span id="service-provision-data-preparation-lite-sheardisplacementstructureview"></span><h4>ShearDisplacementStructureView features<a class="headerlink" href="#sheardisplacementstructureview-features" title="Permalink to this headline"></a></h4>
+<span id="service-provision-data-preparation-lite-sheardisplacementstructureview"></span><h4>ShearDisplacementStructureView features<a class="headerlink" href="#sheardisplacementstructureview-features" title="Permalink to this heading"></a></h4>
 <p>These features represent faults and ductile shear zones. In GeoSciML terms they are instances of MappedFeature with key property values from the associated ShearDisplacementStructure feature summarized in text fields (data type xs:string) and fields containing identifiers (URI) for fault type, deformation style, movement type, geologic age, and a formally-encoded (ideally in GeoSciML) specification for interoperability. The latter are the properties suffixed with ‘_uri’ and will contain URIs referring to other resources, for example controlled concepts in published vocabularies.</p>
 <p>The concept of ‘Shear displacement structure’ includes all brittle to ductile style faults or ductile shear zones along which displacement has occurred, from a simple, single ‘planar’ brittle or ductile surface to a fault system comprising multiple strands of both brittle and ductile nature. Because this feature class is constrained to have a linear geometry, it is limited to representing shear displacement structures that are considered single surfaces at the scale of portrayal.</p>
 <p><strong>Elements in Shear Displacement Structure View feature</strong></p>
@@ -892,7 +894,7 @@
     </tbody>
 </table></section>
 <section id="geologicunitview-features">
-<span id="service-provision-data-preparation-lite-geologicunitview"></span><h4>GeologicUnitView features<a class="headerlink" href="#geologicunitview-features" title="Permalink to this headline"></a></h4>
+<span id="service-provision-data-preparation-lite-geologicunitview"></span><h4>GeologicUnitView features<a class="headerlink" href="#geologicunitview-features" title="Permalink to this heading"></a></h4>
 <p>GeologicUnitView features represent outcrops of a particular geologic unit, typically with polygon geometry. The properties of these features provide a simplified view of information associated with GeoSciML GeologicUnit features. A geologic unit in this context is an identifiable body of material within the Earth. GeologicUnitView features are instances of GeoSciML MappedFeature with property values from the associated GeologicUnit specifier summarized in text fields for human data consumers, and with fields containing standard identifiers for geologic unit type, representative lithology, and geologic age. The specification_uri property identifies a description resource specific to the geologic unit cropping out in the extent of the polygon (or other) geometry of the feature. The specification_uri should dereference to yield a formally-encoded representation of the geologic unit, ideally in GeoSciML for interoperability. Properties populated by identifiers are suffixed with ‘_uri’ and contain URIs referring to other resources, for example controlled concepts in published vocabularies.</p>
 <p><strong>Elements in GeologicUnitView feature class</strong></p>
 <table>
@@ -1034,7 +1036,7 @@
         </tbody>
   </table></section>
 <section id="boreholeview-features">
-<span id="service-provision-data-preparation-lite-boreholeview"></span><h4>BoreholeView features<a class="headerlink" href="#boreholeview-features" title="Permalink to this headline"></a></h4>
+<span id="service-provision-data-preparation-lite-boreholeview"></span><h4>BoreholeView features<a class="headerlink" href="#boreholeview-features" title="Permalink to this heading"></a></h4>
 <p>BoreholeView is a simplified view of a GeoSciML Borehole. In GeoSciML terms, this will be an instance of a Borehole feature with key property values summarised as labels (unconstrained character strings) or arbitrarily selected classifiers to be used for thematic mapping purposes. The latter are the properties suffixed with “_uri” and will contain URIs referring to controlled concepts in published vocabularies.</p>
 <p><strong>Elements in BoreholeView feature class</strong></p>
 <table>
@@ -1166,13 +1168,13 @@
   </table></section>
 </section>
 <section id="earthresourceml-lite">
-<span id="service-provision-data-preparation-lite-earthresourceml"></span><h3>EarthResourceML-Lite<a class="headerlink" href="#earthresourceml-lite" title="Permalink to this headline"></a></h3>
+<span id="service-provision-data-preparation-lite-earthresourceml"></span><h3>EarthResourceML-Lite<a class="headerlink" href="#earthresourceml-lite" title="Permalink to this heading"></a></h3>
 <p>EarthResourceML-Lite is a model and schema for simple map services (eg, WMS and WFS Simple Features). It is an abridged version of the full EarthResourceML model and can be used to deliver simplified views on mineral occurrences and their commodities, mines, mining activities and mine waste products.</p>
 <p>There are six EarthResourceML-Lite views descibed in the 2.0 standard, these are:  MineView, CommodityResourceView, MineralOccurrenceView, MiningActivityView, MiningWasteView, and ProcessingPlantView.  Below we lay out what is expected of the views for those features we think that many geological survey organizations will be able to support.</p>
 <p>For full details of the ERML-Lite schema see: <a class="reference external" href="http://schemas.earthresourceml.org/earthresourceml-lite/2.0/erml-lite.xsd">http://schemas.earthresourceml.org/earthresourceml-lite/2.0/erml-lite.xsd</a></p>
 <p>For full documentation of all the views see <a class="reference external" href="http://www.earthresourceml.org/earthresourceml-lite/2.0.1/documentation/">http://www.earthresourceml.org/earthresourceml-lite/2.0.1/documentation/</a></p>
 <section id="mineraloccurrenceview-features">
-<span id="service-provision-data-preparation-lite-mineraloccurrenceview"></span><h4>MineralOccurrenceView features<a class="headerlink" href="#mineraloccurrenceview-features" title="Permalink to this headline"></a></h4>
+<span id="service-provision-data-preparation-lite-mineraloccurrenceview"></span><h4>MineralOccurrenceView features<a class="headerlink" href="#mineraloccurrenceview-features" title="Permalink to this heading"></a></h4>
 <table>
         <thead>
     <tr>
@@ -1347,7 +1349,7 @@
         </tbody>
   </table></section>
 <section id="commodityresourceview-features">
-<span id="service-provision-data-preparation-lite-commodityresourceview"></span><h4>CommodityResourceView features<a class="headerlink" href="#commodityresourceview-features" title="Permalink to this headline"></a></h4>
+<span id="service-provision-data-preparation-lite-commodityresourceview"></span><h4>CommodityResourceView features<a class="headerlink" href="#commodityresourceview-features" title="Permalink to this heading"></a></h4>
 <table>
         <thead>
     <tr>
@@ -1508,7 +1510,7 @@
 </section>
 </section>
 <section id="complex-feature-data">
-<span id="service-provision-data-preparation-complex"></span><h2>Complex Feature Data<a class="headerlink" href="#complex-feature-data" title="Permalink to this headline"></a></h2>
+<span id="service-provision-data-preparation-complex"></span><h2>Complex Feature Data<a class="headerlink" href="#complex-feature-data" title="Permalink to this heading"></a></h2>
 <p>GeoSciML is an application-neutral encoding format for geosciences information. It is based on Geography Markup Language v3.2 (GML) (ISO 19136:2007) for representation of features and geometry. GeoSciML was developed by the CGI (Commission for the Management and Application of Geoscience Information), a Commission of the International Union of Geological Sciences (IUGS). Following a memorandum of understanding between IUGS and the Open Geospatial Consortium (OGC), GeoSciML v4.1 was published in 2017 as an OGC standard (<a class="reference external" href="http://www.opengeospatial.org/standards/geosciml">http://www.opengeospatial.org/standards/geosciml</a>). Future releases will be managed by the OGC GeoSciML Standards Working Group (SWG).</p>
 <p>GeoSciML has a wide scope allowing the encoding of most information depicted on geological maps, as well as information about boreholes and laboratory analyses. This cookbook, however, concentrates on just those parts of GeoSciML necessary for (i) encoding the INSPIRE Geology application schema and (ii) delivering geological age and lithology information through OneGeology  services.</p>
 <p>The INSPIRE geology data specification (D2.8.II.4 Data Specification on Geology –
@@ -1591,7 +1593,7 @@ like.</p>
 <p>An example of a response that would be suitable for a
 OneGeology 5 star WFS is given in Annex 3.</p>
 <section id="mapped-feature-and-geologic-feature">
-<h3>Mapped Feature and Geologic Feature<a class="headerlink" href="#mapped-feature-and-geologic-feature" title="Permalink to this headline"></a></h3>
+<h3>Mapped Feature and Geologic Feature<a class="headerlink" href="#mapped-feature-and-geologic-feature" title="Permalink to this heading"></a></h3>
 <figure class="align-default" id="id16">
 <img alt="../_images/image001.jpg" src="../_images/image001.jpg" />
 <figcaption>
@@ -1608,7 +1610,7 @@ OneGeology 5 star WFS is given in Annex 3.</p>
 <p>The MappedFeature and GeologicFeature objects are at the core of GeoSciML. A MappedFeature can be considered an occurrence, such as a polygon on a geologic map, of a real world GeologicFeature the full extent of which is unknown. It is independent of geometry, so the same GeologicFeature can have different MappedFeature instances, representing mapped polygons at different scales or a modelled volume for example. Each MappedFeature, however, can be specified by only one GeologicFeature. The specification association, from MappedFeature to GeologicFeature, is required by INSPIRE. An INSPIRE service provides a collection of MappedFeatures. A OneGeology service provides a collection of MappedFeatures specified by GeologicUnit features.</p>
 <p>GeologicFeature is the abstract parent class for GeologicUnit, GeologicStructure, GeomorphologicFeature and GeologicEvent. This section will describe those properties which apply to all GeologicFeatures, but these will always be encoded as part of one of the specialist child classes. The INSPIRE GeologicFeature class has two associations, themeClass and geologicHistory. The themeClass association should be encoded using the GeoSciML classifier association, which will be explained in section 2.6, and geologicHistory should be encoded using the GeoSciML geologicHistory property which has GeologicEvent values, explained in section 2.2.</p>
 <section id="mapped-feature-mapping-frame">
-<h4>Mapped Feature - mapping frame<a class="headerlink" href="#mapped-feature-mapping-frame" title="Permalink to this headline"></a></h4>
+<h4>Mapped Feature - mapping frame<a class="headerlink" href="#mapped-feature-mapping-frame" title="Permalink to this heading"></a></h4>
 <p>The INSPIRE
 mappingFrame property is equivalent to the GeoSciML mappingFrame. Each
 MappedFeature has a mappingFrame property constrained by a vocabulary term that
@@ -1625,7 +1627,7 @@ published.</p>
 <p>Figure 4: Example of the encoding of sampling frame</p>
 </section>
 <section id="mapped-feature-geometry-shape">
-<h4>Mapped Feature - geometry (shape)<a class="headerlink" href="#mapped-feature-geometry-shape" title="Permalink to this headline"></a></h4>
+<h4>Mapped Feature - geometry (shape)<a class="headerlink" href="#mapped-feature-geometry-shape" title="Permalink to this heading"></a></h4>
 <p>The geometry of each MappedFeature is provided by the shape association to GM_Object. Figure 5 gives an example of encoding a polygon. This property is (obviously) required for a OneGeology service and should have Polygon values.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;gsmlb:shape&gt;</span>
      <span class="nt">&lt;gml:Polygon</span> <span class="na">srsName=</span><span class="s">&quot;urn:ogc:def:crs:EPSG::4326&quot;</span> <span class="na">gml:id=</span><span class="s">&quot;LOCAL_ID_0&quot;</span><span class="nt">&gt;</span>
@@ -1645,7 +1647,7 @@ published.</p>
 <p>Figure 5: Example of the encoding of MappedFeature geometry (shape)</p>
 </section>
 <section id="geologic-feature-inspireid">
-<h4>Geologic Feature - inspireId<a class="headerlink" href="#geologic-feature-inspireid" title="Permalink to this headline"></a></h4>
+<h4>Geologic Feature - inspireId<a class="headerlink" href="#geologic-feature-inspireid" title="Permalink to this heading"></a></h4>
 <p>The INSPIRE inspireId
 property is of type Identifier and provides the persistent identifier used for
 the object by the data provider, for example the code from a stratigraphic
@@ -1655,7 +1657,7 @@ Identifier.localId, and the codespace, equivalent to Identifier.namespace,
 identifying the data source (Figure 6).</p>
 </section>
 <section id="geologic-feature-name">
-<h4>Geologic Feature - name<a class="headerlink" href="#geologic-feature-name" title="Permalink to this headline"></a></h4>
+<h4>Geologic Feature - name<a class="headerlink" href="#geologic-feature-name" title="Permalink to this heading"></a></h4>
 <p>The INSPIRE name property
 provides the name of the GeologicFeature, for example the expansion of the code
 provided by inspireId. It should be encoded using gml:name (Figure 6). If the feature does not have a name use “Unnamed feature”.</p>
@@ -1664,7 +1666,7 @@ Example of the encoding of identifier and name for a GeologicUnit</p>
 </section>
 </section>
 <section id="geologic-age">
-<h3>Geologic Age<a class="headerlink" href="#geologic-age" title="Permalink to this headline"></a></h3>
+<h3>Geologic Age<a class="headerlink" href="#geologic-age" title="Permalink to this heading"></a></h3>
 <p>In INSPIRE the geologicHistory association
 from GeologicFeature to GeologicEvent is the way in which geologic age is
 described (Figure 2). This applies to
@@ -1683,14 +1685,14 @@ each GeologicUnit and consider this event represents the formation of the unit.<
 </figcaption>
 </figure>
 <section id="geologic-event-name">
-<h4>Geologic Event - name<a class="headerlink" href="#geologic-event-name" title="Permalink to this headline"></a></h4>
+<h4>Geologic Event - name<a class="headerlink" href="#geologic-event-name" title="Permalink to this heading"></a></h4>
 <p>The INSPIRE name property
 provides the name of the GeologicEvent, for example ‘Hercynian Orogeny’. Only
 major events such as orogenies are likely to have names and other events should
 be recorded as ‘Unnamed event’. The field should be encoded using gml:name.</p>
 </section>
 <section id="geologic-event-youngernamedage-and-oldernamedage">
-<h4>Geologic Event - youngerNamedAge and olderNamedAge<a class="headerlink" href="#geologic-event-youngernamedage-and-oldernamedage" title="Permalink to this headline"></a></h4>
+<h4>Geologic Event - youngerNamedAge and olderNamedAge<a class="headerlink" href="#geologic-event-youngernamedage-and-oldernamedage" title="Permalink to this heading"></a></h4>
 <p>In INSPIRE it is necessary to
 provide geologic age expressed using a geochronologic era defined according to
 a geologic time scale. Geochronologic era names must be drawn from the GeochronologicEraValue
@@ -1710,7 +1712,7 @@ for Stratigraphy (ICS) international stratigraphic chart or the supplement <a cl
 which contains a more detailed chronology for parts of the Precambrian.</p>
 </section>
 <section id="geologic-event-eventprocess">
-<h4>Geologic Event - eventProcess<a class="headerlink" href="#geologic-event-eventprocess" title="Permalink to this headline"></a></h4>
+<h4>Geologic Event - eventProcess<a class="headerlink" href="#geologic-event-eventprocess" title="Permalink to this heading"></a></h4>
 <p>The eventProcess property
 describes one or more processes that took place during the event to modify the
 related GeologicFeature. For an INSPIRE service it should be encoded using
@@ -1719,7 +1721,7 @@ service the CGI Event process vocabulary (<a class="reference external" href="ht
 should be used.</p>
 </section>
 <section id="geologic-event-eventenvironment">
-<h4>Geologic Event - eventEnvironment<a class="headerlink" href="#geologic-event-eventenvironment" title="Permalink to this headline"></a></h4>
+<h4>Geologic Event - eventEnvironment<a class="headerlink" href="#geologic-event-eventenvironment" title="Permalink to this heading"></a></h4>
 <p>The eventEnvironment property
 describes the environment within which the event took place. It is of type ‘Category’ which
 provides the resolvable URI for the vocabulary containing the eventEnvironment
@@ -1746,7 +1748,7 @@ should be used for identifier and the URI <a class="reference external" href="ht
 </section>
 </section>
 <section id="geologic-unit-and-earth-material">
-<h3>Geologic Unit and Earth Material<a class="headerlink" href="#geologic-unit-and-earth-material" title="Permalink to this headline"></a></h3>
+<h3>Geologic Unit and Earth Material<a class="headerlink" href="#geologic-unit-and-earth-material" title="Permalink to this heading"></a></h3>
 <figure class="align-default" id="id19">
 <img alt="../_images/image004.jpg" src="../_images/image004.jpg" />
 <figcaption>
@@ -1764,7 +1766,7 @@ for GeologicUnit is shown in Figure 9 and the UML of the GeoSciML GeologicUnit p
 association to compositionPart, and as can be seen this is modelled in an
 identical way in GeoSciML.</p>
 <section id="geologic-unit-geologic-unit-type">
-<h4>Geologic Unit - geologic unit type<a class="headerlink" href="#geologic-unit-geologic-unit-type" title="Permalink to this headline"></a></h4>
+<h4>Geologic Unit - geologic unit type<a class="headerlink" href="#geologic-unit-geologic-unit-type" title="Permalink to this heading"></a></h4>
 <p>The only GeologicUnit attribute that is mandatory for
 INSPIRE is geologicUnitType. This indicates the type of the geologic unit, for
 example a lithostratigraphic unit or a lithologic unit. Values must be drawn
@@ -1774,7 +1776,7 @@ vocabulary (<a class="reference external" href="http://resource.geosciml.org/cla
 should be used.</p>
 </section>
 <section id="geologic-unit-composition">
-<h4>Geologic Unit - composition<a class="headerlink" href="#geologic-unit-composition" title="Permalink to this headline"></a></h4>
+<h4>Geologic Unit - composition<a class="headerlink" href="#geologic-unit-composition" title="Permalink to this heading"></a></h4>
 <p>The composition association from GeologicUnit to
 CompositionPart provides the means for describing the lithology of the
 GeologicUnit. In INSPIRE a GeologicUnit must have at least one CompositionPart,
@@ -1784,7 +1786,7 @@ provided: role, material and proportion. The requirements are the same for a
 OneGeology service.</p>
 </section>
 <section id="composition-part-role">
-<h4>Composition Part - role<a class="headerlink" href="#composition-part-role" title="Permalink to this headline"></a></h4>
+<h4>Composition Part - role<a class="headerlink" href="#composition-part-role" title="Permalink to this heading"></a></h4>
 <p>Role
 defines the relationship of the compositionPart to the GeologicUnit as a whole,
 e.g. vein, interbedded constituent, layers, dominant constituent. Values should
@@ -1794,7 +1796,7 @@ vocabulary (<a class="reference external" href="http://resource.geosciml.org/cla
 should be used.</p>
 </section>
 <section id="composition-part-proportion">
-<h4>Composition Part - proportion<a class="headerlink" href="#composition-part-proportion" title="Permalink to this headline"></a></h4>
+<h4>Composition Part - proportion<a class="headerlink" href="#composition-part-proportion" title="Permalink to this heading"></a></h4>
 <p>The proportion attribute
 defines the proportion of the GeologicUnit as a whole that the CompositionPart
 comprises. It is expressed as two fractions giving the upper and lower limits
@@ -1820,7 +1822,7 @@ element.</p>
 11 Example of the encoding of proportion</p>
 </section>
 <section id="composition-part-material">
-<h4>Composition Part - material<a class="headerlink" href="#composition-part-material" title="Permalink to this headline"></a></h4>
+<h4>Composition Part - material<a class="headerlink" href="#composition-part-material" title="Permalink to this heading"></a></h4>
 <p>The material attribute provides
 the lithology of the CompositionPart and is of type LithologyValue (a codelist)
 in INSPIRE (Figure 9) whereas in GeoSciML it is modelled as a CompoundMaterial (Figure 12). CompoundMaterial is a specialisation of EarthMaterial and the parent class of RockMaterial. The RockMaterial.lithology property is the equivalent of
@@ -1833,7 +1835,7 @@ INSPIRE CompositionPart.material.</p>
 </figure>
 </section>
 <section id="rock-material-lithology">
-<h4>Rock Material -lithology<a class="headerlink" href="#rock-material-lithology" title="Permalink to this headline"></a></h4>
+<h4>Rock Material -lithology<a class="headerlink" href="#rock-material-lithology" title="Permalink to this heading"></a></h4>
 <p>The lithology attribute
 provides the lithology of the CompositionPart. GeoSciML allows multiple
 lithologies for each CompositionPart, but in INSPIRE each CompositionPart
@@ -1846,7 +1848,7 @@ vocabulary (<a class="reference external" href="http://resource.geosciml.org/cla
 </section>
 </section>
 <section id="geologic-structure">
-<h3>Geologic Structure<a class="headerlink" href="#geologic-structure" title="Permalink to this headline"></a></h3>
+<h3>Geologic Structure<a class="headerlink" href="#geologic-structure" title="Permalink to this heading"></a></h3>
 <p>GeologicStructure is an abstract specialization of
 GeologicFeature and in INSPIRE only two types of GeologicStructure are
 required, ShearDisplacementStructure (faults) and Fold (Figure 13).</p>
@@ -1872,7 +1874,7 @@ ShearDisplacementStructure is shown in Figure 14, and of Fold in Figure 15.</p>
 </figure>
 <p>As can be seen in Figure 13, the only properties required by INSPIRE are faultType for ShearDisplacementStructure, and profileType for Fold.</p>
 <section id="shear-displacement-structure-faulttype">
-<h4>Shear Displacement Structure - faultType<a class="headerlink" href="#shear-displacement-structure-faulttype" title="Permalink to this headline"></a></h4>
+<h4>Shear Displacement Structure - faultType<a class="headerlink" href="#shear-displacement-structure-faulttype" title="Permalink to this heading"></a></h4>
 <p>The faultType property
 describes the type of ShearDispacementStructure and should be populated with a
 value drawn from the FaultTypeValue vocabulary (<a class="reference external" href="http://inspire.ec.europa.eu/codelist/FaultTypeValue">http://inspire.ec.europa.eu/codelist/FaultTypeValue</a>). For a non-INSPIRE OneGeology service the CGI Fault
@@ -1880,7 +1882,7 @@ Type vocabulary (<a class="reference external" href="http://resource.geosciml.or
 should be used.</p>
 </section>
 <section id="fold-profiletype">
-<h4>Fold - profileType<a class="headerlink" href="#fold-profiletype" title="Permalink to this headline"></a></h4>
+<h4>Fold - profileType<a class="headerlink" href="#fold-profiletype" title="Permalink to this heading"></a></h4>
 <p>The profileType property describes
 the type of fold defined according to its geometry and the younging direction
 of the strata. It should be populated using values from the
@@ -1888,7 +1890,7 @@ FoldProfileTypeValue vocabulary (<a class="reference external" href="http://insp
 </section>
 </section>
 <section id="geomorphologic-feature">
-<h3>Geomorphologic Feature<a class="headerlink" href="#geomorphologic-feature" title="Permalink to this headline"></a></h3>
+<h3>Geomorphologic Feature<a class="headerlink" href="#geomorphologic-feature" title="Permalink to this heading"></a></h3>
 <p>Figure 16 shows the INSPIRE UML class diagram for geomorphology, and Figure 17 the equivalent GeoSciML modeling. As can be seen
 these are modeled in an identical way. GeomorphologicFeature is an abstract
 specialization of GeologicFeature with two sub-types, AnthropogenicGeomorphologicFeature
@@ -1906,20 +1908,20 @@ and NaturalGeomorphologicFeature.</p>
 </figcaption>
 </figure>
 <section id="natural-geomorphologic-feature-naturalgeomorphologicfeaturetype">
-<h4>Natural Geomorphologic Feature - NaturalGeomorphologicFeatureType<a class="headerlink" href="#natural-geomorphologic-feature-naturalgeomorphologicfeaturetype" title="Permalink to this headline"></a></h4>
+<h4>Natural Geomorphologic Feature - NaturalGeomorphologicFeatureType<a class="headerlink" href="#natural-geomorphologic-feature-naturalgeomorphologicfeaturetype" title="Permalink to this heading"></a></h4>
 <p>The
 NaturalGeomorphologicFeatureType property describes the type of
 NaturalGeomorphologicFeature and should be populated with a value drawn from
 the NaturalGeomorphologicFeatureTypeValue vocabulary (<a class="reference external" href="http://inspire.ec.europa.eu/codelist/NaturalGeomorphologicFeatureTypeValue">http://inspire.ec.europa.eu/codelist/NaturalGeomorphologicFeatureTypeValue</a>). There isn’t currently an equivalent CGI vocabulary.</p>
 </section>
 <section id="natural-geomorphologic-feature-activity">
-<h4>Natural Geomorphologic Feature - activity<a class="headerlink" href="#natural-geomorphologic-feature-activity" title="Permalink to this headline"></a></h4>
+<h4>Natural Geomorphologic Feature - activity<a class="headerlink" href="#natural-geomorphologic-feature-activity" title="Permalink to this heading"></a></h4>
 <p>The activity property
 describes the level of activity of a NaturalGeomorphologicFeature and should be
 populated with a value from the GeomorphologicActivityValue vocabulary (<a class="reference external" href="http://inspire.ec.europa.eu/codelist/GeomorphologicActivityValue">http://inspire.ec.europa.eu/codelist/GeomorphologicActivityValue</a>). There isn’t currently an equivalent CGI vocabulary.</p>
 </section>
 <section id="anthropogenic-geomorphologic-feature-anthropogenicgeomorphologicfeaturetype">
-<h4>Anthropogenic Geomorphologic Feature - AnthropogenicGeomorphologicFeatureType<a class="headerlink" href="#anthropogenic-geomorphologic-feature-anthropogenicgeomorphologicfeaturetype" title="Permalink to this headline"></a></h4>
+<h4>Anthropogenic Geomorphologic Feature - AnthropogenicGeomorphologicFeatureType<a class="headerlink" href="#anthropogenic-geomorphologic-feature-anthropogenicgeomorphologicfeaturetype" title="Permalink to this heading"></a></h4>
 <p>The
 AnthopogenicGeomorphologicFeatureType property describes the type of
 AnthropogenicGeomorphologicFeature and should be populated with a value drawn
@@ -1927,7 +1929,7 @@ from the AnthropogenicGeomorphologicFeatureTypeValue vocabulary (<a class="refer
 </section>
 </section>
 <section id="thematic-class">
-<h3>Thematic Class<a class="headerlink" href="#thematic-class" title="Permalink to this headline"></a></h3>
+<h3>Thematic Class<a class="headerlink" href="#thematic-class" title="Permalink to this heading"></a></h3>
 <p>The INSPIRE Thematic Class datatype (Figure 2) is designed to enable information on thematic maps to be delivered. Thematic maps commonly take a standard
 geological map and reclassify it using some vocabulary of concepts, for example
 a standard lithostratigraphic map might be reclassified into ‘engineering
@@ -1938,7 +1940,7 @@ lead to units being merged together.</p>
 each data provider must provide their own vocabulary for classifying a
 particular map for a particular theme.</p>
 <section id="geologic-feature-classifier">
-<h4>Geologic Feature - classifier<a class="headerlink" href="#geologic-feature-classifier" title="Permalink to this headline"></a></h4>
+<h4>Geologic Feature - classifier<a class="headerlink" href="#geologic-feature-classifier" title="Permalink to this heading"></a></h4>
 <p>There is no direct
 equivalent of Thematic Class in GeoSciML but it can nevertheless be encoded in
 GeoSciML using the classifier association from GeologicFeature to ControlledConcept
@@ -1961,7 +1963,7 @@ thematic classifier</p>
 </section>
 </section>
 <section id="borehole">
-<h3>Borehole<a class="headerlink" href="#borehole" title="Permalink to this headline"></a></h3>
+<h3>Borehole<a class="headerlink" href="#borehole" title="Permalink to this heading"></a></h3>
 <p>The INSPIRE UML class diagram for Borehole is shown in 19 and the UML of the GeoSciML Borehole package in Figure 20. Although the modelling of boreholes in GeoSciML is more complex it includes everything required for INSPIRE which can therefore be encoded with
 GeoSciML. One of the main differences is that in GeoSciML Borehole is modelled
 as a type of SamplingCurve, drawn from the OGC Observations &amp; Measurements
@@ -1988,7 +1990,7 @@ requirement for INSPIRE it won’t be described further here.</p>
 </figcaption>
 </figure>
 <section id="borehole-inspireid">
-<h4>Borehole - inspireId<a class="headerlink" href="#borehole-inspireid" title="Permalink to this headline"></a></h4>
+<h4>Borehole - inspireId<a class="headerlink" href="#borehole-inspireid" title="Permalink to this heading"></a></h4>
 <p>The INSPIRE inspireId
 property is of type Identifier and provides the persistent identifier used for
 the borehole by the data provider. In GeoSciML this should be encoded using
@@ -1997,7 +1999,7 @@ Identifier.localId, and the codespace, equivalent to Identifier.namespace,
 identifying the data source (Figure 6).</p>
 </section>
 <section id="borehole-sampledfeature">
-<h4>Borehole - sampledFeature<a class="headerlink" href="#borehole-sampledfeature" title="Permalink to this headline"></a></h4>
+<h4>Borehole - sampledFeature<a class="headerlink" href="#borehole-sampledfeature" title="Permalink to this heading"></a></h4>
 <p>This property isn’t required
 by INSPIRE but is mandatory for SamplingFeature and thus Borehole in GeoSciML.
 In a typical borehole being encoded the sampledFeatures will be the features,
@@ -2010,7 +2012,7 @@ xlink:href using the gml:id value of the feature. No extra information is
 therefore required to encode this property.</p>
 </section>
 <section id="borehole-downholegeometry">
-<h4>Borehole - downholeGeometry<a class="headerlink" href="#borehole-downholegeometry" title="Permalink to this headline"></a></h4>
+<h4>Borehole - downholeGeometry<a class="headerlink" href="#borehole-downholegeometry" title="Permalink to this heading"></a></h4>
 <p>This should be encoded using
 the SF_SpatialSamplingFeature shape association to GM_Object to provide a
 LineString with the 3D geometry of the borehole (Figure 21). Where the borehole is vertical the X and Y co-ordinates will be the same for all positions. The LineString should be given an identifier using
@@ -2029,7 +2031,7 @@ gml:id for use in referencing the log elements (section 2.7.8)</p>
 the downhole geometry of a borehole</p>
 </section>
 <section id="borehole-location-and-elevation">
-<h4>Borehole - location and elevation<a class="headerlink" href="#borehole-location-and-elevation" title="Permalink to this headline"></a></h4>
+<h4>Borehole - location and elevation<a class="headerlink" href="#borehole-location-and-elevation" title="Permalink to this heading"></a></h4>
 <p>The referenceLocation
 association from borehole to OriginPosition allows the encoding of both
 location and elevation. Location should be encoded as a two dimensional point
@@ -2051,14 +2053,14 @@ and elevation as a one dimensional value (Figure 22).</p>
 the location and elevation of a borehole</p>
 </section>
 <section id="borehole-purpose">
-<h4>Borehole - purpose<a class="headerlink" href="#borehole-purpose" title="Permalink to this headline"></a></h4>
+<h4>Borehole - purpose<a class="headerlink" href="#borehole-purpose" title="Permalink to this heading"></a></h4>
 <p>The purpose property
 describes the purpose for which the Borehole was drilled and should be
 populated with a value from the BoreholePurposeValue vocabulary (<a class="reference external" href="http://inspire.ec.europa.eu/codelist/BoreholePurposeValue">http://inspire.ec.europa.eu/codelist/BoreholePurposeValue</a>). In GeoSciML this property is inside
 indexData/BoreholeDetails. There isn’t currently an equivalent CGI vocabulary.</p>
 </section>
 <section id="borehole-boreholelength">
-<h4>Borehole - boreholeLength<a class="headerlink" href="#borehole-boreholelength" title="Permalink to this headline"></a></h4>
+<h4>Borehole - boreholeLength<a class="headerlink" href="#borehole-boreholelength" title="Permalink to this heading"></a></h4>
 <p>The boreholeLength records
 the total length down the borehole and should be encoded as a Quantity value,
 which requires the units of measurement to be recorded along with the value (Figure 23). The unit of measure should reference the URI of an OGC definition. Again this is found inside the indexData/BoreholeDetails element.</p>
@@ -2082,7 +2084,7 @@ which requires the units of measurement to be recorded along with the value (Fig
 the purpose and boreholeLength</p>
 </section>
 <section id="borehole-interval-mappingframe">
-<h4>Borehole Interval - mappingFrame<a class="headerlink" href="#borehole-interval-mappingframe" title="Permalink to this headline"></a></h4>
+<h4>Borehole Interval - mappingFrame<a class="headerlink" href="#borehole-interval-mappingframe" title="Permalink to this heading"></a></h4>
 <p>The BoreholeInterval in
 GeoSciML v4.1 does not have a mappingFrame / samplingFrame property as this
 will always be the borehole to which it belongs. Thus, although in the INSPIRE
@@ -2090,7 +2092,7 @@ geology theme Schema the property is encoded by referencing the gml:id of the
 borehole, for GeoSciML nothing needs specifying explicitly.</p>
 </section>
 <section id="boreholeinterval-geometry-shape">
-<h4>BoreholeInterval - geometry (shape)<a class="headerlink" href="#boreholeinterval-geometry-shape" title="Permalink to this headline"></a></h4>
+<h4>BoreholeInterval - geometry (shape)<a class="headerlink" href="#boreholeinterval-geometry-shape" title="Permalink to this heading"></a></h4>
 <p>The geometry of the BoreholeInterval
 is the one dimensional linear segment down the borehole that the BoreholeInterval
 refers to. The reference system is the geometry of the borehole, which can be
@@ -2106,7 +2108,7 @@ referenced using the gml:id of the borehole shape property (Figure 21). An examp
 geometry</p>
 </section>
 <section id="boreholeinterval-specification">
-<h4>BoreholeInterval - specification<a class="headerlink" href="#boreholeinterval-specification" title="Permalink to this headline"></a></h4>
+<h4>BoreholeInterval - specification<a class="headerlink" href="#boreholeinterval-specification" title="Permalink to this heading"></a></h4>
 <p>A BoreholeInterval is
 specified by a GeologicFeature in exactly the same way as described in section
 2.1 for MappedFeature. The encoding of a GeologicFeature specifying a
@@ -2114,7 +2116,7 @@ MappedInterval is therefore identical to that described above for
 MappedFeatures and won’t be repeated here.</p>
 </section>
 <section id="boreholeinterval-mappedintervalbegin-mappedintervalend">
-<h4>BoreholeInterval - mappedIntervalBegin &amp; mappedIntervalEnd<a class="headerlink" href="#boreholeinterval-mappedintervalbegin-mappedintervalend" title="Permalink to this headline"></a></h4>
+<h4>BoreholeInterval - mappedIntervalBegin &amp; mappedIntervalEnd<a class="headerlink" href="#boreholeinterval-mappedintervalbegin-mappedintervalend" title="Permalink to this heading"></a></h4>
 <p>The mappedIntervalBegin and
 mappedIntervalEnd properties hold the one dimensional co-ordinates of the start
 and end of the mappedInterval, as measured down the borehole, encoded as
@@ -2143,7 +2145,7 @@ address this problem.</p>
 </section>
 </section>
 <section id="geologic-collection">
-<h3>Geologic Collection<a class="headerlink" href="#geologic-collection" title="Permalink to this headline"></a></h3>
+<h3>Geologic Collection<a class="headerlink" href="#geologic-collection" title="Permalink to this heading"></a></h3>
 <p>The GeologicCollection in
 INSPIRE is designed to enable features which comprise a higher level object,
 such as a geological map or a borehole exploration programme, to be grouped
@@ -2194,7 +2196,7 @@ the ISO 19139 metadata schema. The use of MD_Metadata also requires certain
 other mandatory properties to be encoded which are not required by the INSPIRE
 data specification.</p>
 <section id="geologic-collection-inspireid">
-<h4>Geologic Collection - inspireId<a class="headerlink" href="#geologic-collection-inspireid" title="Permalink to this headline"></a></h4>
+<h4>Geologic Collection - inspireId<a class="headerlink" href="#geologic-collection-inspireid" title="Permalink to this heading"></a></h4>
 <p>The INSPIRE inspireId
 property is of type Identifier and provides the persistent identifier used for
 the GeologicCollection by the data provider. In GeoSciML this should be encoded
@@ -2203,19 +2205,19 @@ and the codespace, equivalent to Identifier.namespace, identifying the data
 source (Figure 28).</p>
 </section>
 <section id="geologiccollection-name">
-<h4>GeologicCollection - name<a class="headerlink" href="#geologiccollection-name" title="Permalink to this headline"></a></h4>
+<h4>GeologicCollection - name<a class="headerlink" href="#geologiccollection-name" title="Permalink to this heading"></a></h4>
 <p>The INSPIRE name property
 provides the name of the GeologicCollection. It should be encoded using
 gml:name (Figure 28).</p>
 </section>
 <section id="geologic-collection-collectiontype">
-<h4>Geologic Collection - collectionType<a class="headerlink" href="#geologic-collection-collectiontype" title="Permalink to this headline"></a></h4>
+<h4>Geologic Collection - collectionType<a class="headerlink" href="#geologic-collection-collectiontype" title="Permalink to this heading"></a></h4>
 <p>The collectionType
 property describes the type of collection and should be populated with a value
 from the CollectionTypeValue vocabulary (<a class="reference external" href="http://inspire.ec.europa.eu/codelist/CollectionTypeValue">http://inspire.ec.europa.eu/codelist/CollectionTypeValue</a>) (Figure 28). At the time of writing an equivalent CGI vocabulary has been drafted but not yet published.</p>
 </section>
 <section id="geologic-collection-member">
-<h4>Geologic Collection - member<a class="headerlink" href="#geologic-collection-member" title="Permalink to this headline"></a></h4>
+<h4>Geologic Collection - member<a class="headerlink" href="#geologic-collection-member" title="Permalink to this heading"></a></h4>
 <p>In INSPIRE there are four
 types of feature which can be members of a GeologicCollection: MappedFeature;
 Borehole; GeophObject; and GeophObjectSet (Figure 26). GeophObject and GeophObjectSet are features in the geophysics application schema and won’t be discussed further here. In GeoSciML the member
@@ -2225,7 +2227,7 @@ GeologicCollection can be mapped to these: MappedFeature maps to mappedItem and
 Borehole to samplingFeatureItem (Figure 28). Figure 27 shows the encoding of a MappedFeature as a member of a GSML collection.</p>
 </section>
 <section id="md-metadata-contact">
-<h4>MD_Metadata - contact<a class="headerlink" href="#md-metadata-contact" title="Permalink to this headline"></a></h4>
+<h4>MD_Metadata - contact<a class="headerlink" href="#md-metadata-contact" title="Permalink to this heading"></a></h4>
 <p>Although the MD_Metadata
 contact property is not required by INSPIRE it is mandatory for MD_Metadata. It
 identifies the organisation providing the metadata and its role with respect to
@@ -2248,7 +2250,7 @@ CI_RoleCode vocabulary (<a class="reference external" href="http://www.isotc211.
 <p>Figure 29: Example of encoding MD_Metadata.contact</p>
 </section>
 <section id="md-metadata-datestamp">
-<h4>MD_Metadata - dateStamp<a class="headerlink" href="#md-metadata-datestamp" title="Permalink to this headline"></a></h4>
+<h4>MD_Metadata - dateStamp<a class="headerlink" href="#md-metadata-datestamp" title="Permalink to this heading"></a></h4>
 <p>Although the MD_Metadata
 dateStamp property is not required by INSPIRE it is mandatory for MD_Metadata.
 It provides the date when the metadata was created and should follow the format
@@ -2261,24 +2263,24 @@ defined in ISO8601. An example of encoding dateStamp is given in Figure 30.</p>
 <p>Figure 30: Example of encoding MD_Metadata.dateStamp</p>
 </section>
 <section id="geologic-collection-reference">
-<h4>Geologic Collection - reference<a class="headerlink" href="#geologic-collection-reference" title="Permalink to this headline"></a></h4>
+<h4>Geologic Collection - reference<a class="headerlink" href="#geologic-collection-reference" title="Permalink to this heading"></a></h4>
 <p>The reference property is of
 type DocumentCitation which requires the provision of a name, shortName, date
 and link (URL). The first three of these properties can be encoded using the
 MD_DataIdentification.citation property which is of type CI_Citation.</p>
 <section id="documentcitation-name">
-<h5>DocumentCitation - name<a class="headerlink" href="#documentcitation-name" title="Permalink to this headline"></a></h5>
+<h5>DocumentCitation - name<a class="headerlink" href="#documentcitation-name" title="Permalink to this heading"></a></h5>
 <p>The DocumentCitation.name
 property can be encoded with CI_Citation.title (Figure 31). This property duplicates the information encoded in gml:name (section 2.8.2).</p>
 </section>
 <section id="documentcitation-shortname">
-<h5>DocumentCitation - shortName<a class="headerlink" href="#documentcitation-shortname" title="Permalink to this headline"></a></h5>
+<h5>DocumentCitation - shortName<a class="headerlink" href="#documentcitation-shortname" title="Permalink to this heading"></a></h5>
 <p>The
 DocumentCitation.shortName property can be encoded with
 CI_Citation.alternateTitle (Figure 31). This property is optional in INSPIRE and should be used where the GeologicCollection has a well recognised short name.</p>
 </section>
 <section id="document-citation-date">
-<h5>Document Citation - date<a class="headerlink" href="#document-citation-date" title="Permalink to this headline"></a></h5>
+<h5>Document Citation - date<a class="headerlink" href="#document-citation-date" title="Permalink to this heading"></a></h5>
 <p>The DocumentCitation.date
 refers to the date cited in the reference, such as publication date or revision
 date. It can be encoded with CI_Citation.date (Figure 31) which is of type CI_Date requiring both the date and the dateType to be
@@ -2309,7 +2311,7 @@ should be encoded using a value drawn from the CI_DateTypeCode vocabulary (<a cl
 <p>Figure 31: Example of encoding DocumentCitation using CI_Citation</p>
 </section>
 <section id="documentcitation-link">
-<h5>DocumentCitation - link<a class="headerlink" href="#documentcitation-link" title="Permalink to this headline"></a></h5>
+<h5>DocumentCitation - link<a class="headerlink" href="#documentcitation-link" title="Permalink to this heading"></a></h5>
 <p>The DocumentCitation.link
 property is defined as providing an online link to the document (not to the
 citation of the document), and so should provide the URL of the
@@ -2323,7 +2325,7 @@ GeologicCollection. This can be encoded using the MD_Metadata.dataSetURI propert
 </section>
 </section>
 <section id="geologic-collection-beginlifespanversion-endlifespanversion">
-<h4>Geologic Collection - beginLifespanVersion &amp; endLifespanVersion<a class="headerlink" href="#geologic-collection-beginlifespanversion-endlifespanversion" title="Permalink to this headline"></a></h4>
+<h4>Geologic Collection - beginLifespanVersion &amp; endLifespanVersion<a class="headerlink" href="#geologic-collection-beginlifespanversion-endlifespanversion" title="Permalink to this heading"></a></h4>
 <p>The beginLifespanVersion and
 endLifespanVersion properties can both be encoded using the CI_Citation.date
 property (section 2.8.7.3), but
@@ -2361,14 +2363,14 @@ Example of encoding beginLifespanVersion and endLifespanVersion using
 CI_Citation.date</p>
 </section>
 <section id="md-dataidentification-abstract">
-<h4>MD_DataIdentification - abstract<a class="headerlink" href="#md-dataidentification-abstract" title="Permalink to this headline"></a></h4>
+<h4>MD_DataIdentification - abstract<a class="headerlink" href="#md-dataidentification-abstract" title="Permalink to this heading"></a></h4>
 <p>Although the
 MD_DataIdentification abstract property is not required by INSPIRE it is
 mandatory for MD_DataIdentification. It should be populated with a text description
 of the GeologicCollection (Figure 34).</p>
 </section>
 <section id="md-dataidentification-language">
-<h4>MD_DataIdentification - language<a class="headerlink" href="#md-dataidentification-language" title="Permalink to this headline"></a></h4>
+<h4>MD_DataIdentification - language<a class="headerlink" href="#md-dataidentification-language" title="Permalink to this heading"></a></h4>
 <p>Although the
 MD_DataIdentification language property is not required by INSPIRE it is
 mandatory for MD_DataIdentification. It identifies the language(s) used in the
@@ -2379,7 +2381,7 @@ language the special code of “zxx” of the ISO 639-2/B reserved for
 “no linguistic content; not applicable” shall be used.</p>
 </section>
 <section id="md-dataidentification-topiccategory">
-<h4>MD_DataIdentification - topicCategory<a class="headerlink" href="#md-dataidentification-topiccategory" title="Permalink to this headline"></a></h4>
+<h4>MD_DataIdentification - topicCategory<a class="headerlink" href="#md-dataidentification-topiccategory" title="Permalink to this heading"></a></h4>
 <p>Although the
 MD_DataIdentification topicCategory property is not required by INSPIRE it is
 mandatory for MD_DataIdentification where the metadata is referring to a

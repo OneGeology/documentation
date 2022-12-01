@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -494,9 +496,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../providingdata.html">Providing Data / Services</a> &raquo;</li>
-      <li>Service Types</li>
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../providingdata.html">Providing Data / Services</a></li>
+      <li class="breadcrumb-item active">Service Types</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/providingdata/service_types.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -507,7 +509,7 @@
            <div itemprop="articleBody">
              
   <section id="service-types">
-<span id="service-provision-service-types"></span><h1>Service Types<a class="headerlink" href="#service-types" title="Permalink to this headline"></a></h1>
+<span id="service-provision-service-types"></span><h1>Service Types<a class="headerlink" href="#service-types" title="Permalink to this heading"></a></h1>
 <p>This guidance covers setting up some different kinds of service which provide different levels of access to your data and different functionality.</p>
 <dl class="glossary simple">
 <dt id="term-Simple-WMS">Simple WMS<a class="headerlink" href="#term-Simple-WMS" title="Permalink to this term"></a></dt><dd><p>This may just show the map image in its correct location through a GetMap request. The map colours may be data provider specific or standard. This kind of service can be set up with only a georegistered image file as data source. A GetFeatureInfo enabled WMS will also provide the ability to query any point on the map and retrieve a set of properties for that point in text, HTML, XML or other formats. A vector data file or spatial database would be required to support GetFeatureInfo responses.</p>

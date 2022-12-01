@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -494,9 +496,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../using.html">Using OneGeology Services</a> &raquo;</li>
-      <li>Using ESRI</li>
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../using.html">Using OneGeology Services</a></li>
+      <li class="breadcrumb-item active">Using ESRI</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/using/esri.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -507,13 +509,13 @@
            <div itemprop="articleBody">
              
   <section id="using-esri">
-<h1>Using ESRI<a class="headerlink" href="#using-esri" title="Permalink to this headline"></a></h1>
+<h1>Using ESRI<a class="headerlink" href="#using-esri" title="Permalink to this heading"></a></h1>
 <p>The ArcGIS software package comes with several applications. Here we’ll briefly show how to use <strong>ArcCatalog</strong> to setup OGC service connections and how to use <strong>ArcMap</strong> to deal with OGC layers.</p>
 <p>The following notes are based on ESRI ArcGIS server version 10.5 (SP1).</p>
 <section id="using-arccatalog">
-<h2>Using ArcCatalog<a class="headerlink" href="#using-arccatalog" title="Permalink to this headline"></a></h2>
+<h2>Using ArcCatalog<a class="headerlink" href="#using-arccatalog" title="Permalink to this heading"></a></h2>
 <section id="wms-service-connection">
-<h3>WMS Service Connection<a class="headerlink" href="#wms-service-connection" title="Permalink to this headline"></a></h3>
+<h3>WMS Service Connection<a class="headerlink" href="#wms-service-connection" title="Permalink to this heading"></a></h3>
 <p>To add a WMS service to your list of available WMS services, on the <em>Catalog Tree</em> window, you use the <em>GIS servers &gt; Add WMS Server</em> option, and then add the Service URL (without parameters). You may select to use the default service version (which would normally be the highest version) or you may force a specified version depending on your needs.</p>
 <figure class="align-default" id="id1">
 <img alt="Adding a WMS service to the list of available services in ArcCatalog" src="../_images/esri_catalog_addingWms.png" />
@@ -532,7 +534,7 @@
 <p>The above screen-shot shows a number of WMS (GIS Servers) listed in the left hand menu. These are services that have previously been added to ArcCatalog. To retrieve layer name information, preview, and do GetFeatureInfo requests, you must first double-click on the layer name. This will re-query the service and retrieve only active layers at the time of your query.</p>
 </section>
 <section id="wfs-service-connection">
-<h3>WFS Service Connection<a class="headerlink" href="#wfs-service-connection" title="Permalink to this headline"></a></h3>
+<h3>WFS Service Connection<a class="headerlink" href="#wfs-service-connection" title="Permalink to this heading"></a></h3>
 <p>This functionality is only available with a <a class="reference external" href="http://desktop.arcgis.com/en/arcmap/latest/extensions/data-interoperability/what-is-the-data-interoperability-extension-.htm">Data Interoperability</a> license. A free alternative to get hold of the data in the WFS would be downloading the features in the WFS using QGIS and then exporting them as an ESRI Shapefile (see section <em>Using QGIS to view WFS</em>).</p>
 <p>If you do have a Data Interoperability license, on the <em>Catalog Tree</em> window go to <em>Interoperability Connections &gt; Add Interoperability Connection</em> to open the <em>Interoperability Connection</em> dialog. In the dialog, select WFS as format and enter the WFS url in the <em>Dataset</em> option.</p>
 <figure class="align-default" id="id3">
@@ -564,7 +566,7 @@
 </figure>
 </section>
 <section id="wcs-service-connection">
-<h3>WCS Service Connection<a class="headerlink" href="#wcs-service-connection" title="Permalink to this headline"></a></h3>
+<h3>WCS Service Connection<a class="headerlink" href="#wcs-service-connection" title="Permalink to this heading"></a></h3>
 <p>Adding a WCS service to your list of available WCS services is identical than doing it for a WMS service: on the <em>Catalog Tree</em> window go to <em>GIS servers &gt; Add WMS Server</em> option and then add the Service URL (without parameters). You may select to use the default service version (which would normally be the highest version) or you may force a specified version depending on your needs.</p>
 <figure class="align-default" id="id7">
 <img alt="Adding a WCS service to the list of available services in ArcCatalog" src="../_images/esri_catalog_addingWcs.png" />
@@ -582,7 +584,7 @@
 </section>
 </section>
 <section id="using-arcmap">
-<h2>Using ArcMap<a class="headerlink" href="#using-arcmap" title="Permalink to this headline"></a></h2>
+<h2>Using ArcMap<a class="headerlink" href="#using-arcmap" title="Permalink to this heading"></a></h2>
 <p>In ArcMap you can use the <em>Add Data</em> button (<img alt="addDataBtn" src="../_images/esri_map_addDataBtn.PNG" />) to add an WMS, WFS or WCS layer or simply drag-and-drop a layer from the <em>Catalog</em> window. This window is the equivalent to the <em>Catalog Tree</em> window in ArcCatalog and can be enabled by pressing <img alt="addCatalogBtn" src="../_images/esri_map_catalogBtn.PNG" />. OGC service connections are usually created in ArcCatalog before the data is used in ArcMap; however, the connections can also be set at the time of adding the data.</p>
 <figure class="align-default" id="id9">
 <img alt="Adding data to ArcMap" src="../_images/esri_map_addingData.PNG" />
@@ -591,7 +593,7 @@
 </figcaption>
 </figure>
 <section id="wms-layers">
-<h3>WMS Layers<a class="headerlink" href="#wms-layers" title="Permalink to this headline"></a></h3>
+<h3>WMS Layers<a class="headerlink" href="#wms-layers" title="Permalink to this heading"></a></h3>
 <p>WMS layers in ArcMap behave differently than other ESRI native layers. For instance, they are arranged in hierarchical entries which can’t be rearranged. This tipically includes</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Service</span> <span class="n">name</span>
     <span class="o">-</span> <span class="n">Group</span> <span class="n">layer</span>
@@ -631,7 +633,7 @@
 <p>For more information about WMS layers go to <a class="reference external" href="http://desktop.arcgis.com/en/arcmap/latest/map/web-maps-and-services/using-wms-service-layers.htm">Using WMS service layers</a></p>
 </section>
 <section id="wfs-layers">
-<h3>WFS Layers<a class="headerlink" href="#wfs-layers" title="Permalink to this headline"></a></h3>
+<h3>WFS Layers<a class="headerlink" href="#wfs-layers" title="Permalink to this heading"></a></h3>
 <p>WFS layers behave in ArcMap like any other type of vector layer. You can, for instance, identify individual features, see feature attributes in the <em>Attribute Table</em>, join the layer to other dataset or apply symbology.</p>
 <figure class="align-default" id="id14">
 <img alt="WFS layer displayed in ArcMap showing attributres and custom symbology" src="../_images/esri_map_wfs.PNG" />
@@ -655,7 +657,7 @@
 </figure>
 </section>
 <section id="wcs-layers">
-<h3>WCS Layers<a class="headerlink" href="#wcs-layers" title="Permalink to this headline"></a></h3>
+<h3>WCS Layers<a class="headerlink" href="#wcs-layers" title="Permalink to this heading"></a></h3>
 <p>WCS layers operate in a similar way to other raster data but with a few less properties. For more information on available properties go to <a class="reference external" href="http://desktop.arcgis.com/en/arcmap/latest/map/web-maps-and-services/adding-a-wcs-service-to-arcmap.htm">Adding a WCS service to ArcMap</a>.</p>
 <figure class="align-default" id="id17">
 <img alt="Displaying WCS data in ArcMap" src="../_images/esri_map_displayWcs.PNG" />

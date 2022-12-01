@@ -15,7 +15,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -494,10 +496,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../providingdata.html">Providing Data / Services</a> &raquo;</li>
-          <li><a href="../server_setup.html">Setting up a Server</a> &raquo;</li>
-      <li>Using ArcMap</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../providingdata.html">Providing Data / Services</a></li>
+          <li class="breadcrumb-item"><a href="../server_setup.html">Setting up a Server</a></li>
+      <li class="breadcrumb-item active">Using ArcMap</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/providingdata/server_setup/esri.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -508,14 +510,14 @@
            <div itemprop="articleBody">
              
   <section id="using-arcmap">
-<h1>Using ArcMap<a class="headerlink" href="#using-arcmap" title="Permalink to this headline"></a></h1>
+<h1>Using ArcMap<a class="headerlink" href="#using-arcmap" title="Permalink to this heading"></a></h1>
 <p>The following notes are based on ESRI ArcGIS server version 10.5 (SP1)</p>
 <section id="wms">
-<h2>WMS<a class="headerlink" href="#wms" title="Permalink to this headline"></a></h2>
+<h2>WMS<a class="headerlink" href="#wms" title="Permalink to this heading"></a></h2>
 <section id="creating-the-service">
-<h3>Creating the service<a class="headerlink" href="#creating-the-service" title="Permalink to this headline"></a></h3>
+<h3>Creating the service<a class="headerlink" href="#creating-the-service" title="Permalink to this heading"></a></h3>
 <section id="prepare-the-map-document">
-<h4>Prepare the map document<a class="headerlink" href="#prepare-the-map-document" title="Permalink to this headline"></a></h4>
+<h4>Prepare the map document<a class="headerlink" href="#prepare-the-map-document" title="Permalink to this heading"></a></h4>
 <p>Initial set up of WMS services is relatively straightforward and simply requires the creation of a map document (.mxd) containing the data you want to add to the service.</p>
 <p>It is important to pay attention to the layer names in the map document, since the individual service layer names will use the map document layer names. The service will also use the map document layer names for the respective layer titles in the GetCapabilities document.</p>
 <figure class="align-default" id="id9">
@@ -555,7 +557,7 @@
 </div>
 </section>
 <section id="publishing-your-wms">
-<h4>Publishing your WMS<a class="headerlink" href="#publishing-your-wms" title="Permalink to this headline"></a></h4>
+<h4>Publishing your WMS<a class="headerlink" href="#publishing-your-wms" title="Permalink to this heading"></a></h4>
 <p>Once you are happy with the layer names, the easiest way to publish your WMS is doing it directly from the map document:</p>
 <ul class="simple">
 <li><p>Go to <em>File &gt; Share As &gt; Service…</em> to open the <em>Share as Service</em> dialog.</p></li>
@@ -590,7 +592,7 @@
 </section>
 </section>
 <section id="edit-the-getcapabilities-documents">
-<h3>Edit the GetCapabilities documents<a class="headerlink" href="#edit-the-getcapabilities-documents" title="Permalink to this headline"></a></h3>
+<h3>Edit the GetCapabilities documents<a class="headerlink" href="#edit-the-getcapabilities-documents" title="Permalink to this heading"></a></h3>
 <p>ArcGIS Server doesn’t create any static GetCapabilities xml documents, but does allow you to use external files. You will need to use such external files if you want to add any additional spatial reference systems, correct the keywords listing, change the LegendURL images, add better abstracts and layer titles, or add an INSPIRE extended capabilities section. We think to provide a fully compliant WMS it is highly likely that you will need to use a set of static files.</p>
 <p>The first step to editing your files is to create them.</p>
 <p>The quickest way to do this is to use the response documents from your initial service. You will need to have a file for all the WMS versions that you want your service to support. We require at least a version 1.3.0 document but you could also have a 1.1.1 response.</p>
@@ -618,7 +620,7 @@
 <p>Having created your files, you may then edit them as required. We would recommend you make a second copy of the files in case you make an error whilst editing.</p>
 </section>
 <section id="inspire">
-<h3>INSPIRE<a class="headerlink" href="#inspire" title="Permalink to this headline"></a></h3>
+<h3>INSPIRE<a class="headerlink" href="#inspire" title="Permalink to this heading"></a></h3>
 <p>If you want your OneGeology service to comply to INSPIRE standards, in addition to meet the requirements of the OneGeology profile, you need to ensure that the following conditions are fulfilled:</p>
 <ol class="arabic simple">
 <li><p>Layer name and layer title must follow INSPIRE naming conventions. For example the <a class="reference external" href="http://inspire.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_GE_v3.0.pdf">D2.8.II.4 Data Specification on Geology–Technical Guidelines</a> tell us (section 11.1 ~ Layers to be provided by INSPIRE view services) that any layer to do with lithology or age must have the name <em>GE.GeologicUnit</em> and title <em>Geologic Units</em>. See the <a class="reference external" href="https://themes.jrc.ec.europa.eu/discussion/view/13952/layer-naming">layer-naming</a> discussion on the INSPIRE Thematic Clusters Geology forum for fuller details.</p></li>
@@ -627,9 +629,9 @@
 </ol>
 <p>There are two ways of achieving these conditions using ESRI software. The first one is using a standard ArcGIS map document and standard ArcGIS Server tools, where you’ll need to modify layer names to make them compliant, change service properties to include required coordinate systems and modify the get capabilities document to include the INSPIRE Extended Capabilities section. The second option is using the ArcGIS for INSPIRE extension, which provides tools and new services to ensure compliance with INSPIRE directives. If you want to go for the second option, there is an <a class="reference external" href="http://www.onegeology.org/technical_progress/esriGrantOffer.html">ESRI OneGeology Grant</a> for OneGeology members.</p>
 <section id="arcgis-server">
-<h4>ArcGIS Server<a class="headerlink" href="#arcgis-server" title="Permalink to this headline"></a></h4>
+<h4>ArcGIS Server<a class="headerlink" href="#arcgis-server" title="Permalink to this heading"></a></h4>
 <section id="inspire-layer-names">
-<h5>INSPIRE Layer Names<a class="headerlink" href="#inspire-layer-names" title="Permalink to this headline"></a></h5>
+<h5>INSPIRE Layer Names<a class="headerlink" href="#inspire-layer-names" title="Permalink to this heading"></a></h5>
 <p>In order to make your service INSPIRE compliant, you will need to configure the name of your layers (e.g. GE.GeologicUnit); however, this clashes with OneGeology naming standards. In this situation, it is desirable to create a group layer. For example, you may want to create a layer called GE.GeologicUnit to group all of your layers that are spatial objects of type GeologicUnit. The layer name and title rules set out in the OneGeology profile relate to the grouped (or child) layers, whereas the INSPIRE name and title relate to the group (or parent) layer.</p>
 <p>If your INSPIRE service is only serving layers of one type, one way of applying group layering would be to use the root layer name and title (not service name and title) as the grouping layer. If, on the other hand, your INSPIRE service is serving layers of several types (e.g. GE.GeologicUnit and GE.GeologicFault), we believe the only option is for you to configure actual group layering.</p>
 <p>To <strong>add group layers to a new service</strong> simply <a class="reference external" href="http://desktop.arcgis.com/en/arcmap/latest/map/working-with-layers/working-with-group-layers.htm#GUID-058900C7-6A45-4260-83D8-9039C00D875C">add a group layer</a> to the map document that will create your service, rename it and place your layers inside. The WMS service published form this map document will keep the same group layer structure.</p>
@@ -644,7 +646,7 @@
 <p>Group layers created in ArcGIS Server will not have a style associated to them and the group layer itself will not display a map.</p>
 </section>
 <section id="inspire-coordinate-systems">
-<h5>INSPIRE Coordinate Systems<a class="headerlink" href="#inspire-coordinate-systems" title="Permalink to this headline"></a></h5>
+<h5>INSPIRE Coordinate Systems<a class="headerlink" href="#inspire-coordinate-systems" title="Permalink to this heading"></a></h5>
 <p>ArcGIS Server always adds 2 coordinate systems: EPSG:4326 (or CRS:84 for version 1.3.0) and the coordinate system set on the map document creating the service. To add any additional coordinate systems go to your map service and edit it using either <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-manager.htm">ArcGIS Server Manager</a> or <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-arcgis-for-desktop.htm">ArcMap</a>.  On the <em>Service Editor</em> dialog go to <em>Capabilities &gt; WMS</em> and, in the <em>Additional spatial reference systems</em> text box, type any well-known EPSG ID in the format indicated below.</p>
 <figure class="align-default" id="id13">
 <img alt="Additional spatial reference systems option" src="../../_images/esriimage009.png" />
@@ -654,7 +656,7 @@
 </figure>
 </section>
 <section id="inspire-extended-capabilities">
-<h5>INSPIRE extended capabilities<a class="headerlink" href="#inspire-extended-capabilities" title="Permalink to this headline"></a></h5>
+<h5>INSPIRE extended capabilities<a class="headerlink" href="#inspire-extended-capabilities" title="Permalink to this heading"></a></h5>
 <p>The extended capabilites section is inserted into your external GetCapabilities section, between the Exception element block and the first Layer element.</p>
 <p>For example to add a scenario 1 INSPIRE extended capabilities section (where you have an external XML document or service that provides such an XML document containing metadata for your WMS service) you would insert a section like below:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;/Exception&gt;</span>
@@ -729,19 +731,19 @@
 </section>
 </section>
 <section id="inspire-extension">
-<h4>INSPIRE Extension<a class="headerlink" href="#inspire-extension" title="Permalink to this headline"></a></h4>
+<h4>INSPIRE Extension<a class="headerlink" href="#inspire-extension" title="Permalink to this heading"></a></h4>
 <p>The ArcGIS for INSPIRE extension allows to create an INSPIRE compliant WMS through a new ESRI map service, specific to this extension, called INSPIRE View service. In our experience, creating a INSPIRE compliant WMS service using custom INSPIRE extension tools is more difficult than using standard ArcGIS tools, due to the complexity of the datasets that you have to use, the scarce amount of documentation and the limited ESRI support for the extension.</p>
 <section id="create-inspire-geodatabase">
-<h5>Create INSPIRE geodatabase<a class="headerlink" href="#create-inspire-geodatabase" title="Permalink to this headline"></a></h5>
+<h5>Create INSPIRE geodatabase<a class="headerlink" href="#create-inspire-geodatabase" title="Permalink to this heading"></a></h5>
 <p>The first step to use ArcGIS for INSPIRE is creating a geodatabase with one of the templates supplied by the extension.  To create a geodatabase for Geology follow the steps in <a class="reference external" href="http://enterprise.arcgis.com/en/inspire/10.5/get-started/pdf/InstallationGuide_ArcGISForINSPIRE_GDB_10_5_EN.pdf">this document</a> in sections 3.3.1 and 3.3.4.</p>
 </section>
 <section id="populate-inspire-geodatabase">
-<h5>Populate INSPIRE geodatabase<a class="headerlink" href="#populate-inspire-geodatabase" title="Permalink to this headline"></a></h5>
+<h5>Populate INSPIRE geodatabase<a class="headerlink" href="#populate-inspire-geodatabase" title="Permalink to this heading"></a></h5>
 <p>Fill in the geodatabase with your data. There are multiple feature classes and tables; fill in the ones that are relevant to you.</p>
 <p>Note that all feature classes will be grouped on a feature dataset called <em>GE</em>. You’ll need to add your features to the appropriate feature class so that they can be used by the INSPIRE extension. Feel free to add new fields to these feature classes if you want to show attributes not available by default on the template; however, refrain from deleting any existing field as you might break one of the multiple relationships set on the template.</p>
 </section>
 <section id="customise-layers-in-inspire-geodatabase">
-<h5>Customise layers in INSPIRE geodatabase<a class="headerlink" href="#customise-layers-in-inspire-geodatabase" title="Permalink to this headline"></a></h5>
+<h5>Customise layers in INSPIRE geodatabase<a class="headerlink" href="#customise-layers-in-inspire-geodatabase" title="Permalink to this heading"></a></h5>
 <p>You’ll do this by modifying the <em>LayerInfo</em> table. In this extension, each INSPIRE layer consists normally of four hidden sublayers.  We need to modify the <em>LayerInfo</em> table to make the relevant sublayers visible and to be able to change the name and title of the sublayers (<a class="reference external" href="http://enterprise.arcgis.com/en/inspire/10.5/get-started/pdf/CustomizationGuide_ArcGISForINSPIRE_LayerInfo_10_5_EN.pdf">see Customization Guide</a>). The INSPIRE layer will act as a group layer and will follow INSPIRE naming conventions. The sublayers will follow OneGeology naming conventions. In the following example, we are going to configure two sublayers to represent bedrock units symbolised by age and by lithology. These layers are going to be looking at the same feature class in the geodabase template, defined in the FC_NAME field as <em>geUnitS</em> (short for geology unit surface). Given that in this example we are dealing only with geologic features represented as polygons, the final <em>LayerInfo</em> table could look like this (table transposed for visibility reasons):</p>
 <table border=1 cellspacing=0 cellpadding=0 width=0 style='width:375.65pt;border-collapse:collapse;border:none'>
  <tr style='height:15.0pt;color:white;'>
@@ -1027,7 +1029,7 @@
 </ul>
 </section>
 <section id="add-inspire-layers-to-your-map-document">
-<h5>Add INSPIRE layers to your map document<a class="headerlink" href="#add-inspire-layers-to-your-map-document" title="Permalink to this headline"></a></h5>
+<h5>Add INSPIRE layers to your map document<a class="headerlink" href="#add-inspire-layers-to-your-map-document" title="Permalink to this heading"></a></h5>
 <p>Open a map document and add your layers to the map using the <em>Add INSPIRE Layer</em> button (if you can’t see this button, make sure that you have the <em>INSPIRE Tools</em> toolbar enabled).</p>
 <figure class="align-default" id="id14">
 <img alt="Add INSPIRE Tools to map document" src="../../_images/image052.jpg" />
@@ -1071,7 +1073,7 @@
 </figure>
 </section>
 <section id="publish-inspire-view-service">
-<h5>Publish INSPIRE View service<a class="headerlink" href="#publish-inspire-view-service" title="Permalink to this headline"></a></h5>
+<h5>Publish INSPIRE View service<a class="headerlink" href="#publish-inspire-view-service" title="Permalink to this heading"></a></h5>
 <p>A INSPIRE View service is the ESRI equivalent of a INSPIRE compliant WMS. Publishing a INSPIRE View service is very similar to publishing a WMS, the only difference being that you need to select and configure one additional capability.</p>
 <ul class="simple">
 <li><p>Go to <em>File &gt; Share As &gt; Service…</em> to open the <em>Share as Service</em> dialog.</p></li>
@@ -1102,7 +1104,7 @@
 <p>For more information go to <a class="reference external" href="http://server.arcgis.com/en/inspire/latest/inspire-services/create-the-inspire-view-service.htm">Create an INSPIRE View Service</a>.</p>
 </section>
 <section id="configure-inspire-view-service">
-<h5>Configure INSPIRE View service<a class="headerlink" href="#configure-inspire-view-service" title="Permalink to this headline"></a></h5>
+<h5>Configure INSPIRE View service<a class="headerlink" href="#configure-inspire-view-service" title="Permalink to this heading"></a></h5>
 <p>Once the service has been published, we are going to use ArcCatalog to configure INSPIRE View service properties which will be reflected on the service’s GetCapabilities document.</p>
 <ul class="simple">
 <li><p>On ArcCatalog, go to the <em>GIS Servers</em> folder, select the appropriate instance of ArcGIS Server and navigate to your service.</p></li>
@@ -1165,11 +1167,11 @@
 </figure>
 </section>
 <section id="custom-inspire-view-service-getcapabilities-document">
-<h5>Custom INSPIRE View service GetCapabilities document<a class="headerlink" href="#custom-inspire-view-service-getcapabilities-document" title="Permalink to this headline"></a></h5>
+<h5>Custom INSPIRE View service GetCapabilities document<a class="headerlink" href="#custom-inspire-view-service-getcapabilities-document" title="Permalink to this heading"></a></h5>
 <p>If you need to modify any option that’s not on the <em>Editing the InspireView properties</em> dialog, like the Online Resource tag mentioned above, you need to go to the service cached capabilities folder (<em>C:\arcgisserver\directories\arcgisforinspire\[folder_name]\[map service title]_MapServer\[folder_name]_ [map service title]_MapServer_inspireview</em>) and create a file called <em>GetCapabilities&lt;version&gt;_&lt;3 letter language code&gt;.xml</em>. Your service will now use the custom GetCapabilities file instead of the dynamically created one (e.g. <em>GetCapabilities130_ENG.xml</em>), also stored in the same location. When creating your custom file it’s recommended to start from a copy of the dynamically created file.</p>
 </section>
 <section id="use-inspire-view-service">
-<h5>Use INSPIRE View service<a class="headerlink" href="#use-inspire-view-service" title="Permalink to this headline"></a></h5>
+<h5>Use INSPIRE View service<a class="headerlink" href="#use-inspire-view-service" title="Permalink to this heading"></a></h5>
 <p>Your service will be accessible from the following endpoint:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="p">[</span><span class="n">hostname</span><span class="p">]</span><span class="o">/</span><span class="n">ArcGIS</span><span class="o">/</span><span class="n">services</span><span class="o">/</span><span class="p">[</span><span class="n">folder_name</span><span class="p">]</span><span class="o">/</span><span class="p">[</span><span class="nb">map</span> <span class="n">service</span> <span class="n">title</span><span class="p">]</span><span class="o">/</span><span class="n">exts</span><span class="o">/</span><span class="n">InspireView</span><span class="o">/</span><span class="n">service</span>
 </pre></div>
@@ -1179,14 +1181,14 @@
 </section>
 </section>
 <section id="arcgis-server-issues">
-<h3>ArcGIS server issues<a class="headerlink" href="#arcgis-server-issues" title="Permalink to this headline"></a></h3>
+<h3>ArcGIS server issues<a class="headerlink" href="#arcgis-server-issues" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>When using the SLD parameter to get an external SLD file, ArcGIS 10.0 expects the layer name and styles parameter to be to be sent as part of a GetMap request, even though this is not required by the WMS+SLD specification. A bug has been raised with ESRI on this issue (<a class="reference external" href="http://support.esri.com/en/bugs/nimbus/TklNMDk1NTY4">NIM095568</a>) back in version 10.0, but it’s still present.</p></li>
 </ul>
 </section>
 </section>
 <section id="simple-feature-wfs">
-<h2>Simple Feature WFS<a class="headerlink" href="#simple-feature-wfs" title="Permalink to this headline"></a></h2>
+<h2>Simple Feature WFS<a class="headerlink" href="#simple-feature-wfs" title="Permalink to this heading"></a></h2>
 <p>Creating a simple feature WFS requires almost the same steps as creating a WMS. The only difference being that, when publishing the service, you need to select the WFS capability.</p>
 <figure class="align-default" id="id28">
 <img alt="Enabling WFS capabilities in Service Editor dialog" src="../../_images/image066.jpg" />
@@ -1204,9 +1206,9 @@
 <p>For more information on how to create a simple feature WFS service and how to edit its GetCapabilities document, go to the WMS section of this cookbook or to ESRI’s documentation about <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/wfs-services.htm">WFS services</a>.</p>
 </section>
 <section id="wcs">
-<h2>WCS<a class="headerlink" href="#wcs" title="Permalink to this headline"></a></h2>
+<h2>WCS<a class="headerlink" href="#wcs" title="Permalink to this heading"></a></h2>
 <section id="create-a-map-document">
-<h3>Create a map document<a class="headerlink" href="#create-a-map-document" title="Permalink to this headline"></a></h3>
+<h3>Create a map document<a class="headerlink" href="#create-a-map-document" title="Permalink to this heading"></a></h3>
 <p>In ArcGIS, a WCS can be created mainly through 3 routes: a map document with raster data, a raster dataset or a mosaic dataset. Publishing a mosaic dataset requires ArcGIS Image Server, so unless you have this extension enabled, the only way to publish multiple rasters at once on a single WCS will be through a map document; therefore we’re are going to focus on this route. For more information see <a class="reference external" href="http://server.arcgis.com/en/server/latest/publish-services/windows/wcs-services.htm">WCS services</a>.</p>
 <p>Start by creating a map document and adding your rasters to it. Note that, if you have feature data in your map document, it’ll be excluded from your WCS.</p>
 <figure class="align-default" id="id30">
@@ -1217,7 +1219,7 @@
 </figure>
 </section>
 <section id="publish-the-wcs-service">
-<h3>Publish the WCS service<a class="headerlink" href="#publish-the-wcs-service" title="Permalink to this headline"></a></h3>
+<h3>Publish the WCS service<a class="headerlink" href="#publish-the-wcs-service" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Go to <em>File &gt; Share As &gt; Service… *to open the *Share as Service</em> dialog.</p></li>
 <li><p>Select <em>Publish a service</em> and click <em>Next &gt;</em>.</p></li>
@@ -1243,7 +1245,7 @@
 </div>
 </section>
 <section id="edit-the-getcapabilities-document">
-<h3>Edit the GetCapabilities document<a class="headerlink" href="#edit-the-getcapabilities-document" title="Permalink to this headline"></a></h3>
+<h3>Edit the GetCapabilities document<a class="headerlink" href="#edit-the-getcapabilities-document" title="Permalink to this heading"></a></h3>
 <p>ArcGIS server doesn’t create any static GetCapabilities xml documents, but does allow you to use external files. You will need to use such external files if you want to add any supported CRS, add keywords and abstracts for coverages or modify coverage titles. Note that, independently of the supported CRSs added, ESRI WCSs will always support the over 6000 projections that come with the ArcGIS projection engine.</p>
 <p>The quickest way to create your custom GetCapabilities document is to use the response documents from your initial service. You will need to have a file for all the WCS versions that you want your service to support.</p>
 <p>Your WCS version 1.1.0 GetCapabilities document is generated using a request like:</p>

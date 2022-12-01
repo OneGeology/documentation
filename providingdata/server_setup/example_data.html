@@ -15,7 +15,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -494,10 +496,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../providingdata.html">Providing Data / Services</a> &raquo;</li>
-          <li><a href="../server_setup.html">Setting up a Server</a> &raquo;</li>
-      <li>Cookbook example data</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../providingdata.html">Providing Data / Services</a></li>
+          <li class="breadcrumb-item"><a href="../server_setup.html">Setting up a Server</a></li>
+      <li class="breadcrumb-item active">Cookbook example data</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/providingdata/server_setup/example_data.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -508,14 +510,14 @@
            <div itemprop="articleBody">
              
   <section id="cookbook-example-data">
-<span id="service-provision-data-preparation-exampledata"></span><h1>Cookbook example data<a class="headerlink" href="#cookbook-example-data" title="Permalink to this headline"></a></h1>
+<span id="service-provision-data-preparation-exampledata"></span><h1>Cookbook example data<a class="headerlink" href="#cookbook-example-data" title="Permalink to this heading"></a></h1>
 <p>In order to help you test setting up services with data that we know work before you try using your own data we supply a number of example data sets that can be used to set up different kinds of services.</p>
 <section id="geopackage">
-<h2>GeoPackage<a class="headerlink" href="#geopackage" title="Permalink to this headline"></a></h2>
+<h2>GeoPackage<a class="headerlink" href="#geopackage" title="Permalink to this heading"></a></h2>
 <p>This is a relatively recent standard format for exchanging vector and raster GIS data in a single file. It can potentially be used for quite complex data structures. The example contains two files that could be used for a Simple WMS with GetFeatureInfo response and a Simple Feature WFS. They can also serve as the basis of an SLD enabled WMS and the GeologicUnitView.gpkg file has the fields that are used for highlighting queries in the OneGeology Portal age and lithology tool. As this format doesn’t have the restrictions on field length of Shapefiles the examples are able to use the same names as specified in the GeoSciML-Lite GeologicUnitView and ShearDisplacementView feature types. Field values have been populated with appropriate values from INSPIRE vocabularies so that these examples can be used to produce a simple feature WFS returning standards conformant GeoSciML-Lite features. Download from <a class="reference external" href="ftp://ftp.bgs.ac.uk/pubload/OneGeology/exampledata/geopackagegeoscimllite.zip">ftp://ftp.bgs.ac.uk/pubload/OneGeology/exampledata/geopackagegeoscimllite.zip</a>.</p>
 </section>
 <section id="postgis-data">
-<h2>PostGIS data<a class="headerlink" href="#postgis-data" title="Permalink to this headline"></a></h2>
+<h2>PostGIS data<a class="headerlink" href="#postgis-data" title="Permalink to this heading"></a></h2>
 <p>This data set can be used as a basis for WMS with GetFeatureInfo, SLD enabled WMS usable in OneGeology Portal, Simple Feature WFS conforming to GeoSciML Lite schema and Complex Feature WFS conforming to GeoSciML schema. A PostGIS database could also store raster data but the example dataset does not. PostGIS is more suitable for production services than Image files or Shapefiles and is more capable for providing data and as a basis for services conforming to standard application schemas.</p>
 <p>It is assumed that you have <a class="reference internal" href="#service-provision-data-preparation-postgis"><span class="std std-ref">installed the PostGIS software</span></a> and that you have a spatially enabled database (the default installation will create one called postgis). The following will all be working within this spatially enabled database.</p>
 <p>Download the latest version of the database dump file wfscookbook.YYYY-MM-DD.backup from <a class="reference external" href="ftp://ftp.bgs.ac.uk/pubload/OneGeology/wfscookbook/">ftp://ftp.bgs.ac.uk/pubload/OneGeology/wfscookbook/</a>. (Each version will have its release date in place of YYYY-MM-DD.)</p>
@@ -536,22 +538,22 @@
 </div>
 <p>If you have problems with the above steps which are difficult to resolve you may find that setting <code class="docutils literal notranslate"><span class="pre">log_statement=all</span></code> in <code class="docutils literal notranslate"><span class="pre">postgresql.conf</span></code>, reloading the server and then monitoring the log file is helpful for debugging them.</p>
 <section id="installing-postgis">
-<span id="service-provision-data-preparation-postgis"></span><h3>Installing PostGIS<a class="headerlink" href="#installing-postgis" title="Permalink to this headline"></a></h3>
+<span id="service-provision-data-preparation-postgis"></span><h3>Installing PostGIS<a class="headerlink" href="#installing-postgis" title="Permalink to this heading"></a></h3>
 <p>The <a class="reference external" href="http://www.postgis.net/install">PostGIS Installation</a> page contains instructions on how to install PostGIS for different operating systems. We have used both the <a class="reference external" href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads">Enterprise DB Windows Installer</a> on Windows and the <a class="reference external" href="https://yum.postgresql.org/">PostgreSQL Yum repository</a> on CentOS.</p>
 </section>
 </section>
 <section id="image-with-world-file">
-<h2>Image with world file<a class="headerlink" href="#image-with-world-file" title="Permalink to this headline"></a></h2>
+<h2>Image with world file<a class="headerlink" href="#image-with-world-file" title="Permalink to this heading"></a></h2>
 <p>This is an image file with associated worldfile to locate it in geographic coordinates. This is the type of file that you might have if you only have paper maps which you have to scan to use. It is suitable for setting up a simple WMS without any useful GetFeatureInfo response or the ability to be styled by an SLD. Download from <a class="reference external" href="ftp://ftp.bgs.ac.uk/pubload/OneGeology/exampledata/georeferencedimage.zip">ftp://ftp.bgs.ac.uk/pubload/OneGeology/exampledata/georeferencedimage.zip</a>.</p>
 </section>
 <section id="shapefile">
-<h2>Shapefile<a class="headerlink" href="#shapefile" title="Permalink to this headline"></a></h2>
+<h2>Shapefile<a class="headerlink" href="#shapefile" title="Permalink to this heading"></a></h2>
 <p>ESRI Shapefile is a very common vector GIS format. The example could be used for a Simple WMS with GetFeatureInfo response and a Simple Feature WFS. It could also serve as the basis of an SLD enabled WMS but it doesn’t have the fields that are used in the OneGeology Portal age and lithology tool so wouldn’t work with that unless those fields were added. Also, because of the 10 character limit on length of Shapefile field names your server software will need to be able map shorter field names to the longer ones expected by the Portal. The field name length restriction also means that a simple feature WFS can’t be made to conform to specific standard Schemas like GeoSciML Lite unless your server software can map the names to the longer standard property names. Download from <a class="reference external" href="ftp://ftp.bgs.ac.uk/pubload/OneGeology/exampledata/shapefileunharmonised.zip">ftp://ftp.bgs.ac.uk/pubload/OneGeology/exampledata/shapefileunharmonised.zip</a>.</p>
 <p>OneGeology does not recommend using Shapefiles as the data source for your services but, if you already have your data in this format, it can be used as a data source with some restrictions.</p>
 <p>If you wish to set up a <a class="reference internal" href="../service_types.html#term-SLD-enabled-WMS"><span class="xref std std-term">SLD enabled WMS</span></a> or <a class="reference internal" href="../service_types.html#term-Simple-feature-WFS"><span class="xref std std-term">Simple feature WFS</span></a> using the standard fields needed for age and lithology highlighting in the Portal or following one of the standard ‘Lite’ schemas then the 10 character limit on field names in Shapefiles means your server will need to map shorter Shapefile field names to the longer expected field names in the standards. We provide some <a class="reference internal" href="#service-provision-data-preparation-short-names"><span class="std std-ref">Recommended ESRI shapefile definitions for GeoSciML-Lite</span></a> for some GeoSciML-Lite features that are reasonably readable and would enable using common mapping files to produce services using the full names.</p>
 <p>Another consideration might be that, if the coordinate system of your Shapefile is not EPSG:4326 and your service is predominantly to be used in the OneGeology Portal, then your server will have to do a lot of on-the-fly coordinate conversion. To ameliorate this you can <a class="reference external" href="/wmsCookbook/appendixA.html">convert the coordinate system of your Shapefile</a>. The tools referred to in the previous link are available from <a class="reference external" href="http://www.gdal.org">http://www.gdal.org</a> if you haven’t done the MS4W download that it assumes.</p>
 <section id="recommended-esri-shapefile-definitions-for-geosciml-lite">
-<span id="service-provision-data-preparation-short-names"></span><h3>Recommended ESRI shapefile definitions for GeoSciML-Lite<a class="headerlink" href="#recommended-esri-shapefile-definitions-for-geosciml-lite" title="Permalink to this headline"></a></h3>
+<span id="service-provision-data-preparation-short-names"></span><h3>Recommended ESRI shapefile definitions for GeoSciML-Lite<a class="headerlink" href="#recommended-esri-shapefile-definitions-for-geosciml-lite" title="Permalink to this heading"></a></h3>
 <p>Because the field names in GeoSciML-Lite are longer than 10 characters, you will not be able to have the full attribute (column) name for many of the properties if your portrayal data is loaded into an ESRI shapefile. To prevent truncated names, we are providing a recommended Shapefile implementation with shorter field names. Field names are abbreviated to try and leave characters that convey the full name of the field; lower camel case typographic has been used, except that fields that contain URI’s end with ‘_uri’.</p>
 <table class="colwidths-auto docutils align-left" id="id4">
 <caption><span class="caption-text">Recommended shapefile definition for ContactView</span><a class="headerlink" href="#id4" title="Permalink to this table"></a></caption>
@@ -801,7 +803,7 @@
 </section>
 </section>
 <section id="geotiff">
-<h2>GeoTIFF<a class="headerlink" href="#geotiff" title="Permalink to this headline"></a></h2>
+<h2>GeoTIFF<a class="headerlink" href="#geotiff" title="Permalink to this heading"></a></h2>
 <p>GeoTIFF is a raster format with geographic registration included. The example has been obtained from the <a class="reference external" href="http://portal.emodnet-bathymetry.eu/RGB">EMODNET Portal for Bathymetry</a> and has RGB bands suitable for display as an image although other GeoTIFF’s could have more and not necessarily image bands. This could be used for a WMS but is included primarily to test WCS setup. Download from <a class="reference external" href="ftp://ftp.bgs.ac.uk/pubload/OneGeology/exampledata/geotiff.zip">ftp://ftp.bgs.ac.uk/pubload/OneGeology/exampledata/geotiff.zip</a>.</p>
 </section>
 </section>

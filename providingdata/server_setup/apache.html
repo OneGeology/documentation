@@ -15,7 +15,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -494,10 +496,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../providingdata.html">Providing Data / Services</a> &raquo;</li>
-          <li><a href="../server_setup.html">Setting up a Server</a> &raquo;</li>
-      <li>Using Apache HTTP server as a reverse proxy</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../providingdata.html">Providing Data / Services</a></li>
+          <li class="breadcrumb-item"><a href="../server_setup.html">Setting up a Server</a></li>
+      <li class="breadcrumb-item active">Using Apache HTTP server as a reverse proxy</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/providingdata/server_setup/apache.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -508,7 +510,7 @@
            <div itemprop="articleBody">
              
   <section id="using-apache-http-server-as-a-reverse-proxy">
-<h1>Using Apache HTTP server as a reverse proxy<a class="headerlink" href="#using-apache-http-server-as-a-reverse-proxy" title="Permalink to this headline"></a></h1>
+<h1>Using Apache HTTP server as a reverse proxy<a class="headerlink" href="#using-apache-http-server-as-a-reverse-proxy" title="Permalink to this heading"></a></h1>
 <p>To serve a OneGeology WMS through the OneGeology Portal that service must be served using port 80; the default port for any http web service. If you are already serving another web service on port 80 on the same server (such as a GeoNetwork spatial data metadata catalogue for example), then you will need to use a different port number for the existing service. In itself this shouldn’t be too difficult to do, however this might cause problems for your customers due to restrictive firewall rules that prevent them consuming any web service not served on the standard web port number. One way around this is to merge the services together; another possibility (as detailed below) is to use the Apache HTTP web server as a reverse proxy, that is, to handle all requests to the second service as if that service was coming from the MS4W Apache service. The user is thus unaware that there is more than one web service. Each service proxied in this way runs on a separate port number, and may still be accessed directly on that port (depending on your configuration), but it is also available as if it were running on port 80.</p>
 <p>(<a class="reference external" href="http://httpd.apache.org/docs/2.2/urlmapping.html">Comprehensive information on configuring Apache</a>)</p>
 <p>The first step is to change the <a class="reference external" href="http://www.iana.org/assignments/port-numbers">port numbers</a> on which your other web servers work; in this example we have two other web services (a Tomcat based web service which we will run on port 8080, and a jetty based web service which we will run on port 8008). Note that both these ports are recognized alternate ports for http traffic but they may not be open to such traffic in your corporate firewall.</p>

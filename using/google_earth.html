@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -494,9 +496,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../using.html">Using OneGeology Services</a> &raquo;</li>
-      <li>Using Google Earth</li>
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../using.html">Using OneGeology Services</a></li>
+      <li class="breadcrumb-item active">Using Google Earth</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/using/google_earth.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -507,7 +509,7 @@
            <div itemprop="articleBody">
              
   <section id="using-google-earth">
-<h1>Using Google Earth<a class="headerlink" href="#using-google-earth" title="Permalink to this headline"></a></h1>
+<h1>Using Google Earth<a class="headerlink" href="#using-google-earth" title="Permalink to this heading"></a></h1>
 <p>Google Earth: <a class="reference external" href="http://earth.google.co.uk/">http://earth.google.co.uk/</a></p>
 <p>Requires a PC with minimum 256MB memory and 3D-capable graphics card with 16MB of VRAM.</p>
 <p>A simple way of viewing data in Google Earth is to use a KML file exported from the OneGeology Portal. You may also add a WMS directly, using the Add menu option and then ‘Image Overlay’.</p>
@@ -536,9 +538,9 @@
 </figcaption>
 </figure>
 <section id="google-earth-issues">
-<h2>Google Earth Issues<a class="headerlink" href="#google-earth-issues" title="Permalink to this headline"></a></h2>
+<h2>Google Earth Issues<a class="headerlink" href="#google-earth-issues" title="Permalink to this heading"></a></h2>
 <section id="problems-displaying-the-map-layer">
-<h3>Problems displaying the map layer<a class="headerlink" href="#problems-displaying-the-map-layer" title="Permalink to this headline"></a></h3>
+<h3>Problems displaying the map layer<a class="headerlink" href="#problems-displaying-the-map-layer" title="Permalink to this heading"></a></h3>
 <p>When adding a WMS layer to Google Earth, you may get a Big Red Cross instead of the map layer you were expecting. This indicates there is an error with that layer. The error may lie either with the GetMap parameters sent by Google Earth to the WMS server, or in the WMS response.</p>
 <p>When adding any WMS using the method described above, we have noted that the parameters that Google Earth automatically populates into its form (the Edit Image Overlay Link) are missing the required ‘styles’ parameter. MapServer WMS services do not seem to be affected by this omission, that is, they will serve a map using the default style, but we have noticed that ArcGIS WMS services cannot handle this error, and you will need to add the correct style value to your link. You may look at the GetCapabilities response to get the style or styles you want to be used, or you should just be able to specify a null value, and get the default style.</p>
 <figure class="align-default" id="id5">
@@ -551,7 +553,7 @@
 <p><a class="reference external" href="http://maps.bgs.ac.uk/ArcGIS/services/BGS_Detailed_Geology/MapServer/WMSServer?VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=EPSG:4326&amp;WIDTH=512&amp;HEIGHT=512&amp;LAYERS=1&amp;TRANSPARENT=TRUE&amp;FORMAT=image/gif&amp;styles=">http://maps.bgs.ac.uk/ArcGIS/services/BGS_Detailed_Geology/MapServer/WMSServer?VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=EPSG:4326&amp;WIDTH=512&amp;HEIGHT=512&amp;LAYERS=1&amp;TRANSPARENT=TRUE&amp;FORMAT=image/gif&amp;styles=</a></p>
 </section>
 <section id="problems-displaying-a-map-layer-that-spans-the-globe">
-<h3>Problems displaying a map layer that spans the globe<a class="headerlink" href="#problems-displaying-a-map-layer-that-spans-the-globe" title="Permalink to this headline"></a></h3>
+<h3>Problems displaying a map layer that spans the globe<a class="headerlink" href="#problems-displaying-a-map-layer-that-spans-the-globe" title="Permalink to this heading"></a></h3>
 <p>Google Earth has a problem showing the full contents of a map layer that spans the whole globe. Specifically Google Earth seems to be unable to show coverage from such data layers at the poles and around the antimeridian (the 180th degree meridian). For example we are unable to get a map to display the whole of Russia.</p>
 <p>The problem is illustrated below using the WORLD CGMW 1:25M Geologic Units layer. (<a class="reference external" href="http://mapsone.brgm.fr/1GmapserverFR/wms?map=/applications/mapserver/map%20files/Lithology_FR.map&amp;REQUEST=GetMap&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYERS=WORLD_CGMW_25M_GeologicUnits&amp;STYLES=default&amp;FORMAT=image/png&amp;BGCOLOR=0xFFFFFF&amp;TRANSPARENT=TRUE&amp;SRS=EPSG:4326&amp;BBOX=-180,-137.242524916944,180,137.242524916944&amp;WIDTH=602&amp;HEIGHT=459">http://mapsone.brgm.fr/1GmapserverFR/wms?map=/applications/mapserver/map%20files/Lithology_FR.map&amp;REQUEST=GetMap&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYERS=WORLD_CGMW_25M_GeologicUnits&amp;STYLES=default&amp;FORMAT=image/png&amp;BGCOLOR=0xFFFFFF&amp;TRANSPARENT=TRUE&amp;SRS=EPSG:4326&amp;BBOX=-180,-137.242524916944,180,137.242524916944&amp;WIDTH=602&amp;HEIGHT=459</a>)</p>
 <p>There is currently no fix for this issue.</p>
