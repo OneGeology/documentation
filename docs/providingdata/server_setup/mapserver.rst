@@ -5,7 +5,7 @@ Using MapServer
 Software Installation
 ---------------------
 
-`MapServer <http://mapserver.org/>`_ can be used to provide a number of OGC Web Services (OWS) types, such as the Web Map Service (WMS), Web Feature Service (WFS) and Web Coverage Service (WCS) standards which are the current focus of interest for the OneGeology portal.  In the following sections we run through how to configure MapServer so it can provide any one of these three service types.
+`MapServer <https://mapserver.org/>`_ can be used to provide a number of OGC Web Services (OWS) types, such as the Web Map Service (WMS), Web Feature Service (WFS) and Web Coverage Service (WCS) standards which are the current focus of interest for the OneGeology portal.  In the following sections we run through how to configure MapServer so it can provide any one of these three service types.
 
 MapServer will work both on Windows and Linux operating systems (both 32-bit and 64-bit), and with a web server of your choosing, the permutations are many and we can not cover all of them, below we take you through some common installations, using Apache HTTP as the web server.
 
@@ -63,9 +63,7 @@ If the installation works correctly you will be taken to a page on your newly in
 Configuring the exemplar services
 """""""""""""""""""""""""""""""""
 
-Obtain the OneGeology template application in the 20Mbytes approx. sized 1G\_WMS-exemplar-data-MS6-update.zip file from the `BGS FTP website <ftp://ftp.bgs.ac.uk/pubload/OneGeology/>`_.
-
-If you are using a web browser clicking on this URL may take you directly to it without requesting a password.  If you prefer to use the older DOS prompt style FTP user interface then as normal with such anonymous ftp services enter anonymous if prompted for a userid and type your email address as the password to allow the FTP manager to monitor who is using the service.
+Obtain the OneGeology template application in the 20Mbytes approx. sized 1G\_WMS-exemplar-data-MS6-update.zip file from the `BGS Resources website <https://resources.bgs.ac.uk/OneGeology/>`_.
 
 Unzip the OneGeology template application to the same drive and directory level as the MS4W location resulting from the MapServer installation e.g. if you installed MS4W on C:\\MS4W then point the unzip extract to C:.  It should create a number of files inside the *ms4w* directory.  The main part of the two example applications are inside a BGS\_Bedrock\_and\_Superficial\_Geology directory (for the shapefile based example) and BGS\_Bedrock\_Raster\_Map directory (for the image file based example) which will be created inside ms4w\\apps\\cookbookExemplars.
 
@@ -450,12 +448,12 @@ Congratulations! You have now got MapServer installed and configured to run in y
 Configuring MapServer exemplar services on a LAMP server
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-We shall now configure the two BGS exemplar services (a shapefile version and a raster version) available from the BGS FTP server.
+We shall now configure the two BGS exemplar services (a shapefile version and a raster version) available from the BGS Resources server.
 
 .. code-block:: sh
 
   #cd /usr/local/src
-  #wget ftp://ftp.bgs.ac.uk/pubload/OneGeology/1G_WMS-exemplar-data-MS6-update.zip
+  #wget https://resources.bgs.ac.uk/OneGeology/1G_WMS-exemplar-data-MS6-update.zip
   #unzip 1G_WMS-exemplar-data-MS6-update.zip
 
 We now need to move the contents of the zip file to the correct locations on our server.
@@ -560,12 +558,12 @@ Mailing Lists
 MapServer and IIS
 """""""""""""""""
 
-You may use the IIS web server instead of Apache to run the MapServer CGI.  See the previous cookbook for details of how to do this with IIS version 6.  We haven't been able to update the cookbook for the latest version of IIS, but the MapServer documentation (`IIS Setup for MapServer <http://mapserver.org/installation/iis.html>`_) gives a good guide for how to do this in general for IIS 7 and up.
+You may use the IIS web server instead of Apache to run the MapServer CGI.  See the previous cookbook for details of how to do this with IIS version 6.  We haven't been able to update the cookbook for the latest version of IIS, but the MapServer documentation (`IIS Setup for MapServer <https://mapserver.org/installation/iis.html>`_) gives a good guide for how to do this in general for IIS 7 and up.
 
 Compiling MapServer on Linux
 """"""""""""""""""""""""""""
 
-You may wish to compile your own version of MapServer on a \*nix operating system of your own choosing.  We haven't done this for a while and the guidance in our previous cookbook was very out of date.  There is guidance on the MapServer site that takes you through the process (`Compiling on Unix <http://mapserver.org/installation/unix.html>`_)
+You may wish to compile your own version of MapServer on a \*nix operating system of your own choosing.  We haven't done this for a while and the guidance in our previous cookbook was very out of date.  There is guidance on the MapServer site that takes you through the process (`Compiling on Unix <https://mapserver.org/installation/unix.html>`_)
 
 
 General configuration
@@ -580,7 +578,7 @@ Comments are shown by lines beginning with a **#** sign
 
 The order of statements in the Mapfile doesn't matter, here we tend to group alphabetically for readability.
 
-For further details on Mapfile configuration options available see http://mapserver.org/mapfile/map.html
+For further details on Mapfile configuration options available see https://mapserver.org/mapfile/map.html
 
 
 .. code-block:: mapfile
@@ -701,7 +699,7 @@ In any **METADATA** section instead of  the "WMS\_" prefix  you may use "OWS\_" 
 
    METADATA
        "OWS_ABSTRACT" "The 1:625k DiGMap data covering the whole of the United Kingdom is available in this OGC web service for all uses - including commercial use subject to the conditions in the Access Constraints section and is being served as a contribution to the OneGeology initiative (www.onegeology.org)."
-       "OWS_ACCESSCONSTRAINTS" "The 1:625k DiGMap data is available for free download for your personal, teaching, research, or non-commercial use (as described on http://www.bgs.ac.uk/about/copyright/non_commercial_use.html). Your use of any information provided by the British Geological Survey (BGS) is at your own risk. Neither BGS nor the Natural Environment Research Council (NERC) gives any warranty, condition, or representation as to the quality, accuracy, or completeness of the information or its suitability for any use or purpose. All implied conditions relating to the quality or suitability of the information, and all liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law."
+       "OWS_ACCESSCONSTRAINTS" "The 1:625k DiGMap data is available for free download for your personal, teaching, research, or non-commercial use (as described on https://www.bgs.ac.uk/bgs-intellectual-property-rights/using-bgs-copyright-material/). Your use of any information provided by the British Geological Survey (BGS) is at your own risk. Neither BGS nor the Natural Environment Research Council (NERC) gives any warranty, condition, or representation as to the quality, accuracy, or completeness of the information or its suitability for any use or purpose. All implied conditions relating to the quality or suitability of the information, and all liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law."
        "OWS_ADDRESS" "Environmental Science Centre"
        "OWS_ADDRESSTYPE" "postal"
        "OWS_CITY" "Keyworth"
@@ -766,7 +764,7 @@ In any **METADATA** section instead of  the "WMS\_" prefix  you may use "OWS\_" 
 
 You may use the "WMS_ONLINERESOURCE" (and "OWS_ONLINERESOURCE" etc) metadata sections to change the service endpoint for your service.  For example, you can do this to force users (clients) to always use the IP version of your service rather than the server name (or vice versa), or to force them to always use the cgi-bin version rather than the fcgi-bin version (or vice versa), or to get them to use a different server.  That is, you can have an initial GetCapabilities response document that itself advertises a different service endpoint for the subsequent GetMap requests.  There are several reasons why you might want to do this; one such reason is when you have an existing service that has multiple layers only some of some of which are conformant to OneGeology and in which the service metadata doesn't otherwise conform to the OneGeology WMS profile.  In such an example, you can set up a service that has a GetCapabilities document that is conformant to the OneGeology WMS profile and which advertises only some of the layers of the other service through the use of the "WMS_ONLINERESOURCE" metadata.
 
-The SRS specifies the coordinate system (spatial reference system) that the WMS can serve data in.  These are commonly specified using EPSG codes **and must include** `EPSG:4326 <http://epsg.io/4326>`_ so that all services have at least one coordinate system in common.  We would like if you could specify the Spherical Mercator projection (`EPSG:3857 <http://epsg.io/3857>`_) to allow your service to be used in Google Maps.  You may specify other systems that are appropriate for your region if you wish; for example we would expect most European services to support either (or both of) `EPSG:4258 <http://epsg.io/4258>`_ and `EPSG:3034 <http://epsg.io/3034>`_ to ensure compliance with INSPIRE coordinate system requirements.
+The SRS specifies the coordinate system (spatial reference system) that the WMS can serve data in.  These are commonly specified using EPSG codes **and must include** `EPSG:4326 <https://epsg.org/crs_4326/WGS-84.html>`_ so that all services have at least one coordinate system in common.  We would like if you could specify the Spherical Mercator projection (`EPSG:3857 <https://epsg.org/crs_3857/WGS-84-Pseudo-Mercator.html>`_) to allow your service to be used in Google Maps.  You may specify other systems that are appropriate for your region if you wish; for example we would expect most European services to support either (or both of) `EPSG:4258 <https://epsg.org/crs_4258/ETRS89.html>`_ and `EPSG:3034 <https://epsg.org/crs_3034/ETRS89-extended-LCC-Europe.html>`_ to ensure compliance with INSPIRE coordinate system requirements.
 
 
 Adding alternate character set support
