@@ -17,7 +17,7 @@ This data set can be used as a basis for WMS with GetFeatureInfo, SLD enabled WM
 
 It is assumed that you have :ref:`installed the PostGIS software <service_provision_data_preparation_postgis>` and that you have a spatially enabled database (the default installation will create one called postgis). The following will all be working within this spatially enabled database.
 
-Download the latest version of the database dump file wfscookbook.YYYY-MM-DD.backup from `<ftp://ftp.bgs.ac.uk/pubload/OneGeology/wfscookbook/>`_. (Each version will have its release date in place of YYYY-MM-DD.)
+Download the latest version of the database dump file wfscookbook.YYYY-MM-DD.backup from `<https://resources.bgs.ac.uk//OneGeology/wfscookbook/>`_. (Each version will have its release date in place of YYYY-MM-DD.)
 
 Create a separate schema for the example data. The schema name is used in the commands below so, if you change it from ``wfscookbook`` you will need to change these accordingly
 
@@ -45,7 +45,7 @@ If you have problems with the above steps which are difficult to resolve you may
 Installing PostGIS
 ^^^^^^^^^^^^^^^^^^
 
-The `PostGIS Installation <http://www.postgis.net/install>`_ page contains instructions on how to install PostGIS for different operating systems. We have used both the `Enterprise DB Windows Installer <https://www.enterprisedb.com/downloads/postgres-postgresql-downloads>`_ on Windows and the `PostgreSQL Yum repository <https://yum.postgresql.org/>`_ on CentOS.
+The `PostGIS Installation <https://www.postgis.net/documentation/training/>`_ pages contain instructions on how to install PostGIS for different operating systems. We have used both the `Enterprise DB Windows Installer <https://www.enterprisedb.com/downloads/postgres-postgresql-downloads>`_ on Windows and the `PostgreSQL Yum repository <https://yum.postgresql.org/>`_ on CentOS.
 
 .. todo::
 
