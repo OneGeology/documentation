@@ -7,7 +7,7 @@ Source files are written in [reStructuredText](http://docutils.sourceforge.net/r
 Some of the reStructuredText was converted from pre-existing HTML files using pandoc as below:
 
 ```sh
-pandoc --extract-media=appendixb -s -t rst http://www.onegeology.org/wmsCookbook/appendixB.html -o appendixb.rst
+pandoc --extract-media=appendixb -s -t rst https://onegeology.org/wmsCookbook/appendixB.html -o appendixb.rst
 ```
 
 ## Building the documentation locally
