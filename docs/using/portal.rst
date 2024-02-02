@@ -10,7 +10,7 @@ Using the OneGeology Portal
 
 .. todo::
 
-   List the other parts of www.onegeology.org that will link directly to here. At the moment a sidebar sub-menu "Technical detail for participants" -> "How to use a OneGeology service" and some links from other pages. Also the page http://onegeology.org/portal/portal_uses.html has links to various client pages but it all seems a bit of a repetitive anomaly and something that should be entirely replaced by content here.
+   List the other parts of onegeology.org that will link directly to here. At the moment a sidebar sub-menu "Technical detail for participants" -> "How to use a OneGeology service" and some links from other pages. Also the page https://onegeology.org/portal/portal_uses.html has links to various client pages but it all seems a bit of a repetitive anomaly and something that should be entirely replaced by content here.
 
 The OneGeology portal allows you to discover all the services that have been registered with OneGeology. You can view all those that return image output on a map of the world and can query the data behind those that provide that ability. Also some services allow you to highlight areas satisfying some simple query criteria on the age or lithology of mapped geological units.
 
@@ -31,7 +31,7 @@ The Portal has the following functions:
 Viewing data registered in the OneGeology Portal
 -------------------------------------------------
 
-The OneGeology Portal is found at: http://portal.onegeology.org/ and is accessible as either an English (the default) or French language service.
+The OneGeology Portal is found at: https://portal.onegeology.org/ and is accessible as either an English (the default) or French language service.
 
 You will need to use Internet Explorer 6 and above, Firefox 2 and above or recent versions of Safari, Opera, and Chrome. You will need to enable JavaScript and allow pop-ups.
 
@@ -192,17 +192,17 @@ Viewing layers in different projections
    The portal allows you to select other projections to view the map layers.  The projections supported by the portal are:
 
    EPSG:3031
-     Antarctic Polar Stereographic (WGS84) http://spatialreference.org/ref/epsg/3031/
+     Antarctic Polar Stereographic (WGS84) https://epsg.org/crs_3031/WGS-84-Antarctic-Polar-Stereographic.html
    EPSG:3034
-     Lambert Conformal Conic (ETRS89) http://spatialreference.org/ref/epsg/3034/
+     Lambert Conformal Conic (ETRS89) https://epsg.org/crs_3034/ETRS89-extended-LCC-Europe.html
    EPSG:3413
-     NSIDC Sea Ice Polar Stereographic North (WGS84) http://www.spatialreference.org/ref/epsg/3413/
+     NSIDC Sea Ice Polar Stereographic North (WGS84) https://epsg.org/crs_3413/WGS-84-NSIDC-Sea-Ice-Polar-Stereographic-North.html
    EPSG:3857
-     Web Mercator (WGS84) http://spatialreference.org/ref/sr-org/7483/
+     Web Mercator (WGS84) https://epsg.org/crs_3857/WGS-84-Pseudo-Mercator.html
    EPSG:4258
-     2D Latitude / Longitude (ETRS89) http://www.spatialreference.org/ref/epsg/4258/
+     2D Latitude / Longitude (ETRS89) https://epsg.org/crs_4258/ETRS89.html
    EPSG:4326
-     2D Latitude / Longitude (WGS84) http://spatialreference.org/ref/epsg/4326/
+     2D Latitude / Longitude (WGS84) https://epsg.org/crs_4326/WGS-84.html
 
    The default projection to view layers in the portal is *2D Latitude / Longitude (WGS84)* or EPSG:4326.  All layers in the portal **must** support this projection as part of their service.  To select another projection you must use the list at the bottom of the main portal window.  The current projection is shown in bold in the list, so for example in the below figure the active projection at the time of clicking the list was **NSIDC Sea Ice Polar Stereographic North (WGS84)**.
 
@@ -307,7 +307,7 @@ Creating and using Web Map Context (WMC) documents
 
    This also allows you to share your map session with other people, either by giving them a copy of the file, or by making the file available on a public web server.
 
-   ‘\ `Web Map Context Documents <http://www.opengeospatial.org/standards/wmc>`_\ ’ is an OGC specification and any WMC document created in the OneGeology Portal should be usable in a number of client software applications.
+   ‘\ `Web Map Context Documents <https://www.ogc.org/standard/wmc/>`_\ ’ is an OGC specification and any WMC document created in the OneGeology Portal should be usable in a number of client software applications.
 
 Saving your context file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -344,20 +344,20 @@ Opening a Web Map Context file in the OneGeology Portal
 
    To do this you need to send a request like:
 
-   `f |url| <http://portal.onegeology.org/?language=eng&method=addExternalContext&url=http://ogc.bgs.ac.uk/wmc/IrelandGeologyEdited-wmc.xml>`_
+   `f |url| <https://portal.onegeology.org/?language=eng&method=addExternalContext&url=https://ogc.bgs.ac.uk/wmc/IrelandGeologyEdited-wmc.xml>`_
 
    .. |url| raw:: html
 
-      http://portal.onegeology.org/?<br/>
+      https://portal.onegeology.org/?<br/>
       language=eng&amp;<br/>
       method=addExternalContext&amp;<br/>
-      url=http://ogc.bgs.ac.uk/wmc/IrelandGeologyEdited-wmc.xml
+      url=https://ogc.bgs.ac.uk/wmc/IrelandGeologyEdited-wmc.xml
 
 
 Opening a WMC file in other clients
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Other clients are known to support Web Map Context documents, for example we could load the example file (http://ogc.bgs.ac.uk/wmc/IrelandGeologyEdited-wmc.xml) in an OpenLayers client like the one at http://openlayers.org/dev/examples/wmc.html.  Here we need to copy the contents of the file into the form window and click on the ‘*read as new map*’ button to view our map.
+   Other clients are known to support Web Map Context documents, for example we could load the example file (https://ogc.bgs.ac.uk/wmc/IrelandGeologyEdited-wmc.xml) in an OpenLayers client like the one at http://openlayers.org/dev/examples/wmc.html.  Here we need to copy the contents of the file into the form window and click on the ‘*read as new map*’ button to view our map.
 
    .. figure:: images/WMConOLr.jpg
       :width: 600
