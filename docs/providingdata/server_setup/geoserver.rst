@@ -2,7 +2,7 @@
 Using GeoServer
 ===============
 
-GeoServer has extensive `documentation <http://docs.geoserver.org/stable/en/user/index.html>`_ which you should refer to in addition to this cookbook. References will be made to relevant parts rather than repeating too much of what is already there. There is also the `geoserver-users mailing list <http://geoserver.org/comm/>`_.
+GeoServer has extensive `documentation <https://docs.geoserver.org/stable/en/user/index.html>`_ which you should refer to in addition to this cookbook. References will be made to relevant parts rather than repeating too much of what is already there. There is also the `geoserver-users mailing list <https://geoserver.org/comm/>`_.
 
 Introduction
 ------------
@@ -43,7 +43,7 @@ Ideally you will be familiar with deploying applications in a servlet container 
 Basic Installation
 ^^^^^^^^^^^^^^^^^^
 
-* `Download <http://geoserver.org/release/stable>`_ and install GeoServer following whichever one of the `installation paths <http://docs.geoserver.org/stable/en/user/installation/index.html>`_ in the GeoServer manual suits your situation best. If you already have a servlet container application such as `Apache Tomcat <http://tomcat.apache.org/>`_ set up or you are familiar with how to set one up then you will probably wish to download the web archive (WAR) and deploy that in your servlet container. If you are not comfortable with configuring a servlet container then you will probably wish to use one of the installer programs.
+* `Download <https://geoserver.org/release/stable>`_ and install GeoServer following whichever one of the `installation paths <https://docs.geoserver.org/stable/en/user/installation/index.html>`_ in the GeoServer manual suits your situation best. If you already have a servlet container application such as `Apache Tomcat <http://tomcat.apache.org/>`_ set up or you are familiar with how to set one up then you will probably wish to download the web archive (WAR) and deploy that in your servlet container. If you are not comfortable with configuring a servlet container then you will probably wish to use one of the installer programs.
 
 * Run GeoServer at least once to check the installation has worked. If, for example, you are testing in a local instance of Tomcat on your own machine with default settings you should be able to visit http://localhost:8080/geoserver and click on the :guilabel:`Layer Preview` link to check that the example services shipped with GeoServer work properly. You will have to modify the preceding URL appropriately if you have deployed GeoServer on a different machine or port.
 
@@ -56,7 +56,7 @@ App-schema Plugin Installation
 
 You will need to install the app-schema plugin if you wish to set up a complex feature WFS or if you are setting up a simple feature WFS using one of the OneGeology recommended "Lite" schemas. If not, you can skip this step.
 
-* `Download <http://geoserver.org/release/stable>`_  and install the app-schema plugin ``geoserver-*-app-schema-plugin.zip`` following the `application schema installation instructions <http://docs.geoserver.org/stable/en/user/data/app-schema/installation.html>`_. Follow the instructions at `WFS service settings <http://docs.geoserver.org/stable/en/user/data/app-schema/wfs-service-settings.html>`_.
+* `Download <httsp://geoserver.org/release/stable>`_  and install the app-schema plugin ``geoserver-*-app-schema-plugin.zip`` following the `application schema installation instructions <http://docs.geoserver.org/stable/en/user/data/app-schema/installation.html>`_. Follow the instructions at `WFS service settings <https://docs.geoserver.org/stable/en/user/data/app-schema/wfs-service-settings.html>`_.
 * Check you can restart GeoServer without any errors being thrown.
 
 INSPIRE Plugin Installation
@@ -64,12 +64,12 @@ INSPIRE Plugin Installation
 
 If you are providing an INSPIRE download service you will need to provide the extra INSPIRE mandated metadata in the WFS GetCapabilities response. This is optional for OneGeology.
 
-* `Download <http://geoserver.org/release/stable>`_ and install the INSPIRE plugin ``geoserver-*-inspire-plugin.zip`` following the `INSPIRE plugin installation instructions <http://docs.geoserver.org/stable/en/user/extensions/inspire/index.html>`_.
+* `Download <http://geoserver.org/release/stable>`_ and install the INSPIRE plugin ``geoserver-*-inspire-plugin.zip`` following the `INSPIRE plugin installation instructions <https://docs.geoserver.org/stable/en/user/extensions/inspire/index.html>`_.
 
 Database
 ^^^^^^^^
 
-If you already have your data in a relational database system you will want to check the `Working with Databases <http://docs.geoserver.org/stable/en/user/data/database/index.html>`_ section of the GeoServer manual to see if your database is supported by GeoServer and follow the instructions for installation of any extensions that may be needed for this support. PostGIS support is built into the core GeoServer download.
+If you already have your data in a relational database system you will want to check the `Working with Databases <https://docs.geoserver.org/stable/en/user/data/database/index.html>`_ section of the GeoServer manual to see if your database is supported by GeoServer and follow the instructions for installation of any extensions that may be needed for this support. PostGIS support is built into the core GeoServer download.
 
 If you want to try the example data or don't have a supported database system you should :ref:`install PostGIS <service_provision_data_preparation_postgis>`.
 
@@ -96,12 +96,12 @@ The default account settings for GeoServer are as follows:
 * Username: admin
 * Password: geoserver
 
-For security reasons, it is recommended that you change your password to something more secure as soon as possible. You will see warnings about changing your passwords and links to where to change them when you first log in. There is an overview of the web administration interface in the `GeoServer manual <http://docs.geoserver.org/latest/en/user/webadmin/index.html>`_.
+For security reasons, it is recommended that you change your password to something more secure as soon as possible. You will see warnings about changing your passwords and links to where to change them when you first log in. There is an overview of the web administration interface in the `GeoServer manual <https://docs.geoserver.org/latest/en/user/webadmin/index.html>`_.
 
 Editing contact information metadata
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Within the GeoServer Web Administration Interface, click **Contact Information**, under `About & Status <http://docs.geoserver.org/latest/en/user/webadmin/index.html#about-status>`_. This brings you to a Contact Information form in which you can provide contact information for your GeoServer instance. The information entered here becomes part of service-level metadata for the web service that is accessed by the OGC GetCapabilities request. Consequently, Contact Information entered here should be as precise and comprehensive as possible.
+Within the GeoServer Web Administration Interface, click **Contact Information**, under `About & Status <https://docs.geoserver.org/latest/en/user/webadmin/index.html#about-status>`_. This brings you to a Contact Information form in which you can provide contact information for your GeoServer instance. The information entered here becomes part of service-level metadata for the web service that is accessed by the OGC GetCapabilities request. Consequently, Contact Information entered here should be as precise and comprehensive as possible.
 
 This form allows you to enter the :ref:`service_provision_onegeology_profile_contact_information` and :ref:`service_provision_onegeology_profile_data_provider` required by the OneGeology profile.
 
@@ -110,7 +110,7 @@ This form allows you to enter the :ref:`service_provision_onegeology_profile_con
 Workspaces
 ^^^^^^^^^^
 
-In GeoServer `workspaces <https://docs.geoserver.org/latest/en/user/data/webadmin/workspaces.html>`_ are used for organising data. For each workspace there are also `virtual services <https://docs.geoserver.org/latest/en/user/configuration/virtual-services.html>`_ created at different service URLs. So if you have an instance of GeoServer available at http://example.com/geoserver there will be a global service URL at http://example.com/geoserver/ows and, if you have a workspce called ws1, there will also be a virtual service URL at http://example.com/geoserver/ws1/ows. This allows some flexibility and control over making different data sets and services available for different purposes to different users. To start with we suggest you `create a new workspace <http://docs.geoserver.org/latest/en/user/data/webadmin/workspaces.html#add-a-workspace>`_ for your data and, if you are using any of the example data that accompany this guide then create a separate workspace for that as well. The URI you choose is not crucially important, we suggest you pick something under a domain you control to ensure uniqueness but it doesn't have to be a resolvable URI that responds if someone puts it in a browser. You can read the GeoServer documentation if you want to organise things further. However, note that, if you are going to supply simple or complex features through a WFS using standard application schemas such as GeoSciML this constrains how you set up your workspaces; see the relevant sections for more detail.
+In GeoServer `workspaces <https://docs.geoserver.org/latest/en/user/data/webadmin/workspaces.html>`_ are used for organising data. For each workspace there are also `virtual services <https://docs.geoserver.org/latest/en/user/configuration/virtual-services.html>`_ created at different service URLs. So if you have an instance of GeoServer available at http://example.com/geoserver there will be a global service URL at http://example.com/geoserver/ows and, if you have a workspce called ws1, there will also be a virtual service URL at http://example.com/geoserver/ws1/ows. This allows some flexibility and control over making different data sets and services available for different purposes to different users. To start with we suggest you `create a new workspace <https://docs.geoserver.org/latest/en/user/data/webadmin/workspaces.html#add-a-workspace>`_ for your data and, if you are using any of the example data that accompany this guide then create a separate workspace for that as well. The URI you choose is not crucially important, we suggest you pick something under a domain you control to ensure uniqueness but it doesn't have to be a resolvable URI that responds if someone puts it in a browser. You can read the GeoServer documentation if you want to organise things further. However, note that, if you are going to supply simple or complex features through a WFS using standard application schemas such as GeoSciML this constrains how you set up your workspaces; see the relevant sections for more detail.
 
 .. figure:: images/EditWS1.jpg
    :height: 451
@@ -170,7 +170,7 @@ INSPIRE Extended Capabilities
 
 If you are providing an INSPIRE view service you will need to provide the extra INSPIRE mandated metadata in the WMS GetCapabilities response. GeoServer enables you to configure a scenario 1 style extended capabilities section. All INSPIRE specific requirements are optional for OneGeology use but will work as OneGeology services.
 
-As described in the `plugin documentation <http://docs.geoserver.org/latest/en/user/extensions/inspire/using.html>`_ you should find a section in the WMS service settings of the administration interface where you can choose a language and enter a service metadata URL. For guidance on what to enter in these settings see the `Technical Guidance for the implementation of INSPIRE View Services <https://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-view-services-1>`_.
+As described in the `plugin documentation <https://docs.geoserver.org/latest/en/user/extensions/inspire/using.html>`_ you should find a section in the WMS service settings of the administration interface where you can choose a language and enter a service metadata URL. For guidance on what to enter in these settings see the `Technical Guidance for the implementation of INSPIRE View Services <https://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-view-services-1>`_.
 
 Check that the GetCapabilities responses contain your edited values.
 
@@ -181,9 +181,9 @@ Configuring a data store
 
 The next step is to use the Stores menu option to set up any sources of data for our service.
 
-On the left side of the GeoServer `Web administration interface <http://docs.geoserver.org/latest/en/user/webadmin/index.html>`_, under the `Data <http://docs.geoserver.org/latest/en/user/webadmin/index.html#data>`_ section, click :guilabel:`Stores`. This will bring you to the `Stores <http://docs.geoserver.org/latest/en/user/data/webadmin/stores.html>`_ page. Once there, click `Add New Store <http://docs.geoserver.org/latest/en/user/data/webadmin/stores.html#add-a-store>`_, then choose the type of data source you wish to configure from the list of options.
+On the left side of the GeoServer `Web administration interface <https://docs.geoserver.org/latest/en/user/webadmin/index.html>`_, under the `Data <https://docs.geoserver.org/latest/en/user/webadmin/index.html#data>`_ section, click :guilabel:`Stores`. This will bring you to the `Stores <https://docs.geoserver.org/latest/en/user/data/webadmin/stores.html>`_ page. Once there, click `Add New Store <https://docs.geoserver.org/latest/en/user/data/webadmin/stores.html#add-a-store>`_, then choose the type of data source you wish to configure from the list of options.
 
-GeoServer can use a variety of data sources as the basis of a WMS including many of those listed in the GeoServer `Data management <http://docs.geoserver.org/latest/en/user/data/index.html>`_ section. In the :ref:`service_provision_data_preparation_exampledata` the image file, shapefile, GeoPackage, GeoTIFF and PostGIS database all are suitable. You can look up how to set each of these up from the `WorldImage <http://docs.geoserver.org/latest/en/user/data/raster/worldimage.html>`_, `Shapefile <http://docs.geoserver.org/latest/en/user/data/vector/shapefile.html>`_, `GeoPackage <https://docs.geoserver.org/latest/en/user/data/vector/geopkg.html>`_, `GeoTIFF <http://docs.geoserver.org/latest/en/user/data/raster/geotiff.html>`_ and `PostGIS <http://docs.geoserver.org/latest/en/user/data/database/postgis.html>`_ sections of the GeoServer documentation.
+GeoServer can use a variety of data sources as the basis of a WMS including many of those listed in the GeoServer `Data management <https://docs.geoserver.org/latest/en/user/data/index.html>`_ section. In the :ref:`service_provision_data_preparation_exampledata` the image file, shapefile, GeoPackage, GeoTIFF and PostGIS database all are suitable. You can look up how to set each of these up from the `WorldImage <https://docs.geoserver.org/latest/en/user/data/raster/worldimage.html>`_, `Shapefile <https://docs.geoserver.org/latest/en/user/data/vector/shapefile.html>`_, `GeoPackage <https://docs.geoserver.org/latest/en/user/data/vector/geopkg.html>`_, `GeoTIFF <https://docs.geoserver.org/latest/en/user/data/raster/geotiff.html>`_ and `PostGIS <https://docs.geoserver.org/latest/en/user/data/database/postgis.html>`_ sections of the GeoServer documentation.
 
 Having set up one or more data sources you will need to create WMS layers that display that data.
 
@@ -194,7 +194,7 @@ Adding layers to a workspace
 
 Having created a workspace and specified one or more data sources for your service, you will now associate this data with layers offered by the service in your workspace.
 
-On the left side of the GeoServer `Web administration interface <http://docs.geoserver.org/latest/en/user/webadmin/index.html>`_, under the `Data <http://docs.geoserver.org/latest/en/user/webadmin/index.html#data>`_ section, click :guilabel:`Layers`. This will bring you to the `Layers <http://docs.geoserver.org/latest/en/user/data/webadmin/layers.html>`_ page. Once there, click `Add a new layer <http://docs.geoserver.org/latest/en/user/data/webadmin/layers.html#add-a-layer>`_, then choose the data source you wish to display as a layer from the drop down box.
+On the left side of the GeoServer `Web administration interface <https://docs.geoserver.org/latest/en/user/webadmin/index.html>`_, under the `Data <https://docs.geoserver.org/latest/en/user/webadmin/index.html#data>`_ section, click :guilabel:`Layers`. This will bring you to the `Layers <https://docs.geoserver.org/latest/en/user/data/webadmin/layers.html>`_ page. Once there, click `Add a new layer <https://docs.geoserver.org/latest/en/user/data/webadmin/layers.html#add-a-layer>`_, then choose the data source you wish to display as a layer from the drop down box.
 
 Depending on the type of data source you have chosen there may be one or more resources listed that can be published as layers. For example, a shapefile data source would only have one resource listed but a database source could have several depending on the tables and views in the database. Select the resource for the data you want to display and click :guilabel:`Publish`.
 
@@ -202,7 +202,7 @@ Depending on the type of data source you have chosen there may be one or more re
 
    If the resource has already been published the action will change to :guilabel:`Publish again`. You can create more than one layer from the same resource if you want to display it in different ways.
 
-You will now be on the `Edit Layer <http://docs.geoserver.org/latest/en/user/data/webadmin/layers.html#data-webadmin-layers-edit-data>`_ page. This page has a large number of configuration options spread across different tabs. We will just describe a subset of them here.
+You will now be on the `Edit Layer <https://docs.geoserver.org/latest/en/user/data/webadmin/layers.html#data-webadmin-layers-edit-data>`_ page. This page has a large number of configuration options spread across different tabs. We will just describe a subset of them here.
 
 The Data tab of the Edit Layer page
 """"""""""""""""""""""""""""""""""""
@@ -215,14 +215,14 @@ GeoServer can compute the bounding box of your data from the data itself or you 
 
    GeoServer may not be able to determine the coordinate reference system for some data sources. In this case you will need to enter the correct value in the :guilabel:`Declared SRS` box and choose :guilabel:`Force declared` for the :guilabel:`SRS handling` option. For example the image with world file from the example data has this problem as the coordinate reference system isn't included in the world file.
 
-For further information on the other settings on this tab see the `GeoServer layers documentation <http://docs.geoserver.org/latest/en/user/data/webadmin/layers.html#edit-layer-data>`_.
+For further information on the other settings on this tab see the `GeoServer layers documentation <https://docs.geoserver.org/latest/en/user/data/webadmin/layers.html#edit-layer-data>`_.
 
 The Publishing tab of the Edit Layer page
 """""""""""""""""""""""""""""""""""""""""
 
 After populating the fields in the :guilabel:`Data` tab, click the :guilabel:`Publishing` tab.
 
-This is where you will `select the styles <http://docs.geoserver.org/latest/en/user/data/webadmin/layers.html#wms-settings>`_ that can be used with your layer that will affect, for example, what colour different formations are shown in. This part of the interface only allows you to select the styles that can be used for your layer from a fixed list of available styles. If you want to set up your own styling GeoServer has `extensive customisable styling capabilities <http://docs.geoserver.org/latest/en/user/styling/index.html#styling>`_. This is a complex area so here we just point out that you can `upload an SLD file <http://docs.geoserver.org/latest/en/user/styling/webadmin/index.html#add-a-style>`_ to add to the list of available styles and you can `download some pre-made SLD files <https://github.com/OneGeology/styles>`_. These pre-made SLD files will colour your layers according to some standard colour schemes if your data includes appropriate age or lithology fields coded using CGI or INSPIRE standard vocabularies.
+This is where you will `select the styles <https://docs.geoserver.org/latest/en/user/data/webadmin/layers.html#wms-settings>`_ that can be used with your layer that will affect, for example, what colour different formations are shown in. This part of the interface only allows you to select the styles that can be used for your layer from a fixed list of available styles. If you want to set up your own styling GeoServer has `extensive customisable styling capabilities <https://docs.geoserver.org/latest/en/user/styling/index.html#styling>`_. This is a complex area so here we just point out that you can `upload an SLD file <https://docs.geoserver.org/latest/en/user/styling/webadmin/index.html#add-a-style>`_ to add to the list of available styles and you can `download some pre-made SLD files <https://github.com/OneGeology/styles>`_. These pre-made SLD files will colour your layers according to some standard colour schemes if your data includes appropriate age or lithology fields coded using CGI or INSPIRE standard vocabularies.
 
 .. note:: If you have a pure image data source such as the one in the example data we recommend you use the default GeoServer :guilabel:`generic` style. Some styles can interfere with the image rendering (e.g. the :guilabel:`giant_polygon` style will result in a grey rectangle over your image area). You will probably also want to uncheck the :guilabel:`Queryable` Layer Settings checkbox as the information returned from image pixels in response to a GetFeatureInfo request is unlikely to be useful to clients.
 
@@ -274,7 +274,7 @@ If required you may disable this functionality in the Service metadata, by check
 Simple Feature WFS
 ------------------
 
-With GeoServer if you have configured a data store and layer as described in the :ref:`service_provision_server_setup_geoserver_simple_wms` section and the data store is of a suitable type (not, for example, a pure image format or raster format) then you will already have done all the substantive work to create a simple feature WFS serving features with the same name as your layer name and with property elements named according to the fields in the underlying data store. In the :ref:`service_provision_data_preparation_exampledata` the shapefile, GeoPackage and PostGIS database all are suitable. To complete setting up the WFS service metadata select :guilabel:`WFS` from under the :guilabel:`Services` section at the left of the `web administration interface <http://docs.geoserver.org/latest/en/user/webadmin/index.html>`_. The service metadata here is very similar to that described for setting up a :ref:`service_provision_server_setup_geoserver_simple_wms` so refer to that for what to enter. WFS specific settings are described in the `GeoServer WFS documentation <http://docs.geoserver.org/latest/en/user/services/wfs/webadmin.html>`_.
+With GeoServer if you have configured a data store and layer as described in the :ref:`service_provision_server_setup_geoserver_simple_wms` section and the data store is of a suitable type (not, for example, a pure image format or raster format) then you will already have done all the substantive work to create a simple feature WFS serving features with the same name as your layer name and with property elements named according to the fields in the underlying data store. In the :ref:`service_provision_data_preparation_exampledata` the shapefile, GeoPackage and PostGIS database all are suitable. To complete setting up the WFS service metadata select :guilabel:`WFS` from under the :guilabel:`Services` section at the left of the `web administration interface <https://docs.geoserver.org/latest/en/user/webadmin/index.html>`_. The service metadata here is very similar to that described for setting up a :ref:`service_provision_server_setup_geoserver_simple_wms` so refer to that for what to enter. WFS specific settings are described in the `GeoServer WFS documentation <https://docs.geoserver.org/latest/en/user/services/wfs/webadmin.html>`_.
 
 .. note::
 
@@ -296,7 +296,7 @@ The Application Schema extension is not included by default so you need to follo
 Create mapping file
 """""""""""""""""""
 
-The mapping file is an XML file that maps fields from the data source into the fields of the XML output schema. The example mapping file, below, uses field names in a shapefile that are the automatically truncated names generated by ESRI software mapping from the long field names to the valid Shapefile field names. If other field names are used in the shapefile (e.g. the recommended abbreviations in `Appendix K <http://onegeology.org/wmsCookbook/appendixK.html>`_), the strings in the sourceExpression/OCQL elements should be modified appropriately.
+The mapping file is an XML file that maps fields from the data source into the fields of the XML output schema. The example mapping file, below, uses field names in a shapefile that are the automatically truncated names generated by ESRI software mapping from the long field names to the valid Shapefile field names. If other field names are used in the shapefile (e.g. the recommended abbreviations in `Appendix K <https://onegeology.org/wmsCookbook/appendixK.html>`_), the strings in the sourceExpression/OCQL elements should be modified appropriately.
 
 .. code-block:: xml
 
@@ -483,7 +483,7 @@ The mapping file is an XML file that maps fields from the data source into the f
 
 Create this mapping file with the prefix and namespace binding, the connection parameters (data source here is a shapefile), the online location of the schema (XSD), and the field mapping.
 
-You can find more documentation on the mapping file at http://docs.geoserver.org/stable/en/user/data/app-schema/mapping-file.html and information on configuring different kinds of data store at  http://docs.geoserver.org/stable/en/user/data/app-schema/data-stores.html.
+You can find more documentation on the mapping file at https://docs.geoserver.org/stable/en/user/data/app-schema/mapping-file.html and information on configuring different kinds of data store at  https://docs.geoserver.org/stable/en/user/data/app-schema/data-stores.html.
 
 Place the file in the GeoServer file location of the datastore. This will be somewhere like :samp:`data/workspaces/{workspace}/{store}/` where `workspace` is the name of your workspace, and `store` is the name of your data store.
 
@@ -518,7 +518,7 @@ Complex Feature WFS
 
 .. note:: This documentation describes setting up complex features by manually editing configuration files for the app-schema extension. Since it was written the `Hale Studio <https://www.wetransform.to/products/halestudio/>`_ graphical data transformation engine has been given the capability to create GeoServer app-schema configuration files. We recommend that you investigate this tool.
 
-This section describes selected parts of the configuration files from the example set. This should give you a good overview of the configuration files needed and what the different parts do. They produce valid GeoSciML v3.2, v4.1 and INSPIRE Annex II Geology theme features and so, hopefully will provide a good starting point to adapt for your own services. However, the mapping for your service from your source data may require some features not used in the example. For these cases you should refer to the `Working with Application Schemas <http://docs.geoserver.org/stable/en/user/data/app-schema/index.html>`_ section of the GeoServer manual which contains comprehensive documentation on the different kinds of mapping from source to output XML that are possible. (It uses GeoSciML v2 based examples.)
+This section describes selected parts of the configuration files from the example set. This should give you a good overview of the configuration files needed and what the different parts do. They produce valid GeoSciML v3.2, v4.1 and INSPIRE Annex II Geology theme features and so, hopefully will provide a good starting point to adapt for your own services. However, the mapping for your service from your source data may require some features not used in the example. For these cases you should refer to the `Working with Application Schemas <https://docs.geoserver.org/stable/en/user/data/app-schema/index.html>`_ section of the GeoServer manual which contains comprehensive documentation on the different kinds of mapping from source to output XML that are possible. (It uses GeoSciML v2 based examples.)
 
 Because a single ``gsmlb:GeologicUnit`` can be observed at several distinct locations on the Earth's surface, several ``gsmlb:MappedFeature`` features may point via their ``gsmlb:specification`` property to the same ``gsmlb:GeologicUnit``.
 
@@ -529,15 +529,15 @@ Versions of the cookbook example set and configurations since 2016-08-17 also in
 Obtaining example configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Download the latest version of the example configuration files in data_625k.YYYY-MM-DD.zip from `<ftp://ftp.bgs.ac.uk/pubload/OneGeology/wfscookbook/>`_ and expand it to a spare location on your server. Copy the files from this expanded directory to the matching locations in your GeoServer data directory. The main configuration files are inside the ``workspaces`` directory. The contents of the ``demo`` directory are some example requests which are documented below. Overwrite any files that already exist, although there shouldn't be any in a fresh installation (apart from the containing directories). Note that the web interface does not yet support app-schema store for layer administration so you will have to edit these files directly when configuring your service.
+Download the latest version of the example configuration files in data_625k.YYYY-MM-DD.zip from `<https://resources.bgs.ac.uk/OneGeology/wfscookbook/>`_ and expand it to a spare location on your server. Copy the files from this expanded directory to the matching locations in your GeoServer data directory. The main configuration files are inside the ``workspaces`` directory. The contents of the ``demo`` directory are some example requests which are documented below. Overwrite any files that already exist, although there shouldn't be any in a fresh installation (apart from the containing directories). Note that the web interface does not yet support app-schema store for layer administration so you will have to edit these files directly when configuring your service.
 
-Copy the latest version of one of the files app-schema.cgi.YYYY-MM-DD.properties or app-schema.inspire.YYYY-MM-DD.properties from `<ftp://ftp.bgs.ac.uk/pubload/OneGeology/wfscookbook/>`_ to ``WEB-INF/classes/app-schema.properties`` depending on whether you wish to use CGI or INSPIRE vocabularies for property values. (Don't forget to rename the file, removing the `.inspire` or `.cgi` and datestamp parts.)
+Copy the latest version of one of the files app-schema.cgi.YYYY-MM-DD.properties or app-schema.inspire.YYYY-MM-DD.properties from `<https://resources.bgs.ac.uk/OneGeology/wfscookbook/>`_ to ``WEB-INF/classes/app-schema.properties`` depending on whether you wish to use CGI or INSPIRE vocabularies for property values. (Don't forget to rename the file, removing the `.inspire` or `.cgi` and datestamp parts.)
 
 Edit the database connection parameters appropriately for your installation of PostgreSQL. If you want to use a JNDI data connection configured in your servlet container then you will also need to edit the appropriate places in the ``datastore.xml`` files described in a subsequent section. So it will be easier for initial testing just to enter the host, database, user and password parameters.
 
 Perform any configuration required by your servlet container, and then start the servlet.
 
-One configuration item you may need to change is to increase the memory available for Java. The method depends on how you have installed GeoServer but if you get ``java.lang.OutOfMemoryError: Java heap space`` errors with the request below you will need to increase the memory with a directive such as ``-Xmx256M``. The details of tuning memory and other options of the Java Virtual Machine are complex and not dealt with in this cookbook. Some information is in the GeoServer User Manual under the `Running in a Production Environment <http://docs.geoserver.org/stable/en/user/production/index.html>`_ section.
+One configuration item you may need to change is to increase the memory available for Java. The method depends on how you have installed GeoServer but if you get ``java.lang.OutOfMemoryError: Java heap space`` errors with the request below you will need to increase the memory with a directive such as ``-Xmx256M``. The details of tuning memory and other options of the Java Virtual Machine are complex and not dealt with in this cookbook. Some information is in the GeoServer User Manual under the `Running in a Production Environment <https://docs.geoserver.org/stable/en/user/production/index.html>`_ section.
 
 If you have used the Windows Installer you can apply this by editing the file ``C:\Program Files (x86)\GeoServer 2.4.5\wrapper\wrapper.conf`` (The exact file location will depend on where you installed GeoServer and which version you are using.) Find the line ``wrapper.java.maxmemory=128`` and increase the value 128 (or whatever it happens to be) to something like 256.
 
@@ -596,7 +596,7 @@ INSPIRE Extended Capabilities
 
 If you are providing an INSPIRE download service you will need to provide the extra INSPIRE mandated metadata in the WFS GetCapabilities response. GeoServer enables you to configure a scenario 1 style extended capabilities section. All INSPIRE specific requirements are optional for OneGeology use but will work as OneGeology services.
 
-As described in the `plugin documentation <http://docs.geoserver.org/latest/en/user/extensions/inspire/using.html>`_ you should find a section in the WFS service settings of the administration interface where you can choose a language, enter a service metadata URL and type and add one or more spatial dataset identifiers. For guidance on what to enter in these settings see the `Technical Guidance for the implementation of INSPIRE Download Services <https://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-download-services>`_.
+As described in the `plugin documentation <https://docs.geoserver.org/latest/en/user/extensions/inspire/using.html>`_ you should find a section in the WFS service settings of the administration interface where you can choose a language, enter a service metadata URL and type and add one or more spatial dataset identifiers. For guidance on what to enter in these settings see the `Technical Guidance for the implementation of INSPIRE Download Services <https://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-download-services>`_.
 
 Check that the GetCapabilities responses contain your edited values.
 
@@ -646,7 +646,7 @@ This can then be invoked with a request like:
 app-schema.properties
 ^^^^^^^^^^^^^^^^^^^^^
 
-This file (in the ``WEB-INF/classes`` directory) is not strictly required but is very useful for storing certain configuration parameters that will be re-used in different parts of the other configuration files and for storing configuration parameters like database usernames and passwords outside of the GeoServer data directory so that the latter can be copied freely. The `Property Interpolation <http://docs.geoserver.org/stable/en/user/data/app-schema/property-interpolation.html>`_ section of the GeoServer manual contains more information on how properties can be set and used in other parts of the configuration files. In the reference configuration files this contains database connection parameters, some commonly used URI values and the setting to turn on `joining <http://docs.geoserver.org/stable/en/user/data/app-schema/joining.html>`_. In fact with current versions of GeoServer (certainly pre-dating v2.4.5) joining is turned on by default and is the recommended setting. There may be some limited situations as described in the `joining documentation <http://docs.geoserver.org/stable/en/user/data/app-schema/joining.html>`_, however, when you need to switch this off. The cookbook example also uses property interpolation to set database column name prefixes to choose whether to use columns that include CGI URI values or INSPIRE URI values.
+This file (in the ``WEB-INF/classes`` directory) is not strictly required but is very useful for storing certain configuration parameters that will be re-used in different parts of the other configuration files and for storing configuration parameters like database usernames and passwords outside of the GeoServer data directory so that the latter can be copied freely. The `Property Interpolation <https://docs.geoserver.org/stable/en/user/data/app-schema/property-interpolation.html>`_ section of the GeoServer manual contains more information on how properties can be set and used in other parts of the configuration files. In the reference configuration files this contains database connection parameters, some commonly used URI values and the setting to turn on `joining <https://docs.geoserver.org/stable/en/user/data/app-schema/joining.html>`_. In fact with current versions of GeoServer (certainly pre-dating v2.4.5) joining is turned on by default and is the recommended setting. There may be some limited situations as described in the `joining documentation <https://docs.geoserver.org/stable/en/user/data/app-schema/joining.html>`_, however, when you need to switch this off. The cookbook example also uses property interpolation to set database column name prefixes to choose whether to use columns that include CGI URI values or INSPIRE URI values.
 
 Data directory
 ^^^^^^^^^^^^^^
@@ -777,7 +777,7 @@ Source data store
 
 The data for this tutorial is contained in the PostGIS database set up in the previous section.
 
-For this example, each feature type uses an identical source data store configuration. The ``Parameter`` elements contain values for various database connection parameters. Here we are using `property interpolation <http://docs.geoserver.org/stable/en/user/data/app-schema/property-interpolation.html>`_ so that these don't have to get changed in each mapping file if they change and so that the configuration files can be shared without exposing password information. The values of the interpolated variables (which have the form ``${name}``) should be defined in the ``WEB-INF/classes/app-schema.properties`` file. An example which you can use as a template to fill in with your own values is at ftp://ftp.bgs.ac.uk/pubload/OneGeology/wfscookbook/app-schema.inspire.YYYY-MM-DD.properties. (Updated versions will have different dates instead of YYYY-MM-DD. The example service can be configured to use INSPIRE vocabulary values or IUGS-CGI vocabulary values by setting appropriate variables in this file.)
+For this example, each feature type uses an identical source data store configuration. The ``Parameter`` elements contain values for various database connection parameters. Here we are using `property interpolation <https://docs.geoserver.org/stable/en/user/data/app-schema/property-interpolation.html>`_ so that these don't have to get changed in each mapping file if they change and so that the configuration files can be shared without exposing password information. The values of the interpolated variables (which have the form ``${name}``) should be defined in the ``WEB-INF/classes/app-schema.properties`` file. An example which you can use as a template to fill in with your own values is at https://resources.bgs.ac.uk/OneGeology/wfscookbook/app-schema.inspire.YYYY-MM-DD.properties. (Updated versions will have different dates instead of YYYY-MM-DD. The example service can be configured to use INSPIRE vocabulary values or IUGS-CGI vocabulary values by setting appropriate variables in this file.)
 
 .. code-block:: xml
 
@@ -818,7 +818,7 @@ For this example, each feature type uses an identical source data store configur
   </DataStore>
  </sourceDataStores>
 
-See `http://docs.geoserver.org/stable/en/user/data/app-schema/data-stores.html <http://docs.geoserver.org/stable/en/user/data/app-schema/data-stores.html>`_ for a description of how to use other types of data store.
+See `https://docs.geoserver.org/stable/en/user/data/app-schema/data-stores.html <https://docs.geoserver.org/stable/en/user/data/app-schema/data-stores.html>`_ for a description of how to use other types of data store.
 
 
 Target types
@@ -874,7 +874,7 @@ The first mapping sets the ``gml:id`` to be the feature id specified in the sour
 
 * ``targetAttribute`` is the XPath to the element for which the mapping applies, in this case, the top-level feature type.
 
-* ``idExpression`` is a special form that can only be used to set the ``gml:id`` on a feature. In the tutorial database we have a column ``uuid`` suitable for use as a ``gml:id`` attribute value. If your database doesn't have such a column you may be able to use the special function ``getId()`` here instead. This will synthesise an id from the table or view name, a dot ".", and the primary key of the table. If this is not desirable, any other field or CQL expression can be used, if it evaluates to an `NCName <http://www.w3.org/TR/1999/REC-xml-names-19990114/#NT-NCName>`_. In versions of the cookbook example configuration since 2016-08-16 this uses the column ``mf_id``.
+* ``idExpression`` is a special form that can only be used to set the ``gml:id`` on a feature. In the tutorial database we have a column ``uuid`` suitable for use as a ``gml:id`` attribute value. If your database doesn't have such a column you may be able to use the special function ``getId()`` here instead. This will synthesise an id from the table or view name, a dot ".", and the primary key of the table. If this is not desirable, any other field or CQL expression can be used, if it evaluates to an `NCName <https://www.w3.org/TR/1999/REC-xml-names-19990114/#NT-NCName>`_. In versions of the cookbook example configuration since 2016-08-16 this uses the column ``mf_id``.
 
 The above would generate output like
 
@@ -1022,7 +1022,7 @@ WCS
 Exemplar data used in this cookbook
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For the purposes of this cookbook we will use the Bathymetry Multi-colour 3-Band GeoTiffs supplied by the EMODnet project and available for download from the “Portal for Bathymetry” (http://portal.emodnet-bathymetry.eu/)
+For the purposes of this cookbook we will use the Bathymetry Multi-colour 3-Band GeoTiffs supplied by the EMODnet project and available for download from the “Portal for Bathymetry” (https://portal.emodnet-bathymetry.eu/)
 
 Metadata to be used in configuring your service and coverages (layers)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1165,4 +1165,4 @@ This URL opens the WMS **capabilities document** for the GeologicUnitView worksp
 Q: Is it possible to configure GeoServer so that I do not need to use PostGIS?
    A: Try installing the ArcSDE plug-in for GeoServer. To do this, you will need to download the extension from GeoServer’s website. Make sure to match the versions of the extension and GeoServer.  If you can get it to work, you should be able to connect to other SDE databases running on, for instance, MS SQL or Oracle.
 Q: All of my data are in Shapefiles. Can I deploy a shapefile as a GeoSciML-Lite service?
-   A: The problem you will run into is the truncation of field names that occurs in shapefiles. Ideally you will have a full version of the data in PostGIS. As mentioned in the above document, to be compliant with GeoSciML-Lite, you will need to make sure there is no truncation in field names; they must be an exact match for the GeoSciML-Lite schema. To map table fields to XML elements with different names you will have to use the `Application Schema extension <http://docs.geoserver.org/stable/en/user/data/app-schema/index.html>`_ for GeoServer.
+   A: The problem you will run into is the truncation of field names that occurs in shapefiles. Ideally you will have a full version of the data in PostGIS. As mentioned in the above document, to be compliant with GeoSciML-Lite, you will need to make sure there is no truncation in field names; they must be an exact match for the GeoSciML-Lite schema. To map table fields to XML elements with different names you will have to use the `Application Schema extension <https://docs.geoserver.org/stable/en/user/data/app-schema/index.html>`_ for GeoServer.
