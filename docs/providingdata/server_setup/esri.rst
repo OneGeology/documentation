@@ -198,7 +198,7 @@ For example to add a scenario 1 INSPIRE extended capabilities section (where you
    </Exception>
    <inspire_vs:ExtendedCapabilities xmlns:inspire_vs="http://inspire.ec.europa.eu/schemas/inspire_vs/1.0">
        <inspire_common:MetadataUrl xsi:type="inspire_common:resourceLocatorType">
-           <inspire_common:URL>https://metadata.bgs.ac.uk/geonetwork/srv/en/csw?SERVICE=CSW
+           <inspire_common:URL>https://metadata.bgs.ac.uk/geonetwork/srv/en/csw?
            &amp;REQUEST=GetRecordById&amp;ID=7822e848-822d-45a5-8584-56d352fd2170&amp;elementSetName=full&amp;OutputSchema=csw:IsoRecord&amp;
            </inspire_common:URL>
            <inspire_common:MediaType>application/xml</inspire_common:MediaType>
@@ -235,7 +235,7 @@ Alternatively, to add a scenario 2 INSPIRE extended capabilities section (where 
            <inspire_common:Degree>notEvaluated</inspire_common:Degree>
        </inspire_common:Conformity>
        <inspire_common:MetadataPointOfContact>
-           <inspire_common:OrganisationName>Mr Matthew Harrison</inspire_common:OrganisationName>
+           <inspire_common:OrganisationName>British Geological Survey</inspire_common:OrganisationName>
            <inspire_common:EmailAddress>enqiries@bgs.ac.uk</inspire_common:EmailAddress>
        </inspire_common:MetadataPointOfContact>
        <inspire_common:MetadataDate>2015-10-23</inspire_common:MetadataDate>
