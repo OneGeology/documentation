@@ -151,7 +151,7 @@ If you want your OneGeology service to comply to INSPIRE standards, in addition 
 
 3. Your GetCapabilities document must include the INSPIRE Extended Capabilities tag.
 
-There are two ways of achieving these conditions using ESRI software. The first one is using a standard ArcGIS map document and standard ArcGIS Server tools, where you’ll need to modify layer names to make them compliant, change service properties to include required coordinate systems and modify the get capabilities document to include the INSPIRE Extended Capabilities section. The second option is using the ArcGIS for INSPIRE extension, which provides tools and new services to ensure compliance with INSPIRE directives. If you want to go for the second option, there is an `ESRI OneGeology Grant  <http://www.onegeology.org/technical_progress/esriGrantOffer.html>`_ for OneGeology members.
+There are two ways of achieving these conditions using ESRI software. The first one is using a standard ArcGIS map document and standard ArcGIS Server tools, where you’ll need to modify layer names to make them compliant, change service properties to include required coordinate systems and modify the get capabilities document to include the INSPIRE Extended Capabilities section. The second option is using the ArcGIS for INSPIRE extension, which provides tools and new services to ensure compliance with INSPIRE directives. If you want to go for the second option, there is an `ESRI OneGeology Grant  <https://onegeology.org/technical_progress/esriGrantOffer.html>`_ for OneGeology members.
 
 ArcGIS Server
 """""""""""""
@@ -198,7 +198,7 @@ For example to add a scenario 1 INSPIRE extended capabilities section (where you
    </Exception>
    <inspire_vs:ExtendedCapabilities xmlns:inspire_vs="http://inspire.ec.europa.eu/schemas/inspire_vs/1.0">
        <inspire_common:MetadataUrl xsi:type="inspire_common:resourceLocatorType">
-           <inspire_common:URL>http://metadata.bgs.ac.uk/geonetwork/srv/en/csw?SERVICE=CSW
+           <inspire_common:URL>https://metadata.bgs.ac.uk/geonetwork/srv/en/csw?SERVICE=CSW
            &amp;REQUEST=GetRecordById&amp;ID=7822e848-822d-45a5-8584-56d352fd2170&amp;elementSetName=full&amp;OutputSchema=csw:IsoRecord&amp;
            </inspire_common:URL>
            <inspire_common:MediaType>application/xml</inspire_common:MediaType>
@@ -221,7 +221,7 @@ Alternatively, to add a scenario 2 INSPIRE extended capabilities section (where 
    </Exception>
    <inspire_vs:ExtendedCapabilities xmlns:inspire_vs="http://inspire.ec.europa.eu/schemas/inspire_vs/1.0">
        <inspire_common:ResourceLocator>
-           <inspire_common:URL>http://ogc2.bgs.ac.uk/cgi-bin/BGS_OGE_Bedrock_and_Surface_Geology_in3/ows?</inspire_common:URL>
+           <inspire_common:URL>https://ogc2.bgs.ac.uk/cgi-bin/BGS_OGE_Bedrock_and_Surface_Geology_in3/ows?</inspire_common:URL>
        </inspire_common:ResourceLocator>
        <inspire_common:ResourceType>service</inspire_common:ResourceType>
        <inspire_common:TemporalReference>
@@ -293,278 +293,278 @@ You’ll do this by modifying the *LayerInfo* table. In this extension, each INS
 
 .. raw:: html
 
-   <table border=1 cellspacing=0 cellpadding=0 width=0 style='width:375.65pt;border-collapse:collapse;border:none'>
+   <table border='1' cellspacing='0' cellpadding='0' width='0' style='width:375.65pt;border-collapse:collapse;border:none'>
     <tr style='height:15.0pt;color:white;'>
-     <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;background: black;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt;color:white;'>
-     <p align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>FIELD NAME
+     <td width='126' style='width:63.8pt;border:solid windowtext 1.0pt;background: black;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt;color:white;'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>FIELD NAME</p>
      </td>
-     <td width=116 style='vertical-align:center;width:99.2pt;border:solid windowtext 1.0pt;border-left: none;background:black;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt;color:white;'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ROW 1
+     <td width='116' style='vertical-align:center;width:99.2pt;border:solid windowtext 1.0pt;border-left: none;background:black;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt;color:white;'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ROW 1</p>
      </td>
-     <td width=123 style='width:99.25pt;border:solid windowtext 1.0pt;border-left: none;background:black;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt;color:white;'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ROW 2
+     <td width='123' style='width:99.25pt;border:solid windowtext 1.0pt;border-left: none;background:black;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt;color:white;'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ROW 2</p>
      </td>
-     <td width=136 style='width:4.0cm;border:solid windowtext 1.0pt;border-left: none;background:black;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt;color:white;'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ROW 3
-     </td>
-    </tr>
-    <tr style='height:15.0pt'>
-     <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>OBJECTID
-     </td>
-     <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>2
-     </td>
-     <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>4
-     </td>
-     <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>12
+     <td width='136' style='width:4.0cm;border:solid windowtext 1.0pt;border-left: none;background:black;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt;color:white;'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ROW 3</p>
      </td>
     </tr>
     <tr style='height:15.0pt'>
-     <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ID
+     <td width='126' style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>OBJECTID</p>
      </td>
-     <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>417
+     <td width='116' style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>2</p>
      </td>
-     <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>420
+     <td width='123' style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>4</p>
      </td>
-     <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>421
-     </td>
-    </tr>
-    <tr style='height:15.0pt'>
-     <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>THEME
-     </td>
-     <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology
-     </td>
-     <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology
-     </td>
-     <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology
+     <td width='136' style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>12</p>
      </td>
     </tr>
     <tr style='height:15.0pt'>
-     <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>FC_NAME
+     <td width='126' style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ID</p>
      </td>
-     <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-
+     <td width='116' style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>417</p>
      </td>
-     <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>geUnitS
+     <td width='123' style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>420</p>
      </td>
-     <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>geUnitS
+     <td width='136' style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>421</p>
      </td>
     </tr>
     <tr style='height:15.0pt'>
-     <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>STYPE
+     <td width='126' style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>THEME</p>
      </td>
-     <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-1
+     <td width='116' style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology</p>
      </td>
-     <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-1
+     <td width='123' style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology</p>
      </td>
-     <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-1
+     <td width='136' style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology</p>
+     </td>
+    </tr>
+    <tr style='height:15.0pt'>
+     <td width='126' style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>FC_NAME</p>
+     </td>
+     <td width='116' style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-</p>
+     </td>
+     <td width='123' style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>geUnitS</p>
+     </td>
+     <td width='136' style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>geUnitS</p>
+     </td>
+    </tr>
+    <tr style='height:15.0pt'>
+     <td width='126' style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>STYPE</p>
+     </td>
+     <td width='116' style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-1</p>
+     </td>
+     <td width='123' style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-1</p>
+     </td>
+     <td width='136' style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-1</p>
      </td>
     </tr>
     <tr style='height:15.75pt'>
-     <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.75pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>APP_SCHEMA
+     <td width='126' style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.75pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>APP_SCHEMA</p>
      </td>
-     <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.75pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology
+     <td width='116' style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.75pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology</p>
      </td>
-     <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.75pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology
+     <td width='123' style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.75pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology</p>
      </td>
-     <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.75pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology
+     <td width='136' style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.75pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology</p>
      </td>
     </tr>
     <tr style='height:15.0pt'>
-     <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>IR_VERSION
+     <td width='126' style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>IR_VERSION</p>
      </td>
-     <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>0
+     <td width='116' style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>0</p>
      </td>
-     <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>0
+     <td width='123' style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>0</p>
      </td>
-     <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>
+     <td width='136' style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'></p>
      </td>
     </tr>
     <tr style='height:30.0pt'>
-     <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>LAYER_NAME
+     <td width='126' style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>LAYER_NAME</p>
      </td>
-     <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GE.GeologicUnit
+     <td width='116' style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GE.GeologicUnit</p>
      </td>
-     <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GBR_BGS_625k_BA
+     <td width='123' style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GBR_BGS_625k_BA</p>
      </td>
-     <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:30.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GBR_BGS_625k_BLT
+     <td width='136' style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:30.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GBR_BGS_625k_BLT</p>
      </td>
     </tr>
     <tr style='height:23.9pt'>
-     <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:23.9pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>LAYER_TITLE
+     <td width='126' style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:23.9pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>LAYER_TITLE</p>
      </td>
-     <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:23.9pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geologic Units
+     <td width='116' style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:23.9pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geologic Units</p>
      </td>
-     <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:23.9pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GBR BGS 1:625k Bedrock Age
+     <td width='123' style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:23.9pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GBR BGS 1:625k Bedrock Age</p>
      </td>
-     <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:23.9pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GBR BGS 1:625k Bedrock Lithology
+     <td width='136' style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:23.9pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GBR BGS 1:625k Bedrock Lithology</p>
      </td>
     </tr>
     <tr style='height:21.8pt'>
-     <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:21.8pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>SPATIAL_OBJECT_TYPE
+     <td width='126' style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:21.8pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>SPATIAL_OBJECT_TYPE</p>
      </td>
-     <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:21.8pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-
+     <td width='116' style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:21.8pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-</p>
      </td>
-     <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:21.8pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>MappedFeature
+     <td width='123' style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:21.8pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>MappedFeature</p>
      </td>
-     <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:21.8pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>MappedFeature
+     <td width='136' style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:21.8pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>MappedFeature</p>
      </td>
     </tr>
     <tr style='height:13.7pt'>
-     <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:13.7pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>DEF_QUERY
+     <td width='126' style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:13.7pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>DEF_QUERY</p>
      </td>
-     <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:13.7pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-
+     <td width='116' style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:13.7pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-</p>
      </td>
-     <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:13.7pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-
+     <td width='123' style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:13.7pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-</p>
      </td>
-     <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:13.7pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-
+     <td width='136' style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:13.7pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-</p>
      </td>
     </tr>
     <tr style='height:15.0pt'>
-     <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>PARENT_ID
+     <td width='126' style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>PARENT_ID</p>
      </td>
-     <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-1
+     <td width='116' style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>-1</p>
      </td>
-     <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>417
+     <td width='123' style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>417</p>
      </td>
-     <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>417
+     <td width='136' style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>417</p>
      </td>
     </tr>
     <tr style='height:22.55pt'>
-     <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:22.55pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>SPATIAL_OBJECT_
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>TYPE_PREFIX
+     <td width='126' style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:22.55pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>SPATIAL_OBJECT_</p>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>TYPE_PREFIX</p>
      </td>
-     <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:22.55pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ge
+     <td width='116' style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:22.55pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ge</p>
      </td>
-     <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:22.55pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ge
+     <td width='123' style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:22.55pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ge</p>
      </td>
-     <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:22.55pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ge
+     <td width='136' style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:22.55pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>ge</p>
      </td>
     </tr>
     <tr style='height:27.8pt'>
-     <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:27.8pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>LAYER_KEYWORDS
+     <td width='126' style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:27.8pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>LAYER_KEYWORDS</p>
      </td>
-     <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:27.8pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology, Lithology, Age, Geologic unit
+     <td width='116' style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:27.8pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology, Lithology, Age, Geologic unit</p>
      </td>
-     <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:27.8pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology, Lithology, Age, Geologic unit
+     <td width='123' style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:27.8pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology, Lithology, Age, Geologic unit</p>
      </td>
-     <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:27.8pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology, Lithology, Age, Geologic unit
-     </td>
-    </tr>
-    <tr style='height:15.0pt'>
-     <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>IS_HIDDEN
-     </td>
-     <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>0
-     </td>
-     <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>0
-     </td>
-     <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>0
+     <td width='136' style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:27.8pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>Geology, Lithology, Age, Geologic unit</p>
      </td>
     </tr>
     <tr style='height:15.0pt'>
-     <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>IS_VISIBLE
+     <td width='126' style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>IS_HIDDEN</p>
      </td>
-     <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>1
+     <td width='116' style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>0</p>
      </td>
-     <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>1
+     <td width='123' style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>0</p>
      </td>
-     <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>1
-     </td>
-    </tr>
-    <tr style='height:15.0pt'>
-     <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>MIN_SCALE
-     </td>
-     <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'></td>
-     <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'></td>
-     <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>
+     <td width='136' style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>0</p>
      </td>
     </tr>
     <tr style='height:15.0pt'>
-     <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>MAX_SCALE
+     <td width='126' style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>IS_VISIBLE</p>
      </td>
-     <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'></td>
-     <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'></td>
-     <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>
+     <td width='116' style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>1</p>
+     </td>
+     <td width='123' style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>1</p>
+     </td>
+     <td width='136' style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>1</p>
+     </td>
+    </tr>
+    <tr style='height:15.0pt'>
+     <td width='126' style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>MIN_SCALE</p>
+     </td>
+     <td width='116' style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'></td>
+     <td width='123' style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'></td>
+     <td  style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'></p>
+     </td>
+    </tr>
+    <tr style='height:15.0pt'>
+     <td width='126' style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>MAX_SCALE</p>
+     </td>
+     <td width='116' style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'></td>
+     <td width='123' style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'></td>
+     <td width='136' style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:15.0pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'></p>
      </td>
     </tr>
     <tr style='height:13.55pt'>
-     <td width=126 style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:13.55pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GDBTEMPLATE_NAME
+     <td width='126' style='width:63.8pt;border:solid windowtext 1.0pt;border-top: none;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt;height:13.55pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GDBTEMPLATE_NAME
+     </td></p>
+     <td width='116' style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:13.55pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GE</p>
      </td>
-     <td width=116 style='width:99.2pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:13.55pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GE
+     <td width='123' style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:13.55pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GE</p>
      </td>
-     <td width=123 style='width:99.25pt;border-top:none;border-left:none; border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:13.55pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GE
-     </td>
-     <td width=136 style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:13.55pt'>
-     <p  align=center style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GE
+     <td width='136' style='width:4.0cm;border-top:none;border-left:none;border-bottom: solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt; height:13.55pt'>
+     <p align='center' style='margin-bottom:0cm;margin-bottom:.0001pt; text-align:center;line-height:normal'>GE</p>
      </td>
     </tr>
    </table>

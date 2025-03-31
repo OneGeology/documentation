@@ -140,7 +140,7 @@ Your new service will have a URL like below, with the folder name part being opt
 
 ::
 
-   http://[hostname]/ArcGIS/services/[folder name]/[map service title]/MapServer/WMSServer
+   https://[hostname]/ArcGIS/services/[folder name]/[map service title]/MapServer/WMSServer
 
 Edit the GetCapabilities documents
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -155,7 +155,7 @@ Your WMS version 1.1.1 GetCapabilities document is generated using a request lik
 
 ::
 
-   http://[hostname]/ArcGIS/services/[folder name]/[map service title]/MapServer/WMSServer?service=WMS&request=GetCapabilities&version=1.1.1&
+   https://[hostname]/ArcGIS/services/[folder name]/[map service title]/MapServer/WMSServer?service=WMS&request=GetCapabilities&version=1.1.1&
 
 **Save this as [short service name]111.xml**
 
@@ -163,7 +163,7 @@ Your WMS version 1.3.0 GetCapabilities document is generated using a request lik
 
 ::
 
-   http://[hostname]/ArcGIS/services/[folder name]/[map service title]/MapServer/WMSServer?service=WMS&request=GetCapabilities&version=1.3.0&
+   https://[hostname]/ArcGIS/services/[folder name]/[map service title]/MapServer/WMSServer?service=WMS&request=GetCapabilities&version=1.3.0&
 
 **Save this as [short service name]130.xml**
 
@@ -195,7 +195,7 @@ If you want your OneGeology service to comply to INSPIRE metadata standards, in 
 
 3. Your GetCapabilities document must include the INSPIRE Extended Capabilities tag.
 
-There are two ways of achieving these conditions using ESRI software. The first one is using a standard ArcGIS map document and standard ArcGIS Server tools, where you’ll need to modify layer names to make them compliant, change service properties to include required coordinate systems and modify the capabilities document to include the INSPIRE Extended Capabilities section. The second option is using the ArcGIS for INSPIRE extension, which provides tools and new services to ensure compliance with INSPIRE directives. If you want to go for the second option, there is an `ESRI OneGeology Grant  <http://www.onegeology.org/technical_progress/esriGrantOffer.html>`_ for OneGeology members.
+There are two ways of achieving these conditions using ESRI software. The first one is using a standard ArcGIS map document and standard ArcGIS Server tools, where you’ll need to modify layer names to make them compliant, change service properties to include required coordinate systems and modify the capabilities document to include the INSPIRE Extended Capabilities section. The second option is using the ArcGIS for INSPIRE extension, which provides tools and new services to ensure compliance with INSPIRE directives. If you want to go for the second option, there is an `ESRI OneGeology Grant  <https://onegeology.org/technical_progress/esriGrantOffer.html>`_ for OneGeology members.
 
 ArcGIS Server
 """""""""""""
@@ -223,7 +223,7 @@ Group layers created in ArcGIS Server will not have a style associated to them a
 INSPIRE Coordinate Systems
 ''''''''''''''''''''''''''
 
-ArcGIS Server always adds 2 coordinate systems: EPSG:4326 (or CRS:84 for version 1.3.0) and the coordinate system set on the map document creating the service. To add any additional coordinate systems go to your map service and edit it using either `ArcGIS Server Manager <http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-manager.htm>`_ or `ArcGIS Pro <https://pro.arcgis.com/en/pro-app/latest/help/sharing/overview/overwrite-a-map-service.htm>`_.  On the *Publish a Service*  dialog go to *Capabilities > WMS* and, in the *Additional spatial reference systems* text box, type any well-known EPSG ID in the format indicated below.
+ArcGIS Server always adds two coordinate systems: EPSG:4326 (or CRS:84 for version 1.3.0) and the coordinate system set on the map document creating the service. To add any additional coordinate systems go to your map service and edit it using either `ArcGIS Server Manager <http://server.arcgis.com/en/server/latest/publish-services/windows/editing-service-properties-in-manager.htm>`_ or `ArcGIS Pro <https://pro.arcgis.com/en/pro-app/latest/help/sharing/overview/overwrite-a-map-service.htm>`_.  On the *Publish a Service*  dialog go to *Capabilities > WMS* and, in the *Additional spatial reference systems* text box, type any well-known EPSG ID in the format indicated below.
 
 .. figure:: images/esriimage009.png
    :alt: Additional spatial reference systems option
@@ -242,7 +242,7 @@ For example to add a scenario 1 INSPIRE extended capabilities section (where you
    </Exception>
    <inspire_vs:ExtendedCapabilities xmlns:inspire_vs="http://inspire.ec.europa.eu/schemas/inspire_vs/1.0">
        <inspire_common:MetadataUrl xsi:type="inspire_common:resourceLocatorType">
-           <inspire_common:URL>https://metadata.bgs.ac.uk/geonetwork/srv/eng/csw?SERVICE=CSW
+           <inspire_common:URL>https://metadata.bgs.ac.uk/geonetwork/srv/eng/csw?
            &amp;REQUEST=GetRecordById&amp;ID=7822e848-822d-45a5-8584-56d352fd2170&amp;elementSetName=full&amp;OutputSchema=csw:IsoRecord&amp;version=2.0.2&amp;
            </inspire_common:URL>
            <inspire_common:MediaType>application/xml</inspire_common:MediaType>
@@ -265,7 +265,7 @@ Alternatively, to add a scenario 2 INSPIRE extended capabilities section (where 
    </Exception>
    <inspire_vs:ExtendedCapabilities xmlns:inspire_vs="http://inspire.ec.europa.eu/schemas/inspire_vs/1.0">
        <inspire_common:ResourceLocator>
-           <inspire_common:URL>http://ogc2.bgs.ac.uk/cgi-bin/BGS_OGE_Bedrock_and_Surface_Geology_in3/ows?</inspire_common:URL>
+           <inspire_common:URL>https://ogc2.bgs.ac.uk/cgi-bin/BGS_OGE_Bedrock_and_Surface_Geology_in3/ows?</inspire_common:URL>
        </inspire_common:ResourceLocator>
        <inspire_common:ResourceType>service</inspire_common:ResourceType>
        <inspire_common:TemporalReference>
@@ -332,14 +332,14 @@ Creating a simple feature WFS requires almost the same steps as creating a WMS. 
 
    Figure 20 - Enabling WFS capabilities in *Service Editor* dialog
 
-After activating WFS, you’ll have access to the properties of this capability. Some of these properties will coincide with WMS properties, but there will also be WFS specific properties, such us namespace, prefix or maximum number of features returned.
+After activating WFS, you'll have access to the properties of this capability. Some of these properties will coincide with WMS properties, but there will also be WFS specific properties, such us namespace, prefix or maximum number of features returned.
 
 .. figure:: images/esri/arcpro12.PNG
    :alt: WFS service properties
 
    Figure 21 - WFS service properties
 
-For more information on how to create a simple feature WFS service and how to edit its GetCapabilities document, go to the WMS section of this cookbook or to ESRI’s documentation about `WFS services <http://server.arcgis.com/en/server/latest/publish-services/windows/wfs-services.htm>`_.
+For more information on how to create a simple feature WFS service and how to edit its GetCapabilities document, go to the WMS section of this cookbook or to ESRI's documentation about `WFS services <http://server.arcgis.com/en/server/latest/publish-services/windows/wfs-services.htm>`_.
 
 .. todo::
 
@@ -354,7 +354,7 @@ Create a map document
 In ArcGIS, a WCS can be created mainly through 3 routes: a map document with raster data, a raster dataset or a mosaic dataset. Publishing a mosaic dataset requires ArcGIS Image Server, so unless you have this extension enabled, the only way to publish multiple rasters at once on a single WCS will be through a map document; therefore we’re are going to focus on this route. For more information see the documentation on `WCS services <http://server.arcgis.com/en/server/latest/publish-services/windows/wcs-services.htm>`_ or `Publishing image services from ArcGIS Pro <https://enterprise.arcgis.com/en/server/latest/publish-services/windows/publishing-image-services-from-arcgis-pro.htm>`_.
 
 
-Start by creating a map document and adding your rasters to it. Note that, if you have feature data in your map document, it’ll be excluded from your WCS.
+Start by creating a map document and adding your rasters to it. Note that, if you have feature data in your map document, it'll be excluded from your WCS.
 
 .. figure:: images/esri/arcpro_WCS_01.PNG
    :alt: Adding WCS data to your map document
@@ -399,7 +399,7 @@ Your new service will have a URL like below, with the folder name part being opt
 Edit the GetCapabilities document
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-ArcGIS server doesn’t create any static GetCapabilities xml documents, but does allow you to use external files. You will need to use such external files if you want to add any supported CRS, add keywords and abstracts for coverages or modify coverage titles. Note that, independently of the supported CRSs added, ESRI WCSs will always support the over 6000 projections that come with the ArcGIS projection engine.
+ArcGIS server doesn't create any static GetCapabilities xml documents, but does allow you to use external files. You will need to use such external files if you want to add any supported CRS, add keywords and abstracts for coverages or modify coverage titles. Note that, independently of the supported CRSs added, ESRI WCSs will always support the over 6000 projections that come with the ArcGIS projection engine.
 
 The quickest way to create your custom GetCapabilities document is to use the response documents from your initial service. You will need to have a file for all the WCS versions that you want your service to support.
 
@@ -419,7 +419,7 @@ Your WCS version 2.0.1 GetCapabilities document is generated using a request lik
 
 **Save this as [short service name]201.xml**
 
-It doesn’t really matter what name you give these files, as long as you use the same name prefix for all files that belong to the same service.
+It doesn't really matter what name you give these files, as long as you use the same name prefix for all files that belong to the same service.
 
 You need to put these files on the server (or at a location available to your server), and make them browsable. These files only need to be browsable internally by the ArcGIS server.
 

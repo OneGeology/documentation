@@ -36,9 +36,9 @@ In some cases you may already have OGC services set up for other purposes than O
 
 The service must comply with one of the following OGC standard specifications.
 
-* A WMS must comply with the `WMS 1.1.1 <http://portal.opengeospatial.org/files/?artifact_id=1081&version=1&format=pdf>`_ or `WMS 1.3.0 <http://portal.opengeospatial.org/files/?artifact_id=14416>`_ specification. (This documentation now concentrates on the later version specification.)
+* A WMS must comply with the `WMS 1.1.1 <https://portal.opengeospatial.org/files/?artifact_id=1081&version=1&format=pdf>`_ or `WMS 1.3.0 <http://portal.opengeospatial.org/files/?artifact_id=14416>`_ specification. (This documentation now concentrates on the later version specification.)
 * An SLD enabled WMS must comply with the relevant parts of the `SLD 1.1.0 <http://portal.opengeospatial.org/files/?artifact_id=22364>`_ specification.
-* A WFS must comply with the `WFS 2.0.0 <http://portal.opengeospatial.org/files/?artifact_id=39967>`_ or `2.0.2 <http://docs.opengeospatial.org/is/09-025r2/09-025r2.html>`_ specification
+* A WFS must comply with the `WFS 2.0.0 <https://portal.opengeospatial.org/files/?artifact_id=39967>`_ or `2.0.2 <http://docs.opengeospatial.org/is/09-025r2/09-025r2.html>`_ specification
 * A WCS must comply with `WCS 2.0.0 <https://portal.opengeospatial.org/files/09-110r4>`_ or higher specification. At the moment you also need to be able to supply a `WCS 1.0.0 <https://portal.opengeospatial.org/files/05-076>`_ GetCapabilities response for metadata harvesting. This could be achieved by supporting the older WCS version or by just creating a static response document that complies to the format.
 
 OGC service level metadata
@@ -399,7 +399,7 @@ Keywords
 * /WCS_Capabilities/ContentMetadata/CoverageOfferingBrief/keywords/keyword (1.0.0)
 * /wcs:Capabilities/wcs:Contents/wcs:CoverageSummary/ows:Keywords/ows:Keyword (2.0.x)
 
-The Keyword "OneGeology" must be present to be able to search for services and layers with this keyword. OneGeologyEurope participants should also include relevant keywords chosen from the keyword list created for that project and listed in `Appendix I <https://www.onegeology.org/wmsCookbook/appendixI.html>`_.
+The Keyword "OneGeology" must be present to be able to search for services and layers with this keyword. OneGeologyEurope participants should also include relevant keywords chosen from the keyword list created for that project and listed in `Appendix I <https://onegeology.org/archive/wmsCookbook/appendixI.html>`_.
 
 The following broad concepts are good starting points
 
@@ -450,7 +450,7 @@ So for example, the layer “AFG AGS 1:1M Bedrock Age” would include the follo
 
 Note, that we have the country twice, once as one of the OneGeology Portal special keywords, and once as the country only; this is because we recognize that the service may be consumed (and catalogued) by services other than OneGeology. We don’t include a subarea@ keyword in this list because that would not be appropriate in this instance.
 
-To help classify your service in the portal according to the thematic keyword list (as detailed in `Appendix I <https://www.onegeology.org/wmsCookbook/appendixI.html>`_), you should also use one or more *thematic@value keywords*.
+To help classify your service in the portal according to the thematic keyword list (as detailed in `Appendix I <https://onegeology.org/archive/wmsCookbook/appendixI.html>`_), you should also use one or more *thematic@value keywords*.
 
 **Please note** services using GeoSciML-Lite also require the following keyword: **Geosciml_portrayal_age_or_litho_queryable** (GeoSciML-Lite was previously called GeoSciML-Portrayal.)
 

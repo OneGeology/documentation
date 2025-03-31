@@ -281,7 +281,7 @@ or using wget:
 Installing GISInternals packages for Windows
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The most recent versions of the GISInternals GDAL and MapServer packages are available online at: `http://www.gisinternals.com <http://www.gisinternals.com>`_
+The most recent versions of the GISInternals GDAL and MapServer packages are available online at: `https://www.gisinternals.com/ <https://www.gisinternals.com/>`_
 
 In most instances we would recommend using the MS4W packages to install Apache and MapServer to give yourself a Windows implementation of MapServer, but in some instances, for example if you want the latest version of MapServer or if you want to use 64-bit software, you can alternatively use one of the GISinternals packages for your MapServer service.
 
@@ -698,7 +698,7 @@ In any **METADATA** section instead of  the "WMS\_" prefix  you may use "OWS\_" 
 .. code-block:: mapfile
 
    METADATA
-       "OWS_ABSTRACT" "The 1:625k DiGMap data covering the whole of the United Kingdom is available in this OGC web service for all uses - including commercial use subject to the conditions in the Access Constraints section and is being served as a contribution to the OneGeology initiative (www.onegeology.org)."
+       "OWS_ABSTRACT" "The 1:625k DiGMap data covering the whole of the United Kingdom is available in this OGC web service for all uses - including commercial use subject to the conditions in the Access Constraints section and is being served as a contribution to the OneGeology initiative (onegeology.org)."
        "OWS_ACCESSCONSTRAINTS" "The 1:625k DiGMap data is available for free download for your personal, teaching, research, or non-commercial use (as described on https://www.bgs.ac.uk/bgs-intellectual-property-rights/using-bgs-copyright-material/). Your use of any information provided by the British Geological Survey (BGS) is at your own risk. Neither BGS nor the Natural Environment Research Council (NERC) gives any warranty, condition, or representation as to the quality, accuracy, or completeness of the information or its suitability for any use or purpose. All implied conditions relating to the quality or suitability of the information, and all liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law."
        "OWS_ADDRESS" "Environmental Science Centre"
        "OWS_ADDRESSTYPE" "postal"
@@ -740,9 +740,9 @@ In any **METADATA** section instead of  the "WMS\_" prefix  you may use "OWS\_" 
        "OWS_TITLE" "BGS Bedrock and Superficial geology"
        "OWS_UPDATESEQUENCE" "2017-02-09T14:00:00Z"
 
-       "WFS_ABSTRACT" "The 1:625k DiGMap data covering the whole of the United Kingdom is available in this OGC WFS service for your personal, non-commercial use only and is being served as a contribution to the OneGeology initiative(www.onegeology.org).  \
-       The contents of this WFS service are not intended for direct use but are transformed by a mediator layer into separate WFS services which provide data in GeoSciML. This process is described in Chapter 2 of the OneGeology WFS Cookbook available at www.onegeology.org."
-       "WMS_ABSTRACT" "The 1:625k DiGMap data covering the whole of the United Kingdom is available in this OGC WMS service for your personal, non-commercial use only and is being served as a contribution to the OneGeology initiative (www.onegeology.org).\
+       "WFS_ABSTRACT" "The 1:625k DiGMap data covering the whole of the United Kingdom is available in this OGC WFS service for your personal, non-commercial use only and is being served as a contribution to the OneGeology initiative(onegeology.org).  \
+       The contents of this WFS service are not intended for direct use but are transformed by a mediator layer into separate WFS services which provide data in GeoSciML. This process is described in Chapter 2 of the OneGeology WFS Cookbook available at onegeology.org."
+       "WMS_ABSTRACT" "The 1:625k DiGMap data covering the whole of the United Kingdom is available in this OGC WMS service for your personal, non-commercial use only and is being served as a contribution to the OneGeology initiative (onegeology.org).\
        Separate bedrock geology and superficial deposits layers are available in this service. Layers available for bedrock are lithostratigraphy, age, and lithology. Layers available for superficial deposits layer are lithostratigraphy and lithology. \
        For information about more of the British Geological Survey’s maps that are available digitally please visit http://www.bgs.ac.uk/products/digitalmaps/digmapgb.html"
 

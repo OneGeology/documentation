@@ -6,7 +6,7 @@ Using the OneGeology Portal
 
 .. todo::
 
-   Below introductory paragraph should probably point to some general OneGeology introduction elsewhere on www.onegeology.org to explain the range of data and purpose of OneGeology. We may need to get it written if it doesn't exist right now. We want to refer to purpose, kinds of data that are available or will be in future. This page is where the kinds of viewing, data query etc. that can be done will be introduced.
+   Below introductory paragraph should probably point to some general OneGeology introduction elsewhere on onegeology.org to explain the range of data and purpose of OneGeology. We may need to get it written if it doesn't exist right now. We want to refer to purpose, kinds of data that are available or will be in future. This page is where the kinds of viewing, data query etc. that can be done will be introduced.
 
 .. todo::
 
@@ -530,7 +530,7 @@ When this external customized SLD file has been generated for our lithology  fil
         EXCEPTIONS=INIMAGE&
         FORMAT=image/png&
         CRS=EPSG%3A4326&
-        SLD=http://portal.onegeology.org/slds/20130628_1372432351566_OpenLayers.Layer.WMS_991.sld&
+        SLD=https://portal.onegeology.org/slds/20130628_1372432351566_OpenLayers.Layer.WMS_991.sld&
         SAVEDLAYERS=US-DE_DGS_100k_Surficial_Geology&
         BBOX=39.57931760121924,-75.79289049774037,39.784397224903465,-75.45691470533502&
         WIDTH=1250&
